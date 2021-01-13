@@ -25,7 +25,7 @@ title = "Herramientas de análisis estadístico"
     url = "/"
     weight = 1
   [[menu.nav]]
-    name = "Plots"
+    name = "Teoría y práctica"
     pre = "edit"
     url = "/post/"
     weight = 2
