@@ -45,11 +45,11 @@ Viewer
 
 
 
-## Consideraciones a recordar sobre los tipos de variables  clases y tipo de atributos.
+### Consideraciones a recordar sobre los tipos de variables  clases y tipo de atributos.
 
-### Numeric
-### Strings 
-### Factors
+#### Numeric
+#### Strings 
+#### Factors
 
 Esta clase se permite almacenar información categórica,  datos que son categóricos por ejemeplo los estados de la república mexicana, sabemos que son 32 y pueden ser almacenados como un vector de factores, en una variable categórica. 
 
