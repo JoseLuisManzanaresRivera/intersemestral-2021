@@ -6,6 +6,7 @@ output: html_document
 ---
 
 
+
 ```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(eval = TRUE, 
                       echo = FALSE, 
@@ -20,12 +21,31 @@ knitr::opts_chunk$set(eval = TRUE,
 
 
 
+
+
+
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+
+library(viridisLite)
+library(ggrepel)
+library(ggplot2)
+library(gganimate)
+library(scales)
+library(plotly)
+library(tidyverse)
+```
+
+
+
+
+
+
 ### Nota: Temperatura Plot
 
 [Datos:](http://smn.cna.gob.mx/es/climatologia/informacion-climatologica)
 [Alternativa datos](http://atlasclimatico.unam.mx/RRDM/)
 
-```{r   TEMPERATURA  Durango}
+```{r,   echo=TRUE,  message=FALSE, warning=FALSE}
 library(tidyverse)
 
 DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/I/data/clima/Durango/ema10092_base.csv")%>%
@@ -48,12 +68,12 @@ levels(DGO$nombre )
 
 ## Plot Daily  1941-2000
 
-ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
+boxplot<-ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
 geom_boxplot()+
 xlab("Mes")+ylab("Temperatura diaria mínima°c")+
-
 theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1))
 
-ggsave("DGO_bxplot_Tmin.tiff",width = 21, height = 16, units = "cm",dpi=300)
+boxplot
+
 
 ```
