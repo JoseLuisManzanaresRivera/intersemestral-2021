@@ -1,4 +1,4 @@
 theme = "vanilla-bootstrap-hugo-theme"
 baseURL = "https://hea-2021-mdr.netlify.app//"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Herramientas de análisis estadístico"
