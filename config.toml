@@ -1,4 +1,4 @@
 theme = "vanilla-bootstrap-hugo-theme"
-baseURL = "https://hae-mdr-intersemestral-2021.netlify.app/"
+baseURL = "https://hea-2021-mdr.netlify.app//"
 languageCode = "en-us"
 title = "My New Hugo Site"
