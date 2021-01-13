@@ -40,6 +40,7 @@ gapminder<-mutate(gapminder,year1950=year-1950)
 
 
 Una opción que se usa por el [Programa de Naciones Unidas para el Desarrollo](http://hdr.undp.org/en/data), es presentar la relación entre variables mediante gráficas de lineas:
+
 ![](/img/onu.jpg)
 
 
@@ -47,6 +48,10 @@ No obstante, el enfoque visual utilizado  de **ONU** no permite una observarció
 
 Alternativamente podemos representar la información usando las herramientas de analisis y visualización  que aprenderemos enseguida.
 
+
+```{r}
+
+```
 
 
 
