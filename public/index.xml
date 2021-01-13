@@ -26,8 +26,9 @@
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/katex-math-typesetting/</guid>
-      <description>Instalación de Paquetes. Estos se integran por funciones que se han construido por miembros de la comunidad, nos permiten realizar operaciones concretas así como estimar procedimientos estadisticos de diverso gado de complejidad. Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el espacio de trabajo usando el menú Install y Packages. Área inferior izquierda. La siguiente figura muestra el menú para instalarlos.
-Alternativamente podemos utilizar la línea de comandos para hacer la instalación usando la función: install.</description>
+      <description>Algunas consideraciones preeliminares sobre R. R es un lenguaje que nos permite hablar con la computadora, wn analogía con cualquier lenguaje, como aprenderemos existen sustantivos, estos son los objetos (data frames o conjunto de adtos), las funciones pueden entenderse como verbos y sus argumentos como adverbios.
+Estamos aprendiendo un lenguaje para comunicarnos con nuestra computadora con la finalidad de conducir tareas de análisis de datos.
+En la base del proceso de análisis de datos se encuentra la habilidad para almacenar grandes cantidades de datos y tener la capacidad para sustraer estos datos cuando lo necesitamos.</description>
     </item>
     
     <item>

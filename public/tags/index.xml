@@ -12,38 +12,38 @@
     
     
     <item>
-      <title>hugo</title>
-      <link>/tags/hugo/</link>
+      <title>Conceptos</title>
+      <link>/tags/conceptos/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>/tags/conceptos/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>katex</title>
-      <link>/tags/katex/</link>
+      <title>IDE</title>
+      <link>/tags/ide/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/katex/</guid>
+      <guid>/tags/ide/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>math</title>
-      <link>/tags/math/</link>
+      <title>Teoría</title>
+      <link>/tags/teor%C3%ADa/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/math/</guid>
+      <guid>/tags/teor%C3%ADa/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>typesetting</title>
-      <link>/tags/typesetting/</link>
+      <title>Tidyverse</title>
+      <link>/tags/tidyverse/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/typesetting/</guid>
+      <guid>/tags/tidyverse/</guid>
       <description></description>
     </item>
     
@@ -80,6 +80,15 @@
       <pubDate>Wed, 12 Dec 2018 12:47:56 -0600</pubDate>
       
       <guid>/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Wed, 12 Dec 2018 12:47:56 -0600</pubDate>
+      
+      <guid>/tags/hugo/</guid>
       <description></description>
     </item>
     
