@@ -84,7 +84,9 @@ Estas variables se pueden representar con vectores de clase factor. Esencialment
 Para asignar la clase **factor** a un vector únicamente pasamos la funcion `as.factor()`   del paquete `tidyverse` o bien la *built in* función   `factor()`. R almacenará los datos en un vector de enteros **integer** . R también agregará el atributo **levels** al atributo ya existente **class**.
 
 
-`sexo <- factor(c("masculino", "femenino", "femenino", "masculino"))typeof(sexo) class(sexo) attributes(sexo) sexo`
+```{r}
+sexo <- factor(c("masculino", "femenino", "femenino", "masculino"))typeof(sexo) class(sexo) attributes(sexo) sexo
+```
 
 
 Note que los factores parecen texto pero se comportan como números. Note que R convertirá las strings de texto en factores cuando leemos una base de datos.
@@ -105,7 +107,10 @@ Este objeto, permite almacenar un grupo de vectores, cada elemento de la lista p
 
 Ejemplo 
 
-`{r} lista<-list(100:130,"R",list(TRUE,FALSE)) lista `
+
+```{r}
+lista<-list(100:130,"R",list(TRUE,FALSE)) lista 
+```
 
 
 La flexibilidad de este objeto es una ventaja ya que nos permite contar con una herramienta versátil de almacenamiento para agrupar cualquier objeto. 
