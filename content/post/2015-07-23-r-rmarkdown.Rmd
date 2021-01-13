@@ -10,6 +10,11 @@ tags: ["R Markdown", "plot", "regression"]
 knitr::opts_chunk$set(collapse = TRUE)
 ```
 
+```{r}
+
+```
+
+
 # R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
@@ -17,10 +22,14 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 You can embed an R code chunk like this:
 
 ```{r cars}
+library(tidyverse)
 summary(cars)
 fit <- lm(dist ~ speed, data = cars)
 fit
+
 ```
+
+?mutate
 
 # Including Plots
 
