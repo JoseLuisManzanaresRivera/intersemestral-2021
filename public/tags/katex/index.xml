@@ -17,7 +17,8 @@
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/katex-math-typesetting/</guid>
-      <description>Instalación de Paquetes. Estos se integran por funciones que se han construido por miembros de la comunidad, nos permiten realizar operaciones concretas así como estimar procedimientos estadisticos de diverso gado de complejidad. Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el espacio de trabajo usando el menú Install y Packages. Área inferior izquierda. La siguiente figura muestra el menú para instalarlos.</description>
+      <description>Instalación de Paquetes. Estos se integran por funciones que se han construido por miembros de la comunidad, nos permiten realizar operaciones concretas así como estimar procedimientos estadisticos de diverso gado de complejidad. Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el espacio de trabajo usando el menú Install y Packages. Área inferior izquierda. La siguiente figura muestra el menú para instalarlos.
+Alternativamente podemos utilizar la línea de comandos para hacer la instalación usando la función: install.</description>
     </item>
     
   </channel>

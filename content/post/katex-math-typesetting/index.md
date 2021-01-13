@@ -15,3 +15,13 @@ Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el e
 
 
 ![](/Packages.jpg)
+
+
+Alternativamente podemos utilizar la línea de comandos para hacer la instalación usando la función: `install.packages("ggplot2")`.
+
+Un paquete básico es `tidyverse` este es una colección de funciones y es útil para realizar  tareas de análisis de datos e incluye herramientas  para visualización como `ggplot`. 
+
+Una vez que tenemos el paquete que necesitamos instalado, lo activamos con la función  `library()`.
+
+
+Una via básica de consulta para conocer los propósiots y los paramétros necesarios para las diferentes funciones para anáisis,  es la documentación de ayuda. Esto se hace anteponiendo un signo $?$  al nombre de la función.   Ej. `?mutate`. *IMPORTANTE*, la libreruia que contiene la funcion debe estar actualmente activa para poder acceder a la documentación solicitada. 
