@@ -200,21 +200,29 @@ audio {
 <p>Cuatro secciones principales para trabajo:</p>
 <p><img src="/IDE.jpg" alt=""></p>
 <p><img src="/IDE2.jpg" alt=""></p>
-<h3 id="source-pane">Source pane</h3>
+<p><em>Source pane</em></p>
 <p><img src="/source.jpg" alt=""></p>
 <h3 id="environment">Environment</h3>
 <p><img src="/environment.jpg" alt=""></p>
-<p>Console pane</p>
+<p><em>Console pane</em></p>
 <p><img src="/console.jpg" alt=""></p>
-<p>Viewer</p>
+<p><em>Viewer</em></p>
 <p><img src="/viewer.jpg" alt=""></p>
+<h3 id="instalación-de-paquetes">Instalación de Paquetes.</h3>
+<p>Estos se integran por  funciones que se han construido por miembros de la comunidad, nos permiten realizar operaciones concretas así como estimar procedimientos estadisticos de diverso gado de complejidad.
+Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el espacio de trabajo usando el menú Install y Packages. Área inferior izquierda. La siguiente figura muestra el menú para instalarlos.</p>
+<p><img src="/Packages.jpg" alt=""></p>
+<p>Alternativamente podemos utilizar la línea de comandos para hacer la instalación usando la función: <code>install.packages(&quot;ggplot2&quot;)</code>.</p>
+<p>Un paquete básico es <code>tidyverse</code> este es una colección de funciones y es útil para realizar  tareas de análisis de datos e incluye herramientas  para visualización como <code>ggplot</code>.</p>
+<p>Una vez que tenemos el paquete que necesitamos instalado, lo activamos con la función  <code>library()</code>.</p>
+<p>Una via básica de consulta para conocer los propósiots y los paramétros necesarios para las diferentes funciones para anáisis,  es la documentación de ayuda. Esto se hace anteponiendo un signo $?$  al nombre de la función.   Ej. <code>?mutate</code>. <em>IMPORTANTE</em>, la libreria que contiene la funcion debe estar actualmente activa para poder acceder a la documentación solicitada.</p>
 <h3 id="consideraciones-a-recordar-sobre-los-tipos-de-variables--clases-y-tipo-de-atributos">Consideraciones a recordar sobre los tipos de variables  clases y tipo de atributos.</h3>
-<h4 id="numeric">Numeric</h4>
-<h4 id="strings">Strings</h4>
-<h4 id="factors">Factors</h4>
+<p><em>Numeric</em>
+<em>Strings</em> 
+<em>Factors</em></p>
 <p>Esta clase se permite almacenar información categórica,  datos que son categóricos por ejemeplo los estados de la república mexicana, sabemos que son 32 y pueden ser almacenados como un vector de factores, en una variable categórica.</p>
 <p>El vector sexo con valores c(&ldquo;Mujer&rdquo;,&ldquo;Hombre&rdquo;), igual es de clase factor. Un conjunto de rangos de edad por ejemplo con factores en un vector como grupo_e&lt;-C(1,2,3,4)  para 1:0-12 años, 2:13-24, 3:25-34 y 4 35-64 años.</p>
-<p>Estas variables se pueden representar con vectores de clase factor. Esencialmente un factor es una categoría. Note que  no son variables cuyo orden o magnitud sea determinante. Por ejemplo en el vector sexo  el 2: Mujer,  no es más que uno: Hombre.</p>
+<p>Estas variables se pueden representar con vectores de clase factor. Esencialmente un factor es una categoría. Note que  no son variables cuyo orden o magnitud sea de terminante. Por ejemplo en el vector sexo  el 2: Mujer,  no es más que uno: Hombre.</p>
 <p>Para asignar la clase <strong>factor</strong> a un vector únicamente pasamos la funcion <code>as.factor()</code>   del paquete <code>tidyverse</code> o bien la <em>built in</em> función   <code>factor()</code>. R almacenará los datos en un vector de enteros <strong>integer</strong> . R también agregará el atributo <strong>levels</strong> al atributo ya existente <strong>class</strong>.</p>
 <p><code>sexo &lt;- factor(c(&quot;masculino&quot;, &quot;femenino&quot;, &quot;femenino&quot;, &quot;masculino&quot;))typeof(sexo) class(sexo) attributes(sexo) sexo</code></p>
 <p>Note que los factores parecen texto pero se comportan como números. Note que R convertirá las strings de texto en factores cuando leemos una base de datos.</p>
@@ -231,14 +239,6 @@ audio {
 <h3 id="data-frames">Data frames.</h3>
 <p>Este tipo de objeto es la versión bi-dimensional de una lista donde las <strong>columnas</strong> son vectores (variables) y cada <strong>renglón</strong> observaciones. Este es el tipo de objeto más útil para realizar el análisis de datos. Podemos pensar en un data frame como el equivalente de R a una hoja de cálculo de excel.</p>
 <p>Un data frame agrupa los <strong>vectores en columnas</strong>, de tal forma que cada vector de un data frame puede contener un tipo de datos específico, pero cada celda dentro un vector tendrá la misma información. Asímismo, los vectores agrupados en un <strong>data frame</strong> son de la misma longitud. La figura siguiente muestra un ejemplo de esta configuración.</p>
-<h3 id="instalación-de-paquetes">Instalación de Paquetes.</h3>
-<p>Estos se integran por  funciones que se han construido por miembros de la comunidad, nos permiten realizar operaciones concretas así como estimar procedimientos estadisticos de diverso gado de complejidad.
-Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el espacio de trabajo usando el menú Install y Packages. Área inferior izquierda. La siguiente figura muestra el menú para instalarlos.</p>
-<p><img src="/Packages.jpg" alt=""></p>
-<p>Alternativamente podemos utilizar la línea de comandos para hacer la instalación usando la función: <code>install.packages(&quot;ggplot2&quot;)</code>.</p>
-<p>Un paquete básico es <code>tidyverse</code> este es una colección de funciones y es útil para realizar  tareas de análisis de datos e incluye herramientas  para visualización como <code>ggplot</code>.</p>
-<p>Una vez que tenemos el paquete que necesitamos instalado, lo activamos con la función  <code>library()</code>.</p>
-<p>Una via básica de consulta para conocer los propósiots y los paramétros necesarios para las diferentes funciones para anáisis,  es la documentación de ayuda. Esto se hace anteponiendo un signo $?$  al nombre de la función.   Ej. <code>?mutate</code>. <em>IMPORTANTE</em>, la libreria que contiene la funcion debe estar actualmente activa para poder acceder a la documentación solicitada.</p>
 
 
 
