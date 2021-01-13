@@ -29,18 +29,20 @@ Cuatro secciones principales para trabajo:
 ![](/IDE2.jpg)
 
 
- *Source pane*
+ **Source pane**
  
 ![](/source.jpg)
-### Environment 
+
+**Environment** 
 
 ![](/environment.jpg)
 
-*Console pane*
+**Console pane**
 
 ![](/console.jpg)
 
-*Viewer*
+**Viewer**
+
 
 ![](/viewer.jpg)
 
@@ -67,9 +69,11 @@ Una via básica de consulta para conocer los propósiots y los paramétros neces
 
 ### Consideraciones a recordar sobre los tipos de variables  clases y tipo de atributos.
 
-*Numeric*
-*Strings* 
-*Factors*
+**Numeric**
+
+**Strings** 
+
+**Factors**
 
 Esta clase se permite almacenar información categórica,  datos que son categóricos por ejemeplo los estados de la república mexicana, sabemos que son 32 y pueden ser almacenados como un vector de factores, en una variable categórica. 
 
