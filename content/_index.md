@@ -1,6 +1,6 @@
 ---
 draft: true
-title: Home
+title: Herramientas de análisis estadístico
 ---
 
-Homepage content goes here. 
+Curso intersemestral  
