@@ -26,12 +26,7 @@ knitr::opts_chunk$set(eval = TRUE,
 
 ```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
 
-library(viridisLite)
-library(ggrepel)
 library(ggplot2)
-library(gganimate)
-library(scales)
-library(plotly)
 library(tidyverse)
 ```
 
@@ -45,8 +40,7 @@ library(tidyverse)
 [Datos  site:](http://smn.cna.gob.mx/es/climatologia/informacion-climatologica)
 [Source alternariva](http://atlasclimatico.unam.mx/RRDM/)
 
-```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
-library(tidyverse)
+```{r,  fig.height = 8, fig.width = 12,  echo = TRUE, message=FALSE, warning=FALSE}
 
 DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/I/data/clima/Durango/ema10092_base.csv")%>%
 mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
@@ -73,7 +67,11 @@ geom_boxplot()+
 xlab("Mes")+ylab("Temperatura diaria mínima°c")+
 theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1))
 
-boxplot
-
 
 ```
+
+```{r}
+boxplot
+
+```
+

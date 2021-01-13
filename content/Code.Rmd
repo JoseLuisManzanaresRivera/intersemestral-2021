@@ -27,7 +27,7 @@ knitr::opts_chunk$set(eval = TRUE,
 ```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
 
 library(ggplot2)
-library(dplyr)
+library(tidyverse)
 ```
 
 
@@ -67,7 +67,11 @@ geom_boxplot()+
 xlab("Mes")+ylab("Temperatura diaria mínima°c")+
 theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1))
 
-boxplot
-
 
 ```
+
+```{r}
+boxplot
+
+```
+
