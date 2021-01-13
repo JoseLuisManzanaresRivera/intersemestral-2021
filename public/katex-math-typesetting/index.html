@@ -235,9 +235,8 @@ Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el e
 <p><code>sexo &lt;- factor(c(&quot;masculino&quot;, &quot;femenino&quot;, &quot;femenino&quot;, &quot;masculino&quot;))typeof(sexo) class(sexo) attributes(sexo) sexo</code></p>
 <p>Note que los factores parecen texto pero se comportan como números. Note que R convertirá las strings de texto en factores cuando leemos una base de datos.</p>
 <p>Para converitr una variable a  texto  <strong>character strings</strong> solo utilizamos la función <code>as.character()</code></p>
-<p>Ejemplo
-|
-<code>as.character(sexo)</code></p>
+<p>Ejemplo</p>
+<p><code>as.character(sexo)</code></p>
 <h2 id="objetos">Objetos</h2>
 <h3 id="listas">Listas.</h3>
 <p>Este objeto, permite almacenar un grupo de vectores, cada elemento de la lista puede ser un vector, a diferencia  del caso de los vectores atómicos en donde se agrupan elementos individuales, en una lista cada &ldquo;elemento&rdquo; es un vector y estos puden ser de diferentes tipos, ej. numéricos, character strings, logicos. La función utilizada para crear una lista es <code>list()</code></p>
@@ -251,7 +250,23 @@ Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el e
 <p><img src="/dataframe.jpg" alt=""></p>
 <p>Ejemplo 2</p>
 <p><img src="/dataframe2.jpg" alt=""></p>
+<p><em>Ejemplo.</em>*</p>
+<p>Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en un archivo de texto separado por comas <strong>commas separeted values</strong>  (.csv) nombrado <strong>ebc15.csv</strong> en la ruta indicada entre comillas: <strong>&ldquo;C:/Users/&hellip;&quot;</strong>.</p>
+<pre><code class="language-{r}" data-lang="{r}">library(tidyverse)
+ebc15&lt;-read.csv(&quot;C:/Users/LENOVO/Desktop/DESK/web/Cursos/public/post/egresosBC15.csv&quot;)%&gt;%
+select(-X)  
 
+names(ebc15)
+glimpse(ebc15)
+str(ebc15)
+class(ebc15)
+```'
+
+Este contiene información de egresos hospitalarios. Note que contiene 5 vectores (variables). Hemos  utilizado la función `glimpse()` del paquete `tidyverse`  para conocer el tipo de vectores almacenados en el DF y una función alternativa para conocer esta información  mediante la función `str()` structure.
+
+Note que la clase del objeto `ebc15` es data.frame. También hemos extraído con la función `names()` los nombres de los vectores contenidos en el df.
+
+</code></pre>
 
 
       </main>
