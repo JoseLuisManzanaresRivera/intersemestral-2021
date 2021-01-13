@@ -7,17 +7,10 @@ output: html_document
 
 
 
-<div id="nota-temperatura-plot" class="section level3">
-<h3>Nota: Temperatura Plot</h3>
+<div id="representación-de-dispersión-datos-con-frecuencia-diaria.-boxplot" class="section level3">
+<h3>Representación de dispersión datos con frecuencia diaria. Boxplot</h3>
 <p><a href="http://smn.cna.gob.mx/es/climatologia/informacion-climatologica">Datos:</a>
 <a href="http://atlasclimatico.unam.mx/RRDM/">Alternativa datos</a></p>
-<pre class="r"><code>library(tidyverse)
-
-DGO10092&lt;-read.csv(&quot;C:/Users/LENOVO/Desktop/DESK/I/data/clima/Durango/ema10092_base.csv&quot;)%&gt;%
-mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%&gt;%
-select(-c(TMINC,TMAXC))
-
-glimpse(DGO10092)</code></pre>
 <pre><code>## Rows: 15,527
 ## Columns: 5
 ## $ FECHA    &lt;fct&gt; 01/01/1941, 02/01/1941, 03/01/1941, 04/01/1941, 05/01/1941...
@@ -25,22 +18,12 @@ glimpse(DGO10092)</code></pre>
 ## $ EVAPmm   &lt;fct&gt; 3.3, 3.8, 5.8, 5.7, 5, 4.9, 8.1, 5.3, 3.6, 2.9, 3.6, 5.1, ...
 ## $ tmin     &lt;dbl&gt; 3.5, 2.5, 5.5, 7.5, -4.5, -2.5, -3.5, -1.0, 3.0, 7.0, 5.0,...
 ## $ tmax     &lt;dbl&gt; 19.5, 21.5, 23.5, 19.0, 21.5, 23.5, 23.5, 24.5, 20.5, 19.0...</code></pre>
-<pre class="r"><code>str(DGO10092)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    15527 obs. of  5 variables:
 ##  $ FECHA   : Factor w/ 15527 levels &quot;01/01/1941&quot;,&quot;01/01/1942&quot;,..: 1 511 1021 1531 2041 2551 3061 3571 4081 4591 ...
 ##  $ PRECIPmm: Factor w/ 290 levels &quot;0&quot;,&quot;0.1&quot;,&quot;0.2&quot;,..: 1 1 1 1 1 1 1 1 2 3 ...
 ##  $ EVAPmm  : Factor w/ 191 levels &quot;-7.3&quot;,&quot;0.1&quot;,&quot;0.2&quot;,..: 116 121 142 141 133 132 169 137 119 112 ...
 ##  $ tmin    : num  3.5 2.5 5.5 7.5 -4.5 -2.5 -3.5 -1 3 7 ...
 ##  $ tmax    : num  19.5 21.5 23.5 19 21.5 23.5 23.5 24.5 20.5 19 ...</code></pre>
-<pre class="r"><code>DGO&lt;-DGO10092%&gt;%mutate(date=as.Date(FECHA, &quot;%d/%m/%Y&quot;))%&gt;%
-mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
-
-
-meses&lt;-data.frame(nombre=c(&quot;Enero &quot;,    &quot;Febrero&quot;,  &quot;Marzo&quot;,    &quot;Abril&quot;,    &quot;Mayo&quot;, &quot;Junio&quot;,    &quot;Julio&quot;,    &quot;Agosto&quot;,   &quot;Septiembre&quot;,   &quot;Octubre&quot;,  &quot;Noviembre&quot;,    &quot;Diciembre&quot;),mes=seq(1, 12, by=1))
-
-
-DGO&lt;-left_join(meses,DGO)
-glimpse(DGO)</code></pre>
 <pre><code>## Rows: 15,527
 ## Columns: 9
 ## $ nombre   &lt;fct&gt; Enero , Enero , Enero , Enero , Enero , Enero , Enero , En...
@@ -52,17 +35,8 @@ glimpse(DGO)</code></pre>
 ## $ tmax     &lt;dbl&gt; 19.5, 21.5, 23.5, 19.0, 21.5, 23.5, 23.5, 24.5, 20.5, 19.0...
 ## $ date     &lt;date&gt; 1941-01-01, 1941-01-02, 1941-01-03, 1941-01-04, 1941-01-0...
 ## $ año      &lt;chr&gt; &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1...</code></pre>
-<pre class="r"><code>levels(DGO$nombre )</code></pre>
 <pre><code>##  [1] &quot;Abril&quot;      &quot;Agosto&quot;     &quot;Diciembre&quot;  &quot;Enero &quot;     &quot;Febrero&quot;   
 ##  [6] &quot;Julio&quot;      &quot;Junio&quot;      &quot;Marzo&quot;      &quot;Mayo&quot;       &quot;Noviembre&quot; 
 ## [11] &quot;Octubre&quot;    &quot;Septiembre&quot;</code></pre>
-<pre class="r"><code>## Plot Daily  1941-2000
-
-boxplot&lt;-ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
-geom_boxplot()+
-xlab(&quot;Mes&quot;)+ylab(&quot;Temperatura diaria mínima°c&quot;)+
-theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1))
-
-boxplot</code></pre>
-<p><img src="//Code_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="//Code_files/figure-html/unnamed-chunk-1-1.png" width="1152" /></p>
 </div>

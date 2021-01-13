@@ -40,12 +40,12 @@ library(tidyverse)
 
 
 
-### Nota: Temperatura Plot
+### Representación de dispersión datos con frecuencia diaria. Boxplot
 
 [Datos:](http://smn.cna.gob.mx/es/climatologia/informacion-climatologica)
 [Alternativa datos](http://atlasclimatico.unam.mx/RRDM/)
 
-```{r,   echo=TRUE,  message=FALSE, warning=FALSE}
+```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
 library(tidyverse)
 
 DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/I/data/clima/Durango/ema10092_base.csv")%>%
