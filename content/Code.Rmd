@@ -19,7 +19,9 @@ knitr::opts_chunk$set(eval = TRUE,
 ```
 
 
-#Nota: Temperatura Plot
+
+### Nota: Temperatura Plot
+
 [Datos:](http://smn.cna.gob.mx/es/climatologia/informacion-climatologica)
 [Alternativa datos](http://atlasclimatico.unam.mx/RRDM/)
 
