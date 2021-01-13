@@ -20,8 +20,8 @@ title = "Herramientas de análisis estadístico"
 # The value of pre is the icon name
 [menu]
   [[menu.nav]]
-    name = "Teoría"
-    pre = "Teoría"
+    name = "MDR"
+    pre = "MDR"
     url = "/"
     weight = 1
   [[menu.nav]]
