@@ -2,3 +2,59 @@ theme = "vanilla-bootstrap-hugo-theme"
 baseURL = "https://hea-2021-mdr.netlify.app//"
 languageCode = "en-us"
 title = "Herramientas de análisis estadístico"
+
+
+# Uncomment below to enable syntax hghlighting
+# pygmentsCodefences = true
+# pygmentsCodefencesGuessSyntax = true
+# See https://xyproto.github.io/splash/docs/all.html for more styles
+# pygmentsStyle = "pygments"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+# See https://feathericons.com/
+# The value of pre is the icon name
+[menu]
+  [[menu.nav]]
+    name = "Teoría"
+    pre = "Teoría"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "Plots"
+    pre = "edit"
+    url = "/post/"
+    weight = 2
+  [[menu.nav]]
+    name = "Notación"
+    pre = "maths"
+    url = "/Notación/"
+    weight = 3
+    [[menu.nav]]
+    name = "Code"
+    pre = "maths"
+    url = "/code/"
+    weight = 4
+  [[menu.nav]]
+    name = "Bases de datos"
+    pre = "smile"
+    url = "/Bases de datos/"
+    weight = 5
+  [[menu.nav]]
+    name = "RSS"
+    pre = "rss"
+    url = "/index.xml"
+    weight = 6
+[params]
+  includeBootstrapJs = false
+  showActiveNav = true
+  containerMaxWidth = "700px"
+  dateFormat = "Jan 2, 2006"
+  homeText = "Herramientas de análisis estadístico. Datos a escala regional en México."
+  footerText = "José Luis Manzanares Rivera.2021"
+  hideFooter = false
+  math= true

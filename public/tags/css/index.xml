@@ -13,10 +13,10 @@
     
     <item>
       <title>Style a markdown table with Bootstrap classes in Hugo</title>
-      <link>/post/style-a-markdown-table-with-bootstrap-classes-in-hugo/</link>
+      <link>/style-a-markdown-table-with-bootstrap-classes-in-hugo/</link>
       <pubDate>Wed, 12 Dec 2018 12:47:56 -0600</pubDate>
       
-      <guid>/post/style-a-markdown-table-with-bootstrap-classes-in-hugo/</guid>
+      <guid>/style-a-markdown-table-with-bootstrap-classes-in-hugo/</guid>
       <description>Inspired by this discussion, I wanted the ability to style a markdown table with Bootstrap table classes. In the past, I&#39;ve accomplished this by defining the table in a data file, then building it with a shortcode.
 While this works fine, it&#39;s better for a different use case. I wanted something that meets the following criteria:
  The table is defined in markdown It lives in the content file, e.g. content/post/some-post.</description>
