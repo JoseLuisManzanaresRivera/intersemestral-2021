@@ -29,13 +29,15 @@ Cuatro secciones principales para trabajo:
 ![](/IDE2.jpg)
 
 
-Source pane 
-
-Environment 
+### Source pane 
+![](/source.jpg)
+### Environment 
 
 ![](/environment.jpg)
 
 Console pane
+
+![](/console.jpg)
 
 Viewer
 
