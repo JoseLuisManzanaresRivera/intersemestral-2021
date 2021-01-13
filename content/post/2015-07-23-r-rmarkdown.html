@@ -1,65 +1,50 @@
 ---
-title: "Hello R Markdown"
-author: "Frida Gomam"
-date: 2015-07-23T21:13:14-05:00
+title: "Boxplot"
+author: "Jose´Luis Manzanares Rivera"
+date: 2021-01-12T21:13:14-05:00
 categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+tags: ["R Markdown", "plot", "boxplot"]
 ---
 
 
 
-<div id="r-markdown" class="section level1">
-<h1>R Markdown</h1>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>You can embed an R code chunk like this:</p>
-<pre class="r"><code>library(tidyverse)
-## Warning: package &#39;tidyverse&#39; was built under R version 3.5.3
-## -- Attaching packages ----------------------------------------- tidyverse 1.3.0 --
-## v ggplot2 3.3.0     v purrr   0.3.3
-## v tibble  3.0.1     v dplyr   0.8.3
-## v tidyr   1.0.2     v stringr 1.4.0
-## v readr   1.3.1     v forcats 0.4.0
-## Warning: package &#39;ggplot2&#39; was built under R version 3.5.3
-## Warning: package &#39;tibble&#39; was built under R version 3.5.3
-## Warning: package &#39;tidyr&#39; was built under R version 3.5.3
-## Warning: package &#39;purrr&#39; was built under R version 3.5.3
-## Warning: package &#39;dplyr&#39; was built under R version 3.5.3
-## -- Conflicts -------------------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932</code></pre>
-<p>?mutate</p>
-</div>
-<div id="including-plots" class="section level1">
-<h1>Including Plots</h1>
-<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
-<pre class="r"><code>par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
-  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
-  init.angle = -50, border = NA
-)</code></pre>
-<div class="figure"><span id="fig:pie"></span>
-<img src="//post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
-<p class="caption">
-Figure 1: A fancy pie chart.
-</p>
-</div>
+<div id="representación-de-dispersión-datos-con-frecuencia-diaria.-boxplot" class="section level3">
+<h3>Representación de dispersión datos con frecuencia diaria. Boxplot</h3>
+<p><a href="http://smn.cna.gob.mx/es/climatologia/informacion-climatologica">Datos site:</a>
+<a href="http://atlasclimatico.unam.mx/RRDM/">Source alternariva</a></p>
+<pre><code>## Warning: NAs introducidos por coerción
+
+## Warning: NAs introducidos por coerción</code></pre>
+<pre><code>## Rows: 15,527
+## Columns: 5
+## $ FECHA    &lt;fct&gt; 01/01/1941, 02/01/1941, 03/01/1941, 04/01/1941, 05/01/1941...
+## $ PRECIPmm &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0...
+## $ EVAPmm   &lt;fct&gt; 3.3, 3.8, 5.8, 5.7, 5, 4.9, 8.1, 5.3, 3.6, 2.9, 3.6, 5.1, ...
+## $ tmin     &lt;dbl&gt; 3.5, 2.5, 5.5, 7.5, -4.5, -2.5, -3.5, -1.0, 3.0, 7.0, 5.0,...
+## $ tmax     &lt;dbl&gt; 19.5, 21.5, 23.5, 19.0, 21.5, 23.5, 23.5, 24.5, 20.5, 19.0...</code></pre>
+<pre><code>## &#39;data.frame&#39;:    15527 obs. of  5 variables:
+##  $ FECHA   : Factor w/ 15527 levels &quot;01/01/1941&quot;,&quot;01/01/1942&quot;,..: 1 511 1021 1531 2041 2551 3061 3571 4081 4591 ...
+##  $ PRECIPmm: Factor w/ 290 levels &quot;0&quot;,&quot;0.1&quot;,&quot;0.2&quot;,..: 1 1 1 1 1 1 1 1 2 3 ...
+##  $ EVAPmm  : Factor w/ 191 levels &quot;-7.3&quot;,&quot;0.1&quot;,&quot;0.2&quot;,..: 116 121 142 141 133 132 169 137 119 112 ...
+##  $ tmin    : num  3.5 2.5 5.5 7.5 -4.5 -2.5 -3.5 -1 3 7 ...
+##  $ tmax    : num  19.5 21.5 23.5 19 21.5 23.5 23.5 24.5 20.5 19 ...</code></pre>
+<pre><code>## Joining, by = &quot;mes&quot;</code></pre>
+<pre><code>## Rows: 15,527
+## Columns: 9
+## $ nombre   &lt;fct&gt; Enero , Enero , Enero , Enero , Enero , Enero , Enero , En...
+## $ mes      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ FECHA    &lt;fct&gt; 01/01/1941, 02/01/1941, 03/01/1941, 04/01/1941, 05/01/1941...
+## $ PRECIPmm &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0...
+## $ EVAPmm   &lt;fct&gt; 3.3, 3.8, 5.8, 5.7, 5, 4.9, 8.1, 5.3, 3.6, 2.9, 3.6, 5.1, ...
+## $ tmin     &lt;dbl&gt; 3.5, 2.5, 5.5, 7.5, -4.5, -2.5, -3.5, -1.0, 3.0, 7.0, 5.0,...
+## $ tmax     &lt;dbl&gt; 19.5, 21.5, 23.5, 19.0, 21.5, 23.5, 23.5, 24.5, 20.5, 19.0...
+## $ date     &lt;date&gt; 1941-01-01, 1941-01-02, 1941-01-03, 1941-01-04, 1941-01-0...
+## $ año      &lt;chr&gt; &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1...</code></pre>
+<pre><code>##  [1] &quot;Abril&quot;      &quot;Agosto&quot;     &quot;Diciembre&quot;  &quot;Enero &quot;     &quot;Febrero&quot;   
+##  [6] &quot;Julio&quot;      &quot;Junio&quot;      &quot;Marzo&quot;      &quot;Mayo&quot;       &quot;Noviembre&quot; 
+## [11] &quot;Octubre&quot;    &quot;Septiembre&quot;</code></pre>
+<pre><code>## Warning: Removed 267 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="//post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-1-1.png" width="1152" /></p>
+<pre><code>## Warning: Removed 267 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="//post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>

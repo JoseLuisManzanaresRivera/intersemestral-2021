@@ -1,46 +1,67 @@
 ---
-title: "Hello R Markdown"
-author: "Frida Gomam"
-date: 2015-07-23T21:13:14-05:00
+title: "Boxplot"
+author: "Jose´Luis Manzanares Rivera"
+date: 2021-01-12T21:13:14-05:00
 categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+tags: ["R Markdown", "plot", "boxplot"]
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(eval = TRUE, 
+                      echo = FALSE, 
+                      cache = TRUE,
+                      include = TRUE,
+                      collapse = FALSE,
+                      dependson = NULL,
+                      engine = "R", # Chunks will always have R code, unless noted
+                      error = FALSE)                     
+
+```
+
+
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE}
+
+library(ggplot2)
+library(tidyverse)
+```
+
+
+### Representación de dispersión datos con frecuencia diaria. Boxplot
+
+[Datos  site:](http://smn.cna.gob.mx/es/climatologia/informacion-climatologica)
+[Source alternariva](http://atlasclimatico.unam.mx/RRDM/)
+
+```{r,  fig.height = 8, fig.width = 12, cache = TRUE}
+
+DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/I/data/clima/Durango/ema10092_base.csv")%>%
+mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
+select(-c(TMINC,TMAXC))
+
+glimpse(DGO10092)
+str(DGO10092)
+
+DGO<-DGO10092%>%mutate(date=as.Date(FECHA, "%d/%m/%Y"))%>%
+mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
+
+
+meses<-data.frame(nombre=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
+
+
+DGO<-left_join(meses,DGO)
+glimpse(DGO)
+levels(DGO$nombre )
+
+## Plot Daily  1941-2000
+
+boxplot<-ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
+geom_boxplot()+
+xlab("Mes")+ylab("Temperatura diaria mínima°c")+
+theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1))
+boxplot
+
 ```
 
 ```{r}
+boxplot
 
-```
-
-
-# R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-You can embed an R code chunk like this:
-
-```{r cars}
-library(tidyverse)
-summary(cars)
-fit <- lm(dist ~ speed, data = cars)
-fit
-
-```
-
-?mutate
-
-# Including Plots
-
-You can also embed plots. See Figure \@ref(fig:pie) for example:
-
-```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
-par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
-  col = c('#0292D8', '#F7EA39', '#C4B632'),
-  init.angle = -50, border = NA
-)
 ```

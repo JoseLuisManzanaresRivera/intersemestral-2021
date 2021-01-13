@@ -3,22 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2015-07-23-r-rmarkdown/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/boxplot/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/plot/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r-markdown/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/bases-de-datos/</loc>
     <lastmod>2021-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2021-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/conceptos/</loc>
-    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
     <lastmod>2020-02-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,11 +58,6 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/teor%C3%ADa/</loc>
     <lastmod>2020-02-28T00:00:00+00:00</lastmod>
   </url>
@@ -45,6 +65,21 @@
   <url>
     <loc>/tags/tidyverse/</loc>
     <lastmod>2020-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/density/</loc>
+    <lastmod>2019-01-11T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2021-01-13-r-rmarkdown/</loc>
+    <lastmod>2019-01-11T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/distribution/</loc>
+    <lastmod>2019-01-11T21:13:14-05:00</lastmod>
   </url>
   
   <url>
@@ -123,26 +158,6 @@
   </url>
   
   <url>
-    <loc>/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/regression/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -204,6 +219,10 @@
   
   <url>
     <loc>/code/</loc>
+  </url>
+  
+  <url>
+    <loc>/2021-01-12-r-rmarkdown/</loc>
   </url>
   
 </urlset>
