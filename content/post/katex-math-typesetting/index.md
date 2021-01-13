@@ -116,4 +116,9 @@ Este tipo de objeto es la versión bi-dimensional de una lista donde las **colum
 
 Un data frame agrupa los **vectores en columnas**, de tal forma que cada vector de un data frame puede contener un tipo de datos específico, pero cada celda dentro un vector tendrá la misma información. Asímismo, los vectores agrupados en un **data frame** son de la misma longitud. La figura siguiente muestra un ejemplo de esta configuración.
 
+Ejemplo 1
+
 ![](/dataframe.jpg)
+
+Ejemplo 2
+![](/dataframe2.jpg)
