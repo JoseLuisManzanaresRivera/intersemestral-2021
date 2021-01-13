@@ -5,29 +5,11 @@ tags:
 - math
 - typesetting
 - hugo
-title: Katex Math Typesetting
+title: IDE y Tidyverse
 ---
 
-Enable Katex in the config file by setting the `katex` param to `true`. This will import the necessary Katex CSS/JS. 
+### Instalación de Paquetes.
 
-**Note:** Use the online reference of [supported TeX functions](https://katex.org/docs/supported.html). 
+Estos se integran por  funciones que se han construido por miembros de la comunidad, nos permiten realizar operaciones concretas así como estimar procedimientos estadisticos de diverso gado de complejidad.
+Para poder utilizar estos paquetes es necesario instalarlos y activarlos en el espacio de trabajo usando el menú Install y Packages. Área inferior izquierda. La siguiente figura muestra el menú para instalarlos.
 
-Some math:
-
-```
-$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
-```
-
-$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
-
-More math: 
-
-```
-$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-$$
-```
-
-$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-$$
