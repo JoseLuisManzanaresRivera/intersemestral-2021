@@ -69,11 +69,11 @@ Una via básica de consulta para conocer los propósiots y los paramétros neces
 
 ### Consideraciones a recordar sobre los tipos de variables  clases y tipo de atributos.
 
--**Numeric**
+- Numeric
 
--**Strings** 
+- Strings 
 
--**Factors**
+- Factors
 
 Esta clase se permite almacenar información categórica,  datos que son categóricos por ejemeplo los estados de la república mexicana, sabemos que son 32 y pueden ser almacenados como un vector de factores, en una variable categórica. 
 
@@ -121,4 +121,5 @@ Ejemplo 1
 ![](/dataframe.jpg)
 
 Ejemplo 2
+
 ![](/dataframe2.jpg)
