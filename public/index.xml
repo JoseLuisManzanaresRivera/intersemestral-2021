@@ -6,10 +6,19 @@
     <description>Recent content on Herramientas de análisis estadístico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bases de datos</title>
+      <link>/bases-de-datos/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/bases-de-datos/</guid>
+      <description>Ejercicio 1</description>
+    </item>
     
     <item>
       <title>Katex Math Typesetting</title>
