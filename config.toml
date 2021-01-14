@@ -42,7 +42,7 @@ title = "Herramientas de análisis estadístico"
   [[menu.nav]]
     name = "Notación"
     pre = "rss"
-    url = "/index.xml"
+    url = "/Notación"
     weight = 5  
   [[menu.nav]]
     name = "RSS"
