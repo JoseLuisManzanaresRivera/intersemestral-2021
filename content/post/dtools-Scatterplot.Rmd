@@ -25,7 +25,7 @@ library(dplyr)
 library(plotly)
 ```
 
-```{r}
+```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
 
 TASA17<-readRDS("TASA17.rds")%>%
 mutate(Estado=as.factor(Estado))%>%
