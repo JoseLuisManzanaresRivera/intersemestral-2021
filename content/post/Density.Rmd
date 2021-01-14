@@ -32,6 +32,23 @@ library(dplyr)
 
 ```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
 
+
+sdensity<-readRDS("density.rds")%>%
+  mutate(s=as.factor(s))%>%
+  filter(ENT_RESID!=33& ENT_RESID!=34& ENT_RESID!=35& ENT_RESID!=99)%>%
+  group_by(ENT_RESID)
+
+cat_e<-read.csv("cat_entidad.csv")%>%
+select(-X)%>%
+rename(ent_res=X.U.FEFF.EDO)%>%
+mutate(ent_res=sprintf("%02d",ent_res))%>%
+mutate(ENT_RESID=as.factor(ent_res))%>%
+select(-ent_res)
+
+sdensity<-left_join(sdensity,cat_e)
+
+
+
 ags<-filter(sdensity,ENT_RESID=="01")%>%
   mutate(s=as.factor(s))
 
@@ -59,20 +76,6 @@ aplt
 #### Los 32 estados del todo el país
 
 ```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE}
-
-sdensity<-readRDS("density.rds")%>%
-  mutate(s=as.factor(s))%>%
-  filter(ENT_RESID!=33& ENT_RESID!=34& ENT_RESID!=35& ENT_RESID!=99)%>%
-  group_by(ENT_RESID)
-
-cat_e<-read.csv("cat_entidad.csv")%>%
-select(-X)%>%
-rename(ent_res=X.U.FEFF.EDO)%>%
-mutate(ent_res=sprintf("%02d",ent_res))%>%
-mutate(ENT_RESID=as.factor(ent_res))%>%
-select(-ent_res)
-
-sdensity<-left_join(sdensity,cat_e)
 
 
 mxplt<-ggplot(sdensity, aes(x=age,linetype=s, color=s))+

@@ -26,7 +26,12 @@ library(dplyr)
 ```
 
 
-```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE}
+
+####  Caso Aguascalientes
+
+
+```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
+
 
 sdensity<-readRDS("density.rds")%>%
   mutate(s=as.factor(s))%>%
@@ -43,25 +48,6 @@ select(-ent_res)
 sdensity<-left_join(sdensity,cat_e)
 
 
-mxplt<-ggplot(sdensity, aes(x=age,linetype=s, color=s))+
-geom_line(stat="density")+
-labs(linetype="Causa")+
-xlab("Edad de la persona (Años)")+
-ylab("Densidad f(y)")+
-facet_wrap(~DESCRIP, nrow=6)+
-scale_linetype(labels=c("Otras causas","Suicidio"))+
-  theme_classic()+
-scale_color_manual(values = c("mediumturquoise","magenta1"))+
-  theme(legend.position="none")
-
-mxplt
-```
-
-
-####  Caso Aguascalientes
-
-
-```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
 
 ags<-filter(sdensity,ENT_RESID=="01")%>%
   mutate(s=as.factor(s))
@@ -85,3 +71,25 @@ theme(legend.position="none")
 aplt
 
 ```
+
+
+#### Los 32 estados del todo el país
+
+```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE}
+
+
+mxplt<-ggplot(sdensity, aes(x=age,linetype=s, color=s))+
+geom_line(stat="density")+
+labs(linetype="Causa")+
+xlab("Edad de la persona (Años)")+
+ylab("Densidad f(y)")+
+facet_wrap(~DESCRIP, nrow=6)+
+scale_linetype(labels=c("Otras causas","Suicidio"))+
+  theme_classic()+
+scale_color_manual(values = c("mediumturquoise","magenta1"))+
+  theme(legend.position="none")
+
+mxplt
+```
+
+
