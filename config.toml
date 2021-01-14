@@ -45,13 +45,8 @@ title = "Herramientas de análisis estadístico"
     url = "/Notación"
     weight = 5  
   [[menu.nav]]
-    name = "RSS"
-    pre = "rss"
-    url = "/index.xml"
-    weight = 6
-  [[menu.nav]]
     name = "Material de consulta"
-    pre = "maths"
+    pre = "rss"
     url = "/Material de consulta/"
     weight = 7
 [params]
