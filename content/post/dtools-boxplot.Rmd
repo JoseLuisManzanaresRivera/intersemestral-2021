@@ -34,11 +34,11 @@ library(tidyverse)
 [Datos  site:](http://smn.cna.gob.mx/es/climatologia/informacion-climatologica)
 [Source alternariva](http://atlasclimatico.unam.mx/RRDM/)
 
-```{r,  fig.height = 8, fig.width = 12, cache = TRUE}
+```{r,  fig.height = 8, fig.width = 12, cache = TRUE, echo = FALSE}
 
 dgo_temp<-readRDS("dgo_temps.rds")
 
-## Damos un vistazo a los datos para combrabar que las variables estan estan en el formato apropiado para su análisis.
+## Damos un vistazo a los datos para comprobar que las variables  estan en el formato apropiado para su análisis.
 
 glimpse(dgo_temp)
 str(dgo_temp)
