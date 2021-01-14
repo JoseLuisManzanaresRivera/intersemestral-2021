@@ -46,7 +46,7 @@ title = "Herramientas de análisis estadístico"
     weight = 5  
   [[menu.nav]]
     name = "Material de consulta"
-    pre = "rss"
+    pre = "aka"
     url = "/Material de consulta/"
     weight = 6
 [params]
