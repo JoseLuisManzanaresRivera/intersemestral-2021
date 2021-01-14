@@ -33,7 +33,7 @@ title = "Herramientas de análisis estadístico"
     name = "Material de consulta"
     pre = "maths"
     url = "/Material de consulta/"
-    weight = 3
+    weight = 7
     [[menu.nav]]
     name = "Code"
     pre = "maths"
@@ -43,12 +43,17 @@ title = "Herramientas de análisis estadístico"
     name = "Bases de datos"
     pre = "smile"
     url = "/Bases de datos/"
-    weight = 5
+    weight = 3
   [[menu.nav]]
     name = "RSS"
     pre = "rss"
     url = "/index.xml"
     weight = 6
+  [[menu.nav]]
+    name = "Notación"
+    pre = "rss"
+    url = "/index.xml"
+    weight = 5
 [params]
   includeBootstrapJs = false
   showActiveNav = true
