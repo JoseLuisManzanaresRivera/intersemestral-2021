@@ -31,41 +31,10 @@ library(tidyverse)
 ```
 
 
+## Visualización 
+### Dispersión
 
 
+Ejemplo 1 [boxplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dtools-Scatterplot.Rmd)
 
 
-### Representación de dispersión datos con frecuencia diaria. Boxplot
-
-[Datos  site:](http://smn.cna.gob.mx/es/climatologia/informacion-climatologica)
-[Source alternariva](http://atlasclimatico.unam.mx/RRDM/)
-
-```{r,  fig.height = 8, fig.width = 12,  echo = TRUE, message=FALSE, warning=FALSE}
-
-DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/I/data/clima/Durango/ema10092_base.csv")%>%
-mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
-select(-c(TMINC,TMAXC))
-
-glimpse(DGO10092)
-str(DGO10092)
-
-DGO<-DGO10092%>%mutate(date=as.Date(FECHA, "%d/%m/%Y"))%>%
-mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
-
-
-meses<-data.frame(nombre=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
-
-
-DGO<-left_join(meses,DGO)
-glimpse(DGO)
-levels(DGO$nombre )
-
-## Plot Daily  1941-2000
-
-boxplot<-ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
-geom_boxplot()+
-xlab("Mes")+ylab("Temperatura diaria mínima°c")+
-theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1))
-
-boxplot
-```

@@ -19,7 +19,7 @@ knitr::opts_chunk$set(eval = TRUE,
 ```
 
 
-```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE}
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE,warning = FALSE}
 
 library(ggplot2)
 library(tidyverse)
