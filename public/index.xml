@@ -82,6 +82,24 @@ Tasa: 12</description>
     </item>
     
     <item>
+      <title>Trends-gganimate</title>
+      <link>/2021-01-12-r-rmarkdown/</link>
+      <pubDate>Fri, 11 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/2021-01-12-r-rmarkdown/</guid>
+      <description>continents&amp;lt;-gapminder%&amp;gt;%select(country,continent)## # A tibble: 1,704 x 6## country continent year lifeExp pop gdpPercap## &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;## 1 Afghanistan Asia 1952 28.8 8425333 779.## 2 Afghanistan Asia 1957 30.3 9240934 821.## 3 Afghanistan Asia 1962 32.0 10267083 853.## 4 Afghanistan Asia 1967 34.0 11537966 836.## 5 Afghanistan Asia 1972 36.1 13079460 740.## 6 Afghanistan Asia 1977 38.4 14880372 786.</description>
+    </item>
+    
+    <item>
+      <title>Trends-gganimate</title>
+      <link>/trends-gganimate/</link>
+      <pubDate>Fri, 11 Jan 2019 21:13:14 -0500</pubDate>
+      
+      <guid>/trends-gganimate/</guid>
+      <description>continents&amp;lt;-gapminder%&amp;gt;%select(country,continent)## # A tibble: 1,704 x 6## country continent year lifeExp pop gdpPercap## &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;## 1 Afghanistan Asia 1952 28.8 8425333 779.## 2 Afghanistan Asia 1957 30.3 9240934 821.## 3 Afghanistan Asia 1962 32.0 10267083 853.## 4 Afghanistan Asia 1967 34.0 11537966 836.## 5 Afghanistan Asia 1972 36.1 13079460 740.## 6 Afghanistan Asia 1977 38.4 14880372 786.</description>
+    </item>
+    
+    <item>
       <title>NASA Images</title>
       <link>/nasa-images/</link>
       <pubDate>Thu, 27 Dec 2018 20:46:49 -0600</pubDate>
@@ -199,15 +217,6 @@ Follow the following steps:
       <guid>/code/</guid>
       <description>Representación de dispersión datos con frecuencia diaria. BoxplotDatos site:Source alternariva
 DGO10092&amp;lt;-read.csv(&amp;quot;C:/Users/LENOVO/Desktop/DESK/I/data/clima/Durango/ema10092_base.csv&amp;quot;)%&amp;gt;%mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%&amp;gt;%select(-c(TMINC,TMAXC))glimpse(DGO10092)## Rows: 15,527## Columns: 5## $ FECHA &amp;lt;fct&amp;gt; 01/01/1941, 02/01/1941, 03/01/1941, 04/01/1941, 05/01/1941...## $ PRECIPmm &amp;lt;fct&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0...## $ EVAPmm &amp;lt;fct&amp;gt; 3.3, 3.8, 5.8, 5.7, 5, 4.9, 8.1, 5.3, 3.6, 2.9, 3.6, 5.</description>
-    </item>
-    
-    <item>
-      <title>Trends-gganimate</title>
-      <link>/2021-01-12-r-rmarkdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/2021-01-12-r-rmarkdown/</guid>
-      <description>continents&amp;lt;-gapminder%&amp;gt;%select(country,continent)## # A tibble: 1,704 x 6## country continent year lifeExp pop gdpPercap## &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;## 1 Afghanistan Asia 1952 28.8 8425333 779.## 2 Afghanistan Asia 1957 30.3 9240934 821.## 3 Afghanistan Asia 1962 32.0 10267083 853.## 4 Afghanistan Asia 1967 34.0 11537966 836.## 5 Afghanistan Asia 1972 36.1 13079460 740.## 6 Afghanistan Asia 1977 38.4 14880372 786.</description>
     </item>
     
   </channel>

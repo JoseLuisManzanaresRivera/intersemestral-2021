@@ -1,7 +1,7 @@
 ---
 title: "Trends-gganimate"
-author: "JLMR"
-date: "13/1/2021"
+author: "Jose´Luis Manzanares Rivera"
+date: 2019-01-11T21:13:14-05:00
 output: html_document
 ---
 

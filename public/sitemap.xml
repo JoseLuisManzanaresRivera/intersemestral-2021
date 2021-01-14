@@ -88,6 +88,16 @@
   </url>
   
   <url>
+    <loc>/2021-01-12-r-rmarkdown/</loc>
+    <lastmod>2019-01-11T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/trends-gganimate/</loc>
+    <lastmod>2019-01-11T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/visualizaci%C3%B3n/</loc>
     <lastmod>2019-01-11T21:13:14-05:00</lastmod>
   </url>
@@ -229,10 +239,6 @@
   
   <url>
     <loc>/code/</loc>
-  </url>
-  
-  <url>
-    <loc>/2021-01-12-r-rmarkdown/</loc>
   </url>
   
 </urlset>
