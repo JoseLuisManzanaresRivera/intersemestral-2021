@@ -34,7 +34,7 @@ library(tidyverse)
 [Datos  site:](http://smn.cna.gob.mx/es/climatologia/informacion-climatologica)
 [Source alternariva](http://atlasclimatico.unam.mx/RRDM/)
 
-```{r,  fig.height = 8, fig.width = 12, cache = TRUE, echo = FALSE}
+```{r,  fig.height = 8, fig.width = 12, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
 
 dgo_temp<-readRDS("dgo_temps.rds")
 
@@ -58,7 +58,7 @@ meses<-data.frame(mes=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	
 
 DGO<-left_join(meses,DGO)
 glimpse(DGO)
-levels(DGO$meses )
+levels(DGO$mes )
 
 ## Plot Daily  1941-2000
 
@@ -66,8 +66,12 @@ boxplot<-ggplot(DGO,aes(x=fct_inorder(mes),y=tmin))+
 geom_boxplot()+
 xlab("Mes")+ylab("Temperatura diaria mínima°c")+
 theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
-boxplot
-
 ```
+#### Distribución de temperaturas mínimas  diarias registradas en estación metereológica DGO10092   del SMN. Periodo 1941 -2000. 
+```{r, warning = FALSE}
+boxplot
+```
+
+Next ejercicio para temperturas max y min de vino paper...
 
 

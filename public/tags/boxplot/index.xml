@@ -27,9 +27,10 @@
       <pubDate>Tue, 12 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/dtools-boxplot/</guid>
-      <description>Contextualización de la herramienta. Concepto Boxplot.boxplot
+      <description>Contextualización de la herramienta. Concepto Boxplot.boxplot
 Representación de dispersión datos con frecuencia diaria. BoxplotDatos site:Source alternariva
-## Rows: 15,527## Columns: 5## $ FECHA &amp;lt;fct&amp;gt; 01/01/1941, 02/01/1941, 03/01/1941, 04/01/1941, 05/01/1941...## $ PRECIPmm &amp;lt;fct&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0...## $ EVAPmm &amp;lt;fct&amp;gt; 3.3, 3.8, 5.8, 5.7, 5, 4.9, 8.1, 5.3, 3.</description>
+Distribución de temperaturas mínimas diarias registradas en estación metereológica DGO10092 del SMN. Periodo 1941 -2000.Next ejercicio para temperturas max y min de vino paper…
+</description>
     </item>
     
   </channel>
