@@ -3,4 +3,5 @@ date: "2021-01-10"
 title: Bases de datos
 ---
   
-Ejercicio 1
+Ejercicio 1 [Scatter](https://drive.google.com/file/d/1yBEVYuzPn6qa4rqbw9FYOe6ODpehij_a/view?usp=sharing) 
+

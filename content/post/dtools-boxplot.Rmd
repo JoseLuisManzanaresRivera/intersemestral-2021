@@ -35,6 +35,22 @@ library(tidyverse)
 [Source alternariva](http://atlasclimatico.unam.mx/RRDM/)
 
 ```{r,  fig.height = 8, fig.width = 12, cache = TRUE}
+library(RCurl)
+
+ex <-getURLContent("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/TASA17.rds")
+
+
+
+asosdate <- getURL("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/TASA17.rds?raw=true")
+
+
+ ("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/raw/main/content/post/TASA17.rds")
+
+
+
+
+casosdate <- getURL("https://raw.githubusercontent.com/carranco-sga/Mexico-COVID-19/master/Mexico_COVID19_CTD.csv",ssl.verifypeer=TRUE)
+
 
 
 dgo_temp<-readRDS("dgo_temps.rds")
