@@ -28,16 +28,20 @@ library(plotly)
 ```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
 
 TASA17<-readRDS("TASA17.rds")%>%
-mutate(Estado=as.factor(Estado))%>%
   select(-Alta)%>%
   arrange(desc(Tasa))%>%
   mutate(Tasa=as.numeric(Tasa),Sexo=as.factor(Sexo))%>%
   mutate(Sexo=ifelse(Sexo==1,"Hombre","Mujer"))
 
 
-fig <- plot_ly(data = TASA17, x = ~Estado, y = ~Tasa, type = 'scatter', color = ~Sexo, colors = "Set1")
+fig <- plot_ly(data = TASA17, x = ~reorder(Estado,Tasa), y = ~Tasa, type = 'scatter', color = ~Sexo, colors = "Set1")
+
 
 fig
+
+
+
+
 ```
 
 
