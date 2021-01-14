@@ -45,9 +45,9 @@ title = "Herramientas de análisis estadístico"
     url = "/Notación"
     weight = 5  
   [[menu.nav]]
-    name = "Material de consulta"
+    name = "Material"
     pre = "aka"
-    url = "/Material de consulta"
+    url = "/Material"
     weight = 6
 [params]
   includeBootstrapJs = false
