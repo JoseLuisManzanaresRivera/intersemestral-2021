@@ -30,9 +30,9 @@ title = "Herramientas de análisis estadístico"
     url = "/post/"
     weight = 2
   [[menu.nav]]
-    name = "Notación"
+    name = "Material de consulta"
     pre = "maths"
-    url = "/Notación/"
+    url = "/Material de consulta/"
     weight = 3
     [[menu.nav]]
     name = "Code"
