@@ -48,7 +48,7 @@ title = "Herramientas de análisis estadístico"
     name = "Material de consulta"
     pre = "rss"
     url = "/Material de consulta/"
-    weight = 7
+    weight = 6
 [params]
   includeBootstrapJs = false
   showActiveNav = true
