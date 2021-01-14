@@ -31,8 +31,11 @@ library(tidyverse)
 ```
 
 
+## Visualización 
+### Dispersión
 
 
+Ejemplo 1 [boxplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dtools-Scatterplot.Rmd)
 
 
 ### Representación de dispersión datos con frecuencia diaria. Boxplot

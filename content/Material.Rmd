@@ -10,4 +10,5 @@ title: Material de consulta
 - [Top recomendado](https://r4ds.had.co.nz/)
 - [Sesión 2](https://plotly-r.com/index.html)
 - [Sesión 3](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
+- [Sesión 4](https://andrewmaclachlan.github.io/CASA0005repo/git-github-and-rmarkdown.html)
 
