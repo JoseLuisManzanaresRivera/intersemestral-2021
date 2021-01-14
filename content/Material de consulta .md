@@ -6,5 +6,7 @@ title: Material de consulta
 ## Documentación de apoyo para las sesiones y recomendaciones del día.
 
 - [Sesión 1](https://b-rodrigues.github.io/modern_R/)
-- [Sesión 1](https://r4ds.had.co.nz/)
+- [Top recomendado](https://r4ds.had.co.nz/)
+- [Sesión 2](https://plotly-r.com/index.html)
+- [Sesión 3](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
 
