@@ -34,11 +34,11 @@ TASA17<-readRDS("TASA17.rds")%>%
   mutate(Sexo=ifelse(Sexo==1,"Hombre","Mujer"))
 
 
-fig <- plot_ly(data = TASA17, x = ~reorder(Estado,Tasa), y = ~Tasa, type = 'scatter', color = ~Sexo, colors = "Set1")
-
+fig <- plot_ly(data = TASA17, x = ~reorder(Estado,Tasa), y = ~Tasa, type = 'scatter', color = ~Sexo, colors = "Set1")%>%
+  layout(xaxis = list(title = "Estados"),
+  yaxis = list (title = "Tasa de  mortalidad por 100 hab."))
 
 fig
-
 
 
 
