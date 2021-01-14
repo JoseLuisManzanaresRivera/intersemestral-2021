@@ -1,0 +1,55 @@
+---
+title: "Boxplot"
+author: "Jose´Luis Manzanares Rivera"
+date: 2021-01-12T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "boxplot"]
+---
+
+
+
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;tibble&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;tidyr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;purrr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.3</code></pre>
+<div id="contextualización-de-la-herramienta-y-concepto-boxplot." class="section level3">
+<h3>Contextualización de la herramienta y concepto Boxplot.</h3>
+<p><a href="http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/">boxplot</a></p>
+</div>
+<div id="representación-de-dispersión-datos-con-frecuencia-diaria.-boxplot" class="section level3">
+<h3>Representación de dispersión datos con frecuencia diaria. Boxplot</h3>
+<p><a href="http://smn.cna.gob.mx/es/climatologia/informacion-climatologica">Datos site:</a>
+<a href="http://atlasclimatico.unam.mx/RRDM/">Source alternariva</a></p>
+<pre><code>## Rows: 15,527
+## Columns: 5
+## $ FECHA    &lt;fct&gt; 01/01/1941, 02/01/1941, 03/01/1941, 04/01/1941, 05/01/1941...
+## $ PRECIPmm &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0...
+## $ EVAPmm   &lt;fct&gt; 3.3, 3.8, 5.8, 5.7, 5, 4.9, 8.1, 5.3, 3.6, 2.9, 3.6, 5.1, ...
+## $ tmin     &lt;dbl&gt; 3.5, 2.5, 5.5, 7.5, -4.5, -2.5, -3.5, -1.0, 3.0, 7.0, 5.0,...
+## $ tmax     &lt;dbl&gt; 19.5, 21.5, 23.5, 19.0, 21.5, 23.5, 23.5, 24.5, 20.5, 19.0...</code></pre>
+<pre><code>## &#39;data.frame&#39;:    15527 obs. of  5 variables:
+##  $ FECHA   : Factor w/ 15527 levels &quot;01/01/1941&quot;,&quot;01/01/1942&quot;,..: 1 511 1021 1531 2041 2551 3061 3571 4081 4591 ...
+##  $ PRECIPmm: Factor w/ 290 levels &quot;0&quot;,&quot;0.1&quot;,&quot;0.2&quot;,..: 1 1 1 1 1 1 1 1 2 3 ...
+##  $ EVAPmm  : Factor w/ 191 levels &quot;-7.3&quot;,&quot;0.1&quot;,&quot;0.2&quot;,..: 116 121 142 141 133 132 169 137 119 112 ...
+##  $ tmin    : num  3.5 2.5 5.5 7.5 -4.5 -2.5 -3.5 -1 3 7 ...
+##  $ tmax    : num  19.5 21.5 23.5 19 21.5 23.5 23.5 24.5 20.5 19 ...</code></pre>
+<pre><code>## Joining, by = &quot;ms&quot;</code></pre>
+<pre><code>## Rows: 15,527
+## Columns: 9
+## $ mes      &lt;fct&gt; Enero , Enero , Enero , Enero , Enero , Enero , Enero , En...
+## $ ms       &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ FECHA    &lt;fct&gt; 01/01/1941, 02/01/1941, 03/01/1941, 04/01/1941, 05/01/1941...
+## $ PRECIPmm &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0...
+## $ EVAPmm   &lt;fct&gt; 3.3, 3.8, 5.8, 5.7, 5, 4.9, 8.1, 5.3, 3.6, 2.9, 3.6, 5.1, ...
+## $ tmin     &lt;dbl&gt; 3.5, 2.5, 5.5, 7.5, -4.5, -2.5, -3.5, -1.0, 3.0, 7.0, 5.0,...
+## $ tmax     &lt;dbl&gt; 19.5, 21.5, 23.5, 19.0, 21.5, 23.5, 23.5, 24.5, 20.5, 19.0...
+## $ date     &lt;date&gt; 1941-01-01, 1941-01-02, 1941-01-03, 1941-01-04, 1941-01-0...
+## $ año      &lt;chr&gt; &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1941&quot;, &quot;1...</code></pre>
+<pre><code>## NULL</code></pre>
+<pre><code>## Warning: Removed 267 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="/post/dtools-boxplot_files/figure-html/unnamed-chunk-1-1.png" width="1152" /></p>
+<pre><code>## Warning: Removed 267 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="/post/dtools-boxplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
