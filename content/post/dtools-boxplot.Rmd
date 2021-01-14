@@ -25,7 +25,7 @@ library(ggplot2)
 library(tidyverse)
 ```
 
-### Contextualización de la herramienta y  concepto  Boxplot. 
+### Contextualización de la herramienta. Concepto  Boxplot. 
 
 [boxplot](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
 
