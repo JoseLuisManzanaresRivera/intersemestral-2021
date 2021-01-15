@@ -35,6 +35,6 @@ library(tidyverse)
 ### Dispersión
 
 
-Sesión 3 tema práctica [lineplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/lineplot_temp_ensenada.Rmd)
+Sesión 3  práctica [lineplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/lineplot_temp_ensenada.Rmd)
 
 Sesión 3 práctica [boxplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dtools-Scatterplot.Rmd)
