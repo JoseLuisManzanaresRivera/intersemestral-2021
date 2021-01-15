@@ -66,7 +66,8 @@ Distribución de temperaturas mínimas diarias registradas en estación metereol
       <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/lineplot_temp_ensenada/</guid>
-      <description>Análisis de Tendencias usando intervalos de confianzaDominio de aplicacion: Medio Ambiente Ensenada, BC. Periodo: 1969-2011Objetivo aprender a analizar datos en formato temporal. Verbos aprendidos en el contexto tidy: gather, mutate, group_by, summarise, arrange, summary.Plataforma de visualización: ggplot2 y plotly.Estimaremos la trayectoria de la temperatura máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés.</description>
+      <description>Análisis de Tendencias usando intervalos de confianzaDominio de aplicacion: Medio Ambiente Ensenada, BC. Periodo: 1969-2011Objetivo aprender a analizar datos en formato temporal. Verbos aprendidos en el contexto tidy: gather, mutate, group_by, summarise, arrange, summary.Plataforma de visualización: ggplot2 y plotly.Ejemplo 1:
+Estimaremos la trayectoria de la temperatura máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés.</description>
     </item>
     
     <item>

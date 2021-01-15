@@ -18,7 +18,10 @@ library(plotly)
 
 ###### Plataforma de visualización: ggplot2 y plotly.
 
-Estimaremos la trayectoria de la temperatura  máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés. 
+
+**Ejemplo 1:**
+
+Estimaremos la trayectoria de la temperatura  máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés. Representación en line plot. 
 
 ```{r,  fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE  }
 
@@ -71,7 +74,7 @@ lplot
 ```
 
 
-Ejemplo 2: Estimación de  la trayectoria de precipitación y el rango intercuartil para la variable de interés.
+**Ejemplo 2:** Estimación de  la trayectoria de precipitación y el rango intercuartil para la variable de interés. Representación en line plot. 
 
 ```{r,  fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE  }
 
@@ -118,4 +121,30 @@ geom_hline(yintercept = 284.6, size=.5, linetype="dashed",color='darkblue')
 ggplotly(plt)
 ```
 
+**Ejemplo 3**. Representación de promedios para trayectoria temporal. Variable a determinar Precipitación media en mm. por mes en el periodo 1966-2012.
+Se estima el intervalo de confianza y se representa con line plot. 
+
+```{r,  fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE }
+
+## Plot Precipitación por mes en el 1969-2012 (mm)")
+
+## 1 Primero agrupamos los datos por mesy estimados la media, para todos los meses en el periodo temporal de toda la base. 1969-2012.
+
+pormes<-group_by(precip,mes)%>%
+  summarize(lluviam=mean(mesp))
+
+pormes<-left_join(pormes,meses)
+
+glimpse(pormes)
+
+lluviaplt<-ggplot(pormes, aes(x=reorder(Meses,mes), y=lluviam, group=1))+
+  geom_smooth()+
+  xlab("Mes")+
+  ylab("Precipitación 1969-2012 (mm)")+theme_light()+
+theme(axis.text.x = element_text(angle = 45, hjust = .8))
+```
+
+```{r}
+lluviaplt
+```
 
