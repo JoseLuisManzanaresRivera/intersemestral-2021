@@ -130,7 +130,7 @@ Se estima el intervalo de confianza y se representa con line plot.
 
 ## Plot Precipitación por mes en el 1969-2012 (mm)")
 
-## 1 Primero agrupamos los datos por mesy estimados la media, para todos los meses en el periodo temporal de toda la base. 1969-2012.
+## 1 Primero agrupamos los datos por mes y estimamos la media, para todos los meses en el periodo temporal de toda la base. 1969-2012.
 
 pormes<-group_by(precip,mes)%>%
   summarize(lluviam=mean(mesp))
@@ -144,6 +144,11 @@ lluviaplt<-ggplot(pormes, aes(x=reorder(Meses,mes), y=lluviam, group=1))+
   xlab("Mes")+
   ylab("Precipitación 1969-2012 (mm)")+theme_light()+
 theme(axis.text.x = element_text(angle = 45, hjust = .8))
+```
+
+
+```{r,message=FALSE, echo=FALSE, warning=FALSE}
+lluviaplt
 ```
 
 
