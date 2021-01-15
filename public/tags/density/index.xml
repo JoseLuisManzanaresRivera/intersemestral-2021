@@ -17,16 +17,9 @@
       <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/density/</guid>
-      <description>Caso AguascalientesLos 32 estados del todo el país</description>
-    </item>
-    
-    <item>
-      <title>Density</title>
-      <link>/2021-01-13-r-rmarkdown/</link>
-      <pubDate>Fri, 11 Jan 2019 21:13:14 -0500</pubDate>
-      
-      <guid>/2021-01-13-r-rmarkdown/</guid>
-      <description>Caso Aguascalientes</description>
+      <description>Ejemplo 1 Estimación de funcion de densidad para representar la frecuencia de datos para variables numéricas y su visualización por categorias.Herramienta de visualización: ggplotly. Funciones aplicadas: ggplot geom_density.
+Contexto de la base de datos. Data frame en formato rds que contiene Edad de pacientes positivos por covid y edad de defunción en México. Año 2020.
+Are there any significant differences between patient´s age distribution between states?</description>
     </item>
     
   </channel>

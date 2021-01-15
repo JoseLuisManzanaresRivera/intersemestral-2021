@@ -38,3 +38,9 @@ library(tidyverse)
 Sesión 3  práctica [lineplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/lineplot_temp_ensenada.Rmd)
 
 Sesión 3 práctica [boxplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dtools-Scatterplot.Rmd)
+
+Sesión 3 práctica [scater](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/scatterplot.Rmd)
+
+Sesión 3 práctica [density](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/Density.Rmd)
+
+

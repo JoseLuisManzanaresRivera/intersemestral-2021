@@ -35,47 +35,9 @@
       <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/density/</guid>
-      <description>Caso AguascalientesLos 32 estados del todo el país</description>
-    </item>
-    
-    <item>
-      <title>Density</title>
-      <link>/2021-01-13-r-rmarkdown/</link>
-      <pubDate>Fri, 11 Jan 2019 21:13:14 -0500</pubDate>
-      
-      <guid>/2021-01-13-r-rmarkdown/</guid>
-      <description>Caso Aguascalientes</description>
-    </item>
-    
-    <item>
-      <title>Scatterplot</title>
-      <link>/2021-01-11-r-rmarkdown/</link>
-      <pubDate>Fri, 11 Jan 2019 21:13:14 -0500</pubDate>
-      
-      <guid>/2021-01-11-r-rmarkdown/</guid>
-      <description>{&#34;x&#34;:{&#34;data&#34;:[{&#34;x&#34;:[31,32,29,28,30,27,25,26,24,21,23,22,19,20,17,16,14,18,13,9,15,11,10,8,12,7,6,3,5,2,4,1],&#34;y&#34;:[17,16,14,14,13,13,13,12,12,11,11,11,10,10,9,8,8,8,7,7,7,7,7,6,6,6,6,5,5,4,4,3],&#34;text&#34;:[&#34;reorder(Estado, Tasa): Aguascalientes
-Tasa: 17
-Sexo: Hombre
-Tasa: 17&#34;,&#34;reorder(Estado, Tasa): Chihuahua
-Tasa: 16
-Sexo: Hombre
-Tasa: 16&#34;,&#34;reorder(Estado, Tasa): Sonora
-Tasa: 14
-Sexo: Hombre
-Tasa: 14&#34;,&#34;reorder(Estado, Tasa): Guanajuato
-Tasa: 14
-Sexo: Hombre
-Tasa: 14&#34;,&#34;reorder(Estado, Tasa): Yucatán
-Tasa: 13
-Sexo: Hombre
-Tasa: 13&#34;,&#34;reorder(Estado, Tasa): Quintana Roo
-Tasa: 13
-Sexo: Hombre
-Tasa: 13&#34;,&#34;reorder(Estado, Tasa): Campeche
-Tasa: 13
-Sexo: Hombre
-Tasa: 13&#34;,&#34;reorder(Estado, Tasa): Jalisco
-Tasa: 12</description>
+      <description>Ejemplo 1 Estimación de funcion de densidad para representar la frecuencia de datos para variables numéricas y su visualización por categorias.Herramienta de visualización: ggplotly. Funciones aplicadas: ggplot geom_density.
+Contexto de la base de datos. Data frame en formato rds que contiene Edad de pacientes positivos por covid y edad de defunción en México. Año 2020.
+Are there any significant differences between patient´s age distribution between states?</description>
     </item>
     
   </channel>

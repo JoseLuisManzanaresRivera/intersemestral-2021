@@ -23,9 +23,76 @@ knitr::opts_chunk$set(eval = TRUE,
 
 library(ggplot2)
 library(dplyr)
+library(plotly)
+```
+
+**Ejemplo 1** Estimación de funcion de densidad para representar la frecuencia de datos para variables numéricas  y su visualización  por categorias. 
+Herramienta de visualización: **ggplotly**.  Funciones aplicadas: **ggplot** **geom_density**.
+
+Contexto de la base de datos. Data frame en formato rds que contiene Edad de  pacientes positivos por covid y edad de defunción en México. Año 2020.
+
+### Are there any significant differences between patient´s age distribution between states?  
+
+```{r, echo= FALSE, fig.height = 5, fig.width = 8.5}
+
+## Source: https://www.gob.mx/salud/documentos/coronavirus-covid-19-comunicado-tecnico-diario-238449
+
+agedf<-readRDS("agedf.rds")
+
+
+dp<-ggplot(agedf, aes(x=edad, fill=sex))+
+geom_density(alpha=.2)+  
+labs(color="Sex")+
+xlab("Patient age  (years)")+
+ylab("Density  f(y)")+
+theme_classic()+
+scale_fill_discrete(labels=c("Female", "Male"))+
+geom_vline(xintercept =mean(agedf$edad), linetype="dotted", color="red")+
+annotate("text", x=32, y=.005, size=2,label="Mean patient age")+ theme(legend.title=element_blank())
+
+ggplotly(dp)
+```
+**Ejemplo 2**  Distribución de edades para defunción por covid en México. 
+Funciones estudiadas (Verbos tidyverse aplicados): Filter, select, mutate, summarise. ggplot 
+
+```{r, echo= FALSE}
+
+open<-readRDS("open.rds")
+
+def<-filter(open, resultado==1)%>%
+  filter(fecha_def!="9999-99-99")%>%
+  select(sexo, edad)
+def$sexo[def$sexo == "1"] <- "Female"
+def$sexo[def$sexo == "2"] <- "Male"  
+def<-mutate(def,sexo=as.factor(sexo))
+
+fmean<-filter(def, sexo=="Female")%>%
+  mutate(varmean=mean(edad))%>%
+   summarise(mean=mean(varmean))
+
+mmean<-filter(def, sexo=="Male")%>%
+  mutate(varmean=mean(edad))%>%
+   summarise(varmean=mean(varmean))
+
+  
+p<-ggplot(def, aes(x=edad, fill=sexo))+
+geom_density(alpha=.2)+  
+labs(color="Sex")+
+xlab("Person age  (years)")+
+ylab("Density  f(y)")+
+theme_classic()+
+scale_fill_manual(values = c("brown","blue4"))+
+geom_vline(xintercept = fmean$mean, linetype="dotted", color="purple")+
+geom_vline(xintercept = mmean$varmean, linetype="dotted", color="blue")+
+annotate("text", x=44, y=.005, size=3,label="Mean person age")+ theme(legend.title=element_blank())
+
+
+ggplotly(p)
 ```
 
 
+**Ejemplo  3** función de densidad para dos categorias. 
+Funciones estudiadas: group_by, rename, left_join, filter, select, mutate, summarise. ggplot 
 
 ####  Caso Aguascalientes
 
@@ -73,7 +140,10 @@ aplt
 ```
 
 
-#### Los 32 estados del todo el país
+**Ejemplo 4** Función de densidad multiples bases de datos. (32 estados de México).
+Herramienta de análisis: stat=density 
+
+Funciones estudiadas: facet_wrap
 
 ```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE}
 

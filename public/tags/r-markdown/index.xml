@@ -13,16 +13,6 @@
     
     <item>
       <title>Boxplot</title>
-      <link>/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Tue, 12 Jan 2021 21:13:14 -0500</pubDate>
-      
-      <guid>/2015-07-23-r-rmarkdown/</guid>
-      <description>Representación de dispersión datos con frecuencia diaria. BoxplotDatos site:Source alternariva
-## Warning: NAs introducidos por coerción## Warning: NAs introducidos por coerción## Rows: 15,527## Columns: 5## $ FECHA &amp;lt;fct&amp;gt; 01/01/1941, 02/01/1941, 03/01/1941, 04/01/1941, 05/01/1941...## $ PRECIPmm &amp;lt;fct&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0...## $ EVAPmm &amp;lt;fct&amp;gt; 3.3, 3.8, 5.8, 5.7, 5, 4.</description>
-    </item>
-    
-    <item>
-      <title>Boxplot</title>
       <link>/boxplot/</link>
       <pubDate>Tue, 12 Jan 2021 21:13:14 -0500</pubDate>
       
