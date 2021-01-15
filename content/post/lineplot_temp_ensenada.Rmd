@@ -21,7 +21,7 @@ library(plotly)
 
 **Ejemplo 1:**
 
-Estimaremos la trayectoria de la temperatura  máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés. Representación en line plot. 
+Estimación de la trayectoria de la temperatura  máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés. Representación en line plot. 
 
 ```{r,  fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE  }
 
@@ -69,7 +69,7 @@ scale_colour_brewer(palette="Set1")
 
 ```
 
-```{r,message=FALSE}
+```{r,message=FALSE, echo=FALSE}
 lplot
 ```
 
@@ -117,8 +117,10 @@ geom_hline(yintercept = 284.6, size=.5, linetype="dashed",color='darkblue')
 
 ```
 
-```{r}
+```{r,message=FALSE, echo=FALSE}
+
 ggplotly(plt)
+
 ```
 
 **Ejemplo 3**. Representación de promedios para trayectoria temporal. Variable a determinar Precipitación media en mm. por mes en el periodo 1966-2012.
@@ -144,7 +146,7 @@ lluviaplt<-ggplot(pormes, aes(x=reorder(Meses,mes), y=lluviam, group=1))+
 theme(axis.text.x = element_text(angle = 45, hjust = .8))
 ```
 
-```{r}
+```{r,message=FALSE, echo=FALSE}
 lluviaplt
 ```
 
