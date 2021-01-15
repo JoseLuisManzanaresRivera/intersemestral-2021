@@ -34,6 +34,11 @@ library(tidyverse)
 [Datos  site:](https://smn.conagua.gob.mx/es/climatologia/informacion-climatologica/normales-climatologicas-por-estado)
 [Source alternariva](http://atlasclimatico.unam.mx/RRDM/)
 
+
+![limites boxplot](/img/explicacion_bxplt.jpg)
+
+
+
 ```{r,  fig.height = 8, fig.width = 12, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
 
 dgo_temp<-readRDS("dgo_temps.rds")
@@ -72,6 +77,45 @@ theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
 boxplot
 ```
 
-Next ejercicio para temperturas max y min de vino paper...
+**Ejemplo 2:** 
+Determinación de Media, rango intercualtil y percentiles 1 y 3 (q25 y q75). Representación con boxplot para variables tipo categoricas. 
+
+```{r}
+BC2001<-read.csv("ema_2001_AGUACALIENTE.csv")%>%
+  rename(max=tmin,min=tmax)
+
+df<-BC2001%>%
+mutate(max=as.numeric(as.character(max)),min=as.numeric(as.character(min)) )
+
+temp<-mutate(df,date=as.Date(FECHA, "%d/%m/%Y"))%>%
+mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
+
+tidy<-gather(temp, tipo, temperatura, max:min)
+
+
+meses<-data.frame(Meses=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
+
+
+tidy_<-left_join(tidy,meses)
+
+boxplot_2<-ggplot(tidy_, aes(x=fct_inorder(Meses), y=temperatura)) + geom_boxplot(aes(fill=tipo))+
+xlab("Mes")+
+ylab("Temperatura diaria máxima y mínima°c")+
+theme_light()+
+theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
+levels(tidy_$Meses )
+
+
+```
+
+```{r}
+library(plotly)
+ggplotly(boxplot_2)
+```
+
+
+
+
+
 
 

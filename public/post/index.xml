@@ -45,10 +45,11 @@
       <pubDate>Tue, 12 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/dtools-boxplot/</guid>
-      <description>Contextualización de la herramienta. Concepto Boxplot.boxplot
+      <description>Contextualización de la herramienta. Concepto Boxplot.boxplot
 Representación de dispersión datos con frecuencia diaria. BoxplotDatos site:Source alternariva
-Distribución de temperaturas mínimas diarias registradas en estación metereológica DGO10092 del SMN. Periodo 1941 -2000.Next ejercicio para temperturas max y min de vino paper…
-</description>
+limites boxplot
+Distribución de temperaturas mínimas diarias registradas en estación metereológica DGO10092 del SMN. Periodo 1941 -2000.Ejemplo 2:Determinación de Media, rango intercualtil y percentiles 1 y 3 (q25 y q75). Representación con boxplot para variables tipo categoricas.
+## Warning: NAs introducidos por coerción## Warning: NAs introducidos por coerción## Joining, by = &amp;quot;mes&amp;quot;## [1] &amp;quot;Abril&amp;quot; &amp;quot;Agosto&amp;quot; &amp;quot;Diciembre&amp;quot; &amp;quot;Enero &amp;quot; &amp;quot;Febrero&amp;quot; ## [6] &amp;quot;Julio&amp;quot; &amp;quot;Junio&amp;quot; &amp;quot;Marzo&amp;quot; &amp;quot;Mayo&amp;quot; &amp;quot;Noviembre&amp;quot; ## [11] &amp;quot;Octubre&amp;quot; &amp;quot;Septiembre&amp;quot;## ## Attaching package: &amp;#39;plotly&amp;#39;## The following object is masked from &amp;#39;package:ggplot2&amp;#39;:## ## last_plot## The following object is masked from &amp;#39;package:stats&amp;#39;:## ## filter## The following object is masked from &amp;#39;package:graphics&amp;#39;:## ## layout## Warning: Removed 83 rows containing non-finite values (stat_boxplot).</description>
     </item>
     
     <item>

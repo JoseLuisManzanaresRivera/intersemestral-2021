@@ -35,7 +35,6 @@ library(tidyverse)
 ### Dispersión
 
 
-Ejemplo 1 [boxplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dtools-Scatterplot.Rmd)
-
 Ejemplo 1 [lineplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/lineplot_temp_ensenada.Rmd)
 
+Ejemplo 2 [boxplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dtools-Scatterplot.Rmd)
