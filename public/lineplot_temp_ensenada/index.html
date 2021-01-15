@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   
   
-  <title>Visualización | Herramientas de análisis estadístico</title>
+  <title>lineplot1 | Herramientas de análisis estadístico</title>
   <style>
 .container {
   max-width: 700px;
@@ -169,65 +169,30 @@ audio {
       <main id="main">
         
 
-<h1>Visualización</h1>
+<h1>lineplot1</h1>
 
 
-<p>
-  <a class="font-125" href="/scatterplot/">Scatterplot</a>
-  <br>
-  
+<i data-feather="calendar"></i> <time datetime="2021-01-11">Jan 11, 2021</time>
 
-<i data-feather="calendar"></i> <time datetime="2021-01-13">Jan 13, 2021</time>
+<br><br>
 
-  <br>
-  <i data-feather="tag"></i>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="/tags/visualizaci%C3%B3n">Visualización</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="/tags/distribution">Distribution</a>
-  
 
-</p>
 
-<p>
-  <a class="font-125" href="/dtools-scatterplot/">Scatterplot</a>
-  <br>
-  
+<p>##Análisis de Tendencias usando intervalos de confianza</p>
+<div id="dominio-de-aplicacion-medio-ambiente-ensenada-bc.-periodo-1969-2011" class="section level4">
+<h4>Dominio de aplicacion: Medio Ambiente Ensenada, BC. Periodo: 1969-2011</h4>
+</div>
+<div id="objetivo-aprender-a-analizar-datos-en-formato-temporal.-verbos-aprendidos-en-el-contexto-tidy-gather-mutate-group_by-summarise-arrange." class="section level4">
+<h4>Objetivo aprender a analizar datos en formato temporal. Verbos aprendidos en el contexto tidy: gather, mutate, group_by, summarise, arrange.</h4>
+<div id="plataforma-de-visualización-ggplot2." class="section level5">
+<h5>Plataforma de visualización: ggplot2.</h5>
+<pre class="r"><code>meses&lt;-data.frame(Meses=c(&quot;Enero &quot;, &quot;Febrero&quot;,  &quot;Marzo&quot;,    &quot;Abril&quot;,    &quot;Mayo&quot;, &quot;Junio&quot;,    &quot;Julio&quot;,    &quot;Agosto&quot;,   &quot;Septiembre&quot;,   &quot;Octubre&quot;,  &quot;Noviembre&quot;,    &quot;Diciembre&quot;),mes=seq(1, 12, by=1))
 
-<i data-feather="calendar"></i> <time datetime="2021-01-13">Jan 13, 2021</time>
 
-  <br>
-  <i data-feather="tag"></i>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="/tags/visualizaci%C3%B3n">Visualización</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="/tags/distribution">Distribution</a>
-  
-
-</p>
-
-<p>
-  <a class="font-125" href="/2021-01-11-r-rmarkdown/">Scatterplot</a>
-  <br>
-  
-
-<i data-feather="calendar"></i> <time datetime="2019-01-11">Jan 11, 2019</time>
-
-  <br>
-  <i data-feather="tag"></i>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="/tags/visualizaci%C3%B3n">Visualización</a>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="/tags/distribution">Distribution</a>
-  
-
-</p>
+temp1&lt;-left_join(meses,temp)</code></pre>
+<pre><code>## Joining, by = &quot;mes&quot;</code></pre>
+</div>
+</div>
 
 
 

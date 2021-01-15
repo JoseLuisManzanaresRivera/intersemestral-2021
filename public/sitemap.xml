@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>/scatterplot/</loc>
+    <lastmod>2021-01-13T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
     <lastmod>2021-01-13T21:13:14-05:00</lastmod>
   </url>
@@ -64,6 +69,11 @@
   
   <url>
     <loc>/density/</loc>
+    <lastmod>2021-01-11T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/lineplot_temp_ensenada/</loc>
     <lastmod>2021-01-11T21:13:14-05:00</lastmod>
   </url>
   
@@ -120,16 +130,6 @@
   <url>
     <loc>/trends-gganimate/</loc>
     <lastmod>2019-01-11T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/nasa/</loc>
-    <lastmod>2018-12-27T20:46:49-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/nasa-images/</loc>
-    <lastmod>2018-12-27T20:46:49-06:00</lastmod>
   </url>
   
   <url>
