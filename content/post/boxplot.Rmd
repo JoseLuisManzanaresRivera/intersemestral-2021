@@ -39,7 +39,7 @@ library(tidyverse)
 
 **Ejemplo 1**  Estimación de box plot para examinar la distribución de una variable. Inclusión de solo una categoría. Distribución de temperaturas mínimas diarias registradas en estación metereológica DGO10092 del SMN. Periodo 1941 -2000.
 
-```{r,  fig.height = 8, fig.width = 12, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
+```{r,  fig.height = 8, fig.width = 12, include=FALSE, echo = FALSE, warning = FALSE}
 
 dgo_temp<-readRDS("dgo_temps.rds")
 
@@ -81,7 +81,7 @@ boxplot
 Determinación de Media, rango intercualtil y percentiles 1 y 3 (q25 y q75). Representación con boxplot para variables tipo categoricas. 
 
 
-```{r,  fig.height = 8, fig.width = 12, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
+```{r,  fig.height = 8, fig.width = 12, include=FALSE,  echo = FALSE, warning = FALSE}
 
 BC2001<-read.csv("ema_2001_AGUACALIENTE.csv")%>%
   rename(max=tmin,min=tmax)
