@@ -17,7 +17,7 @@ suppressPackageStartupMessages(library(tidyverse))
 
 ##### Plataforma de visualización: ggplot2. 
 
-```{r,  fig.height = 8, fig.width = 12, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE  }
+```{r,  fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE  }
 
 BC2001<-read.csv("ema_2001_AGUACALIENTE.csv")%>%
   rename(max=tmin,min=tmax)
@@ -28,11 +28,6 @@ mutate(max=as.numeric(as.character(max)),min=as.numeric(as.character(min)) )
 
 temp<-mutate(df,date=as.Date(FECHA, "%d/%m/%Y"))%>%
 mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
-
-meses<-data.frame(Meses=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
-
-
-temp1<-left_join(meses,temp)
 
 
 prom_yr<-temp%>%na.omit()%>%
@@ -55,17 +50,25 @@ eneros<-filter(promedio_arr, mes==1)%>%
 
 eneros_tidy<-eneros%>%
   gather(type,temp,max_med:min_med)
-data("EuStockMarkets")
-xx = EuStockMarkets[,1]
-ti = 1:length(xx)
+
+
 ggplot(eneros_tidy, aes(año, temp, col=type)) + 
 geom_line()  +
 geom_smooth()+
-  theme_light()+
-xlab("Año")+ylab("Temperatura (c°)")+
-   scale_color_discrete(labels=c("Tmax", "Tmin"))+
-  labs(colour="Temperatura")+ theme(legend.position="top")+
+theme_light()+
+xlab("Año")+
+ylab("Temperatura (c°)")+
+labs(colour="Temperatura")+ theme(legend.position="top")+
 scale_colour_brewer(palette="Set1")
 
-ggsave("C:/Users/LENOVO/Desktop/DESK/I/2019/CONVID/graphs/tmaxmin.tiff",width = 20, height = 14, units = "cm",dpi=300)
 ```
+
+
+```{r}
+
+meses<-data.frame(Meses=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
+
+
+temp1<-left_join(meses,temp)
+```
+
