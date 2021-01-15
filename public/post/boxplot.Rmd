@@ -37,7 +37,7 @@ library(tidyverse)
 
 ![](/img/explicacion_bxplt.jpg)
 
-**Ejemplo 1** 
+**Ejemplo 1**  Estimación de box plot para examinar la distribución de una variable. Inclusión de solo una categoría. Distribución de temperaturas mínimas diarias registradas en estación metereológica DGO10092 del SMN. Periodo 1941 -2000.
 
 ```{r,  fig.height = 8, fig.width = 12, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
 
