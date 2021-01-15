@@ -80,6 +80,7 @@ boxplot
 **Ejemplo 2:** 
 Determinación de Media, rango intercualtil y percentiles 1 y 3 (q25 y q75). Representación con boxplot para variables tipo categoricas. 
 
+
 ```{r,warning = FALSE,message=FALSE, include=FALSE}
 BC2001<-read.csv("ema_2001_AGUACALIENTE.csv")%>%
   rename(max=tmin,min=tmax)
@@ -107,6 +108,7 @@ levels(tidy_$Meses )
 
 
 ```
+
 
 ```{r, warning = FALSE,message=FALSE, echo=FALSE}
 library(plotly)
