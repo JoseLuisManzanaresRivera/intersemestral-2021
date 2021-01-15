@@ -37,7 +37,7 @@
       <guid>/density/</guid>
       <description>Ejemplo 1 Estimación de funcion de densidad para representar la frecuencia de datos para variables numéricas y su visualización por categorias.Herramienta de visualización: ggplotly. Funciones aplicadas: ggplot geom_density.
 Contexto de la base de datos. Data frame en formato rds que contiene Edad de pacientes positivos por covid y edad de defunción en México. Año 2020.
-Are there any significant differences between patient´s age distribution between states?</description>
+Cálculo función de densidad, represetnación de medidas de tendencia central y distribución para detectar diferencias de edad.</description>
     </item>
     
   </channel>

@@ -31,7 +31,7 @@ Herramienta de visualización: **ggplotly**.  Funciones aplicadas: **ggplot** **
 
 Contexto de la base de datos. Data frame en formato rds que contiene Edad de  pacientes positivos por covid y edad de defunción en México. Año 2020.
 
-### Are there any significant differences between patient´s age distribution between states?  
+#### Cálculo función de densidad, represetnación de medidas de tendencia central  y distribución para detectar diferencias de edad.
 
 ```{r, echo= FALSE, fig.height = 5, fig.width = 8.5}
 
@@ -143,7 +143,7 @@ aplt
 **Ejemplo 4** Función de densidad multiples bases de datos. (32 estados de México).
 Herramienta de análisis: stat=density 
 
-Funciones estudiadas: facet_wrap
+Funciones estudiadas: **facet_wrap**
 
 ```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE}
 
