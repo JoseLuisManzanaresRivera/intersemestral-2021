@@ -108,7 +108,7 @@ levels(tidy_$Meses )
 
 ```
 
-```{r}
+```{r, warning = FALSE,message=FALSE, echo=FALSE}
 library(plotly)
 ggplotly(boxplot_2)
 ```
