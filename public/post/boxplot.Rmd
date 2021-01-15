@@ -37,7 +37,7 @@ library(tidyverse)
 
 ![](/img/explicacion_bxplt.jpg)
 
-
+**Ejemplo 1** 
 
 ```{r,  fig.height = 8, fig.width = 12, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
 
@@ -81,7 +81,7 @@ boxplot
 Determinación de Media, rango intercualtil y percentiles 1 y 3 (q25 y q75). Representación con boxplot para variables tipo categoricas. 
 
 
-```{r,warning = FALSE,message=FALSE, include=FALSE}
+```{r, warning = FALSE, message=FALSE, include=FALSE}
 BC2001<-read.csv("ema_2001_AGUACALIENTE.csv")%>%
   rename(max=tmin,min=tmax)
 
