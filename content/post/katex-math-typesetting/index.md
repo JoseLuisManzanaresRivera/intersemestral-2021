@@ -1,15 +1,17 @@
 ---
-date: "2020-02-28"
+date: "2020-01-11"
 tags:
 - Teoría
 - Conceptos 
 - IDE
 - Tidyverse
-title: IDE y Tidyverse
+title: Sesión 1
 ---
 
 
 ### Algunas consideraciones preeliminares sobre R.
+
+## IDE 
 
 R es un lenguaje que nos permite hablar con la computadora, wn analogía con cualquier lenguaje, como aprenderemos existen **sustantivos**, estos son los objetos (data frames o conjunto de adtos),  las funciones pueden entenderse como **verbos** y sus argumentos como **adverbios**.
 
