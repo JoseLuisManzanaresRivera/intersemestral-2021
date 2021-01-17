@@ -1,5 +1,5 @@
 ---
-title: "Linear trends"
+title: "Sesión 3"
 author: "Jose´Luis Manzanares Rivera"
 date: 2021-01-15T21:13:14-05:00
 output: html_document
