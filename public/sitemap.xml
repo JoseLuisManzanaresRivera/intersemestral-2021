@@ -18,32 +18,7 @@
   </url>
   
   <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2021-01-15T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2021-01-15T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/regression/</loc>
-    <lastmod>2021-01-15T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/sesion-1/</loc>
-    <lastmod>2021-01-15T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/sesion-3/</loc>
-    <lastmod>2021-01-15T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2021-01-15T21:13:14-05:00</lastmod>
   </url>
   
@@ -54,6 +29,11 @@
   
   <url>
     <loc>/scatterplot/</loc>
+    <lastmod>2021-01-13T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <lastmod>2021-01-13T21:13:14-05:00</lastmod>
   </url>
   
@@ -73,12 +53,32 @@
   </url>
   
   <url>
+    <loc>/tags/plot/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r-markdown/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/density/</loc>
     <lastmod>2021-01-11T21:13:14-05:00</lastmod>
   </url>
   
   <url>
     <loc>/density/</loc>
+    <lastmod>2021-01-11T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/regression/</loc>
+    <lastmod>2021-01-11T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/sesion-1/</loc>
     <lastmod>2021-01-11T21:13:14-05:00</lastmod>
   </url>
   

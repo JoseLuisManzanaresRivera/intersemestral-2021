@@ -179,10 +179,10 @@ son_ac1 <- xts(x = son_ac1,order.by = dates$fecha)
 son_ac2<-select(son_ac, gap, Percent, -fecha)
 son_ac2 <- xts(x = son_ac2,order.by = dates$fecha)
 
-
+ 
 dy_graph2 <- list(
-  
-dygraph(son_ac1, group= "a", main = "Sonora State data vs. Federal Government Offical OD")%>% 
+ 
+dygraph(son_ac1, group= "d", main = "Sonora State data vs. Federal Government Offical OD")%>% 
 dyRangeSelector()%>%
 dyHighlight(highlightCircleSize = 3, 
 highlightSeriesBackgroundAlpha = 0.2,
@@ -195,7 +195,7 @@ dyEvent("2020-04-20", "El Financiero report", labelLoc = "bottom", color="purple
 dyEvent("2020-04-26", "Peak Gap", labelLoc = "top", color = "red")
 ,
 
-dygraph(son_ac2,  group= "a", main = "Gap size: cases, %")%>% 
+dygraph(son_ac2,  group= "d", main = "Gap size: cases, %")%>% 
 dyRangeSelector()%>%
 dyHighlight(highlightCircleSize = 3, 
 highlightSeriesBackgroundAlpha = 0.2,
@@ -206,9 +206,11 @@ dyAxis("y2", label = "(%)", independentTicks = TRUE)%>%
 dyLegend(width = 300)%>%
 dyEvent("2020-04-20", "El Financiero report", labelLoc = "bottom", color = "purple")%>%
 dyEvent("2020-04-26", "Peak Gap", labelLoc = "top", color = "red")%>%
-  
+
+    
 dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")))
 
+## El argumento 3  indica la cantidad de colores que corresponde con la cantidad de series (lineas)   a representar. 
 htmltools::browsable(htmltools::tagList(dy_graph2))
 
 
