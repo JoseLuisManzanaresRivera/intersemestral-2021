@@ -151,9 +151,10 @@ theme(axis.text.x = element_text(angle = 45, hjust = .8))
 lluviaplt
 ```
 
-### Objetico: Aprender a realizar análisis y representación de datos en formato series de tiempo usando librerias javscrip. 
 
 #### Herramientas de visualización en formato javascript
+
+**Objetivo:** Aprender a realizar análisis y representación de datos en formato series de tiempo usando librerias javscrip. 
 
 **Dominio de aplicación**: Datos sobre casos por SARS COV2, en Sonora. Frecuencia de datos: Diaria. Periodo Marzo-Mayo 2019.
 *Libraries* Utilizadas: [xts](https://www.datacamp.com/community/blog/r-xts-cheat-sheet) y [dygraphs](https://rstudio.github.io/dygraphs/) 
@@ -164,6 +165,7 @@ library(xts)
 ```
 
 ```{r,fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
+
 library(dygraphs)
 library(xts)
 
@@ -207,13 +209,16 @@ dyLegend(width = 300)%>%
 dyEvent("2020-04-20", "El Financiero report", labelLoc = "bottom", color = "purple")%>%
 dyEvent("2020-04-26", "Peak Gap", labelLoc = "top", color = "red")%>%
 
+## Note que se incluye el argumento group para indicar que se trata de una aroación de plots. 
     
 dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")))
 
-## El argumento 3  indica la cantidad de colores que corresponde con la cantidad de series (lineas)   a representar. 
 htmltools::browsable(htmltools::tagList(dy_graph2))
-
 
 ```
 
+
+```{r,echo = FALSE}
+htmltools::browsable(htmltools::tagList(dy_graph2))
+```
 
