@@ -184,7 +184,7 @@ son_ac2 <- xts(x = son_ac2,order.by = dates$fecha)
  
 dy_graph2 <- list(
  
-dygraph(son_ac1, group= "d", main = "Sonora State data vs. Federal Government Offical OD")%>% 
+dygraph(son_ac1, main = "Sonora State data vs. Federal Government Offical OD")%>% 
 dyRangeSelector()%>%
 dyHighlight(highlightCircleSize = 3, 
 highlightSeriesBackgroundAlpha = 0.2,
@@ -197,7 +197,7 @@ dyEvent("2020-04-20", "El Financiero report", labelLoc = "bottom", color="purple
 dyEvent("2020-04-26", "Peak Gap", labelLoc = "top", color = "red")
 ,
 
-dygraph(son_ac2,  group= "d", main = "Gap size: cases, %")%>% 
+dygraph(son_ac2, main = "Gap size: cases, %")%>% 
 dyRangeSelector()%>%
 dyHighlight(highlightCircleSize = 3, 
 highlightSeriesBackgroundAlpha = 0.2,
@@ -209,7 +209,7 @@ dyLegend(width = 300)%>%
 dyEvent("2020-04-20", "El Financiero report", labelLoc = "bottom", color = "purple")%>%
 dyEvent("2020-04-26", "Peak Gap", labelLoc = "top", color = "red")%>%
 
-  ##Note que se incluye el argumento group para indicar que se trata de una aroación de plots. 
+## Note que se incluye el argumento group para indicar que se trata de una aroación de plots. 
     
 dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")))
 
