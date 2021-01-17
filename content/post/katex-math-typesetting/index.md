@@ -5,7 +5,7 @@ tags:
 - Conceptos 
 - IDE
 - Tidyverse
-title: Sesión 1
+title: Sesión 2
 ---
 
 
