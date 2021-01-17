@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Linear trends</title>
+      <link>/lineplot_temp_ensenada/</link>
+      <pubDate>Fri, 15 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/lineplot_temp_ensenada/</guid>
+      <description>Análisis de Tendencias usando intervalos de confianzaDominio de aplicacion: Medio Ambiente Ensenada, BC. Periodo: 1969-2011Objetivo aprender a analizar datos en formato temporal. Verbos aprendidos en el contexto tidy: gather, mutate, group_by, summarise, arrange, summary.Plataforma de visualización: ggplot2 y plotly.Ejemplo 1:
+Estimación de la trayectoria de la temperatura máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés.</description>
+    </item>
+    
+    <item>
       <title>Sesión 1</title>
       <link>/sesion-1/</link>
       <pubDate>Fri, 15 Jan 2021 21:13:14 -0500</pubDate>
@@ -19,16 +29,6 @@
       <guid>/sesion-1/</guid>
       <description>Programa: Maestría en Desarrollo Regional.Semestre: 1-2021Horas: 15.Organización por sesiones: 5 Sesiones, 3 horas por sesión.Curso-intersemestral: Herramientas para Análisis estadístico: Implementación en R markdown.Presentación del curso.El curso está diseñado para estudiar el uso de herramientas de análisis de datos en un entorno replicable con base en R markdown.
 La orientación empírica se enfoca en la evaluación de indicadores a escala regional para México.</description>
-    </item>
-    
-    <item>
-      <title>Linear trends</title>
-      <link>/lineplot_temp_ensenada/</link>
-      <pubDate>Thu, 14 Jan 2021 21:13:14 -0500</pubDate>
-      
-      <guid>/lineplot_temp_ensenada/</guid>
-      <description>Análisis de Tendencias usando intervalos de confianzaDominio de aplicacion: Medio Ambiente Ensenada, BC. Periodo: 1969-2011Objetivo aprender a analizar datos en formato temporal. Verbos aprendidos en el contexto tidy: gather, mutate, group_by, summarise, arrange, summary.Plataforma de visualización: ggplot2 y plotly.Ejemplo 1:
-Estimación de la trayectoria de la temperatura máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés.</description>
     </item>
     
     <item>
@@ -70,6 +70,7 @@ Cálculo función de densidad, represetnación de medidas de tendencia central y
       
       <guid>/bases-de-datos/</guid>
       <description>Ejercicios sesión 3 Line trends
+Ejercicios sesión 3 Time series con javascript
 Ejercicios sesión 3 Scatter
 Ejercicios sesión 3 boxplot
 Ejercicios sesión 3 density ejemplo 1 covid 

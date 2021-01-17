@@ -9,3 +9,6 @@ dplyr
 stringr
 forcats
 plotly
+zoo
+xts
+dygraphs

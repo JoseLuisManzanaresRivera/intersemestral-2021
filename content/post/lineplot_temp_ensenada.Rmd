@@ -1,7 +1,7 @@
 ---
 title: "Linear trends"
 author: "Jose´Luis Manzanares Rivera"
-date: 2021-01-14T21:13:14-05:00
+date: 2021-01-15T21:13:14-05:00
 output: html_document
 ---
 
@@ -149,6 +149,69 @@ theme(axis.text.x = element_text(angle = 45, hjust = .8))
 
 ```{r,message=FALSE, echo=FALSE, warning=FALSE}
 lluviaplt
+```
+
+### Objetico: Aprender a realizar análisis y representación de datos en formato series de tiempo usando librerias javscrip. 
+
+#### Herramientas de visualización en formato javascript
+
+**Dominio de aplicación**: Datos sobre casos por SARS COV2, en Sonora. Frecuencia de datos: Diaria. Periodo Marzo-Mayo 2019.
+*Libraries* Utilizadas: [xts](https://www.datacamp.com/community/blog/r-xts-cheat-sheet) y [dygraphs](https://rstudio.github.io/dygraphs/) 
+
+###### Plataforma de visualización: dygraph.
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+library(xts)
+```
+
+```{r,fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
+library(dygraphs)
+library(xts)
+
+son_ac<-readRDS("sonora_accuracy.rds")%>%
+  select(-deaths)%>%
+mutate(Percent=round(gap/cases_ssd*100, 2))%>%
+  rename(Federaldata=cases, Sonoradata=cases_ssd)
+
+dates<-select(son_ac,fecha)
+son_ac1<-select(son_ac, Federaldata, Sonoradata, gap, -fecha)
+son_ac1 <- xts(x = son_ac1,order.by = dates$fecha)
+
+son_ac2<-select(son_ac, gap, Percent, -fecha)
+son_ac2 <- xts(x = son_ac2,order.by = dates$fecha)
+
+
+dy_graph2 <- list(
+  
+dygraph(son_ac1, group= "a", main = "Sonora State data vs. Federal Government Offical OD")%>% 
+dyRangeSelector()%>%
+dyHighlight(highlightCircleSize = 3, 
+highlightSeriesBackgroundAlpha = 0.2,
+hideOnMouseOut = FALSE)%>%
+dySeries("Federaldata")%>%
+dySeries("gap", stepPlot = TRUE, fillGraph = TRUE, color = "red")%>%
+dyAxis("y", label = "cases Reported")%>% 
+dyLegend(width = 300)%>%
+dyEvent("2020-04-20", "El Financiero report", labelLoc = "bottom", color="purple")%>%
+dyEvent("2020-04-26", "Peak Gap", labelLoc = "top", color = "red")
+,
+
+dygraph(son_ac2,  group= "a", main = "Gap size: cases, %")%>% 
+dyRangeSelector()%>%
+dyHighlight(highlightCircleSize = 3, 
+highlightSeriesBackgroundAlpha = 0.2,
+hideOnMouseOut = FALSE)%>%
+dySeries("Percent", axis = 'y2')%>%
+dyAxis("y", label = "Gap (cases)")%>%
+dyAxis("y2", label = "(%)", independentTicks = TRUE)%>%  
+dyLegend(width = 300)%>%
+dyEvent("2020-04-20", "El Financiero report", labelLoc = "bottom", color = "purple")%>%
+dyEvent("2020-04-26", "Peak Gap", labelLoc = "top", color = "red")%>%
+  
+dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")))
+
+htmltools::browsable(htmltools::tagList(dy_graph2))
+
+
 ```
 
 
