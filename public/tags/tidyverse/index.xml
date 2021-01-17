@@ -6,18 +6,18 @@
     <description>Recent content in Tidyverse on Herramientas de análisis estadístico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>IDE y Tidyverse</title>
+      <title>Sesión 2</title>
       <link>/katex-math-typesetting/</link>
-      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/katex-math-typesetting/</guid>
-      <description>Algunas consideraciones preeliminares sobre R. R es un lenguaje que nos permite hablar con la computadora, wn analogía con cualquier lenguaje, como aprenderemos existen sustantivos, estos son los objetos (data frames o conjunto de adtos), las funciones pueden entenderse como verbos y sus argumentos como adverbios.
+      <description>Algunas consideraciones preeliminares sobre R. IDE R es un lenguaje que nos permite hablar con la computadora, wn analogía con cualquier lenguaje, como aprenderemos existen sustantivos, estos son los objetos (data frames o conjunto de adtos), las funciones pueden entenderse como verbos y sus argumentos como adverbios.
 Estamos aprendiendo un lenguaje para comunicarnos con nuestra computadora con la finalidad de conducir tareas de análisis de datos.
 En la base del proceso de análisis de datos se encuentra la habilidad para almacenar grandes cantidades de datos y tener la capacidad para sustraer estos datos cuando lo necesitamos.</description>
     </item>

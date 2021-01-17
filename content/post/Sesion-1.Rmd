@@ -127,7 +127,6 @@ El entorno de análisis con plataformas como **R studio** esta diseñado explici
 #### 1.2 RStudio vs. STATA, SPSS y EXCEL.
 
 ![](/logos.jpeg){width=80%}
-
 La principal ventaja de **R** sobre otros paquetes disponibles en el mercado actualmente es la flexibilidad del entorno *OPEN SOURCE*. Una gran comunidad de usuarios, desarrolla y comparte las herramientas que integran R de foma contínua.
 
 Otra ventajas incluyen: 
@@ -145,7 +144,6 @@ Otra ventajas incluyen:
              
 
 [Ejemplos de uso de R para análisis estadístico](https://insight4health.netlify.app/)
-
 
 
 **Asignacion 1**  (On class reading): Leer  History and Overview of R. Páginas 4 a 10 del libro:

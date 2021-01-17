@@ -6,10 +6,20 @@
     <description>Recent content on Herramientas de análisis estadístico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Jan 2021 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jan 2021 21:13:14 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sesión 1</title>
+      <link>/sesion-1/</link>
+      <pubDate>Fri, 15 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/sesion-1/</guid>
+      <description>Programa: Maestría en Desarrollo Regional.Semestre: 1-2021Horas: 15.Organización por sesiones: 5 Sesiones, 3 horas por sesión.Curso-intersemestral: Herramientas para Análisis estadístico: Implementación en R markdown.Presentación del curso.El curso está diseñado para estudiar el uso de herramientas de análisis de datos en un entorno replicable con base en R markdown.
+La orientación empírica se enfoca en la evaluación de indicadores a escala regional para México.</description>
+    </item>
     
     <item>
       <title>Linear trends</title>
@@ -77,12 +87,12 @@ Ejercicios sesión 3 density ejemplo 3</description>
     </item>
     
     <item>
-      <title>IDE y Tidyverse</title>
+      <title>Sesión 2</title>
       <link>/katex-math-typesetting/</link>
-      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/katex-math-typesetting/</guid>
-      <description>Algunas consideraciones preeliminares sobre R. R es un lenguaje que nos permite hablar con la computadora, wn analogía con cualquier lenguaje, como aprenderemos existen sustantivos, estos son los objetos (data frames o conjunto de adtos), las funciones pueden entenderse como verbos y sus argumentos como adverbios.
+      <description>Algunas consideraciones preeliminares sobre R. IDE R es un lenguaje que nos permite hablar con la computadora, wn analogía con cualquier lenguaje, como aprenderemos existen sustantivos, estos son los objetos (data frames o conjunto de adtos), las funciones pueden entenderse como verbos y sus argumentos como adverbios.
 Estamos aprendiendo un lenguaje para comunicarnos con nuestra computadora con la finalidad de conducir tareas de análisis de datos.
 En la base del proceso de análisis de datos se encuentra la habilidad para almacenar grandes cantidades de datos y tener la capacidad para sustraer estos datos cuando lo necesitamos.</description>
     </item>
