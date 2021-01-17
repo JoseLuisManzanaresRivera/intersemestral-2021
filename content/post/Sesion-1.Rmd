@@ -82,7 +82,7 @@ Presentación por parte del profesor. Instalación de software open source y  co
 
 > ### Software Setup (Installation).
 
-![](/r.jpg)
+![](/img/r.jpg)
 
 
 1. On wndows: [download](http://cran.cnr.berkeley.edu/)
@@ -92,7 +92,7 @@ R studio
 
 3. Windows and Mac [download](https://www.rstudio.com/products/rstudio/download/#download)
 
-![](/installrstudio.png) 
+![](/img/installrstudio.png) 
 
 ### A. Nociones Teóricas
 
@@ -104,14 +104,14 @@ En la realización de análisis estadístico  partimos de una pregunta, generalm
 
 Una vez que recorremos este proceso y respondemos el questionamiento inicial, la evidencia aportada con el análisis estadístico involucra el surgimietno de nuevas preguntas.
 
-![](/q.jpeg){width=40%}
+![](/img/q.jpeg){width=40%}
 
 
 Una característica de este proceso es que es iterativo, es realidad estamos frente a un proceso ciclo. El work flow se repite constantemente. 
 
 Sería muy interesante y valioso que los recursos invertidos en términos de tiempo para la solución de un problema pudiesen recurperarse, si, reutilizarse! 
 
-![](/recycle.png){width=40%}
+![](/img/recycle.png){width=40%}
 
 
 De esta forma optimizariamos el uso de nuestros recursos. 
@@ -126,7 +126,7 @@ El entorno de análisis con plataformas como **R studio** esta diseñado explici
 
 #### 1.2 RStudio vs. STATA, SPSS y EXCEL.
 
-![](/logos.jpeg){width=80%}
+![](/img/logos.jpeg){width=80%}
 La principal ventaja de **R** sobre otros paquetes disponibles en el mercado actualmente es la flexibilidad del entorno *OPEN SOURCE*. Una gran comunidad de usuarios, desarrolla y comparte las herramientas que integran R de foma contínua.
 
 Otra ventajas incluyen: 
