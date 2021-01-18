@@ -7,7 +7,9 @@ Ejercicios sesión 3 [Line trends](https://drive.google.com/file/d/11r8St6CdALW_
 Ejercicios sesión 3 [Time series con javascript](https://drive.google.com/file/d/1SKESfW2ZGdFSHKEHoK1JMjvArzz-unw_/view?usp=sharing)
 
 
-Ejercicios sesión 3 [Scatter](https://drive.google.com/file/d/1yBEVYuzPn6qa4rqbw9FYOe6ODpehij_a/view?usp=sharing) 
+Ejercicios sesión 3 [Scatter y prueba de hipótesis](https://drive.google.com/file/d/1yBEVYuzPn6qa4rqbw9FYOe6ODpehij_a/view?usp=sharing) 
+
+Ejercicio sesión 4 [Funciones de densidad ](https://drive.google.com/file/d/1Fy-dJdqbtyVfDmEF9I3KykQieyyWJB9b/view?usp=sharing)
 
 
 

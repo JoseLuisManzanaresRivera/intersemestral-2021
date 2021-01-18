@@ -35,12 +35,13 @@ library(tidyverse)
 ### Dispersión
 
 
-Sesión 3  práctica [lineplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/lineplot_temp_ensenada.Rmd)
+Práctica [Series de tiempo y lineas de regresión](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/lineplot_temp_ensenada.Rmd)
 
-Sesión 3 práctica [boxplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dtools-Scatterplot.Rmd)
+Práctica [Rango intercuartil, percentiles y outliers: Boxplot](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dtools-Scatterplot.Rmd)
 
-Sesión 3 práctica [scater](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/scatterplot.Rmd)
+Sesión 3 práctica [Scatter](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/scatterplot.Rmd)
 
-Sesión 3 práctica [density](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/Density.Rmd)
+Práctica [Funciones de densidad para analizar distribución y prueba de hipótesis](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/Density.Rmd)
 
 
+Sesión 3 práctica [scatter prueba de hipótesis](https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/Density.Rmd)
