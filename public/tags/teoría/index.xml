@@ -6,7 +6,7 @@
     <description>Recent content in Teoría on Herramientas de análisis estadístico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/teor%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Sesión 2</title>
       <link>/sesion-2/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>/sesion-2/</guid>
       <description>Algunas consideraciones preeliminares sobre R. IDE R es un lenguaje que nos permite hablar con la computadora, wn analogía con cualquier lenguaje, como aprenderemos existen sustantivos, estos son los objetos (data frames o conjunto de adtos), las funciones pueden entenderse como verbos y sus argumentos como adverbios.

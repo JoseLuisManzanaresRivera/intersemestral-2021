@@ -1,7 +1,7 @@
 ---
-title: "Boxplot"
+title: "Sesión 3 Boxplot"
 author: "Jose´Luis Manzanares Rivera"
-date: 2021-01-12T21:13:14-05:00
+date: 2021-01-15T21:13:15-05:00
 categories: ["R"]
 tags: ["R Markdown", "plot", "boxplot"]
 ---

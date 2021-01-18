@@ -6,42 +6,15 @@
     <description>Recent content in Tags on Herramientas de análisis estadístico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jan 2021 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 21:13:14 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>boxplot</title>
-      <link>/tags/boxplot/</link>
-      <pubDate>Tue, 12 Jan 2021 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/boxplot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Tue, 12 Jan 2021 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
-      <pubDate>Tue, 12 Jan 2021 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Density</title>
       <link>/tags/density/</link>
-      <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
+      <pubDate>Wed, 20 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/tags/density/</guid>
       <description></description>
@@ -50,9 +23,72 @@
     <item>
       <title>Distribution</title>
       <link>/tags/distribution/</link>
-      <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
+      <pubDate>Wed, 20 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/tags/distribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boxplot</title>
+      <link>/tags/boxplot/</link>
+      <pubDate>Fri, 15 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/boxplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plot</title>
+      <link>/tags/plot/</link>
+      <pubDate>Fri, 15 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>/tags/r-markdown/</link>
+      <pubDate>Fri, 15 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conceptos</title>
+      <link>/tags/conceptos/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/conceptos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IDE</title>
+      <link>/tags/ide/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teoría</title>
+      <link>/tags/teor%C3%ADa/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/teor%C3%ADa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidyverse</title>
+      <link>/tags/tidyverse/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tidyverse/</guid>
       <description></description>
     </item>
     
@@ -62,42 +98,6 @@
       <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/tags/regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Conceptos</title>
-      <link>/tags/conceptos/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/conceptos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>IDE</title>
-      <link>/tags/ide/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/ide/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Teoría</title>
-      <link>/tags/teor%C3%ADa/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/teor%C3%ADa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tidyverse</title>
-      <link>/tags/tidyverse/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/tidyverse/</guid>
       <description></description>
     </item>
     
