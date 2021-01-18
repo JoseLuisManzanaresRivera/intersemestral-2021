@@ -85,7 +85,6 @@ g<-ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
 animate(g, height = 500, width =800)
 anim_save("C:/Users/LENOVO/Desktop/DESK/web/MDR-intersemestral-2021/img/continents.gif")
 
-
 ```
 
 ![](/img/continents.gif)
