@@ -48,11 +48,6 @@
   </url>
   
   <url>
-    <loc>/sesion4-density/</loc>
-    <lastmod>2021-01-11T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/distribution/</loc>
     <lastmod>2021-01-11T21:13:14-05:00</lastmod>
   </url>
@@ -64,6 +59,11 @@
   
   <url>
     <loc>/sesion-1/</loc>
+    <lastmod>2021-01-11T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/sesion4-density/</loc>
     <lastmod>2021-01-11T21:13:14-05:00</lastmod>
   </url>
   

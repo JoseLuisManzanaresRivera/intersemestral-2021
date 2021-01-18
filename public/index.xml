@@ -34,17 +34,6 @@ Distribución de temperaturas mínimas diarias registradas en estación metereol
     </item>
     
     <item>
-      <title>Density</title>
-      <link>/sesion4-density/</link>
-      <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
-      
-      <guid>/sesion4-density/</guid>
-      <description>Ejemplo 1 Estimación de funcion de densidad para representar la frecuencia de datos para variables numéricas y su visualización por categorias.Herramienta de visualización: ggplotly. Funciones aplicadas: ggplot geom_density.
-Contexto de la base de datos. Data frame en formato rds que contiene Edad de pacientes positivos por covid y edad de defunción en México. Año 2020.
-Cálculo función de densidad, representación de medidas de tendencia central y distribución para detectar diferencias de edad.</description>
-    </item>
-    
-    <item>
       <title>Sesión 1</title>
       <link>/sesion-1/</link>
       <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
@@ -52,6 +41,17 @@ Cálculo función de densidad, representación de medidas de tendencia central y
       <guid>/sesion-1/</guid>
       <description>Programa: Maestría en Desarrollo Regional.Semestre: 1-2021Horas: 15.Organización por sesiones: 5 Sesiones, 3 horas por sesión.Curso-intersemestral: Herramientas para Análisis estadístico: Implementación en R markdown.Presentación del curso.El curso está diseñado para estudiar el uso de herramientas de análisis de datos en un entorno replicable con base en R markdown.
 La orientación empírica se enfoca en la evaluación de indicadores a escala regional para México.</description>
+    </item>
+    
+    <item>
+      <title>Sesión 4-Funciones de densidad</title>
+      <link>/sesion4-density/</link>
+      <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/sesion4-density/</guid>
+      <description>Ejemplo 1 Estimación de funcion de densidad para representar la frecuencia de datos para variables numéricas y su visualización por categorias.Herramienta de visualización: ggplotly. Funciones aplicadas: ggplot geom_density.
+Contexto de la base de datos. Data frame en formato rds que contiene Edad de pacientes positivos por covid y edad de defunción en México. Año 2020.
+Cálculo función de densidad, representación de medidas de tendencia central y distribución para detectar diferencias de edad.</description>
     </item>
     
     <item>
