@@ -1,8 +1,7 @@
 ---
-title: Detección de patrones espaciales a escala regional
+title: Estructura del curso
 ---
 
-Escala de datos:  Estatal en el contexto de México.
-Dominio de aplicación: Salud pública.
+
 
 
