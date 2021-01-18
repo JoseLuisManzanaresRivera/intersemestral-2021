@@ -18,26 +18,6 @@
   </url>
   
   <url>
-    <loc>/tags/distribution/</loc>
-    <lastmod>2021-01-13T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/sesion4-scatterplot/</loc>
-    <lastmod>2021-01-13T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2021-01-13T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/visualizaci%C3%B3n/</loc>
-    <lastmod>2021-01-13T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/boxplot/</loc>
     <lastmod>2021-01-12T21:13:14-05:00</lastmod>
   </url>
@@ -58,17 +38,22 @@
   </url>
   
   <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-01-12T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/density/</loc>
     <lastmod>2021-01-11T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/density/</loc>
+    <loc>/sesion4-density/</loc>
     <lastmod>2021-01-11T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/sesion4-density/</loc>
+    <loc>/tags/distribution/</loc>
     <lastmod>2021-01-11T21:13:14-05:00</lastmod>
   </url>
   
@@ -118,12 +103,7 @@
   </url>
   
   <url>
-    <loc>/sesion4-trendsscatter/</loc>
-    <lastmod>2019-01-11T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/sesio4-trendsscatter/</loc>
+    <loc>/sesion4-scatter-lq-gihub/</loc>
     <lastmod>2019-01-11T21:13:14-05:00</lastmod>
   </url>
   

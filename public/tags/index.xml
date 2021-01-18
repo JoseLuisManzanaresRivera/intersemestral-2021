@@ -6,28 +6,10 @@
     <description>Recent content in Tags on Herramientas de análisis estadístico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jan 2021 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2021 21:13:14 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Distribution</title>
-      <link>/tags/distribution/</link>
-      <pubDate>Wed, 13 Jan 2021 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/distribution/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Visualización</title>
-      <link>/tags/visualizaci%C3%B3n/</link>
-      <pubDate>Wed, 13 Jan 2021 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/visualizaci%C3%B3n/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>boxplot</title>
@@ -62,6 +44,15 @@
       <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/tags/density/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Distribution</title>
+      <link>/tags/distribution/</link>
+      <pubDate>Mon, 11 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/distribution/</guid>
       <description></description>
     </item>
     
