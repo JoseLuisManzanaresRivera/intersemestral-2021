@@ -39,7 +39,6 @@ Sesión 3 [Series de tiempo y lineas de regresión](https://drive.google.com/fil
 
 Sesión 3 [Rango intercuartil, percentiles y outliers: Boxplot](https://drive.google.com/file/d/1LRW5wcoLipsXGRtOC_CT7PxmOr0CgneD/view?usp=sharing)
 
-Sesión 3  [Boxplot](https://drive.google.com/file/d/1qXdI9rvPlBYu0OVYfDalNcsnoYJiPb5O/view?usp=sharing)
 
 Sesión 4  [Funciones de densidad para analizar distribución hipótesis](https://drive.google.com/file/d/1qXdI9rvPlBYu0OVYfDalNcsnoYJiPb5O/view?usp=sharing)
 

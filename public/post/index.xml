@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Sesión 4 Scatter, LQ, GitHUB</title>
+      <title>Sesión 4 Scatter LQ GitHUB</title>
       <link>/sesion4-scatter-lq-gihub/</link>
       <pubDate>Wed, 20 Jan 2021 21:13:15 -0500</pubDate>
       
@@ -23,7 +23,7 @@ TASA17&amp;lt;-readRDS(&amp;quot;TASA17.rds&amp;quot;)%&amp;gt;%select(-Alta)%&
     </item>
     
     <item>
-      <title>Sesión 4-Funciones de densidad</title>
+      <title>Sesión 4 Funciones de densidad</title>
       <link>/sesion4-density/</link>
       <pubDate>Wed, 20 Jan 2021 21:13:14 -0500</pubDate>
       
