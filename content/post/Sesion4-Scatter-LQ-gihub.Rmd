@@ -39,7 +39,7 @@ layout(shapes=list(type='line', x0=0, x1=32, y0=mean(TASA17$Tasa), y1=mean(TASA1
 
 ```
 
-```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
+```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, echo=FALSE}
 splot1
 ```
 
