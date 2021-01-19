@@ -1,7 +1,7 @@
 ---
 title: "Sesión 5 Reportes con Rmarkdown"
 author: "JLMR"
-date: "19/1/2021"
+date: 2021-01-19T21:14:14-05:00
 output: html_document
 ---
 

@@ -6,10 +6,23 @@
     <description>Recent content on Herramientas de análisis estadístico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Jan 2021 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 21:14:14 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sesión 5 Reportes con Rmarkdown</title>
+      <link>/sesion-5-reportes-rmarkdown/</link>
+      <pubDate>Tue, 19 Jan 2021 21:14:14 -0500</pubDate>
+      
+      <guid>/sesion-5-reportes-rmarkdown/</guid>
+      <description>¿Porque R Markdown para un reporte académico?
+R markdown (un entorno de trabajo para RTF -rich text format-).Nos permite integrar el código de las estimaciones directamente al análisis, lo que hace el flujo de trabajo un proceso integrado.
+Diversos formatos de representación incluido HTLM o PDF inlcuso word.
+Integración con otras plataformas opensource para el seguimiento de repositorios en línea. por ejemplo github
+Esta integración nos permite una diversidad de actividades.</description>
+    </item>
     
     <item>
       <title>Sesión 4 Funciones de Densidad</title>
@@ -143,19 +156,6 @@ Sesión 4 práctica scatter prueba de hipótesis
       <description>Age Adjusted Mortality rate for age group x to y.\[aamr= \sum_{i=x}^{y} \Bigg[ \left[ \frac{counts_i}{pop_i}X100,000 \right] X \left[ \frac{stdr_i}{ \sum_{j=x}^{y} stdr_j} \right] \Bigg]\]
 Location Quotient.\[LQ_t= \bigg( \frac{d_i} {\sum_{j=x}^{y}} \biggr)_E \bigg/ \bigg(\frac{d_i}{\sum_{j=x}^{y}}\biggr)_N\]
 </description>
-    </item>
-    
-    <item>
-      <title>Sesión 5 Reportes con Rmarkdown</title>
-      <link>/sesion-5-reportes-rmarkdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/sesion-5-reportes-rmarkdown/</guid>
-      <description>¿Porque R Markdown para un reporte académico?
-R markdown (un entorno de trabajo para RTF -rich text format-).Nos permite integrar el código de las estimaciones directamente al análisis, lo que hace el flujo de trabajo un proceso integrado.
-Diversos formatos de representación incluido HTLM o PDF inlcuso word.
-Integración con otras plataformas opensource para el seguimiento de repositorios en línea. por ejemplo github
-Esta integración nos permite una diversidad de actividades.</description>
     </item>
     
   </channel>

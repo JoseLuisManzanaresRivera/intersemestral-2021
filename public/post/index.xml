@@ -6,10 +6,23 @@
     <description>Recent content in Estructura del curso on Herramientas de análisis estadístico</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Jan 2021 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 21:14:14 -0500</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sesión 5 Reportes con Rmarkdown</title>
+      <link>/sesion-5-reportes-rmarkdown/</link>
+      <pubDate>Tue, 19 Jan 2021 21:14:14 -0500</pubDate>
+      
+      <guid>/sesion-5-reportes-rmarkdown/</guid>
+      <description>¿Porque R Markdown para un reporte académico?
+R markdown (un entorno de trabajo para RTF -rich text format-).Nos permite integrar el código de las estimaciones directamente al análisis, lo que hace el flujo de trabajo un proceso integrado.
+Diversos formatos de representación incluido HTLM o PDF inlcuso word.
+Integración con otras plataformas opensource para el seguimiento de repositorios en línea. por ejemplo github
+Esta integración nos permite una diversidad de actividades.</description>
+    </item>
     
     <item>
       <title>Sesión 4 Funciones de Densidad</title>
@@ -74,19 +87,6 @@ En la base del proceso de análisis de datos se encuentra la habilidad para alma
       <guid>/sesion-1/</guid>
       <description>Programa: Maestría en Desarrollo Regional.Semestre: 1-2021Horas: 15.Organización por sesiones: 5 Sesiones, 3 horas por sesión.Curso-intersemestral: Herramientas para Análisis estadístico: Implementación en R markdown.Presentación del curso.El curso está diseñado para estudiar el uso de herramientas de análisis de datos en un entorno replicable con base en R markdown.
 La orientación empírica se enfoca en la evaluación de indicadores a escala regional para México.</description>
-    </item>
-    
-    <item>
-      <title>Sesión 5 Reportes con Rmarkdown</title>
-      <link>/sesion-5-reportes-rmarkdown/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/sesion-5-reportes-rmarkdown/</guid>
-      <description>¿Porque R Markdown para un reporte académico?
-R markdown (un entorno de trabajo para RTF -rich text format-).Nos permite integrar el código de las estimaciones directamente al análisis, lo que hace el flujo de trabajo un proceso integrado.
-Diversos formatos de representación incluido HTLM o PDF inlcuso word.
-Integración con otras plataformas opensource para el seguimiento de repositorios en línea. por ejemplo github
-Esta integración nos permite una diversidad de actividades.</description>
     </item>
     
   </channel>
