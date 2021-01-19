@@ -190,7 +190,7 @@ Ejemplo Location Quotient   **(LQ)**
 
 
 
-```{r  LQ by State  2015}
+```{r,  echo=FALSE, message=FALSE, include=FALSE}
 
 ##  LQ 2017  ##
 
