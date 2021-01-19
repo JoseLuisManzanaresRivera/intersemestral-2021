@@ -34,6 +34,16 @@ Contexto de la base de datos. Data frame en formato rds que contiene Edad de pac
     </item>
     
     <item>
+      <title>S4lq</title>
+      <link>/sesion-4-lq/</link>
+      <pubDate>Mon, 18 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/sesion-4-lq/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
+    </item>
+    
+    <item>
       <title>Sesión 3</title>
       <link>/sesion-3/</link>
       <pubDate>Fri, 15 Jan 2021 21:13:15 -0500</pubDate>
@@ -74,16 +84,6 @@ En la base del proceso de análisis de datos se encuentra la habilidad para alma
       <guid>/sesion-1/</guid>
       <description>Programa: Maestría en Desarrollo Regional.Semestre: 1-2021Horas: 15.Organización por sesiones: 5 Sesiones, 3 horas por sesión.Curso-intersemestral: Herramientas para Análisis estadístico: Implementación en R markdown.Presentación del curso.El curso está diseñado para estudiar el uso de herramientas de análisis de datos en un entorno replicable con base en R markdown.
 La orientación empírica se enfoca en la evaluación de indicadores a escala regional para México.</description>
-    </item>
-    
-    <item>
-      <title>S4lq</title>
-      <link>/sesion-4-lq/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/sesion-4-lq/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
     </item>
     
   </channel>

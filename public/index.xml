@@ -34,6 +34,16 @@ Contexto de la base de datos. Data frame en formato rds que contiene Edad de pac
     </item>
     
     <item>
+      <title>S4lq</title>
+      <link>/sesion-4-lq/</link>
+      <pubDate>Mon, 18 Jan 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/sesion-4-lq/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
+    </item>
+    
+    <item>
       <title>Sesión 3</title>
       <link>/sesion-3/</link>
       <pubDate>Fri, 15 Jan 2021 21:13:15 -0500</pubDate>
@@ -143,16 +153,6 @@ Sesión 4 práctica scatter prueba de hipótesis
       <description>Age Adjusted Mortality rate for age group x to y.\[aamr= \sum_{i=x}^{y} \Bigg[ \left[ \frac{counts_i}{pop_i}X100,000 \right] X \left[ \frac{stdr_i}{ \sum_{j=x}^{y} stdr_j} \right] \Bigg]\]
 Location Quotient.\[LQ_t= \bigg( \frac{d_i} {\sum_{j=x}^{y}} \biggr)_E \bigg/ \bigg(\frac{d_i}{\sum_{j=x}^{y}}\biggr)_N\]
 </description>
-    </item>
-    
-    <item>
-      <title>S4lq</title>
-      <link>/sesion-4-lq/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/sesion-4-lq/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
     </item>
     
   </channel>
