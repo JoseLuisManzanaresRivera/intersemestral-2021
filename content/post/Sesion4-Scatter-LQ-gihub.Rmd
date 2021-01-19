@@ -185,7 +185,8 @@ anim_save("C:/Users/LENOVO/Desktop/DESK/web/MDR-intersemestral-2021/static/img/c
 ![](/img/p.gif)
 
 
-Ejemplo Location Quotient   **(LQ)**
+**Ejemplo 4** Location Quotient   **(LQ)**
+Datos: Suicidio. Escala estatal. Estructura de datos: corte trasnversal. Periodo 2017.
 
 
 
