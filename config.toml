@@ -1,5 +1,5 @@
 theme = "vanilla-bootstrap-hugo-theme"
-baseURL = "https://hea-mdr2021.netlify.app/"
+baseURL = "https://heamdr2021-1.netlify.app"
 languageCode = "en-us"
 title = "Herramientas de análisis estadístico"
 
