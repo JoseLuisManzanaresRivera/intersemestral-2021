@@ -16,7 +16,7 @@ library(broom)
 ```
 
 
-Ejemplo 1. **Objetivo:** Aprender las funciones necesarias pare la representación de datos en formato categórico.  
+**Ejemplo 1**. **Objetivo:** Aprender las funciones necesarias pare la representación de datos en formato categórico.  
 
 Librerias en práctica: **Tidyverse**, **plotly**.  Contexto de estimación: datos para regionalización en el ámbito de salud pública en México. Base mortalidad por suicidio.
 
@@ -47,7 +47,7 @@ splot1
 
 
 
-Ejemplo 2. **Objetivo:** Realizar prueba de hipótesis para diferencia de medias, estimando el estadístico **t** y su intervalo de confinza. 
+**Ejemplo 2**. **Objetivo:** Realizar prueba de hipótesis para diferencia de medias, estimando el estadístico **t** y su intervalo de confinza. 
 
 Librerias en práctica: **Broom** y **purrr**. Contexto de estimación: COVID19, México. Base de edad de pacientes diagnosticados con e virus.
 
