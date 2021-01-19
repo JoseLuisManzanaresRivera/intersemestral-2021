@@ -20,7 +20,7 @@ Ejemplo 1. **Objetivo:** Aprender las funciones necesarias pare la representaci�
 Librerias en práctica: **Tidyverse**, **plotly**.  Contexto de estimación: datos para regionalización en el ámbito de salud pública en México. Base mortalidad por suicidio.
 
 
-```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, include=FALSE}
+```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, echo=FALSE=}
 
 TASA17<-readRDS("TASA17.rds")%>%
   select(-Alta)%>%
@@ -29,7 +29,7 @@ TASA17<-readRDS("TASA17.rds")%>%
   mutate(Sexo=ifelse(Sexo==1,"Hombre","Mujer"))
 
 
-pal <- c("cornflowerblue", "coral")
+pal <- c("cornflowerblue", "deeppink")
 
 splot1 <- plot_ly(data = TASA17, x = ~reorder(Estado,Tasa), y = ~Tasa, type = 'scatter', color = ~Sexo,  size=~Tasa, colors = pal)%>%
   layout(xaxis = list(title = "Estados"),
@@ -39,10 +39,10 @@ layout(shapes=list(type='line', x0=0, x1=32, y0=mean(TASA17$Tasa), y1=mean(TASA1
 
 ```
 
-```{r, fig.height = 8, fig.width = 12, echo=FALSE,warning=FALSE, message=FALSE}
+```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
 splot1
-
 ```
+
 
 
 
@@ -183,4 +183,61 @@ anim_save("C:/Users/LENOVO/Desktop/DESK/web/MDR-intersemestral-2021/static/img/c
 
 
 ![](/img/p.gif)
+
+
+Ejemplo Location Quotient   **(LQ)**
+
+
+
+
+```{r  LQ by State  2015}
+
+##  LQ 2017  ##
+
+d17<-readRDS("def17_casos.rds")%>%
+ungroup()%>%
+mutate(ent_res=as.factor(ENT_RESID), s=as.factor(s))%>%
+mutate(s=ifelse(s==0,"O","S"))%>%
+select(-ENT_RESID)%>%
+spread(s,n17)
+
+
+lq_num<-d17%>%
+mutate(n=S/O*100)
+
+lq_den<-d17%>%
+mutate(d=sum(S)/sum(O)*100)
+
+lq<-inner_join(lq_num,lq_den)
+
+lq17<-mutate(lq,lq=round(n/d,digits=2))%>%
+  arrange(desc(lq))%>%
+  mutate(ent_res=as.factor(ent_res))%>%
+mutate(ent_res=sprintf("%02d",ent_res))
+  
+
+cat_e<-read.csv("C:/Users/LENOVO/Desktop/DESK/I/data/cat_entidad.csv")%>%
+rename(ent_res=X.U.FEFF.EDO,Estado=DESCRIP)%>%
+mutate(ent_res=sprintf("%02d",ent_res))
+  
+lq17<-left_join(lq17,cat_e, by="ent_res")%>%
+  mutate(Nivel=as.factor(ifelse(lq>1,"Alto","Moderado")))%>%
+  rename(LQ=lq)
+
+plq<-ggplot(lq17, aes(x=reorder(Estado,LQ), y=LQ, size=LQ, color=Nivel))+
+  geom_point()+
+  xlab("Estado")+
+  ylab("LQ")+
+  theme_bw()+
+scale_colour_hue(l=45)+
+  coord_flip()+
+  geom_hline(yintercept=1, linetype="dashed")+
+  annotate("text", y=1.25, x=12, label="LQ=1 Nivel Nacional")+
+  annotate("segment", x=10, xend=10, y=1.3, yend=1.1,  size=.3, arrow=arrow(length=unit(.2,"cm")))
+```
+
+```{r, warning=FALSE, echo=FALSE, message=FALSE,fig.height = 8, fig.width = 12}
+plq
+```
+
 
