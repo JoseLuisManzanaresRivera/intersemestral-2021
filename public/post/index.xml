@@ -76,5 +76,15 @@ En la base del proceso de análisis de datos se encuentra la habilidad para alma
 La orientación empírica se enfoca en la evaluación de indicadores a escala regional para México.</description>
     </item>
     
+    <item>
+      <title>S4lq</title>
+      <link>/sesion-4-lq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sesion-4-lq/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
+    </item>
+    
   </channel>
 </rss>
