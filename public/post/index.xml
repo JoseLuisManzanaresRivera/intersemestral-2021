@@ -76,5 +76,18 @@ En la base del proceso de análisis de datos se encuentra la habilidad para alma
 La orientación empírica se enfoca en la evaluación de indicadores a escala regional para México.</description>
     </item>
     
+    <item>
+      <title>Sesión 5 Reportes con Rmarkdown</title>
+      <link>/sesion-5-reportes-rmarkdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sesion-5-reportes-rmarkdown/</guid>
+      <description>¿Porque R Markdown para un reporte académico?
+R markdown (un entorno de trabajo para RTF -rich text format-).Nos permite integrar el código de las estimaciones directamente al análisis, lo que hace el flujo de trabajo un proceso integrado.
+Diversos formatos de representación incluido HTLM o PDF inlcuso word.
+Integración con otras plataformas opensource para el seguimiento de repositorios en línea. por ejemplo github
+Esta integración nos permite una diversidad de actividades.</description>
+    </item>
+    
   </channel>
 </rss>
