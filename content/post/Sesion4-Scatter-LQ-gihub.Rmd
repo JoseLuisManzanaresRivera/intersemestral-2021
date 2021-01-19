@@ -150,7 +150,7 @@ America<-filter(gapminder,continent=="Americas")%>%
 glimpse(gapminder)
 ```
 
-```{r,echo=FALSE, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE}
+```{r,echo=FALSE, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE, eval=FALSE}
 p <- ggplot(America, aes(gdpPercap, lifeExp, size = pop, colour = Región)) +
   geom_point(alpha = 0.7) +
   scale_colour_manual(values=c("darkorange", "skyblue1","yellow","blue","green3","red")) +
