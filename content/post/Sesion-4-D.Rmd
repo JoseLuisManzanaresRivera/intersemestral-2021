@@ -1,5 +1,5 @@
 ---
-title: "S4lq"
+title: "Sesion4D"
 author: "JLMR"
 date: 2021-01-18T21:13:14-05:00
 output: html_document
@@ -128,7 +128,7 @@ Funciones estudiadas: group_by, rename, left_join, filter, select, mutate, summa
 ####  Caso Aguascalientes
 
 
-```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
+```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, echo=FALSE}
 
 
 sdensity<-readRDS("density.rds")%>%
@@ -176,7 +176,7 @@ Herramienta de análisis: stat=density
 
 Funciones estudiadas: **facet_wrap**
 
-```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE}
+```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE, echo =FALSE}
 
 
 mxplt<-ggplot(sdensity, aes(x=age,linetype=s, color=s))+
