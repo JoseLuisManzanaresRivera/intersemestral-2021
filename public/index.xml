@@ -39,8 +39,9 @@ Contexto de la base de datos. Data frame en formato rds que contiene Edad de pac
       <pubDate>Mon, 18 Jan 2021 21:13:14 -0500</pubDate>
       
       <guid>/sesion-4-lq/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
+      <description>Contexto. Necesidad por representar la frecuencia de los datos para comprender el fenómeno de estudio.
+Ejemplo 1 Estimación de funcion de densidad para representar la frecuencia de datos para variables numéricas y su visualización por categorias.Herramienta de visualización: ggplotly. Funciones aplicadas: ggplot geom_density.
+Contexto de la base de datos. Data frame en formato rds que contiene Edad de pacientes positivos por covid y edad de defunción en México.</description>
     </item>
     
     <item>
