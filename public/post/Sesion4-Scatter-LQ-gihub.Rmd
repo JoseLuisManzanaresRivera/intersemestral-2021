@@ -20,7 +20,7 @@ Ejemplo 1. **Objetivo:** Aprender las funciones necesarias pare la representaci�
 Librerias en práctica: **Tidyverse**, **plotly**.  Contexto de estimación: datos para regionalización en el ámbito de salud pública en México. Base mortalidad por suicidio.
 
 
-```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, }
+```{r,fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, include=FALSE}
 
 TASA17<-readRDS("TASA17.rds")%>%
   select(-Alta)%>%
@@ -42,6 +42,10 @@ splot1
 
 ```
 
+```{r, echo=FALSE,warning=FALSE, message=FALSE}
+splot1
+
+```
 
 
 
@@ -97,7 +101,7 @@ m<-mutate(m,state=fct_reorder(state,estimate))
 
 ```
 
-```{r, fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE}
+```{r, fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE,echo=FALSE}
 t_test_plot
 ```
 
@@ -106,7 +110,7 @@ Librerías aprendidas: **gganimate**
 Verbos en el contexto tidyverse: **ifelse**
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, include=FALSE}
 #1. Cargamos los datos
 gapminder
 
