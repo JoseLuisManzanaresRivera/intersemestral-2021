@@ -16,7 +16,7 @@ library(dplyr)
 library(plotly)
 ```
 
-**Contexto**. Necesidad por representar la frecuencia de los datos para comprender el fenómeno de estudio. 
+**Contexto**. Creación de histograma para representar la frecuencia de los datos. 
 
 ```{r, include=FALSE, echo = FALSE, warning = FALSE}
 
