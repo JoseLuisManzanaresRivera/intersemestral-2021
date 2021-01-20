@@ -17,10 +17,10 @@
       <pubDate>Mon, 18 Jan 2021 21:13:15 -0500</pubDate>
       
       <guid>/sesion-5-reportes-rmarkdown/</guid>
-      <description>¿Porque R Markdown para un reporte académico?
-R markdown (un entorno de trabajo para RTF -rich text format-).Nos permite integrar el código de las estimaciones directamente al análisis, lo que hace el flujo de trabajo un proceso integrado.
+      <description>###¿Por quë R Markdown para un reporte académico?
+R Markdown (un entorno de trabajo RTF -rich text format-).Nos permite integrar el código de las estimaciones directamente al análisis, lo que hace el flujo de trabajo un proceso integrado.
 Diversos formatos de representación incluido HTLM o PDF inlcuso word.
-Integración con otras plataformas opensource para el seguimiento de repositorios en línea. por ejemplo github
+Integración con otras plataformas open source para el seguimiento de repositorios en línea. Por ejemplo: github
 Esta integración nos permite una diversidad de actividades.</description>
     </item>
     
