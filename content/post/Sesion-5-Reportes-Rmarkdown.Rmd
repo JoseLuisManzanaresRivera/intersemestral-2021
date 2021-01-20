@@ -1,5 +1,5 @@
 ---
-title: "Sesión 5 Reportes con Rmarkdown"
+title: "Sesión 5 Reportes en R Markdown"
 author: "JLMR"
 date: 2021-01-18T21:13:15-05:00
 output: html_document
@@ -22,8 +22,7 @@ Esta integración nos permite una diversidad de actividades. Para nuestro propó
 
 **Ejemplo**  Generación de reporte en R Markdown en formato **HTML**. 
 
-Estructura del reporte: Introducción del tema (motivación, justificación, importancia). Metodología y Datos. Análisisy resultados, discusión, cnclusines.
-Máximo 2000 palabras. 
+
 
 ###### Flujo de trabajo recomendado: 
 
@@ -40,9 +39,10 @@ Con el objetivo de evaluar la intensidad del uso de los recursos hídricos subte
 
 Genere un reporte con estadísticas descriptivas incluya la visualización de la disctribucion de los datos para la variable **volumen concesionado por acuífero**, así como las herramientas de visualización que considere necesarias para explicar el fenómeno de estudio  (ej mapas, puede usar Qgis, Arcview, etc).  
 
-Para determinar el grado de concentración del problema  a escala territorial (por acuífero) estime el Cociente de localización (LQ) para el número de concesiones para extracción de aguas subterránea  por $$km^2$$.
+Para determinar el grado de concentración del problema  a escala territorial (por acuífero) estime el Cociente de localización (LQ) para el número de concesiones para extracción de aguas subterránea  por $km^2$.
 
- 
+**Estructura del reporte:** Introducción del tema (motivación, justificación, importancia). Metodología y Datos. Análisisy resultados, discusión, cnclusines.
+Máximo 2000 palabras. 
 ```{r}
 library(foreign)
 
