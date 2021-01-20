@@ -44,13 +44,13 @@ Para determinar el grado de concentración del problema  a escala territorial (p
 **Estructura del reporte:** Introducción del tema (motivación, justificación, importancia). Metodología y Datos. Análisis y resultados, discusión, conclusiones.
 Máximo 1000 palabras. 
 
-```{r}
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
 library(foreign)
 library(tidyverse)
 library(janitor)
 ```
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=FALSE}
 
 ####   NO RUN, JUST DATA WRANGLING ### 
 superficie_km2<-read.dbf("C:/Users/LENOVO/Desktop/s5/areas.dbf")%>%
@@ -87,7 +87,7 @@ saveRDS(concesiones,"concesiones.rds")
 
 ```
 
-```{r}
+```{r,echo=FALSE}
 ### Para estimar LQ hacer join de superficie_km2 y concesiones por clave. 
 
 sup<-readRDS("superficie_km2.rds")
@@ -111,10 +111,6 @@ vol<-readRDS("volumen.rds")
 
 # 4 Hacer representación gráfica con scatter y línea de referencia para nievel de concentración  estatal (ej LQ =1). 
 ```
-
-
-
-Base de datos **A**
 
 
 
