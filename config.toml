@@ -1,5 +1,5 @@
 theme = "vanilla-bootstrap-hugo-theme"
-baseURL = "https://2021hea.netlify.app"
+baseURL = "https://hea.netlify.app"
 languageCode = "en-us"
 title = "Herramientas de análisis estadístico"
 
