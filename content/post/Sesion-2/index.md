@@ -5,7 +5,7 @@ tags:
 - Conceptos 
 - IDE
 - Tidyverse
-title: Sesión 2
+title: Miercoles 7 Septiembre 
 ---
 
 
