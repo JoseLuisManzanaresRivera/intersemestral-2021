@@ -13,7 +13,7 @@ title: Sesión 2
 
 ## IDE 
 
-R es un lenguaje que nos permite hablar con la computadora, wn analogía con cualquier lenguaje, como aprenderemos existen **sustantivos**, estos son los objetos (data frames o conjunto de adtos),  las funciones pueden entenderse como **verbos** y sus argumentos como **adverbios**.
+R es un lenguaje que nos permite hablar con la computadora, en analogía con cualquier lenguaje, como aprenderemos existen **sustantivos**, estos son los objetos (data frames o conjunto de adtos),  las funciones pueden entenderse como **verbos** y sus argumentos como **adverbios**.
 
 Estamos aprendiendo un lenguaje para comunicarnos con nuestra computadora con la finalidad de conducir tareas de análisis de datos. 
 
@@ -405,7 +405,7 @@ Este comportamiento de hecho nos permite incluir argumentos, para aplicar la fun
 
 Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con 20 lados, uno con 4 o 3,etc. Esta información la indicamos mediante los argumentos.
 
-```{r}
+```{r class.source="bg-danger", class.output="bg-warning"}
 lanzar2 <- function(tipo) {
 dados <- sample(tipo, size = 2, replace = TRUE)
 sum(dados)
@@ -414,8 +414,9 @@ sum(dados)
 lanzar2(tipo=1:4)
 lanzar2(tipo=1:20)
 lanzar2(1:6)
-lanzar2(tipo)
 ```
+
+`lanzar2(tipo)`
 
 Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, esto no es necesario por que  tipo es el único argumento de nuestra función `lanzar2()`.
 

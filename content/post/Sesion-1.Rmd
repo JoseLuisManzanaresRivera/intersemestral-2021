@@ -15,7 +15,7 @@ library(tidyverse)
 
 > #### Programa: Maestría en Desarrollo Regional.
 > ##### **Semestre:** 1-2021
-> ##### **Horas:** 15. 
+> ##### **Horas:** 45. 
 > ##### **Organización por sesiones:** 5 Sesiones, 3 horas por sesión. 
 > ##### **Curso-intersemestral:** Herramientas para Análisis estadístico: Implementación en R markdown.
 
