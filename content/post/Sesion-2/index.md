@@ -1,11 +1,11 @@
 ---
-date: "2021-01-13"
+date: "2022-08-02"
 tags:
 - Teoría
 - Conceptos 
 - IDE
 - Tidyverse
-title: Miercoles 7 Septiembre 
+title: Miércoles 7 Septiembre (2)
 ---
 
 
