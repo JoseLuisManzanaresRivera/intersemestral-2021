@@ -1,5 +1,5 @@
 ---
-title: "Sesión opcional Scatter LQ"
+title: "Proyecto   LQ y advanced scatter"
 author: "Jose´Luis Manzanares Rivera"
 date: '2022-07-01T21:13:15-05:00'
 ---

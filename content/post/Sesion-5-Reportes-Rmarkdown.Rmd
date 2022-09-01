@@ -1,7 +1,7 @@
 ---
-title: "Sesión 5 Reportes en R Markdown"
+title: "Proyecto Reporte en R Markdown"
 author: "JLMR"
-date: 2021-01-18T21:13:15-05:00
+date: 2021-07-29T21:13:15-05:00
 output: html_document
 ---
 
