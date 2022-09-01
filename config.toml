@@ -1,7 +1,7 @@
 theme = "vanilla-bootstrap-hugo-theme"
 baseURL = "https://stat2022-01.netlify.app"
 languageCode = "en-us"
-title = "Herramientas de análisis estadístico"
+title = "Estadística I Herramientas de análisis"
 
 
 # Uncomment below to enable syntax hghlighting
