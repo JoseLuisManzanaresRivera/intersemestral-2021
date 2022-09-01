@@ -405,7 +405,7 @@ Este comportamiento de hecho nos permite incluir argumentos, para aplicar la fun
 
 Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con 20 lados, uno con 4 o 3,etc. Esta información la indicamos mediante los argumentos.
 
-```{r class.source="bg-danger", class.output="bg-warning"}
+```{r }
 lanzar2 <- function(tipo) {
 dados <- sample(tipo, size = 2, replace = TRUE)
 sum(dados)
