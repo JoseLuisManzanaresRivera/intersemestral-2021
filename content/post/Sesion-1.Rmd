@@ -1,7 +1,7 @@
 ---
 title: "Miércoles 7"
 author: "Dr. José Luis Manzanares Rivera"
-date: 2021-01-11T21:13:14-05:00
+date: 2022-08-01T21:13:14-05:00
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---
