@@ -1,5 +1,5 @@
 ---
-title: "Sesión 3"
+title: "Sesión opcional viernes 9"
 author: "Jose´Luis Manzanares Rivera"
 date: 2021-01-15T21:13:15-05:00
 output: html_document
@@ -8,6 +8,7 @@ output: html_document
 ```{r,echo = FALSE, eval = TRUE, message=FALSE,warning = FALSE}
 suppressPackageStartupMessages(library(tidyverse))
 library(plotly)
+
 ```
 
 ## Análisis de Tendencias usando intervalos de confianza 
@@ -23,7 +24,7 @@ library(plotly)
 
 Estimación de la trayectoria de la temperatura  máxima y minima y el intervalo de confianza para la variable temperatura a lo largo del periodo de interés. Representación en line plot. 
 
-```{r,  fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE  }
+```{r,  fig.height = 8, fig.width = 12, message=FALSE,  cache = TRUE, echo = FALSE, warning = FALSE  }
 
 BC2001<-read.csv("ema_2001_AGUACALIENTE.csv")%>%
   rename(max=tmin,min=tmax)
@@ -67,11 +68,9 @@ ylab("Temperatura (c°)")+
 labs(colour="Temperatura")+ theme(legend.position="top")+
 scale_colour_brewer(palette="Set1")
 
-```
-
-```{r,message=FALSE, echo=FALSE}
 lplot
 ```
+
 
 
 **Ejemplo 2:** Estimación de  la trayectoria de precipitación y el rango intercuartil para la variable de interés. Representación en line plot. 
