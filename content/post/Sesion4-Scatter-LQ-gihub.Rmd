@@ -6,7 +6,6 @@ date: '2022-07-01T21:13:15-05:00'
 
 
 ```{r,echo=FALSE, message=FALSE,warning=FALSE}
-
 library(gapminder)
 library(gganimate)
 library(scales)
@@ -96,12 +95,10 @@ m<-mutate(m,state=fct_reorder(state,estimate))
   theme(legend.position = "none")+
   scale_colour_viridis_c(option = "plasma")+
   labs(title="Average COVID19 patient age across states", subtitle = "t-test estimates and CI for age reported", x="Age (years)")
-
-```
-
-```{r, fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE,echo=FALSE}
+ 
 t_test_plot
 ```
+
 
 **Ejemplo 3** Representación de datos en formato corte transversal a lo largo de un periodo de tiempo. 
 Librerías aprendidas: **gganimate**
@@ -218,7 +215,7 @@ lq17<-mutate(lq,lq=round(n/d,digits=2))%>%
 mutate(ent_res=sprintf("%02d",ent_res))
   
 
-cat_e<-read.csv("C:/Users/LENOVO/Desktop/DESK/I/data/cat_entidad.csv")%>%
+cat_e<-read.csv("https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/public/post/cat_entidad.csv")%>%
 rename(ent_res=X.U.FEFF.EDO,Estado=DESCRIP)%>%
 mutate(ent_res=sprintf("%02d",ent_res))
   
