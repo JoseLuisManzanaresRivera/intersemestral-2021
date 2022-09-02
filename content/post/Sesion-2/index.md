@@ -116,11 +116,11 @@ Las bases de datos analizados en el curso tiene la siguiente estructura general 
 Con una variable por columna y una observación por renglón tal como tradicionalmente se estructura la información en una hoja de cálculo. 
 Note que el elemento $x_{ij}$ de la matriz $X$ muestra la **observación** 
 
-**i** que va de $i=1,2,3,...,n$ 
+**i** que va de $$i=1,2,3,...,n$$ 
 
 Y la **variable** **j**  que va $j=1,2,3,...,p$
 
-![](/m2.jpg)
+
 
 Así la estructura de los datos analizados se integra por pares ordenados  ${(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}$
 
