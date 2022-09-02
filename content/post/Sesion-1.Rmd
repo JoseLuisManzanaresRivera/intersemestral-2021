@@ -59,12 +59,12 @@ R studio
 
 En la realización de análisis estadístico  partimos de una pregunta, generalmente un problema que deseamos resolver. Para resolverlo aplicamos una serie de técnicas para analizar información. Dos fases comunes en  este proceso son el **Analisis exploratorio de datos y el análisis inferencial**.   
 
-Una vez que recorremos este proceso y respondemos el questionamiento inicial, la evidencia aportada con el análisis estadístico involucra el surgimietno de nuevas preguntas.
+Una vez que recorremos este proceso y respondemos el questionamiento inicial, la evidencia aportada con el análisis estadístico involucra el surgimiento de nuevas preguntas.
 
 ![](/img/q.jpeg){width=40%}
 
 
-Una característica de este proceso es que es iterativo, es realidad estamos frente a un proceso ciclo. El work flow se repite constantemente. 
+Una característica de este proceso es que es iterativo, en realidad estamos frente a un proceso ciclico. El work flow se repite constántemente. 
 
 Sería muy interesante y valioso que los recursos invertidos en términos de tiempo para la solución de un problema pudiesen recurperarse, si, reutilizarse! 
 
@@ -75,7 +75,7 @@ De esta forma optimizariamos el uso de nuestros recursos.
 
 La forma de hacer este uso óptimo en términos de análisis estadístico de datos es utilizando proceso **replicables**.
 
-Piense en las operaciones que comunmente se hacen en *Excel* por ejemplo. Una vez que se finaliza con una estimación se guarda el archivo y cuando se require hacer un análisis nuevo se abre otro archivo a pesar de que se usan funciones similares para aproximar el cálculo se trabaja doble ya que no se tiene un registro que documente nuestro trabajo paso a paso.
+Piense en las operaciones que comunmente se hacen en *Excel* por ejemplo. Una vez que se finaliza con una estimación se guarda el archivo y cuando se require hacer un análisis nuevo se abre otro archivo a pesar de que se usan funciones similares para aproximar el cálculo, se trabaja doble ya que no se tiene un registro que documente nuestro trabajo paso a paso.
 
 A media que se hacen análisis de mayor complejidad o con un volumen de datos de mayor escala, se hace evidente la necesidad de documentar el proceso de análisis para su repoducción futura. 
 
@@ -84,6 +84,7 @@ El entorno de análisis con plataformas como **R studio** esta diseñado explici
 #### 1.2 RStudio vs. STATA, SPSS y EXCEL.
 
 ![](/img/logos.jpeg){width=80%}
+
 La principal ventaja de **R** sobre otros paquetes disponibles en el mercado actualmente es la flexibilidad del entorno *OPEN SOURCE*. Una gran comunidad de usuarios, desarrolla y comparte las herramientas que integran R de foma contínua.
 
 Otra ventajas incluyen: 
@@ -92,7 +93,7 @@ Otra ventajas incluyen:
     
 + Explicitamente incorpora la perspectiva de análisis estadístico y  permite la representación gráfica dinámica (ej. Shiny apps).
     
-+ Generación de reportes endiversos formatos, como HTML, PDF,etc.No solo word.
++ Generación de reportes en diversos formatos, como HTML, PDF,etc. No sólo word.
 
 + Manejo de grandes volumenes de datos (base de datos que contienen millones de registros (individuos, observaciones...)
 

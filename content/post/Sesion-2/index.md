@@ -100,11 +100,112 @@ sexo
 
 Note que los factores parecen texto pero se comportan como números. Note que R convertirá las strings de texto en factores cuando leemos una base de datos.
 
-Para converitr una variable a  texto  **character strings** solo utilizamos la función `as.character()`
+Para converir una variable a  texto  **character strings** solo utilizamos la función `as.character()`
 
 Ejemplo
 
 `as.character(sexo)`
+
+
+
+Las bases de datos analizados en el curso tiene la siguiente estructura general con **n** renglones (observaciones)  por **p** columnas (variables).  
+
+![](/m.jpg)
+
+Con una variable por columna y una observación por renglón tal como tradicionalmente se estructura la información en una hoja de cálculo. 
+Note que el elemento $x_{ij}$ de la matriz $X$ muestra la **observación** **i** que va de $i=1,2,3,...,n$ 
+
+Y la **variable** **j**  que va $j=1,2,3,...,p$
+
+![](/m2.jpg)
+
+Así la estructura de los datos analizados se integra por pares ordenados  ${(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}$
+
+A esta estructura de datos la denominaremos **TIDY** para efectos de esta clase.
+
+
+## Estructura de datos.
+
+**Corte transversal.** Datos organizados con relación a una unidad de análisis, por ejemplo: una **muestra** de individuos, familias, empresas, ciudades, estados, paises, tomados para  un punto  determinado en el tiempo. Ejemplo: ENIGH, ENGASTO.ENSANUT, ENOE, SINAIS, DENUE. En algunos casos los datos corresponden a encuestas realizadas a lo largo de un perido en distintas semanas, estos datos se consieran de corte transversal.
+
+Este es el tipo de datos que estudiaremos en este curso principalmente. 
+
+Pregunta, la siguiente base contiene datos de corte transversal.
+
+```{r, echo=TRUE}
+
+TASA15<-readRDS("TASA15.rds")%>%
+  select(-c(id_ent,espT,pstd))
+TASA15
+
+TASA15_M<-TASA15%>%
+  filter(Sexo==2)
+
+TASA15_M
+```
+
+**Nota:** Un supuesto importante para el análisis de datos en estructura de corte transversal es que provienen de una **muestra aleatoria**. Algunos sesgos de selección comúnes ocurren por ejemplo en encuestas que preguntan sobre los ingresos, generalmente es un dato que algunas familias (sobre todo de altos ingresos) no proporcionan.  
+
+**Series de tiempo** Contienen datos de una unidad de análisis para varios momentos del tiempo, de periodicidad generalmente homogénea (diaria, mensual, trimestral, anual, etc.,).
+
+
+#### Comportamiento del precio de la Mezcla Mexicana de Petróleo 11/20/2018. ![](/oil.jpg)
+
+#### Comportamiento de la Temperatura Mundial 1880-2000 (°C). ![](/tseries.png)
+
+#### Cociente de localización para Diabetes 1998-2015 Frontera Norte y Frontera Sur, México.
+![](/img/panel.jpg)
+
+Otras estructuras incluyen  **datos de panel** que básicamente agrupan series de corte transversal para diferentes momentos en el tiempo (ej. varios años).
+
+```{r, echo=FALSE}
+
+library(gapminder)
+
+gapminder<-gapminder%>%
+mutate(year1950=year-1950)%>%
+  head(50)
+
+gapminder
+```
+
+
+
+Note la variable que distingue la unidad de análisis **(country)** y la variable que incorpora la dimensión temporal para la estructura de panel **(year)**.
+
+
+En el ejemplo siguiente la unidad de análisis es la ciudad y la dimensión temporal se consigna por la variable año, en este caso sólo dos años 1982 y 1987.
+
+```{r,echo=FALSE}
+
+library(wooldridge)
+library(tidyverse)
+
+
+data(crime2)
+
+crime2
+
+glimpse(crime2)
+
+
+crime2<-crime2%>%group_by(year)%>%
+mutate(city_id=row_number())%>%
+select(city_id,crimes,pcinc,unem,officers,year)%>%
+rename(ciudad=city_id, año=year)%>%
+  head(15)
+
+crime2
+```
+Note la estructura en este caso solo tenemos dos años, y como unidad de análisis  la ciudad. 
+
+También note que la dimensión que denota tiempo (año) se encuentra registrada en una varible.
+
+Así tenemos un data frame de 92 observaciones a lo largo del 2 años para 46 ciudades.
+
+Una estructura de este tipo, donde la dimensión tiempo  se extiende por un periodo corto (ej, comparación ente 2 años). También se denomina comumnente como *pooled cross-section*.
+
+Una ventaja importante de la estructura de datos de panel sobre cross-section es que nos permite **controlar por características no observadas** en un sólo período de tiempo entre las unidades de análisis.  
 
 
 ## Objetos
@@ -288,7 +389,7 @@ sample(x=1:6,size=1)
 
 ```
 
-Es posible omitir la etiqueta del argumetno si recordamos que argumento corresponde con la posicion, pero es funciones de mayor tamaño es de ayuda aotar el nombre ya que no siempre recordamos los nombres de todos los argumentos. 
+Es posible omitir la etiqueta del argumetno si recordamos que argumento corresponde con la posicion, pero en funciones de mayor tamaño es de ayuda anotar el nombre ya que no siempre recordamos los nombres de todos los argumentos. 
 
 ```{r}
 sample(dado,1)
