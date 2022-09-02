@@ -118,11 +118,9 @@ Note que el elemento $x_{ij}$ de la matriz $X$ muestra la **observación**
 
 **i** que va de $$i=1,2,3,...,n$$ 
 
-Y la **variable** **j**  que va $j=1,2,3,...,p$
+Y la **variable** **j**  que va $$j=1,2,3,...,p$$
 
-
-
-Así la estructura de los datos analizados se integra por pares ordenados  ${(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}$
+Así la estructura de los datos analizados se integra por pares ordenados  $${(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}$$
 
 A esta estructura de datos la denominaremos **TIDY** para efectos de esta clase.
 
