@@ -6,6 +6,7 @@ tags:
 - IDE
 - Tidyverse
 title: Miércoles 7 Septiembre (2)
+
 ---
 
 
@@ -113,7 +114,9 @@ Las bases de datos analizados en el curso tiene la siguiente estructura general 
 ![](/m.jpg)
 
 Con una variable por columna y una observación por renglón tal como tradicionalmente se estructura la información en una hoja de cálculo. 
-Note que el elemento $x_{ij}$ de la matriz $X$ muestra la **observación** **i** que va de $i=1,2,3,...,n$ 
+Note que el elemento $x_{ij}$ de la matriz $X$ muestra la **observación** 
+
+**i** que va de $i=1,2,3,...,n$ 
 
 Y la **variable** **j**  que va $j=1,2,3,...,p$
 
@@ -144,6 +147,10 @@ TASA15_M<-TASA15%>%
 TASA15_M
 ```
 
+![](/corte.jpg)
+
+
+
 **Nota:** Un supuesto importante para el análisis de datos en estructura de corte transversal es que provienen de una **muestra aleatoria**. Algunos sesgos de selección comúnes ocurren por ejemplo en encuestas que preguntan sobre los ingresos, generalmente es un dato que algunas familias (sobre todo de altos ingresos) no proporcionan.  
 
 **Series de tiempo** Contienen datos de una unidad de análisis para varios momentos del tiempo, de periodicidad generalmente homogénea (diaria, mensual, trimestral, anual, etc.,).
@@ -169,7 +176,7 @@ mutate(year1950=year-1950)%>%
 gapminder
 ```
 
-
+![](/panel1.jpg)
 
 Note la variable que distingue la unidad de análisis **(country)** y la variable que incorpora la dimensión temporal para la estructura de panel **(year)**.
 
@@ -199,6 +206,8 @@ crime2
 ```
 Note la estructura en este caso solo tenemos dos años, y como unidad de análisis  la ciudad. 
 
+![](/panel2.jpg)
+
 También note que la dimensión que denota tiempo (año) se encuentra registrada en una varible.
 
 Así tenemos un data frame de 92 observaciones a lo largo del 2 años para 46 ciudades.
@@ -208,7 +217,7 @@ Una estructura de este tipo, donde la dimensión tiempo  se extiende por un peri
 Una ventaja importante de la estructura de datos de panel sobre cross-section es que nos permite **controlar por características no observadas** en un sólo período de tiempo entre las unidades de análisis.  
 
 
-## Objetos
+## Definicioes para implementación en R: Objetos
 
 
 ### Listas.
