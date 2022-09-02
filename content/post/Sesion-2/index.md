@@ -1,5 +1,5 @@
 ---
-date: "2022-08-02"
+date: "2022-08-31"
 tags:
 - Teoría
 - Conceptos 
