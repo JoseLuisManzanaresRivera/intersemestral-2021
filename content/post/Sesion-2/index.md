@@ -253,23 +253,27 @@ Ejemplo 2
 
 ![](/dataframe2.jpg)
 
-*Ejemplo.** 
+#### Práctica.
 
-Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en un archivo de texto separado por comas **commas separeted values**  (.csv) nombrado **ebc15.csv** en la ruta indicada entre comillas: **"C:/Users/..."**. 
+Cargue en **R** la base de datos:   `egresosBC15.csv` y determine que tipo de variables contiene así cmoo la estructura (ej. corte transversal, panel  o series de tiempo).
+
+
+
+Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en un archivo de texto separado por comas **commas separeted values**  (.csv) nombrado **repda_2021.csvv** en la ruta indicada entre comillas: **"C:/Users/..."**. 
+
 ```{r}
 library(tidyverse)
-ebc15<-read.csv("C:/Users/LENOVO/Desktop/DESK/web/Cursos/public/post/egresosBC15.csv")%>%
-select(-X)  
+agua<-read.csv("C:/Users/josel/Desktop/on/web/MDR-intersemestral-2021/content/post/repda_2021.csv")
 
-names(ebc15)
-glimpse(ebc15)
-str(ebc15)
-class(ebc15)
+names(agua)
+glimpse(agua)
+str(agua)
+class(agua)
 ```
 
 Este contiene información de egresos hospitalarios. Note que contiene 5 vectores (variables). Hemos  utilizado la función `glimpse()` del paquete `tidyverse`  para conocer el tipo de vectores almacenados en el DF y una función alternativa para conocer esta información  mediante la función `str()` structure.
 
-Note que la clase del objeto `ebc15` es data.frame. También hemos extraído con la función `names()` los nombres de los vectores contenidos en el df.
+Note que la clase del objeto `agua` es data.frame. También hemos extraído con la función `names()` los nombres de los vectores contenidos en el df.
 
 
 ## Scripts
