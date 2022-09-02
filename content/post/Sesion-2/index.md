@@ -114,7 +114,9 @@ Las bases de datos analizados en el curso tiene la siguiente estructura general 
 ![](/m.jpg)
 
 Con una variable por columna y una observación por renglón tal como tradicionalmente se estructura la información en una hoja de cálculo. 
-Note que el elemento $x_{ij}$ de la matriz $X$ muestra la **observación** 
+Note que el elemento $$x_{ij}$$ de la matriz $$X$$ muestra la 
+
+**observación** 
 
 **i** que va de $$i=1,2,3,...,n$$ 
 
