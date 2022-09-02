@@ -269,7 +269,7 @@ str(agua)
 class(agua)
 ```
 
-Este contiene información de egresos hospitalarios. Note que contiene 5 vectores (variables). Hemos  utilizado la función `glimpse()` del paquete `tidyverse`  para conocer el tipo de vectores almacenados en el DF y una función alternativa para conocer esta información  mediante la función `str()` structure.
+Este contiene información consesiones para extracción de agua subterránea en el territorio nacional. Note que contiene 5 vectores (variables). Hemos  utilizado la función `glimpse()` del paquete `tidyverse`  para conocer el tipo de vectores almacenados en el DF y una función alternativa para conocer esta información  mediante la función `str()` structure.
 
 Note que la clase del objeto `agua` es data.frame. También hemos extraído con la función `names()` los nombres de los vectores contenidos en el df.
 
