@@ -255,9 +255,7 @@ Ejemplo 2
 
 #### Práctica.
 
-Cargue en **R** la base de datos:   `egresosBC15.csv` y determine que tipo de variables contiene así cmoo la estructura (ej. corte transversal, panel  o series de tiempo).
-
-
+Cargue en **R** la base de datos:   `repda_2021.csv` y determine que tipo de variables contiene así cmoo la estructura (ej. corte transversal, panel  o series de tiempo).
 
 Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en un archivo de texto separado por comas **commas separeted values**  (.csv) nombrado **repda_2021.csvv** en la ruta indicada entre comillas: **"C:/Users/..."**. 
 
