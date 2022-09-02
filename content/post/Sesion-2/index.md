@@ -6,7 +6,7 @@ tags:
 - IDE
 - Tidyverse
 title: Miércoles 7 Septiembre (2)
-
+mathjax: true
 ---
 
 
