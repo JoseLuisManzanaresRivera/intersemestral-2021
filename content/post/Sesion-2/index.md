@@ -114,20 +114,15 @@ Las bases de datos analizados en el curso tiene la siguiente estructura general 
 ![](/m.jpg)
 
 Con una variable por columna y una observación por renglón tal como tradicionalmente se estructura la información en una hoja de cálculo. 
-Note que el elemento $$x_{ij}$$ de la matriz $$X$$ muestra la 
-
-**observación** 
-
-**i** que va de $$i=1,2,3,...,n$$ 
+Note que el elemento $$x_{ij}$$ de la matriz $$X$$ muestra la **observación** 
+ **i** que va de $$i=1,2,3,...,n$$ 
 
 Y la **variable** **j**  que va $$j=1,2,3,...,p$$
 
-Así la estructura de los datos analizados se integra por pares ordenados  $${(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}$$
-
-A esta estructura de datos la denominaremos **TIDY** para efectos de esta clase.
+A esta forma de organizacón de datos la denominaremos **TIDY** para efectos de esta clase.
 
 
-## Estructura de datos.
+## Estructuras de datos a las que se dirige esta clase.
 
 **Corte transversal.** Datos organizados con relación a una unidad de análisis, por ejemplo: una **muestra** de individuos, familias, empresas, ciudades, estados, paises, tomados para  un punto  determinado en el tiempo. Ejemplo: ENIGH, ENGASTO.ENSANUT, ENOE, SINAIS, DENUE. En algunos casos los datos corresponden a encuestas realizadas a lo largo de un perido en distintas semanas, estos datos se consieran de corte transversal.
 
