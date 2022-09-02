@@ -149,6 +149,8 @@ TASA15_M
 
 ![](/corte.jpg)
 
+Una submuestra de los datos con filtro únicamente registros para sexo femenino. 
+
 ![](/corte2.jpg)
 
 **Nota:** Un supuesto importante para el análisis de datos en estructura de corte transversal es que provienen de una **muestra aleatoria**. Algunos sesgos de selección comúnes ocurren por ejemplo en encuestas que preguntan sobre los ingresos, generalmente es un dato que algunas familias (sobre todo de altos ingresos) no proporcionan.  
