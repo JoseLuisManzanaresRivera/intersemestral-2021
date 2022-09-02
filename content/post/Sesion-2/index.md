@@ -149,7 +149,7 @@ TASA15_M
 
 ![](/corte.jpg)
 
-
+![](/corte2.jpg)
 
 **Nota:** Un supuesto importante para el análisis de datos en estructura de corte transversal es que provienen de una **muestra aleatoria**. Algunos sesgos de selección comúnes ocurren por ejemplo en encuestas que preguntan sobre los ingresos, generalmente es un dato que algunas familias (sobre todo de altos ingresos) no proporcionan.  
 
@@ -217,10 +217,12 @@ Una estructura de este tipo, donde la dimensión tiempo  se extiende por un peri
 Una ventaja importante de la estructura de datos de panel sobre cross-section es que nos permite **controlar por características no observadas** en un sólo período de tiempo entre las unidades de análisis.  
 
 
-## Definicioes para implementación en R: Objetos
+## Definiciones para implementación en R: 
+
+### Objetos
 
 
-### Listas.
+#### Listas.
 
 Este objeto, permite almacenar un grupo de vectores, cada elemento de la lista puede ser un vector, a diferencia  del caso de los vectores atómicos en donde se agrupan elementos individuales, en una lista cada "elemento" es un vector y estos puden ser de diferentes tipos, ej. numéricos, character strings, logicos. La función utilizada para crear una lista es `list()`
 
