@@ -154,7 +154,7 @@ TASA15_M
 #### Comportamiento de la Temperatura Mundial 1880-2000 (°C). ![](/tseries.png)
 
 #### Cociente de localización para Diabetes 1998-2015 Frontera Norte y Frontera Sur, México.
-![](/img/panel.jpg)
+![](/panel.jpg)
 
 Otras estructuras incluyen  **datos de panel** que básicamente agrupan series de corte transversal para diferentes momentos en el tiempo (ej. varios años).
 
