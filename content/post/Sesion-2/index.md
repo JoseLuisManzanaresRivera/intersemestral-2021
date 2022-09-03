@@ -70,7 +70,7 @@ Un paquete básico es `tidyverse` este es una colección de funciones y es útil
 Una vez que tenemos el paquete que necesitamos instalado, lo activamos con la función  `library()`.
 
 
-Una via básica de consulta para conocer los propósiots y los paramétros necesarios para las diferentes funciones para anáisis,  es la documentación de ayuda. Esto se hace anteponiendo un signo $?$  al nombre de la función.   Ej. `?mutate`. *IMPORTANTE*, la libreria que contiene la funcion debe estar actualmente activa para poder acceder a la documentación solicitada. 
+Una via básica de consulta para conocer los propósiots y los paramétros necesarios para las diferentes funciones para anáisis,  es la documentación de ayuda. Esto se hace anteponiendo un signo $?$  al nombre de la función.   Ej. `?mutate`. **IMPORTANTE**, la libreria que contiene la funcion debe estar actualmente activa para poder acceder a la documentación solicitada. 
 
 
 ### Consideraciones a recordar sobre los tipos de variables  clases y tipo de atributos.
@@ -87,7 +87,7 @@ El vector sexo con valores c("Mujer","Hombre"), igual es de clase factor. Un con
 
 Estas variables se pueden representar con vectores de clase factor. Esencialmente un factor es una categoría. Note que  no son variables cuyo orden o magnitud sea de terminante. Por ejemplo en el vector sexo  el 2: Mujer,  no es más que uno: Hombre. 
 
-Para asignar la clase **factor** a un vector únicamente pasamos la funcion `as.factor()`   del paquete `tidyverse` o bien la *built in* función   `factor()`. R almacenará los datos en un vector de enteros **integer** . R también agregará el atributo **levels** al atributo ya existente **class**.
+Para asignar la clase **factor** a un vector únicamente pasamos la funcion `as.factor()`   del paquete `tidyverse` o bien la **built in** función   `factor()`. R almacenará los datos en un vector de enteros **integer** . R también agregará el atributo **levels** al atributo ya existente **class**.
 
 
 ```{r}
@@ -114,7 +114,9 @@ Las bases de datos analizados en el curso tiene la siguiente estructura general 
 ![](/m.jpg)
 
 Con una variable por columna y una observación por renglón tal como tradicionalmente se estructura la información en una hoja de cálculo. 
-Note que el elemento $$x_{ij}$$ de la matriz $$X$$ muestra la **observación** 
+Note que el elemento $$x_{ij}$$ de la matriz $$X$$ muestra la 
+
+**observación** 
 
 **i** que va de $$i=1,2,3,...,n$$ 
 
@@ -223,9 +225,9 @@ crime2
 ```
 Note la estructura en este caso solo tenemos dos años, y como unidad de análisis  la ciudad. 
 
-#### Ejemplo 4
+#### Ejemplo 5
 
-##### Pooled Sección cruzada.
+##### Pooled cross section.
 
 ![](/panel2.jpg)
 
@@ -240,8 +242,9 @@ Una ventaja importante de la estructura de datos de panel sobre cross-section es
 
 ## Definiciones para implementación en R: 
 
-### Objetos
+### Definición de Objetos
 
+Estos se componen por los datos o grupos de datos que podemos analizar en **R**. Para efectos de esta clase los *Data frames* y las listas serán los objetos más comunes.
 
 #### Listas.
 
