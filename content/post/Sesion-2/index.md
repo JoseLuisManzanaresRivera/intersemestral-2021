@@ -189,7 +189,7 @@ mutate(year1950=year-1950)%>%
 
 gapminder
 ```
-#### Ejemplo 5 
+#### Ejemplo 4 
 
 ##### Datos estructurados como panel.
 
@@ -222,6 +222,10 @@ rename(ciudad=city_id, año=year)%>%
 crime2
 ```
 Note la estructura en este caso solo tenemos dos años, y como unidad de análisis  la ciudad. 
+
+#### Ejemplo 4
+
+##### Pooled Sección cruzada.
 
 ![](/panel2.jpg)
 
