@@ -27,6 +27,7 @@ library(scales)
 library(ggpubr)
 library(plotly)
 library(foreign)
+library(datagovindia)
 ```
 
 ## Objetivos: 
@@ -129,7 +130,6 @@ print(moda)
 
 # install.packages("datagovindia")
 
-library(datagovindia)
 
 url<-"https://github.com/bordercode/STATISTICS-I-MDR/blob/main/content/english/blog/graduados.rds?raw=true"
 
@@ -146,7 +146,7 @@ theme_set(theme_light())
 
 ## from url
 
-url_grad<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/graduados.rds")
+url_grad<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/graduados.rds?raw=true")
 
 ejercicio_grad<-read_rds_from_github(url_grad)
 
