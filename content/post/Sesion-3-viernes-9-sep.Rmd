@@ -139,7 +139,18 @@ theme_set(theme_light())
 # Cargamos los datos.
 # get data using code chunk above.
 
+## from url
+
+url_grad<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/graduados.rds")
+
+ejercicio_grad<-read_rds_from_github(url_grad)
+
+
+## Local  load 
+
 graduados<-readRDS("graduados.rds")
+
+
 
 
 # Exploración básica para conocer la estructura.
