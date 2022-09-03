@@ -42,51 +42,20 @@ Estadística descriptiva.
 
 #### Definiciones.
 
-[Frecuencia](https://stat2022-01.netlify.app/sesion-4-d/)
 
+Una pregunta básica para entender un fenómeno a escala regional es 
 
- 
- 
- 
-```{r}
-# Defining vector
-x <- c(3, 7, 5, 13, 20, 23, 39, 23, 40,
-	23, 14, 12, 56, 23, 29, 56, 37,
-	45, 1, 25, 8, 56, 56)
+¿Qué tan frecuente ocurre un suceso? 
 
-# Generate frequency table
-y <- table(x)
+Por ejemplo podemos estar interesados en comprender la distribución del ingreso.
 
-# Print frequency table
-print(y)
+¿ Cuál es el ingreso promedio en México?
 
-```
+Estas y otras preguntas requieren del análisis de datos  y las medidas de tendencia centrla nos ayudan a obtener esta información.
 
-## Moda
-
-```{r}
-
-# Defining vector
-x <- c(3, 7, 5, 13, 20,  39, 23, 40,
-	23, 14, 12, 56, 23, 29, 56, 37,
-	45, 1, 25, 8, 56, 56)
-
-# Generate frequency table
-y <- table(x)
-
-# Print frequency table
-print(y)
-
-# Mode of x
-
-moda <- names(y)[which(y == max(y))]
-
-# Print mode
-print(moda)
-```
-
- 
 ### Media
+
+El dato representativo, el promedio. *Notación:*
 
 $$\bar{x}=\frac{1}{n} (\sum_{i=1}^{n} x_i) =\frac{x_1 +x_2+...+x_n}{n}$$
 
@@ -116,6 +85,34 @@ x <- c(3, 7, 5, 13, 20, 23, 39,
 # Print Median
 median(x)
 ```
+
+
+
+
+## Moda
+
+```{r}
+
+# Defining vector
+x <- c(3, 7, 5, 13, 20,  39, 23, 40,
+	23, 14, 12, 56, 23, 29, 56, 37,
+	45, 1, 25, 8, 56, 56)
+
+# Generate frequency table
+y <- table(x)
+
+# Print frequency table
+print(y)
+
+# Mode of x
+
+moda <- names(y)[which(y == max(y))]
+
+# Print mode
+print(moda)
+```
+
+ 
 
 
 ### Ejempo 1 Estimación de medidas de tendencia central básicas. 
@@ -215,7 +212,28 @@ Raíz cuadrada de la varianza.
 $$\sqrt{\sigma^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2}$$
 
 
+[Frecuencia](https://stat2022-01.netlify.app/sesion-4-d/)
 
+Un punto de partida básico es mediante la exploración de la frecuencia. Veamos como podemos generar un tabla de frecuancia para conocer la distribución de un conjunto de datos hipotérico:
+ 
+ 
+ 
+```{r}
+# Defining vector
+x <- c(3, 7, 5, 13, 20, 23, 39, 23, 40,
+	23, 14, 12, 56, 23, 29, 56, 37,
+	45, 1, 25, 8, 56, 56)
+
+# Generate frequency table
+y <- table(x)
+
+# Print frequency table
+print(y)
+
+```
+
+
+Podemos representar esta información mediante diversas visualizaciónes: Tres de las mas importantes son los Histogramas, las funciones de Densidad y el box plot.
 
 
 **Contexto**. Creación de histograma para representar la frecuencia de los datos. 
