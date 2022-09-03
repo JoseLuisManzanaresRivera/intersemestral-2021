@@ -283,6 +283,15 @@ Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en
 
 ```{r}
 library(tidyverse)
+
+## Read via url
+
+repdafile<-"https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/repda_2021.csv"
+
+practica_datos<-read.csv(repdafile)
+
+## Read From local
+
 agua<-read.csv("C:/Users/josel/Desktop/on/web/MDR-intersemestral-2021/content/post/repda_2021.csv")
 
 names(agua)
