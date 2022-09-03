@@ -29,11 +29,15 @@ library(plotly)
 library(foreign)
 ```
 
-## Objetivos: Estudiar las medidas de tendencia central y dispersión.    
+## Objetivos: 
 
-### Meta de aprendizaje: Implementar la estimación y representar visualmente las estimaciones usando R, Python. 
+Estudiar las medidas de tendencia central y dispersión.    
 
-#### Contexo:  Estadística descriptiva.
+### Meta de aprendizaje: 
+Implementar la estimación y representar visualmente las estimaciones usando R, Python. 
+
+#### Contexo:  
+Estadística descriptiva.
 
 
 #### Definiciones.
