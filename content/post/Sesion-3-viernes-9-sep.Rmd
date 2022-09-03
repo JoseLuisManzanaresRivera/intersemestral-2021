@@ -71,6 +71,10 @@ x <- c(3, 7, 5, 13, 20, 23, 39, 23, 40, 23, 14, 12, 56, 23)
 print(mean(x))
 ```
 
+
+Para estimación en puthon See [**ipynb**](http://localhost:8889/notebooks/Desktop/on/docencia/Sesi%C3%B3n2_Tendencia%20central.ipynb)
+
+
 ### Mediana.
 
 Una medida de tendencia central que es util cuando los datos tienen sesgo, ej. cuando la media y la mediana no son iguales.
