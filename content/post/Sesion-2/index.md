@@ -125,11 +125,13 @@ A esta forma de organizacón de datos la denominaremos **TIDY** para efectos de 
 
 ## Estructuras de datos a las que se dirige esta clase.
 
-**Corte transversal.** Datos organizados con relación a una unidad de análisis, por ejemplo: una **muestra** de individuos, familias, empresas, ciudades, estados, paises, tomados para  un punto  determinado en el tiempo. Ejemplo: ENIGH, ENGASTO.ENSANUT, ENOE, SINAIS, DENUE. En algunos casos los datos corresponden a encuestas realizadas a lo largo de un perido en distintas semanas, estos datos se consieran de corte transversal.
+### Corte transversal
+
+Datos organizados con relación a una unidad de análisis, por ejemplo: una **muestra** de individuos, familias, empresas, ciudades, estados, paises, tomados para  un punto  determinado en el tiempo. Ejemplo: ENIGH, ENGASTO.ENSANUT, ENOE, SINAIS, DENUE. En algunos casos los datos corresponden a encuestas realizadas a lo largo de un perido en distintas semanas, estos datos se consieran de corte transversal.
 
 Este es el tipo de datos que estudiaremos en este curso principalmente. 
 
-Pregunta, la siguiente base contiene datos de corte transversal.
+Para participación: ¿la siguiente base contiene datos de corte transversal?
 
 ```{r, echo=TRUE}
 
@@ -149,16 +151,30 @@ Una submuestra de los datos con filtro únicamente registros para sexo femenino.
 
 ![](/corte2.jpg)
 
+
+¿Cuál es la unidad de análisis? 
+
+
 **Nota:** Un supuesto importante para el análisis de datos en estructura de corte transversal es que provienen de una **muestra aleatoria**. Algunos sesgos de selección comúnes ocurren por ejemplo en encuestas que preguntan sobre los ingresos, generalmente es un dato que algunas familias (sobre todo de altos ingresos) no proporcionan.  
 
-**Series de tiempo** Contienen datos de una unidad de análisis para varios momentos del tiempo, de periodicidad generalmente homogénea (diaria, mensual, trimestral, anual, etc.,).
+### Series de tiempo,
+
+Contienen datos de una unidad de análisis para varios momentos del tiempo, de periodicidad generalmente homogénea (diaria, mensual, trimestral, anual, etc.,).
 
 
-#### Comportamiento del precio de la Mezcla Mexicana de Petróleo 11/20/2018. ![](/oil.jpg)
+#### Ejemplo 1 
 
-#### Comportamiento de la Temperatura Mundial 1880-2000 (°C). ![](/tseries.png)
+##### Comportamiento del precio de la Mezcla Mexicana de Petróleo 11/20/2018. 
 
-#### Cociente de localización para Diabetes 1998-2015 Frontera Norte y Frontera Sur, México.
+![](/oil.jpg)
+
+#### Ejemplo 2
+
+##### Comportamiento de la Temperatura Mundial 1880-2000 (°C). ![](/tseries.png)
+
+#### Ejemplo 3
+
+##### Cociente de localización para Diabetes 1998-2015 Frontera Norte y Frontera Sur, México.
 ![](/panel.jpg)
 
 Otras estructuras incluyen  **datos de panel** que básicamente agrupan series de corte transversal para diferentes momentos en el tiempo (ej. varios años).
@@ -173,6 +189,9 @@ mutate(year1950=year-1950)%>%
 
 gapminder
 ```
+#### Ejemplo 5 
+
+##### Datos estructurados como panel.
 
 ![](/panel1.jpg)
 
