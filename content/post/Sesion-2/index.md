@@ -136,12 +136,18 @@ Este es el tipo de datos que estudiaremos en este curso principalmente.
 Para participación: ¿la siguiente base contiene datos de corte transversal?
 
 ```{r, echo=TRUE}
+library(tidyverse)
+library(datagovindia)
 
-TASA15<-readRDS("TASA15.rds")%>%
+url<-"https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/TASA15.rds?raw=true"
+
+datos_ejercicio_1<-read_rds_from_github(url)%>%
   select(-c(id_ent,espT,pstd))
-TASA15
 
-TASA15_M<-TASA15%>%
+datos_ejercicio_1
+
+
+TASA15_M<-datos_ejercicio_1%>%
   filter(Sexo==2)
 
 TASA15_M

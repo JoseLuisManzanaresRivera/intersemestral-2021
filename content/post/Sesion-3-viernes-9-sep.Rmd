@@ -1,20 +1,207 @@
 ---
-title: "Viernes 9 Distribución de frecuencia"
+title: "Sesión 2"
 author: "JLMR"
 date: 2022-08-03T21:13:14-05:00
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(eval = TRUE, 
+                      echo = TRUE, 
+                      cache = FALSE,
+                      include = TRUE,
+                      collapse = FALSE,
+                      dependson = NULL,
+                      engine = "R", # Chunks will always have R code, unless noted
+                      error = FALSE)                     
+
 ```
+
+
 
 ```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
 
-library(ggplot2)
-library(dplyr)
+library(ggrepel)
+library(tidyverse)
+library(scales)
+library(ggpubr)
 library(plotly)
+library(foreign)
 ```
+
+## Objetivos: Estudiar las medidas de tendencia central y dispersión.    
+
+### Meta de aprendizaje: Implementar la estimación y representar visualmente las estimaciones usando R, Python. 
+
+#### Contexo:  Estadística descriptiva.
+
+
+#### Definiciones.
+
+[Frecuencia](https://stat2022-01.netlify.app/sesion-4-d/)
+
+
+ 
+ 
+ 
+```{r}
+# Defining vector
+x <- c(3, 7, 5, 13, 20, 23, 39, 23, 40,
+	23, 14, 12, 56, 23, 29, 56, 37,
+	45, 1, 25, 8, 56, 56)
+
+# Generate frequency table
+y <- table(x)
+
+# Print frequency table
+print(y)
+
+```
+
+## Moda
+
+```{r}
+
+# Defining vector
+x <- c(3, 7, 5, 13, 20,  39, 23, 40,
+	23, 14, 12, 56, 23, 29, 56, 37,
+	45, 1, 25, 8, 56, 56)
+
+# Generate frequency table
+y <- table(x)
+
+# Print frequency table
+print(y)
+
+# Mode of x
+
+moda <- names(y)[which(y == max(y))]
+
+# Print mode
+print(moda)
+```
+
+ 
+### Media
+
+$$\bar{x}=\frac{1}{n} (\sum_{i=1}^{n} x_i) =\frac{x_1 +x_2+...+x_n}{n}$$
+
+
+Ejemplo  2
+
+```{r}
+
+# Defining vector
+x <- c(3, 7, 5, 13, 20, 23, 39, 23, 40, 23, 14, 12, 56, 23)
+
+# Print mean
+print(mean(x))
+```
+
+### Mediana.
+
+Una medida de tendencia central que es util cuando los datos tienen sesgo, ej. cuando la media y la mediana no son iguales.
+ 
+Ejemplo 3
+
+```{r}
+ # Defining vector
+x <- c(3, 7, 5, 13, 20, 23, 39,
+	23, 40, 23, 14, 12, 56, 23)
+
+# Print Median
+median(x)
+```
+
+
+### Ejempo 1 Estimación de medidas de tendencia central básicas. 
+
+#### Datos: Correlación entre Salario medio y participación de la Mujer por categoria de ocupación.
+
+
+
+```{r, include=FALSE}
+
+# install.packages("datagovindia")
+
+library(datagovindia)
+
+url<-"https://github.com/bordercode/STATISTICS-I-MDR/blob/main/content/english/blog/graduados.rds?raw=true"
+
+ejercicio_1<-read_rds_from_github(url)
+
+```
+
+```{r, message = FALSE, warning = FALSE, fig.width=10, fig.height=6, echo= FALSE}
+
+theme_set(theme_light())
+
+# Cargamos los datos.
+# get data using code chunk above.
+
+graduados<-readRDS("graduados.rds")
+
+
+# Exploración básica para conocer la estructura.
+
+glimpse(graduados)
+
+# Tipo de estructura de datos: Corte transversal (un momento en el tiempo).
+
+# Con 64 observaciones. 21 variables.  Este formato de observacion por renglon y variable por columna lo denominaresmo -tidy data- o datos organizados con estructura estándar.
+
+# Visualización  Scatter con trend para  4 features.  X= Proporcion mujeres/hombres por categoria, Y=mediana del salario, Categoria en color y otra Categoria en point size.
+
+## Observamos variables numéricas, (denotadas int o dbl según sean numeros enteros o decimales), categóricas (denotadas fct).  Otro tipo de datos que no esta presente paro es comun es chr, (string de texto, ejemplo nombre de países, calles, etc.)
+
+
+# Alternativa  para conocer la estructura de datos. Desventaja si son muchas variables es una gran tabla. 
+
+str(graduados)
+
+# Medidas de tendencia central y estadistica descriptiva básica.
+summary(graduados)
+
+
+ g<-ggplot(graduados,aes(ShareWomen,Median, color=Area,size=Sample_size, label=Major))+
+  geom_point()+
+  geom_smooth(aes(group=1),method = "lm")+
+  expand_limits(y=0)+
+  scale_color_brewer(palette="Dark2")+
+  scale_y_continuous(labels=dollar_format())+
+  scale_x_continuous(labels=percent_format())+
+  labs(x="Mujeres/Hombres", y="Salario Medio  US$")+
+    theme(legend.position="botton")
+  
+  ggplotly(g)
+
+```
+
+
+
+
+## Medidas de Dispersón: 
+
+### Rango
+
+### Varianza
+
+El valor promedio de las desviaciones de cada elemento *i*  respecto a la media.
+
+
+$$V(X)= Var(X)=\sigma^2_{X}$$
+
+$$\sigma^2_{X}=E[(X-\mu)^2]$$
+
+### Desviación estándard. 
+
+Raíz cuadrada de la varianza.
+
+$$\sqrt{\sigma^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2}$$
+
+
+
+
 
 **Contexto**. Creación de histograma para representar la frecuencia de los datos. 
 
