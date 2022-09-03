@@ -324,7 +324,7 @@ Una vez que almacenamos el código en un script podemos ejecutar cada linea de e
 
 ### Creación de objetos y lectura de archivos
 
-Ara iniciar el análisis de datos cargamos una base que puede presentarse en una variaedad de formatos (uno muy comun es .csv ) o bien Podemos crear un objeto (ej. un dataframe o una lista de variables) en R y almacenarlo para su análisis, para lo cual asignamos un nombre usando el simbolo $<-$ y tenemos  los datos almacenados en la memoria, a esto le denominamos objetos. El simbolo será el equivalente a el $=$. Se lee igual a...
+Ara iniciar el análisis de datos cargamos una base que puede presentarse en una variaedad de formatos (uno muy comun es .csv ) o bien Podemos crear un objeto (ej. un dataframe o una lista de variables) en R y almacenarlo para su análisis, para lo cual asignamos un nombre usando el simbolo **<-** y tenemos  los datos almacenados en la memoria, a esto le denominamos objetos. El simbolo será el equivalente a el **=**. Se lee igual a...
 Esta notación es un estandar en R.
 
 Una vez que nos familizarizamos con la **línea de comando** con facilidad podemos realizar operaciones básicas.
