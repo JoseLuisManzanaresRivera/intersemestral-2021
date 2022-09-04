@@ -214,7 +214,6 @@ Con la libreria ggplot de R podemos tambien representar este conjunto de datos  
 
 #### Representación gráfica de la frecuencia.
 
-[Frecuencia](https://stat2022-01.netlify.app/sesion-4-d/)
 
 Un punto de partida básico es mediante la exploración de la frecuencia. Veamos como podemos generar un tabla de frecuancia para conocer la distribución de un conjunto de datos hipotérico:
  
