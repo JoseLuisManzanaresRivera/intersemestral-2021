@@ -453,7 +453,7 @@ mxplt
 #### ECDF Función de densidad acumnulativa empírica.
 
 Conocer la frecuencia es importante pero muy amenudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.  
-Para este propósito es muy util estimar la frecuencia acumulada. Una representación contínua de este concepto es mediante la funicion de densidad empírica acumulada que ademas en su implementación en python nos permite observar el porcentaje de datos en el eje de las ordenadas al origen. 
+Para este propósito es muy útil estimar la frecuencia acumulada. Una representación contínua de este concepto es mediante la funicion de densidad empírica acumulada que además en su implementación en Python nos permite observar el porcentaje de datos en el eje de las ordenadas al origen. 
 
 
 
