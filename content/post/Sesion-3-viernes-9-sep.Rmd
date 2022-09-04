@@ -450,6 +450,13 @@ scale_color_manual(values = c("mediumturquoise","magenta1"))+
 mxplt
 ```
 
+#### ECDF Función de densidad acumnulativa empírica.
+
+Conocer la frecuencia es importante pero muy amenudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.  
+Para este propósito es muy util estimar la frecuencia acumulada. Una representación contínua de este concepto es mediante la funicion de densidad empírica acumulada que ademas en su implementación en python nos permite observar el porcentaje de datos en el eje de las ordenadas al origen. 
+
+
+
 #### Rango
 
 La diferencia entre el dato maximo u el mínimo.
