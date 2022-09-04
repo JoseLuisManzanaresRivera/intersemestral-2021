@@ -61,7 +61,7 @@ El dato representativo, el promedio. *Notación:*
 $$\bar{x}=\frac{1}{n} (\sum_{i=1}^{n} x_i) =\frac{x_1 +x_2+...+x_n}{n}$$
 
 
-Ejemplo  2
+Ejemplo  1
 
 ```{r}
 
@@ -77,6 +77,9 @@ Para estimación en puthon See [**ipynb**](http://localhost:8889/notebooks/Deskt
 
 
 ### Mediana.
+
+El valor que se localiza en la mitad de los datos. 
+
 
 Una medida de tendencia central que es util cuando los datos tienen sesgo, ej. cuando la media y la mediana no son iguales.
  
@@ -117,7 +120,12 @@ moda <- names(y)[which(y == max(y))]
 print(moda)
 ```
 
- 
+Implementación en **R**
+
+
+Dad un conjunto de datos cualquiera, podemos determinar las medidas de tendencia central aplicando la función (verbo) **summary** sobre el objeto (data frame deseado  -sustantivo-).
+
+
 
 
 ### Ejempo 1 Estimación de medidas de tendencia central básicas. 
@@ -125,6 +133,10 @@ print(moda)
 #### Datos: Correlación entre Salario medio y participación de la Mujer por categoria de ocupación.
 
 
+Conocer como se comporta el salario percibido entre un grupo de egresados universitarios de diversas disciplinas. La base de datos contiene diversas caracteristicas de la población de estudio incluido el salario (una varible numérica ordinal) y la variable que describe la disciplina en la que trabaja el individuo. 
+
+
+La idea es estimar los salarios promedio, así como representar graficamente el comparativo entre ocupaciones.
 
 ```{r, include=FALSE}
 
@@ -137,7 +149,7 @@ ejercicio_1<-read_rds_from_github(url)
 
 ```
 
-```{r, message = FALSE, warning = FALSE, fig.width=10, fig.height=6, echo= FALSE}
+```{r, message = FALSE, warning = FALSE, fig.width=10, fig.height=6, echo= TRUE}
 
 theme_set(theme_light())
 
