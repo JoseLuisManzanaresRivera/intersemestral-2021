@@ -438,10 +438,16 @@ scale_color_manual(values = c("mediumturquoise","magenta1"))+
 mxplt
 ```
 
+#### Rango
+
+La diferencia entre el dato maximo u el mínimo.
+
+Es común estimar el rango intercuartil que marca la distancia entre el dato en el percentil 25 y el 75.. Formalmente el percentil 25 se denomina cuartil Q1  y el percentil 75 se denomina cuartil 3 o Q3. 
+
 #### Boxplot.
 
 
-**Contextualización: Contraste entre lsdistribución de grupos e identificación de outliers.
+**Contextualización:** Contraste entre la distribución de grupos,  identificación de outliers y permite hbicar  el reango inter cuartil y la mediana.
 
 
 ### Representación de dispersión datos con frecuencia diaria. Boxplot
@@ -538,9 +544,7 @@ ggplotly(boxplot_2)
 
 ![](/img/d.jpg)
 
-*Docucmentación adicional con ejemplos de repaso*
-
-[boxplot](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
+*Docucmentación adicional con ejemplos de repaso* [boxplot](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
 
 ### Varianza
 
@@ -557,4 +561,3 @@ Raíz cuadrada de la varianza.
 
 $$\sqrt{\sigma^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2}$$
 
-### Rango
