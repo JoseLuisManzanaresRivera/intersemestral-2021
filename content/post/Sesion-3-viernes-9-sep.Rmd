@@ -206,27 +206,13 @@ summary(graduados)
 ```
 
 
+**Nota**: Como parte del proceso de los datos no solo estimamos la media  pero desplegamos una herramienta de viasualización denominado **Diagrama de Dispersión** que en este caso es **bi-variada** 
 
+Con la libreria ggplot de R podemos tambien representar este conjunto de datos  mediante el  diagrama de dispersión incorporando mas dimensiones (no solo el salario y la proporción entre mujeres y hombres), pero también la categoria a la que corresponde la ocupación y el tamaño de la muestra, Lo anterior permite extraer una gran cantidad de información para perfilar alguna explicación o hipotesis sobre el fenómeno.  Estamos describiendo los datos, estamos haciendo análisis exploratorio de datos!
 
 ## Medidas de Dispersón: 
 
-### Rango
-
-### Varianza
-
-El valor promedio de las desviaciones de cada elemento *i*  respecto a la media.
-
-
-$$V(X)= Var(X)=\sigma^2_{X}$$
-
-$$\sigma^2_{X}=E[(X-\mu)^2]$$
-
-### Desviación estándard. 
-
-Raíz cuadrada de la varianza.
-
-$$\sqrt{\sigma^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2}$$
-
+#### Representación gráfica de la frecuencia.
 
 [Frecuencia](https://stat2022-01.netlify.app/sesion-4-d/)
 
@@ -249,7 +235,16 @@ print(y)
 ```
 
 
-Podemos representar esta información mediante diversas visualizaciónes: Tres de las mas importantes son los Histogramas, las funciones de Densidad y el box plot.
+Podemos representar esta información mediante diversas visualizaciónes: Tres de las mas importantes son los **Histogramas**, las funciones de Densidad y el box plot.
+
+
+### Histograma
+
+Esta es una representación   visual que integra la frecuencia con la ocurre una determinada observación. (Nota: representación discreta no contínua) 
+
+Se compone por la suma de la frecuencia observada entre grupos predefinidos.
+
+
 
 
 **Contexto**. Creación de histograma para representar la frecuencia de los datos. 
@@ -291,6 +286,21 @@ h1
 h2
 ```
 
+
+
+Importante: La forma del histograma permite (en cuanto a su simetría) permite informar sobre el sesgo de los datos. En la figura siguiente se observan dos esenarios relevantes: Sesgo positivo  y negativo. En ambos casos la implicación sobre el supuesto de normaliad de los datos. 
+
+Una particularidad adicional es que en ausencia de **normalidad**  (un concepto que revisaremos en la sesión sobre distribuciones de probabilidad) de los datos las medidas de tendencia central **media** y **mediana** difieren.
+
+
+![](/qq1.jpg)
+
+### KDF Función Kernel de densidad.
+
+Permite la representación de la districuión considerando una aproximación contínua,no discreta como es el caso del histograma. 
+
+
+Ejemplo. 
 
 
 **Ejemplo 1** Estimación de funcion de densidad para representar la frecuencia de datos para variables numéricas  y su visualización  por categorias. 
@@ -429,4 +439,28 @@ scale_color_manual(values = c("mediumturquoise","magenta1"))+
 mxplt
 ```
 
+##### Boxplot.
 
+
+
+
+![](/d.jpg)
+
+
+
+### Varianza
+
+El valor promedio de las desviaciones de cada elemento *i*  respecto a la media.
+
+
+$$V(X)= Var(X)=\sigma^2_{X}$$
+
+$$\sigma^2_{X}=E[(X-\mu)^2]$$
+
+### Desviación estándard. 
+
+Raíz cuadrada de la varianza.
+
+$$\sqrt{\sigma^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2}$$
+
+### Rango
