@@ -293,7 +293,7 @@ Importante: La forma del histograma permite (en cuanto a su simetría) permite i
 Una particularidad adicional es que en ausencia de **normalidad**  (un concepto que revisaremos en la sesión sobre distribuciones de probabilidad) de los datos las medidas de tendencia central **media** y **mediana** difieren.
 
 
-![](/qq1.jpg)
+![](/img/qq1.jpg)
 
 ### KDF Función Kernel de densidad.
 
