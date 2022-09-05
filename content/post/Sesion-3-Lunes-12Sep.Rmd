@@ -25,5 +25,38 @@ library(ggplot2)
 library(tidyverse)
 ```
 
+## Objetivos: 
+
+Estudiar las reglas de probabilidad y las disrtibucións de probabilidad.    
+
+### Meta de aprendizaje: 
+
+Cnocer  las distribuciones de probabilidad y...
+
+#### Contexo:  
+Estadística descriptiva.
 
 
+#### Definiciones.
+
+
+
+El correcto diseño de nuestros análisis a menudo permite que las muestras seleccionadas consituyan una adecuada representación de la población de estudio. 
+
+
+**Population** Includes all of the elements from a set of data.
+
+**Sample** Consists of one or more observations from the  population.
+
+
+**Parameter** Characteristic of a population, such as a mean or standard deviation. Often notated using Greek letters.
+
+**Statistic** A measurable characteristic of a sample. Examples of statistics are: the mean value of the sample data
+
+
+![](/image/samples.jpg)
+
+
+Si no conocemos el **paramétro**  (ingreso medio de los trabajadores en Baja california), podemos estimar el  **estadístico** de una **muestra** y  apartir de este **inferir** el parámetro. 
+
+La representatividad de la **muestra** es importante  para la validéz de **estadístico** que permite inferir el **parámetro** de interés.
