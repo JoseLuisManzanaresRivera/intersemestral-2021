@@ -613,7 +613,7 @@ practica<-read_rds_from_github(url_tij)%>%
   na.omit()
 ```
 
-```{r,include=FALSE}
+```{r, include=FALSE}
 
 ### Paso 1 
 precip<-group_by(practica,año)%>%
@@ -627,8 +627,7 @@ glimpse(precip)
 ## Convertimos variable año de Chr string a numérica.
 precip<-mutate(precip,año=as.numeric(año))
 
-### paso 3 plot
-Representación en line plot. 
+### paso 3 plot Representación en line plot. 
 
 plt<-ggplot(precip, aes(x=año, y=mes))+
 geom_line(size=.3, colour="gray")+
