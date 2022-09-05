@@ -468,6 +468,9 @@ Es común estimar el rango intercuartil que marca la distancia entre el dato en 
 
 **Contextualización:** Contraste entre la distribución de grupos,  identificación de outliers y permite hbicar  el reango inter cuartil y la mediana.
 
+Esta representación visual de la distribución es generalemtne utilizada para la representación de **variables categóricas**.
+
+Note que los upper nad lower fences o whiskers, se extienden por definición en u rango de +/- 1.5 IQ, pero la representación considera los puntos más alejados dentro de este rango, es decir , puede ser que el rango sea mayor a la ubicación concreta de los puntos en cada lado, es por ello que los fences comunmente son asimétricos.
 
 ### Representación de dispersión datos con frecuencia diaria. Boxplot
 
