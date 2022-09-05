@@ -1,5 +1,5 @@
 ---
-title: "Sesión 2 Tendencia central"
+title: "Sesión 2 viernes 9 Septiembre"
 author: "JLMR"
 date: 2022-08-03T21:13:14-05:00
 output: html_document
