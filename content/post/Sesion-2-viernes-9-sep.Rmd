@@ -73,7 +73,7 @@ print(mean(x))
 ```
 
 
-Para estimación en puthon See [**ipynb**](http://localhost:8889/notebooks/Desktop/on/docencia/Sesi%C3%B3n2_Tendencia%20central.ipynb)
+Para estimación en puthon See [**ipynb**](file:///C:/Users/josel/Desktop/on/web/MDR-intersemestral-2021/static/Sesi%C3%B3n2_Tendencia%20central.html)
 
 
 ### Mediana.
@@ -486,7 +486,6 @@ Note que los upper nad lower fences o whiskers, se extienden por definición en 
 ```{r,  fig.height = 8, fig.width = 12, include=FALSE, echo = FALSE, warning = FALSE}
 
 dgo_temp<-readRDS("dgo_temps.rds")
-write.csv(dgo_temp, "dgo_temps.csv")
 
 ## Damos un vistazo a los datos para comprobar que las variables  estan en el formato apropiado para su análisis.
 
@@ -509,6 +508,7 @@ meses<-data.frame(mes=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	
 DGO<-left_join(meses,DGO)
 glimpse(DGO)
 levels(DGO$mes )
+write.csv(DGO, "dgo_temp.csv")
 
 ## Plot Daily  1941-2000
 
