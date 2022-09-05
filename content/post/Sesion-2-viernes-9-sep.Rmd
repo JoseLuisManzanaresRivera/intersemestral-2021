@@ -597,79 +597,54 @@ En términos generales entre vayor es el cv, tenemos una mayor dispersión en lo
 ## Actividad 
 
 
-Con los datos sobre temperatura disponibles.
+Con los datos sobre temperatura disponibles sobre la temperatura por la estación meteorológica  en Tijuana, determine: 
 
-Estime la trayectoria de precipitación media  y el rango intercuartil.
++ ¿Qué valor toma la media, la mediana, Q1, Q3 y cuál es el rando intercuartil?
 
-Representación en line plot. 
++ ¿Qué año presenta la mayor precipitación?
+
+
+
 
 ```{r}
-url_tij<-("")
+url_tij<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/precip_tijuana.csv?raw=true")
 
+practica<-read_rds_from_github(url_tij)%>%
+  na.omit()
 ```
 
+```{r,include=FALSE}
 
+### Paso 1 
+precip<-group_by(practica,año)%>%
+  summarise(mes=sum(mesp))
 
-```{r,  fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE  }
+### Paso 2
 
+summary(precip)
+glimpse(precip)
 
-t_url<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/temperatura_ags.rds?raw=true")
+## Convertimos variable año de Chr string a numérica.
+precip<-mutate(precip,año=as.numeric(año))
 
-t<-read_rds_from_github(t_url)%>%
-  rename(grados=promedio)
+### paso 3 plot
+Representación en line plot. 
 
-BC2001<-read.csv("ema_2001_AGUACALIENTE.csv")%>%
-  rename(max=tmin,min=tmax)
-
-precip<- BC2001%>%mutate(PRECIPmm=as.numeric(PRECIPmm))
-
-
-precip<-precip%>%mutate(date=as.Date(FECHA, "%d/%m/%Y"))%>%
-mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
-
-
-meses<-data.frame(Meses=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
-
-precip<-left_join(meses,precip)
-names(precip)
-
-saveRDS(precip, "precip_tijuana.csv")
-
-precip<-group_by(precip,año,mes)%>%
-  summarise(mesp=sum(PRECIPmm))
-
-anual<-group_by(precip,año)%>%
-  summarise(t=sum(mesp))
-
-summary(anual)
-
-saveRDS(mesavg,"temperatura_ags.rds")
-
-
-mesavg<-mutate(mesavg,año=as.numeric(año))
-febrero<-mutate(precip,año=as.numeric(año))
-
-### Para determinar la upperbound y lower bound the un boxplot con el primer y tercer cuartil   (percentiles q25 y q75 respectivamente) usamos la función summary . Estos valores son  207 y 284  y los usaremos para representarlos en el line plot. 
-
-
-summary(mesavg)
-
-
-plt<-ggplot(febrero, aes(x=año, y=mesp))+
+plt<-ggplot(precip, aes(x=año, y=mes))+
 geom_line(size=.3, colour="gray")+
 geom_smooth()+
 xlab("Año")+
 ylab("Precipitación  promedio. 1969-2012 (mm)")+
 theme_light()+
-geom_hline(yintercept = 21, size=.5, linetype="dashed",color='red')+
-geom_hline(yintercept = 84.38, size=.5, linetype="dashed",color='darkblue')
-
+geom_hline(yintercept = 185.2, size=.5, linetype="dashed",color='red')+
+geom_hline(yintercept = 343.5, size=.5, linetype="dashed",color='darkblue')
 
 
 ```
 
-```{r,message=FALSE, echo=FALSE}
 
+```{r,message=FALSE, include= FALSE, echo=FALSE}
 ggplotly(plt)
-
 ```
+
+
