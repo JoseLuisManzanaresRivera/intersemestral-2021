@@ -603,13 +603,20 @@ Estime la trayectoria de precipitación media  y el rango intercuartil.
 
 Representación en line plot. 
 
+```{r}
+url_tij<-("")
+
+```
+
+
+
 ```{r,  fig.height = 8, fig.width = 12, message=FALSE, include=FALSE, cache = TRUE, echo = FALSE, warning = FALSE  }
 
 
-temp_url<-("https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/ema10092_base.csv")
+t_url<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/temperatura_ags.rds?raw=true")
 
-#   load from url   
-#  BC2001<-read.csv(temp_url)
+t<-read_rds_from_github(t_url)%>%
+  rename(grados=promedio)
 
 BC2001<-read.csv("ema_2001_AGUACALIENTE.csv")%>%
   rename(max=tmin,min=tmax)
@@ -623,34 +630,39 @@ mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
 
 meses<-data.frame(Meses=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
 
-
 precip<-left_join(meses,precip)
 names(precip)
+
+saveRDS(precip, "precip_tijuana.csv")
 
 precip<-group_by(precip,año,mes)%>%
   summarise(mesp=sum(PRECIPmm))
 
-mesavg<-group_by(precip,año)%>%
-  summarise(promedio=mean(mesp))
+anual<-group_by(precip,año)%>%
+  summarise(t=sum(mesp))
+
+summary(anual)
 
 saveRDS(mesavg,"temperatura_ags.rds")
 
 
 mesavg<-mutate(mesavg,año=as.numeric(año))
+febrero<-mutate(precip,año=as.numeric(año))
 
 ### Para determinar la upperbound y lower bound the un boxplot con el primer y tercer cuartil   (percentiles q25 y q75 respectivamente) usamos la función summary . Estos valores son  207 y 284  y los usaremos para representarlos en el line plot. 
+
 
 summary(mesavg)
 
 
-plt<-ggplot(mesavg, aes(x=año, y=promedio))+
+plt<-ggplot(febrero, aes(x=año, y=mesp))+
 geom_line(size=.3, colour="gray")+
 geom_smooth()+
 xlab("Año")+
 ylab("Precipitación  promedio. 1969-2012 (mm)")+
 theme_light()+
-geom_hline(yintercept = 207.2, size=.5, linetype="dashed",color='red')+
-geom_hline(yintercept = 284.6, size=.5, linetype="dashed",color='darkblue')
+geom_hline(yintercept = 21, size=.5, linetype="dashed",color='red')+
+geom_hline(yintercept = 84.38, size=.5, linetype="dashed",color='darkblue')
 
 
 
