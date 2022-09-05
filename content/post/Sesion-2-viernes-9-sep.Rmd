@@ -486,6 +486,7 @@ Note que los upper nad lower fences o whiskers, se extienden por definición en 
 ```{r,  fig.height = 8, fig.width = 12, include=FALSE, echo = FALSE, warning = FALSE}
 
 dgo_temp<-readRDS("dgo_temps.rds")
+write.csv(dgo_temp, "dgo_temps.csv")
 
 ## Damos un vistazo a los datos para comprobar que las variables  estan en el formato apropiado para su análisis.
 
