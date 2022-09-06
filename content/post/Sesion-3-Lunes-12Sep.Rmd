@@ -349,3 +349,5 @@ En síntesis el proceso para crear una función involucra las siguientes partes:
 
 ![](/Funciones.jpg)
 
+
+### Distribuciones contínuas.
