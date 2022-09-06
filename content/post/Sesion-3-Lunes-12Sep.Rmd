@@ -98,6 +98,11 @@ Un ejemplo clásico simple de una distribución de probabilidad discreta es el l
 
 Para cada uno de los lados desde $i=1.....6$ la probabilidad de que un lanzamiento del dado tenga la cara $i$ es $$P_{i}=\frac{1}{6}$$  Con $i=1....6$
 
+
+Las propiedades de la distribución discreta de probabilidad son : 
++ $$0\leq{P_{i}}\leq{1}, 	\forall i \in N$$
++ $$\sum_{i=1}^{n} P_{i}=1$$
+
 #### Ejercicio. 
 
 
