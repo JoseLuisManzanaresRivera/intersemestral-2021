@@ -1,6 +1,9 @@
 ---
 title: "Sesión 4"
-output: html_document
+author: "José Luis Manzanares Rivera"
+date: 2022-09-01T22:13:14-05:00
+categories: ["Descriptive"]
+tags: ["Probabilidad"]
 ---
 
 ```{r setup, include=FALSE}
