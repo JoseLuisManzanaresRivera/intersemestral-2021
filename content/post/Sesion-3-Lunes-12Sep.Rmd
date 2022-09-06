@@ -1,7 +1,7 @@
 ---
 title: "Sesión 3 "
 author: "Jose´Luis Manzanares Rivera"
-date: 2022-08-14T21:13:14-05:00
+date: 2022-09-14T22:13:14-05:00
 categories: ["R"]
 tags: ["R Markdown", "plot", "boxplot"]
 ---
@@ -31,7 +31,7 @@ Estudiar las reglas de probabilidad y las disrtibucións de probabilidad.
 
 ### Meta de aprendizaje: 
 
-Cnocer  las distribuciones de probabilidad y...
+Conocer  las distribuciones de probabilidad y...
 
 #### Contexo:  
 Estadística descriptiva.
@@ -51,8 +51,11 @@ El correcto diseño de nuestros análisis a menudo permite que las muestras sele
 
 **Parameter** Characteristic of a population, such as a mean or standard deviation. Often notated using Greek letters.
 
-**Statistic** A measurable characteristic of a sample. Examples of statistics are: the mean value of the sample data
+**Statistic** A measurable characteristic of a sample. Examples of statistics are: 
 
++ La media de la muestra 
++ El rango de la muestra
++ La desviación de los datos respecto a la media.
 
 ![](/image/samples.jpg)
 
@@ -60,3 +63,11 @@ El correcto diseño de nuestros análisis a menudo permite que las muestras sele
 Si no conocemos el **paramétro**  (ingreso medio de los trabajadores en Baja california), podemos estimar el  **estadístico** de una **muestra** y  apartir de este **inferir** el parámetro. 
 
 La representatividad de la **muestra** es importante  para la validéz de **estadístico** que permite inferir el **parámetro** de interés.
+
+
+**Sampling distribution** The probability distribution of a given statistic based on
+a random sample.
+
+**Statistical inference**Enables you to make an educated **guess** about a population parameter based on a statistic computed from a
+**sample randomly drawn** from that population.
+
