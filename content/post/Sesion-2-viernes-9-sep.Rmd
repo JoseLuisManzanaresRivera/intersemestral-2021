@@ -73,7 +73,7 @@ print(mean(x))
 ```
 
 
-Para estimación en puthon See [**ipynb**](/static/Sesión2_Tendencia central)
+Para estimación en puthon See [**ipynb**](/Sesión2_Tendencia central)
 
 
 ### Mediana.
