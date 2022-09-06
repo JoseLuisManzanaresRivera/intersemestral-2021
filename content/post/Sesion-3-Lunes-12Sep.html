@@ -110,7 +110,7 @@ Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <str
 <h2>Muestreo con reemplazo.</h2>
 <p>Cuando aplicamos la función <code>sample(dado, size = 2)</code> notemos que nunca obtenemos dos veces el mismo valor, esto es la función de forma predeterminada considera una muestra aleatoria pero sin reemplazo, para evitar este comportamiento y poder simular el lanzamiento de un dado en realidad en donde podemos obtener por ejemplo el valor 3 y luego otro 3, es necesario inlcuir el argumeto <code>replace = TRUE</code>, esto permite que una vez que lanzamos el primer dado, sea posible obtener el mismo valor en el segundo lanzamiento, tal como sucede en el caso real.</p>
 <pre><code>## [1] 6 6</code></pre>
-<p>El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples. POr ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos un numero aleatorio independiente cada vez.</p>
+<p>El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples. Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos un número aleatorio independiente cada vez.</p>
 <p>Si deseas sumar el valor del dado para los dos lanzamientos, unicametne aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios.</p>
 <pre><code>## [1] 6 4</code></pre>
 <pre><code>## [1] 10</code></pre>
@@ -118,20 +118,21 @@ Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <str
 <pre><code>## [1] 6 4</code></pre>
 <pre><code>## [1] 6 4</code></pre>
 <pre><code>## [1] 6 4</code></pre>
-<p>Vemos que no obtenemos una nueva muestra aleatoria cada vez que indicamos el nombre del objeto, esto es lo que esperamos ya que una vez que aplicamos una función a un conjunto de argumentos y asignamos un nombre creamos un objeto y al llamarlo obtenemos el resultado permanentemente.</p>
+<p>Vemos que no obtenemos una nueva muestra aleatoria cada vez que indicamos el nombre del objeto, esto es lo que esperamos ya que una vez que aplicamos una función a un conjunto de argumentos y <strong>asignamos un nombre creamos un objeto</strong> y al llamarlo obtenemos el resultado <strong>permanentemente.</strong></p>
 <p>Si queremos obtener un resultado distinto cada vez que lanzamos el dado podemos especificarlo por medio de una funciòn.</p>
 </div>
 <div id="escribe-tus-propias-funciones." class="section level2">
 <h2>Escribe tus propias funciones.</h2>
 <p>Hasta ahora hemos creado estos objetos:</p>
 <p><code>dado&lt;-1:6</code></p>
-<p><code>dados&lt;-(dado,2,replace=TRUE)</code></p>
+<p><code>dados&lt;-sample(dado,2,replace=TRUE)</code></p>
 <p><code>sum(dados)</code></p>
-<p>No sería conveniente que escribiésemos estos objetos cada vez que necesitamos el resultado del lanzamiento. Para simplificar este proceso podemos construir una función que haga el trabajo por nosotros de manera automática.</p>
-<p>Hagamos una funciòn llama <code>lanzar()</code>, esta función nos permitirá tener un el valor nuevo para cada vez que lancemos los dados, sin tener que reescribir cada objeto.</p>
-<p><strong>Every function in R has three basic parts:</strong> a <strong>name</strong>, <strong>a body of code</strong>, and <strong>a set of arguments</strong>.</p>
+<p>No sería conveniente que escribiésemos estos objetos cada vez que necesitamos el resultado del lanzamiento.</p>
+<p>Para simplificar este proceso podemos construir una función que haga el trabajo por nosotros de manera automática.</p>
+<p>Hagamos una funciòn llama <code>lanzar()</code>, esta función nos permitirá tener un valor nuevo para cada vez que lancemos los dados, sin tener que reescribir cada objeto.</p>
+<p><strong>Every function in R has three basic parts:</strong> a <strong>name</strong>, <strong>body of code</strong>, and a <strong>set of arguments</strong>.</p>
 <p>To make your own function, you need to replicate these parts and store them in an R
-object, which you can do with the <em>function</em> function. To do this, call function() and
+object, which you can do with the <em>function</em> function(). To do this, call function() and
 follow it with a pair of <strong>braces</strong>, {}:</p>
 <p><code>mi_función &lt;- function() {}</code></p>
 <pre><code>## [1] 9</code></pre>
@@ -139,10 +140,11 @@ follow it with a pair of <strong>braces</strong>, {}:</p>
 <div id="argumentos" class="section level2">
 <h2>Argumentos</h2>
 <p>Ahora vamos a incluir argumentos a nuestra función.
-Veamos que sucede cuando incluimos un objeto que no hemos definido, llamémos a este elemento <strong>tipo</strong>, en lugar del objeto <span class="math inline">\(dado&lt;-1:6\)</span>.</p>
+Veamos que sucede cuando incluimos un objeto que no hemos definido, llamémos a este elemento <strong>tipos</strong>, en lugar del objeto <span class="math inline">\(dado&lt;-1:6\)</span>.</p>
 <p><code>lanzar2()</code></p>
-<p>Obtenemos un error: <strong>Error: object ‘lanzar2’ not found</strong>. esto debido a que no existe el objeto <strong>tipo</strong>.</p>
-<p>Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función lo único que necesitamos hacer es indicar este elemento (tipo) como argumento. Al incluir argumentos en nuestra función, podemos en nuestro ejemplo, especificar diferentes tipos de <strong>dados</strong>.</p>
+<p>Obtenemos un error: <strong>Error: object ‘lanzar2’ not found</strong>. esto debido a que no existe el objeto <strong>tipos</strong>.</p>
+<p>Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función lo único que necesitamos hacer es indicar este elemento (tipos) como argumento.</p>
+<p>Al incluir argumentos en nuestra función, podemos en nuestro ejemplo, especificar diferentes tipos de <strong>dados</strong>.</p>
 <p>Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con 20 lados, uno con 4 o 3,etc. Esta información la indicamos mediante los argumentos.</p>
 <pre><code>## [1] 7</code></pre>
 <pre><code>## [1] 14</code></pre>
