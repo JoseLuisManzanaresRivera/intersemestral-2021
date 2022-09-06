@@ -73,7 +73,7 @@ print(mean(x))
 ```
 
 
-Para estimación en puthon See [**ipynb**](file:///C:/Users/josel/Desktop/on/web/MDR-intersemestral-2021/static/Sesi%C3%B3n2_Tendencia%20central.html)
+Para estimación en puthon See [**ipynb**](/static/Sesi%C3%B3n2_Tendencia%20central.html)
 
 
 ### Mediana.
