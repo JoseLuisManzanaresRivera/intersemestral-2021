@@ -70,7 +70,7 @@ Un paquete básico es `tidyverse` este es una colección de funciones y es útil
 Una vez que tenemos el paquete que necesitamos instalado, lo activamos con la función  `library()`.
 
 
-Una via básica de consulta para conocer los propósiots y los paramétros necesarios para las diferentes funciones para anáisis,  es la documentación de ayuda. Esto se hace anteponiendo un signo $?$  al nombre de la función.   Ej. `?mutate`. **IMPORTANTE**, la libreria que contiene la funcion debe estar actualmente activa para poder acceder a la documentación solicitada. 
+Una via básica de consulta para conocer los propósiots y los paramétros necesarios para las diferentes funciones para análisis,  es la documentación de ayuda. Esto se hace anteponiendo un signo $?$  al nombre de la función.   Ej. `?mutate`. **IMPORTANTE**, la libreria que contiene la funcion debe estar actualmente activa para poder acceder a la documentación solicitada. 
 
 
 ### Consideraciones a recordar sobre los tipos de variables  clases y tipo de atributos.
