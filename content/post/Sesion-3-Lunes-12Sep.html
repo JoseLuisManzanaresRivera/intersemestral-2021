@@ -9,6 +9,13 @@ tags: ["R Markdown", "plot", "boxplot"]
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
+<pre class="r"><code>knitr::opts_chunk$set(eval = TRUE, 
+                      cache = TRUE,
+                      include = TRUE,
+                      collapse = FALSE,
+                      dependson = NULL,
+                      engine = &quot;R&quot;, # Chunks will always have R code, unless noted
+                      error = FALSE)                     </code></pre>
 <div id="objetivos" class="section level2">
 <h2>Objetivos:</h2>
 <p>Estudiar las reglas de probabilidad y las disrtibucións de probabilidad.</p>
@@ -34,7 +41,7 @@ tags: ["R Markdown", "plot", "boxplot"]
 <li>El rango de la muestra</li>
 <li>La desviación de los datos respecto a la media.</li>
 </ul>
-<p><img src="/image/samples.jpg" /></p>
+<p><img src="/img/samples.jpg" /></p>
 <p>Si no conocemos el <strong>paramétro</strong> (ingreso medio de los trabajadores en Baja california), podemos estimar el <strong>estadístico</strong> de una <strong>muestra</strong> y a partir de este <strong>inferir</strong> el parámetro <strong>poblacional</strong></p>
 <p>La representatividad de la <strong>muestra</strong> es importante para la validéz de <strong>estadístico</strong> que permite inferir el <strong>parámetro</strong> de interés.</p>
 <ul>
@@ -65,18 +72,32 @@ Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <str
 <div id="ejercicio." class="section level4">
 <h4>Ejercicio.</h4>
 <p>Genere un <strong>dado virtual:</strong></p>
+<pre class="r"><code>1:6</code></pre>
 <pre><code>## [1] 1 2 3 4 5 6</code></pre>
 <p>Este notación nos permite tener un lista de números entre 1 y 6, pero es necesario almacenarlos. Para lo cual asignamos un nombre usando el simbolo <strong>$&lt;-</strong> que equivale a decir igual que.</p>
+<pre class="r"><code>Dado&lt;-1:6
+Dado</code></pre>
 <pre><code>## [1] 1 2 3 4 5 6</code></pre>
 <p><strong>Note:</strong> Cuando creamos un objeto este aparece en la parte superior derecha en el área de environment.</p>
 <p><img src="/environment.jpg" /></p>
+<pre class="r"><code>## Pruebe generar dados de diferente numero de caras.
+
+dado&lt;-1:10
+dado</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<pre class="r"><code>dado&lt;-1:6
+dado</code></pre>
 <pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<pre class="r"><code>dice&lt;-1:6
+dice</code></pre>
 <pre><code>## [1] 1 2 3 4 5 6</code></pre>
 <p><strong>¿Qué podemos hacer con el dado?</strong></p>
 <p>Comencemos por algunas operaciones aritméticas.</p>
+<pre class="r"><code>dado-1</code></pre>
 <pre><code>## [1] 0 1 2 3 4 5</code></pre>
+<pre class="r"><code>dado/2</code></pre>
 <pre><code>## [1] 0.5 1.0 1.5 2.0 2.5 3.0</code></pre>
+<pre class="r"><code>dado*dado</code></pre>
 <pre><code>## [1]  1  4  9 16 25 36</code></pre>
 <p>Note que el resultado en cada caso es un vector del mismo tamaño al vector multiplicado por el escalar (en este caso 1x6).</p>
 <p>Si multiplicamos el un vector (en este caso el vector dado 1x6) cualesquiera por un vector de un tamaño inferior, R replica los valores del vector de menor tamaño hasta alcanzar el tamaño del primero vector y así aplica la operación para ambos vectores del mismo tamaño.</p>
@@ -86,40 +107,65 @@ Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <str
 <div id="funciones" class="section level2">
 <h2>Funciones</h2>
 <p>Para realizar esta tarea de selección de un número aleatorio, necesitamos una función. En <strong>R</strong> tener una función es fácil únicamente necesitamos el <strong>nombre</strong> y los <strong>argumentos</strong> (entre paréntesis) sobre los cuales se aplicará dicha función. Algunos ejemplos de funciones disponibles de forma automática en R, incluyen :</p>
+<pre class="r"><code>round(5.8)</code></pre>
 <pre><code>## [1] 6</code></pre>
+<pre class="r"><code>round(3.1416)</code></pre>
 <pre><code>## [1] 3</code></pre>
+<pre class="r"><code>factorial(3)</code></pre>
 <pre><code>## [1] 6</code></pre>
 <p>Los datos que pasamos en la función los denominamos <strong>argumentos</strong>. Estos pueden ser datos, funciones o resultados de otras funciones.</p>
 <p><strong>Ejemplo:</strong></p>
+<pre class="r"><code>mean(1:6)</code></pre>
 <pre><code>## [1] 3.5</code></pre>
+<pre class="r"><code>mean(dado)</code></pre>
 <pre><code>## [1] 3.5</code></pre>
+<pre class="r"><code>round(mean(dado))</code></pre>
 <pre><code>## [1] 4</code></pre>
 <p>Para nuestro propósito de obtener un número aleatorio en un lanzamiento de dado, podemos utilizar la funciòn <strong>sample</strong>, esta toma <strong>dos argumentos</strong>, el vector <strong>x</strong> y el tamaño de la muestra.</p>
-<pre><code>## [1] 1</code></pre>
-<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>sample(x=dado,size=1)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>sample(x=1:6,size=1)</code></pre>
+<pre><code>## [1] 5</code></pre>
 <p>Es posible omitir la etiqueta del argumetno si recordamos que argumento corresponde con la posición, pero en funciones de mayor tamaño es de ayuda anotar el nombre ya que no siempre recordamos los nombres de todos los argumentos.</p>
+<pre class="r"><code>sample(dado,1)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>sample(1:6,1)</code></pre>
 <pre><code>## [1] 6</code></pre>
-<pre><code>## [1] 2</code></pre>
 <p>Si necesitamos conocer los nombres de los argumentos de alguna función, pasamos el nombre de la función, a la <em>función</em> <code>args()</code>, Ejemplo <code>args(round)</code></p>
+<pre class="r"><code>args(round)</code></pre>
 <pre><code>## function (x, digits = 0) 
 ## NULL</code></pre>
 <p><strong>Note</strong> que las funciones incluyen valores predeterminados para algunos argumentos, en el caso anterior el valor del argumento <em>digits</em> es 0, de modo que si omitimos este argumento, el resultado será el redondeo al entero próximo, sin decimales.</p>
+<pre class="r"><code># Redondeo con dos digitos 
+round(3.1416,2)</code></pre>
 <pre><code>## [1] 3.14</code></pre>
+<pre class="r"><code># Redondeo con un digito
+round(3.1416,1)</code></pre>
 <pre><code>## [1] 3.1</code></pre>
+<pre class="r"><code># redondeo con parametro predeterminado.
+round(3.1416)</code></pre>
 <pre><code>## [1] 3</code></pre>
 </div>
 <div id="muestreo-con-reemplazo." class="section level2">
 <h2>Muestreo con reemplazo.</h2>
 <p>Cuando aplicamos la función <code>sample(dado, size = 2)</code> notemos que nunca obtenemos dos veces el mismo valor, esto es la función de forma predeterminada considera una muestra aleatoria pero sin reemplazo, para evitar este comportamiento y poder simular el lanzamiento de un dado en realidad en donde podemos obtener por ejemplo el valor 3 y luego otro 3, es necesario inlcuir el argumeto <code>replace = TRUE</code>, esto permite que una vez que lanzamos el primer dado, sea posible obtener el mismo valor en el segundo lanzamiento, tal como sucede en el caso real.</p>
-<pre><code>## [1] 6 6</code></pre>
+<pre class="r"><code>sample(dado, size = 2, replace = TRUE)</code></pre>
+<pre><code>## [1] 3 2</code></pre>
 <p>El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples. Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos un número aleatorio independiente cada vez.</p>
 <p>Si deseas sumar el valor del dado para los dos lanzamientos, unicametne aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios.</p>
-<pre><code>## [1] 6 4</code></pre>
-<pre><code>## [1] 10</code></pre>
+<pre class="r"><code>dados &lt;- sample(dado, size = 2, replace = TRUE)
+dados</code></pre>
+<pre><code>## [1] 5 1</code></pre>
+<pre class="r"><code>dadosuma&lt;-sum(dados)
+dadosuma</code></pre>
+<pre><code>## [1] 6</code></pre>
 <p>Qué pasaria si indicamos el valor de <em>dados</em> varias veces, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?</p>
-<pre><code>## [1] 6 4</code></pre>
-<pre><code>## [1] 6 4</code></pre>
-<pre><code>## [1] 6 4</code></pre>
+<pre class="r"><code>dados</code></pre>
+<pre><code>## [1] 5 1</code></pre>
+<pre class="r"><code>dados</code></pre>
+<pre><code>## [1] 5 1</code></pre>
+<pre class="r"><code>dados </code></pre>
+<pre><code>## [1] 5 1</code></pre>
 <p>Vemos que no obtenemos una nueva muestra aleatoria cada vez que indicamos el nombre del objeto, esto es lo que esperamos ya que una vez que aplicamos una función a un conjunto de argumentos y <strong>asignamos un nombre creamos un objeto</strong> y al llamarlo obtenemos el resultado <strong>permanentemente.</strong></p>
 <p>Si queremos obtener un resultado distinto cada vez que lanzamos el dado podemos especificarlo por medio de una funciòn.</p>
 </div>
@@ -137,25 +183,51 @@ Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <str
 object, which you can do with the <em>function</em> function(). To do this, call function() and
 follow it with a pair of <strong>braces</strong>, {}:</p>
 <p><code>mi_función &lt;- function() {}</code></p>
-<pre><code>## [1] 9</code></pre>
+<pre class="r"><code>lanzar &lt;- function() {
+dado &lt;- 1:6
+operacion &lt;- sample(dado, size = 2, replace = TRUE)
+sum(operacion)
+}
+
+lanzar()</code></pre>
+<pre><code>## [1] 5</code></pre>
 </div>
 <div id="argumentos" class="section level2">
 <h2>Argumentos</h2>
 <p>Ahora vamos a incluir argumentos a nuestra función.
 Veamos que sucede cuando incluimos un objeto que no hemos definido, llamémos a este elemento <strong>tipos</strong>, en lugar del objeto <span class="math inline">\(dado&lt;-1:6\)</span>.</p>
+<pre class="r"><code>lanzar2 &lt;- function() {
+dados &lt;- sample(tipos, size = 2, replace = TRUE)
+sum(dados)
+}</code></pre>
 <p><code>lanzar2()</code></p>
 <p>Obtenemos un error: <strong>Error: object ‘lanzar2’ not found</strong>. esto debido a que no existe el objeto <strong>tipos</strong>.</p>
 <p>Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función lo único que necesitamos hacer es indicar este elemento (tipos) como argumento.</p>
 <p>Al incluir argumentos en nuestra función, podemos en nuestro ejemplo, especificar diferentes tipos de <strong>dados</strong>.</p>
 <p>Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con 20 lados, uno con 4 o 3,etc. Esta información la indicamos mediante los argumentos.</p>
-<pre><code>## [1] 7</code></pre>
-<pre><code>## [1] 14</code></pre>
-<pre><code>## [1] 7</code></pre>
+<pre class="r"><code>lanzar2 &lt;- function(tipo) {
+dados &lt;- sample(tipo, size = 2, replace = TRUE)
+sum(dados)
+}
+
+lanzar2(tipo=1:4)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>lanzar2(tipo=1:20)</code></pre>
+<pre><code>## [1] 16</code></pre>
+<pre class="r"><code>lanzar2(1:6)</code></pre>
+<pre><code>## [1] 5</code></pre>
 <p><code>lanzar2(tipo)</code></p>
 <p>Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, esto no es necesario por que tipo es el único argumento de nuestra función <code>lanzar2()</code>.</p>
 <p>Note que la función resulta en un Error, cuando no proporcionamos el argumento tipo ej. <code>lanzar2()</code>. Esto es interesante por que de hecho podemos especificar <strong>argumentos predeterminados</strong> al momento de construir la función de tal forma que podemos dejar vacio este espacio cuando estimamos la función.</p>
+<pre class="r"><code>lanzar2 &lt;- function(tipo=1:6) {
+dados &lt;- sample(tipo, size = 2, replace = TRUE)
+sum(dados)
+}
+
+lanzar2()</code></pre>
 <pre><code>## [1] 4</code></pre>
-<pre><code>## [1] 17</code></pre>
+<pre class="r"><code>lanzar2(1:12)</code></pre>
+<pre><code>## [1] 12</code></pre>
 <p>Ahora cuando llamamos la función, obtenemos la información solicitada!</p>
 <p>Ahora es posible proporcionar un tipo de dado particular cada vez que lanzamos el dado o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.</p>
 <p>En síntesis el proceso para crear una función involucra las siguientes partes:</p>
@@ -179,13 +251,13 @@ x: valor particular de la variable aleatoria. ej. $60 000.</p>
 <p>la función tiene las propiedades:</p>
 <ul>
 <li><span class="math display">\[{p(x)}\geq0,    \forall x \in R\]</span></li>
-<li><span class="math display">\[\integral_{-\infty}^{\infty}     p_{(x)}dx=1\]</span>
+<li><span class="math display">\[\int_{-\infty}^{\infty}     p{(x)}dx=1\]</span>
 <img src="\img\PDF_probability" /></li>
 </ul>
-<p>La integral sobre p(x) en el rango [a,b] representa la probabilidad de encontrar el valor <strong>x</strong> en ese <strong>intervalo</strong>. El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.</p>
-<p>Una nota sobre la apliación de la CDF es en la obtención de los <strong>Percentiles</strong></p>
-<p>Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.</p>
+<p>La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor <strong>x</strong> en ese <strong>intervalo</strong>. El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.</p>
+<p>Una nota sobre la apliación de la CDF en la obtención de los <strong>Percentiles</strong></p>
+<p>Los percentiles Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.</p>
 <p>La función de distribución acumulada<strong>CDF</strong> es la integral de la función de densidad de probabilidad (PDF). Y define la probabilidad de observar un valor <strong>x</strong> en un rango determinado [a,b].</p>
-<p><img src="\img\cdf.jpg" /></p>
+<p><img src="/cdf.jpg" /></p>
 </div>
 </div>
