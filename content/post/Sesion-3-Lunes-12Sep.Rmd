@@ -59,7 +59,7 @@ El correcto diseño de nuestros análisis a menudo permite que las muestras sele
 + El rango de la muestra
 + La desviación de los datos respecto a la media.
 
-![](/image/samples.jpg)
+![](/img/samples.jpg)
 
 
 Si no conocemos el **paramétro**  (ingreso medio de los trabajadores en Baja california), podemos estimar el  **estadístico** de una **muestra** y a partir de este **inferir** el parámetro **poblacional** 
