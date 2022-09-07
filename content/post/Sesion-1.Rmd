@@ -91,7 +91,7 @@ Otra ventajas incluyen:
 
 + Integración de código  (lenguaje R).
     
-+ Explicitamente incorpora la perspectiva de análisis estadístico y  permite la representación gráfica dinámica (ej. Shiny apps).
++ Explicitamente incorpora la perspectiva de análisis estadístico y  permite la representación gráfica dinámica (ej. [Shiny apps](https://shiny.rstudio.com/gallery/)). 
     
 + Generación de reportes en diversos formatos, como HTML, PDF,etc. No sólo word.
 
