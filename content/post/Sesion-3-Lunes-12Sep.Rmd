@@ -385,14 +385,14 @@ la función tiene las propiedades:
 
 
 + $${p(x)}\geq0, 	\forall x \in R$$
-+ $$\integral_{-\infty}^{\infty}     p_{(x)}dx=1$$
++ $$\int_{-\infty}^{\infty}     p{(x)}dx=1$$
 ![](\img\PDF_probability)
 
-La integral sobre p(x) en el rango [a,b] representa la probabilidad de encontrar el valor **x** en ese **intervalo**.  El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.
+La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor **x** en ese **intervalo**.  El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.
 
-Una nota sobre la apliación de la CDF es en la obtención de los **Percentiles** 
+Una nota sobre la apliación de la CDF en la obtención de los **Percentiles** 
 
-Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.
+Los percentiles Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.
 
 La  función de distribución acumulada**CDF** es la integral de la función de densidad de probabilidad (PDF). Y define la probabilidad de observar un valor **x** en un rango determinado [a,b]. 
 
