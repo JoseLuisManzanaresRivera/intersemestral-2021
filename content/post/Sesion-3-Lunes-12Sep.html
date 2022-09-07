@@ -38,15 +38,14 @@ tags: ["R Markdown", "plot", "boxplot"]
 <p>Si no conocemos el <strong>paramétro</strong> (ingreso medio de los trabajadores en Baja california), podemos estimar el <strong>estadístico</strong> de una <strong>muestra</strong> y a partir de este <strong>inferir</strong> el parámetro <strong>poblacional</strong></p>
 <p>La representatividad de la <strong>muestra</strong> es importante para la validéz de <strong>estadístico</strong> que permite inferir el <strong>parámetro</strong> de interés.</p>
 <ul>
-<li><p><strong>Sampling distribution</strong> The probability distribution of a given statistic based on
-a random sample.</p></li>
+<li><p><strong>Sampling distribution</strong> The probability distribution of a given statistic based on a random sample.</p></li>
 <li><p><strong>Statistical inference</strong>Enables you to make an educated <strong>guess</strong> about a population parameter based on a statistic computed from a
 <strong>sample randomly drawn</strong> from that population.</p></li>
 </ul>
-<p>Convención sobre la notación:</p>
-<p>Population parameters are often indicated using Greek letters, while sample statistics typically use standard letters.</p>
-<p>Ejemplo</p>
-<p>Parametro poblacional <span class="math inline">\(\mu\)</span>, Desv std <span class="math inline">\(\sigma\)</span>
+<p><strong>Convención sobre la notación:</strong></p>
+<p>Population parameters are often indicated using <strong>Greek letters</strong>, while sample statistics typically use standard letters.</p>
+<p><strong>Ejemplo.</strong></p>
+<p>Parámetro poblacional <span class="math inline">\(\mu\)</span>, Desv std <span class="math inline">\(\sigma\)</span>
 Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <strong>S</strong></p>
 </div>
 </div>
@@ -101,7 +100,7 @@ Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <str
 <p>Es posible omitir la etiqueta del argumetno si recordamos que argumento corresponde con la posición, pero en funciones de mayor tamaño es de ayuda anotar el nombre ya que no siempre recordamos los nombres de todos los argumentos.</p>
 <pre><code>## [1] 6</code></pre>
 <pre><code>## [1] 2</code></pre>
-<p>Si necesitamos conocer los nombres de los argumentos de alguna funciòn, pasamos el nombre de la funcion, a la funciòn <code>args()</code>, Ejemplo <code>args(round)</code></p>
+<p>Si necesitamos conocer los nombres de los argumentos de alguna función, pasamos el nombre de la función, a la <em>función</em> <code>args()</code>, Ejemplo <code>args(round)</code></p>
 <pre><code>## function (x, digits = 0) 
 ## NULL</code></pre>
 <p><strong>Note</strong> que las funciones incluyen valores predeterminados para algunos argumentos, en el caso anterior el valor del argumento <em>digits</em> es 0, de modo que si omitimos este argumento, el resultado será el redondeo al entero próximo, sin decimales.</p>
@@ -161,7 +160,32 @@ Veamos que sucede cuando incluimos un objeto que no hemos definido, llamémos a 
 <p>Ahora es posible proporcionar un tipo de dado particular cada vez que lanzamos el dado o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.</p>
 <p>En síntesis el proceso para crear una función involucra las siguientes partes:</p>
 <p><img src="/Funciones.jpg" /></p>
+<div id="distribución-bernoulli" class="section level3">
+<h3>Distribución Bernoulli</h3>
+<p>Dos de las distribuciones discretas más comunes son: la distribución <strong>Binomial</strong> y <strong>Poisson.</strong></p>
+<p>La diferencia básica entre ambas que la Binomial tiene un limite superior definido.</p>
+<p>Ejemplos empíricos con situaciones en donde se presenta una distribución <strong>Binomial</strong></p>
+<p>Un caso de distribución <strong>binomial</strong> es la distribución <strong>Bernoulli</strong></p>
+<p>Esta distribución presenta <strong>dos estados.</strong> Como ejemplo más simple, el lanzamiento de una moneda.
+Ver ejemplo Sesión.ipynb</p>
+</div>
 <div id="distribuciones-contínuas." class="section level3">
 <h3>Distribuciones contínuas.</h3>
+<p>Muy a menudo, encontramos datos que no se limitan a cifras enteras, por ejemplo el tipo de cambio <strong>Peso/USD</strong>, los registros de temperatura, en estos casos necesitamos una función contínua para describir su distribución.</p>
+<p>La curva que describe la probabilidad para cada valor, (la distribución de probabilidad), es una <strong>función contínua</strong> y se denomina función de densidad de probabilidad. (PDF).</p>
+<p>X Variable aleatoria ej. ingreso
+x: valor particular de la variable aleatoria. ej. $60 000.</p>
+<p>La pregunta es ¿cuál es la probabilidad de que la variable <strong>X</strong> tome un valor particular <strong>x</strong></p>
+<p>la función tiene las propiedades:</p>
+<ul>
+<li><span class="math display">\[{p(x)}\geq0,    \forall x \in R\]</span></li>
+<li><span class="math display">\[\integral_{-\infty}^{\infty}     p_{(x)}dx=1\]</span>
+<img src="\img\PDF_probability" /></li>
+</ul>
+<p>La integral sobre p(x) en el rango [a,b] representa la probabilidad de encontrar el valor <strong>x</strong> en ese <strong>intervalo</strong>. El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.</p>
+<p>Una nota sobre la apliación de la CDF es en la obtención de los <strong>Percentiles</strong></p>
+<p>Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.</p>
+<p>La función de distribución acumulada<strong>CDF</strong> es la integral de la función de densidad de probabilidad (PDF). Y define la probabilidad de observar un valor <strong>x</strong> en un rango determinado [a,b].</p>
+<p><img src="\img\cdf.jpg" /></p>
 </div>
 </div>
