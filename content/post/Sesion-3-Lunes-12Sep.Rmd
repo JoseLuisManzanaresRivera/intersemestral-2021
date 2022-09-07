@@ -6,9 +6,8 @@ categories: ["R"]
 tags: ["R Markdown", "plot", "boxplot"]
 ---
 
-```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
+```{r set-global-options, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(eval = TRUE, 
-                      echo = FALSE, 
                       cache = TRUE,
                       include = TRUE,
                       collapse = FALSE,
@@ -165,7 +164,7 @@ Ahora que ya hemos realizado algo de artimética con el dado, veamos como podemo
 
 Para realizar esta tarea de selección de un número aleatorio, necesitamos una función. En **R** tener una función es fácil únicamente necesitamos el **nombre** y los **argumentos** (entre paréntesis) sobre los cuales se aplicará dicha función. Algunos ejemplos de funciones disponibles de forma automática en R, incluyen :
 
-```{r}
+```{r, echo=TRUE}
 round(5.8)
 
 round(3.1416)
@@ -396,4 +395,4 @@ Los percentiles Permiten determinar el valor por debajo del cual, ocurre un dete
 
 La  función de distribución acumulada**CDF** es la integral de la función de densidad de probabilidad (PDF). Y define la probabilidad de observar un valor **x** en un rango determinado [a,b]. 
 
-![](\img\cdf.jpg)
+![](/cdf.jpg)
