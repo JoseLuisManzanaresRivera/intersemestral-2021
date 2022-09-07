@@ -1,7 +1,7 @@
 ---
 title: "Sesión 2 viernes 9 Septiembre"
 author: "JLMR"
-date: 2022-09-05T22:13:14-05:00
+date: 2022-09-04T22:13:14-05:00
 output: html_document
 ---
 
