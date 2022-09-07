@@ -1,5 +1,5 @@
 ---
-title: "Sesión x viernes 9 Septiembre"
+title: "Sesión 2 viernes 9 Septiembre"
 author: "JLMR"
 date: 2022-09-06T22:13:14-05:00
 output: html_document
