@@ -72,6 +72,106 @@ x <- c(3, 7, 5, 13, 20, 23, 39, 23, 40, 23, 14, 12, 56, 23)
 print(mean(x))
 ```
 
+### Media geométrica.
+
+La media geométrica de una serie que contiene **n** elementos esta dada por:  
+
+La raíz $n_{th}$ del producto de los elementos.
+
+![](/img/geomed.jpg)
+![](/img/geometrica.jpg)
+Su aplicación se dirige a datos que tienen una naturaleza de 
+**crecimiento exponencial** por ejemplo que
+exhiben correlación serial, (dato en momento del tiempo t  que depende del dato en el momento t-1)
+esto es por ejemplo común en el 
+campo series de tiempo en economía y el area de las finanzas. Ejemplo, la tasa de crecimiento del PIB, la inflación, etc., 
+
+Este tipo de variables no tiene un comportamiento aleatorio, pero sus observaciones son dependientes de los valores que tome a variable en momentos previos (lags.). 
+
++ El valor de la media geométrica es siempre menor que la media aritmética.
+
++ Unicamente para valores positivos.
+Dado el algoritmo de estimación, en los números realesno
+esta definida la raíz  para 
+números negativos. 
+
+##### Ejemplo 1
+
+Estime la media aritmética y geométrica para el ingreso percápita de los países para el año 1952 y 2007. 
+
+
+```{r}
+
+## SOLUCION.
+
+## Paso 1 Cargamos las datos 
+
+library(gapminder)
+datos<-gapminder 
+
+## Paso 2  vemos los datos, la estructura los nombres de variables 
+
+view(datos)
+names(datos)
+glimpse(datos)
+
+## paso 3  filtramos el año requerido
+
+media_1952<-datos%>%filter(year=="1952")
+
+## Paso 4  hacemos el calculo usando la función summarise y mean. 
+
+m_52<-summarise(media_1952,m=mean(gdpPercap))
+
+## SOLUCION para año 2007.
+
+
+media_2007<-datos%>%filter(year=="2007")
+m_07<-summarise(media_2007,m=mean(gdpPercap))
+
+## SOLUCIÓN MEDIA GEOMÉTRICA.
+
+
+# Paso 1 Cargamos el paquete psych.
+
+library(psych)
+
+# Paso 2 Procedimiento manual, calculamos el logaritmo, luego la media aritmética de esos valores y finalmente convertimos de logaritmo a niveles. (elevamos  la base "e" a la potencia indicada).
+
+## Método paso a paso. 
+
+## Creo columna con logaritmos de x y estimo la media para luego estimar el antilogaritmo. con "exp".
+
+datosejemplo<-mutate(media_1952, logs=log(gdpPercap),medialogs=mean(logs), m52=exp(medialogs))
+
+## Método resumido.
+
+exp(mean(log(media_1952$gdpPercap)))
+
+## Método directo con la función geometric.mean
+
+geometric.mean(media_1952$gdpPercap)
+
+```
+
+¿Qué podemos decir de la variación en el nivel de ingreso entre los países de la muestra entre el año **1952** y **2007**. ¿Cuál es la tasa de crecimiento?
+
+
+**Ejercicio** clase, estime la media aritmética y geométrica para las variables población y esperanza de vida por continente.
+
+
+```{r, include=FALSE}
+library(psych)
+
+geometric.mean(exa$ingreso.x)
+
+media_geo<-exp(mean(log(exa$ingreso.x)))
+
+media_geo
+## Note que, en primera instancia estimamos el logaritmo de la variable  ingreso. La estimación del logaritmo permite tomar en consideración la naturaleza de crecimeinto exponencial que tiene este variable en particular.
+## Tal como el algoritmo de estimación de media geométrica indica, obtenemos la media aritmetrica de los logaritmos y posteriormente reexpresamos el indicador de a niveles es decir no expresados en logaritmos. Note que el calculo usa la base de logaritmo natural que es tomando como base el número e=2.718281828....
+
+```
 
 Para estimación en python See **ipynb**
 
