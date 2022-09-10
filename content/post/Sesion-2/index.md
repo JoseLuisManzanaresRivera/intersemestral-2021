@@ -300,19 +300,19 @@ glimpse(gapminder)
 
 Asimismo, los vectores agrupados en un **data frame** son de la misma longitud. La figura siguiente muestra un ejemplo de esta configuración.
 
-Ejemplo 1
+#### Ejemplo 1
 
 ![](/dataframe.jpg)
 
-Ejemplo 2
+#### Ejemplo 2
 
 ![](/dataframe2.jpg)
 
 #### Práctica.
 
-Cargue en **R** la base de datos:   `repda_2021.csv` y determine que tipo de variables contiene así cmoo la estructura (ej. corte transversal, panel  o series de tiempo).
+Cargue en **R** la base de datos:   `repda_2021.csv` y determine que tipo de variables contiene así como la estructura (ej. corte transversal, panel  o series de tiempo).
 
-Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en un archivo de texto separado por comas **commas separeted values**  (.csv) nombrado **repda_2021.csvv** en la ruta indicada entre comillas: **"C:/Users/..."**. 
+Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en un archivo de texto separado por comas **commas separeted values**  (.csv) nombrado **repda_2021.csv** en la ruta indicada entre comillas: **"C:/Users/..."**. 
 
 ```{r}
 library(tidyverse)
@@ -327,32 +327,36 @@ practica_datos<-read.csv(repdafile)
 
 agua<-read.csv("C:/Users/josel/Desktop/on/web/MDR-intersemestral-2021/content/post/repda_2021.csv")
 
-names(agua)
-glimpse(agua)
-str(agua)
-class(agua)
+names(practica_datos)
+glimpse(practica_datos)
+str(practica_datos)
+class(practica_datos)
 ```
 
-Este contiene información consesiones para extracción de agua subterránea en el territorio nacional. Note que contiene 15 vectores (variables). Hemos  utilizado la función `glimpse()` del paquete `tidyverse`  para conocer el tipo de vectores almacenados en el DF y una función alternativa para conocer esta información  mediante la función `str()` structure.
+Este contiene información consesiones para extracción de agua subterránea en el territorio nacional. Note que contiene 15 vectores (variables).
+
+Hemos  utilizado la función `glimpse()` del paquete `tidyverse`  para conocer el tipo de vectores almacenados en el **data frame** y una función alternativa para conocer esta información  mediante la función `str()` structure.
 
 Note que la clase del objeto `agua` es data.frame. También hemos extraído con la función `names()` los nombres de los vectores contenidos en el df.
 
 
 ## Scripts
 
-Para evitar escribir todo el análisis nuevamente, el *work flow* recomendado en **R** es trabajar con **scripts**, estos son archivos de texto en donde almacenamos todo el código utilizado en nuestro análisis.
+Para evitar escribir todo el análisis nuevamente, el   *work flow* (la secuencia de trabajo) recomendado en **R** es trabajar con **scripts**, estos son archivos de texto en donde almacenamos todo el código utilizado en nuestro análisis.
 
-Aún mejor si deseamos podemos almacenar el código en un archivo R Markdown  [R Markdown](https://rmarkdown.rstudio.com/), lo que nos permite la flexibilidad de crear el resultado del análisis en diversos formatos incluido html. Sí, una página web para consultarla en internet que podemos alojar en servidores como [Netlify](https://www.netlify.com/) o repositorios como [Github](https://github.com/) y publicar el contenido usando **githubweb pages** .
+Aún mejor, si deseamos podemos almacenar el código en un archivo **R Markdown**  [R Markdown](https://rmarkdown.rstudio.com/), lo que nos permite la flexibilidad de crear el resultado del análisis en diversos formatos incluido **html**. Sí, una página web para consultarla en internet que podemos alojar en servidores como [Netlify](https://www.netlify.com/) o repositorios como [Github](https://github.com/) y publicar el contenido usando un sitio web estático, una forma que permite una enorme ventaja para trabajar de manera colaborativa y remota.
 
 ![](/scripts.jpg)
 
-Una vez que almacenamos el código en un script podemos ejecutar cada linea de este código (just hit enter en frente de la linea de código a ejecutar), seleccionar una porción  (y lo ejecutamos con ctr+enter) o bien ejecturar todo el **code chunk** (como le decimos en la comunidad **R** a las porciones de código de un script.) utilizando la función **Run** del menú superior. 
+Una vez que almacenamos el código en un script podemos ejecutar cada linea de este código (solo usamos las teclas **ctrl** **enter** en frente de la línea de código a ejecutar), seleccionar una porción  (y lo ejecutamos con ctr+enter) o bien ejecturar todo el **code chunk** (como le decimos en la comunidad **R** a las porciones de código de un script.) utilizando la función **Run** del menú superior. 
 
 
 ### Creación de objetos y lectura de archivos
 
-Ara iniciar el análisis de datos cargamos una base que puede presentarse en una variaedad de formatos (uno muy comun es .csv ) o bien Podemos crear un objeto (ej. un dataframe o una lista de variables) en R y almacenarlo para su análisis, para lo cual asignamos un nombre usando el simbolo **<-** y tenemos  los datos almacenados en la memoria, a esto le denominamos objetos. El simbolo será el equivalente a el **=**. Se lee igual a...
-Esta notación es un estandar en R.
+Para iniciar el análisis de datos cargamos una base que puede presentarse en una variedad de formatos (uno muy común es .csv ) o bien podemos crear un objeto (ej. un dataframe o una lista de variables) en **R** y almacenarlo para su análisis, para lo cual asignamos un nombre usando el simbolo **<-** y tenemos  los datos almacenados en la memoria, a esto le denominamos objetos. 
+
+El simbolo será el equivalente al **=**. Se lee igual a...
+Esta notación es un estándard en **R**.
 
 Una vez que nos familizarizamos con la **línea de comando** con facilidad podemos realizar operaciones básicas.
 
@@ -375,7 +379,8 @@ Podemos observar La lista de los objetos activos en el entorno de trabajo usando
 ## Para listar  los objetos disponibles.
 ls()
 ```
-Importante: 
+Importante sobre las reglas para asignar el nombre a un objeto en **R**: 
+
 **Note:** You can name an object in R almost anything you want, but there are a few rules. First,
 a name **cannot start with a number**. Second, a name cannot use some special symbols,
 like **^, !, $, @, +, -, /, or * **: Note también que  los nombres son sensibles al uso de mayúsculas. Note que si el nombre asignado ya existe, el nuevo objeto sobre escribirá el objeto anterior.
