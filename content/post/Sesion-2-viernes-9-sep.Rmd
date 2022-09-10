@@ -80,6 +80,8 @@ La raíz $n_{th}$ del producto de los elementos.
 
 ![](/img/geomed.jpg)
 ![](/img/geometrica.jpg)
+
+
 Su aplicación se dirige a datos que tienen una naturaleza de 
 **crecimiento exponencial** por ejemplo que
 exhiben correlación serial, (dato en momento del tiempo t  que depende del dato en el momento t-1)
@@ -91,16 +93,16 @@ Este tipo de variables no tiene un comportamiento aleatorio, pero sus observacio
 + El valor de la media geométrica es siempre menor que la media aritmética.
 
 + Unicamente para valores positivos.
-Dado el algoritmo de estimación, en los números realesno
+Dado el algoritmo de estimación, en los números reales no
 esta definida la raíz  para 
 números negativos. 
 
 ##### Ejemplo 1
 
-Estime la media aritmética y geométrica para el ingreso percápita de los países para el año 1952 y 2007. 
+Estime la media aritmética y geométrica para el ingreso percápita de los países para el año 1952 y 2007.  Base de datos de ingreso percapita mundial. 
 
 
-```{r}
+```{r, include=FALSE}
 
 ## SOLUCION.
 
