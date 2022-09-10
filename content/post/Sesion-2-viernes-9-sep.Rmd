@@ -163,11 +163,11 @@ geometric.mean(media_1952$gdpPercap)
 ```{r, include=FALSE}
 library(psych)
 
-geometric.mean(exa$ingreso.x)
+#geometric.mean(exa$ingreso.x)
 
-media_geo<-exp(mean(log(exa$ingreso.x)))
+#media_geo<-exp(mean(log(exa$ingreso.x)))
 
-media_geo
+#media_geo
 ## Note que, en primera instancia estimamos el logaritmo de la variable  ingreso. La estimación del logaritmo permite tomar en consideración la naturaleza de crecimeinto exponencial que tiene este variable en particular.
 ## Tal como el algoritmo de estimación de media geométrica indica, obtenemos la media aritmetrica de los logaritmos y posteriormente reexpresamos el indicador de a niveles es decir no expresados en logaritmos. Note que el calculo usa la base de logaritmo natural que es tomando como base el número e=2.718281828....
 ```
