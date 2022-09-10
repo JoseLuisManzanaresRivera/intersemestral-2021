@@ -190,29 +190,27 @@ Otras estructuras incluyen  **datos de panel** que básicamente agrupan series d
 ```{r, echo=FALSE}
 
 library(gapminder)
-
+glimpse(gapminder)
 gapminder<-gapminder%>%
-mutate(year1950=year-1950)%>%
-  head(50)
+mutate(year1950=year-1950)
 
 gapminder
 
 
-gapminder<-gapminder%>%
+gapminder_corte<-gapminder%>%
 filter(year=="2007")
 
-gapminder
+gapminder_corte
 
 ```
 #### Ejemplo 4 
 
 ##### Datos estructurados como panel.
 
-Son 142 paises (variable country), (el país es la unidad de análisis del corte transversal. Los datos se muestran  
-
+ 
 ![](/panel1.jpg)
 
-Note la variable que distingue la unidad de análisis **(country)** y la variable que incorpora la dimensión temporal para la estructura de panel **(year)**.
+Note la variable que distingue la unidad de análisis es **(country)** y son 142 paises para la variable que incorpora la dimensión temporal para la estructura de panel **(year)**.
 
 
 
@@ -255,27 +253,29 @@ También note que la dimensión que denota tiempo (año) se encuentra registrada
 
 Así tenemos un data frame de 92 observaciones a lo largo del 2 años para 46 ciudades.
 
-Una estructura de este tipo, donde la dimensión tiempo  se extiende por un periodo corto (ej, comparación ente 2 años). También se denomina comumnente como *pooled cross-section*.
+Una estructura de este tipo, donde la dimensión tiempo se extiende por un período corto (ej, comparación ente 2 años). También se denomina comumnente como *pooled cross-section*.
 
-Una ventaja importante de la estructura de datos de panel sobre cross-section es que nos permite **controlar por características no observadas** en un sólo período de tiempo entre las unidades de análisis.  
-
+Una ventaja importante de la estructura de datos de panel sobre cross-section es que nos permite **controlar por características no observadas** en un sólo período de tiempo entre las unidades de análisis. 
 
 ## Definiciones para implementación en R: 
 
 ### Definición de Objetos
 
-Estos se componen por los datos o grupos de datos que podemos analizar en **R**. Para efectos de esta clase los *Data frames* y las listas serán los objetos más comunes.
+Estos se componen por los datos o grupos de datos que podemos analizar en **R**. Para efectos de esta clase los **Data frames** y las **listas** serán los objetos más comunes.
 
 #### Listas.
 
-Este objeto, permite almacenar un grupo de vectores, cada elemento de la lista puede ser un vector, a diferencia  del caso de los vectores atómicos en donde se agrupan elementos individuales, en una lista cada "elemento" es un vector y estos puden ser de diferentes tipos, ej. numéricos, character strings, logicos. La función utilizada para crear una lista es `list()`
+Este objeto, permite almacenar un grupo de vectores, cada elemento de la lista puede ser un vector, a diferencia  del caso de los vectores atómicos en donde se agrupan elementos individuales, en una lista cada "elemento" es un vector y estos pueden ser de diferentes tipos, ej. **numéricos**, **character strings**, **lógicos**. La función utilizada para crear una lista es `list()`
 
-Ejemplo 
+#### Ejemplo 
 
 
 ```{r}
 lista<-list(100:130,"R",list(TRUE,FALSE)) 
+
 lista 
+
+view(lista)
 ```
 
 
@@ -285,7 +285,20 @@ La flexibilidad de este objeto es una ventaja ya que nos permite contar con una 
 
 Este tipo de objeto es la versión bi-dimensional de una lista donde las **columnas** son vectores (variables) y cada **renglón** observaciones. Este es el tipo de objeto más útil para realizar el análisis de datos. Podemos pensar en un data frame como el equivalente de R a una hoja de cálculo de excel.
 
-Un data frame agrupa los **vectores en columnas**, de tal forma que cada vector de un data frame puede contener un tipo de datos específico, pero cada celda dentro un vector tendrá la misma información. Asímismo, los vectores agrupados en un **data frame** son de la misma longitud. La figura siguiente muestra un ejemplo de esta configuración.
+Un data frame agrupa los **vectores en columnas**, de tal forma que cada vector de un **data frame** puede contener un tipo de datos específico, pero cada celda dentro un vector tendrá el mismo tipo de dato. 
+Por ejemplo si la columna es país, y se almacena como factor, cada elemento que integra esta columna será una categoria.
+
+
+```{r, echo=FALSE}
+library(gapminder)
+gapminder
+str(gapminder)
+glimpse(gapminder)
+```
+
+
+
+Asimismo, los vectores agrupados en un **data frame** son de la misma longitud. La figura siguiente muestra un ejemplo de esta configuración.
 
 Ejemplo 1
 
