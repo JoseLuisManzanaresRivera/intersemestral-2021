@@ -196,15 +196,29 @@ mutate(year1950=year-1950)%>%
   head(50)
 
 gapminder
+
+
+gapminder<-gapminder%>%
+filter(year=="2007")
+
+gapminder
+
 ```
 #### Ejemplo 4 
 
 ##### Datos estructurados como panel.
 
+Son 142 paises (variable country), (el país es la unidad de análisis del corte transversal. Los datos se muestran  
+
 ![](/panel1.jpg)
 
 Note la variable que distingue la unidad de análisis **(country)** y la variable que incorpora la dimensión temporal para la estructura de panel **(year)**.
 
+
+
+Note: Si solo consideramos un año, tenemos una estructura de corte transversal.
+
+![](/paneldos.jpg)
 
 En el ejemplo siguiente la unidad de análisis es la ciudad y la dimensión temporal se consigna por la variable año, en este caso sólo dos años 1982 y 1987.
 
