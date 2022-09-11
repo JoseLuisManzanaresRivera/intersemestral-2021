@@ -213,6 +213,8 @@ median(x)
 
 ## Moda
 
+El valor que ocurre con mayor frecuencia en la distribución.
+
 ```{r}
 
 # Defining vector
@@ -237,8 +239,11 @@ print(moda)
 Implementación en **R**
 
 
-Dad un conjunto de datos cualquiera, podemos determinar las medidas de tendencia central aplicando la función (verbo) **summary** sobre el objeto (data frame deseado  -sustantivo-).
+Dado un conjunto de datos cualquiera, podemos determinar las medidas de tendencia central aplicando la función (verbo) **summary** sobre el objeto (data frame deseado  -sustantivo-).
 
+
+
+Ver Práctica de implementación en **Sesión2_tendencia central.ipynb**
 
 
 
@@ -320,11 +325,27 @@ summary(graduados)
 ```
 
 
-**Nota**: Como parte del proceso de los datos no solo estimamos la media  pero desplegamos una herramienta de viasualización denominado **Diagrama de Dispersión** que en este caso es **bi-variada** 
+**Nota**: Como parte del proceso de los datos no solo estimamos la media  pero desplegamos una herramienta de viasualización denominado **Diagrama de Dispersión**  (representación gráfica) **bi-variada** 
 
-Con la libreria ggplot de R podemos tambien representar este conjunto de datos  mediante el  diagrama de dispersión incorporando mas dimensiones (no solo el salario y la proporción entre mujeres y hombres), pero también la categoria a la que corresponde la ocupación y el tamaño de la muestra, Lo anterior permite extraer una gran cantidad de información para perfilar alguna explicación o hipotesis sobre el fenómeno.  Estamos describiendo los datos, estamos haciendo análisis exploratorio de datos!
+Con la libreria ggplot de R podemos también representar este conjunto de datos  mediante el  diagrama de dispersión incorporando más dimensiones (no solo el salario y la proporción entre mujeres y hombres), pero también la categoria a la que corresponde la ocupación y el tamaño de la muestra, Lo anterior permite extraer una gran cantidad de información para perfilar alguna explicación o hipótesis sobre el fenómeno.
+
+Estamos describiendo los datos, estamos haciendo análisis exploratorio de datos!
 
 ## Medidas de Dispersón: 
+
+
+#### Rango
+
+Una de las medidas más sencillas para medir la dispersión en la distribución de los datos es mediante la diferencia entre el dato maximo u el mínimo, este indicador se denomina **Rango **
+
+En la estimación del rango se debe tener cuidado con la presencia de outliers (datos extremos atípicos).
+
+
+Es común estimar el **rango intercuartil** que marca la distancia entre el dato en el percentil 25 y el 75.. En la práctica, el percentil 25 se denomina  **Q1**  o primer cuartil y el percentil 75 se denomina cuartil 3 o **Q3**. 
+
+La estimación del rango intercuartil es comunmente usada como prueba para detectar **outliers** El criterio de decisión es si un dato se ubica +/- 1.5*IQR de la distancia entre el Q1 y Q3. 
+Veramos con  detalle este concepto en la siguiente sección cunado abordemos la estimación de los percentiles.
+
 
 #### Representación gráfica de la frecuencia.
 
@@ -358,9 +379,9 @@ Esta es una representación   visual que integra la frecuencia con la ocurre una
 Se compone por la suma de la frecuencia observada entre grupos predefinidos.
 
 
-
-
 **Contexto**. Creación de histograma para representar la frecuencia de los datos. 
+
+Ir a **.ipynb** file
 
 ```{r, include=FALSE, echo = FALSE, warning = FALSE}
 
@@ -401,7 +422,9 @@ h2
 
 
 
-Importante: La forma del histograma permite (en cuanto a su simetría) permite informar sobre el sesgo de los datos. En la figura siguiente se observan dos esenarios relevantes: Sesgo positivo  y negativo. En ambos casos la implicación sobre el supuesto de normaliad de los datos. 
+Importante: La forma del histograma  (en cuanto a su simetría) permite informar sobre **el sesgo de los datos**. 
+
+En la figura siguiente se observan dos esenarios relevantes: **Sesgo positivo**  y **negativo**. En ambos casos se tiene una implicación sobre el supuesto de normaliad de los datos. Recordemos que la simetría es una condición necesaria de una   **distribución normal.** 
 
 Una particularidad adicional es que en ausencia de **normalidad**  (un concepto que revisaremos en la sesión sobre distribuciones de probabilidad) de los datos las medidas de tendencia central **media** y **mediana** difieren.
 
@@ -564,18 +587,17 @@ scale_color_manual(values = c("mediumturquoise","magenta1"))+
 mxplt
 ```
 
+## Percentiles
+
+La manera mas simple de determinar los percentiles es mediante la estimación de la **función densidad acumulada** **CDF** (por sus siglas en inglés). 
+$$CDF(x)=\int_{-\infty}^x PDF(x)dx$$
+
 #### ECDF Función de densidad acumnulativa empírica.
 
 Conocer la frecuencia es importante pero muy amenudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.  
 Para este propósito es muy útil estimar la frecuencia acumulada. Una representación contínua de este concepto es mediante la funicion de densidad empírica acumulada que además en su implementación en Python nos permite observar el porcentaje de datos en el eje de las ordenadas al origen. 
 
 
-
-#### Rango
-
-La diferencia entre el dato maximo u el mínimo.
-
-Es común estimar el rango intercuartil que marca la distancia entre el dato en el percentil 25 y el 75.. Formalmente el percentil 25 se denomina cuartil Q1  y el percentil 75 se denomina cuartil 3 o Q3. 
 
 #### Boxplot.
 

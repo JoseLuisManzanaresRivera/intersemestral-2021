@@ -24,14 +24,6 @@ library(ggplot2)
 library(tidyverse)
 ```
 
-
-
-
-
-```
-
-
-
 ## Objetivos: 
 
 Estudiar las reglas de probabilidad y las disrtibucións de probabilidad.    
@@ -225,10 +217,11 @@ round(3.1416,2)
 # Redondeo con un digito
 round(3.1416,1)
 
-# redondeo con parametro predeterminado.
+# redondeo con parámetro predeterminado.
 round(3.1416)
 
 ```
+
 ## Muestreo con reemplazo.
 
 Cuando aplicamos la función `sample(dado, size = 2)` notemos que nunca obtenemos dos veces el mismo valor, esto es la función de forma predeterminada considera una muestra aleatoria pero sin reemplazo, para evitar este comportamiento y poder simular el lanzamiento de un dado en realidad en donde podemos obtener por ejemplo el valor 3 y luego otro 3, es necesario inlcuir el argumeto `replace = TRUE`, esto permite que una vez que lanzamos el primer dado, sea posible obtener el mismo valor en el segundo lanzamiento, tal como sucede en el caso real.
@@ -251,7 +244,7 @@ dadosuma<-sum(dados)
 dadosuma
 ```
 
-Qué pasaria si indicamos el valor de *dados* varias veces, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?
+¿Qué pasaria si indicamos el valor de *dados* varias veces?, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?
 
 ```{r}
 dados
@@ -360,6 +353,9 @@ En síntesis el proceso para crear una función involucra las siguientes partes:
 
 ![](/Funciones.jpg)
 
+## Distribuciones de probabilidad.
+
+### Distribuciones discretas
 
 ### Distribución Bernoulli
 
