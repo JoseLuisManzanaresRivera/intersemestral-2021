@@ -181,14 +181,23 @@ Para estimación en python See **ipynb**
 
 ### Mediana.
 
-El valor que se localiza en la mitad de los datos cuando los datos son organizados en orden (ej. ascendente).
+El valor que se localiza en la mitad de los datos cuando los datos se ordenan (ej. ascendente).
 
 En contraste con la media, **la mediana** no es afectada por los puntos extremos (**outliers**)
 
 
-Una medida que es representativa  de la tendencia central cuando los datos tienen sesgo, ej. cuando la media y la mediana no son iguales. Es preferible a la media cuando los datos no tienen una distribución simétrica. 
+La **mediana** es representativa  de la tendencia central cuando los datos no tienen una distribución simétrica. (cuando los datos tienen sesgo) Una expresión del sesgo es cuando la media y la mediana no son iguales. 
+
+En este caso es  preferible la **mediana** como indicador representativo de tendencia dentral.
  
-Ejemplo 3
+ 
+ Ejemplos de distribución con sesgo. 
+ 
+![](/img/normal.jpg)
+ 
+*Improve your skills*[visualization training material](https://r-graphics.org/recipe-distribution-basic-density)
+ 
+### Ejemplo 3
 
 ```{r}
  # Defining vector
