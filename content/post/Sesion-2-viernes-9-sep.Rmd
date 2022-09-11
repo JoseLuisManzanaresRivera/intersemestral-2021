@@ -193,7 +193,7 @@ En este caso es  preferible la **mediana** como indicador representativo de tend
  
  Ejemplos de distribución con sesgo. 
  
-![](/img/normal.jpg)
+![](/img/normal_.jpg)
  
 *Improve your skills*[visualization training material](https://r-graphics.org/recipe-distribution-basic-density)
  
