@@ -142,7 +142,7 @@ round(3.1416,2)</code></pre>
 <pre class="r"><code># Redondeo con un digito
 round(3.1416,1)</code></pre>
 <pre><code>## [1] 3.1</code></pre>
-<pre class="r"><code># redondeo con parametro predeterminado.
+<pre class="r"><code># redondeo con parámetro predeterminado.
 round(3.1416)</code></pre>
 <pre><code>## [1] 3</code></pre>
 </div>
@@ -159,7 +159,7 @@ dados</code></pre>
 <pre class="r"><code>dadosuma&lt;-sum(dados)
 dadosuma</code></pre>
 <pre><code>## [1] 6</code></pre>
-<p>Qué pasaria si indicamos el valor de <em>dados</em> varias veces, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?</p>
+<p>¿Qué pasaria si indicamos el valor de <em>dados</em> varias veces?, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?</p>
 <pre class="r"><code>dados</code></pre>
 <pre><code>## [1] 5 1</code></pre>
 <pre class="r"><code>dados</code></pre>
@@ -232,6 +232,12 @@ lanzar2()</code></pre>
 <p>Ahora es posible proporcionar un tipo de dado particular cada vez que lanzamos el dado o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.</p>
 <p>En síntesis el proceso para crear una función involucra las siguientes partes:</p>
 <p><img src="/Funciones.jpg" /></p>
+</div>
+<div id="distribuciones-de-probabilidad.-1" class="section level2">
+<h2>Distribuciones de probabilidad.</h2>
+<div id="distribuciones-discretas" class="section level3">
+<h3>Distribuciones discretas</h3>
+</div>
 <div id="distribución-bernoulli" class="section level3">
 <h3>Distribución Bernoulli</h3>
 <p>Dos de las distribuciones discretas más comunes son: la distribución <strong>Binomial</strong> y <strong>Poisson.</strong></p>
@@ -251,13 +257,13 @@ x: valor particular de la variable aleatoria. ej. $60 000.</p>
 <p>la función tiene las propiedades:</p>
 <ul>
 <li><span class="math display">\[{p(x)}\geq0,    \forall x \in R\]</span></li>
-<li><span class="math display">\[\int_{-\infty}^{\infty}     p{(x)}dx=1\]</span>
-<img src="\img\PDF_probability" /></li>
+<li><span class="math display">\[\int_{-\infty}^{\infty}     p{(x)}dx=1\]</span></li>
 </ul>
+<p><img src="\img\PDF_probability.jpg" /></p>
 <p>La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor <strong>x</strong> en ese <strong>intervalo</strong>. El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.</p>
 <p>Una nota sobre la apliación de la CDF en la obtención de los <strong>Percentiles</strong></p>
 <p>Los percentiles Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.</p>
 <p>La función de distribución acumulada<strong>CDF</strong> es la integral de la función de densidad de probabilidad (PDF). Y define la probabilidad de observar un valor <strong>x</strong> en un rango determinado [a,b].</p>
-<p><img src="/cdf.jpg" /></p>
+<p><img src="/img/cdf.jpg" /></p>
 </div>
 </div>
