@@ -9,13 +9,6 @@ tags: ["R Markdown", "plot", "boxplot"]
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<pre class="r"><code>knitr::opts_chunk$set(eval = TRUE, 
-                      cache = TRUE,
-                      include = TRUE,
-                      collapse = FALSE,
-                      dependson = NULL,
-                      engine = &quot;R&quot;, # Chunks will always have R code, unless noted
-                      error = FALSE)                     </code></pre>
 <div id="objetivos" class="section level2">
 <h2>Objetivos:</h2>
 <p>Estudiar las reglas de probabilidad y las disrtibucións de probabilidad.</p>
@@ -255,11 +248,11 @@ Ver ejemplo Sesión.ipynb</p>
 x: valor particular de la variable aleatoria. ej. $60 000.</p>
 <p>La pregunta es ¿cuál es la probabilidad de que la variable <strong>X</strong> tome un valor particular <strong>x</strong></p>
 <p>la función tiene las propiedades:</p>
-<ul>
-<li><span class="math display">\[{p(x)}\geq0,    \forall x \in R\]</span></li>
-<li><span class="math display">\[\int_{-\infty}^{\infty}     p{(x)}dx=1\]</span></li>
-</ul>
-<p><img src="\img\PDF_probability.jpg" /></p>
+<blockquote>
+<p><span class="math display">\[{p(x)}\geq0,    \forall x \in R\]</span>
+<span class="math display">\[\int_{-\infty}^{\infty}     p{(x)}dx=1\]</span></p>
+</blockquote>
+<p><img src="/img/PDF_probability.jpg" /></p>
 <p>La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor <strong>x</strong> en ese <strong>intervalo</strong>. El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.</p>
 <p>Una nota sobre la apliación de la CDF en la obtención de los <strong>Percentiles</strong></p>
 <p>Los percentiles Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.</p>
