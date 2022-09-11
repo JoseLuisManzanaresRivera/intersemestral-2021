@@ -6,7 +6,7 @@ categories: ["R"]
 tags: ["R Markdown", "plot", "boxplot"]
 ---
 
-```{r set-global-options, message=FALSE, warning=FALSE}
+```{r set-global-options, message=FALSE, warning=FALSE,include=FALSE}
 knitr::opts_chunk$set(eval = TRUE, 
                       cache = TRUE,
                       include = TRUE,
