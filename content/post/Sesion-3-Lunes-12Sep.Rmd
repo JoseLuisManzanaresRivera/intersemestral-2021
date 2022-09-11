@@ -376,15 +376,15 @@ Ver ejemplo Sesión.ipynb
 
 Muy a menudo, encontramos datos que no se limitan a cifras enteras, por ejemplo el tipo de cambio **Peso/USD**, los registros de temperatura, en estos casos necesitamos una función contínua para describir su distribución.
 
-La curva que describe la probabilidad para cada valor, (la distribución de probabilidad),  es una **función contínua** y se denomina función de densidad de probabilidad. (PDF). 
+La curva que describe la probabilidad para cada valor, (la distribución de probabilidad),  es una **función contínua** y se denomina función de **densidad de probabilidad.** **(PDF).** 
 
 
-X Variable aleatoria ej. ingreso
-x: valor particular de la variable aleatoria. ej. $60 000.
+**X** Variable aleatoria ej. ingreso
+**x:** valor particular de la variable aleatoria. ej. $60 000.
 
 La pregunta es ¿cuál es la probabilidad de que la variable **X** tome un valor particular **x**
 
-la función tiene las propiedades: 
+La **PDF** tiene las propiedades: 
 
 
 > $${p(x)}\geq0, 	\forall x \in R$$
@@ -394,10 +394,27 @@ la función tiene las propiedades:
 
 La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor **x** en ese **intervalo**.  El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.
 
-Una nota sobre la apliación de la CDF en la obtención de los **Percentiles** 
+##### Aplicación de la **CDF** a la estimación de los **percentiles.**
+
+La manera más simple de determinar los percentiles es mediante la estimación de la **función de densidad acumulada** **CDF** (por sus siglas en inglés). 
+$$CDF(x)=\int_{-\infty}^x PDF(x)dx$$
+
+#### ECDF Función de densidad acumnulativa empírica.
+
+Conocer la frecuencia es importante pero muy amenudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.
+
+Para este propósito es muy útil estimar la frecuencia acumulada. 
+
+Una representación contínua de este concepto es mediante la función empírica de **densidad  acumulada** 
+
+Nota sobre implementación en **Python**. Esta  nos permite observar el porcentaje de datos en el eje de las ordenadas al orígen.  see **".ipynb"**
+
+Una nota sobre la apliación de la **CDF** en la obtención de los **Percentiles** 
 
 Los percentiles Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.
 
-La  función de distribución acumulada**CDF** es la integral de la función de densidad de probabilidad (PDF). Y define la probabilidad de observar un valor **x** en un rango determinado [a,b]. 
+La  función de distribución acumulada**CDF** es la integral de la **función de densidad de probabilidad (PDF)**. 
+
+Define la probabilidad de observar un valor **x** en un rango determinado **[a,b].** 
 
 ![](/img/cdf.jpg)
