@@ -387,8 +387,8 @@ La pregunta es ¿cuál es la probabilidad de que la variable **X** tome un valor
 la función tiene las propiedades: 
 
 
-+ $${p(x)}\geq0, 	\forall x \in R$$
-+ $$\int_{-\infty}^{\infty}     p{(x)}dx=1$$
+> $${p(x)}\geq0, 	\forall x \in R$$
+> $$\int_{-\infty}^{\infty}     p{(x)}dx=1$$
 
 ![](/img/PDF_probability.jpg)
 
