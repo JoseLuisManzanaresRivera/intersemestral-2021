@@ -594,9 +594,63 @@ Una pregunta muy frecuente cuando analizamos la distribución de los datos es ¿
 Por ejemplo, si estamos analizando la distribución de ingreso, nos puede interesar determinar que porcentaje de los datos presentan un ingreso igual o inferior a la linea de pobreza (este umbral es un dato particular *x*  de la variabe **X**).
 
 
+### Ejemplo 1 
+
+```{r}
+
+ingresos<-data.frame(pesos=runif(1000, min=5000, max=60000))
+quantile(ingresos$pesos)
+```
 
 
+#### Ejercicio  2. 
 
+Determine los cuantiles Q1, Q2, Q3, Q4 para la variable esperanza de vida (lifexp) expresada en años para los paises de cada continente.
+
+¿Qué continente tiene la mayor esperanza de vida (ej. cuál tiene el Q4 mayor).
+
+¿Cuál es la diferencia  entre el **Q1** de **Africa** y **Q1** del continente con menor esperanza de vida? 
+
+```{r, include=FALSE}
+library(gapminder)
+
+cuantiles<-gapminder
+
+Africa<-cuantiles%>%filter(continent=="Africa")
+quantile(Africa$lifeExp)  
+
+### Interpretación. 
+
+#Q0 mide el dato de menor valor de la base. 
+
+#Q1 Indica que el 25% de los datos tiene una lifeExp de 42.3725 años o menos. 
+
+#Q2 Indica  que  el 50% de la pobalción tiene un 
+#lifeExp de 47.7920 o menos años.
+
+#Q3 Indica  que  el 75% de la pobalción tiene un 
+#lifeExp de 54.4115 o menos años.
+
+#Q Indica  que  la mayor lifeExp en los paises de la muestra (Africa) es 75.4420 años.
+
+Americas<-cuantiles%>%filter(continent=="Americas")
+quantile(Americas$lifeExp)  
+
+Asia<-cuantiles%>%filter(continent=="Asia")
+quantile(Asia$lifeExp)  
+ 
+Europa<-cuantiles%>%filter(continent=="Europa")
+quantile(Europa$lifeExp)
+
+Oceania<-cuantiles%>%filter(continent=="Oceania")
+quantile(Oceania$lifeExp)
+
+```
+
+
+```{r}
+
+```
 
 #### Boxplot.
 
