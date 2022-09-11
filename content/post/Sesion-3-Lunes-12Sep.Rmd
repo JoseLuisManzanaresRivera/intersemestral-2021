@@ -24,6 +24,30 @@ library(ggplot2)
 library(tidyverse)
 ```
 
+```{r, include=FALSE}
+
+exa<-read.csv("C:/Users/josel/Documents/example.csv" )%>%select(-c("X", "X.1","X.2","X.3"))%>%na.omit()%>%
+rename(participantes.f=No.of.ear.heads..f.,ingreso.x=Mid.x )%>%
+summarize(sumalogs=sum(f.log.x), n=sum(participantes.f), div=sumalogs/n,gmean=10^(div), eee=exp(div))
+
+
+library(psych)
+
+geometric.mean(exa$ingreso.x)
+
+media_geo<-exp(mean(log(exa$ingreso.x)))
+
+media_geo
+## Note que, en primera instancia estimamos el logaritmo de la variable  ingreso. La estimación del logaritmo permite tomar en consideración la naturaleza de crecimeinto exponencial que tiene este variable en particular.
+## Tal como el algoritmo de estimación de media geométrica indica, obtenemos la media aritmetrica de los logaritmos y posteriormente reexpresamos el indicador de a niveles es decir no expresados en logaritmos. Note que el calculo usa la base de logaritmo natural que es tomando como base el número e=2.718281828....
+
+
+
+
+```
+
+
+
 ## Objetivos: 
 
 Estudiar las reglas de probabilidad y las disrtibucións de probabilidad.    

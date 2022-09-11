@@ -171,7 +171,9 @@ library(psych)
 
 #media_geo
 ## Note que, en primera instancia estimamos el logaritmo de la variable  ingreso. La estimación del logaritmo permite tomar en consideración la naturaleza de crecimeinto exponencial que tiene este variable en particular.
-## Tal como el algoritmo de estimación de media geométrica indica, obtenemos la media aritmetrica de los logaritmos y posteriormente reexpresamos el indicador de a niveles es decir no expresados en logaritmos. Note que el calculo usa la base de logaritmo natural que es tomando como base el número e=2.718281828....
+## Tal como el algoritmo de estimación de media geométrica indica, obtenemos la media aritmética de los logaritmos y posteriormente reexpresamos el indicador a niveles, es decir no expresados en logaritmos.
+
+#vNote que el cálculo usa la base de logaritmo natural que es tomando como base el número e=2.718281828....```
 ```
 
 Para estimación en python See **ipynb**
@@ -179,10 +181,12 @@ Para estimación en python See **ipynb**
 
 ### Mediana.
 
-El valor que se localiza en la mitad de los datos. 
+El valor que se localiza en la mitad de los datos cuando los datos son organizados en orden (ej. ascendente).
+
+En contraste con la media, **la mediana** no es afectada por los puntos extremos (**outliers**)
 
 
-Una medida de tendencia central que es util cuando los datos tienen sesgo, ej. cuando la media y la mediana no son iguales.
+Una medida que es representativa  de la tendencia central cuando los datos tienen sesgo, ej. cuando la media y la mediana no son iguales. Es preferible a la media cuando los datos no tienen una distribución simétrica. 
  
 Ejemplo 3
 
