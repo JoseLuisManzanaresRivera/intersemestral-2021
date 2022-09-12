@@ -272,13 +272,15 @@ Este objeto, permite almacenar un grupo de vectores, cada elemento de la lista p
 
 ```{r}
 
-library(janitor)
+lista<-list(numeros=100:130,letra="R",logicos=list(TRUE,FALSE))
 
-lista<-list(100:130,"R",list(TRUE,FALSE))
+## Accedemos al primer elemento de la lista y lo almacenamos en un data frame. Podemos acceder by list name or by index position en este caso la posición del elemento numeros es la columna uno, entonces.
 
-## Accedemos al primer elemento de la lista y lo almacenamos en un data frame.
+numbers<-data.frame(dato=lista$numeros)
 
-numbers<-as.data.frame(lista[[1]])
+numbers_index<-data.frame(n=lista[[1]])
+
+## que usamos la funciön `data.frame`  para almacenar el elmento extraido en un conjunto de datos nuevo que nombramos  "dato".
 
 view(lista)
 ```
