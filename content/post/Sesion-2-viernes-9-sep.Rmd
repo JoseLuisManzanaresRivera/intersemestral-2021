@@ -618,7 +618,7 @@ Determine los cuantiles Q1, Q2, Q3, Q4 para la variable esperanza de vida (lifex
 ¿Cuál es la diferencia  entre el **Q1** de **Africa** y **Q1** del continente con mayor esperanza de vida?
 
 
-```{r, include=FALSE}
+```{r }
 library(gapminder)
 
 cuantiles<-gapminder
@@ -655,7 +655,7 @@ quantile(Oceania$lifeExp)
 ```
 
 
-```{r, include=FALSE}
+```{r}
 
 ## Estimación alternativa usando tidyverse aproach. 
 
