@@ -580,6 +580,7 @@ Los percentiles permiten determinar el valor por debajo del cual, ocurre un dete
 La  función de distribución acumulada**CDF** es la integral de la **función de densidad de probabilidad (PDF)**. 
 
 Define la probabilidad de observar un valor **x** en un rango determinado **[a,b].** 
+Formalmente 
 
 ![](/img/cdf.jpg)
 .
