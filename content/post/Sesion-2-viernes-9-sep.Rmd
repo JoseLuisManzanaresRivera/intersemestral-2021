@@ -200,7 +200,7 @@ library(psych)
 #vNote que el cálculo usa la base de logaritmo natural que es tomando como base el número e=2.718281828....```
 ```
 
-Para estimación en python See **ipynb**
+Para estimación en python See **Sesión2_tendencia central.ipynb**
 
 
 ### Mediana.
