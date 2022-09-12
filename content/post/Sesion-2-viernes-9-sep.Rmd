@@ -673,13 +673,13 @@ ggplotly(boxplot_2)
 
 ### Varianza
 
-El valor promedio de las desviaciones de cada elemento *i*  respecto a la media.
+El valor promedio de las desviaciones al cuadrado de cada elemento *i*  respecto a la media.
 
 
 $$V(X)= Var(X)=\sigma^2_{X}$$
 $$\sigma^2_x = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2$$
 
-O en terminos de valor esperado tenemos: 
+O en términos de valor esperado tenemos: 
 $$Var[X]=E[(X-E[X]^2)]$$
 $$=E[X]^2-(E[X]^2)$$
 
@@ -687,7 +687,7 @@ $$=E[X]^2-(E[X]^2)$$
 La varianza es una referencia importante para determinar la dispersión de un conjunto de datos. Sin embargo, cuando queremos comparar las dispersión entre conjuntos de datos una deventaja de la varianza es que esta exprezada en **unidades al cuadrado**.  Es una medida de dispersión que depende de la escala de medición.
 
 
-Esta desventaja la resuelve la desviación estándard que es una medida independiente de la escala.  Por este motivo la medida de dispersión clásica que utilizaremos para comparar dispersión de los datos es la **desviación estádard**. 
+Esta desventaja la resuelve la **desviación estándard** que es una medida independiente de la escala.  Por este motivo la medida de dispersión clásica que utilizaremos para comparar la dispersión de los datos es la **desviación estádard**. 
 
 ### Desviación estándard. 
 
@@ -696,7 +696,7 @@ Raíz cuadrada de la varianza.
 $$\sqrt{\sigma^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2}=\sigma$$
 
 
-Asociado a esta medida podemos calcular **el coeficiente de variación** que solo añale la relación  de esta dispersión, medida por la desviación estándard respecto a la media. Este coeficiente se ubica en el rango 0-1 frecuentemente, pero en algunas distribuciones puede superar la unidad. 
+Asociado a esta medida, podemos calcular **el coeficiente de variación** que solo añale la relación  de esta dispersión, medida por la desviación estándard respecto a la media. Este coeficiente se ubica en el rango 0-1 frecuentemente, pero en algunas distribuciones puede superar la unidad. 
 $$cv=\frac{\sigma_x}{|\bar{X}|}$$
 En términos generales entre vayor es el cv, tenemos una mayor dispersión en los datos. 
 
