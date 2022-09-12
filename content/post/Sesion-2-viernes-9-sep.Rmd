@@ -597,8 +597,12 @@ Por ejemplo, si estamos analizando la distribución de ingreso, nos puede intere
 ### Ejemplo 1 
 
 ```{r}
+### Generamos una muestra aleatoria de 1000 observaciones para simular ingresos en un rango de 5000 a 60000 mensuales.  Note usamos función "runif". otras funciones  utiles para generar numeros aleatorios son r.norm().
 
 ingresos<-data.frame(pesos=runif(1000, min=5000, max=60000))
+
+# Paso 2. Aplicamos la función quantile para la variable de interes, note que la función admite dos argumentos, el primero, el objeto x y el segundo denominado probs. para definir el percentil de interés. Por default la función estima Q0  a Q4.
+ 
 quantile(ingresos$pesos)
 ```
 
@@ -607,9 +611,10 @@ quantile(ingresos$pesos)
 
 Determine los cuantiles Q1, Q2, Q3, Q4 para la variable esperanza de vida (lifexp) expresada en años para los paises de cada continente.
 
-¿Qué continente tiene la mayor esperanza de vida (ej. cuál tiene el Q4 mayor).
+¿Qué continente tiene la mayor esperanza de vida considerando al menos el 75 de los datos disponibles.  (ej. Que continente tiene el mayor  **Q3**).
 
-¿Cuál es la diferencia  entre el **Q1** de **Africa** y **Q1** del continente con menor esperanza de vida? 
+¿Cuál es la diferencia  entre el **Q1** de **Africa** y **Q1** del continente con mayor esperanza de vida?
+
 
 ```{r, include=FALSE}
 library(gapminder)
@@ -639,7 +644,7 @@ quantile(Americas$lifeExp)
 Asia<-cuantiles%>%filter(continent=="Asia")
 quantile(Asia$lifeExp)  
  
-Europa<-cuantiles%>%filter(continent=="Europa")
+Europa<-cuantiles%>%filter(continent=="Europe")
 quantile(Europa$lifeExp)
 
 Oceania<-cuantiles%>%filter(continent=="Oceania")
@@ -648,8 +653,23 @@ quantile(Oceania$lifeExp)
 ```
 
 
-```{r}
+```{r, include=FALSE}
 
+## Estimación alternativa usando tidyverse aproach. 
+
+
+## Paso 1 definimos el vector que contiene los percentiles que nos interesan, en este caso  deseamos calculor los cinco cuantiles desde Q0 a Q4.
+
+q=c(0,.25,.5,.75,1)
+
+## Paso 2, agrupamos los datos por continente, (recuerde es una variable categorica  "factor". Finalmente usamos el verbo summarize para hacer la estimación de los percentiles. Ete calculo se base en la función quantile que toma los argumentos lifeExp y  probs en donde definimos el la columna del vector donde almacenamos los percentiles a estimar )
+
+estimado<-cuantiles%>%
+  group_by(continent) %>%
+  summarize(
+    percentil0 =  quantile(lifeExp, probs =q[1]),
+    percentil25 = quantile(lifeExp, probs = q[2]),    percentil50 = quantile(lifeExp, probs = q[3]),    percentil75 = quantile(lifeExp, probs = q[4]),
+   percentil100 = quantile(lifeExp, probs = q[5]))
 ```
 
 #### Boxplot.
