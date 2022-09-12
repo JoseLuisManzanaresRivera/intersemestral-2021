@@ -276,11 +276,11 @@ lista<-list(numeros=100:130,letra="R",logicos=list(TRUE,FALSE))
 
 ## Accedemos al primer elemento de la lista y lo almacenamos en un data frame. Podemos acceder by list name or by index position en este caso la posición del elemento numeros es la columna uno, entonces.
 
-numbers<-data.frame(dato=lista$numeros)
-
 numbers_index<-data.frame(n=lista[[1]])
 
-## que usamos la funciön `data.frame`  para almacenar el elmento extraido en un conjunto de datos nuevo que nombramos  "dato".
+numbers<-data.frame(dato=lista$numeros)
+
+## Note que usamos la funciön `data.frame`  para almacenar el elmento extraido en un conjunto de datos nuevo que nombramos  "dato".
 
 view(lista)
 ```
@@ -295,10 +295,10 @@ Este tipo de objeto es la versión bi-dimensional de una lista donde las **colum
 Este es el tipo de objeto más común que encontraremos en nuestra clase de estadística  para realizar el análisis de datos. 
 
 
-Podemos pensar en un **data frame** como el equivalente de R a una hoja de cálculo de excel.
+Podemos pensar en un **data frame** como el equivalente de **R** a una hoja de cálculo de excel.
 
 Un data frame agrupa los **vectores en columnas**, de tal forma que cada vector de un **data frame** puede contener un tipo de datos específico, pero cada celda dentro un vector tendrá el mismo tipo de dato. 
-Por ejemplo si la columna es país, y se almacena como factor, cada elemento que integra esta columna será una categoria.
+Por ejemplo si la columna es país, y se almacena como **as.factor**, cada elemento que integra esta columna será una **categoria**.
 
 
 ```{r, echo=FALSE}
@@ -325,6 +325,9 @@ Asimismo, los vectores agrupados en un **data frame** son de la misma longitud. 
 Cargue en **R** la base de datos:   `repda_2021.csv` y determine que tipo de variables contiene así como la estructura (ej. corte transversal, panel  o series de tiempo).
 
 Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en un archivo de texto separado por comas **commas separeted values**  (.csv) nombrado **repda_2021.csv** en la ruta indicada entre comillas: **"C:/Users/..."**. 
+
+
+**Nota** Dejar de tarea abrir una cuenta en **Github** para crear proyectos y alojarlos para vincularse on **Rmarkdown.**
 
 ```{r}
 library(tidyverse)
