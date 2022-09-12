@@ -537,7 +537,7 @@ mxplt
 
 ### Distribución y Probabilidad.
 
-La curva que describe la probabilidad para cada valor, (la distribución de probabilidad),  es una **función contínua** y se denomina función de **densidad de probabilidad.** **(PDF).** 
+La curva que describe la probabilidad para cada valor, (la distribución de probabilidad),  es una **función contínua** y se denomina función de **densidad de probabilidad.** $p(x)=$**(PDF).** 
 
 
 La **PDF** (función de densidad de una variable **aleatoria continua**), es una función que describe la probabilidad de que una variable aleatoria **X** tome un valor particular **x**  
@@ -555,7 +555,7 @@ La **PDF** tiene las propiedades:
 
 ![](/img/PDF_probability.jpg)
 
-La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor **x** en ese **intervalo**.  El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular.
+La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor **x** en ese **intervalo**.  El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular. A esta area la denominamos función de densidad acumulada **CDF** 
 
 ##### Aplicación de la **CDF** a la estimación de los **percentiles.**
 
