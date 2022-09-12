@@ -367,7 +367,7 @@ Estamos describiendo los datos, estamos haciendo análisis exploratorio de datos
 
 #### Rango
 
-Una de las medidas más sencillas para medir la dispersión en la distribución de los datos es mediante la diferencia entre el dato maximo u el mínimo, este indicador se denomina **Rango **
+Una de las medidas más sencillas para medir la dispersión en la distribución de los datos es mediante la diferencia entre el dato maximo y el mínimo, este indicador se denomina **Rango **
 
 En la estimación del rango se debe tener cuidado con la presencia de outliers (datos extremos atípicos).
 
@@ -375,8 +375,8 @@ En la estimación del rango se debe tener cuidado con la presencia de outliers (
 Es común estimar el **rango intercuartil** que marca la distancia entre el dato en el percentil 25 y el 75.. En la práctica, el percentil 25 se denomina  **Q1**  o primer cuartil y el percentil 75 se denomina cuartil 3 o **Q3**. 
 
 La estimación del rango intercuartil es comunmente usada como prueba para detectar **outliers** El criterio de decisión es si un dato se ubica +/- 1.5*IQR de la distancia entre el Q1 y Q3. 
-Veramos con  detalle este concepto en la siguiente sección cunado abordemos la estimación de los percentiles.
 
+![](/img/d.jpg)
 
 #### Representación gráfica de la frecuencia.
 
@@ -661,7 +661,7 @@ ggplotly(boxplot_2)
 
 
 
-![](/img/d.jpg)
+
 
 *Docucmentación adicional con ejemplos de repaso* [boxplot](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
 
