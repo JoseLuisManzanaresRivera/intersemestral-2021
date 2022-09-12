@@ -536,7 +536,7 @@ scale_color_manual(values = c("mediumturquoise","magenta1"))+
 mxplt
 ```
 
-### Distribución y Probabilidad.
+###  Función de distribución de probabilidad PDF.
 
 La curva que describe la probabilidad para cada valor, (la distribución de probabilidad),  es una **función contínua** y se denomina función de **densidad de probabilidad.** $p(x)=$**(PDF).** 
 
