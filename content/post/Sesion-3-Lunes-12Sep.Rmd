@@ -582,3 +582,4 @@ La  función de distribución acumulada**CDF** es la integral de la **función d
 Define la probabilidad de observar un valor **x** en un rango determinado **[a,b].** 
 
 ![](/img/cdf.jpg)
+.
