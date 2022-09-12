@@ -369,6 +369,7 @@ Si {\displaystyle X}X es una variable aleatoria discreta que mide el "número de
 
 Si  (exito=1 , fracaso =0) , Exito toma la prob. p y fracaso q=(1-p)
 
+
 ![](/img/bernoulli.jpg)
 
 La diferencia básica entre ambas es que la **Binomial** tiene un límite superior definido. 
