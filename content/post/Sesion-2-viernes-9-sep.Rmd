@@ -209,8 +209,7 @@ El valor que se localiza en la mitad de los datos cuando los datos se ordenan (e
 
 En contraste con la media, **la mediana** no es afectada por los puntos extremos (**outliers**)
 
-Definiremos formalmente los outliers en la sección sobre boxplot y percentiles, en esta misma clase.
-
+*Definiremos formalmente los outliers en la sección sobre boxplot y percentiles, en esta misma clase.*
 
 La **mediana** es representativa  de la tendencia central cuando los datos no tienen una distribución simétrica. (cuando los datos tienen sesgo) Una expresión del sesgo es cuando la media y la mediana no son iguales. 
 
@@ -223,7 +222,7 @@ En este caso es  preferible la **mediana** como indicador representativo de tend
  
 *Improve your skills*[visualization training material](https://r-graphics.org/recipe-distribution-basic-density)
  
-### Ejemplo 3
+#### Ejemplo 3
 
 ```{r}
  # Defining vector
@@ -273,15 +272,19 @@ Ver Práctica de implementación en **Sesión2_tendencia central.ipynb**
 
 
 
-### Ejempo 1 Estimación de medidas de tendencia central básicas. 
+##### Ejemplo 1 
 
-#### Datos: Correlación entre Salario medio y participación de la Mujer por categoria de ocupación.
+**Estimación de medidas de tendencia central básicas.** 
+
+**Datos:** Correlación entre Salario medio y participación de la Mujer por categoria de ocupación.
 
 
-Conocer como se comporta el salario percibido entre un grupo de egresados universitarios de diversas disciplinas. La base de datos contiene diversas caracteristicas de la población de estudio incluido el salario (una varible numérica ordinal) y la variable que describe la disciplina en la que trabaja el individuo. 
+Buscamos deteminar el comportamiento del salario percibido entre un grupo de egresados universitarios de diversas disciplinas.
+
+La base de datos contiene diversas caracteristicas de la población de estudio incluido el salario (una varible numérica ordinal) y la variable que describe la disciplina en la que trabaja el individuo. 
 
 
-La idea es estimar los salarios promedio, así como representar graficamente el comparativo entre ocupaciones.
+la meta es estimar los salarios promedio para cada grupo ocupacional, así como representar graficamente el comparativo.
 
 ```{r, include=FALSE}
 
@@ -295,6 +298,8 @@ ejercicio_1<-read_rds_from_github(url)
 ```
 
 ```{r, message = FALSE, warning = FALSE, fig.width=10, fig.height=6, echo= TRUE}
+
+## Remember to have loaded library(datagovindia)
 
 theme_set(theme_light())
 
