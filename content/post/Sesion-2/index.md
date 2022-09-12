@@ -363,10 +363,12 @@ Note que la clase del objeto `agua` es data.frame. También hemos extraído con 
 
 Para evitar escribir todo el análisis nuevamente, la secuencia de trabajo (*work flow*) recomendado en **R** es trabajar con **scripts**, estos son archivos de texto en donde almacenamos todo el código utilizado en nuestro análisis.
 
-La extensión del archivo **R** markdown es `.Rmd` hay otros formatos de scripts como el plain text `.txt`, o solo markdown  extensión`.md`
+La extensión del archivo **Rmarkdown** es `.Rmd` hay otros lenguajes en los que podemos guardar nuestros **scripts** como el plain text `.txt`, o solo markdown  extensión`.md`
 
 
-Aún mejor, si deseamos podemos almacenar el código en un archivo **R Markdown**  [R Markdown](https://rmarkdown.rstudio.com/), lo que nos permite la flexibilidad de crear el resultado del análisis en diversos formatos incluido **html**. Sí, una página web para consultarla en internet que podemos alojar en servidores como [Netlify](https://www.netlify.com/) o repositorios como [Github](https://github.com/) y publicar el contenido usando un sitio web estático, una forma que permite una enorme ventaja para trabajar de manera colaborativa y remota.
+Almacenar el código en un archivo **R Markdown**  [R Markdown](https://rmarkdown.rstudio.com/), nos permite la flexibilidad de crear el resultado del análisis en diversos formatos incluido **html**. 
+
+Sí, una página web para consultarla en internet que podemos alojar en servidores como [Netlify](https://www.netlify.com/) o repositorios como [Github](https://github.com/) y publicar el contenido usando un sitio web estático, una forma que permite una enorme ventaja para trabajar de manera colaborativa y remota.
 
 ![](/scripts.jpg)
 
