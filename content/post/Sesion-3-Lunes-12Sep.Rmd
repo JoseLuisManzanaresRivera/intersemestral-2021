@@ -363,6 +363,14 @@ Dos de las distribuciones discretas más comunes son: la distribución **Binomia
 
 ##### Distribución Bernoulli
 
+Es una distribución dicotómica. 
+
+Si {\displaystyle X}X es una variable aleatoria discreta que mide el "número de éxitos" y se realiza un único experimento con dos posibles resultados denominados éxito y fracaso, se dice que la variable aleatoria **X** se distribuye como una Bernoulli de parámetro **p**  con  $$0<p<1$$ y escribimos   $X\sim \operatorname {Bernoulli} (p)$.
+
+Si  (exito=1 , fracaso =0) , Exito toma la prob. p y fracaso q=(1-p)
+
+![](/img/bernoulli.jpg)
+
 La diferencia básica entre ambas es que la **Binomial** tiene un límite superior definido. 
 
 Esta distribución presenta **dos estados.**  Como ejemplo más simple, el lanzamiento de una moneda.
@@ -380,7 +388,7 @@ Muy a menudo, encontramos datos que no se limitan a cifras enteras, por ejemplo 
 
 Permite la representación de la districuión considerando una aproximación contínua,no discreta como es el caso del histograma. 
 
-Notación: 
+**Notación:** 
 ![](/img/kernelDF.jpg)
 Donde **K** es una función, usualmente la distribución normal (distribución con  $$\mu=0$$ y $$\sigma=1$$).
 
