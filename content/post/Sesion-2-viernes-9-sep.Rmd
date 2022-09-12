@@ -654,9 +654,12 @@ El valor promedio de las desviaciones de cada elemento *i*  respecto a la media.
 
 
 $$V(X)= Var(X)=\sigma^2_{X}$$
-
-$$\sigma^2_{X}=E[(X-\mu)^2]$$
 $$\sigma^2_x = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2$$
+
+O en terminos de valor esperado tenemos: 
+$$Var[X]=E[(X-E[X]^2)]$$
+$$=E[X]^2-(E[X]^2)$$
+
 
 La varianza es una referencia importante para determinar la dispersión de un conjunto de datos. Sin embargo, cuando queremos comparar las dispersión entre conjuntos de datos una deventaja de la varianza es que esta exprezada en **unidades al cuadrado**.  Es una medida de dispersión que depende de la escala de medición.
 
