@@ -607,7 +607,7 @@ quantile(ingresos$pesos)
 ```
 
 
-#### Ejercicio  2. 
+#### Ejercicio  1. 
 
 Determine los cuantiles Q1, Q2, Q3, Q4 para la variable esperanza de vida (lifexp) expresada en años para los paises de cada continente.
 
@@ -672,7 +672,7 @@ estimado<-cuantiles%>%
    percentil100 = quantile(lifeExp, probs = q[5]))
 ```
 
-### Ejercicio para practica en casa.
+### Ejercicio para práctica en casa.
 
 Estime los percentiles 30, 60, 90 para la variable ingreso en el año 1952 y 2007 para los países de los continentes  Africa y  Asia. 
 
