@@ -372,8 +372,8 @@ Una de las medidas más sencillas para medir la dispersión en la distribución 
 En la estimación del rango se debe tener cuidado con la presencia de outliers (datos extremos atípicos).
 
 
-Es común estimar el **rango intercuartil** que marca la distancia entre el dato en el percentil 25 y el 75.. En la práctica, el percentil 25 se denomina  **Q1**  o primer cuartil y el percentil 75 se denomina cuartil 3 o **Q3**. 
-
+Es común r el **rango intercuartil** que marca la distancia entre el dato en el percentil 25 y el 75.. En la práctica, el percentil 25 se denomina  **Q1**  o primer cuartil y el percentil 75 se denomina cuartil 3 o **Q3**. 
+estima
 La estimación del rango intercuartil es comunmente usada como prueba para detectar **outliers** El criterio de decisión es si un dato se ubica +/- 1.5*IQR de la distancia entre el Q1 y Q3. 
 
 ![](/img/d.jpg)
@@ -400,7 +400,14 @@ print(y)
 ```
 
 
-Podemos representar esta información mediante diversas visualizaciónes: Tres de las mas importantes son los **Histogramas**, las funciones de Densidad y el box plot.
+Podemos representar esta información mediante diversas visualizaciónes: 
+Tres de las mas importantes son:
+
+> **Histogramas**, 
+
+> Funciones de Densidad (KDF)
+
+> Box plot.
 
 
 ### Histograma
