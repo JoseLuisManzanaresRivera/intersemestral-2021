@@ -259,7 +259,7 @@ Una ventaja importante de la estructura de datos de panel sobre cross-section es
 
 ## Definiciones para implementación en R: 
 
-### Definición de Objetos
+#### Objetos
 
 Estos se componen por los datos o grupos de datos que podemos analizar en **R**. Para efectos de esta clase los **Data frames** y las **listas** serán los objetos más comunes.
 
