@@ -672,6 +672,13 @@ estimado<-cuantiles%>%
    percentil100 = quantile(lifeExp, probs = q[5]))
 ```
 
+### Ejercicio para practica en casa.
+
+Estime los percentiles 30, 60, 90 para la variable ingreso en el año 1952 y 2007 para los países de los continentes  Africa y  Asia. 
+
+Indique brevemente sus observaciones.
+
+
 #### Boxplot.
 
 
