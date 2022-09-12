@@ -124,10 +124,9 @@ Y la **variable** **j**  que va $$j=1,2,3,...,p$$
 
 A esta forma de organizacón de datos la denominaremos **TIDY** para efectos de esta clase.
 
+**Estructuras de datos a las que se dirige esta clase.**
 
-## Estructuras de datos a las que se dirige esta clase.
-
-### Corte transversal
+#### Corte transversal
 
 Datos organizados con relación a una unidad de análisis, por ejemplo: una **muestra** de individuos, familias, empresas, ciudades, estados, paises, tomados para  un punto  determinado en el tiempo. Ejemplo: ENIGH, ENGASTO.ENSANUT, ENOE, SINAIS, DENUE. En algunos casos los datos corresponden a encuestas realizadas a lo largo de un perido en distintas semanas, estos datos se consieran de corte transversal.
 
