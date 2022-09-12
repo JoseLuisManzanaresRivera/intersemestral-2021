@@ -356,9 +356,12 @@ En síntesis el proceso para crear una función involucra las siguientes partes:
 
 ## Distribuciones de probabilidad.
 
-### Distribuciones discretas
+#### Distribuciones discretas
+
 
 Dos de las distribuciones discretas más comunes son: la distribución **Binomial** y **Poisson.**
+
+##### Distribución Bernoulli
 
 La diferencia básica entre ambas es que la **Binomial** tiene un límite superior definido. 
 
@@ -366,9 +369,6 @@ Esta distribución presenta **dos estados.**  Como ejemplo más simple, el lanza
 Ver ejemplo **Sesión 3.ipynb**
 
 Otrs ejemplos empíricos con situaciones en donde se presenta una distribución **Binomial**, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato  la presidencia gane o pierda, etc., 
-
-
-##### Distribución Bernoulli
 
 
 ### Distribuciones contínuas.
