@@ -395,7 +395,7 @@ Realice las siguentes operaciones:
 * Multipleque el resultado por 3.
 * Reste 6 de la respuesta. 
 
-Podemos observar La lista de los objetos activos en el entorno de trabajo usando el comando **ls()**
+Podemos observar la lista de los objetos activos en el entorno de trabajo usando el comando **ls()**  Para detectar el directorio de trabajo usamo el comando `getwd()`
 
 
 
