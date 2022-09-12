@@ -327,7 +327,11 @@ Cargue en **R** la base de datos:   `repda_2021.csv` y determine que tipo de var
 Cargamos un data frame (df) con la función read.csv(). Este df  esta alojado en un archivo de texto separado por comas **commas separeted values**  (.csv) nombrado **repda_2021.csv** en la ruta indicada entre comillas: **"C:/Users/..."**. 
 
 
-**Nota** Dejar de tarea abrir una cuenta en **Github** para crear proyectos y alojarlos para vincularse on **Rmarkdown.**
+**Nota**  Tarea registrar una cuenta en **Github** para crear proyectos y alojarlos para vincularse on **Rmarkdown.**
+
+Ver documentación para Configurar **github** y **Rmarkdown.** en [documentación](https://happygitwithr.com/)
+
+Recordar integrar R studio con *Global opts* gitSvn y activar Git. Previamente descargado y configurado con user_name e email desde el gitbash.
 
 ```{r}
 library(tidyverse)
@@ -357,7 +361,10 @@ Note que la clase del objeto `agua` es data.frame. También hemos extraído con 
 
 ## Scripts
 
-Para evitar escribir todo el análisis nuevamente, el   *work flow* (la secuencia de trabajo) recomendado en **R** es trabajar con **scripts**, estos son archivos de texto en donde almacenamos todo el código utilizado en nuestro análisis.
+Para evitar escribir todo el análisis nuevamente, la secuencia de trabajo (*work flow*) recomendado en **R** es trabajar con **scripts**, estos son archivos de texto en donde almacenamos todo el código utilizado en nuestro análisis.
+
+La extensión del archivo **R** markdown es `.Rmd` hay otros formatos de scripts como el plain text `.txt`, o solo markdown  extensión`.md`
+
 
 Aún mejor, si deseamos podemos almacenar el código en un archivo **R Markdown**  [R Markdown](https://rmarkdown.rstudio.com/), lo que nos permite la flexibilidad de crear el resultado del análisis en diversos formatos incluido **html**. Sí, una página web para consultarla en internet que podemos alojar en servidores como [Netlify](https://www.netlify.com/) o repositorios como [Github](https://github.com/) y publicar el contenido usando un sitio web estático, una forma que permite una enorme ventaja para trabajar de manera colaborativa y remota.
 
