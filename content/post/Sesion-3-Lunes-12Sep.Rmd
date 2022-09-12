@@ -575,7 +575,7 @@ Nota sobre implementación en **Python**. Esta  nos permite observar el porcenta
 
 Una nota sobre la apliación de la **CDF** en la obtención de los **Percentiles** 
 
-Los percentiles Permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.
+Los percentiles permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.
 
 La  función de distribución acumulada**CDF** es la integral de la **función de densidad de probabilidad (PDF)**. 
 
