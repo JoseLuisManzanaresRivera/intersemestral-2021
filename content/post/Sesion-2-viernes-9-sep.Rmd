@@ -681,7 +681,7 @@ Estime los percentiles 30, 60, 90 para la variable ingreso en el año 1952 y 200
 Indique brevemente sus observaciones.
 
 
-#### Boxplot.
+## Boxplot.
 
 
 **Contextualización:** Contraste entre la distribución de grupos,  identificación de outliers y permite hbicar  el reango inter cuartil y la mediana.
