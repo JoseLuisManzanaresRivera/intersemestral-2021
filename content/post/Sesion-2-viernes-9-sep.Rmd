@@ -56,7 +56,9 @@ Estas y otras preguntas requieren del análisis de datos  y las medidas de tende
 
 ### Media
 
-El dato representativo, el promedio. *Notación:*
+El dato representativo, el promedio. 
+
+**Notación:**
 
 Media muestral:
 
@@ -70,8 +72,10 @@ Desde a perspectiva de probabilidad, la podemos definir en términos del valor e
 
 + La media muestral converge al **valor esperado** **E[X]** a medida que el tamaño de muestra es mayor. 
 
-Donde  **$x_{i}$** representa todos los valores posibles que laa variable x puede tomar.
+Donde  **$x_{i}$** representa todos los valores posibles que la variable x, puede tomar.
 
+
+El valor esperad E[X] para una distribución continua de X será: 
 
 $$E[X]=\int_{-\infty}^{\infty} xf(x)dx$$
 
