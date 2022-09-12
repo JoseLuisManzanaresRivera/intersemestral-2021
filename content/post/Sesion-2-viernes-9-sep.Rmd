@@ -178,7 +178,7 @@ geometric.mean(media_1952$gdpPercap)
 
 ```
 
-¿Qué podemos decir de la variación en el nivel de ingreso entre los países de la muestra entre el año **1952** y **2007**. ¿Cuál es la tasa de crecimiento?
+¿Qué podemos decir de la variación en el nivel de ingreso entre los países de la muestra en el periodo de **1952** a **2007**. ¿Cuál es la tasa de crecimiento?
 
 
 **Ejercicio** clase, estime la media aritmética y geométrica para las variables población y esperanza de vida por continente.
