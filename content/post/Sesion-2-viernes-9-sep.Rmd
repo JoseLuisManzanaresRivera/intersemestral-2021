@@ -58,8 +58,22 @@ Estas y otras preguntas requieren del análisis de datos  y las medidas de tende
 
 El dato representativo, el promedio. *Notación:*
 
-$$\bar{x}=\frac{1}{n} (\sum_{i=1}^{n} x_i) =\frac{x_1 +x_2+...+x_n}{n}$$
+Media muestral:
 
+$$\bar{X}=\frac{1}{n} (\sum_{i=1}^{n} x_i) =\frac{x_1 +x_2+...+x_n}{n}$$
+Meida poblaciónal con la letra griega:
+$$\mu$$
+
+Desde a perspectiva de probabilidad, la podemos definir en términos del valor esperado como  $$E[X]=\sum_{i} x_ip_i=1$$
+
++ Note que el valor esperado es una función de la distribución de probabilidad exprezada como *f(x)* en nuestra población.
+
++ La media muestral converge al **valor esperado** **E[X]** a medida que el tamaño de muestra es mayor. 
+
+Donde  **$x_{i}$** representa todos los valores posibles que laa variable x puede tomar.
+
+
+$$E[X]=\int_{-\infty}^{\infty} xf(x)dx$$
 
 Ejemplo  1
 
