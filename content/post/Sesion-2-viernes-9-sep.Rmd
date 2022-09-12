@@ -436,6 +436,8 @@ Una particularidad adicional es que en ausencia de **normalidad**  (un concepto 
 
 Una pregunta muy frecuente cuando analizamos la distribución de los datos es ¿Qué porcentaje de los datos se encuentra por debajo de cierto umbral? 
 
+La estimación de los percentiles es informativa del grado de concentración de los datos hacia un valor particular. 
+
 Por ejemplo, si estamos analizando la distribución de ingreso, nos puede interesar determinar que porcentaje de los datos presentan un ingreso igual o inferior a la linea de pobreza (este umbral es un dato particular *x*  de la variabe **X**).
 
 
