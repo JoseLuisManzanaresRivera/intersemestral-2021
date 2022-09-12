@@ -61,7 +61,7 @@ El dato representativo, el promedio. *Notación:*
 Media muestral:
 
 $$\bar{X}=\frac{1}{n} (\sum_{i=1}^{n} x_i) =\frac{x_1 +x_2+...+x_n}{n}$$
-Meida poblaciOnal con la letra griega:
+Media poblacional con la letra griega:
 $$\mu$$
 
 Desde a perspectiva de probabilidad, la podemos definir en términos del valor esperado como  $$E[X]=\sum_{i} x_ip_i=1$$
