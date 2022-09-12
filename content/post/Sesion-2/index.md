@@ -402,12 +402,15 @@ Podemos observar la lista de los objetos activos en el entorno de trabajo usando
 ```{r}
 ## Para listar  los objetos disponibles.
 ls()
+## Para ver el directorio de trabajo actual
+
+getwd()
 ```
 Importante sobre las reglas para asignar el nombre a un objeto en **R**: 
 
 **Note:** You can name an object in R almost anything you want, but there are a few rules. First,
 a name **cannot start with a number**. Second, a name cannot use some special symbols,
-like **^, !, $, @, +, -, /, or * **: Note también que  los nombres son sensibles al uso de mayúsculas. Note que si el nombre asignado ya existe, el nuevo objeto sobre escribirá el objeto anterior.
+like **^, !, $, @, +, -, /, or**: Note también que  los nombres son sensibles al uso de mayúsculas. Note que si el nombre asignado ya existe, el nuevo objeto sobre escribirá el objeto anterior.
 
 
 
