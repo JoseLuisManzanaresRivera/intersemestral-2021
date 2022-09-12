@@ -401,12 +401,11 @@ print(y)
 
 
 Podemos representar esta información mediante diversas visualizaciónes: 
+
 Tres de las mas importantes son:
 
 > **Histogramas**, 
-
 > Funciones de Densidad (KDF)
-
 > Box plot.
 
 
