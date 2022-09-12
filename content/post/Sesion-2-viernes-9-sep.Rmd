@@ -106,7 +106,9 @@ exhiben correlación serial, (dato en momento del tiempo t  que depende del dato
 esto es por ejemplo común en el 
 campo series de tiempo en economía y el area de las finanzas. Ejemplo, la tasa de crecimiento del PIB, la inflación, etc., 
 
-Este tipo de variables no tiene un comportamiento aleatorio, pero sus observaciones son dependientes de los valores que tome a variable en momentos previos (lags.). 
+Este tipo de variables no tiene un comportamiento aleatorio, pero sus observaciones son dependientes de los valores que tome la variable en momentos previos (lags.). 
+
+**NOTE:** 
 
 + El valor de la media geométrica es siempre menor que la media aritmética.
 
@@ -120,7 +122,7 @@ números negativos.
 Estime la media aritmética y geométrica para el ingreso percápita de los países para el año 1952 y 2007.  Base de datos de ingreso percapita mundial. 
 
 
-```{r, include=FALSE}
+```{r}
 
 ## SOLUCION.
 
@@ -142,6 +144,12 @@ media_1952<-datos%>%filter(year=="1952")
 ## Paso 4  hacemos el calculo usando la función summarise y mean. 
 
 m_52<-summarise(media_1952,m=mean(gdpPercap))
+
+```
+
+```{r, include=FALSE}
+
+```
 
 ## SOLUCION para año 2007.
 
