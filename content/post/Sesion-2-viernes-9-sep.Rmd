@@ -544,11 +544,11 @@ quantile(Oceania$lifeExp)
 ## Estimación alternativa usando tidyverse aproach. 
 
 
-## Paso 1 definimos el vector que contiene los percentiles que nos interesan, en este caso  deseamos calculor los cinco cuantiles desde Q0 a Q4.
+## Paso 1 definimos el vector que contiene los percentiles que nos interesan, en este caso  deseamos calcular los cinco cuantiles desde Q0 a Q4.
 
 q=c(0,.25,.5,.75,1)
 
-## Paso 2, agrupamos los datos por continente, (recuerde es una variable categorica  "factor". Finalmente usamos el verbo summarize para hacer la estimación de los percentiles. Ete calculo se base en la función quantile que toma los argumentos lifeExp y  probs en donde definimos el la columna del vector donde almacenamos los percentiles a estimar )
+## Paso 2, agrupamos los datos por continente, (recuerde es una variable categ[orica  "factor". Finalmente usamos el verbo summarize para hacer la estimación de los percentiles. Ete calculo se base en la función quantile que toma los argumentos lifeExp y  probs en donde definimos el la columna del vector donde almacenamos los percentiles a estimar )
 
 estimado<-cuantiles%>%
   group_by(continent) %>%
@@ -568,11 +568,11 @@ Indique brevemente sus observaciones.
 ## Boxplot.
 
 
-**Contextualización:** Contraste entre la distribución de grupos,  identificación de outliers y permite hbicar  el reango inter cuartil y la mediana.
+**Contextualización:** Contraste entre la distribución de grupos,  identificación de **outliers** y permite ubicar  el **rango inter-cuartil** y la **mediana**.
 
 Esta representación visual de la distribución es generalemtne utilizada para la representación de **variables categóricas**.
 
-Note que los upper nad lower fences o whiskers, se extienden por definición en u rango de +/- 1.5 IQ, pero la representación considera los puntos más alejados dentro de este rango, es decir , puede ser que el rango sea mayor a la ubicación concreta de los puntos en cada lado, es por ello que los fences comunmente son asimétricos.
+Note que los upper and **lower fences** o **whiskers**, se extienden por definición en u rango de +/- 1.5 IQ, pero la representación considera los puntos más alejados dentro de este rango, es decir, puede ser que el rango sea mayor a la ubicación concreta de los puntos en cada lado, es por ello que los **fences** comunmente no son simétricos respecto a los limites de la caja que forma el rango intercuartil .
 
 ### Representación de dispersión datos con frecuencia diaria. Boxplot
 
