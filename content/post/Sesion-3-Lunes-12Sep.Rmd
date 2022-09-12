@@ -578,7 +578,6 @@ Para este propósito es muy útil estimar la frecuencia acumulada.
 
 Una representación contínua de este concepto es mediante la función empírica de **densidad  acumulada** 
 
-Nota sobre implementación en **Python**. Esta  nos permite observar el porcentaje de datos en el eje de las ordenadas al orígen.  see **".ipynb"**
 
 Una nota sobre la apliación de la **CDF** en la obtención de los **Percentiles** 
 
@@ -590,4 +589,5 @@ Define la probabilidad de observar un valor **x** en un rango determinado **[a,b
 Formalmente 
 
 ![](/img/cdf.jpg)
+Nota sobre implementación en **Python**. Esta  nos permite observar el porcentaje de datos en el eje de las ordenadas al orígen.  see **".ipynb"**
 .
