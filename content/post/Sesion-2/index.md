@@ -290,7 +290,12 @@ La flexibilidad de este objeto es una ventaja ya que nos permite contar con una 
 
 ### Data frames.
 
-Este tipo de objeto es la versión bi-dimensional de una lista donde las **columnas** son vectores (variables) y cada **renglón** observaciones. Este es el tipo de objeto más útil para realizar el análisis de datos. Podemos pensar en un data frame como el equivalente de R a una hoja de cálculo de excel.
+Este tipo de objeto es la versión bi-dimensional de una lista donde las **columnas** son vectores (variables) y cada **renglón** observaciones. 
+
+Este es el tipo de objeto más común que encontraremos en nuestra clase de estadística  para realizar el análisis de datos. 
+
+
+Podemos pensar en un **data frame** como el equivalente de R a una hoja de cálculo de excel.
 
 Un data frame agrupa los **vectores en columnas**, de tal forma que cada vector de un **data frame** puede contener un tipo de datos específico, pero cada celda dentro un vector tendrá el mismo tipo de dato. 
 Por ejemplo si la columna es país, y se almacena como factor, cada elemento que integra esta columna será una categoria.
