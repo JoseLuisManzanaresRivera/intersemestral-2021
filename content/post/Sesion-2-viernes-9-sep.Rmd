@@ -148,11 +148,7 @@ m_52<-summarise(media_1952,m=mean(gdpPercap))
 ```
 
 ```{r, include=FALSE}
-
-```
-
 ## SOLUCION para año 2007.
-
 
 media_2007<-datos%>%filter(year=="2007")
 m_07<-summarise(media_2007,m=mean(gdpPercap))
