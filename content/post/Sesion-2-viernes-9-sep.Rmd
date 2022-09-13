@@ -208,9 +208,7 @@ Para estimación en python See **Sesión2_tendencia central.ipynb**
 
 El valor que se localiza en la mitad de los datos cuando los datos se ordenan (ej. ascendente).
 
-En contraste con la media, **la mediana** no es afectada por los puntos extremos (**outliers**)
-
-*Definiremos formalmente los outliers en la sección sobre boxplot y percentiles, en esta misma clase.*
+En contraste con la media, **la mediana** no es afectada por los puntos extremos.
 
 La **mediana** es representativa  de la tendencia central cuando los datos no tienen una distribución simétrica. (cuando los datos tienen sesgo) Una expresión del sesgo es cuando la media y la mediana no son iguales. 
 
