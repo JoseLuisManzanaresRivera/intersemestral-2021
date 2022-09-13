@@ -53,7 +53,7 @@ Por ejemplo podemos estar interesados en comprender la distribución del ingreso
 
 ¿ Cuál es el ingreso promedio en México?
 
-Estas y otras preguntas requieren del análisis de datos  y las medidas de tendencia centrla nos ayudan a obtener esta información.
+Estas y otras preguntas requieren del análisis de datos  y las medidas de tendencia central nos ayudan a obtener esta información.
 
 ### Media
 
@@ -95,7 +95,7 @@ print(mean(x))
 
 La media geométrica de una serie que contiene **n** elementos esta dada por:  
 
-La raíz $n_{th}$ del producto de los elementos.
+La raíz $n$ del producto de los elementos.
 
 ![](/img/geomed.jpg)
 ![](/img/geometrica.jpg)
