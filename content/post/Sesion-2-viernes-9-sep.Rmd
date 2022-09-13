@@ -67,18 +67,6 @@ $$\bar{X}=\frac{1}{n} (\sum_{i=1}^{n} x_i) =\frac{x_1 +x_2+...+x_n}{n}$$
 Media poblacional con la letra griega:
 $$\mu$$
 
-Desde a perspectiva de probabilidad, la podemos definir en términos del valor esperado como  $$E[X]=\sum_{i} x_ip_i=1$$
-
-+ Note que el valor esperado es una función de la distribución de probabilidad **f(x)** en nuestra población.
-
-+ La media muestral converge al **valor esperado** **E[X]** a medida que el tamaño de muestra es mayor. 
-
-Donde  **$x_{i}$** representa todos los valores posibles que la variable x, puede tomar.
-
-
-El valor esperad E[X] para una distribución continua de X será: 
-
-$$E[X]=\int_{-\infty}^{\infty} xf(x)dx$$
 
 Ejemplo  1
 
