@@ -453,7 +453,7 @@ Indique brevemente sus observaciones.
 
 Una de las medidas más sencillas para medir la dispersión en la distribución de los datos es mediante la diferencia entre el dato maximo y el mínimo, este indicador se denomina **Rango **
 
-En la estimación del rango se debe tener cuidado con la presencia de outliers (datos extremos atípicos).
+En la estimación del rango se debe tener cuidado con la presencia de outliers (datos extremos o atípicos).
 
 
 Para tener una idea de la dispersión de los datos, es común estimar el **rango intercuartil** que marca la distancia entre el dato en el percentil 25 y el 75.
@@ -469,7 +469,7 @@ El criterio de decisión indica que se tiene un outlier si un dato se ubica sobr
 #### Representación gráfica de la frecuencia.
 
 
-Un punto de partida básico es mediante la exploración de la frecuencia. Veamos como podemos generar un tabla de frecuancia para conocer la distribución de un conjunto de datos hipotérico:
+Un punto de partida básico es mediante la exploración de la frecuencia. Veamos como podemos generar un tabla de frecuencia para conocer la distribución de un conjunto de datos hipotético:
  
  
  
