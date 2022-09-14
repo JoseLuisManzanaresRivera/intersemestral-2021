@@ -592,7 +592,7 @@ Una particularidad adicional es que en ausencia de **normalidad**  (un concepto 
 
 **Contextualización:** Contraste entre la distribución de grupos,  identificación de **outliers** y permite ubicar  el **rango inter-cuartil** y la **mediana**.
 
-Esta representación visual de la distribución es generalemtne utilizada para la representación de **variables categóricas**.
+Esta representación visual de la distribución es generalmente utilizada para la representación de **variables categóricas**.
 
 Note que los upper and **lower fences** o **whiskers**, se extienden por definición en un rango de +/- 1.5 IQ, pero la representación considera los puntos más alejados **dentro de este rango**, es decir, puede ser que el rango sea mayor a la ubicación concreta de los puntos en cada lado, es por ello que los **fences** comunmente no son simétricos respecto a los límites de la caja que forma el rango intercuartil.
 
