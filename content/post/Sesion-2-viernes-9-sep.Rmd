@@ -515,29 +515,45 @@ Ir a **.ipynb** file
 
 ```{r, include=FALSE, echo = FALSE, warning = FALSE}
 
-N16<-readRDS("N16.rds")
-glimpse(N16)
-
-p220<-select(N16,cve_cie, ent_nac, con_indm,aten_pren,niv_escol,sexoh,tallah,pesoh,apgarh,silverman,procnac,edad_madre )%>%
-  mutate(sdr=ifelse(cve_cie=="P220"|cve_cie=="P229",1,0), sexoh=as.factor(sexoh))%>%
-filter(pesoh!=9999, tallah!=99,sdr==1, sexoh!=9,edad_madre!=999, procnac!=9&procnac!=3&procnac!=8&procnac!=4, apgarh<=10, silverman<=10)%>%
-  mutate(proc_n=ifelse(procnac==1,"Eutócico","Cesárea"))%>%
-  rename(Procedimiento=proc_n)
-
-write.csv(p220,"sindrome.csv")
-getwd()
-
-p220_no_sdr<-select(N16,cve_cie, ent_nac, con_indm,aten_pren,niv_escol,sexoh,tallah,pesoh,apgarh,silverman,procnac,edad_madre )%>%
-  mutate(sdr=ifelse(cve_cie=="P220"|cve_cie=="P229",1,0), sexoh=as.factor(sexoh))%>%
-filter(pesoh!=9999, tallah!=99,sdr!=1, sexoh!=9,edad_madre!=999, procnac!=9&procnac!=3&procnac!=8&procnac!=4, apgarh<=10, silverman<=10)%>%
-  mutate(proc_n=ifelse(procnac==1,"Eutócico","Cesárea"))%>%
-  rename(Procedimiento=proc_n)
+### Load data. contiene registros de nacimientos con sindrome de dificultadad respiratoria. MX, Variables de interes, peso y tipo de parto  ej cesarea o eutócico.
 
 
-h1<-ggplot(p220, aes(x=pesoh)) + geom_histogram(fill="white", colour="black") +
+## from URL
+
+url<-("https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/sindrome.csv")
+
+peso<-read.csv(url)
+
+## Hacemos la revision de rutina. 
+names(peso)
+view(peso)
+str(peso)
+glimpse(peso)
+summary(peso)
+
+
+
+#N16<-readRDS("N16.rds")
+#glimpse(N16)
+
+#p220<-select(N16,cve_cie, ent_nac, con_indm,aten_pren,niv_escol,sexoh,tallah,pesoh,apgarh,silverman,procnac,edad_madre )%>%mutate(sdr=ifelse(cve_cie=="P220"|cve_cie=="P229",1,0), sexoh=as.factor(sexoh))%>%filter(pesoh!=9999, tallah!=99,sdr==1, sexoh!=9,edad_madre!=999, procnac!=9&procnac!=3&procnac!=8&procnac!=4, apgarh<=10, silverman<=10)%>%mutate(proc_n=ifelse(procnac==1,"Eutócico","Cesárea"))%>%rename(Procedimiento=proc_n)
+
+#write.csv(p220,"sindrome.csv")
+# getwd()
+
+## p220_no_sdr<-select(N16,cve_cie, ent_nac, con_indm,aten_pren,niv_escol,sexoh,tallah,pesoh,apgarh,silverman,procnac,edad_madre )%>%mutate(sdr=ifelse(cve_cie=="P220"|cve_cie=="P229",1,0), sexoh=as.factor(sexoh))%>%filter(pesoh!=9999, tallah!=99,sdr!=1, sexoh!=9,edad_madre!=999, procnac!=9&procnac!=3&procnac!=8&procnac!=4, apgarh<=10, silverman<=10)%>%mutate(proc_n=ifelse(procnac==1,"Eutócico","Cesárea"))%>%rename(Procedimiento=proc_n)
+
+### Paso 2 Hacemos el Histogramo. Note que la variable en el eje x es el peso. Por default la variable en Y es la frecuencia en este caso el número de casos.
+
+# Nota2: observe que usamos la función facet_grid  para indicar que necesitamos los histogramas agrupados para la variable categorica  procedimiento.
+
+h1<-ggplot(peso, aes(x=pesoh)) + geom_histogram(fill="white", colour="black") +
 facet_grid(Procedimiento~ .)+xlab("Peso (gramos)")+ylab("Casos")
 
-h2<-ggplot(p220, aes(x=pesoh, fill=Procedimiento)) +
+
+### Representación alternatica con los histogramas en un solo plot, en este caso el parametro fill indica la variable categorixa que usaremos para representar los histogramas, en este caso se mostrarán en la misma grafica. Usamos el argumento identity para indiccar que necesitamos solo el histograma para la variable peso.
+
+h2<-ggplot(peso, aes(x=pesoh, fill=Procedimiento)) +
 geom_histogram(position="identity")+
 xlab("Peso (gramos)")+ylab("Casos")+
 scale_fill_manual(values=c("grey70", "grey20"))
