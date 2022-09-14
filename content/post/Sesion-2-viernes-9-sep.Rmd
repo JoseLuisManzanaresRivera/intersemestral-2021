@@ -503,6 +503,11 @@ Esta es una representación   visual que integra la frecuencia con la ocurre una
 
 Se compone por la suma de la frecuencia observada entre grupos predefinidos.
 
+La estimación considera dos parámetros: El número de grupos o clases  (bins, barras que integran el histograma) y el ancho de clase. 
+
+Para estimar el primer parámetro, consideramos la raíz cuadrada del numero de obsrevaciones en el conjunto de datos.
+
+Para estimar el ancho de clase, dividimos el rango entre el número de clases (bins).
 
 **Contexto**. Creación de histograma para representar la frecuencia de los datos. 
 
