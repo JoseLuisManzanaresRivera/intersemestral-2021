@@ -130,7 +130,7 @@ glimpse(datos)
 
 media_1952<-datos%>%filter(year=="1952")
 
-## Paso 4  hacemos el calculo usando la función summarise y mean. 
+## Paso 4  hacemos el cálculo usando la función summarise y mean. 
 
 m_52<-summarise(media_1952,m=mean(gdpPercap))
 
