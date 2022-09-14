@@ -513,9 +513,9 @@ Para estimar el ancho de clase, dividimos el rango entre el número de clases (b
 
 Ir a **.ipynb** file
 
-```{r, include=FALSE, echo = FALSE, warning = FALSE}
+```{r, warning = FALSE}
 
-### Load data. contiene registros de nacimientos con sindrome de dificultad respiratoria. MX, Variables de interes, peso y tipo de parto  ej cesarea o eutócico.
+### Load data. contiene registros de nacimientos con sindrome de dificultad respiratoria. MX, Variables de interés, peso y tipo de parto.  ej cesarea o eutócico.
 
 
 ## from URL
