@@ -490,18 +490,18 @@ print(y)
 
 Podemos representar esta información mediante diversas visualizaciónes: 
 
-Tres de las mas importantes son:
+Tres de las más importantes son:
 
-> Histogramas
+- **Histogramas**
 
-> Funciones de Densidad (KDF)
+- **Funciones de Densidad (KDF)**
 
-> Box plot.
+- **Box plot**
 
 
 ### Histograma
 
-Esta es una representación   visual que integra la frecuencia con la ocurre una determinada observación. (Nota: representación discreta no contínua) 
+Esta es una representación   visual que integra la frecuencia con la ocurre una determinada observación. (Nota: Es una representación para datos discretos, no contínuos) 
 
 Se compone por la suma de la frecuencia observada entre grupos predefinidos.
 
@@ -535,7 +535,9 @@ str(peso)
 glimpse(peso)
 summary(peso)
 
+```
 
+```{r, include=FALSE}
 
 #N16<-readRDS("N16.rds")
 #glimpse(N16)
@@ -546,6 +548,9 @@ summary(peso)
 # getwd()
 
 ## p220_no_sdr<-select(N16,cve_cie, ent_nac, con_indm,aten_pren,niv_escol,sexoh,tallah,pesoh,apgarh,silverman,procnac,edad_madre )%>%mutate(sdr=ifelse(cve_cie=="P220"|cve_cie=="P229",1,0), sexoh=as.factor(sexoh))%>%filter(pesoh!=9999, tallah!=99,sdr!=1, sexoh!=9,edad_madre!=999, procnac!=9&procnac!=3&procnac!=8&procnac!=4, apgarh<=10, silverman<=10)%>%mutate(proc_n=ifelse(procnac==1,"Eutócico","Cesárea"))%>%rename(Procedimiento=proc_n)
+```
+
+```{r}
 
 ### Paso 2 Hacemos el Histogramo. Note que la variable en el eje x es el peso. Por default la variable en Y es la frecuencia en este caso el número de casos.
 
