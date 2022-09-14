@@ -145,7 +145,7 @@ m_07<-summarise(media_2007,m=mean(gdpPercap))
 ## SOLUCIÓN MEDIA GEOMÉTRICA.
 
 
-# Paso 1 Cargamos el paquete psych.
+# Paso 1 Cargamos el paquete psych. este contiene la función para estimar la media geométrica.
 
 library(psych)
 
@@ -183,6 +183,7 @@ library(psych)
 #media_geo<-exp(mean(log(exa$ingreso.x)))
 
 #media_geo
+
 ## Note que, en primera instancia estimamos el logaritmo de la variable  ingreso. La estimación del logaritmo permite tomar en consideración la naturaleza de crecimeinto exponencial que tiene este variable en particular.
 ## Tal como el algoritmo de estimación de media geométrica indica, obtenemos la media aritmética de los logaritmos y posteriormente reexpresamos el indicador a niveles, es decir no expresados en logaritmos.
 
@@ -263,15 +264,15 @@ Ver Práctica de implementación en **Sesión2_tendencia central.ipynb**
 
 **Estimación de medidas de tendencia central básicas.** 
 
-**Datos:** Correlación entre Salario medio y participación de la Mujer por categoria de ocupación.
+**Datos:** Correlación entre Salario medio y participación de la Mujer por categoría de ocupación.
 
 
 Buscamos deteminar el comportamiento del salario percibido entre un grupo de egresados universitarios de diversas disciplinas.
 
-La base de datos contiene diversas caracteristicas de la población de estudio incluido el salario (una varible numérica ordinal) y la variable que describe la disciplina en la que trabaja el individuo. 
+La base de datos contiene diversas características de la población de estudio incluido el salario (una varible numérica ordinal) y la variable que describe la disciplina en la que trabaja el individuo. 
 
 
-la meta es estimar los salarios promedio para cada grupo ocupacional, así como representar graficamente el comparativo.
+La meta es estimar los salarios promedio para cada grupo ocupacional, así como representar graficamente el comparativo.
 
 ```{r, include=FALSE}
 
@@ -288,8 +289,6 @@ ejercicio_1<-read_rds_from_github(url)
 
 ## Remember to have loaded library(datagovindia)
 
-theme_set(theme_light())
-
 # Cargamos los datos.
 # get data using code chunk above.
 
@@ -297,7 +296,7 @@ theme_set(theme_light())
 
 url_grad<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/graduados.rds?raw=true")
 
-ejercicio_grad<-read_rds_from_github(url_grad)
+graduados<-read_rds_from_github(url_grad)
 
 
 ## Local  load 
@@ -336,8 +335,11 @@ summary(graduados)
   scale_y_continuous(labels=dollar_format())+
   scale_x_continuous(labels=percent_format())+
   labs(x="Mujeres/Hombres", y="Salario Medio  US$")+
-    theme(legend.position="botton")
+    theme(legend.position="botton")+
+   theme_light()
   
+ 
+ 
   ggplotly(g)
 
 ```
