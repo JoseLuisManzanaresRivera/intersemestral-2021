@@ -125,7 +125,7 @@ ingreso <- (data.frame(y=c(3, 7, 5, 13, 20, 23, 39, 23, 40, 23, 14, 12, 56, 23,"
 nums <- as.numeric(as.character(ingreso$y))
 
 m <- mean(nums, na.rm = T)
-mean(replace(ingreso, y=="nd", NA), na.rm = TRUE)
+
 
 ## SOLUCION.
 
@@ -316,9 +316,6 @@ graduados<-read_rds_from_github(url_grad)
 
 ## Local  load 
 
-graduados<-readRDS("graduados.rds")
-
-getwd()
 
 
 # Exploración básica para conocer la estructura.
