@@ -6,6 +6,13 @@ output: html_document
 ---
 
 
+
+```{r}
+library(tidyverse)
+```
+
+
+
 ```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(eval = TRUE, 
                       echo = TRUE, 
@@ -112,6 +119,13 @@ Estime la media aritmética y geométrica para el ingreso percápita de los paí
 
 
 ```{r}
+
+ingreso <- (data.frame(y=c(3, 7, 5, 13, 20, 23, 39, 23, 40, 23, 14, 12, 56, 23,"nd")))
+
+nums <- as.numeric(as.character(ingreso$y))
+
+m <- mean(nums, na.rm = T)
+mean(replace(ingreso, y=="nd", NA), na.rm = TRUE)
 
 ## SOLUCION.
 
@@ -278,6 +292,7 @@ La meta es estimar los salarios promedio para cada grupo ocupacional, así como 
 
 # install.packages("datagovindia")
 
+library(datagovindia)
 
 url<-"https://github.com/bordercode/STATISTICS-I-MDR/blob/main/content/english/blog/graduados.rds?raw=true"
 
@@ -303,7 +318,7 @@ graduados<-read_rds_from_github(url_grad)
 
 graduados<-readRDS("graduados.rds")
 
-
+getwd()
 
 
 # Exploración básica para conocer la estructura.
@@ -324,6 +339,7 @@ glimpse(graduados)
 str(graduados)
 
 # Medidas de tendencia central y estadistica descriptiva básica.
+
 summary(graduados)
 
 
@@ -627,7 +643,7 @@ dgo_temp<-read.csv(urldgo)
 ## Damos un vistazo a los datos para comprobar que las variables  estan en el formato apropiado para su análisis.
 
 
-### Paso 2. Exploramos con el procedimiento estandard.
+### Paso 2. Exploramos con el procedimiento estandar.
 names(dgo_temp)
 view(dgo_temp)
 glimpse(dgo_temp)
@@ -743,9 +759,9 @@ $$=E[X]^2-(E[X]^2)$$
 La varianza es una referencia importante para determinar la dispersión de un conjunto de datos. Sin embargo, cuando queremos comparar las dispersión entre conjuntos de datos una deventaja de la varianza es que esta exprezada en **unidades al cuadrado**.  Es una medida de dispersión que depende de la escala de medición.
 
 
-Esta desventaja la resuelve la **desviación estándard** que es una medida independiente de la escala.  Por este motivo la medida de dispersión clásica que utilizaremos para comparar la dispersión de los datos es la **desviación estádard**. 
+Esta desventaja la resuelve la **desviación estándar** que es una medida independiente de la escala.  Por este motivo la medida de dispersión clásica que utilizaremos para comparar la dispersión de los datos es la **desviación estádard**. 
 
-### Desviación estándard. 
+### Desviación estándar. 
 
 Raíz cuadrada de la varianza.
 
