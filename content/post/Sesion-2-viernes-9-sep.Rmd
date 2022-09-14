@@ -351,9 +351,7 @@ summary(graduados)
     theme(legend.position="botton")+
    theme_light()
   
- 
- 
-  ggplotly(g)
+   ggplotly(g)
 
 ```
 
@@ -369,6 +367,10 @@ Estamos describiendo los datos, estamos haciendo análisis exploratorio de datos
 ## Percentiles
 
 Una pregunta muy frecuente cuando analizamos la distribución de los datos es ¿Qué porcentaje de los datos se encuentra por debajo de cierto umbral? 
+
+Por ejemplo si la base contiene ingresos percapita nos podemos preguntar ¿Cuál es el nivel de ingreso por debajo del cuál se ubica el 60% de la población? 
+
+Si estimamos el percentil 60, tenemos la respuesta a esta pregunta.
 
 La estimación de los percentiles es informativa del grado de concentración de los datos hacia un valor particular. 
 
