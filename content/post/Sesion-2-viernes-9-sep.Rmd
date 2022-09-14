@@ -524,6 +524,8 @@ filter(pesoh!=9999, tallah!=99,sdr==1, sexoh!=9,edad_madre!=999, procnac!=9&proc
   mutate(proc_n=ifelse(procnac==1,"Eutócico","Cesárea"))%>%
   rename(Procedimiento=proc_n)
 
+write.csv(p220,"sindrome.csv")
+getwd()
 
 p220_no_sdr<-select(N16,cve_cie, ent_nac, con_indm,aten_pren,niv_escol,sexoh,tallah,pesoh,apgarh,silverman,procnac,edad_madre )%>%
   mutate(sdr=ifelse(cve_cie=="P220"|cve_cie=="P229",1,0), sexoh=as.factor(sexoh))%>%
