@@ -402,11 +402,13 @@ Determine los cuantiles Q1, Q2, Q3, Q4 para la variable esperanza de vida (lifex
 
 
 ```{r }
+
 library(gapminder)
 
 cuantiles<-gapminder
 
 Africa<-cuantiles%>%filter(continent=="Africa")
+
 quantile(Africa$lifeExp)  
 
 ### Interpretación. 
@@ -449,12 +451,22 @@ q=c(0,.25,.5,.75,1)
 
 ## Paso 2, agrupamos los datos por continente, (recuerde es una variable categ[orica  "factor". Finalmente usamos el verbo summarize para hacer la estimación de los percentiles. Ete calculo se base en la función quantile que toma los argumentos lifeExp y  probs en donde definimos el la columna del vector donde almacenamos los percentiles a estimar )
 
-estimado<-cuantiles%>%
+q=c(.30,.60,.9)
+###1952
+estimado_y52<-cuantiles%>%
+  filter(year=="1952")%>%
   group_by(continent) %>%
   summarize(
-    percentil0 =  quantile(lifeExp, probs =q[1]),
-    percentil25 = quantile(lifeExp, probs = q[2]),    percentil50 = quantile(lifeExp, probs = q[3]),    percentil75 = quantile(lifeExp, probs = q[4]),
-   percentil100 = quantile(lifeExp, probs = q[5]))
+percentil30 =  quantile(gdpPercap, probs =q[1]),
+percentil60 = quantile(gdpPercap, probs = q[2]),    percentil90 = quantile(gdpPercap, probs = q[3]) )
+### 2007
+estimado_y07<-cuantiles%>%
+  filter(year=="2007")%>%
+  group_by(continent) %>%
+  summarize(
+percentil30 =  quantile(gdpPercap, probs =q[1]),
+percentil60 = quantile(gdpPercap, probs = q[2]),    percentil90 = quantile(gdpPercap, probs = q[3]) )
+
 ```
 
 ##### Ejercicio asignación para casa.
@@ -462,6 +474,17 @@ estimado<-cuantiles%>%
 Estime los percentiles 30, 60, 90 para la variable ingreso en el año 1952 y 2007 para los países de los continentes  Africa y  Asia. 
 
 Indique brevemente sus observaciones.
+
+
+```{r}
+
+
+y_52Africa<-cuantiles%>%filter(continent=="Africa",year=="1952")
+  
+names(y_52Africa)
+quantile(y_52Africa$gdpPercap)
+  
+```
 
 
 #### Rango
@@ -574,6 +597,7 @@ summary(peso)
 h1<-ggplot(peso, aes(x=pesoh)) + geom_histogram(fill="white", colour="black") +
 facet_grid(Procedimiento~ .)+xlab("Peso (gramos)")+ylab("Casos")
 
+h1
 
 ### Representación alternatica con los histogramas en un solo plot, en este caso el parametro fill indica la variable categorixa que usaremos para representar los histogramas, en este caso se mostrarán en la misma grafica. Usamos el argumento identity para indiccar que necesitamos solo el histograma para la variable peso.
 
