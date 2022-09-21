@@ -632,6 +632,7 @@ Una particularidad adicional es que en ausencia de **normalidad**  (un concepto 
 
 
 
+
 ![](/img/qq1.jpg)
 
 Nota: Observe que el eje horizontal esta exprezado en términos de un valor exprezado en el numero de desviaciones estándar desde la media, representada con el valor de cero. Estos valores se denominan **valores Z  o Z-scores**. 
