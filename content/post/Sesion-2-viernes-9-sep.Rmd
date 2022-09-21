@@ -634,20 +634,20 @@ Nota: Observe que el eje horizontal esta exprezado en términos de un valor que 
 
 Estos se denominan **Z scores** o valores estandar por que permiten un criterio de comparación entre la distribución de varibles  y nos indican la distancia desde la media 
 exprezada en unidades de desviación estandar, ($\sigma$), 
-así por ejemplo la gráfica indica intervalos de[-4,4], que equivalen la dsitribución de datos por encima o superiores hasta Cuatro desviaciones estándard de la media y datos inferiores en est misma distancia respecto del valor promedio.
+así por ejemplo la gráfica indica intervalos de[-4,4], que equivalen a la dsitribución de datos por encima o superiores hasta Cuatro desviaciones estándard de la media y datos inferiores en esta misma distancia respecto del valor promedio.
 
 
 **Note** que un **patrón concavo** de los datos respecto a la linea de 45° que representa una distribución teórica simétrica (normal), es indicativo de sesgo positivo: ej. la cola de la dsitribución de los datos se extiende  hacia el cuadrante positivo.
 
 Se denomina sesgo negativo cuando el patrón observado es convexo, respecto a la linea de 45° de la **gráfica QQ** (qqplot).
 
-[Ver documentación](https://www.rdocumentation.org/packages/EnvStats/versions/2.3.1/topics/qqPlot)
 
 ##### Ejercicio 1 
 
 Determine si la varaiable talla (medida en centimetros) de la base de datos correspondeinte a caracteristicas de recien nacidos, exhibe una distribución simetrica (normal) de los datos.
 
 
+[documentación para consulta de referencia sobre la función qqplot](https://www.rdocumentation.org/packages/EnvStats/versions/2.3.1/topics/qqPlot)
 ```{r}
 
 ## Estimación de qqplot para variable tallah, esta mide en centimetros la estatura del bebé.
