@@ -613,15 +613,10 @@ scale_fill_manual(values=c("grey70", "grey20"))
 
 ```
 
-```{r,echo= FALSE, fig.height = 8, fig.width = 12, warning=FALSE, message=FALSE}
-h1
-```
 
 ```{r,echo= FALSE, fig.height = 8, fig.width = 12, warning=FALSE, message=FALSE}
 h2
 ```
-
-[Material opcional de consulta para practicar la visualización del histograma ](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
 Importante: La forma del histograma  (en cuanto a su simetría) permite informar sobre **el sesgo de los datos**. 
 
@@ -635,7 +630,7 @@ Una particularidad adicional es que en ausencia de **normalidad**  (un concepto 
 
 ![](/img/qq1.jpg)
 
-Nota: Observe que el eje horizontal esta exprezado en términos de un valor exprezado en el numero de desviaciones estándar desde la media, representada con el valor de cero. Estos valores se denominan **valores Z  o Z-scores**. 
+Nota: Observe que el eje horizontal esta exprezado en términos de un valor que mide  el número de desviaciones estándar desde la media, representada con el valor de cero. Estos valores se denominan **valores Z  o Z-scores**. 
 
 Estos se denominan **Z scores** o valores estandar por que permiten un criterio de comparación entre la distribución de varibles  y nos indican la distancia desde la media 
 exprezada en unidades de desviación estandar, ($\sigma$), 
@@ -677,6 +672,9 @@ negativo
 ```
 
 Nota: El teorema de límite central nos indica que independientente de la distribución de un conjunto de datos, **la distribución muestral** tiende a comportarse acorde a la distribución normal, si la muestra es lo suficientemente grande (n>30). 
+
+
+[Material opcional de consulta para practicar la visualización del histograma ](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
 
 ## Boxplot.
