@@ -594,17 +594,22 @@ summary(peso)
 
 # Nota2: observe que usamos la función facet_grid  para indicar que necesitamos los histogramas agrupados para la variable categorica  procedimiento.
 
-h1<-ggplot(peso, aes(x=pesoh)) + geom_histogram(fill="white", colour="black") +
+h1<-ggplot(peso, aes(x=pesoh)) + geom_histogram(fill="white", colour="blue") +
 facet_grid(Procedimiento~ .)+xlab("Peso (gramos)")+ylab("Casos")
 
-h1
+h1 ## Nota  el argumento colour="namecolor" nos permite asignar un color para las barras del histograma.
 
-### Representación alternatica con los histogramas en un solo plot, en este caso el parametro fill indica la variable categorixa que usaremos para representar los histogramas, en este caso se mostrarán en la misma grafica. Usamos el argumento identity para indiccar que necesitamos solo el histograma para la variable peso.
+### Representación alternativa con los histogramas en un solo plot, en este caso el parametro fill indica la variable categorixa que usaremos para representar los histogramas, en este caso se mostrarán en la misma grafica. Usamos el argumento identity para indiccar que necesitamos solo el histograma para la variable peso.
 
 h2<-ggplot(peso, aes(x=pesoh, fill=Procedimiento)) +
 geom_histogram(position="identity")+
 xlab("Peso (gramos)")+ylab("Casos")+
 scale_fill_manual(values=c("grey70", "grey20"))
+
+
+## Nota el argumento fill=" " , nos permite incluir una variable categórica (un factor) para obtener sub plots en este caso dos histogramas correspondientes a la categoría procedimiento (cesarea, eutócico). Intuitivamente fill "rellenará" cada categoría con un plot, este argumento se debe acompañar de la opción **scale_fill_manual** que permite definir los colores asignados para cada histograma de la categoria procedimiento.
+
+
 
 ```
 
