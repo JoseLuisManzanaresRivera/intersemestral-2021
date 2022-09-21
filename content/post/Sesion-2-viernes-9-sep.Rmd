@@ -621,7 +621,7 @@ h1
 h2
 ```
 
-
+[Material opcional de consulta para practicar la visualización del histograma ](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
 Importante: La forma del histograma  (en cuanto a su simetría) permite informar sobre **el sesgo de los datos**. 
 
@@ -630,7 +630,53 @@ En la figura siguiente se observan dos esenarios relevantes: **Sesgo positivo** 
 Una particularidad adicional es que en ausencia de **normalidad**  (un concepto que revisaremos en la sesión sobre distribuciones de probabilidad) de los datos las medidas de tendencia central **media** y **mediana** difieren.
 
 
+
+
 ![](/img/qq1.jpg)
+
+Nota: Observe que el eje horizontal esta exprezado en términos de un valor exprezado en el numero de desviaciones estándar desde la media, representada con el valor de cero. Estos valores se denominan **valores Z  o Z-scores**. 
+
+Estos se denominan **Z scores** o valores estandar por que permiten un criterio de comparación entre la distribución de varibles  y nos indican la distancia desde la media 
+exprezada en unidades de desviación estandar, ($\sigma$), 
+así por ejemplo la gráfica indica intervalos de[-4,4], que equivalen la dsitribución de datos por encima o superiores hasta Cuatro desviaciones estándard de la media y datos inferiores en est misma distancia respecto del valor promedio.
+
+
+**Note** que un **patrón concavo** de los datos respecto a la linea de 45° que representa una distribución teórica simétrica (normal), es indicativo de sesgo positivo: ej. la cola de la dsitribución de los datos se extiende  hacia el cuadrante positivo.
+
+Se denomina sesgo negativo cuando el patrón observado es convexo, respecto a la linea de 45° de la **gráfica QQ** (qqplot).
+
+[Ver documentación](https://www.rdocumentation.org/packages/EnvStats/versions/2.3.1/topics/qqPlot)
+
+##### Ejercicio 1 
+
+Determine si la varaiable talla (medida en centimetros) de la base de datos correspondeinte a caracteristicas de recien nacidos, exhibe una distribución simetrica (normal) de los datos.
+
+
+```{r}
+
+## Estimación de qqplot para variable tallah, esta mide en centimetros la estatura del bebé.
+
+
+library(ggpubr)
+
+ggqqplot(peso$tallah)
+
+```
+
+**Ans:** variable con sesgo negativo
+
+
+**Verificación mediante inspección visual del histograma correspondiente**
+
+```{r}
+
+negativo<-ggplot(peso, aes(x=tallah)) + geom_histogram(fill="white", colour="blue") +
+facet_grid(Procedimiento~ .)+xlab("Peso (gramos)")+ylab("Casos")
+negativo
+```
+
+Nota: El teorema de límite central nos indica que independientente de la distribución de un conjunto de datos, **la distribución muestral** tiende a comportarse acorde a la distribución normal, si la muestra es lo suficientemente grande (n>30). 
+
 
 ## Boxplot.
 
