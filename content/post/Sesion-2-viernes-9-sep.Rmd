@@ -478,7 +478,6 @@ Indique brevemente sus observaciones.
 
 ```{r}
 
-
 y_52Africa<-cuantiles%>%filter(continent=="Africa",year=="1952")
   
 names(y_52Africa)
