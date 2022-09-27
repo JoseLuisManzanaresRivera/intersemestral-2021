@@ -1,5 +1,5 @@
 theme = "vanilla-bootstrap-hugo-theme"
-baseURL = "https://stat202.netlify.app"
+baseURL = "https://s2022.netlify.app"
 languageCode = "en-us"
 title = "Estadística I."
 
