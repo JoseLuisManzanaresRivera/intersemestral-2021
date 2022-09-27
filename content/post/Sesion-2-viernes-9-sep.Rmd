@@ -714,7 +714,7 @@ Distribución de temperaturas mínimas diarias registradas en estación metereol
 
 ```{r,  fig.height = 8, fig.width = 12,  echo = FALSE, warning = FALSE}
 
- Paso 1 get data from url
+# Paso 1 get data from url
 
 #urldgo<-"https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/dgo_temp.csv"
 
@@ -723,12 +723,15 @@ Distribución de temperaturas mínimas diarias registradas en estación metereol
 
 #dgo_temp<-readRDS("dgo_temps.rds")
 
-dgo<-read.csv("dgo_datos_clima.csv")
+
 
 
 ## Damos un vistazo a los datos para comprobar que las variables  estan en el formato apropiado para su análisis.
+```
 
-
+```{r}
+# Paso 1 get data
+dgo<-read.csv("dgo_datos_clima.csv")
 ### Paso 2. Exploramos con el procedimiento estandar.
 names(dgo)
 view(dgo)
