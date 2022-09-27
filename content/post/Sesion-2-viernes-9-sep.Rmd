@@ -879,6 +879,7 @@ Con los datos sobre temperatura disponibles sobre la temperatura por la estació
 
 + ¿Qué año presenta la mayor precipitación?
 
++ Represente graficamente la trayectoria de la variable 
 
 [Link descarga datos práctica]("https://drive.google.com/file/d/1ZiBDa7FGMc9_fdGCIV76AzNVQ0LMey7m/view?usp=sharing")
 
@@ -932,5 +933,19 @@ geom_hline(yintercept = 343.5, size=.5, linetype="dashed",color='darkblue')
 ```{r,message=FALSE, include= FALSE, echo=FALSE}
 ggplotly(plt)
 ```
+
+Note que se tiene una linea de tendencia, esta resulta de la aplicación del parámetro **geom_smooth** este actua como un filtro que permite observar la tendencia de la temperatura 
+a lo largo de la serie de tiempo. 
+
+Su aplicación *"suaviza"* el comportamiento de la variable en niveles, (línea en gris). En el *background*  el parámetro **geom_smooth** realiza una **regresión lineal por el método de mínimos cuadrados ordinarios** (un tema que desarrollaremos a detalle en la sección siguiente), usando la especificación **LOESS** (locally estimated scatterplot smoothing). 
+
+
+Su aplicación resulta en un método de visualización que permite determinar el comportamiento o tendencia de la variable de interés. 
+
+
+
+
+
+
 
 
