@@ -729,6 +729,7 @@ Distribución de temperaturas mínimas diarias registradas en estación metereol
 ## Damos un vistazo a los datos para comprobar que las variables  estan en el formato apropiado para su análisis.
 ```
 
+
 ```{r}
 # Paso 1 get data
 dgo<-read.csv("dgo_datos_clima.csv")
@@ -778,7 +779,7 @@ boxplot
 
 **Ejemplo 2:** 
 
-Determinación de Media, rango intercualtil y percentiles 1 y 3 (q25 y q75). Representación con boxplot para variables tipo categoricas. 
+Determinación de Media, rango intercualtil y percentiles 25 y 75  Q1 y Q3 (q25 y q75). Representación con boxplot para variables tipo categóricas. 
 
 
 ```{r,  fig.height = 8, fig.width = 12, include=FALSE,  echo = FALSE, warning = FALSE}
@@ -807,8 +808,6 @@ Determinación de Media, rango intercualtil y percentiles 1 y 3 (q25 y q75). Rep
 #bc_tem<-read.csv(url_bc_temp)
 
 bc_temp<-read.csv("baja_temp.csv")
-
-
 
 ## Paso 2  Make boxplot.
 
