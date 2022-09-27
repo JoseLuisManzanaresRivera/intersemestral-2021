@@ -723,11 +723,6 @@ Distribución de temperaturas mínimas diarias registradas en estación metereol
 ## Load data set form From local
 
 #dgo_temp<-readRDS("dgo_temps.rds")
-library(XML)
-
-url<-"https://drive.google.com/file/d/1zIZyX4ZAFPwjgqcTT6rSUgzNutJok_wD/view?usp=sharing"
-
-d <-read.csv(url)
 
 dgo<-read.csv("dgo_datos_clima.csv")
 
@@ -810,11 +805,11 @@ Determinación de Media, rango intercualtil y percentiles 1 y 3 (q25 y q75). Rep
 
 bc_temp<-read.csv("baja_temp.csv")
 
-getwd()
+
 
 ## Paso 2  Make boxplot.
 
-boxplot_2<-ggplot(bc_tem, aes(x=fct_inorder(meses), y=temp)) + geom_boxplot(aes(fill=minmax))+
+boxplot_2<-ggplot(bc_temp, aes(x=fct_inorder(meses), y=temp)) + geom_boxplot(aes(fill=maxmin))+
 xlab("Mes")+
 ylab("Temperatura diaria máxima y mínima°c")+
 theme_light()+
@@ -828,11 +823,6 @@ theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
 library(plotly)
 ggplotly(boxplot_2)
 ```
-
-
-
-
-
 
 
 *Documentación adicional con ejemplos de repaso* [boxplot](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
