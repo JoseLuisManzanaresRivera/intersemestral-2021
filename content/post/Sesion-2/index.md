@@ -5,7 +5,7 @@ tags:
 - Conceptos 
 - IDE
 - Tidyverse
-title: Miércoles 7 Septiembre (2)
+title: Preeliminares sobre manejo de datos e instalación de software.
 mathjax: true
 ---
 
