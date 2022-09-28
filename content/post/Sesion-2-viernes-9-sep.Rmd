@@ -901,6 +901,8 @@ Raíz cuadrada de la varianza.
 
 $$\sqrt{\sigma^2} = \sigma$$
 
+O bien solo **S** Cuando nos referimos al estadistico (**muestral**)
+
 Esta medida, la podemos estimar usando la función `sd()` en **R** com oargumento incluimos la bse de datos y el nombre de la columna que contiene la variable númerica de la cual vamos a obtener la desviación estándar.   
 
 **Por ejemplo**, si mi base de datos se nombra  **x**  y dentro de este  **data frame** tengo una variable denominada **ingreso** de la cual, que me interesa conocer la desviación estándar, entonces la puedo estimar con la siguiente especificación `sd(x$ingreso)`. 
