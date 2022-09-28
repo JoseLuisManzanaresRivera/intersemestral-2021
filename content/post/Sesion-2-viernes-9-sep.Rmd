@@ -644,7 +644,7 @@ En ambos casos la posición relativa entre media y mediana corresponde con el ti
 
 Por ejemplo: 
 
-La **media** de un conjunto de datos con **sesgo positivo** se ubica **a la derecha** de la mediana. En el escenario de una distribución con sesgo negativo, la media se ubica a la izquierda de la mediana.
+La **media** de un conjunto de datos con **sesgo positivo** se ubica **a la derecha** de la mediana. En el escenario de una distribución con **sesgo negativo**, la media se ubica a la **izquierda** de la **mediana**.
 
 ![(/img/escenarios.jpg)
 
@@ -989,7 +989,7 @@ ggplotly(plt)
 
 ## Actividad.
 
-Revise la página 42  sección: "aplica tus conocimientos", del libro de texto [](Estadística aplicada básica, 2a ed.) y realiza los ejercicios.  **Ej 1.31, 1.32, 1.33**
+Revise la página 42  sección: "aplica tus conocimientos", del libro de texto Estadística aplicada básica[enlace de descarga del libro aquí](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing) y realiza los ejercicios.  **Ej 1.31, 1.32, 1.33**
 
 -------------------------------------
 
@@ -1060,4 +1060,4 @@ En términos generales la **distribución normal estandarizada**, se expreza  co
 
 ### Tarea. Se recomineda revisar el material del libro de texto: 
 
-[Libro de texto](Subir libro de texto Estadística aplicada básica ubicado en docencia books) sección 1.44, páginas 64-79.
+[Libro de texto](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing) sección 1.44, páginas 64-79.
