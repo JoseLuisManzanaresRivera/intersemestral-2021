@@ -678,7 +678,9 @@ facet_grid(Procedimiento~ .)+xlab("Peso (gramos)")+ylab("Casos")
 negativo
 ```
 
-Nota: El teorema de límite central nos indica que independientente de la distribución de un conjunto de datos, **la distribución muestral** tiende a comportarse acorde a la distribución normal, si la muestra es lo suficientemente grande (n>30). 
+##### Nota: 
+
+**El teorema de límite central** nos indica que independientente de la distribución de un conjunto de datos, **la distribución muestral** tiende a comportarse acorde a la **distribución normal**, si la muestra es lo suficientemente **grande (n>30).** 
 
 
 [Material opcional de consulta para practicar la visualización del histograma ](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
