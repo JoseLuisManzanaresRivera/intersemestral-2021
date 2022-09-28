@@ -914,7 +914,7 @@ Tenemos que ser cautelos al interpretar **S** como una medida de dispersión con
 ## Actividad 
 
 
-Con los datos  disponibles sobre precipitaciones registrados en la estación meteorológica  en Tijuana, determine: 
+Con los datos  disponibles sobre precipitaciones registrados en la estación meteorológica  en [Tijuana](https://drive.google.com/file/d/1ZiBDa7FGMc9_fdGCIV76AzNVQ0LMey7m/view?usp=sharing), determine: 
 
 + ¿Qué valor toma la media, la mediana, Q1, Q3 y cuál es el rango intercuartil?
 
