@@ -1029,7 +1029,7 @@ Una particularidad relevante de las distribuciones normales es que cumplen con l
 
 ![](/img/regla_normal.jpg)
 
-¿Por que tanto enfasis en las distribciones normales? 
+### ¿Por que tanto énfasis en las distribciones normales? 
 
 + Por que describen una gran cantidad de situaciones empíricas de naturaleza aleatoria.
 
