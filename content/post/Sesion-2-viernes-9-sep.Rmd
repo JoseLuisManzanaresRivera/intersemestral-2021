@@ -628,7 +628,7 @@ En la figura siguiente se observan dos esenarios relevantes: **Sesgo positivo** 
 Una particularidad adicional es que en ausencia de **normalidad**   de los datos, las medidas de tendencia central **media** y **mediana** difieren.
 
 
-**Importante**: La **validéz** de las estimaciones para diferentes distribuciones de datos depende de la simetría de la distribución de los datos, esto es, depende de que la distribución de los datos se comporte conforme al criterio de  **normalidad**. 
+**Importante**: La distribución normal es útil como veremos al trabajar con estadística inferencial por que  la confiabilidad de algunos estimados  depende de este comportamiento de normalidad. 
 
 
 ![](/img/qq1.jpg)
