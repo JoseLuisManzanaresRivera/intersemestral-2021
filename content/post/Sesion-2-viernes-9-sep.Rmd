@@ -10,6 +10,7 @@ output: html_document
 ```{r}
 library(tidyverse)
 library(datagovindia)
+library(plotly)
 ```
 
 
@@ -290,8 +291,6 @@ La base de datos contiene diversas características de la población de estudio 
 La meta es estimar los salarios promedio para cada grupo ocupacional, así como representar graficamente el comparativo.
 
 ```{r, include=FALSE}
-
-# install.packages("datagovindia")
 
 library(datagovindia)
 
@@ -625,29 +624,34 @@ Importante: La forma del histograma  (en cuanto a su simetría) permite informar
 
 En la figura siguiente se observan dos esenarios relevantes: **Sesgo positivo**  y **negativo**. En ambos casos se tiene una implicación sobre el supuesto de normaliad de los datos. Recordemos que la simetría es una condición necesaria de una   **distribución normal.** 
 
-Una particularidad adicional es que en ausencia de **normalidad**  (un concepto que revisaremos en la sesión sobre distribuciones de probabilidad) de los datos las medidas de tendencia central **media** y **mediana** difieren.
+
+Una particularidad adicional es que en ausencia de **normalidad**   de los datos, las medidas de tendencia central **media** y **mediana** difieren.
 
 
-
+**Importante**: La **validéz** de las estimaciones para diferentes distribuciones de datos depende de la simetría de la distribución de los datos, esto es, depende de que la distribución de los datos se comporte conforme al criterio de  **normalidad**. 
 
 
 ![](/img/qq1.jpg)
-
-Nota: Observe que el eje horizontal esta exprezado en términos de un valor que mide  el número de desviaciones estándar desde la media, representada con el valor de cero. Estos valores se denominan **valores Z  o Z-scores**. 
-
-Estos se denominan **Z scores** o valores estandar por que permiten un criterio de comparación entre la distribución de varibles  y nos indican la distancia desde la media 
-exprezada en unidades de desviación estandar, ($\sigma$), 
-así por ejemplo la gráfica indica intervalos de[-4,4], que equivalen a la dsitribución de datos por encima o superiores hasta Cuatro desviaciones estándard de la media y datos inferiores en esta misma distancia respecto del valor promedio.
-
-
 **Note** que un **patrón concavo** de los datos respecto a la linea de 45° que representa una distribución teórica simétrica (normal), es indicativo de sesgo positivo: ej. la cola de la dsitribución de los datos se extiende  hacia el cuadrante positivo.
 
 Se denomina sesgo negativo cuando el patrón observado es convexo, respecto a la linea de 45° de la **gráfica QQ** (qqplot).
 
 
+
+Para enfatizar. cuando **no tenemos simetría**, las funciones de distribución no son **normales** y observamos sesgos que pueden ser tanto en sentido positivo como negativo. 
+
+En ambos casos la posición relativa entre media y mediana corresponde con el tipo de sesgo en cuestión. 
+
+Por ejemplo: 
+
+La **media** de un conjunto de datos con **sesgo positivo** se ubica **a la derecha** de la mediana. En el escenario de una distribución con sesgo negativo, la media se ubica a la izquierda de la mediana.
+
+![(/img/escenarios.jpg)
+
+
 ##### Ejercicio 1 
 
-Determine si la varaiable talla (medida en centimetros) de la base de datos correspondeinte a caracteristicas de recien nacidos, exhibe una distribución simetrica (normal) de los datos.
+Determine si la varaiable talla (medida en centimetros) de la base de datos correspondiente a características de recién nacidos, exhíbe una distribución simátrica (normal) de los datos.
 
 
 [documentación para consulta de referencia sobre la función qqplot](https://www.rdocumentation.org/packages/EnvStats/versions/2.3.1/topics/qqPlot)
@@ -678,6 +682,7 @@ Nota: El teorema de límite central nos indica que independientente de la distri
 
 
 [Material opcional de consulta para practicar la visualización del histograma ](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
+
 
 
 ## Boxplot.
@@ -838,23 +843,51 @@ ggplotly(boxplot_2)
 
 *Documentación adicional con ejemplos de repaso* [boxplot](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
 
+
+En síntesis es posible describir una distribución a partir de 5 medidas resumen estas nos permiten contar con elementos para comparar entre la distribución de conjuntos de datos:
+
+Q0 (min), Q1, media, Q3, Q100 (max).
+
+Las herramientas visuales del **Histograma** y los **diagramas de caja**, complementan la información al permitir una valoración directa de la forma de la distribución así como la detección de **valores atípicos**.
+
+
 ### Varianza
 
 El valor promedio de las desviaciones al cuadrado de cada elemento *i*  respecto a la media.
 
+En términos muestrales tenemos: 
+
+
+$$s^2_x = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{X})^2$$
+**Definición del concepto de GRADOS DE LIBERTAD**
+
+Nota que  para calcular la varianza $s^{2}$ dividimos la sumatoria entre el **número de observaciones menos uno**, es decir, por **n − 1**, en vez de **n**. 
+
+La razón es que la suma de las desviaciones $x_{i} − \bar{X}$ es siempre cero, la última desviación se puede hallar cuando se conocen las otras **n − 1**. 
+
+Solamente **n − 1** de las desviaciones al
+cuadrado pueden variar **libremente**. 
+
+Esta es la razón por la que dividimos entre
+**n − 1**. 
+
+Al número **n − 1** se le denomina **grados de libertad** de la varianza o grados de 
+libertad de la desviación estándar. 
+
+
 
 $$V(X)= Var(X)=\sigma^2_{X}$$
-$$\sigma^2_x = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2$$
 
-O en términos de valor esperado tenemos: 
-$$Var[X]=E[(X-E[X]^2)]$$
-$$=E[X]^2-(E[X]^2)$$
+La varianza es una referencia importante para determinar la dispersión de un conjunto de datos. 
 
+Sin embargo, cuando queremos comparar las dispersión entre conjuntos de datos una deventaja de la varianza es que esta exprezada en **unidades al cuadrado**.  
 
-La varianza es una referencia importante para determinar la dispersión de un conjunto de datos. Sin embargo, cuando queremos comparar las dispersión entre conjuntos de datos una deventaja de la varianza es que esta exprezada en **unidades al cuadrado**.  Es una medida de dispersión que depende de la escala de medición.
+Es una medida de dispersión que depende de la escala de medición.
 
 
-Esta desventaja la resuelve la **desviación estándar** que es una medida independiente de la escala.  Por este motivo la medida de dispersión clásica que utilizaremos para comparar la dispersión de los datos es la **desviación estádard**. 
+Esta desventaja la resuelve la **desviación estándar** que es una medida independiente de la escala.  
+
+Por este motivo la medida de dispersión **clásica** que utilizaremos para comparar la dispersión de los datos es la **desviación estádar**. 
 
 ### Desviación estándar. 
 
@@ -862,26 +895,28 @@ Raíz cuadrada de la varianza.
 
 $$\sqrt{\sigma^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2}=\sigma$$
 
+----------------------------------------------
 
 Asociado a esta medida, podemos calcular **el coeficiente de variación** que solo añale la relación  de esta dispersión, medida por la desviación estándard respecto a la media. Este coeficiente se ubica en el rango 0-1 frecuentemente, pero en algunas distribuciones puede superar la unidad. 
 $$cv=\frac{\sigma_x}{|\bar{X}|}$$
 En términos generales entre mayor es el **cv**, tenemos una mayor dispersión en los datos. 
 
++ Un rasgo importante de la desviación estándar es que es particularmente sensible a la presencia de datos atípicos   (valores extremos o *outliers*). 
 
+Tenemos que ser cautelos al interpretar **S** como una medida de dispersión confiable si obervamos la presencia de datos atípicos en nuestro conjunto de datos. 
 
 
 ## Actividad 
 
 
-Con los datos sobre temperatura disponibles sobre la temperatura por la estación meteorológica  en Tijuana, determine: 
+Con los datos  disponibles sobre precipitaciones registrados en la estación meteorológica  en Tijuana, determine: 
 
-+ ¿Qué valor toma la media, la mediana, Q1, Q3 y cuál es el rando intercuartil?
++ ¿Qué valor toma la media, la mediana, Q1, Q3 y cuál es el rango intercuartil?
 
 + ¿Qué año presenta la mayor precipitación?
 
-+ Represente graficamente la trayectoria de la variable 
++ Represente graficamente la trayectoria de la variable.  
 
-[Link descarga datos práctica]("https://drive.google.com/file/d/1ZiBDa7FGMc9_fdGCIV76AzNVQ0LMey7m/view?usp=sharing")
 
 ```{r}
 ## Paso 1 Read datos 
@@ -913,6 +948,7 @@ summary(precip)
 glimpse(precip)
 
 ## Convertimos variable año de Chr string a numérica.
+
 precip<-mutate(precip,año=as.numeric(año))
 
 ### paso 3 plot Representación en line plot. 
@@ -934,18 +970,94 @@ geom_hline(yintercept = 343.5, size=.5, linetype="dashed",color='darkblue')
 ggplotly(plt)
 ```
 
-Note que se tiene una linea de tendencia, esta resulta de la aplicación del parámetro **geom_smooth** este actua como un filtro que permite observar la tendencia de la temperatura 
-a lo largo de la serie de tiempo. 
 
-Su aplicación *"suaviza"* el comportamiento de la variable en niveles, (línea en gris). En el *background*  el parámetro **geom_smooth** realiza una **regresión lineal por el método de mínimos cuadrados ordinarios** (un tema que desarrollaremos a detalle en la sección siguiente), usando la especificación **LOESS** (locally estimated scatterplot smoothing). 
-
-
-Su aplicación resulta en un método de visualización que permite determinar el comportamiento o tendencia de la variable de interés. 
+```{r, include=FALSE}
 
 
 
+#Note que se tiene una linea de tendencia, esta resulta de la aplicación del parámetro **geom_smooth** este actua como un filtro que permite observar la tendencia de la temperatura a lo largo de la serie de tiempo. 
+
+#El estimado que se logra con la función geom_smooth *"suaviza"* el comportamiento de la variable en niveles, (línea en gris). 
+
+#En el *background*  el parámetro **geom_smooth** realiza una **regresión lineal por el método de mínimos cuadrados ordinarios** (un tema que desarrollaremos a detalle en la sección siguiente), usando la especificación **LOESS** (locally estimated scatterplot smoothing). 
+
+
+#Su aplicación resulta en un método de visualización que permite determinar el comportamiento o tendencia de la variable de interés. 
+```
 
 
 
+## Actividad.
+
+Revise la página 42  sección: "aplica tus conocimientos", del libro de texto [](Estadística aplicada básica, 2a ed.) y realiza los ejercicios.  **Ej 1.31, 1.32, 1.33**
+
+-------------------------------------
+
+ 
+## Precisiones sobre la distribución normal.
+
+Una **caso particular de distribución esta dado cuando observamos simetría** (ej. media, mediana son igueales). 
+
+En este caso, ambos lados de la función de densidad integran **la misma proporción de datos**. 
+
+En términos de su forma, estas curvas además de ser **simétricas** tiene un sólo pico, (no tiene dos **modas**  no son bimodales) y tienen forma de **campana**.
+
+La curva de densidad de una distribución de datos **normal**, se describe completamente a partir de su media $\mu$ y desviación estándar $\sigma$ 
+
+Y la podemos denotar $N(\mu, \sigma)$
+
+Considere los dos ejemplos siguientes, **ambos son escenarios de distribuciones normales**, aunque el grado de dispersión es mayor en el primer caso.
+
+El parámetro $\sigma$ controla el grado de dsipersión de la **curva normal**. 
+
+![](/img/normalidad.jpg)
+
+En términos gráficos, el **punto de inflexión**, se ubica a una distancia de magnitud  $\sigma$ respecto de $\mu$.
+
+![](/img/inflexion.jpg)
+
+## Paricularidades de la distribución normal.
+
+Una particularidad relevante de las distribuciones normales es que cumplen con la siguiente regla:
+
++ El **68%** de los datos se localiza a una $+,- \sigma$  desviación estándar,  de la media $\mu$. 
+
++ El **95%** de los datos se localiza a $+,- 2\sigma$  de la media $\mu$
+
++ El **99.7%** de los datos se localiza a $+,- 3\sigma$ de la media $\mu$
+
+![](/img/regla_normal.jpg)
+
+¿Por que tanto enfasis en las distribciones normales? 
+
++ Por que describen una gran cantidad de situaciones empíricas de naturaleza aleatoria.
+
++ Los procesos de **inferencia estadística**   permiten resultados confiables (robusos) cuando se aplican a distribuciones simétricas. Dependen de esta condición.  
+
+##### Actividad para afianzar los conceptos
+
+Conteste las siguientes preguntas
+
+![](/img/preguntas.jpg)
 
 
+Para finalizar esta sección es importante notar que es frecuente usar los **valores estandarizados** de la distribución normal con fines de comparación de las distribuciones. 
+
+Estandarizar en este caso consiste en tomar un valor particular del conjunto de datos, restarle el valor de la media y dividirlo entre la desviación estándar. 
+
+A este valor estandarizado se le denomina **Z Score** y se obtiene  $$z=\frac{x-\mu}{\sigma}$$ 
+
+Este **score z** nos indica a **cuántas desviaciones estándar** se encuentra la observación original de la **media** y en qué dirección. 
+
+Las observaciones **mayores** que la media
+son positivas y las **menores**, negativas.
+ 
+ 
+Resumiendo: El **proceso de estandarización** unicamente permite exprezar los valores de las distribución en relación a una **escala común**, en este caso, una **distancia respecto a la media**.
+
+En términos generales la **distribución normal estandarizada**, se expreza  con los parámetros media cero y desviación estándar =  1 o bien $$N(0,1)$$ $$z=\frac{x-\mu}{\sigma}$$
+
+
+### Tarea. Se recomineda revisar el material del libro de texto: 
+
+[Libro de texto](Subir libro de texto Estadística aplicada básica ubicado en docencia books) sección 1.44, páginas 64-79.

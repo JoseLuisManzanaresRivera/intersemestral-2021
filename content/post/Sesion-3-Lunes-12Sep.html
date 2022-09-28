@@ -22,21 +22,20 @@ tags: ["R Markdown", "plot", "boxplot"]
 <p>Estudiar las reglas de probabilidad y las disrtibucións de probabilidad.</p>
 <div id="meta-de-aprendizaje" class="section level3">
 <h3>Meta de aprendizaje:</h3>
-<p>Conocer las distribuciones de probabilidad y…</p>
+<p>Conocer las herramientas matemáticas para describir la distribución de datos numéricos en poblaciones y muestras.</p>
 <div id="contexo" class="section level4">
 <h4>Contexo:</h4>
 <p>Estadística descriptiva.</p>
 </div>
 <div id="definiciones." class="section level4">
 <h4>Definiciones.</h4>
-<p>El correcto diseño de nuestros análisis a menudo permite que las muestras seleccionadas constituyan una adecuada representación de la población de estudio.</p>
-<p><strong>Population</strong> Includes all of the elements from a set of data.</p>
-<p><strong>Sample</strong> Consists of one or more observations from the population.</p>
+<p><strong>Población</strong> Incluye todos los elementos de un conjunto de datos.</p>
+<p><strong>Muestra</strong> Consiste en una o más observaciones de la población.</p>
 <ul>
-<li><p><strong>Parameter</strong> Characteristic of a population, such as a mean or standard deviation. Often notated using Greek letters.</p></li>
-<li><p><strong>Statistic</strong> A measurable characteristic of a sample.</p></li>
+<li><p><strong>Parámetro</strong> Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan letras griegas para referirnos a una parámetro.</p></li>
+<li><p><strong>Estadístico</strong> Una característica medible de una <strong>muestra</strong>.</p></li>
 </ul>
-<p><strong>Examples of statistics are:</strong></p>
+<p><strong>Ejemplos de una estadistico:</strong></p>
 <ul>
 <li>La media de la muestra</li>
 <li>El rango de la muestra</li>
@@ -44,14 +43,14 @@ tags: ["R Markdown", "plot", "boxplot"]
 </ul>
 <p><img src="/img/samples.jpg" /></p>
 <p>Si no conocemos el <strong>paramétro</strong> (ingreso medio de los trabajadores en Baja california), podemos estimar el <strong>estadístico</strong> de una <strong>muestra</strong> y a partir de este <strong>inferir</strong> el parámetro <strong>poblacional</strong></p>
-<p>La representatividad de la <strong>muestra</strong> es importante para la validéz de <strong>estadístico</strong> que permite inferir el <strong>parámetro</strong> de interés.</p>
+<p>La representatividad de la <strong>muestra</strong> es importante para la validéz del <strong>estadístico</strong> que permite inferir el <strong>parámetro</strong> de interés.</p>
+<p>El correcto diseño de nuestros análisis permite que las <strong>muestras</strong> seleccionadas constituyan una adecuada representación de la <strong>población de estudio</strong>.</p>
 <ul>
-<li><p><strong>Sampling distribution</strong> The probability distribution of a given statistic based on a random sample.</p></li>
-<li><p><strong>Statistical inference</strong>Enables you to make an educated <strong>guess</strong> about a population parameter based on a statistic computed from a
-<strong>sample randomly drawn</strong> from that population.</p></li>
+<li><p><strong>Distribución de muestreo</strong> La distribución de probabiliad de un estadístico dado. Con base en una muestra aleatoria.</p></li>
+<li><p><strong>Inferencia estadística</strong> Te permite hacer una conjetura “educada” respecto de un parámetro poblacional, basado en un estadístico calculado usando una muestra aleatoria de la población.</p></li>
 </ul>
-<p><strong>Convención sobre la notación:</strong></p>
-<p>Population parameters are often indicated using <strong>Greek letters</strong>, while sample statistics typically use standard letters.</p>
+<p><strong>Convención sobre la notación:</strong>
+Los Parámetros (poblacionales) son denotados generalmente con el uso de letras griegas. Mientras los estadísticos (muestrales) son expresados con letras convencionales.</p>
 <p><strong>Ejemplo.</strong></p>
 <p>Parámetro poblacional <span class="math inline">\(\mu\)</span>, Desv std <span class="math inline">\(\sigma\)</span>
 Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <strong>S</strong></p>
@@ -65,23 +64,25 @@ Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <str
 </div>
 <div id="distribuciones-discretas." class="section level2">
 <h2>Distribuciones discretas.</h2>
-<p>Un ejemplo clásico simple de una distribución de probabilidad discreta es el lanzamiento de un dado.</p>
+<p>Un ejemplo <strong>clásico</strong> simple de una distribución de <strong>probabilidad discreta</strong> es el lanzamiento de un dado.</p>
 <p>Para cada uno de los lados desde <span class="math inline">\(i=1.....6\)</span> la probabilidad de que un lanzamiento del dado tenga la cara <span class="math inline">\(i\)</span> es <span class="math display">\[P_{i}=\frac{1}{6}\]</span> Con <span class="math inline">\(i=1....6\)</span></p>
 <p>Las propiedades de la distribución discreta de probabilidad son :
-+ <span class="math display">\[0\leq{P_{i}}\leq{1},    \forall i \in N\]</span>
-+ <span class="math display">\[\sum_{i=1}^{n} P_{i}=1\]</span></p>
++ <span class="math display">\[0\leq{P_{i}}\leq{1},    \forall i \in N\]</span></p>
+<ul>
+<li><span class="math display">\[\sum_{i=1}^{n} P_{i}=1\]</span></li>
+</ul>
 <div id="ejercicio." class="section level4">
 <h4>Ejercicio.</h4>
 <p>Genere un <strong>dado virtual:</strong></p>
 <pre class="r"><code>1:6</code></pre>
 <pre><code>## [1] 1 2 3 4 5 6</code></pre>
-<p>Este notación nos permite tener un lista de números entre 1 y 6, pero es necesario almacenarlos. Para lo cual asignamos un nombre usando el simbolo <strong>$&lt;-</strong> que equivale a decir igual que.</p>
+<p>Este notación nos permite tener un lista de números entre 1 y 6, pero es necesario almacenarlos. Para lo cual asignamos un nombre usando el símbolo <strong>$&lt;-</strong> que equivale a decir igual que.</p>
 <pre class="r"><code>Dado&lt;-1:6
 Dado</code></pre>
 <pre><code>## [1] 1 2 3 4 5 6</code></pre>
 <p><strong>Note:</strong> Cuando creamos un objeto este aparece en la parte superior derecha en el área de environment.</p>
 <p><img src="/environment.jpg" /></p>
-<pre class="r"><code>## Pruebe generar dados de diferente numero de caras.
+<pre class="r"><code>## Pruebe generar dados de diferente número de caras.
 
 dado&lt;-1:10
 dado</code></pre>
@@ -89,9 +90,9 @@ dado</code></pre>
 <pre class="r"><code>dado&lt;-1:6
 dado</code></pre>
 <pre><code>## [1] 1 2 3 4 5 6</code></pre>
-<pre class="r"><code>dice&lt;-1:6
-dice</code></pre>
-<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<pre class="r"><code>dadosietecaras&lt;-1:7
+dadosietecaras</code></pre>
+<pre><code>## [1] 1 2 3 4 5 6 7</code></pre>
 <p><strong>¿Qué podemos hacer con el dado?</strong></p>
 <p>Comencemos por algunas operaciones aritméticas.</p>
 <pre class="r"><code>dado-1</code></pre>
@@ -101,13 +102,14 @@ dice</code></pre>
 <pre class="r"><code>dado*dado</code></pre>
 <pre><code>## [1]  1  4  9 16 25 36</code></pre>
 <p>Note que el resultado en cada caso es un vector del mismo tamaño al vector multiplicado por el escalar (en este caso 1x6).</p>
-<p>Si multiplicamos el un vector (en este caso el vector dado 1x6) cualesquiera por un vector de un tamaño inferior, R replica los valores del vector de menor tamaño hasta alcanzar el tamaño del primero vector y así aplica la operación para ambos vectores del mismo tamaño.</p>
-<p>Ahora que ya hemos realizado algo de artimética con el dado, veamos como podemos lanzarlo para obtener un número aleatorio. Para este proposito necesitamos una función.</p>
+<p>Si multiplicamos un vector (en este caso el vector dado 1x6) cualesquiera, por un vector de un tamaño inferior, R replica los valores del vector de menor tamaño hasta alcanzar el tamaño del primero vector y así permite concretar la operación entre ambos vectores (que son del mismo tamaño).</p>
+<p>Ahora que ya hemos realizado algo de artimética con el dado, veamos cómo podemos lanzarlo para obtener un número aleatorio.</p>
+<p>Para este propósito necesitamos una función.</p>
 </div>
 </div>
 <div id="funciones" class="section level2">
 <h2>Funciones</h2>
-<p>Para realizar esta tarea de selección de un número aleatorio, necesitamos una función. En <strong>R</strong> tener una función es fácil únicamente necesitamos el <strong>nombre</strong> y los <strong>argumentos</strong> (entre paréntesis) sobre los cuales se aplicará dicha función. Algunos ejemplos de funciones disponibles de forma automática en R, incluyen :</p>
+<p>Para realizar esta tarea de selección de un número aleatorio, necesitamos una función. Construir una función es fácil, únicamente necesitamos el <strong>nombre</strong> y los <strong>argumentos</strong> (entre paréntesis) sobre los cuales se aplicará dicha función. Algunos ejemplos de funciones disponibles de forma automática en R, incluyen:</p>
 <pre class="r"><code>round(5.8)</code></pre>
 <pre><code>## [1] 6</code></pre>
 <pre class="r"><code>round(3.1416)</code></pre>
@@ -137,10 +139,10 @@ dice</code></pre>
 <pre><code>## function (x, digits = 0) 
 ## NULL</code></pre>
 <p><strong>Note</strong> que las funciones incluyen valores predeterminados para algunos argumentos, en el caso anterior el valor del argumento <em>digits</em> es 0, de modo que si omitimos este argumento, el resultado será el redondeo al entero próximo, sin decimales.</p>
-<pre class="r"><code># Redondeo con dos digitos 
+<pre class="r"><code># Redondeo con dos dígitos 
 round(3.1416,2)</code></pre>
 <pre><code>## [1] 3.14</code></pre>
-<pre class="r"><code># Redondeo con un digito
+<pre class="r"><code># Redondeo con un dígito
 round(3.1416,1)</code></pre>
 <pre><code>## [1] 3.1</code></pre>
 <pre class="r"><code># redondeo con parámetro predeterminado.
@@ -152,8 +154,9 @@ round(3.1416)</code></pre>
 <p>Cuando aplicamos la función <code>sample(dado, size = 2)</code> notemos que nunca obtenemos dos veces el mismo valor, esto es la función de forma predeterminada considera una muestra aleatoria pero sin reemplazo, para evitar este comportamiento y poder simular el lanzamiento de un dado en realidad en donde podemos obtener por ejemplo el valor 3 y luego otro 3, es necesario inlcuir el argumeto <code>replace = TRUE</code>, esto permite que una vez que lanzamos el primer dado, sea posible obtener el mismo valor en el segundo lanzamiento, tal como sucede en el caso real.</p>
 <pre class="r"><code>sample(dado, size = 2, replace = TRUE)</code></pre>
 <pre><code>## [1] 3 2</code></pre>
-<p>El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples. Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos un número aleatorio independiente cada vez.</p>
-<p>Si deseas sumar el valor del dado para los dos lanzamientos, unicametne aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios.</p>
+<p>El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples.</p>
+<p>Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos <strong>un número aleatorio</strong> <strong>independiente</strong> cada vez.</p>
+<p>Si deseas sumar el valor del dado para los dos lanzamientos, unicamente aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios.</p>
 <pre class="r"><code>dados &lt;- sample(dado, size = 2, replace = TRUE)
 dados</code></pre>
 <pre><code>## [1] 5 1</code></pre>
@@ -176,13 +179,12 @@ dadosuma</code></pre>
 <p><code>dado&lt;-1:6</code></p>
 <p><code>dados&lt;-sample(dado,2,replace=TRUE)</code></p>
 <p><code>sum(dados)</code></p>
-<p>No sería conveniente que escribiésemos estos objetos cada vez que necesitamos el resultado del lanzamiento.</p>
-<p>Para simplificar este proceso podemos construir una función que haga el trabajo por nosotros de manera automática.</p>
-<p>Hagamos una funciòn llama <code>lanzar()</code>, esta función nos permitirá tener un valor nuevo para cada vez que lancemos los dados, sin tener que reescribir cada objeto.</p>
-<p><strong>Every function in R has three basic parts:</strong> a <strong>name</strong>, <strong>body of code</strong>, and a <strong>set of arguments</strong>.</p>
-<p>To make your own function, you need to replicate these parts and store them in an R
-object, which you can do with the <em>function</em> function(). To do this, call function() and
-follow it with a pair of <strong>braces</strong>, {}:</p>
+<p>pero no sería conveniente que escribiésemos estos objetos cada vez que necesitamos el resultado del lanzamiento</p>
+<p>Para simplificar este proceso podemos construir una <strong>función</strong> que haga el trabajo por nosotros de manera automática.</p>
+<p>Hagamos una funciòn llamada <code>lanzar()</code>, esta función nos permitirá tener un valor nuevo para cada vez que lancemos los dados, sin tener que reescribir cada objeto.</p>
+<p><strong>las funciones se foman por 3 partes básicas:</strong> un <strong>nombre</strong>, <strong>el cuerpo de código</strong>, y un <strong>conjnto de argumentos</strong>.</p>
+<p>Para hacer una función propia, necesitas replicar estos tres componentes y almacenarlos en un <strong>objeto.</strong>.</p>
+<p>Esto lo puedes hacer con la función <code>function()</code>. Sólo llama la función <strong>function()</strong> y síguela con un par de <strong>llaves</strong> {}:</p>
 <p><code>mi_función &lt;- function() {}</code></p>
 <pre class="r"><code>lanzar &lt;- function() {
 dado &lt;- 1:6
@@ -203,9 +205,10 @@ sum(dados)
 }</code></pre>
 <p><code>lanzar2()</code></p>
 <p>Obtenemos un error: <strong>Error: object ‘lanzar2’ not found</strong>. esto debido a que no existe el objeto <strong>tipos</strong>.</p>
-<p>Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función lo único que necesitamos hacer es indicar este elemento (tipos) como argumento.</p>
+<p>Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función, lo único que necesitamos hacer es indicar este elemento (tipos) como <strong>argumento</strong>.</p>
 <p>Al incluir argumentos en nuestra función, podemos en nuestro ejemplo, especificar diferentes tipos de <strong>dados</strong>.</p>
-<p>Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con 20 lados, uno con 4 o 3,etc. Esta información la indicamos mediante los argumentos.</p>
+<p>Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con <strong>20 lados</strong>, uno con 4 o 3,etc.</p>
+<p>Esta información la indicamos mediante los argumentos.</p>
 <pre class="r"><code>lanzar2 &lt;- function(tipo) {
 dados &lt;- sample(tipo, size = 2, replace = TRUE)
 sum(dados)
@@ -218,8 +221,9 @@ lanzar2(tipo=1:4)</code></pre>
 <pre class="r"><code>lanzar2(1:6)</code></pre>
 <pre><code>## [1] 5</code></pre>
 <p><code>lanzar2(tipo)</code></p>
-<p>Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, esto no es necesario por que tipo es el único argumento de nuestra función <code>lanzar2()</code>.</p>
-<p>Note que la función resulta en un Error, cuando no proporcionamos el argumento tipo ej. <code>lanzar2()</code>. Esto es interesante por que de hecho podemos especificar <strong>argumentos predeterminados</strong> al momento de construir la función de tal forma que podemos dejar vacio este espacio cuando estimamos la función.</p>
+<p>Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, <strong>esto no es necesario por que tipo</strong> es el único argumento de nuestra función <code>lanzar2()</code>.</p>
+<p>Note que la función resulta en un <code>Error</code>, cuando no proporcionamos el argumento tipo ej. <code>lanzar2()</code>.</p>
+<p>Esto es interesante por que de hecho podemos especificar <strong>argumentos predeterminados</strong> al momento de construir la función de tal forma que podemos dejar vacio este espacio cuando estimamos la función.</p>
 <pre class="r"><code>lanzar2 &lt;- function(tipo=1:6) {
 dados &lt;- sample(tipo, size = 2, replace = TRUE)
 sum(dados)
@@ -230,8 +234,8 @@ lanzar2()</code></pre>
 <pre class="r"><code>lanzar2(1:12)</code></pre>
 <pre><code>## [1] 12</code></pre>
 <p>Ahora cuando llamamos la función, obtenemos la información solicitada!</p>
-<p>Ahora es posible proporcionar un tipo de dado particular cada vez que lanzamos el dado o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.</p>
-<p>En síntesis el proceso para crear una función involucra las siguientes partes:</p>
+<p>Ahora es posible proporcionar un <strong>tipo</strong> de dado <strong>particular</strong> cada vez que lanzamos el dado, o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.</p>
+<p>En <strong>síntesis</strong> el proceso para crear una función involucra las siguientes partes:</p>
 <p><img src="/Funciones.jpg" /></p>
 </div>
 <div id="distribuciones-de-probabilidad.-1" class="section level2">
@@ -239,16 +243,17 @@ lanzar2()</code></pre>
 <div id="distribuciones-discretas" class="section level4">
 <h4>Distribuciones discretas</h4>
 <p>Dos de las distribuciones discretas más comunes son: la distribución <strong>Binomial</strong> y <strong>Poisson.</strong></p>
-<div id="distribución-bernoulli" class="section level5">
-<h5>Distribución Bernoulli</h5>
+<p>La diferencia básica entre ambas es que la <strong>Binomial</strong> tiene un límite superior definido.</p>
+<div id="distribución-binomial." class="section level5">
+<h5>Distribución Binomial.</h5>
+<p>La <strong>distribución de Bernoulli</strong></p>
 <p>Es una distribución dicotómica.</p>
-<p>Si {X}X es una variable aleatoria discreta que mide el “número de éxitos” y se realiza un único experimento con dos posibles resultados denominados éxito y fracaso, se dice que la variable aleatoria <strong>X</strong> se distribuye como una Bernoulli de parámetro <strong>p</strong> con <span class="math display">\[0&lt;p&lt;1\]</span> y escribimos <span class="math inline">\(X\sim \operatorname {Bernoulli} (p)\)</span>.</p>
+<p>Si {X}X es una variable aleatoria discreta que mide el “número de éxitos” y se realiza un único experimento con dos posibles resultados denominados éxito y fracaso, se dice que la variable aleatoria <strong>X</strong> se distribuye como una <strong>Bernoulli</strong> de parámetro <strong>p</strong> con <span class="math display">\[0&lt;p&lt;1\]</span> y escribimos <span class="math inline">\(X\sim \operatorname {Bernoulli} (p)\)</span>.</p>
 <p>Si (exito=1 , fracaso =0) , Exito toma la prob. p y fracaso q=(1-p)</p>
 <p><img src="/img/bernoulli.jpg" /></p>
-<p>La diferencia básica entre ambas es que la <strong>Binomial</strong> tiene un límite superior definido.</p>
 <p>Esta distribución presenta <strong>dos estados.</strong> Como ejemplo más simple, el lanzamiento de una moneda.
 Ver ejemplo <strong>Sesión 3.ipynb</strong></p>
-<p>Otrs ejemplos empíricos con situaciones en donde se presenta una distribución <strong>Binomial</strong>, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato la presidencia gane o pierda, etc.,</p>
+<p>Otrs ejemplos empíricos con situaciones en donde se presenta una distribución <strong>Binomial</strong>, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato a la presidencia gane o pierda, etc.,</p>
 </div>
 </div>
 <div id="distribuciones-contínuas." class="section level3">
@@ -289,6 +294,17 @@ Funciones estudiadas: group_by, rename, left_join, filter, select, mutate, summa
 Herramienta de análisis: stat=density</p>
 <p>Funciones estudiadas: <strong>facet_wrap</strong></p>
 <p><img src="/post/Sesion-3-Lunes-12Sep_files/figure-html/unnamed-chunk-21-1.png" width="1152" /></p>
+<p><strong>Nota sobre ventajas de las KDF: </strong></p>
+<p>Nos permiten distinguir rapidamente características como los atributos de tendencia central, la presencia de bimodalidad, sesgo), también facilitan la comparación rápida entre diferentes conjuntos de datos.</p>
+<p>Por ejemplo vemos en la figura siguiente que la <strong>media</strong> de un conjunto de datos con <strong>sesgo positivo</strong> se ubica <strong>a la derecha</strong> de de la mediana.</p>
+<p><strong>IMPORTANTE </strong> En este caso <strong>la mediana</strong> será la medida de tendencia central <strong>preferible</strong> o que describe con mayor precisión la ubicación del <strong>dato central</strong>, por que divide la distribución de la curva en dos areas iguales.</p>
+<p><img src="/img/asimetria_positiva.jpg" /></p>
+<p><strong>Una propiedad importante:</strong></p>
+<p><em>“El área por debajo de la curva, y entre cualquier intervalo de valores, es la proporción de todas las observaciones que están situadas en dicho intervalo.”</em></p>
+<ul>
+<li>Note que el area por debajo de la KDF, siempre es igual a 1.</li>
+</ul>
+<p>En otras palabras, si sumamos la proporción que integra la distribución total, tenemos el 100%</p>
 </div>
 </div>
 <div id="función-de-distribución-de-probabilidad-pdf." class="section level3">
@@ -312,7 +328,7 @@ Herramienta de análisis: stat=density</p>
 </div>
 <div id="ecdf-función-de-densidad-acumnulativa-empírica." class="section level4">
 <h4>ECDF Función de densidad acumnulativa empírica.</h4>
-<p>Conocer la frecuencia es importante pero muy amenudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.</p>
+<p>Conocer la frecuencia es importante pero muy a menudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.</p>
 <p>Para este propósito es muy útil estimar la frecuencia acumulada.</p>
 <p>Una representación contínua de este concepto es mediante la función empírica de <strong>densidad acumulada</strong></p>
 <p>Una nota sobre la apliación de la <strong>CDF</strong> en la obtención de los <strong>Percentiles</strong></p>
@@ -320,9 +336,11 @@ Herramienta de análisis: stat=density</p>
 <p>La función de distribución acumulada<strong>CDF</strong> es la integral de la <strong>función de densidad de probabilidad (PDF)</strong>.</p>
 <p>Define la probabilidad de observar un valor <strong>x</strong> en un rango determinado <strong>[a,b].</strong>
 Formalmente</p>
-<p><img src="/img/cdf.jpg" />
-Nota sobre implementación en <strong>Python</strong>. Esta nos permite observar el porcentaje de datos en el eje de las ordenadas al orígen. see <strong>“.ipynb”</strong>
-.</p>
+<p><img src="/img/cdf.jpg" /></p>
+<p>Revisemos ahora en la práctica como podemos estimar la <strong>función de densidad</strong> usando <strong>Python.</strong></p>
+<p><strong>“Sesión_2_Tendencia central.ipynb”</strong></p>
+<p>Nota sobre implementación en <strong>Python</strong>. Esta nos permite observar el porcentaje acumulado de datos en el eje de las ordenadas al orígen y los valores observados en el eje de las absisas.</p>
+<p>La pregunta básica que podemos responder estimando la <strong>CDF</strong>, es ¿qué porcentaje de los datos se ubica por debajo de cualquier umbral deseado?</p>
 </div>
 </div>
 </div>

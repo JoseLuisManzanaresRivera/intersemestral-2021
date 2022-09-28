@@ -31,7 +31,7 @@ Estudiar las reglas de probabilidad y las disrtibucións de probabilidad.
 
 ### Meta de aprendizaje: 
 
-Conocer  las distribuciones de probabilidad y...
+Conocer  las  herramientas matemáticas para describir la distribución de datos numéricos en poblaciones y muestras.
 
 #### Contexo:  
 Estadística descriptiva.
@@ -40,20 +40,16 @@ Estadística descriptiva.
 #### Definiciones.
 
 
+**Población** Incluye todos los elementos de un conjunto de datos.
 
-El correcto diseño de nuestros análisis a menudo permite que las muestras seleccionadas constituyan una adecuada representación de la población de estudio. 
-
-
-**Population** Includes all of the elements from a set of data.
-
-**Sample** Consists of one or more observations from the  population.
+**Muestra** Consiste en una o más observaciones de la población.
 
 
-+ **Parameter** Characteristic of a population, such as a mean or standard deviation. Often notated using Greek letters.
++ **Parámetro** Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan letras griegas para referirnos a una parámetro.
 
-+ **Statistic** A measurable characteristic of a sample. 
++ **Estadístico** Una característica medible de una **muestra**. 
 
-**Examples of statistics are:** 
+**Ejemplos de una estadistico:** 
 
 + La media de la muestra 
 + El rango de la muestra
@@ -64,18 +60,19 @@ El correcto diseño de nuestros análisis a menudo permite que las muestras sele
 
 Si no conocemos el **paramétro**  (ingreso medio de los trabajadores en Baja california), podemos estimar el  **estadístico** de una **muestra** y a partir de este **inferir** el parámetro **poblacional** 
 
-La representatividad de la **muestra** es importante  para la validéz de **estadístico** que permite inferir el **parámetro** de interés.
+La representatividad de la **muestra** es importante  para la validéz del **estadístico** que permite inferir el **parámetro** de interés.
 
 
-+ **Sampling distribution** The probability distribution of a given statistic based on a random sample.
+El correcto diseño de nuestros análisis  permite que las **muestras** seleccionadas constituyan una adecuada representación de la **población de estudio**. 
 
-+ **Statistical inference**Enables you to make an educated **guess** about a population parameter based on a statistic computed from a
-**sample randomly drawn** from that population.
+
++ **Distribución de muestreo** La distribución de probabiliad de un estadístico dado. Con base en una muestra aleatoria. 
+
++ **Inferencia estadística** Te permite hacer una conjetura "educada" respecto de un parámetro poblacional, basado en un estadístico calculado usando una muestra aleatoria de la población.
 
 
 **Convención sobre la notación:** 
-
-Population parameters are often indicated using **Greek letters**, while sample statistics typically use standard letters.
+Los Parámetros (poblacionales) son denotados generalmente con el uso de letras griegas. Mientras los estadísticos (muestrales) son expresados con letras convencionales.
 
 **Ejemplo.**
 
@@ -93,13 +90,15 @@ A las **herramientas matemáticas** para describir la distribución de datos num
 ## Distribuciones discretas.
 
 
-Un ejemplo clásico simple de una distribución de probabilidad discreta es el lanzamiento de un dado. 
+Un ejemplo **clásico** simple de una distribución de **probabilidad discreta** es el lanzamiento de un dado. 
 
 Para cada uno de los lados desde $i=1.....6$ la probabilidad de que un lanzamiento del dado tenga la cara $i$ es $$P_{i}=\frac{1}{6}$$  Con $i=1....6$
 
 
 Las propiedades de la distribución discreta de probabilidad son : 
 + $$0\leq{P_{i}}\leq{1}, 	\forall i \in N$$
+
+
 + $$\sum_{i=1}^{n} P_{i}=1$$
 
 #### Ejercicio. 
@@ -111,7 +110,7 @@ Genere  un **dado virtual:**
 1:6
 ```
 
-Este notación nos permite tener  un lista de números entre 1 y 6, pero es necesario almacenarlos. Para lo cual asignamos un nombre usando el simbolo **$<-** que equivale a decir igual que. 
+Este notación nos permite tener  un lista de números entre 1 y 6, pero es necesario almacenarlos. Para lo cual asignamos un nombre usando el símbolo **$<-** que equivale a decir igual que. 
 
 ```{r}
 Dado<-1:6
@@ -127,7 +126,7 @@ Dado
 
 ```{r }
 
-## Pruebe generar dados de diferente numero de caras.
+## Pruebe generar dados de diferente número de caras.
 
 dado<-1:10
 dado
@@ -136,8 +135,8 @@ dado
 dado<-1:6
 dado
 
-dice<-1:6
-dice
+dadosietecaras<-1:7
+dadosietecaras
 ```
 
 **¿Qué podemos hacer con el dado?**
@@ -147,6 +146,7 @@ Comencemos por algunas operaciones aritméticas.
 
 
 ```{r}
+
 dado-1
 
 dado/2
@@ -156,14 +156,16 @@ dado*dado
 
 Note que el resultado en cada caso es un vector del mismo tamaño  al vector multiplicado por el  escalar (en este caso 1x6). 
 
-Si multiplicamos el un vector (en este caso el vector dado 1x6) cualesquiera por un vector de un tamaño inferior, R replica los valores del vector de menor tamaño hasta alcanzar el tamaño del primero vector y así aplica la operación para ambos vectores del mismo tamaño. 
+Si multiplicamos un vector (en este caso el vector dado 1x6) cualesquiera, por un vector de un tamaño inferior, R replica los valores del vector de menor tamaño hasta alcanzar el tamaño del primero vector y así permite concretar la operación entre ambos vectores (que son del mismo tamaño). 
 
 
-Ahora que ya hemos realizado algo de artimética con el dado, veamos como podemos lanzarlo para obtener un número aleatorio. Para este proposito necesitamos una función. 
+Ahora que ya hemos realizado algo de artimética con el dado, veamos cómo podemos lanzarlo para obtener un número aleatorio.
+
+Para este propósito necesitamos una función. 
 
 ## Funciones
 
-Para realizar esta tarea de selección de un número aleatorio, necesitamos una función. En **R** tener una función es fácil únicamente necesitamos el **nombre** y los **argumentos** (entre paréntesis) sobre los cuales se aplicará dicha función. Algunos ejemplos de funciones disponibles de forma automática en R, incluyen :
+Para realizar esta tarea de selección de un número aleatorio, necesitamos una función. Construir una función es fácil, únicamente necesitamos el **nombre** y los **argumentos** (entre paréntesis) sobre los cuales se aplicará dicha función. Algunos ejemplos de funciones disponibles de forma automática en R, incluyen:
 
 ```{r, echo=TRUE}
 round(5.8)
@@ -213,9 +215,10 @@ args(round)
 **Note** que las funciones incluyen valores predeterminados para algunos argumentos, en el caso anterior el valor del argumento *digits* es 0, de modo que si omitimos este argumento, el resultado será el redondeo al entero próximo, sin decimales. 
 
 ```{r}
-# Redondeo con dos digitos 
+# Redondeo con dos dígitos 
 round(3.1416,2)
-# Redondeo con un digito
+
+# Redondeo con un dígito
 round(3.1416,1)
 
 # redondeo con parámetro predeterminado.
@@ -232,10 +235,12 @@ Cuando aplicamos la función `sample(dado, size = 2)` notemos que nunca obtenemo
 sample(dado, size = 2, replace = TRUE)
 ```
 
-El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples. Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos un número aleatorio  independiente cada vez. 
+El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples. 
+
+Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos **un número aleatorio**  **independiente** cada vez. 
 
 
-Si deseas sumar el valor del dado para los dos lanzamientos, unicametne aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios. 
+Si deseas sumar el valor del dado para los dos lanzamientos, unicamente aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios. 
 
 ```{r}
 dados <- sample(dado, size = 2, replace = TRUE)
@@ -261,7 +266,6 @@ Si queremos obtener un resultado distinto cada vez que lanzamos el dado podemos 
 
 ## Escribe tus propias funciones.
 
-
 Hasta ahora hemos creado estos objetos:
 
 `dado<-1:6`  
@@ -270,18 +274,18 @@ Hasta ahora hemos creado estos objetos:
 
 `sum(dados)`
 
-No sería conveniente que escribiésemos estos objetos cada vez que necesitamos el resultado del lanzamiento. 
+pero no sería conveniente que escribiésemos estos objetos cada vez que necesitamos el resultado del lanzamiento 
 
-Para simplificar este proceso podemos construir una función que haga el trabajo por nosotros de manera automática.
+Para simplificar este proceso podemos construir una **función** que haga el trabajo por nosotros de manera automática.
 
-Hagamos una funciòn llama `lanzar()`, esta función nos permitirá tener un  valor nuevo  para cada vez que lancemos los dados, sin tener que reescribir cada objeto. 
+Hagamos una funciòn llamada `lanzar()`, esta función nos permitirá tener un  valor nuevo  para cada vez que lancemos los dados, sin tener que reescribir cada objeto. 
 
 
-**Every function in R has three basic parts:** a **name**, **body of code**, and a **set of arguments**.
+**las funciones se foman por 3 partes básicas:** un **nombre**, **el cuerpo de código**, y un **conjnto de argumentos**.
 
-To make your own function, you need to replicate these parts and store them in an R
-object, which you can do with the *function* function(). To do this, call function() and
-follow it with a pair of **braces**, {}:
+Para hacer una función propia, necesitas replicar estos tres componentes y almacenarlos en un **objeto.**.  
+
+Esto lo puedes hacer con la función `function()`. Sólo llama la función   **function()** y síguela con un par de **llaves** {}:
 
 `mi_función <- function() {}`
 
@@ -311,13 +315,16 @@ sum(dados)
 
 Obtenemos un error: **Error: object 'lanzar2' not found**. esto debido a que no existe el objeto **tipos**.
 
-Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función lo único que necesitamos hacer es indicar este elemento (tipos) como argumento. 
+Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función, lo único que necesitamos hacer es indicar este elemento (tipos) como **argumento**. 
 
 Al incluir argumentos en nuestra función, podemos en nuestro ejemplo, especificar diferentes tipos de **dados**. 
 
-Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con 20 lados, uno con 4 o 3,etc. Esta información la indicamos mediante los argumentos.
+Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con **20 lados**, uno con 4 o 3,etc. 
+
+Esta información la indicamos mediante los argumentos.
 
 ```{r }
+
 lanzar2 <- function(tipo) {
 dados <- sample(tipo, size = 2, replace = TRUE)
 sum(dados)
@@ -330,9 +337,11 @@ lanzar2(1:6)
 
 `lanzar2(tipo)`
 
-Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, esto no es necesario por que  tipo es el único argumento de nuestra función `lanzar2()`.
+Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, **esto no es necesario por que  tipo** es el único argumento de nuestra función `lanzar2()`.
 
-Note que la función resulta en un Error, cuando no proporcionamos  el argumento tipo  ej. `lanzar2()`. Esto es interesante por que de hecho podemos especificar **argumentos predeterminados** al momento de construir la función de tal forma que podemos dejar vacio este espacio cuando estimamos la función. 
+Note que la función resulta en un `Error`, cuando no proporcionamos  el argumento tipo  ej. `lanzar2()`. 
+
+Esto es interesante por que de hecho podemos especificar **argumentos predeterminados** al momento de construir la función de tal forma que podemos dejar vacio este espacio cuando estimamos la función. 
 
 ```{r}
 lanzar2 <- function(tipo=1:6) {
@@ -347,10 +356,10 @@ lanzar2(1:12)
 
 Ahora cuando llamamos la función, obtenemos la información solicitada!
 
-Ahora es posible proporcionar un tipo de dado particular cada vez que lanzamos el dado o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.
+Ahora es posible proporcionar un **tipo** de dado **particular** cada vez que lanzamos el dado, o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.
 
 
-En síntesis el proceso para crear una función involucra las siguientes partes:
+En **síntesis** el proceso para crear una función involucra las siguientes partes:
 
 ![](/Funciones.jpg)
 
@@ -361,23 +370,26 @@ En síntesis el proceso para crear una función involucra las siguientes partes:
 
 Dos de las distribuciones discretas más comunes son: la distribución **Binomial** y **Poisson.**
 
-##### Distribución Bernoulli
+La diferencia básica entre ambas es que la **Binomial** tiene un límite superior definido. 
+
+##### Distribución Binomial. 
+
+La **distribución de Bernoulli**
 
 Es una distribución dicotómica. 
 
-Si {\displaystyle X}X es una variable aleatoria discreta que mide el "número de éxitos" y se realiza un único experimento con dos posibles resultados denominados éxito y fracaso, se dice que la variable aleatoria **X** se distribuye como una Bernoulli de parámetro **p**  con  $$0<p<1$$ y escribimos   $X\sim \operatorname {Bernoulli} (p)$.
+Si {\displaystyle X}X es una variable aleatoria discreta que mide el "número de éxitos" y se realiza un único experimento con dos posibles resultados denominados éxito y fracaso, se dice que la variable aleatoria **X** se distribuye como una **Bernoulli** de parámetro **p**  con  $$0<p<1$$ y escribimos   $X\sim \operatorname {Bernoulli} (p)$.
 
 Si  (exito=1 , fracaso =0) , Exito toma la prob. p y fracaso q=(1-p)
 
 
 ![](/img/bernoulli.jpg)
 
-La diferencia básica entre ambas es que la **Binomial** tiene un límite superior definido. 
 
 Esta distribución presenta **dos estados.**  Como ejemplo más simple, el lanzamiento de una moneda.
 Ver ejemplo **Sesión 3.ipynb**
 
-Otrs ejemplos empíricos con situaciones en donde se presenta una distribución **Binomial**, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato  la presidencia gane o pierda, etc., 
+Otrs ejemplos empíricos con situaciones en donde se presenta una distribución **Binomial**, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato a la presidencia gane o pierda, etc., 
 
 
 ### Distribuciones contínuas.
@@ -543,6 +555,27 @@ scale_color_manual(values = c("mediumturquoise","magenta1"))+
 mxplt
 ```
 
+
+
+**Nota sobre ventajas de las KDF: **
+
+Nos permiten distinguir rapidamente características como los atributos de tendencia central, la presencia de  bimodalidad,  sesgo), también facilitan la comparación rápida entre diferentes conjuntos de datos.
+
+Por ejemplo vemos en la figura siguiente que la **media** de un conjunto de datos con **sesgo positivo** se ubica **a la derecha** de la mediana.
+
+**IMPORTANTE ** En este caso **la mediana** será la medida de tendencia central **preferible** o que describe con mayor precisión la ubicación del **dato central**, por que divide la distribución de la curva en dos areas iguales. 
+
+![](/img/asimetria_positiva.jpg)
+
+**Una propiedad importante:**
+
+*"El área por debajo de la curva, y entre cualquier intervalo de valores, es la proporción de todas las observaciones que están situadas en dicho intervalo."*
+
++ Note que el area por debajo de la KDF, siempre es igual a 1. 
+
+En otras palabras, si sumamos la proporción que integra la distribución total, tenemos el 100% 
+
+
 ###  Función de distribución de probabilidad PDF.
 
 La curva que describe la probabilidad para cada valor, (la distribución de probabilidad),  es una **función contínua** y se denomina función de **densidad de probabilidad.** $p(x)=$**(PDF).** 
@@ -565,6 +598,8 @@ La **PDF** tiene las propiedades:
 
 La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor **x** en ese **intervalo**.  El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular. A esta area la denominamos función de densidad acumulada **CDF** 
 
+
+
 ##### Aplicación de la **CDF** a la estimación de los **percentiles.**
 
 La manera más simple de determinar los percentiles es mediante la estimación de la **función de densidad acumulada** **CDF** (por sus siglas en inglés). 
@@ -572,7 +607,7 @@ $$CDF(x)=\int_{-\infty}^x PDF(x)dx$$
 
 #### ECDF Función de densidad acumnulativa empírica.
 
-Conocer la frecuencia es importante pero muy amenudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.
+Conocer la frecuencia es importante pero muy a menudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.
 
 Para este propósito es muy útil estimar la frecuencia acumulada. 
 
@@ -589,5 +624,12 @@ Define la probabilidad de observar un valor **x** en un rango determinado **[a,b
 Formalmente 
 
 ![](/img/cdf.jpg)
-Nota sobre implementación en **Python**. Esta  nos permite observar el porcentaje de datos en el eje de las ordenadas al orígen.  see **".ipynb"**
-.
+
+
+Revisemos ahora en la práctica como podemos estimar la **función de densidad**  usando **Python.**
+
+**"Sesión_2_Tendencia central.ipynb"**
+
+Nota sobre implementación en **Python**. Esta  nos permite observar el porcentaje acumulado de datos en el eje de las ordenadas al orígen y los valores observados en el eje de las absisas.
+
+La pregunta básica que podemos responder estimando la **CDF**, es ¿qué porcentaje de los datos se ubica por debajo de cualquier umbral deseado?
