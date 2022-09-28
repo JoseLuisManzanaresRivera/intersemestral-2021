@@ -100,7 +100,7 @@ La raíz $n$ del producto de los elementos.
 
 Su aplicación se dirige a datos que tienen una naturaleza de 
 **crecimiento exponencial** por ejemplo que
-exhiben correlación serial, (dato en momento del tiempo t  que depende del dato en el momento t-1)
+exhiben correlación serial, (dato en momento del tiempo t  que depende del dato en el momento *t-1*)
 esto es por ejemplo común en el 
 campo series de tiempo en economía y el area de las finanzas. Ejemplo, la tasa de crecimiento del PIB, la inflación, etc., 
 
