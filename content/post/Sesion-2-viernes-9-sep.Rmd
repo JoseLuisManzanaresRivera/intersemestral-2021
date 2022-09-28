@@ -861,7 +861,7 @@ En términos muestrales tenemos:
 
 $$s^2_x = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{X})^2$$
 
-###Grados de libertad
+# Grados de libertad
 
 
 **Presentación del concepto**
@@ -900,7 +900,10 @@ Raíz cuadrada de la varianza.
 
 $$\sqrt{\sigma^2} = \sigma$$
 
+Esta medida, la podemos estimar usando la función `sd()` en r. 
+
 ----------------------------------------------
+
 
 Asociado a esta medida, podemos calcular **el coeficiente de variación** que solo añale la relación  de esta dispersión, medida por la desviación estándard respecto a la media. Este coeficiente se ubica en el rango 0-1 frecuentemente, pero en algunas distribuciones puede superar la unidad. 
 $$cv=\frac{\sigma_x}{|\bar{X}|}$$
@@ -922,16 +925,21 @@ Con los datos  disponibles sobre precipitaciones registrados en la estación met
 
 + Represente graficamente la trayectoria de la variable.  
 
++ ¿Qué valor toma la desviación estándar?
+
 
 ```{r}
 ## Paso 1 Read datos 
 
 practica<-read.csv("tij_practica.csv")
 
+
 ```
 
 
 ```{r}
+
+# Alternativamente: 
 
 url_tij<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/precip_tijuana.csv?raw=true")
 
@@ -994,14 +1002,14 @@ ggplotly(plt)
 
 ## Actividad.
 
-Revise la página 42  sección: "aplica tus conocimientos", del libro de texto Estadística aplicada básica[enlace de descarga del libro aquí](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing) y realiza los ejercicios.  **Ej 1.31, 1.32, 1.33**
+Revise la página 42  sección: "aplica tus conocimientos", del libro de texto  [Estadística aplicada básica](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing) y realiza los ejercicios.  **Ej 1.31, 1.32, 1.33**
 
 -------------------------------------
 
  
 ## Precisiones sobre la distribución normal.
 
-Una **caso particular de distribución esta dado cuando observamos simetría** (ej. media, mediana son igueales). 
+Una **caso particular de la distribución esta dado cuando observamos simetría** (ej. media, mediana son igueales). 
 
 En este caso, ambos lados de la función de densidad integran **la misma proporción de datos**. 
 
