@@ -695,8 +695,7 @@ Note que los upper and **lower fences** o **whiskers**, se extienden por definic
 
 ### Representación de dispersión datos con frecuencia diaria. Boxplot
 
-[Datos  site:](https://smn.conagua.gob.mx/es/climatologia/informacion-climatologica/normales-climatologicas-por-estado)
-[Source alternariva](http://atlasclimatico.unam.mx/RRDM/)
+
 
 ![](/img/explicacion_bxplt.jpg)
 
@@ -717,6 +716,8 @@ Inclusión de sólo una categoría.
 Distribución de temperaturas mínimas diarias registradas en estación metereológica **DGO10092** del SMN. Periodo 1941 -2000.
 
 [Base de datos para el ejercicio](https://drive.google.com/file/d/1zIZyX4ZAFPwjgqcTT6rSUgzNutJok_wD/view?usp=sharing)
+
+[Créditos de la fuente de información](https://smn.conagua.gob.mx/es/climatologia/informacion-climatologica/normales-climatologicas-por-estado)
 
 ```{r,  fig.height = 8, fig.width = 12,  echo = FALSE, warning = FALSE}
 
