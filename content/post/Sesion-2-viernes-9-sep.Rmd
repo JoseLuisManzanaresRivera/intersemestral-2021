@@ -861,7 +861,7 @@ En términos muestrales tenemos:
 
 $$s^2_x = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{X})^2$$
 
-# Grados de libertad
+### Grados de libertad
 
 
 **Presentación del concepto**
