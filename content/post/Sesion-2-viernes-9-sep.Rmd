@@ -1029,11 +1029,12 @@ Una particularidad relevante de las distribuciones normales es que cumplen con l
 
 ![](/img/regla_normal.jpg)
 
-### ¿Por que tanto énfasis en las distribciones normales? 
+### ¿Por qué tanto énfasis en las distribciones normales? 
 
-+ Por que describen una gran cantidad de situaciones empíricas de naturaleza aleatoria.
++ Porque describen una gran cantidad de situaciones empíricas de naturaleza aleatoria.
 
-+ Los procesos de **inferencia estadística**   permiten resultados confiables (robusos) cuando se aplican a distribuciones simétricas. Dependen de esta condición.  
++ Los procesos de **inferencia estadística**   permiten resultados confiables (robusos) cuando se aplican a distribuciones simétricas.
+Dependen de esta condición.  
 
 ##### Actividad para afianzar los conceptos
 
