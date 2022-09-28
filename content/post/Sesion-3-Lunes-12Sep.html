@@ -246,6 +246,18 @@ lanzar2()</code></pre>
 <p>La diferencia básica entre ambas es que la <strong>Binomial</strong> tiene un límite superior definido.</p>
 <div id="distribución-binomial." class="section level5">
 <h5>Distribución Binomial.</h5>
+<p>Considere la ejecución de una serie de experimentos.</p>
+<p>La distribución binomial aplica si se cumplen los siguientes supuestos:</p>
+<ul>
+<li><p>Los ensayos son independientes.</p></li>
+<li><p>Cada ensayo tiene la misma probabilidad de exito.</p></li>
+<li><p>El número de ensayos es conocida</p></li>
+<li><p>Se define un parámetro denominado <strong>éxitos</strong> “x”, como el número de éxitos dentro de los <strong>“n”</strong> ensayos.</p></li>
+</ul>
+<p>De esta forma la función de probabilidad binomial se define como:</p>
+<p><span class="math display">\[P(x)=\frac{n!}{x!(n-x)!}p^{x}(1-p)^{n-x} \]</span></p>
+<p>La función nos permite estimar la probabilidad de que ocurra una cantidad determinada de éxitos. P(x). P (mayúscula).</p>
+<p>Note que <strong>p</strong> (mínuscula) es la probabilidad de éxito de cada ensayo y su inverso es la probabilidad de fracaso.</p>
 <p>La <strong>distribución de Bernoulli</strong></p>
 <p>Es una distribución dicotómica.</p>
 <p>Si {X}X es una variable aleatoria discreta que mide el “número de éxitos” y se realiza un único experimento con dos posibles resultados denominados éxito y fracaso, se dice que la variable aleatoria <strong>X</strong> se distribuye como una <strong>Bernoulli</strong> de parámetro <strong>p</strong> con <span class="math display">\[0&lt;p&lt;1\]</span> y escribimos <span class="math inline">\(X\sim \operatorname {Bernoulli} (p)\)</span>.</p>
@@ -296,7 +308,7 @@ Herramienta de análisis: stat=density</p>
 <p><img src="/post/Sesion-3-Lunes-12Sep_files/figure-html/unnamed-chunk-21-1.png" width="1152" /></p>
 <p><strong>Nota sobre ventajas de las KDF: </strong></p>
 <p>Nos permiten distinguir rapidamente características como los atributos de tendencia central, la presencia de bimodalidad, sesgo), también facilitan la comparación rápida entre diferentes conjuntos de datos.</p>
-<p>Por ejemplo vemos en la figura siguiente que la <strong>media</strong> de un conjunto de datos con <strong>sesgo positivo</strong> se ubica <strong>a la derecha</strong> de de la mediana.</p>
+<p>Por ejemplo vemos en la figura siguiente que la <strong>media</strong> de un conjunto de datos con <strong>sesgo positivo</strong> se ubica <strong>a la derecha</strong> de la mediana.</p>
 <p><strong>IMPORTANTE </strong> En este caso <strong>la mediana</strong> será la medida de tendencia central <strong>preferible</strong> o que describe con mayor precisión la ubicación del <strong>dato central</strong>, por que divide la distribución de la curva en dos areas iguales.</p>
 <p><img src="/img/asimetria_positiva.jpg" /></p>
 <p><strong>Una propiedad importante:</strong></p>

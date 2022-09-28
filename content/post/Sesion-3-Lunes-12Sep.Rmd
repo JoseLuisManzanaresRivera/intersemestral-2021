@@ -374,6 +374,30 @@ La diferencia básica entre ambas es que la **Binomial** tiene un límite superi
 
 ##### Distribución Binomial. 
 
+Considere la ejecución de una serie de experimentos. 
+
+La distribución binomial aplica si se cumplen los siguientes supuestos: 
+
++ Los ensayos son independientes. 
+
++ Cada ensayo tiene la misma probabilidad de exito. 
+
++ El número de ensayos es conocida 
+
++ Se define un parámetro denominado **éxitos** "x", como el número de éxitos dentro de los **"n"** ensayos.
+
+De esta forma la función de probabilidad binomial se define como: 
+
+$$P(x)=\frac{n!}{x!(n-x)!}p^{x}(1-p)^{n-x} $$
+
+La función nos permite estimar la probabilidad de que ocurra una cantidad determinada de éxitos.  P(x).  P (mayúscula).
+
+Note que  **p** (mínuscula) es la probabilidad de éxito de cada ensayo y su inverso es la probabilidad de fracaso. 
+
+
+
+
+
 La **distribución de Bernoulli**
 
 Es una distribución dicotómica. 
