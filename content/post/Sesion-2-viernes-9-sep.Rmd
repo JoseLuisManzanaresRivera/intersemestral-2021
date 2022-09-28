@@ -908,7 +908,9 @@ Esta medida, la podemos estimar usando la función `sd()` en **R** com oargument
 ----------------------------------------------
 
 
-Asociado a esta medida, podemos calcular **el coeficiente de variación** que solo añale la relación  de esta dispersión, medida por la desviación estándard respecto a la media. Este coeficiente se ubica en el rango 0-1 frecuentemente, pero en algunas distribuciones puede superar la unidad. 
+Asociado a esta medida, podemos calcular **el coeficiente de variación** que solo añade la relación  de esta dispersión, medida por la **desviación estándard** respecto a la **media.**
+
+Este coeficiente se ubica en el rango 0-1 frecuentemente, pero en algunas distribuciones puede superar la unidad. 
 $$cv=\frac{\sigma_x}{|\bar{X}|}$$
 En términos generales entre mayor es el **cv**, tenemos una mayor dispersión en los datos. 
 
