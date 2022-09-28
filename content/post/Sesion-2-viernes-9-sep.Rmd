@@ -862,9 +862,10 @@ En términos muestrales tenemos:
 $$s^2_x = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{X})^2$$
 ### Grados de libertad
 
+
 **Presentación del concepto**
 
-Nota que  para calcular la varianza $s^{2}$ dividimos la sumatoria entre el **número de observaciones menos uno**, es decir, por **n − 1**, en vez de **n**. 
+Nota que para calcular la varianza $s^{2}$ dividimos la sumatoria entre el **número de observaciones menos uno**, es decir, por **n − 1**, en vez de **n**. 
 
 La razón es que la suma de las desviaciones $x_{i} − \bar{X}$ es siempre cero, la última desviación se puede hallar cuando se conocen las otras **n − 1**. 
 
@@ -896,7 +897,7 @@ Por este motivo la medida de dispersión **clásica** que utilizaremos para comp
 
 Raíz cuadrada de la varianza.
 
-$$\sqrt{\sigma^2} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{X})^2}=\sigma$$
+$$\sqrt{\sigma^2} = \sigma$$
 
 ----------------------------------------------
 
