@@ -860,7 +860,9 @@ En términos muestrales tenemos:
 
 
 $$s^2_x = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{X})^2$$
-**Definición del concepto de GRADOS DE LIBERTAD**
+### Grados de libertad
+
+**Presentación del concepto**
 
 Nota que  para calcular la varianza $s^{2}$ dividimos la sumatoria entre el **número de observaciones menos uno**, es decir, por **n − 1**, en vez de **n**. 
 
