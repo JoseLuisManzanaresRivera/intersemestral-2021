@@ -872,7 +872,7 @@ La razón es que la suma de las desviaciones $x_{i} − \bar{X}$ es siempre cero
 
 Solamente **n − 1** de las desviaciones al
 cuadrado pueden variar **libremente**. 
------------------------------------------
+______________________________________________________________
 
 Esta es la razón por la que dividimos entre
 **n − 1**. 
