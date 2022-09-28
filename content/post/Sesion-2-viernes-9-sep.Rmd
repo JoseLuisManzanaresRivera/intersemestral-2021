@@ -1,5 +1,5 @@
 ---
-title: "Sesión 2 viernes 9 Septiembre"
+title: "Tema: Medidas de tendencia central y dispersión"
 author: "JLMR"
 date: 2022-09-04T22:13:14-05:00
 output: html_document
@@ -742,6 +742,7 @@ Distribución de temperaturas mínimas diarias registradas en estación metereol
 ```{r}
 # Paso 1 get data
 dgo<-read.csv("dgo_datos_clima.csv")
+
 ### Paso 2. Exploramos con el procedimiento estandar.
 names(dgo)
 view(dgo)
@@ -777,7 +778,8 @@ str(dgo)
 
 boxplot<-ggplot(dgo,aes(x=fct_inorder(meses),y=tempmin))+
 geom_boxplot()+
-xlab("Mes")+ylab("Temperatura diaria mínima°c")+
+xlab("Mes")+
+ylab("Temperatura diaria mínima°c")+
 theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
 ```
 #### Distribución de temperaturas mínimas  diarias registradas en estación metereológica DGO10092   del SMN. Periodo 1941 -2000. 
@@ -820,15 +822,18 @@ Representación con boxplot para variables tipo categóricas.
 
 bc_temp<-read.csv("baja_temp.csv")
 
+getwd()
+
 ### Alternativa para uso de url
 
-#url_bc_temp<-"https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/tidy_bc_temp.csv?raw=true"
+url_bc_temp<-"https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/tidy_bc_temp.csv?raw=true"
 
-#bc_tem<-read.csv(url_bc_temp)
+bc_tem<-read.csv(url_bc_temp)
 
 ## Paso 2  Make boxplot.
 
-boxplot_2<-ggplot(bc_temp, aes(x=fct_inorder(meses), y=temp)) + geom_boxplot(aes(fill=maxmin))+
+boxplot_2<-ggplot(bc_temp, aes(x=fct_inorder(meses), y=temp)) +
+geom_boxplot(aes(fill=maxmin))+
 xlab("Mes")+
 ylab("Temperatura diaria máxima y mínima°c")+
 theme_light()+
@@ -839,8 +844,10 @@ theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
 
 
 ```{r, warning = FALSE,message=FALSE, echo=FALSE}
+
 library(plotly)
 ggplotly(boxplot_2)
+
 ```
 
 
@@ -961,13 +968,17 @@ practica<-read_rds_from_github(url_tij)%>%
 ```{r, include=FALSE}
 
 ### Paso 1 
+
 precip<-group_by(practica,año)%>%
   summarise(mes=sum(mesp))
 
 ### Paso 2
 
 summary(precip)
+356.9 -163.9
 glimpse(precip)
+
+sd(precip$mes)
 
 ## Convertimos variable año de Chr string a numérica.
 
@@ -1014,6 +1025,7 @@ ggplotly(plt)
 Revise la página 42  sección: "aplica tus conocimientos", del libro de texto  [Estadística aplicada básica](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing) y realiza los ejercicios.  **Ej 1.31, 1.32, 1.33**
 
 -------------------------------------
+
 
  
 ## Precisiones sobre la distribución normal.
