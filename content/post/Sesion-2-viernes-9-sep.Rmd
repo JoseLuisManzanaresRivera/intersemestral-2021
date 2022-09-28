@@ -632,13 +632,13 @@ Una particularidad adicional es que en ausencia de **normalidad**   de los datos
 
 
 ![](/img/qq1.jpg)
-**Note** que un **patrón concavo** de los datos respecto a la linea de 45° que representa una distribución teórica simétrica (normal), es indicativo de sesgo positivo: ej. la cola de la dsitribución de los datos se extiende  hacia el cuadrante positivo.
+**Note** que un **patrón concavo** de los datos respecto a la linea de 45° que representa una distribución teórica simétrica (normal), es indicativo de **sesgo positivo**: ej. la cola de la dsitribución de los datos se extiende  **hacia el cuadrante positivo** en dirección cartesina.
 
-Se denomina sesgo negativo cuando el patrón observado es convexo, respecto a la linea de 45° de la **gráfica QQ** (qqplot).
+Se denomina sesgo **negativo** cuando el patrón observado es **convexo**, respecto a la linea de 45° de la **gráfica QQ** (qqplot).
 
 
 
-Para enfatizar. cuando **no tenemos simetría**, las funciones de distribución no son **normales** y observamos sesgos que pueden ser tanto en sentido positivo como negativo. 
+**Para enfatizar:**  cuando **no tenemos simetría**, las funciones de distribución no son **normales** y observamos sesgos que pueden ser tanto en sentido **positivo** como **negativo**. 
 
 En ambos casos la posición relativa entre media y mediana corresponde con el tipo de sesgo en cuestión. 
 
