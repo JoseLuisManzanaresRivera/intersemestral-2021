@@ -814,14 +814,14 @@ Representación con boxplot para variables tipo categóricas.
 #write.csv(tidy_bc_temp, "tidy_bc_temp.csv")
 ```
 
-[Link descarga datos ejemplo 2](https://drive.google.com/file/d/1g9IJd84y8Qa1V6pfg8SyB01rvyB0o2R5/view?usp=sharing)
+[Link descarga datos ejemplo 2]()
 
 ```{r, include=FALSE}
 ## Paso 1 Load data from local
 ### Alternativa para uso de url
-url_bc_temp<-"https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/tidy_bc_temp.csv?raw=true"
 
-eprueba<-read.csv(url_bc_temp)
+
+
 ## Paso 2  Make boxplot.
 ```
 
@@ -831,7 +831,10 @@ library(tidyverse)
 library(forcats)
 library(plotly)
 
-eprueba<-read.csv("bajacalifornia.csv")
+# 1.- Descargar los datos desde url
+
+eprueba<-read.csv("https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/bajacalifornia.csv")
+
 
 boxplot_2<-ggplot(eprueba, aes(x=fct_inorder(nombremes), y=t)) +
 geom_boxplot(aes(fill=tipo))+
@@ -839,12 +842,34 @@ xlab("Mes")+
 ylab("Temperatura diaria máxima y mínima°c")+
 theme_light()+
 theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
+
+ggplotly(boxplot_2)
+
 ```
+```{r}
 
+# Alternativa si descargan  la base  a su lap y lo guardan en la misma carpeta donde tienen el  la sesión del   Rmarkdown  (.Rmd)
 
-```{r, warning = FALSE,message=FALSE, echo=FALSE}
+library(tidyverse)
+library(forcats)
+library(plotly)
+
+# 1.- leer el archivo
+
+eprueba<-read.csv("bajacalifornia.csv")
+
+#2 .- Crear la gráfica de bigotes (Boxplot)
+
+boxplot_2<-ggplot(eprueba, aes(x=fct_inorder(nombremes), y=t)) +
+geom_boxplot(aes(fill=tipo))+
+xlab("Mes")+
+ylab("Temperatura diaria máxima y mínima°c")+
+theme_light()+
+theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
+
 ggplotly(boxplot_2)
 ```
+
 
 
 *Documentación adicional con ejemplos de repaso* [boxplot](http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/)
