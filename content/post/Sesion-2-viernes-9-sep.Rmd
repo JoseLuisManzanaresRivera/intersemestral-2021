@@ -814,7 +814,6 @@ Representación con boxplot para variables tipo categóricas.
 #write.csv(tidy_bc_temp, "tidy_bc_temp.csv")
 ```
 
-[Link descarga datos ejemplo 2]()
 
 ```{r, include=FALSE}
 ## Paso 1 Load data from local
