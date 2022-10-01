@@ -857,7 +857,7 @@ library(plotly)
 
 eprueba<-read.csv("bajacalifornia.csv")
 
-#2 .- Crear la gráfica de bigotes (Boxplot)
+# 2 .- Crear la gráfica de bigotes (Boxplot)
 
 boxplot_2<-ggplot(eprueba, aes(x=fct_inorder(nombremes), y=t)) +
 geom_boxplot(aes(fill=tipo))+
