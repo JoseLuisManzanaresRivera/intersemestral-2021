@@ -964,49 +964,49 @@ Con los datos  disponibles sobre precipitaciones registrados en la estación met
 + ¿Qué valor toma la desviación estándar?
 
 
+
+
 ```{r}
-## Paso 1 Read datos 
 
-practica<-read.csv("tij_practica.csv")
+# Descarga directa desde url
 
+practica<-read.csv("https://raw.githubusercontent.com/JoseLuisManzanaresRivera/intersemestral-2021/main/content/post/tijuana.csv")
 
+names(practica)
 ```
 
 
 ```{r}
 
-# Alternativamente: 
+### Paso 1  agrupamos por fecha y sumamos los datos de precipitación.
 
-url_tij<-("https://github.com/JoseLuisManzanaresRivera/intersemestral-2021/blob/main/content/post/precip_tijuana.csv?raw=true")
+precip<-group_by(practica,fecha)%>%
+  summarise(lluvia=sum(precipitacion))
 
-practica<-read_rds_from_github(url_tij)%>%
-  na.omit()
-```
-
-
-
-```{r, include=FALSE}
-
-### Paso 1 
-
-precip<-group_by(practica,año)%>%
-  summarise(mes=sum(mesp))
-
-### Paso 2
+### Paso 2  Estimar estdísticas descriptivas básicas.
 
 summary(precip)
+
+## Para estimar rango intercuartil
+
 356.9 -163.9
-glimpse(precip)
 
-sd(precip$mes)
 
-## Convertimos variable año de Chr string a numérica.
+## Para estimar la desviación estándar.
 
-precip<-mutate(precip,año=as.numeric(año))
+sd(precip$lluvia)
 
-### paso 3 plot Representación en line plot. 
+## Convertimos variable fecha de Chr string a numérica para poder hacer  representación gráfica. 
 
-plt<-ggplot(precip, aes(x=año, y=mes))+
+precip<-mutate(precip,fecha=as.numeric(fecha))
+
+### paso 3 plot Representación de la trayectoria promedio.
+```
+
+
+```{r}
+
+plt<-ggplot(precip, aes(x=fecha, y=lluvia))+
 geom_line(size=.3, colour="gray")+
 geom_smooth()+
 xlab("Año")+
@@ -1015,18 +1015,14 @@ theme_light()+
 geom_hline(yintercept = 185.2, size=.5, linetype="dashed",color='red')+
 geom_hline(yintercept = 343.5, size=.5, linetype="dashed",color='darkblue')
 
-
-```
-
-
-```{r,message=FALSE, include= FALSE, echo=FALSE}
 ggplotly(plt)
+
 ```
+
+
 
 
 ```{r, include=FALSE}
-
-
 
 #Note que se tiene una linea de tendencia, esta resulta de la aplicación del parámetro **geom_smooth** este actua como un filtro que permite observar la tendencia de la temperatura a lo largo de la serie de tiempo. 
 
