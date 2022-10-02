@@ -45,7 +45,7 @@ Estadística descriptiva.
 **Muestra** Consiste en una o más observaciones de la población.
 
 
-+ **Parámetro** Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan letras griegas para referirnos a una parámetro.
++ **Parámetro** Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan **letras griegas** para referirnos a una parámetro.
 
 + **Estadístico** Una característica medible de una **muestra**. 
 
@@ -382,7 +382,7 @@ La distribución binomial aplica si se cumplen los siguientes supuestos:
 
 + Cada ensayo tiene la misma probabilidad de exito. 
 
-+ El número de ensayos es conocida 
++ El número de ensayos es conocido 
 
 + Se define un parámetro denominado **éxitos** "x", como el número de éxitos dentro de los **"n"** ensayos.
 
