@@ -843,8 +843,9 @@ theme_light()+
 theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))
 
 ggplotly(boxplot_2)
-
 ```
+
+
 ```{r}
 
 # Alternativa si descargan  la base  a su lap y lo guardan en la misma carpeta donde tienen el  la sesión del   Rmarkdown  (.Rmd)
@@ -1099,6 +1100,11 @@ Estandarizar en este caso consiste en tomar un valor particular del conjunto de 
 A este valor estandarizado se le denomina **Z Score** y se obtiene  $$z=\frac{x-\mu}{\sigma}$$ 
 
 Este **score z** nos indica a **cuántas desviaciones estándar** se encuentra la observación original de la **media** y en qué dirección. 
+
+Por **ejemplo**, considerando los datos del ejercicio anterior, vemos que la media $\mu=110$, $\sigma=25$, por lo que el coeficiente estandarizado de una persona cuyo IQ= 105, será $z=\frac{105-110}{25}=-.20$.  
+
+Y se interpreta como la distancia en términos de desviaciones estándar respecto a la media. Así el dato IQ de 105 se ubica a una distancia de un quinto desviaciones estandar menor a la media. 
+
 
 Las observaciones **mayores** que la media
 son positivas y las **menores**, negativas.
