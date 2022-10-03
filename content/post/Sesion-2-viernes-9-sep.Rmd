@@ -1,7 +1,7 @@
 ---
 title: "Tema: Medidas de tendencia central y dispersión"
 author: "JLMR"
-date: 2022-09-04T22:13:14-05:00
+date: 2022-10-05T22:08:14-05:00
 output: html_document
 ---
 
@@ -1119,8 +1119,78 @@ En términos generales la **distribución normal estandarizada**, se expreza  co
 
 [Libro de texto](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing) sección 1.44, páginas 64-79.
 
+**Ejercicio**
+
+![](/img/Z-scores.jpg)
+
+UNa vez que sabemos cómo estandarizar un valor determinado. Es posible usar este **Z-score** para determinar 
+
+##### ¿qué proporción de los datos estan por debajo de este valor estandarizado z-score?
+
+![](/img/tablanormal.jpg)
+
+Las tablas de la distribción Z, dan esta información pero, actualmente es poco frecuente usar estas tablas en lugar de esto podemos estimarlo usando un software. 
+
+Ejemplo: 
+
+¿Qué proporción de los paises en el continente americano tienen un ingreso percapita superiro a 10 000 USD?
+
+Pasos para responder la pregunta.
+
+1.- Estimar Media y desviación estandar
+
+```{r}
+zscore<-gapminder%>%filter(continent=="Americas")
+
+summary(zscore)
+sd(zscore$gdpPercap)
+
+```
+
+La media $\mu=7136$  y la desviación estándar es $\sigma=6396.764$
+Entonces la caracterización de la distribución esta dada por (7136, 6396.764)
+
+**Paso 2**
+
+Estandarizamos el valor solicitado en el problema a z-score.  Sabemos que $$z=\frac{x-\mu}{\sigma}$$, entonces
+
+
+
+```{r}
+
+z=(10000-7136)/6396.764
+z
+
+```
+
+
+
+El  **z-score** para un ingreos de 10 000 es de  **0.4477264**, lo que indica que la distancia, **en desviaciones estándar** desde la **media**, para un ingreso de 10 000 es de 0.4477264. 
+
+**Paso 3** Estimar la proporción por debajo de la curva para el valor estandarizado. 
+
+Con esta información determinamos la proporción de paises cuyo ingreso es inferior buscando los datos en la [tabla A pagina 786 del libro](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing).
+
+
+**Alternativamente podemos usar R para determinar este valor.**
+
+El argumento requerido por la función en R es el **z-score** previamente calculado y el resultado es la proporción de observaciones por debajo de la curva a la izquierda de este valor. 
+
+```{r}
+
+pnorm(0.4477264)
+
+pnorm(10000,7136,6396.764)
+```
+
+
+O en otras palabras la proporción de observaciones con ingreso menor a 10 000. En este caso es del $67%$
+
+  **Tip** Si conocemos la caracterización de la función podemos usar irectametne la función `pnorm` para estimar también el **z-score**. ej.  pnorm(z-score, $\mu$ , $\sigma$)
 
 ## Ejercicios de repaso. 
+
+
 
 ![](/img/mediaymediana2.jpg)
 ![](/img/mediaymediana.jpg)
@@ -1140,7 +1210,7 @@ Muy a menudo, encontramos datos que no se limitan a cifras enteras, por ejemplo 
 Permite la representación de la districuión considerando una aproximación contínua,no discreta como es el caso del histograma. 
 
 
-![](/img/den_histo.jpg)
+![](/img/den_hist.jpg)
 
 
 
@@ -1173,9 +1243,40 @@ Contexto de la base de datos. Data frame en formato rds que contiene Edad de  pa
 
 ##### Ejemplo 1. 
 
-**Cálculo función de densidad, representación de medidas de tendencia central  y distribución para detectar diferencias de edad.**
+**Cálculo función de densidad, representación de medidas de tendencia central  y distribución esperanza de vida países en Africa vs. los paises de Asia.
 
 ```{r, echo= FALSE, fig.height = 5, fig.width = 8.5}
+
+
+library(gapminder)
+
+base<-gapminder
+
+datos<-gapminder%>%filter(continent=="Asia" | continent=="Africa")
+
+groups<-datos%>%group_by(continent)%>%
+  summarize(le=mean(lifeExp))
+
+names(datos)
+glimpse(datos)
+
+p<-ggplot(datos, aes(x=lifeExp, fill=continent))+
+geom_density(alpha=.2)+  
+labs(color="Continente")+
+xlab("GDPpercap")+
+ylab("Density  f(y)")+
+theme_classic()+
+geom_vline(xintercept= 49, linetype="dotted", color="red")+
+geom_vline(xintercept= 60, linetype="dotted", color="blue")+
+annotate("text", x=49, y=.005, size=2,label="Esperanza de vida (años)")+ theme(legend.title=element_blank())
+
+ggplotly(p)
+
+```
+
+
+
+```{r, include=FALSE}
 
 ## Source: https://www.gob.mx/salud/documentos/coronavirus-covid-19-comunicado-tecnico-diario-238449
 
@@ -1194,10 +1295,11 @@ annotate("text", x=32, y=.005, size=2,label="Mean patient age")+ theme(legend.ti
 
 ggplotly(dp)
 ```
-**Ejemplo 2**  Distribución de edades para defunción por covid en México. 
-Funciones estudiadas (Verbos tidyverse aplicados): Filter, select, mutate, summarise. ggplot 
 
-```{r, echo= FALSE}
+```{r, include= FALSE}
+
+##**Ejemplo 2**  Distribución de edades para defunción por covid en México. Funciones estudiadas (Verbos tidyverse aplicados): Filter, select, mutate, summarise. ggplot 
+
 
 open<-readRDS("open.rds")
 
@@ -1233,13 +1335,15 @@ ggplotly(p)
 ```
 
 
-**Ejemplo  3** Función de densidad para dos categorias. 
-Funciones estudiadas: group_by, rename, left_join, filter, select, mutate, summarise. ggplot 
+
+
+
+```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, include=FALSE}
 
 ####  Caso Aguascalientes
 
+#**Ejemplo  3** Función de densidad para dos categorias. Funciones estudiadas: group_by, rename, left_join, filter, select, mutate, summarise. ggplot 
 
-```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, echo=FALSE}
 
 
 sdensity<-readRDS("density.rds")%>%
@@ -1282,14 +1386,13 @@ aplt
 ```
 
 
-**Ejemplo 4** Función de densidad multiples bases de datos. (32 estados de México).
-Herramienta de análisis: stat=density 
-
-Funciones estudiadas: **facet_wrap**
-
-```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE, echo =FALSE}
 
 
+```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE, include=FALSE}
+
+#**Ejemplo 4** Función de densidad multiples bases de datos. (32 estados de México). Herramienta de análisis: stat=density 
+
+#Funciones estudiadas: **facet_wrap**
 mxplt<-ggplot(sdensity, aes(x=age,linetype=s, color=s))+
 geom_line(stat="density")+
 labs(linetype="Causa")+
