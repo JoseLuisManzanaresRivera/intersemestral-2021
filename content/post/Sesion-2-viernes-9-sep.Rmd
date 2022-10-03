@@ -1115,15 +1115,17 @@ Resumiendo: El **proceso de estandarización** unicamente permite exprezar los v
 En términos generales la **distribución normal estandarizada**, se expreza  con los parámetros media cero y desviación estándar =  1 o bien $$N(0,1)$$ $$z=\frac{x-\mu}{\sigma}$$
 
 
-### Ejercicios.
-
-1.-¿
-
-
  **Tarea. Se recomineda revisar el material del libro de texto:** 
 
 [Libro de texto](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing) sección 1.44, páginas 64-79.
 
+
+## Ejercicios de repaso. 
+
+![](/img/mediaymediana2.jpg)
+![](/img/mediaymediana.jpg)
+
+![](/img/ejerciciodensidad.jpg)
 
 
 
@@ -1136,6 +1138,17 @@ Muy a menudo, encontramos datos que no se limitan a cifras enteras, por ejemplo 
 ### KDF Función de densidad Kernel
 
 Permite la representación de la districuión considerando una aproximación contínua,no discreta como es el caso del histograma. 
+
+
+![](/img/den_histo.jpg)
+
+
+
+Note que el área bajo la curva de la **función de densidad** representa la proporción de observaciones en un intervalo concreto. Siendo el **area total igual a 1**. 
+
+En análogía a la información que aporta el **histograma** que es una representación  **discreta** como ya hemos estudiado   
+
+
 
 **Notación:** 
 ![](/img/kernelDF.jpg)

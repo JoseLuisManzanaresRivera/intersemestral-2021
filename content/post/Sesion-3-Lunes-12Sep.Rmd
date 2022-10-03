@@ -413,5 +413,5 @@ Si  (exito=1 , fracaso =0) , Exito toma la prob. p y fracaso q=(1-p)
 Esta distribución presenta **dos estados.**  Como ejemplo más simple, el lanzamiento de una moneda.
 Ver ejemplo **Sesión 3.ipynb**
 
-Otrs ejemplos empíricos con situaciones en donde se presenta una distribución **Binomial**, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato a la presidencia gane o pierda, etc., 
+Otros ejemplos empíricos con situaciones en donde se presenta una distribución **Binomial**, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato a la presidencia gane o pierda, etc., 
 
