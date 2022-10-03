@@ -1184,7 +1184,7 @@ pnorm(10000,7136,6396.764)
 ```
 
 
-O en otras palabras la proporción de observaciones con ingreso menor a 10 000. En este caso es del $67%$
+O en otras palabras la proporción de observaciones con ingreso menor a 10 000. En este caso es del $67\%$
 
   **Tip** Si conocemos la caracterización de la función podemos usar irectametne la función `pnorm` para estimar también el **z-score**. ej.  pnorm(z-score, $\mu$ , $\sigma$)
 
