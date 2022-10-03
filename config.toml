@@ -25,29 +25,29 @@ title = "Estadística I."
     url = "/"
     weight = 1
   [[menu.nav]]
-    name = "Teoría y práctica"
+    name = "Clase"
     pre = "edit"
     url = "/post/"
     weight = 2
   [[menu.nav]]
-    name = "Code"
+    name = ""
     pre = "maths"
-    url = "/code/"
+    url = ""
     weight = 3
   [[menu.nav]]
-    name = "Bases de datos"
+    name = ""
     pre = "smile"
-    url = "/Bases de datos/"
+    url = ""
     weight = 4
   [[menu.nav]]
-    name = "Notación"
+    name = ""
     pre = "rss"
-    url = "/Notación"
+    url = ""
     weight = 5  
   [[menu.nav]]
-    name = "Material"
+    name = ""
     pre = "aka"
-    url = "/Material"
+    url = ""
     weight = 6
 [params]
   includeBootstrapJs = false

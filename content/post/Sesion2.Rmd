@@ -1,5 +1,5 @@
 ---
-title: "Tema: Medidas de tendencia central y dispersión"
+title: "Unidad 1"
 author: "JLMR"
 date: 2022-10-05T22:08:14-05:00
 output: html_document
