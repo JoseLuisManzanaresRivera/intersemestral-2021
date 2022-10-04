@@ -20,7 +20,11 @@ tags: ["Probabilidad"]
 </ul>
 <div id="meta-de-aprendizaje" class="section level4">
 <h4>Meta de aprendizaje:</h4>
-<p>Enteder probabilidad básica y distribuciones probabilisticas.</p>
+<p>Entender probabilidad básica y distribuciones probabilisticas.</p>
+</div>
+</div>
+<div id="introducción" class="section level2">
+<h2>Introducción:</h2>
 <blockquote>
 <p>Experimentos aleatorios: Los resultados de eventos cuyo resultado es incierto por ejemplo:</p>
 </blockquote>
@@ -28,7 +32,6 @@ tags: ["Probabilidad"]
 <li><p>Lanzar una moneda puede tener el resultado de Sol <strong>S</strong> simbolizado como 0 y águila <strong>A</strong>, simbolizado como 1. Lo que integral el conjunto {S,A}, {0,1}.</p></li>
 <li><p>Lanzamiento de un dado con el resultado unio de lo snúmeros en el conjunto {1,2,3,4,5,6}.</p></li>
 </ul>
-</div>
 </div>
 <div id="definiciones." class="section level2">
 <h2>Definiciones.</h2>
@@ -111,14 +114,14 @@ dadosietecaras</code></pre>
 <pre><code>## [1] 4</code></pre>
 <p>Para nuestro propósito de obtener un número aleatorio en un lanzamiento de dado, podemos utilizar la funciòn <strong>sample</strong>, esta toma <strong>dos argumentos</strong>, el vector <strong>x</strong> y el tamaño de la muestra.</p>
 <pre class="r"><code>sample(x=dado,size=1)</code></pre>
-<pre><code>## [1] 2</code></pre>
+<pre><code>## [1] 4</code></pre>
 <pre class="r"><code>sample(x=1:6,size=1)</code></pre>
-<pre><code>## [1] 2</code></pre>
+<pre><code>## [1] 6</code></pre>
 <p>Es posible omitir la etiqueta del argumetno si recordamos que argumento corresponde con la posición, pero en funciones de mayor tamaño es de ayuda anotar el nombre ya que no siempre recordamos los nombres de todos los argumentos.</p>
 <pre class="r"><code>sample(dado,1)</code></pre>
-<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 4</code></pre>
 <pre class="r"><code>sample(1:6,1)</code></pre>
-<pre><code>## [1] 6</code></pre>
+<pre><code>## [1] 3</code></pre>
 <p>Si necesitamos conocer los nombres de los argumentos de alguna función, pasamos el nombre de la función, a la <em>función</em> <code>args()</code>, Ejemplo <code>args(round)</code></p>
 <pre class="r"><code>args(round)</code></pre>
 <pre><code>## function (x, digits = 0) 
@@ -138,23 +141,23 @@ round(3.1416)</code></pre>
 <h2>Muestreo con reemplazo.</h2>
 <p>Cuando aplicamos la función <code>sample(dado, size = 2)</code> notemos que nunca obtenemos dos veces el mismo valor, esto es la función de forma predeterminada considera una muestra aleatoria pero sin reemplazo, para evitar este comportamiento y poder simular el lanzamiento de un dado en realidad en donde podemos obtener por ejemplo el valor 3 y luego otro 3, es necesario inlcuir el argumeto <code>replace = TRUE</code>, esto permite que una vez que lanzamos el primer dado, sea posible obtener el mismo valor en el segundo lanzamiento, tal como sucede en el caso real.</p>
 <pre class="r"><code>sample(dado, size = 2, replace = TRUE)</code></pre>
-<pre><code>## [1] 4 1</code></pre>
+<pre><code>## [1] 6 5</code></pre>
 <p>El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples.</p>
 <p>Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos <strong>un número aleatorio</strong> <strong>independiente</strong> cada vez.</p>
 <p>Si deseas sumar el valor del dado para los dos lanzamientos, unicamente aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios.</p>
 <pre class="r"><code>dados &lt;- sample(dado, size = 2, replace = TRUE)
 dados</code></pre>
-<pre><code>## [1] 1 1</code></pre>
+<pre><code>## [1] 4 5</code></pre>
 <pre class="r"><code>dadosuma&lt;-sum(dados)
 dadosuma</code></pre>
-<pre><code>## [1] 2</code></pre>
+<pre><code>## [1] 9</code></pre>
 <p>¿Qué pasaria si indicamos el valor de <em>dados</em> varias veces?, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?</p>
 <pre class="r"><code>dados</code></pre>
-<pre><code>## [1] 1 1</code></pre>
+<pre><code>## [1] 4 5</code></pre>
 <pre class="r"><code>dados</code></pre>
-<pre><code>## [1] 1 1</code></pre>
+<pre><code>## [1] 4 5</code></pre>
 <pre class="r"><code>dados </code></pre>
-<pre><code>## [1] 1 1</code></pre>
+<pre><code>## [1] 4 5</code></pre>
 <p>Vemos que no obtenemos una nueva muestra aleatoria cada vez que indicamos el nombre del objeto, esto es lo que esperamos ya que una vez que aplicamos una función a un conjunto de argumentos y <strong>asignamos un nombre creamos un objeto</strong> y al llamarlo obtenemos el resultado <strong>permanentemente.</strong></p>
 <p>Si queremos obtener un resultado distinto cada vez que lanzamos el dado podemos especificarlo por medio de una funciòn.</p>
 <p><strong>Nota sobre el uso de funciones.</strong></p>
@@ -176,7 +179,7 @@ sum(operacion)
 }
 
 lanzar()</code></pre>
-<pre><code>## [1] 3</code></pre>
+<pre><code>## [1] 7</code></pre>
 </div>
 <div id="argumentos" class="section level2">
 <h2>Argumentos</h2>
@@ -198,9 +201,9 @@ sum(dados)
 }
 
 lanzar2(tipo=1:4)</code></pre>
-<pre><code>## [1] 4</code></pre>
+<pre><code>## [1] 8</code></pre>
 <pre class="r"><code>lanzar2(tipo=1:20)</code></pre>
-<pre><code>## [1] 13</code></pre>
+<pre><code>## [1] 10</code></pre>
 <pre class="r"><code>lanzar2(1:6)</code></pre>
 <pre><code>## [1] 5</code></pre>
 <p><code>lanzar2(tipo)</code></p>
@@ -213,9 +216,9 @@ sum(dados)
 }
 
 lanzar2()</code></pre>
-<pre><code>## [1] 10</code></pre>
-<pre class="r"><code>lanzar2(1:12)</code></pre>
 <pre><code>## [1] 6</code></pre>
+<pre class="r"><code>lanzar2(1:12)</code></pre>
+<pre><code>## [1] 7</code></pre>
 <p>Ahora cuando llamamos la función, obtenemos la información solicitada!</p>
 <p>Ahora es posible proporcionar un <strong>tipo</strong> de dado <strong>particular</strong> cada vez que lanzamos el dado, o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.</p>
 <hr />
