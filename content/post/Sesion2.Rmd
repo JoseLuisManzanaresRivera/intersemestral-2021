@@ -1,5 +1,5 @@
 ---
-title: "Unidad 1"
+title: "Unidad 1. Estadística descriptiva"
 author: "JLMR"
 date: 2022-10-05T22:08:14-05:00
 output: html_document
