@@ -264,7 +264,7 @@ Vemos que no obtenemos una nueva muestra aleatoria cada vez que indicamos el nom
 
 Si queremos obtener un resultado distinto cada vez que lanzamos el dado podemos especificarlo por medio de una funciòn. 
 
-## Escribe tus propias funciones.
+**Nota sobre el uso de funciones.**
 
 Hasta ahora hemos creado estos objetos:
 
