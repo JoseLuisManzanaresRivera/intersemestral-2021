@@ -1,5 +1,5 @@
 ---
-title: "Tema Distribuciones de probabilidad "
+title: "Distribuciones de probabilidad "
 author: "José Luis Manzanares Rivera"
 date: 2022-10-05T22:08:14-05:00
 categories: ["R"]
