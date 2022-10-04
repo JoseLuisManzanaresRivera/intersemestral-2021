@@ -1,5 +1,5 @@
 ---
-title: "Sesión 4"
+title: "Unidad 2"
 author: "José Luis Manzanares Rivera"
 date: 2022-11-01T22:13:14-05:00
 categories: ["Descriptive"]
@@ -9,3 +9,6 @@ tags: ["Probabilidad"]
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+

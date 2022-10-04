@@ -1,5 +1,5 @@
 ---
-title: "Unidad 2. Distribuciones de probabilidad "
+title: "Unidad 3. Inferencias"
 author: "José Luis Manzanares Rivera"
 date: 2022-10-05T22:08:14-05:00
 categories: ["R"]
