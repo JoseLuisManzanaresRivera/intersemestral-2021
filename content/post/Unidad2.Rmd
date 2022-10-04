@@ -10,5 +10,420 @@ tags: ["Probabilidad"]
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Probabilidad.
+
+### Objetivos:
+
++ Concer el concepto  y las reglas de probabilidad
+
++ Estudiar la definición de variables aleatorias.
+
++ Presentar las distribuciones de probabilidad. 
+
+#### Meta de aprendizaje:
+
+Enteder probabilidad básica y distribuciones probabilisticas. 
+
+
+> Experimentos aleatorios: Los resultados de eventos cuyo resultado es incierto por ejemplo: 
+
++ Lanzar una moneda puede tener el resultado de Sol **S**  simbolizado como 0 y águila **A**, simbolizado como 1. Lo que integral el conjunto {S,A}, {0,1}.
+
++ Lanzamiento de un dado con el resultado unio de lo snúmeros en el conjunto  {1,2,3,4,5,6}.
+
+## Definiciones.
+
+
+**Población** Incluye todos los elementos de un conjunto de datos.
+
+**Muestra** Consiste en una o más observaciones de la población.
+
+**Espacio muestral:**  Un conjunto **M** que consta de todos los resultados posibles de un experimento aleatorio se denomina espacio muestral. 
+
+
+##### Eventos. 
+
+Un evento es un subconjunto **A** del espacio muestral **M**. Esto es un conjunto de resultados posibles. 
+
+**Por ejemplo**, si lanzamos una moneda **dos veces**, el evento de que solo resulte una águila, es el subconjunto del espacio muestral que consta de los puntos (0,1)(1,0). La figura siguiente muestra este subconjunto en el espacio muestral. 
+
+![](/img/espacioM.jpg)
+##### Operaciones de conjuntos en un espacio muestral 
+
+![](/img/reglasprob.jpg)
+![](/img/concepto.jpg)
+
+
++ **Parámetro** Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan **letras griegas** para referirnos a una parámetro.
+
++ **Estadístico** Una característica medible de una **muestra**. 
+
+**Ejemplos de una estadistico:** 
+
++ La media de la muestra 
++ El rango de la muestra
++ La desviación de los datos respecto a la media.
+
+![](/img/samples.jpg)
+
+
+Si no conocemos el **paramétro**  (ingreso medio de los trabajadores en Baja california), podemos estimar el  **estadístico** de una **muestra** y a partir de este **inferir** el parámetro **poblacional** 
+
+La representatividad de la **muestra** es importante  para la validéz del **estadístico** que permite inferir el **parámetro** de interés.
+
+
+El correcto diseño de nuestros análisis  permite que las **muestras** seleccionadas constituyan una adecuada representación de la **población de estudio**. 
+
+
++ **Distribución de muestreo** La distribución de probabiliad de un estadístico dado. Con base en una muestra aleatoria. 
+
++ **Inferencia estadística** Te permite hacer una conjetura "educada" respecto de un parámetro poblacional, basado en un estadístico calculado usando una muestra aleatoria de la población.
+
+
+**Convención sobre la notación:** 
+Los Parámetros (poblacionales) son denotados generalmente con el uso de letras griegas. Mientras los estadísticos (muestrales) son expresados con letras convencionales.
+
+**Ejemplo.**
+
+Parámetro poblacional $\mu$, Desv std $\sigma$ 
+Estadístico muestral $\bar{x}$ Desv std **S**
+
+
+
+
+
+### Distribuciones de probabilidad.
+
+¿A qué nos referimos cuando hablamos de distribuciones de probabilidad?
+
+A las **herramientas matemáticas** para describir la distribución de datos numéricos en poblaciones y muestras.
+
+## Distribuciones discretas.
+
+
+Un ejemplo **clásico** simple de una distribución de **probabilidad discreta** es el lanzamiento de un dado. 
+
+Para cada uno de los lados desde $i=1.....6$ la probabilidad de que un lanzamiento del dado tenga la cara $i$ es $$P_{i}=\frac{1}{6}$$  Con $i=1....6$
+
+
+Las propiedades de la distribución discreta de probabilidad son : 
++ $$0\leq{P_{i}}\leq{1}, 	\forall i \in N$$
+
+
++ $$\sum_{i=1}^{n} P_{i}=1$$
+
+#### Ejercicio. 
+
+
+Genere  un **dado virtual:**
+
+```{r}
+1:6
+```
+
+Este notación nos permite tener  un lista de números entre 1 y 6, pero es necesario almacenarlos. Para lo cual asignamos un nombre usando el símbolo **$<-** que equivale a decir igual que. 
+
+```{r}
+Dado<-1:6
+Dado
+```
+
+**Note:** Cuando creamos un objeto este aparece en la parte superior derecha en el área de environment.
+
+![](/environment.jpg)
+
+
+
+
+```{r }
+
+## Pruebe generar dados de diferente número de caras.
+
+dado<-1:10
+dado
+
+
+dado<-1:6
+dado
+
+dadosietecaras<-1:7
+dadosietecaras
+```
+
+**¿Qué podemos hacer con el dado?**
+
+
+Comencemos por algunas operaciones aritméticas.
+
+
+```{r}
+
+dado-1
+
+dado/2
+
+dado*dado
+```
+
+Note que el resultado en cada caso es un vector del mismo tamaño  al vector multiplicado por el  escalar (en este caso 1x6). 
+
+Si multiplicamos un vector (en este caso el vector dado 1x6) cualesquiera, por un vector de un tamaño inferior, R replica los valores del vector de menor tamaño hasta alcanzar el tamaño del primero vector y así permite concretar la operación entre ambos vectores (que son del mismo tamaño). 
+
+
+Ahora que ya hemos realizado algo de artimética con el dado, veamos cómo podemos lanzarlo para obtener un número aleatorio.
+
+Para este propósito necesitamos una función. 
+
+## Funciones
+
+Para realizar esta tarea de selección de un número aleatorio, necesitamos una función. Construir una función es fácil, únicamente necesitamos el **nombre** y los **argumentos** (entre paréntesis) sobre los cuales se aplicará dicha función. Algunos ejemplos de funciones disponibles de forma automática en R, incluyen:
+
+```{r, echo=TRUE}
+round(5.8)
+
+round(3.1416)
+
+factorial(3)
+```
+
+Los datos que pasamos en la función los denominamos **argumentos**. Estos pueden ser datos, funciones o resultados de otras funciones. 
+
+**Ejemplo:** 
+
+```{r}
+mean(1:6)
+
+mean(dado)
+
+round(mean(dado))
+```
+
+Para nuestro propósito de obtener un número aleatorio en un lanzamiento de dado, podemos utilizar la funciòn **sample**, esta toma **dos argumentos**, el vector **x** y el tamaño de la muestra. 
+
+
+```{r}
+sample(x=dado,size=1)
+
+sample(x=1:6,size=1)
+
+```
+
+Es posible omitir la etiqueta del argumetno si recordamos que argumento corresponde con la posición, pero en funciones de mayor tamaño es de ayuda anotar el nombre ya que no siempre recordamos los nombres de todos los argumentos. 
+
+```{r}
+sample(dado,1)
+
+sample(1:6,1)
+```
+
+Si necesitamos conocer los nombres de los argumentos de alguna función, pasamos el nombre de la función, a la *función* `args()`, Ejemplo  `args(round)` 
+
+
+```{r}
+args(round)
+```
+
+**Note** que las funciones incluyen valores predeterminados para algunos argumentos, en el caso anterior el valor del argumento *digits* es 0, de modo que si omitimos este argumento, el resultado será el redondeo al entero próximo, sin decimales. 
+
+```{r}
+# Redondeo con dos dígitos 
+round(3.1416,2)
+
+# Redondeo con un dígito
+round(3.1416,1)
+
+# redondeo con parámetro predeterminado.
+round(3.1416)
+
+```
+
+## Muestreo con reemplazo.
+
+Cuando aplicamos la función `sample(dado, size = 2)` notemos que nunca obtenemos dos veces el mismo valor, esto es la función de forma predeterminada considera una muestra aleatoria pero sin reemplazo, para evitar este comportamiento y poder simular el lanzamiento de un dado en realidad en donde podemos obtener por ejemplo el valor 3 y luego otro 3, es necesario inlcuir el argumeto `replace = TRUE`, esto permite que una vez que lanzamos el primer dado, sea posible obtener el mismo valor en el segundo lanzamiento, tal como sucede en el caso real.
+
+
+```{r}
+sample(dado, size = 2, replace = TRUE)
+```
+
+El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples. 
+
+Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos **un número aleatorio**  **independiente** cada vez. 
+
+
+Si deseas sumar el valor del dado para los dos lanzamientos, unicamente aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios. 
+
+```{r}
+dados <- sample(dado, size = 2, replace = TRUE)
+dados
+
+dadosuma<-sum(dados)
+dadosuma
+```
+
+¿Qué pasaria si indicamos el valor de *dados* varias veces?, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?
+
+```{r}
+dados
+
+dados
+
+dados 
+```
+
+Vemos que no obtenemos una nueva muestra aleatoria cada vez que indicamos el nombre del objeto, esto es lo que esperamos ya que una vez que aplicamos una función a un conjunto de argumentos y **asignamos un nombre creamos un objeto** y al llamarlo obtenemos el  resultado **permanentemente.**
+
+Si queremos obtener un resultado distinto cada vez que lanzamos el dado podemos especificarlo por medio de una funciòn. 
+
+**Nota sobre el uso de funciones.**
+
+Hasta ahora hemos creado estos objetos:
+
+`dado<-1:6`  
+
+`dados<-sample(dado,2,replace=TRUE)`
+
+`sum(dados)`
+
+pero no sería conveniente que escribiésemos estos objetos cada vez que necesitamos el resultado del lanzamiento 
+
+Para simplificar este proceso podemos construir una **función** que haga el trabajo por nosotros de manera automática.
+
+Hagamos una funciòn llamada `lanzar()`, esta función nos permitirá tener un  valor nuevo  para cada vez que lancemos los dados, sin tener que reescribir cada objeto. 
+
+
+**las funciones se foman por 3 partes básicas:** un **nombre**, **el cuerpo de código**, y un **conjnto de argumentos**.
+
+Para hacer una función propia, necesitas replicar estos tres componentes y almacenarlos en un **objeto.**.  
+
+Esto lo puedes hacer con la función `function()`. Sólo llama la función   **function()** y síguela con un par de **llaves** {}:
+
+`mi_función <- function() {}`
+
+```{r}
+lanzar <- function() {
+dado <- 1:6
+operacion <- sample(dado, size = 2, replace = TRUE)
+sum(operacion)
+}
+
+lanzar()
+```
+
+## Argumentos
+
+Ahora vamos a incluir  argumentos a nuestra función.
+Veamos que sucede cuando incluimos un objeto que no hemos definido, llamémos a este elemento  **tipos**, en lugar del objeto $dado<-1:6$. 
+
+```{r}
+lanzar2 <- function() {
+dados <- sample(tipos, size = 2, replace = TRUE)
+sum(dados)
+}
+```
+
+`lanzar2()`
+
+Obtenemos un error: **Error: object 'lanzar2' not found**. esto debido a que no existe el objeto **tipos**.
+
+Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función, lo único que necesitamos hacer es indicar este elemento (tipos) como **argumento**. 
+
+Al incluir argumentos en nuestra función, podemos en nuestro ejemplo, especificar diferentes tipos de **dados**. 
+
+Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con **20 lados**, uno con 4 o 3,etc. 
+
+Esta información la indicamos mediante los argumentos.
+
+```{r }
+
+lanzar2 <- function(tipo) {
+dados <- sample(tipo, size = 2, replace = TRUE)
+sum(dados)
+}
+
+lanzar2(tipo=1:4)
+lanzar2(tipo=1:20)
+lanzar2(1:6)
+```
+
+`lanzar2(tipo)`
+
+Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, **esto no es necesario por que  tipo** es el único argumento de nuestra función `lanzar2()`.
+
+Note que la función resulta en un `Error`, cuando no proporcionamos  el argumento tipo  ej. `lanzar2()`. 
+
+Esto es interesante por que de hecho podemos especificar **argumentos predeterminados** al momento de construir la función de tal forma que podemos dejar vacio este espacio cuando estimamos la función. 
+
+```{r}
+lanzar2 <- function(tipo=1:6) {
+dados <- sample(tipo, size = 2, replace = TRUE)
+sum(dados)
+}
+
+lanzar2()
+
+lanzar2(1:12)
+```
+
+Ahora cuando llamamos la función, obtenemos la información solicitada!
+
+Ahora es posible proporcionar un **tipo** de dado **particular** cada vez que lanzamos el dado, o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.
+
+
+En **síntesis** el proceso para crear una función involucra las siguientes partes:
+
+![](/Funciones.jpg)
+
+## Distribuciones de probabilidad.
+
+#### Distribuciones discretas
+
+
+Dos de las distribuciones discretas más comunes son: la distribución **Binomial** y **Poisson.**
+
+La diferencia básica entre ambas es que la **Binomial** tiene un límite superior definido. 
+
+##### Distribución Binomial. 
+
+Considere la ejecución de una serie de experimentos. 
+
+La distribución binomial aplica si se cumplen los siguientes supuestos: 
+
++ Los ensayos son independientes. 
+
++ Cada ensayo tiene la misma probabilidad de exito. 
+
++ El número de ensayos es conocido 
+
++ Se define un parámetro denominado **éxitos** "x", como el número de éxitos dentro de los **"n"** ensayos.
+
+De esta forma la función de probabilidad binomial se define como: 
+
+$$P(x)=\frac{n!}{x!(n-x)!}p^{x}(1-p)^{n-x} $$
+
+La función nos permite estimar la probabilidad de que ocurra una cantidad determinada de éxitos.  P(x).  P (mayúscula).
+
+Note que  **p** (mínuscula) es la probabilidad de éxito de cada ensayo y su inverso es la probabilidad de fracaso. 
+
+
+
+
+
+La **distribución de Bernoulli**
+
+Es una distribución dicotómica. 
+
+Si {\displaystyle X}X es una variable aleatoria discreta que mide el "número de éxitos" y se realiza un único experimento con dos posibles resultados denominados éxito y fracaso, se dice que la variable aleatoria **X** se distribuye como una **Bernoulli** de parámetro **p**  con  $$0<p<1$$ y escribimos   $X\sim \operatorname {Bernoulli} (p)$.
+
+Si  (exito=1 , fracaso =0) , Exito toma la prob. p y fracaso q=(1-p)
+
+
+![](/img/bernoulli.jpg)
+
+
+Esta distribución presenta **dos estados.**  Como ejemplo más simple, el lanzamiento de una moneda.
+Ver ejemplo **Sesión 3.ipynb**
+
+Otros ejemplos empíricos con situaciones en donde se presenta una distribución **Binomial**, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato a la presidencia gane o pierda, etc., 
 
 
