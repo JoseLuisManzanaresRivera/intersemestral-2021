@@ -51,7 +51,7 @@ Un evento es un subconjunto **A** del espacio muestral **M**. Esto es un conjunt
 
 
 
-#####Operaciones de conjuntos en un espacio muestral 
+##### Operaciones de conjuntos en un espacio muestral 
 
 
 ![](/img/reglasprob.jpg)
@@ -67,6 +67,9 @@ El enfoque axiomático es preferible desde un punto de vista matemático de la p
 
 ![](/img/teoremas.jpg)
 
+### Asignación de probabilidades.
+
+![](/img/prob1.jpg)
 
 #### Ejercicio. 
 
