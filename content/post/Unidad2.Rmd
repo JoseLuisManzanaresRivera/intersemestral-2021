@@ -48,6 +48,8 @@ Un evento es un subconjunto **A** del espacio muestral **M**. Esto es un conjunt
 **Por ejemplo**, si lanzamos una moneda **dos veces**, el evento de que solo resulte una águila, es el subconjunto del espacio muestral que consta de los puntos (0,1)(1,0). La figura siguiente muestra este subconjunto en el espacio muestral. 
 
 ![](/img/espacioM.jpg)
+
+
 ##### Operaciones de conjuntos en un espacio muestral 
 
 ![](/img/reglasprob.jpg)
@@ -59,63 +61,10 @@ El enfoque axiomático es preferible desde un punto de vista matemático de la p
 ![](/img/axiiomas.jpg)
 
 
-+ **Parámetro** Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan **letras griegas** para referirnos a una parámetro.
+#### Teoremas importantes sobre probabilidad. 
 
-+ **Estadístico** Una característica medible de una **muestra**. 
+![](/img/teoremas.jpg)
 
-**Ejemplos de una estadistico:** 
-
-+ La media de la muestra 
-+ El rango de la muestra
-+ La desviación de los datos respecto a la media.
-
-![](/img/samples.jpg)
-
-
-Si no conocemos el **paramétro**  (ingreso medio de los trabajadores en Baja california), podemos estimar el  **estadístico** de una **muestra** y a partir de este **inferir** el parámetro **poblacional** 
-
-La representatividad de la **muestra** es importante  para la validéz del **estadístico** que permite inferir el **parámetro** de interés.
-
-
-El correcto diseño de nuestros análisis  permite que las **muestras** seleccionadas constituyan una adecuada representación de la **población de estudio**. 
-
-
-+ **Distribución de muestreo** La distribución de probabiliad de un estadístico dado. Con base en una muestra aleatoria. 
-
-+ **Inferencia estadística** Te permite hacer una conjetura "educada" respecto de un parámetro poblacional, basado en un estadístico calculado usando una muestra aleatoria de la población.
-
-
-**Convención sobre la notación:** 
-Los Parámetros (poblacionales) son denotados generalmente con el uso de letras griegas. Mientras los estadísticos (muestrales) son expresados con letras convencionales.
-
-**Ejemplo.**
-
-Parámetro poblacional $\mu$, Desv std $\sigma$ 
-Estadístico muestral $\bar{x}$ Desv std **S**
-
-
-
-
-
-### Distribuciones de probabilidad.
-
-¿A qué nos referimos cuando hablamos de distribuciones de probabilidad?
-
-A las **herramientas matemáticas** para describir la distribución de datos numéricos en poblaciones y muestras.
-
-## Distribuciones discretas.
-
-
-Un ejemplo **clásico** simple de una distribución de **probabilidad discreta** es el lanzamiento de un dado. 
-
-Para cada uno de los lados desde $i=1.....6$ la probabilidad de que un lanzamiento del dado tenga la cara $i$ es $$P_{i}=\frac{1}{6}$$  Con $i=1....6$
-
-
-Las propiedades de la distribución discreta de probabilidad son : 
-+ $$0\leq{P_{i}}\leq{1}, 	\forall i \in N$$
-
-
-+ $$\sum_{i=1}^{n} P_{i}=1$$
 
 #### Ejercicio. 
 
@@ -373,6 +322,68 @@ lanzar2(1:12)
 Ahora cuando llamamos la función, obtenemos la información solicitada!
 
 Ahora es posible proporcionar un **tipo** de dado **particular** cada vez que lanzamos el dado, o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.
+
+
+--------------------------
+
++ **Parámetro** Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan **letras griegas** para referirnos a una parámetro.
+
++ **Estadístico** Una característica medible de una **muestra**. 
+
+**Ejemplos de una estadistico:** 
+
++ La media de la muestra 
++ El rango de la muestra
++ La desviación de los datos respecto a la media.
+
+![](/img/samples.jpg)
+
+
+Si no conocemos el **paramétro**  (ingreso medio de los trabajadores en Baja california), podemos estimar el  **estadístico** de una **muestra** y a partir de este **inferir** el parámetro **poblacional** 
+
+La representatividad de la **muestra** es importante  para la validéz del **estadístico** que permite inferir el **parámetro** de interés.
+
+
+El correcto diseño de nuestros análisis  permite que las **muestras** seleccionadas constituyan una adecuada representación de la **población de estudio**. 
+
+
++ **Distribución de muestreo** La distribución de probabiliad de un estadístico dado. Con base en una muestra aleatoria. 
+
++ **Inferencia estadística** Te permite hacer una conjetura "educada" respecto de un parámetro poblacional, basado en un estadístico calculado usando una muestra aleatoria de la población.
+
+
+**Convención sobre la notación:** 
+Los Parámetros (poblacionales) son denotados generalmente con el uso de letras griegas. Mientras los estadísticos (muestrales) son expresados con letras convencionales.
+
+**Ejemplo.**
+
+Parámetro poblacional $\mu$, Desv std $\sigma$ 
+Estadístico muestral $\bar{x}$ Desv std **S**
+
+
+
+
+
+### Distribuciones de probabilidad.
+
+¿A qué nos referimos cuando hablamos de distribuciones de probabilidad?
+
+A las **herramientas matemáticas** para describir la distribución de datos numéricos en poblaciones y muestras.
+
+## Distribuciones discretas.
+
+
+Un ejemplo **clásico** simple de una distribución de **probabilidad discreta** es el lanzamiento de un dado. 
+
+Para cada uno de los lados desde $i=1.....6$ la probabilidad de que un lanzamiento del dado tenga la cara $i$ es $$P_{i}=\frac{1}{6}$$  Con $i=1....6$
+
+
+Las propiedades de la distribución discreta de probabilidad son : 
++ $$0\leq{P_{i}}\leq{1}, 	\forall i \in N$$
+
+
++ $$\sum_{i=1}^{n} P_{i}=1$$
+
 
 
 En **síntesis** el proceso para crear una función involucra las siguientes partes:

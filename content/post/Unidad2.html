@@ -45,45 +45,7 @@ tags: ["Probabilidad"]
 <img src="/img/concepto.jpg" /></p>
 <p>El enfoque axiomático es preferible desde un punto de vista matemático de la probabilidad.</p>
 <p><img src="/img/axiiomas.jpg" /></p>
-<ul>
-<li><p><strong>Parámetro</strong> Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan <strong>letras griegas</strong> para referirnos a una parámetro.</p></li>
-<li><p><strong>Estadístico</strong> Una característica medible de una <strong>muestra</strong>.</p></li>
-</ul>
-<p><strong>Ejemplos de una estadistico:</strong></p>
-<ul>
-<li>La media de la muestra</li>
-<li>El rango de la muestra</li>
-<li>La desviación de los datos respecto a la media.</li>
-</ul>
-<p><img src="/img/samples.jpg" /></p>
-<p>Si no conocemos el <strong>paramétro</strong> (ingreso medio de los trabajadores en Baja california), podemos estimar el <strong>estadístico</strong> de una <strong>muestra</strong> y a partir de este <strong>inferir</strong> el parámetro <strong>poblacional</strong></p>
-<p>La representatividad de la <strong>muestra</strong> es importante para la validéz del <strong>estadístico</strong> que permite inferir el <strong>parámetro</strong> de interés.</p>
-<p>El correcto diseño de nuestros análisis permite que las <strong>muestras</strong> seleccionadas constituyan una adecuada representación de la <strong>población de estudio</strong>.</p>
-<ul>
-<li><p><strong>Distribución de muestreo</strong> La distribución de probabiliad de un estadístico dado. Con base en una muestra aleatoria.</p></li>
-<li><p><strong>Inferencia estadística</strong> Te permite hacer una conjetura “educada” respecto de un parámetro poblacional, basado en un estadístico calculado usando una muestra aleatoria de la población.</p></li>
-</ul>
-<p><strong>Convención sobre la notación:</strong>
-Los Parámetros (poblacionales) son denotados generalmente con el uso de letras griegas. Mientras los estadísticos (muestrales) son expresados con letras convencionales.</p>
-<p><strong>Ejemplo.</strong></p>
-<p>Parámetro poblacional <span class="math inline">\(\mu\)</span>, Desv std <span class="math inline">\(\sigma\)</span>
-Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <strong>S</strong></p>
 </div>
-<div id="distribuciones-de-probabilidad." class="section level3">
-<h3>Distribuciones de probabilidad.</h3>
-<p>¿A qué nos referimos cuando hablamos de distribuciones de probabilidad?</p>
-<p>A las <strong>herramientas matemáticas</strong> para describir la distribución de datos numéricos en poblaciones y muestras.</p>
-</div>
-</div>
-<div id="distribuciones-discretas." class="section level2">
-<h2>Distribuciones discretas.</h2>
-<p>Un ejemplo <strong>clásico</strong> simple de una distribución de <strong>probabilidad discreta</strong> es el lanzamiento de un dado.</p>
-<p>Para cada uno de los lados desde <span class="math inline">\(i=1.....6\)</span> la probabilidad de que un lanzamiento del dado tenga la cara <span class="math inline">\(i\)</span> es <span class="math display">\[P_{i}=\frac{1}{6}\]</span> Con <span class="math inline">\(i=1....6\)</span></p>
-<p>Las propiedades de la distribución discreta de probabilidad son :
-+ <span class="math display">\[0\leq{P_{i}}\leq{1},    \forall i \in N\]</span></p>
-<ul>
-<li><span class="math display">\[\sum_{i=1}^{n} P_{i}=1\]</span></li>
-</ul>
 <div id="ejercicio." class="section level4">
 <h4>Ejercicio.</h4>
 <p>Genere un <strong>dado virtual:</strong></p>
@@ -139,14 +101,14 @@ dadosietecaras</code></pre>
 <pre><code>## [1] 4</code></pre>
 <p>Para nuestro propósito de obtener un número aleatorio en un lanzamiento de dado, podemos utilizar la funciòn <strong>sample</strong>, esta toma <strong>dos argumentos</strong>, el vector <strong>x</strong> y el tamaño de la muestra.</p>
 <pre class="r"><code>sample(x=dado,size=1)</code></pre>
-<pre><code>## [1] 4</code></pre>
+<pre><code>## [1] 6</code></pre>
 <pre class="r"><code>sample(x=1:6,size=1)</code></pre>
 <pre><code>## [1] 2</code></pre>
 <p>Es posible omitir la etiqueta del argumetno si recordamos que argumento corresponde con la posición, pero en funciones de mayor tamaño es de ayuda anotar el nombre ya que no siempre recordamos los nombres de todos los argumentos.</p>
 <pre class="r"><code>sample(dado,1)</code></pre>
-<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 6</code></pre>
 <pre class="r"><code>sample(1:6,1)</code></pre>
-<pre><code>## [1] 2</code></pre>
+<pre><code>## [1] 5</code></pre>
 <p>Si necesitamos conocer los nombres de los argumentos de alguna función, pasamos el nombre de la función, a la <em>función</em> <code>args()</code>, Ejemplo <code>args(round)</code></p>
 <pre class="r"><code>args(round)</code></pre>
 <pre><code>## function (x, digits = 0) 
@@ -166,23 +128,23 @@ round(3.1416)</code></pre>
 <h2>Muestreo con reemplazo.</h2>
 <p>Cuando aplicamos la función <code>sample(dado, size = 2)</code> notemos que nunca obtenemos dos veces el mismo valor, esto es la función de forma predeterminada considera una muestra aleatoria pero sin reemplazo, para evitar este comportamiento y poder simular el lanzamiento de un dado en realidad en donde podemos obtener por ejemplo el valor 3 y luego otro 3, es necesario inlcuir el argumeto <code>replace = TRUE</code>, esto permite que una vez que lanzamos el primer dado, sea posible obtener el mismo valor en el segundo lanzamiento, tal como sucede en el caso real.</p>
 <pre class="r"><code>sample(dado, size = 2, replace = TRUE)</code></pre>
-<pre><code>## [1] 6 3</code></pre>
+<pre><code>## [1] 4 5</code></pre>
 <p>El muestreo con reemplazo es una manera fácil de crear muestras aleatorias simples.</p>
 <p>Por ejemplo simular correctamente el lanzamiento de un dado en el que obtenemos <strong>un número aleatorio</strong> <strong>independiente</strong> cada vez.</p>
 <p>Si deseas sumar el valor del dado para los dos lanzamientos, unicamente aplicamos la función de suma y tenemos el resultado de esta simulación con números aleatorios.</p>
 <pre class="r"><code>dados &lt;- sample(dado, size = 2, replace = TRUE)
 dados</code></pre>
-<pre><code>## [1] 3 5</code></pre>
+<pre><code>## [1] 1 5</code></pre>
 <pre class="r"><code>dadosuma&lt;-sum(dados)
 dadosuma</code></pre>
-<pre><code>## [1] 8</code></pre>
+<pre><code>## [1] 6</code></pre>
 <p>¿Qué pasaria si indicamos el valor de <em>dados</em> varias veces?, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?</p>
 <pre class="r"><code>dados</code></pre>
-<pre><code>## [1] 3 5</code></pre>
+<pre><code>## [1] 1 5</code></pre>
 <pre class="r"><code>dados</code></pre>
-<pre><code>## [1] 3 5</code></pre>
+<pre><code>## [1] 1 5</code></pre>
 <pre class="r"><code>dados </code></pre>
-<pre><code>## [1] 3 5</code></pre>
+<pre><code>## [1] 1 5</code></pre>
 <p>Vemos que no obtenemos una nueva muestra aleatoria cada vez que indicamos el nombre del objeto, esto es lo que esperamos ya que una vez que aplicamos una función a un conjunto de argumentos y <strong>asignamos un nombre creamos un objeto</strong> y al llamarlo obtenemos el resultado <strong>permanentemente.</strong></p>
 <p>Si queremos obtener un resultado distinto cada vez que lanzamos el dado podemos especificarlo por medio de una funciòn.</p>
 <p><strong>Nota sobre el uso de funciones.</strong></p>
@@ -204,7 +166,7 @@ sum(operacion)
 }
 
 lanzar()</code></pre>
-<pre><code>## [1] 10</code></pre>
+<pre><code>## [1] 11</code></pre>
 </div>
 <div id="argumentos" class="section level2">
 <h2>Argumentos</h2>
@@ -226,11 +188,11 @@ sum(dados)
 }
 
 lanzar2(tipo=1:4)</code></pre>
-<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 8</code></pre>
 <pre class="r"><code>lanzar2(tipo=1:20)</code></pre>
-<pre><code>## [1] 15</code></pre>
+<pre><code>## [1] 21</code></pre>
 <pre class="r"><code>lanzar2(1:6)</code></pre>
-<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 7</code></pre>
 <p><code>lanzar2(tipo)</code></p>
 <p>Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, <strong>esto no es necesario por que tipo</strong> es el único argumento de nuestra función <code>lanzar2()</code>.</p>
 <p>Note que la función resulta en un <code>Error</code>, cuando no proporcionamos el argumento tipo ej. <code>lanzar2()</code>.</p>
@@ -241,11 +203,49 @@ sum(dados)
 }
 
 lanzar2()</code></pre>
-<pre><code>## [1] 11</code></pre>
+<pre><code>## [1] 5</code></pre>
 <pre class="r"><code>lanzar2(1:12)</code></pre>
-<pre><code>## [1] 18</code></pre>
+<pre><code>## [1] 11</code></pre>
 <p>Ahora cuando llamamos la función, obtenemos la información solicitada!</p>
 <p>Ahora es posible proporcionar un <strong>tipo</strong> de dado <strong>particular</strong> cada vez que lanzamos el dado, o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.</p>
+<ul>
+<li><p><strong>Parámetro</strong> Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan <strong>letras griegas</strong> para referirnos a una parámetro.</p></li>
+<li><p><strong>Estadístico</strong> Una característica medible de una <strong>muestra</strong>.</p></li>
+</ul>
+<p><strong>Ejemplos de una estadistico:</strong></p>
+<ul>
+<li>La media de la muestra</li>
+<li>El rango de la muestra</li>
+<li>La desviación de los datos respecto a la media.</li>
+</ul>
+<p><img src="/img/samples.jpg" /></p>
+<p>Si no conocemos el <strong>paramétro</strong> (ingreso medio de los trabajadores en Baja california), podemos estimar el <strong>estadístico</strong> de una <strong>muestra</strong> y a partir de este <strong>inferir</strong> el parámetro <strong>poblacional</strong></p>
+<p>La representatividad de la <strong>muestra</strong> es importante para la validéz del <strong>estadístico</strong> que permite inferir el <strong>parámetro</strong> de interés.</p>
+<p>El correcto diseño de nuestros análisis permite que las <strong>muestras</strong> seleccionadas constituyan una adecuada representación de la <strong>población de estudio</strong>.</p>
+<ul>
+<li><p><strong>Distribución de muestreo</strong> La distribución de probabiliad de un estadístico dado. Con base en una muestra aleatoria.</p></li>
+<li><p><strong>Inferencia estadística</strong> Te permite hacer una conjetura “educada” respecto de un parámetro poblacional, basado en un estadístico calculado usando una muestra aleatoria de la población.</p></li>
+</ul>
+<p><strong>Convención sobre la notación:</strong>
+Los Parámetros (poblacionales) son denotados generalmente con el uso de letras griegas. Mientras los estadísticos (muestrales) son expresados con letras convencionales.</p>
+<p><strong>Ejemplo.</strong></p>
+<p>Parámetro poblacional <span class="math inline">\(\mu\)</span>, Desv std <span class="math inline">\(\sigma\)</span>
+Estadístico muestral <span class="math inline">\(\bar{x}\)</span> Desv std <strong>S</strong></p>
+<div id="distribuciones-de-probabilidad." class="section level3">
+<h3>Distribuciones de probabilidad.</h3>
+<p>¿A qué nos referimos cuando hablamos de distribuciones de probabilidad?</p>
+<p>A las <strong>herramientas matemáticas</strong> para describir la distribución de datos numéricos en poblaciones y muestras.</p>
+</div>
+</div>
+<div id="distribuciones-discretas." class="section level2">
+<h2>Distribuciones discretas.</h2>
+<p>Un ejemplo <strong>clásico</strong> simple de una distribución de <strong>probabilidad discreta</strong> es el lanzamiento de un dado.</p>
+<p>Para cada uno de los lados desde <span class="math inline">\(i=1.....6\)</span> la probabilidad de que un lanzamiento del dado tenga la cara <span class="math inline">\(i\)</span> es <span class="math display">\[P_{i}=\frac{1}{6}\]</span> Con <span class="math inline">\(i=1....6\)</span></p>
+<p>Las propiedades de la distribución discreta de probabilidad son :
++ <span class="math display">\[0\leq{P_{i}}\leq{1},    \forall i \in N\]</span></p>
+<ul>
+<li><span class="math display">\[\sum_{i=1}^{n} P_{i}=1\]</span></li>
+</ul>
 <p>En <strong>síntesis</strong> el proceso para crear una función involucra las siguientes partes:</p>
 <p><img src="/Funciones.jpg" /></p>
 </div>
