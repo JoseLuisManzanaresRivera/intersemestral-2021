@@ -53,6 +53,11 @@ Un evento es un subconjunto **A** del espacio muestral **M**. Esto es un conjunt
 ![](/img/reglasprob.jpg)
 ![](/img/concepto.jpg)
 
+El enfoque axiomático es preferible desde un punto de vista matemático de la probabilidad. 
+
+
+![](/img/axiiomas.jpg)
+
 
 + **Parámetro** Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan **letras griegas** para referirnos a una parámetro.
 
