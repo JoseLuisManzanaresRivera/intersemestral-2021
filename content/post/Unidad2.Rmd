@@ -30,11 +30,11 @@ Entender probabilidad básica y distribuciones probabilisticas.
 
 ## Definiciones.
 
-> Experimentos aleatorios: Los resultados de eventos cuyo resultado es incierto por ejemplo: 
+**Experimentos aleatorios:** Los resultados de eventos cuyo resultado es incierto por ejemplo: 
 
-+ Lanzar una moneda puede tener el resultado de Sol **S**  simbolizado como 0 y águila **A**, simbolizado como 1. Lo que integral el conjunto {S,A}, {0,1}.
++ Lanzar una moneda puede tener el resultado de Sol **S**  simbolizado como 0 y águila **A**, simbolizado como 1. Lo que integra el conjunto {S,A}, {0,1}.
 
-+ Lanzamiento de un dado con el resultado unio de lo snúmeros en el conjunto  {1,2,3,4,5,6}.
++ Lanzamiento de un dado con el resultado uno de lo snúmeros en el conjunto  {1,2,3,4,5,6}.
 
 
 **Población** Incluye todos los elementos de un conjunto de datos.
