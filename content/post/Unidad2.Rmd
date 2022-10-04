@@ -50,7 +50,9 @@ Un evento es un subconjunto **A** del espacio muestral **M**. Esto es un conjunt
 ![](/img/espacioM.jpg)
 
 
-##### Operaciones de conjuntos en un espacio muestral 
+
+#####Operaciones de conjuntos en un espacio muestral 
+
 
 ![](/img/reglasprob.jpg)
 ![](/img/concepto.jpg)
