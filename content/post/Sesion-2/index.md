@@ -5,7 +5,7 @@ tags:
 - Conceptos 
 - IDE
 - Tidyverse
-title: Preeliminares sobre manejo de datos e instalación de software.
+title: Preeliminares. Estructura de datos
 mathjax: true
 ---
 
