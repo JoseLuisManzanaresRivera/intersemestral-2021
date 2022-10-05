@@ -80,11 +80,11 @@ El enfoque axiomático es preferible desde un punto de vista matemático de la p
 
 #### Teoremas importantes sobre probabilidad. 
 
-![](/img/teoremas.jpg)
+![](/img/teoremas1.jpg)
 
 ### Asignación de probabilidades.
 
-![](/img/prob1.jpg)
+![](/img/prob1x.jpg)
 
 
 #### Ejercicio.
