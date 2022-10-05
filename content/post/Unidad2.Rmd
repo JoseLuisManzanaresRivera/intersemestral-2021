@@ -1,7 +1,7 @@
 ---
 title: "Unidad 2"
 author: "José Luis Manzanares Rivera"
-date: 2022-11-01T22:13:14-05:00
+date: 2022-10-05T22:09:14-05:00
 categories: ["Descriptive"]
 tags: ["Probabilidad"]
 ---
@@ -9,6 +9,14 @@ tags: ["Probabilidad"]
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r, message=FALSE,warning=FALSE,include=FALSE}
+library(tidyverse)
+library(datagovindia)
+library(plotly)
+library(gapminder)
+```
+
 
 # Probabilidad.
 
@@ -24,7 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Entender probabilidad básica y distribuciones probabilisticas. 
 
-
+[Libro de texto para consulta para el tema de la sesión de hoy.]()
 
 
 
@@ -74,7 +82,41 @@ El enfoque axiomático es preferible desde un punto de vista matemático de la p
 
 ![](/img/prob1.jpg)
 
-#### Ejercicio. 
+
+#### Ejercicio.
+
+
+Aplicando las definiciones anteriores en el experimento de lanzar una moneda, nosotros podemos calcular las probabilidades para los eventos **E** posibles de un total de resultados **n**
+
+En este caso laprobabilidad de que caiga águila será $$P[A]=\frac{1}{2}=.50$$
+
+Determine la probabilidad de que al lanzar dos monedas caiga al menos un sol.
+
+
+Primero determinamos primero los elementos que componen el evento muestral.
+
+"Al menos un sol".
+
+A={sa, as, ss}. Ahora nos preguntamos, cuentos resultados posibles hay.  Si son dos lanzamientos hay 4 resultados posibles. Y cuandtos elementos componen el evento muestal?  Son tres posibles elementos los que integran el evento muestral que cumple la proposición. **"Al menos un sol".**
+
+La probabilidad será $$P[A]=\frac{3}{4}$$ en palabras, hay una probabilidad del $75\%$ de obtener al menos una sol en estos dos lanzamientos.
+
+De manera complementaria hay una probabilidad del $25\%$ de obtener de no obtener un sol en los dos lanzamientos.
+
+En general si **A** es el evento muestral y **h** un  evento sencillo (resultado posible entre A),  entre **n** posibles elementos, entonces la probabilidad de A , esta definida por $$P[A]=\frac{h}{n}$$
+
+#### Ejemplo: 
+Sea M ={1,2,3,4,5,6} el epacio muestral, para un experimento de un lanzamiento de un dado balanceadro de 6 caras, entonces la probabiliad de $P(A)=P(1)=...=P(6)=\frac{1}{6}$ 
+
+##### Ejercicios 
+
+1.-Determine la probabilidad de enontrar un 2 U 5. P(2U5)=P(2)+P(5)=?
+
+2.- Determine la probabilidad de encontrar un número par.  P{2,4,6}=?
+
+
+
+#### Ejercicio empleando software. 
 
 
 Genere  un **dado virtual:**
@@ -112,54 +154,6 @@ dadosietecaras<-1:7
 dadosietecaras
 ```
 
-**¿Qué podemos hacer con el dado?**
-
-
-Comencemos por algunas operaciones aritméticas.
-
-
-```{r}
-
-dado-1
-
-dado/2
-
-dado*dado
-```
-
-Note que el resultado en cada caso es un vector del mismo tamaño  al vector multiplicado por el  escalar (en este caso 1x6). 
-
-Si multiplicamos un vector (en este caso el vector dado 1x6) cualesquiera, por un vector de un tamaño inferior, R replica los valores del vector de menor tamaño hasta alcanzar el tamaño del primero vector y así permite concretar la operación entre ambos vectores (que son del mismo tamaño). 
-
-
-Ahora que ya hemos realizado algo de artimética con el dado, veamos cómo podemos lanzarlo para obtener un número aleatorio.
-
-Para este propósito necesitamos una función. 
-
-## Funciones
-
-Para realizar esta tarea de selección de un número aleatorio, necesitamos una función. Construir una función es fácil, únicamente necesitamos el **nombre** y los **argumentos** (entre paréntesis) sobre los cuales se aplicará dicha función. Algunos ejemplos de funciones disponibles de forma automática en R, incluyen:
-
-```{r, echo=TRUE}
-round(5.8)
-
-round(3.1416)
-
-factorial(3)
-```
-
-Los datos que pasamos en la función los denominamos **argumentos**. Estos pueden ser datos, funciones o resultados de otras funciones. 
-
-**Ejemplo:** 
-
-```{r}
-mean(1:6)
-
-mean(dado)
-
-round(mean(dado))
-```
-
 Para nuestro propósito de obtener un número aleatorio en un lanzamiento de dado, podemos utilizar la funciòn **sample**, esta toma **dos argumentos**, el vector **x** y el tamaño de la muestra. 
 
 
@@ -178,26 +172,6 @@ sample(dado,1)
 sample(1:6,1)
 ```
 
-Si necesitamos conocer los nombres de los argumentos de alguna función, pasamos el nombre de la función, a la *función* `args()`, Ejemplo  `args(round)` 
-
-
-```{r}
-args(round)
-```
-
-**Note** que las funciones incluyen valores predeterminados para algunos argumentos, en el caso anterior el valor del argumento *digits* es 0, de modo que si omitimos este argumento, el resultado será el redondeo al entero próximo, sin decimales. 
-
-```{r}
-# Redondeo con dos dígitos 
-round(3.1416,2)
-
-# Redondeo con un dígito
-round(3.1416,1)
-
-# redondeo con parámetro predeterminado.
-round(3.1416)
-
-```
 
 ## Muestreo con reemplazo.
 
@@ -218,121 +192,17 @@ Si deseas sumar el valor del dado para los dos lanzamientos, unicamente aplicamo
 ```{r}
 dados <- sample(dado, size = 2, replace = TRUE)
 dados
-
-dadosuma<-sum(dados)
-dadosuma
 ```
-
-¿Qué pasaria si indicamos el valor de *dados* varias veces?, cambiará el valor obtenido cada vez que indicamos el nombre del objeto?
-
-```{r}
-dados
-
-dados
-
-dados 
-```
-
-Vemos que no obtenemos una nueva muestra aleatoria cada vez que indicamos el nombre del objeto, esto es lo que esperamos ya que una vez que aplicamos una función a un conjunto de argumentos y **asignamos un nombre creamos un objeto** y al llamarlo obtenemos el  resultado **permanentemente.**
-
-Si queremos obtener un resultado distinto cada vez que lanzamos el dado podemos especificarlo por medio de una funciòn. 
-
-**Nota sobre el uso de funciones.**
-
-Hasta ahora hemos creado estos objetos:
-
-`dado<-1:6`  
-
-`dados<-sample(dado,2,replace=TRUE)`
-
-`sum(dados)`
-
-pero no sería conveniente que escribiésemos estos objetos cada vez que necesitamos el resultado del lanzamiento 
-
-Para simplificar este proceso podemos construir una **función** que haga el trabajo por nosotros de manera automática.
-
-Hagamos una funciòn llamada `lanzar()`, esta función nos permitirá tener un  valor nuevo  para cada vez que lancemos los dados, sin tener que reescribir cada objeto. 
-
-
-**las funciones se foman por 3 partes básicas:** un **nombre**, **el cuerpo de código**, y un **conjnto de argumentos**.
-
-Para hacer una función propia, necesitas replicar estos tres componentes y almacenarlos en un **objeto.**.  
-
-Esto lo puedes hacer con la función `function()`. Sólo llama la función   **function()** y síguela con un par de **llaves** {}:
-
-`mi_función <- function() {}`
-
-```{r}
-lanzar <- function() {
-dado <- 1:6
-operacion <- sample(dado, size = 2, replace = TRUE)
-sum(operacion)
-}
-
-lanzar()
-```
-
-## Argumentos
-
-Ahora vamos a incluir  argumentos a nuestra función.
-Veamos que sucede cuando incluimos un objeto que no hemos definido, llamémos a este elemento  **tipos**, en lugar del objeto $dado<-1:6$. 
-
-```{r}
-lanzar2 <- function() {
-dados <- sample(tipos, size = 2, replace = TRUE)
-sum(dados)
-}
-```
-
-`lanzar2()`
-
-Obtenemos un error: **Error: object 'lanzar2' not found**. esto debido a que no existe el objeto **tipos**.
-
-Este comportamiento de hecho nos permite incluir argumentos, para aplicar la función, lo único que necesitamos hacer es indicar este elemento (tipos) como **argumento**. 
-
-Al incluir argumentos en nuestra función, podemos en nuestro ejemplo, especificar diferentes tipos de **dados**. 
-
-Recordemos que estamos haciendo dos lanzamientos con un dato de 6 lados, pero podemos especificar otros tipos de dados, como uno con **20 lados**, uno con 4 o 3,etc. 
-
-Esta información la indicamos mediante los argumentos.
-
-```{r }
-
-lanzar2 <- function(tipo) {
-dados <- sample(tipo, size = 2, replace = TRUE)
-sum(dados)
-}
-
-lanzar2(tipo=1:4)
-lanzar2(tipo=1:20)
-lanzar2(1:6)
-```
-
-`lanzar2(tipo)`
-
-Note que no es necesario nombrar tipo explicitamente, aunque lo podemos hacer para mayor claridad, **esto no es necesario por que  tipo** es el único argumento de nuestra función `lanzar2()`.
-
-Note que la función resulta en un `Error`, cuando no proporcionamos  el argumento tipo  ej. `lanzar2()`. 
-
-Esto es interesante por que de hecho podemos especificar **argumentos predeterminados** al momento de construir la función de tal forma que podemos dejar vacio este espacio cuando estimamos la función. 
-
-```{r}
-lanzar2 <- function(tipo=1:6) {
-dados <- sample(tipo, size = 2, replace = TRUE)
-sum(dados)
-}
-
-lanzar2()
-
-lanzar2(1:12)
-```
-
-Ahora cuando llamamos la función, obtenemos la información solicitada!
-
-Ahora es posible proporcionar un **tipo** de dado **particular** cada vez que lanzamos el dado, o bien si preferimos dejar el argumento en blanco y la función aplicará el valor predeterminado para el argumento tipo.
-
 
 --------------------------
+
+### Distribuciones de probabilidad.
+
+¿A qué nos referimos cuando hablamos de distribuciones de probabilidad?
+
+A las **herramientas matemáticas** para describir la distribución de datos numéricos en poblaciones y muestras.
+
+##### Definiciones: 
 
 + **Parámetro** Característica de una población, tal como la media o la desviación estándar. Frecuentemente se utilizan **letras griegas** para referirnos a una parámetro.
 
@@ -372,11 +242,427 @@ Estadístico muestral $\bar{x}$ Desv std **S**
 
 
 
-### Distribuciones de probabilidad.
+## Distribución normal.
 
-¿A qué nos referimos cuando hablamos de distribuciones de probabilidad?
+Una **caso particular de la distribución esta dado cuando observamos simetría** (ej. media, mediana son iguales). 
 
-A las **herramientas matemáticas** para describir la distribución de datos numéricos en poblaciones y muestras.
+En este caso, ambos lados de la función de densidad integran **la misma proporción de datos**. 
+
+En términos de su forma, estas curvas además de ser **simétricas** tiene un sólo pico, (no tiene dos **modas**  no son bimodales) y tienen forma de **campana**.
+
+La curva de densidad de una distribución de datos **normal**, se describe completamente a partir de su media $\mu$ y desviación estándar $\sigma$ 
+
+Y la podemos denotar $N(\mu, \sigma)$
+
+Considere los dos ejemplos siguientes, **ambos son escenarios de distribuciones normales**, aunque el grado de dispersión es mayor en el primer caso.
+
+El parámetro $\sigma$ controla el grado de dsipersión de la **curva normal**. 
+
+![](/img/normalidad.jpg)
+
+En términos gráficos, el **punto de inflexión**, se ubica a una distancia de magnitud  $\sigma$ respecto de $\mu$.
+
+![](/img/inflexion.jpg)
+
+## Paricularidades de la distribución normal.
+
+Una particularidad relevante de las distribuciones normales es que cumplen con la siguiente regla:
+
++ El **68%** de los datos se localiza a una $+,- \sigma$  desviación estándar,  de la media $\mu$. 
+
++ El **95%** de los datos se localiza a $+,- 2\sigma$  de la media $\mu$
+
++ El **99.7%** de los datos se localiza a $+,- 3\sigma$ de la media $\mu$
+
+![](/img/regla_normal.jpg)
+
+### ¿Por qué tanto énfasis en las distribciones normales? 
+
++ Porque describen una gran cantidad de situaciones empíricas de naturaleza aleatoria.
+
++ Los procesos de **inferencia estadística**   permiten resultados confiables (robusos) cuando se aplican a distribuciones simétricas.
+Dependen de esta condición.  
+
+##### Actividad para afianzar los conceptos
+
+Conteste las siguientes preguntas
+
+![](/img/preguntas.jpg)
+
+
+Para finalizar esta sección es importante notar que es frecuente usar los **valores estandarizados** de la distribución normal con fines de comparación de las distribuciones. 
+
+Estandarizar en este caso consiste en tomar un valor particular del conjunto de datos, restarle el valor de la media y dividirlo entre la desviación estándar. 
+
+A este valor estandarizado se le denomina **Z Score** y se obtiene  $$z=\frac{x-\mu}{\sigma}$$ 
+
+Este **score z** nos indica a **cuántas desviaciones estándar** se encuentra la observación original de la **media** y en qué dirección. 
+
+Por **ejemplo**, considerando los datos del ejercicio anterior, vemos que la media $\mu=110$, $\sigma=25$, por lo que el coeficiente estandarizado de una persona cuyo IQ= 150, será $$z=\frac{150-110}{25}=1.6$$.  
+
+Y se interpreta como la distancia en términos de desviaciones estándar respecto a la media. Así el dato IQ de 150 se ubica a una distancia de 1.6 desviaciones estandar de la media. 
+
+
+Las observaciones **mayores** que la media
+son positivas y las **menores**, negativas.
+ 
+ 
+Resumiendo: El **proceso de estandarización** unicamente permite exprezar los valores de las distribución en relación a una **escala común**, en este caso, una **distancia respecto a la media**.
+
+En términos generales la **distribución normal estandarizada**, se expreza  con los parámetros media cero y desviación estándar =  1 o bien $$N(0,1)$$ $$z=\frac{x-\mu}{\sigma}$$
+
+
+ **Tarea. Se recomineda revisar el material del libro de texto:** 
+
+[Libro de texto](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing) sección 1.44, páginas 64-79.
+
+**Ejercicio**
+
+![](/img/Z-scores.jpg)
+
+Una vez que sabemos cómo estandarizar un valor determinado. Es posible usar este **Z-score** para determinar 
+
+##### ¿Qué proporción de los datos estan por debajo de este valor estandarizado z-score?
+
+![](/img/tablanormal.jpg)
+
+Las tablas de la distribción Z, dan esta información pero, actualmente es poco frecuente usar estas tablas en lugar de esto podemos estimarlo usando un software. 
+
+Ejemplo: 
+
+¿Qué proporción de los paises en el continente americano tienen un ingreso percapita superior a 10 000 USD?
+
+Pasos para responder la pregunta.
+
+1.- Estimar Media y desviación estandar
+
+```{r}
+
+zscore<-gapminder%>%filter(continent=="Americas")
+
+summary(zscore)
+sd(zscore$gdpPercap)
+
+```
+
+La media $\mu=7136$  y la desviación estándar es $\sigma=6396.764$
+Entonces la caracterización de la distribución esta dada por (7136, 6396.764)
+
+**Paso 2**
+
+Estandarizamos el valor solicitado en el problema a z-score.  Sabemos que $$z=\frac{x-\mu}{\sigma}$$, entonces
+
+
+
+```{r}
+
+z=(10000-7136)/6396.764
+z
+
+```
+
+
+
+El  **z-score** para un ingreos de 10 000 es de  **0.4477264**, lo que indica que la distancia, **en desviaciones estándar** desde la **media**, para un ingreso de 10 000 es de 0.4477264. 
+
+**Paso 3** Estimar la proporción por debajo de la curva para el valor estandarizado. 
+
+Con esta información determinamos la proporción de paises cuyo ingreso es inferior buscando los datos en la [tabla A pagina 786 del libro](https://drive.google.com/file/d/1sbwcTP-k7_EKmY406BVYUwLiMZENKzCs/view?usp=sharing).
+
+
+**Alternativamente podemos usar R para determinar este valor.**
+
+El argumento requerido por la función en R es el **z-score** previamente calculado y el resultado es la proporción de observaciones por debajo de la curva a la izquierda de este valor. 
+
+```{r}
+
+pnorm(0.4477264)
+
+pnorm(10000,7136,6396.764)
+```
+
+
+O en otras palabras la proporción de observaciones con ingreso menor a 10 000. En este caso es del $67\%$
+
+  **Tip** Si conocemos la caracterización de la función podemos usar directametne la función `pnorm` para estimar también el **z-score**. ej.  pnorm(z-score, $\mu$ , $\sigma$)
+
+## Ejercicios de repaso. 
+
+
+
+![](/img/mediaymediana2.jpg)
+![](/img/mediaymediana.jpg)
+
+![](/img/ejerciciodensidad.jpg)
+
+
+
+
+### Distribuciones contínuas.
+
+Muy a menudo, encontramos datos que no se limitan a cifras enteras, por ejemplo el tipo de cambio **Peso/USD**, los registros de temperatura, en estos casos necesitamos una función contínua para describir su distribución.
+
+
+### KDF Función de densidad Kernel
+
+Permite la representación de la districuión considerando una aproximación contínua,no discreta como es el caso del histograma. 
+
+
+![](/img/den_hist.jpg)
+
+
+
+Note que el área bajo la curva de la **función de densidad** representa la proporción de observaciones en un intervalo concreto. Siendo el **area total igual a 1**. 
+
+En análogía a la información que aporta el **histograma** que es una representación  **discreta** como ya hemos estudiado   
+
+
+
+##### Ejemplo 1. 
+
+**Cálculo función de densidad, representación de medidas de tendencia central  y distribución esperanza de vida países en Africa vs. los paises de Asia.
+
+
+```{r, echo= FALSE, fig.height = 5, fig.width = 8.5}
+
+
+library(gapminder)
+
+base<-gapminder
+
+datos<-gapminder%>%filter(continent=="Asia" | continent=="Africa")
+
+groups<-datos%>%group_by(continent)%>%
+  summarize(le=mean(lifeExp))
+
+
+p<-ggplot(datos, aes(x=lifeExp, fill=continent))+
+geom_density(alpha=.2)+  
+labs(color="Continente")+
+xlab("GDPpercap")+
+ylab("Density  f(y)")+
+theme_classic()+
+geom_vline(xintercept= 49, linetype="dotted", color="red")+
+geom_vline(xintercept= 60, linetype="dotted", color="blue")+
+annotate("text", x=49, y=.005, size=2,label="Esperanza de vida (años)")+ theme(legend.title=element_blank())
+
+ggplotly(p)
+
+```
+
+
+
+```{r, include=FALSE}
+
+## Source: https://www.gob.mx/salud/documentos/coronavirus-covid-19-comunicado-tecnico-diario-238449
+
+agedf<-readRDS("agedf.rds")
+
+
+dp<-ggplot(agedf, aes(x=edad, fill=sex))+
+geom_density(alpha=.2)+  
+labs(color="Sex")+
+xlab("Patient age  (years)")+
+ylab("Density  f(y)")+
+theme_classic()+
+scale_fill_discrete(labels=c("Female", "Male"))+
+geom_vline(xintercept =mean(agedf$edad), linetype="dotted", color="red")+
+annotate("text", x=32, y=.005, size=2,label="Mean patient age")+ theme(legend.title=element_blank())
+
+ggplotly(dp)
+```
+
+```{r, include= FALSE}
+
+##**Ejemplo 2**  Distribución de edades para defunción por covid en México. Funciones estudiadas (Verbos tidyverse aplicados): Filter, select, mutate, summarise. ggplot 
+
+
+open<-readRDS("open.rds")
+
+def<-filter(open, resultado==1)%>%
+  filter(fecha_def!="9999-99-99")%>%
+  select(sexo, edad)
+def$sexo[def$sexo == "1"] <- "Female"
+def$sexo[def$sexo == "2"] <- "Male"  
+def<-mutate(def,sexo=as.factor(sexo))
+
+fmean<-filter(def, sexo=="Female")%>%
+  mutate(varmean=mean(edad))%>%
+   summarise(mean=mean(varmean))
+
+mmean<-filter(def, sexo=="Male")%>%
+  mutate(varmean=mean(edad))%>%
+   summarise(varmean=mean(varmean))
+
+  
+p<-ggplot(def, aes(x=edad, fill=sexo))+
+geom_density(alpha=.2)+  
+labs(color="Sex")+
+xlab("Person age  (years)")+
+ylab("Density  f(y)")+
+theme_classic()+
+scale_fill_manual(values = c("brown","blue4"))+
+geom_vline(xintercept = fmean$mean, linetype="dotted", color="purple")+
+geom_vline(xintercept = mmean$varmean, linetype="dotted", color="blue")+
+annotate("text", x=44, y=.005, size=3,label="Mean person age")+ theme(legend.title=element_blank())
+
+
+ggplotly(p)
+```
+
+
+
+
+
+```{r,  fig.height = 8, fig.width = 12,  message=FALSE, warning=FALSE, include=FALSE}
+
+####  Caso Aguascalientes
+
+#**Ejemplo  3** Función de densidad para dos categorias. Funciones estudiadas: group_by, rename, left_join, filter, select, mutate, summarise. ggplot 
+
+
+
+sdensity<-readRDS("density.rds")%>%
+  mutate(s=as.factor(s))%>%
+  filter(ENT_RESID!=33& ENT_RESID!=34& ENT_RESID!=35& ENT_RESID!=99)%>%
+  group_by(ENT_RESID)
+
+cat_e<-read.csv("cat_entidad.csv")%>%
+select(-X)%>%
+rename(ent_res=X.U.FEFF.EDO)%>%
+mutate(ent_res=sprintf("%02d",ent_res))%>%
+mutate(ENT_RESID=as.factor(ent_res))%>%
+select(-ent_res)
+
+sdensity<-left_join(sdensity,cat_e)
+
+
+
+ags<-filter(sdensity,ENT_RESID=="01")%>%
+  mutate(s=as.factor(s))
+
+
+aplt<-ggplot(ags, aes(x=age,linetype=s, color=s))+
+geom_line(stat="density")+
+labs(linetype="Causa")+
+xlab("Edad de la persona (Años)")+
+ylab("Densidad f(y)")+
+annotate("segment", x=29, xend=13, y=0.011, yend=0.011,  size=.3, arrow=arrow(length=unit(.2,"cm")))+
+annotate("text", x=23, y=0.013, label="Alta incidencia")+
+annotate("text", x=21, y=0.009, label="13<Edad<29")+
+annotate("rect", xmin=13, xmax=29, ymin=0, ymax=0.03, alpha=.1,fill="black")+
+scale_linetype(labels=c("Otras causas","Suicidio"))+
+theme_classic()+
+scale_color_manual(values = c("mediumturquoise","magenta1"))+
+theme(legend.position="none")
+
+
+aplt
+
+```
+
+
+
+
+```{r,  fig.height = 8, fig.width = 12, message=FALSE, warning=FALSE, include=FALSE}
+
+#**Ejemplo 4** Función de densidad multiples bases de datos. (32 estados de México). Herramienta de análisis: stat=density 
+
+#Funciones estudiadas: **facet_wrap**
+mxplt<-ggplot(sdensity, aes(x=age,linetype=s, color=s))+
+geom_line(stat="density")+
+labs(linetype="Causa")+
+xlab("Edad de la persona (Años)")+
+ylab("Densidad f(y)")+
+facet_wrap(~DESCRIP, nrow=6)+
+scale_linetype(labels=c("Otras causas","Suicidio"))+
+  theme_classic()+
+scale_color_manual(values = c("mediumturquoise","magenta1"))+
+  theme(legend.position="none")
+
+mxplt
+```
+
+
+
+**Nota sobre ventajas de las KDF: **
+
+Nos permiten distinguir rapidamente características como los atributos de tendencia central, la presencia de  bimodalidad,  sesgo), también facilitan la comparación rápida entre diferentes conjuntos de datos.
+
+Por ejemplo vemos en la figura siguiente que la **media** de un conjunto de datos con **sesgo positivo** se ubica **a la derecha** de la mediana.
+
+**IMPORTANTE ** En este caso **la mediana** será la medida de tendencia central **preferible** o que describe con mayor precisión la ubicación del **dato central**, por que divide la distribución de la curva en dos areas iguales. 
+
+![](/img/asimetria_positiva.jpg)
+
+**Una propiedad importante:**
+
+*"El área por debajo de la curva, y entre cualquier intervalo de valores, es la proporción de todas las observaciones que están situadas en dicho intervalo."*
+
++ Note que el area por debajo de la KDF, siempre es igual a 1. 
+
+En otras palabras, si sumamos la proporción que integra la distribución total, tenemos el 100% 
+
+
+###  Función de distribución de probabilidad PDF.
+
+La curva que describe la probabilidad para cada valor, (la distribución de probabilidad),  es una **función contínua** y se denomina función de **densidad de probabilidad.** $p(x)=$**(PDF).** 
+
+
+La **PDF** (función de densidad de una variable **aleatoria continua**), es una función que describe la probabilidad de que una variable aleatoria **X** tome un valor particular **x**  
+
+**X** Variable aleatoria ej. ingreso
+**x:** valor particular de la variable aleatoria. ej. $60 000.
+
+La pregunta es ¿cuál es la probabilidad de que la variable **X** tome un valor particular **x**
+
+La **PDF** tiene las propiedades: 
+
+
+> $${p(x)}\geq0, 	\forall x \in R$$
+> $$\int_{-\infty}^{\infty}     p{(x)}dx=1$$
+
+![](/img/PDF_probability.jpg)
+
+La integral de p(x) en el rango [a,b] representa la probabilidad de encontrar el valor **x** en ese **intervalo**.  El area bajo la curva, determina el valor de esa probabilidad en el intervalo particular. A esta area la denominamos función de densidad acumulada **CDF** 
+
+
+#### Aplicación.
+
+La **CDF** es útil para en la estimación de los **percentiles.**
+
+La manera más simple de determinar los percentiles es mediante la estimación de la **función de densidad acumulada** **CDF** (por sus siglas en inglés). 
+$$CDF(x)=\int_{-\infty}^x PDF(x)dx$$
+
+#### ECDF Función de densidad acumnulativa empírica.
+
+Conocer la frecuencia es importante pero muy a menudo necesitamos conocer que proporción de nuestras observaciones se ubica por debajo de un cierto umbral.
+
+Para este propósito es muy útil estimar la frecuencia acumulada. 
+
+Una representación contínua de este concepto es mediante la función empírica de **densidad  acumulada** 
+
+
+Una nota sobre la apliación de la **CDF** en la obtención de los **Percentiles** 
+
+Los percentiles permiten determinar el valor por debajo del cual, ocurre un determinado porcentaje de los datos.
+
+La  función de distribución acumulada**CDF** es la integral de la **función de densidad de probabilidad (PDF)**. 
+
+Define la probabilidad de observar un valor **x** en un rango determinado **[a,b].** 
+Formalmente 
+
+![](/img/cdf.jpg)
+
+
+Revisemos ahora en la práctica como podemos estimar la **función de densidad**  usando **Python.**
+
+**"Sesión_2_Tendencia central.ipynb"**
+
+Nota sobre implementación en **Python**. Esta  nos permite observar el porcentaje acumulado de datos en el eje de las ordenadas al orígen y los valores observados en el eje de las absisas.
+
+La pregunta básica que podemos responder estimando la **CDF**, es ¿qué porcentaje de los datos se ubica por debajo de cualquier umbral deseado?
+
 
 ## Distribuciones discretas.
 
@@ -394,9 +680,6 @@ Las propiedades de la distribución discreta de probabilidad son :
 
 
 
-En **síntesis** el proceso para crear una función involucra las siguientes partes:
-
-![](/Funciones.jpg)
 
 ## Distribuciones de probabilidad.
 
@@ -449,5 +732,13 @@ Esta distribución presenta **dos estados.**  Como ejemplo más simple, el lanza
 Ver ejemplo **Sesión 3.ipynb**
 
 Otros ejemplos empíricos con situaciones en donde se presenta una distribución **Binomial**, incluyen todas aquellas situaciones con dos resultados posibles: Ej. Pasar o no el exámen, lanzar una moneda, que un candidato a la presidencia gane o pierda, etc., 
+
+
+-------------------------
+
+ 
+
+
+
 
 
