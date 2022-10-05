@@ -1,5 +1,5 @@
 ---
-title: "Sesión 5"
+title: "Unidad 4. 4.2"
 author: "Jose´Luis Manzanares Rivera"
 date: 2022-11-02T21:13:15-05:00
 output: html_document
@@ -7,10 +7,180 @@ output: html_document
 
 
 
-```{r}
+```{r, set-global-options, message=FALSE, warning=FALSE,include=FALSE}
 library(tidyverse)
 library(gapminder)
 library(gganimate)
-library(gifski)
+library(wesanderson)
+library(scales)
+library(plotly)
 ```
+### Objetivos
+
+Estudiar los metodos para mediar la relacón estadistica entre variables. 
+
+## Meta de aprendizaje.
+
+Comprender la relación entre variables y la estimación de la covarianza y el coeficiente de correlación. 
+
+
+### Medición de la relación entre dos variables. 
+
+Para explorar la relación entre dos variables comenzaremos con su represetación bidimensional, 
+
+La figura 1 relaciona la variable  **ingreso percapita** de la poblaciónp para 142  paises (eje de las absisas)  en el mundo con la variable  **esperanza de vida** en el eje de las ordenadas al origen **(y)**
+
+
+
+```{r, echo=FALSE}
+
+pib_AL<-gapminder%>%
+  filter( year=="2007")
+
+continents<-pib_AL%>%select(country, continent)
+  
+p <- ggplot(pib_AL, aes(x = gdpPercap, y=lifeExp,  colour = continent, text = country)) +
+  geom_point(show.legend = FALSE, alpha = 0.7) + 
+  scale_color_manual(values = wes_palette(n=5, name="Cavalcanti1"))+
+  scale_size(range = c(2, 12))+  scale_x_log10() +
+  geom_vline(xintercept=mean(pib_AL$gdpPercap), lty=2)+
+geom_hline(yintercept = mean(pib_AL$lifeExp), linetype="dashed")+
+  theme_light()+
+labs(x = "PIB per capita", y = "Esperanza de vida")
+
+ggplotly(p,tooltip = c("text","continent", "gdpPercap", "lifeExp"))
+
+names(pib_AL)
+```
+
+Aparentemente hay una relación positiva entre el nivel de **ingreso** de  los paises y la esperanza de vida.
+
+
+
+Si observamos los 4 cuadrantes vemos que en el cuadrante superior derecho (Altos nivels de ingreso percapita y elevada esperanza de vidad) al parecer la relación es más fuerte entre estas variables. 
+
+No parece ser el caso en el cuadrante inferior izquierdo (), donde la nube de puntos aparece con mayor dispersión. 
+
+
+Cuando nos referimos a una **relación positiva** implica que las fluctuaciones de ambas variables se dan en el mismo sentido. 
+Por ejemplo, en este caso vemos que a medida que el ingreso se incrementa, aparentemente la esperanza de vida de la población también se incrementa. 
+
+Este es un ejemplo de una relación **positiva** o **directa**
+
+Por el contrario una **relación negativa** o **inversa**,  implica que las fluctuaciones entre las variables se dan en sentidos apuestos, así mientras una variable se incrementa la otra registrará una disminución. 
+
+
+##### Ejemplo 
+
+**Relación inversa o negativa.**
+
+El ejemplo siguiente muestra este comportamiento.
+
+
+##### Ejemplo  
+
+**Correlación no evidente.**
+
+El siguiente ejemplo la interpretación visual no es ya tan envidente.
+
+Las variables consideradas son: Energía producida mediante energias renovables y tasa de pobreza considerando un umbral de 6.85 USD por dia.  
+
+
+
+
+```{r, include=FALSE, eval = FALSE}
+
+pov<-read.csv("poverty.csv")%>%
+  filter(Indicator.Code=="SI.POV.UMIC")
+
+povlong<-gather(pov, fecha, povrate,X1960:X2021)%>%na.omit()%>%
+  mutate(fecha=substr(fecha, 2, 5))%>%
+  filter(fecha=="2010")%>%
+  rename(Country=ï..Country)%>%
+  select(Country, povrate)
+  
+
+  
+electricity<-read.csv("electricidad.csv")
+ 
+   
+excluded<-data.frame(Country=c("Least developed countries: UN classification", "Fragile and conflict affected situations", "Africa Western and Central", "Heavily indebted poor countries (HIPC)", "Pre-demographic dividend","Middle East & North Africa (excluding high income)", "Middle East & North Africa (IDA & IBRD countries)","Africa Eastern and Southern","	
+Middle East & North Africa","	
+Sub-Saharan Africa (excluding high income)", "	
+Sub-Saharan Africa","Sub-Saharan Africa (IDA & IBRD countries)","IDA total","Europe & Central Asia (excluding high income)","	
+Other small states","	
+Europe & Central Asia (IDA & IBRD countries)","	
+Central Europe and the Baltics","	
+South Asia (IDA & IBRD)","	
+Latin America & Caribbean (excluding high income)","
+Latin America & the Caribbean (IDA & IBRD countries)","Latin America & Caribbean","Lower middle income","Early-demographic dividend","East Asia & Pacific (excluding high income)","East Asia & Pacific (IDA & IBRD countries)", "Sub-Saharan Africa","Middle East & North Africa", "South Asia"))
+
+
+elec_long<-gather(electricity, fecha, elec_limpia,X1960:X2021)%>%na.omit()%>%
+  mutate(fecha=substr(fecha, 2, 5))%>%
+  filter(fecha=="2010")%>%
+  select(Country,elec_limpia)%>%
+   mutate(e_ltransf=elec_limpia/1000000)%>%
+      mutate(exc=ifelse(Country%in%excluded$Country,"1","0"))%>%
+ filter(e_ltransf>=134&e_ltransf<94270&exc!=1)
+ summary(elec_long)
+   
+energy_clen_e<-left_join(elec_long, povlong)%>%
+  na.omit()%>%
+  mutate(country=as.factor(Country))
+
+energy_clen_e_names<-left_join(energy_clen_e,continents)%>%select(-country)%>%rename(e_renovable=e_ltransf)
+
+
+
+```
+
+
+```{r, echo=FALSE}
+erenov_pov<-read.csv("erenovable_pobreza.csv")
+
+summary(erenov_pov)
+
+plt<-ggplot(erenov_pov, aes( e_renovable, povrate, color=continent, text=Country))+
+geom_point()+ 
+  theme_bw()+
+  theme(legend.position="none")+
+    scale_x_continuous(labels = label_comma())+
+  labs(x= "Energía producida con energia renovable  millones (kWh)", y="Tasa de pobreza 6.85 USD/dia, (PPP)2017")+
+  scale_color_hue(l=40, c=35)+
+  geom_hline(yintercept=median(erenov_pov$povrate), linetype="dashed", size=.5, color="red", alpha=.6)
+
+
+
+
+
+
+
+ 
+ggplotly(plt, tooltip = c("text","continent", "e_renovable", "povrate"))
+
+
+## Definiciones
+#Energy intensity level of primary energy (MJ/$2017 PPP GDP).Efficiency is measured by “energy intensity” – the amount of energy required to produce one dollar’s worth of goods and services (GDP). Energy intensity improves when less energy is required to produce the same goods and services, or when more goods and services are produced given the same amount of energy. Sustainable Development Goal 7 calls for global improvements in energy efficiency and globally, energy intensity has fallen by one third since 1990. Source https://datatopics.worldbank.org/world-development-indicators/stories/worlds-largest-economies-have-been-using-energy-more-efficiently.html
+
+
+
+#Electricity production from renewable sources, excluding hydroelectric (kWh)
+
+```
+
+De hecho en este caso la representación bivariada sugiere que los paises no pobres (bajos niveles de la variable en el eje de las ordenadas al origen Y) tienden a producir niveles mayores de energía a partir de energias renovables, esto no se observa. Y pareciera que pasando un cierto umbral de pobreza, los países ya no figuran con producción de energía usando energías renovables. 
+
+
+Por este motivo además de considerar na exploración visual, es importante la determinación precisa del grado de correlación entre las variables. 
+
+Para medir formalemente el grado de correlación entre las variables, podemos estimar la covarianza que se calcula a corde con la siguiente especificación. 
+
+![](/img/COVARIANZA.jpg)
+
+
+```{r}
+#p + transition_time(year) +labs(title = "Year: {frame_time}")
+```
+
 
