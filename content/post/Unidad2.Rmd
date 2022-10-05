@@ -1,7 +1,7 @@
 ---
 title: "Unidad 2"
 author: "José Luis Manzanares Rivera"
-date: 2022-10-04T22:08:14-05:00
+date: 2022-10-06T22:08:14-05:00
 categories: ["Descriptive"]
 tags: ["Probabilidad"]
 ---
@@ -69,7 +69,7 @@ Un evento es un subconjunto **A** del espacio muestral **M**. Esto es un conjunt
 ##### Operaciones de conjuntos en un espacio muestral 
 
 
-![](/img/reglasprob.jpg)
+![](/img/reglasprob1.jpg)
 ![](/img/concepto.jpg)
 
 El enfoque axiomático es preferible desde un punto de vista matemático de la probabilidad. 
