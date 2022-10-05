@@ -92,7 +92,7 @@ El enfoque axiomático es preferible desde un punto de vista matemático de la p
 
 Aplicando las definiciones anteriores en el experimento de lanzar una moneda, nosotros podemos calcular las probabilidades para los eventos **E** posibles de un total de resultados **n**
 
-En este caso laprobabilidad de que caiga águila será $$P[A]=\frac{1}{2}=.50$$
+En este caso la probabilidad de que caiga águila será $$P[A]=\frac{1}{2}=.50$$
 
 Determine la probabilidad de que al lanzar dos monedas caiga al menos un sol.
 
