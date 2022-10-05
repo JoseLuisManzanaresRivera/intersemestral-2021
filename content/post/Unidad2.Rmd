@@ -401,4 +401,4 @@ En este caso los argumentos son:  valor de interés, $\mu=7136$ y $\sigma=6396.7
 
 La respuesta a la pregunta es $0.3271753$  o $32.71\%$
 
-**Tip** Si conocemos la caracterización de la función podemos usar directamente la función `pnorm` para estimar también el **z-score**. ej.  pnorm(valor, $\mu$ , $\sigma$)
+Si conocemos la caracterización de la función podemos usar directamente la función `pnorm` para estimar también el **z-score**. ej.  pnorm(valor, $\mu$ , $\sigma$)
