@@ -26,6 +26,8 @@ library(gapminder)
 
 + Estudiar la definición de variables aleatorias.
 
++ Reconocer la importancia de la distribución normal y  sus propiedades
+
 + Presentar las distribuciones de probabilidad. 
 
 #### Meta de aprendizaje:
