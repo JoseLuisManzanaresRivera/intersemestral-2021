@@ -46,7 +46,7 @@ Entender probabilidad básica y distribuciones probabilisticas.
 
 + Lanzar una moneda puede tener el resultado de Sol **S**  simbolizado como 0 y águila **A**, simbolizado como 1. Lo que integra el conjunto {S,A}, {0,1}.
 
-+ Lanzamiento de un dado con el resultado uno de lo snúmeros en el conjunto  {1,2,3,4,5,6}.
++ Lanzamiento de un dado con el resultado uno de los números en el conjunto  {1,2,3,4,5,6}.
 
 
 **Población** Incluye todos los elementos de un conjunto de datos.
