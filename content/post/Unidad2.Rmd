@@ -1,7 +1,7 @@
 ---
 title: "Unidad 2"
 author: "José Luis Manzanares Rivera"
-date: 2022-10-06T22:08:14-05:00
+date: 2022-10-04T22:08:14-05:00
 categories: ["Descriptive"]
 tags: ["Probabilidad"]
 ---
@@ -97,15 +97,17 @@ En este caso la probabilidad de que caiga águila será $$P[A]=\frac{1}{2}=.50$$
 Determine la probabilidad de que al lanzar dos monedas caiga al menos un sol.
 
 
-Primero determinamos primero los elementos que componen el evento muestral.
+Primero determinamos  los elementos que componen el evento muestral.
 
 "Al menos un sol".
 
-A={sa, as, ss}. Ahora nos preguntamos, cuentos resultados posibles hay.  Si son dos lanzamientos hay 4 resultados posibles. Y cuandtos elementos componen el evento muestal?  Son tres posibles elementos los que integran el evento muestral que cumple la proposición. **"Al menos un sol".**
+A={sa, as, ss}. Ahora nos preguntamos, ¿cuántos resultados posibles hay?. 
+
+Si son dos lanzamientos hay 4 resultados posibles. Y ¿cuántos elementos componen el evento muestal?  Son tres posibles elementos los que integran el evento muestral que cumple la proposición. **"Al menos un sol".**
 
 La probabilidad será $$P[A]=\frac{3}{4}$$ en palabras, hay una probabilidad del $75\%$ de obtener al menos una sol en estos dos lanzamientos.
 
-De manera complementaria hay una probabilidad del $25\%$ de obtener de no obtener un sol en los dos lanzamientos.
+De manera complementaria hay una probabilidad del $25\%$ de **no** obtener **"al menos un sol"** en los dos lanzamientos.
 
 En general si **A** es el evento muestral y **h** un  evento sencillo (resultado posible entre A),  entre **n** posibles elementos, entonces la probabilidad de A , esta definida por $$P[A]=\frac{h}{n}$$
 
