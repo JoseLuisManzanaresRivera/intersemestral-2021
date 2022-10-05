@@ -139,7 +139,6 @@ energy_clen_e_names<-left_join(energy_clen_e,continents)%>%select(-country)%>%re
 ```{r, echo=FALSE}
 erenov_pov<-read.csv("erenovable_pobreza.csv")
 
-summary(erenov_pov)
 
 plt<-ggplot(erenov_pov, aes( e_renovable, povrate, color=continent, text=Country))+
 geom_point()+ 
@@ -148,8 +147,8 @@ geom_point()+
     scale_x_continuous(labels = label_comma())+
   labs(x= "Energía producida con energia renovable  millones (kWh)", y="Tasa de pobreza 6.85 USD/dia, (PPP)2017")+
   scale_color_hue(l=40, c=35)+
-  geom_hline(yintercept=median(erenov_pov$povrate), linetype="dashed", size=.5, color="red", alpha=.6)
-
+  geom_hline(yintercept=median(erenov_pov$povrate), linetype="dashed", size=.5, color="red", alpha=.6)+
+annotate("text", x=40000, y=4, size=4,label="Mediana")+ theme(legend.title=element_blank())
 
 
 
