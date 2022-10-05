@@ -10,6 +10,8 @@ tags: ["Probabilidad"]
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+
 ```{r, message=FALSE,warning=FALSE,include=FALSE}
 library(tidyverse)
 library(datagovindia)
