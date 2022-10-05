@@ -70,7 +70,7 @@ Un evento es un subconjunto **A** del espacio muestral **M**. Esto es un conjunt
 
 
 ![](/img/reglasprob1.jpg)
-![](/img/concepto.jpg)
+![](/img/concepto1.jpg)
 
 El enfoque axiomático es preferible desde un punto de vista matemático de la probabilidad. 
 
