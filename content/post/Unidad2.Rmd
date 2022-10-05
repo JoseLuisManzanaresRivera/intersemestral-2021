@@ -36,7 +36,7 @@ library(gapminder)
 
 Entender probabilidad básica y distribuciones probabilisticas. 
 
-[Libro de texto para consulta para el tema de la sesión de hoy.]()
+[Libro de texto para consulta para el tema de la sesión de hoy.](https://drive.google.com/file/d/1ezHlHeEPXBDIf2glXMsyZ0KzGsR8pM27/view?usp=sharing)
 
 
 
