@@ -58,20 +58,18 @@ El recuento del número
 de **soles** es una **variable aleatoria X**. La distribución de **X** se llama **distribución
 binomial.**
 
-Here!!!!!!
 
 ##### Definición: 
 
 La distribución del recuento **X** de éxitos en una situación binomial es la
 distribución binomial con parámetros **n** y **p**. 
 
-El parámetro **n** es el número
+Donde el parámetro **n** denota el número
 de observaciones. 
 
-El parametro **p** es la probabilidad de éxito de cualquier observación.
+Donde el parametro **p** indica la probabilidad de éxito de cualquier observación.
 
-Los valores de **X** son números enteros positivos que van de **0 a n**
-
+Y los valores de **X** son números enteros positivos que van de **0 a n**.
 
 
 
