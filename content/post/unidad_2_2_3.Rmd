@@ -1,5 +1,5 @@
 ---
-title: "Unidad 2_2.3"
+title: "Unidad 2 Tema 2.3"
 author: "José Luis Manzanares Rivera"
 date: '2022-11-01T21:13:15-05:00'
 ---
@@ -11,7 +11,90 @@ library(plotly)
 library(gapminder)
 ```
 
-## Ejercicios de repaso Distribución normal. 
+
+### Distribuciones de probabilidad 
+
+
+#### Objetivos
+
++ Estudiar las distribuciones de probabilidad.
+
+---------------
+
+## Distribución Binomial.
+
+¿A qué nos referimos con una disrtibución Binomial? 
+
+¿Qué circunstancias dan lugar a una distribución binomial? 
+
+
+
+1. Tenemos un determinado número **n** de observaciones.
+
+2. Las **n** observaciones son todas independientes. 
+
+Es decir, saber el resultado de una observación no te indica nada sobre las restantes
+observaciones.
+
+3. Cada observación tiene **dos** resultados posibles, que por conveniencia
+llamaremos **“éxito”** y **“fracaso”.**
+
+4. La probabilidad de éxito, llámada **p**, es **igual** en todas las observaciones.
+
+
+**Ejemplo:** 
+
+Lanzar una moneda **n** veces es un ejemplo de **situación binomial**. 
+
+Cada lanzamiento puede dar águila  o sol.
+
+Conocer el resultado de un lanzamiento no nos dice nada sobre el resultado de los otros lanzamientos, por tanto, los **n** lanzamientos
+son **independientes.** 
+
+Si llamamos **“éxito”** a los sol, la probabilidad **p** de obtener
+**sol** se mantiene constante si no cambiamos de moneda. 
+
+El recuento del número
+de **soles** es una **variable aleatoria X**. La distribución de **X** se llama **distribución
+binomial.**
+
+Here!!!!!!
+
+##### Definición: 
+
+La distribución del recuento **X** de éxitos en una situación binomial es la
+distribución binomial con parámetros **n** y **p**. 
+
+El parámetro **n** es el número
+de observaciones. 
+
+El parametro **p** es la probabilidad de éxito de cualquier observación.
+
+Los valores de **X** son números enteros positivos que van de **0 a n**
+
+
+
+
+---------------------
+
+
+![](/img/reglas_Prob.jpg)
+
+En particular note que la **regla 4** refiere la probabilidad de dos eventos que **no pueden ocurrir juntos**, estos eventos se denominan **disjuntos**
+
+**Definición**  Son eventos disjuntos aquellos que no pueden ocurrir al mismo tiempo.
+
+Los eventos **A** y **B** son disjuntos si su intersección es cero. 
+$A\cap B=0$
+
+
+
+
+
+
+ **Ejercicios**
+ 
+ Repaso tema Distribución normal. 
 
 ![](/img/mediaymediana2.jpg)
 ![](/img/mediaymediana.jpg)
