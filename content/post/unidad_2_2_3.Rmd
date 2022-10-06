@@ -31,7 +31,7 @@ library(gapminder)
 
 1. Tenemos un determinado número **n** de observaciones.
 
-2. Las **n** observaciones son todas independientes. 
+2. Las **n** observaciones son todas **independientes**. 
 
 Es decir, saber el resultado de una observación no te indica nada sobre las restantes
 observaciones.
