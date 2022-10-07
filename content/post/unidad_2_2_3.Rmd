@@ -22,7 +22,7 @@ library(gapminder)
 ---------------
 
 
-![](/img/reglas_Prob.jpg)
+![](/img/reglas1_Prob.jpg)
 
 En particular note que la **regla 4** refiere la probabilidad de dos eventos que **no pueden ocurrir juntos**, estos eventos se denominan **disjuntos**
 
