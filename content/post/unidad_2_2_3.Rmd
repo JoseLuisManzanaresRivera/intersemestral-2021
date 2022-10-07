@@ -147,7 +147,7 @@ $$P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}$$
 
 **Ejemplo** Si en una situación binomial (con dos resultados independientes) se sabe que la probabilidad de ocurrencia del evento denominado éxito es **p=0.25** ¿Cuál será la probabilidad binomial de  obtener **como máximo 2 éxitos entre 5 posibles elementos**.
 
-Considerando la notación  vista hasta el momento en este caso  k=2 , n=5.
+Considerando la notación  vista hasta el momento en este caso  $k\leq2$ , n=5.
 
 
 
