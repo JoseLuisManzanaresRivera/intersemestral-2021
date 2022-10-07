@@ -182,7 +182,7 @@ $$\binom{5}{0}=1$$
 
 $$\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)}!=\frac{120}{120}=1$$
 
-##### Uso de SOftware.
+##### Uso de Software.
 
 **Uso del software en la determinación de los coeficientes binomiales**
 
@@ -202,6 +202,7 @@ binom(5, 1)
 Asi la probabilidad que buscamos queda definida por: 
 
 $$P(X\leq2)=\binom{5}{2}p^{2}(1-p)^{5-2}+\binom{5}{1}p^{1}(1-p)^{5-1}+\binom{5}{0}p^{0}(1-p)^{5-0}$$
+
 
 $$P(X\leq2)=\binom{5}{2}0.25^{2}(0.75)^{5-2}+\binom{5}{1}0.25^{1}(0.75)^{5-1}+\binom{5}{0}0.25^{0}(0.75)^{5-0}$$
 Entonces, 
