@@ -145,23 +145,31 @@ $$P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}$$
 
 
 
-**Ejemplo** Si en una situación binomial (con dos resultados independientes) se sabe que la probabilidad de ocurrencia del evento denominado éxito **p=0.25** ¿Cuál será la probabilidad binomial de  obtener **al menos 2 éxitos entre 5 posibles elementos**.
+**Ejemplo** Si en una situación binomial (con dos resultados independientes) se sabe que la probabilidad de ocurrencia del evento denominado éxito es **p=0.25** ¿Cuál será la probabilidad binomial de  obtener **como máximo 2 éxitos entre 5 posibles elementos**.
 
 Considerando la notación  vista hasta el momento en este caso  k=2 , n=5.
 
 
 
 
-En primera instancia podemos estimar el coeficiente binomial para el número de existos hasta k=2. Acorde con la situación descrita en la pregunta en donde buscamos la probabilidad de ocurrencia de al menos dos exitos.
+En primera instancia podemos estimar el coeficiente binomial para el número de exitos hasta k=2. Acorde con la situación descrita en la pregunta en donde buscamos la probabilidad de ocurrencia **"como máximo de dos exitos"**.
 
-Asi la probabilidad que buscamos queda definida por: 
 
-$$P(X=2)=\binom{5}{2}p^{2}(1-p)^{5-2}+\binom{5}{1}p^{1}(1-p)^{5-1}+\binom{5}{0}p^{0}(1-p)^{5-0}$$
+$$\binom{5}{2}=10$$
+$$\binom{5}{1}=5$$
+$$\binom{5}{0}=1$$
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
-$$P(X\leq2)=\binom{5}{2}0.25^{2}(0.75)^{5-2}+\binom{5}{1}0.25^{1}(0.75)^{5-1}+\binom{5}{0}0.25^{0}(0.75)^{5-0}$$
-library(binom)
-binom(5, 2)
-```{r}
+$$\binom{5}{2} = \frac{5!}{2!(5-2)!}$$
+$$\binom{5}{2} =\frac{5!}{2!(3)!}=\frac{120}{12}=10$$
+
+**Note que por definición:**  
+
+$$\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)}!=\frac{120}{120}=1$$
+```{r, warning=FALSE, message=FALSE}
+
+## Usamos la función  `VeryLargeIntegers` para estimar el coeficiente binomial.
+
 library(VeryLargeIntegers)
 
 binom(5, 2)
@@ -170,15 +178,19 @@ binom(5, 1)
 ### El coef binomial para n,k : 5,0=1 se sigue de la definición del coeficiente binomial.
 ```
 
-$$\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)}!=\frac{120}{120}=1$$
 
-Entonces, $$\binom{5}{2}=$$
+Asi la probabilidad que buscamos queda definida por: 
 
-$$\binom{5}{2}=10$$
-$$\binom{5}{1}=5$$
-$$\binom{5}{0}=1$$
+$$P(X\leq2)=\binom{5}{2}p^{2}(1-p)^{5-2}+\binom{5}{1}p^{1}(1-p)^{5-1}+\binom{5}{0}p^{0}(1-p)^{5-0}$$
+
+$$P(X\leq2)=\binom{5}{2}0.25^{2}(0.75)^{5-2}+\binom{5}{1}0.25^{1}(0.75)^{5-1}+\binom{5}{0}0.25^{0}(0.75)^{5-0}$$
+Entonces, 
+
 $$P(X\leq2)=10(0.25)^{2}(0.75)^{5-2}+5(0.25)^{1}(0.75)^{5-1}+1(0.25)^{0}(0.75)^{5-0}$$
 $$P(X\leq2)=10(0.25)^{2}(0.75)^{3}+5(0.25)^{1}(0.75)^{4}+1(0.25)^{0}(0.75)^{5}$$
+
+
+
 La probabilidad binomial de obtener "como máximo 2 éxitos" entre los 5 posibles elementos será $89.64\%$
 
 
@@ -202,10 +214,7 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 
 
 
-$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
-$$\binom{5}{2} = \frac{5!}{2!(5-2)!}$$
-$$\binom{5}{2} =\frac{5!}{2!(3)!}=\frac{120}{12}=10$$
 
 En seguida aplicamos la notación de la **probabilidad binomial** y la regla de suma: 
 
