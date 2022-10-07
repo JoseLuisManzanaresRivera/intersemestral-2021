@@ -216,7 +216,7 @@ La probabilidad binomial de obtener "como máximo 2 éxitos" entre los 5 posible
 
 
 
-###### Si usanmos software.
+###### Si usamos software.
 
 Utilizaremos la funciión  `dbinom`  cuyos parámetros son: **(n,k,p)**
 
