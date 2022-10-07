@@ -12,7 +12,7 @@ library(gapminder)
 ```
 
 
-### Distribuciones de probabilidad 
+## Distribuciones de probabilidad 
 
 
 #### Objetivos
@@ -21,7 +21,7 @@ library(gapminder)
 
 ---------------
 
-## Distribución Binomial.
+#### Distribución Binomial.
 
 ¿A qué nos referimos con una disrtibución Binomial? 
 
@@ -33,16 +33,14 @@ library(gapminder)
 
 2. Las **n** observaciones son todas **independientes**. 
 
-Es decir, saber el resultado de una observación no te indica nada sobre las restantes
-observaciones.
+Es decir, saber el resultado de una observación **no te indica nada sobre las restantes observaciones**.
 
-3. Cada observación tiene **dos** resultados posibles, que por conveniencia
-llamaremos **“éxito”** y **“fracaso”.**
+3. Cada observación tiene **dos** resultados posibles, que por conveniencia llamaremos **“éxito”** y **“fracaso”.**
 
 4. La probabilidad de éxito, llámada **p**, es **igual** en todas las observaciones.
 
 
-**Ejemplo:** 
+**Ejemplo: 1** 
 
 Lanzar una moneda **n** veces es un ejemplo de **situación binomial**. 
 
@@ -61,7 +59,7 @@ binomial.**
 
 ##### Definición: 
 
-La distribución del recuento **X** de éxitos en una situación binomial es la
+La distribución del recuento **X** de **éxitos** en una **situación binomial** es la
 distribución binomial con parámetros **n** y **p**. 
 
 Donde el parámetro **n** denota el número
@@ -69,7 +67,148 @@ de observaciones.
 
 Donde el parametro **p** indica la probabilidad de éxito de cualquier observación.
 
-Y los valores de **X** son números enteros positivos que van de **0 a n**.
+Y los valores de **X**  estan definidos por **números enteros positivos** en el intetvalo [**0 a n)**.
+
+
+Es muy importante que los eventos sean **INDEPENDIENTES** para que una situación pueda definirse como binomial, no solo debemos verificar que se tengan **dos posibles** resultados.
+
+
+**Ejemplo 2**
+
+Observe que la siguiente situación **no cumple** con **el criterio** de independencia y por lo tanto no puede considerarse **situación binomial**.
+
+
+Selecciona 10 cartas de una baraja de póquer y cuenta el número X de cartas rojas. 
+
+
+Note que una baraja tiene dos cartas de **dos colores: Rojo y Negro.**
+
+Tenemos 10 observaciones y cada una de ellas puede ser una carta roja o una carta negra. 
+
+Definimos Un **“éxito”** como una carta **roja.** Note que tenomos dos posibles resultados, pero se viola el criterio de independencia, las observaciones **no son independientes.**
+
+Ya que,  si **la primera carta es negra**, la segunda carta tiene más probabilidades de ser roja, ya que quedan más cartas rojas que negras en la baraja.
+
+
+**Ejemplo 3**
+
+Observas el sexo de los próximos 20 bebés nacidos en un hospital; **X** es el número de niñas.
+
++ Tenemos dos posibles resultados:  OK
++ Tenemos definida el evento éxito: OK
++ Los eventos son independientes:   OK
+
+
+En este caso tenemos una situación binimial.
+
+Para calcular la **probabilidad** de que una variable
+aleatoria binomial tome un valor determinado es necsario: 
+
+Determinar el número de maneras de combinar  **k** éxitos de entre **n** observaciones. Este número de combinaciones posibles se expresa por el  denominado **coeficiente binomial** que cuya notación se presenta a continuación.
+
+
+##### COEFICIENTE BINOMIAL
+
+El número de maneras de combinar **k** éxitos entre **n** observaciones viene dado por el **coeficiente binomial**
+
+
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
+para  $k=0,1,2,...,n$
+
+**Note** que  estamos usando la notación factorial. 
+
+Recuerde que para estimar el **factorial** de cualquier número entero positivo **n**, es necesario estimar el producto de los elmentos secuencalente inferiores:
+
+n! = n × (n − 1) × (n − 2) ×···× 3 × 2 × 1
+
+
+**Por ejemoplo**
+
++ 4! = 4x3x2x1=24.
+
++ 3! =3x2x1=6
+
++ 6!= 6x5x4x3x2x1=720
+
+O simplemente usando la función     `factorial en R` 
++ Por definción el caso particular de  0!=1.
+
+
+##### PROBABILIDAD BINOMIAL
+
+
+Si **X** tiene una **distribución binomial** con **n** observaciones y con una probabilidad **p** de éxito en cada observación k  = 0, 1, 2, . . . , n.  de **x**, Entonces.  
+
+
+$$P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}$$
+
+
+
+**Ejemplo** Si en una situación binomial (con dos resultados independientes) se sabe que la probabilidad de ocurrencia del evento denominado éxito **p=0.25** ¿Cuál será la probabilidad binomial de  obtener **al menos 2 éxitos entre 5 posibles elementos**.
+
+Considerando la notación  vista hasta el momento en este caso  k=2 , n=5.
+
+
+
+
+En primera instancia podemos estimar el coeficiente binomial para el número de existos hasta k=2. Acorde con la situación descrita en la pregunta en donde buscamos la probabilidad de ocurrencia de al menos dos exitos.
+
+Asi la probabilidad que buscamos queda definida por: 
+
+$$P(X=2)=\binom{5}{2}p^{2}(1-p)^{5-2}+\binom{5}{1}p^{1}(1-p)^{5-1}+\binom{5}{0}p^{0}(1-p)^{5-0}$$
+
+$$P(X\leq2)=\binom{5}{2}0.25^{2}(0.75)^{5-2}+\binom{5}{1}0.25^{1}(0.75)^{5-1}+\binom{5}{0}0.25^{0}(0.75)^{5-0}$$
+library(binom)
+binom(5, 2)
+```{r}
+library(VeryLargeIntegers)
+
+binom(5, 2)
+binom(5, 1)
+
+### El coef binomial para n,k : 5,0=1 se sigue de la definición del coeficiente binomial.
+```
+
+$$\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)}!=\frac{120}{120}=1$$
+
+Entonces, $$\binom{5}{2}=$$
+
+$$\binom{5}{2}=10$$
+$$\binom{5}{1}=5$$
+$$\binom{5}{0}=1$$
+$$P(X\leq2)=10(0.25)^{2}(0.75)^{5-2}+5(0.25)^{1}(0.75)^{5-1}+1(0.25)^{0}(0.75)^{5-0}$$
+$$P(X\leq2)=10(0.25)^{2}(0.75)^{3}+5(0.25)^{1}(0.75)^{4}+1(0.25)^{0}(0.75)^{5}$$
+La probabilidad binomial de obtener "como máximo 2 éxitos" entre los 5 posibles elementos será $89.64\%$
+
+
+
+###### Aplicación usando software.
+
+Utilizaremos la funciión  `dbinom`  cuyos parámetros son: **(n,k,p)**
+
+Recuerde que es importante observar la proposición que describe la probabilidad. Por ejemplo en el caso anterior se busca "como máximo 2 exitos" así que $k\leq2$  por lo tanto la probabilidad que buscamos es $p(X\leq{2})=P(X=2)+P(X=1)+P(X=0)$ 
+
+**Note** en este caso **la suma de las probabilidades** concretas de cada combinación.
+
+
+```{r}
+
+##  dbinom(n,k,p) 
+
+ dbinom(2,5,0.25) + dbinom(1,5,0.25) + dbinom(0,5,0.25) 
+
+```
+
+
+
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
+$$\binom{5}{2} = \frac{5!}{2!(5-2)!}$$
+$$\binom{5}{2} =\frac{5!}{2!(3)!}=\frac{120}{12}=10$$
+
+En seguida aplicamos la notación de la **probabilidad binomial** y la regla de suma: 
+
 
 
 
