@@ -21,6 +21,20 @@ library(gapminder)
 
 ---------------
 
+
+![](/img/reglas_Prob.jpg)
+
+En particular note que la **regla 4** refiere la probabilidad de dos eventos que **no pueden ocurrir juntos**, estos eventos se denominan **disjuntos**
+
+**Definición**  Son eventos disjuntos aquellos que no pueden ocurrir al mismo tiempo.
+
+Los eventos **A** y **B** son disjuntos si su intersección es cero. 
+$A\cap B=0$
+
+
+
+
+
 #### Distribución Binomial.
 
 ¿A qué nos referimos con una disrtibución Binomial? 
@@ -143,7 +157,7 @@ Si **X** tiene una **distribución binomial** con **n** observaciones y con una 
 
 $$P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}$$
 
-
+**IMPORTANTE:** Cuando la situación binomial particular requiere la determinación de un intervalo, es necesario aplicar la regla de la suma. 
 
 **Ejemplo** Si en una situación binomial (con dos resultados independientes) se sabe que la probabilidad de ocurrencia del evento denominado éxito es **p=0.25** ¿Cuál será la probabilidad binomial de  obtener **como máximo 2 éxitos entre 5 posibles elementos**.
 
@@ -156,16 +170,22 @@ En primera instancia podemos estimar el coeficiente binomial para el número de 
 
 
 $$\binom{5}{2}=10$$
-$$\binom{5}{1}=5$$
-$$\binom{5}{0}=1$$
+
 $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
 $$\binom{5}{2} = \frac{5!}{2!(5-2)!}$$
 $$\binom{5}{2} =\frac{5!}{2!(3)!}=\frac{120}{12}=10$$
+$$\binom{5}{1}=5$$
+$$\binom{5}{0}=1$$
 
 **Note que por definición:**  
 
 $$\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)}!=\frac{120}{120}=1$$
+
+##### Uso de SOftware.
+
+**Uso del software en la determinación de los coeficientes binomiales**
+
 ```{r, warning=FALSE, message=FALSE}
 
 ## Usamos la función  `VeryLargeIntegers` para estimar el coeficiente binomial.
@@ -195,7 +215,7 @@ La probabilidad binomial de obtener "como máximo 2 éxitos" entre los 5 posible
 
 
 
-###### Aplicación usando software.
+###### Si usanmos software.
 
 Utilizaremos la funciión  `dbinom`  cuyos parámetros son: **(n,k,p)**
 
@@ -216,22 +236,12 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 
 
 
-En seguida aplicamos la notación de la **probabilidad binomial** y la regla de suma: 
+
 
 
 
 
 ---------------------
-
-
-![](/img/reglas_Prob.jpg)
-
-En particular note que la **regla 4** refiere la probabilidad de dos eventos que **no pueden ocurrir juntos**, estos eventos se denominan **disjuntos**
-
-**Definición**  Son eventos disjuntos aquellos que no pueden ocurrir al mismo tiempo.
-
-Los eventos **A** y **B** son disjuntos si su intersección es cero. 
-$A\cap B=0$
 
 
 
