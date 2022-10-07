@@ -44,6 +44,7 @@ Es **importante** recordar de la sesión previa la defición de **variable aleat
 
 **Variable  aleatoria:**  subconjunto del epacio muestral **M** que se integra por los resultados de eventos cuyo resultado es **incierto**. 
 
+#### Variables aleatorias discretas.
 
 Una variable aleatoria **es discreta** si toma un número finito de valores. 
 Entonces nos referiremos a una **variable discreta** como aquella que adopta valores en $X \in \mathbb{N}$
@@ -62,7 +63,7 @@ Este es un experimento que puede adoptar los valores contenidos en el siguiente 
 
 El nivel de desarrollo de un país puede identificarse como: Altamente desarrollado o bien en desarrollo. En este caso la variable nivel del desarrollo, puede adoptar dos valores que podemos identificar como {Altamente desarrollado, en desarrollo} o bien usando una notación númerica: {0,1}. 
 
-##### Variables aleatorias continuas.
+#### Variables aleatorias continuas.
 
 Una variable aleatoria es continua si toma valores en un intervalo de la recta real; es decir, si su recorrido es **infinito no numerable.**
 
