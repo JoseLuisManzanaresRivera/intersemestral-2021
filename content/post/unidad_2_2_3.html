@@ -17,7 +17,7 @@ date: '2022-11-01T21:13:15-05:00'
 <ul>
 <li><p>Diferenciar entre ditribuciones discretas y continuas.</p></li>
 <li><p>Estudiar la distribución de probabiliad <strong>Binomial</strong>. Presentando la definición del coeficieonte binomial, así como el algoritmo de estimación para asignar probabilidades en el caso de una situación binamial.</p></li>
-<li><p>Realizar estimaciones de probabilidad para situaciónes en el contexto binomial.</p></li>
+<li><p>Realizar estimaciones de probabilidad para situaciones en el contexto binomial.</p></li>
 </ul>
 <hr />
 </div>
@@ -31,8 +31,8 @@ date: '2022-11-01T21:13:15-05:00'
 <p>Es <strong>importante</strong> recordar de la sesión previa la defición de <strong>variable aleatoria</strong>, misma que se incluye a continuación para mayor referencia.</p>
 <p><strong>Variable aleatoria:</strong> subconjunto del epacio muestral <strong>M</strong> que se integra por los resultados de eventos cuyo resultado es <strong>incierto</strong>.</p>
 </div>
-<div id="variables-aleatorias-discretas." class="section level3">
-<h3>Variables aleatorias discretas.</h3>
+<div id="variables-aleatorias-discretas." class="section level4">
+<h4>Variables aleatorias discretas.</h4>
 <p>Una variable aleatoria <strong>es discreta</strong> si toma un número finito de valores.
 Entonces nos referiremos a una <strong>variable discreta</strong> como aquella que adopta valores en <span class="math inline">\(X \in \mathbb{N}\)</span></p>
 <p>Las variables discretas pueden resultar, tanto de <strong>situaciones puramente cuantitativas</strong> como también <strong>cualitativas</strong>, en cuyo caso bastará con asignar un número a cada resultado para identificar cada evento.</p>
@@ -40,35 +40,53 @@ Entonces nos referiremos a una <strong>variable discreta</strong> como aquella q
 <p>El valor que adopta el resultado del lanzamiento de un dado de <strong>seis caras</strong>.</p>
 <p>Este es un experimento que puede adoptar los valores contenidos en el siguiente <strong>conjunto discreto</strong> X={1,2,3,4,5,6}.</p>
 <p><strong>Ejemplo de una variable aleatoria discreta cualitativa</strong></p>
-<p>El nivel de desarrollo de un país puede identificarse como: Altamente desarrollado o bien en desarrollo. En este caso la variable nivel del desarrollo, puede adoptar dos valores que podemos identificar como {Altamente desarrollado, en desarrollo} o bien usando una notación númerica: {0,1}.</p>
-<div id="variables-aleatorias-continuas." class="section level5">
-<h5>Variables aleatorias continuas.</h5>
+<p>El nivel de desarrollo de un país puede identificarse como: Altamente desarrollado o bien en desarrollo. En este caso la <strong>variable nivel del desarrollo</strong>, puede adoptar <strong>dos valores</strong> que podemos identificar como {Altamente desarrollado, en desarrollo} o bien usando una notación númerica: <strong>{0,1}</strong>.</p>
+</div>
+<div id="variables-aleatorias-continuas." class="section level4">
+<h4>Variables aleatorias continuas.</h4>
 <p>Una variable aleatoria es continua si toma valores en un intervalo de la recta real; es decir, si su recorrido es <strong>infinito no numerable.</strong></p>
 <p>Esta clasificación se necesita, porque si tratamos de asociar a cada <strong>valor</strong> de la <strong>variable aleatoria</strong> una probabilidad de que ocurra, entonces:</p>
 <ul>
-<li>Si la <strong>variable aleatoria es discreta</strong>, siempre es posible asociar a cada uno de sus valores, la probabilidad de que se produzca este valor, de forma que esta probabilidad cumplan lo siguiente:</li>
+<li><p>Si la <strong>variable aleatoria es discreta</strong>, es posible asociar a cada uno de sus valores, la probabilidad de que se produzca este valor, de forma que esta probabilidad cumpla los teoremos 1-1 al 1-6 vistos en la clase anterior. En particular la probabilidad</p></li>
+<li><p>No siempre es nula. <span class="math display">\[P(A)\geq0\]</span></p></li>
+<li><p>Y por el teorema 1-5, cuando <strong>A</strong> se integra por todos los elementos del espacio muestral <strong>M</strong>, la suma de la probabilidad de todos los eventos individuales de <strong>A</strong> es 1. <span class="math display">\[A=M\Rightarrow P(A)=P(A_{1})+P(A_{2})+...+P(A_{n})=1\]</span></p></li>
+<li><p>Si la variable <strong>aleatoria es continua</strong>, no podemos asociar a cada valor que pueda tomar esta variable, la probabilidad de que éste ocurra. Ya que esta probabilidad incumple las condiciones <strong>1 y 4 anteriores</strong>.</p></li>
 </ul>
-<p>1.- No siempre es nula. <span class="math display">\[P(A)\geq0\]</span></p>
-<p>2.- La suma de las probabilidades asociadas a cada uno de los valores de las variables en el espacio muestral es <strong>uno</strong>.
-<span class="math display">\[P(M)=1\]</span></p>
-<p>3.- La probabilidad de que ocurra uno, otro o ambos eventos, está dada por la suma de sus probabilidades individuales.</p>
-<p><span class="math display">\[P(A_{1}\cup A_{2}\cup...)=P(A_{1})+P(A_{2})...\]</span></p>
-<p>4.- Y por el teorema 1-5, cuando <strong>A</strong> se integra por todos los elementos del espacio muestral <strong>M</strong>, la suma de la probabilidad de todos los eventos individuales de <strong>A</strong> es 1. <span class="math display">\[A=M\Rightarrow P(A)=P(A_{1})+P(A_{2})+...+P(A_{n})=1\]</span></p>
-<ul>
-<li>Si la variable <strong>aleatoria es continua</strong>, no podemos asociar a cada valor que pueda tomar esta variable, la probabilidad de que éste ocurra, de forma que esta probabilidad cumpla las dos condiciones anteriores.</li>
-</ul>
-<p>Esto es debido a que si en un intervalo de la recta real, tratamos de hallar la probabilidad de un número de este intervalo con un valor concreto <strong>a</strong>, observaremos que, esta probabilidad es el número de casos favorables, que es 1 (el punto a), dividido entre el número de casos posibles <strong>(infinito)</strong> y por tanto, tendremos que
+<p><strong>¿Por que?</strong></p>
+<p>Esto es debido a que, si en un intervalo de la recta real, tratamos de hallar la probabilidad de un número de este intervalo con un valor concreto <strong>a</strong>, observaremos que, esta probabilidad es el número de casos favorables, que es <strong>1 (el punto a),</strong> dividido entre el número de casos posibles <strong>(infinito)</strong> y por tanto, tendremos que
 concluir que esta es <strong>cero</strong>por que:
 <span class="math display">\[\frac{1}{\infty}=0\]</span></p>
 <p><span class="math display">\[P(a)=0\]</span></p>
 <p>De lo que se deduciría que éste es un <strong>suceso imposible</strong>; Acorde con el teorema 1-3, visto en la clase anterior <span class="math display">\[P(\varnothing)=0\]</span>
-sin embargo, <strong>que la variable aleatoria tome el valor a no es un suceso imposible. No es un <span class="math inline">\(\varnothing\)</span></strong></p>
-<p><img src="/img/reglas1_Prob.jpg" /></p>
-<p>En particular note que la <strong>regla 4</strong> refiere la probabilidad de dos eventos que <strong>no pueden ocurrir juntos</strong>, estos eventos se denominan <strong>disjuntos</strong></p>
-<p><strong>Definición</strong> Son eventos disjuntos aquellos que no pueden ocurrir al mismo tiempo.</p>
-<p>Los eventos <strong>A</strong> y <strong>B</strong> son disjuntos si su intersección es cero.
-<span class="math inline">\(A\cap B=0\)</span></p>
+sin embargo, <strong>que la variable aleatoria tome el valor “a”, no es un suceso imposible. No es un <span class="math inline">\(\varnothing\)</span></strong></p>
 </div>
+<div id="probabilidad-condicional." class="section level4">
+<h4>Probabilidad condicional.</h4>
+<p>Sean <strong>A y B</strong> dos eventos tales que <span class="math inline">\(P(A)&gt;0\)</span>. Denotado por <strong>P(B|A)</strong> la probabilidad de <strong>B</strong> dado que ocurrión <strong>A</strong>.</p>
+<p>Considerando que sabemos que ocurrión <strong>A</strong>, este se convierte en el nuevo espacio muestral en reemplazo de <strong>M</strong>. De lo que se sigue la definición de <strong>probabilidad condicional</strong>:<span class="math display">\[P(B|A)=\frac{P(A\cap{B})}{P(A)}\]</span></p>
+<p>Usando algebra podemos reexprezar esta probabilidad como:
+<span class="math display">\[P(A\cap B)=P(A){P(B|A)}\]</span></p>
+<p>La figura siguiente, muestra la intersección de ambos conjuntos, a partir de un <strong>diagrama de Venn</strong></p>
+<p><img src="/img/mutuamenteexc.jpg" /></p>
+<p>En palabras, la probabilidad de que tanto <strong>A</strong> como <strong>B</strong> ocurran, es igual a la probabilidad de <strong>A</strong>, multiplicada por la probabilidad de que ocurra <strong>B</strong> dado que ha ocurrido <strong>A</strong>.</p>
+<p>La figura siguiente muestra dos conjuntos <strong>mutuamente excluyentes</strong>. Por definición su intersección <span class="math inline">\((A \cap B)=0\)</span></p>
+<p><img src="/img/excluyentes2.jpg" /></p>
+<p><strong>Ejemplo numérico</strong></p>
+<p>Encuentre la probabilidad de que en el lanzamiento sencillo de un dado, resulte un número menor que 3, si <strong>(a)</strong> no se da otra información y <strong>(b)</strong> el dado cayó en número impar.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Supongamos que el evento B esta indicado por “{número menor que 4}” Y dado que <strong>B</strong> es la unión de los eventos {1,2,3}, usando el teorema 1-5 vemos que; <span class="math display">\[P(B)=P(1)+P(2)=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}=\frac{1}{2}\]</span></p></li>
+<li><p>Ahora consideramos el evento “{numeros impares}”. Lo que implica que A={1,3,5}. <span class="math display">\[P(A)=P(1)+P(3)+P(5)=\frac{3}{6}=\frac{1}{2}\]</span></p></li>
+</ol>
+<p>Entonces <span class="math display">\[P(B|A)=\frac{P(A\cap{B})}{P(A)}=\frac{\frac{1}{3}}{\frac{1}{2}}=\frac{2}{3}\]</span></p>
+<p>Lo cual implica que la probabilidad de que ocurra B si se sabe que ocurrió A se incremenra de <span class="math inline">\(\frac{1}{2}\)</span> a <span class="math inline">\(\frac{2}{3}\)</span></p>
+</div>
+<div id="eventos-independientes." class="section level4">
+<h4>Eventos independientes.</h4>
+<p>Si <span class="math inline">\(P(B|A)=P(B)\)</span>, es decir, que la probabilidad de que ocurra <strong>B</strong> no es afectada por la ocurrencia o no de A, entonces decimos que A y B son <strong>eventos independientes</strong>. Lo que equivale a:
+<span class="math display">\[P(A\cap{B})=P(A)(B)\]</span></p>
+</div>
+<div id="distribuciones-de-probabilidad-discretas." class="section level3">
+<h3>Distribuciones de probabilidad discretas.</h3>
 <div id="distribución-binomial." class="section level4">
 <h4>Distribución Binomial.</h4>
 <p>¿A qué nos referimos con una disrtibución Binomial?</p>
@@ -100,25 +118,29 @@ distribución binomial con parámetros <strong>n</strong> y <strong>p</strong>.<
 de observaciones.</p>
 <p>Donde el parametro <strong>p</strong> indica la probabilidad de éxito de cualquier observación.</p>
 <p>Y los valores de <strong>X</strong> estan definidos por <strong>números enteros positivos</strong> en el intetvalo [<strong>0 a n)</strong>.</p>
+<div id="como-identificar-si-una-situación-es-binommial-o-no" class="section level6">
+<h6>¿Como identificar si una situación es binommial o no?</h6>
 <p>Es muy importante que los eventos sean <strong>INDEPENDIENTES</strong> para que una situación pueda definirse como binomial, no solo debemos verificar que se tengan <strong>dos posibles</strong> resultados.</p>
 <p><strong>Ejemplo 2</strong></p>
 <p>Observe que la siguiente situación <strong>no cumple</strong> con <strong>el criterio</strong> de independencia y por lo tanto no puede considerarse <strong>situación binomial</strong>.</p>
 <p>Selecciona 10 cartas de una baraja de póquer y cuenta el número X de cartas rojas.</p>
-<p>Note que una baraja tiene dos cartas de <strong>dos colores: Rojo y Negro.</strong></p>
+<p>Note que una baraja tiene cartas de <strong>dos colores: Rojo y Negro.</strong></p>
 <p>Tenemos 10 observaciones y cada una de ellas puede ser una carta roja o una carta negra.</p>
-<p>Definimos Un <strong>“éxito”</strong> como una carta <strong>roja.</strong> Note que tenomos dos posibles resultados, pero se viola el criterio de independencia, las observaciones <strong>no son independientes.</strong></p>
-<p>Ya que, si <strong>la primera carta es negra</strong>, la segunda carta tiene más probabilidades de ser roja, ya que quedan más cartas rojas que negras en la baraja.</p>
+<p>Definimos Un <strong>“éxito”</strong> como una carta <strong>roja.</strong> Note que tenemos dos posibles resultados, pero se viola el criterio de independencia, las observaciones <strong>no son independientes.</strong></p>
+<p><strong>¿Por qué no se cumple el supuesto de independencia en este caso?</strong></p>
+<p>Porque, si <strong>la primera carta es negra</strong>, la segunda carta tiene más probabilidades de ser roja, <strong>ya que quedan más cartas rojas que negras</strong> en la baraja.</p>
 <p><strong>Ejemplo 3</strong></p>
 <p>Observas el sexo de los próximos 20 bebés nacidos en un hospital; <strong>X</strong> es el número de niñas.</p>
 <ul>
 <li>Tenemos dos posibles resultados: OK</li>
-<li>Tenemos definida el evento éxito: OK</li>
+<li>Tenemos definido el evento éxito: OK</li>
 <li>Los eventos son independientes: OK</li>
 </ul>
 <p>En este caso tenemos una situación binimial.</p>
 <p>Para calcular la <strong>probabilidad</strong> de que una variable
 aleatoria binomial tome un valor determinado es necsario:</p>
 <p>Determinar el número de maneras de combinar <strong>k</strong> éxitos de entre <strong>n</strong> observaciones. Este número de combinaciones posibles se expresa por el denominado <strong>coeficiente binomial</strong> que cuya notación se presenta a continuación.</p>
+</div>
 </div>
 <div id="coeficiente-binomial" class="section level5">
 <h5>COEFICIENTE BINOMIAL</h5>
