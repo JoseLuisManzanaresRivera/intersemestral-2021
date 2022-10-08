@@ -119,6 +119,8 @@ Encuentre la probabilidad de que en el lanzamiento sencillo de un dado, resulte 
 
 (b) Ahora consideramos el evento "{numeros impares}". Lo que implica que A={1,3,5}. $$P(A)=P(1)+P(3)+P(5)=\frac{3}{6}=\frac{1}{2}$$ 
 
+Vemos que la probabiliad de los elementos comunes $P(A \cap B)=\frac{2}{6}=\frac{1}{3}$
+
 Entonces $$P(B|A)=\frac{P(A\cap{B})}{P(A)}=\frac{\frac{1}{3}}{\frac{1}{2}}=\frac{2}{3}$$
 
 Lo cual implica que la probabilidad de que ocurra B si se sabe que ocurrió A se incremenra de $\frac{1}{2}$ a $\frac{2}{3}$
@@ -132,6 +134,38 @@ Lo cual implica que la probabilidad de que ocurra B si se sabe que ocurrió A se
 Si $P(B|A)=P(B)$, es decir, que la probabilidad de que ocurra **B** no es afectada por la ocurrencia o no de A, entonces decimos que A y B son **eventos independientes**.  Lo que equivale a: 
 $$P(A\cap{B})=P(A)(B)$$
 
+**Ejemplo:**
+
+Supónga que lanza una moneda dos veces y hace un recuento de los "soles". Los sucesos de interés son:
+
++ A = el primer lanzamiento es sol
+
++ B = el segundo lanzamiento es sol
+
+
+Los sucesos **A** y **B** no son mutuamente excluyentes. 
+
+Ocurren simultáneamente siempre que
+los dos lanzamientos dan sol. 
+
+Queremos conocer la probabilidad del suceso
+{A y B}, es decir, la probabilidad de que los dos lanzamientos den sol.
+
+Sabemos que la probabilidad de sol es 1/2 cuando lanzamos una moneda. Por lo tanto:
+
+$$P(A)=0.5$$
+$$P(B)=0.5$$
+
+
+¿Cuál es la probabilidad de A y B  $P(A \cap B)$?  aplicando la regla indicada tenemos: $P(A\cap B)=P(A)P(B)=\frac{1}{2}(\frac{1}{2})=\frac{1}{4}$
+
+
+Dado que la probabilidad de 1/2 en el primer lanzamiento se mantiene en el segundo, decimos que los sucesos “sol en el primer lanzamiento” y “sol en el segundo lanzamiento” son independientes.
+
+**¿Qué significa independencia?**
+
+**Independencia** significa que el resultado del primer lanzamiento no puede influir
+sobre el del segundo.
 
 
 
