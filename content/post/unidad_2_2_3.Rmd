@@ -18,12 +18,12 @@ library(gapminder)
 #### Objetivos
 
 
-Estudiar la importancia de las distribuciones de probabilidad en contexto de variables aleatorias y aplicar estos conocimientos a la estimación de probabilidades en el caso discreto y continuo. 
+Estudiar la importancia de las distribuciones de probabilidad en contexto de variables aleatorias y aplicar estos conocimientos a la estimación de probabilidades en el caso discreto y contínuo. 
 
 ##### Metas de aprendizaje particulares
 
 
-+ Diferenciar entre variables aleatorias discretas y continuas.
++ Diferenciar entre variables aleatorias discretas y contínuas.
 
 + Estudiar las reglas de probabilidad para eventos independientes y definir las reglas de probabiliad condicional.
 
@@ -50,7 +50,7 @@ Iniciaremos esta sesión con el estudio de la  Distribución de probabilidad par
  
 Es **importante** recordar de la sesión previa la defición de **variable aleatoria**, misma que se incluye a continuación para mayor referencia. 
 
-**Variable  aleatoria:**  subconjunto del epacio muestral **M** que se integra por los resultados de eventos cuyo resultado es **incierto**. 
+**Variable  aleatoria:**  subconjunto del espacio muestral **M** que se integra por los elementos de eventos cuyo resultado es **incierto**. 
 
 #### Variables aleatorias discretas.
 
@@ -75,17 +75,17 @@ El nivel de desarrollo de un país puede identificarse como: Altamente desarroll
 
 Una variable aleatoria es continua si toma valores en un intervalo de la recta real; es decir, si su recorrido es **infinito no numerable.**
 
-Esta clasificación se necesita, porque si tratamos de asociar a cada **valor** de la **variable aleatoria** una probabilidad de que ocurra, entonces:
+Esta clasificación entre variables aleatorias (discretas y contínuas) se necesita, porque si tratamos de asociar a cada **valor** de la **variable aleatoria** una probabilidad de que ocurra, entonces:
 
 + Si la **variable aleatoria es discreta**,  es posible asociar a cada uno de sus valores, la probabilidad de que se produzca este valor, de forma que esta probabilidad cumpla  los teoremos 1-1 al 1-6 vistos en la clase anterior. En particular la probabilidad   
 
 
-+ No siempre es nula. $$P(A)\geq0$$ 
+     1.- No siempre es nula. $$P(A)\geq0$$ 
 
-+ Y por el teorema 1-5, cuando **A** se integra por todos los elementos del espacio muestral **M**, la suma de la probabilidad de todos los eventos individuales de **A** es 1.  $$A=M\Rightarrow P(A)=P(A_{1})+P(A_{2})+...+P(A_{n})=1$$
+     2.- Y por el teorema 1-5, cuando **A** se integra por todos los elementos del espacio muestral **M**, la suma de la probabilidad de todos los eventos individuales de **A** es 1.  $$A=M\Rightarrow P(A)=P(A_{1})+P(A_{2})+...+P(A_{n})=1$$
 
 
-+ Si la variable **aleatoria es continua**, no podemos asociar a cada valor que pueda tomar esta variable, la probabilidad de que éste ocurra. Ya que esta probabilidad incumple las condiciones **1 y 4 anteriores**. 
++ Si la variable **aleatoria es continua**, no podemos asociar a cada valor que pueda tomar esta variable, la probabilidad de que éste ocurra. Ya que esta probabilidad incumple las condiciones **1 y 2 anteriores**. 
 
 **¿Por que?** 
 
@@ -98,22 +98,26 @@ $$P(a)=0$$
  
 
 De lo que se deduciría que éste es un **suceso imposible**; Acorde con el teorema 1-3, visto en la clase anterior $$P(\varnothing)=0$$
-sin embargo, **que la variable aleatoria tome el valor "a", no es un suceso imposible. No es un $\varnothing$**
+sin embargo, **que la variable aleatoria tome el valor "a", no es un suceso imposible. No es un conjunot vacio  $\varnothing$**
 
-#### Probabilidad condicional.
+#### Reglas de Probabilidad condicional.
 
-Sean **A y B** dos eventos tales que $P(A)>0$. Denotado por **P(B|A)** la probabilidad de **B** dado que ocurrión **A**.
+Sean **A y B** dos eventos tales que $P(A)>0$. Denotado por **P(B|A)** la probabilidad de **B** dado que ocurrió **A**.
 
-Considerando que sabemos que ocurrión **A**, este se convierte en el nuevo espacio muestral en reemplazo de **M**.  De lo que se sigue la  definición de **probabilidad condicional**:$$P(B|A)=\frac{P(A\cap{B})}{P(A)}$$
+Considerando que sabemos que ocurrió **A**, este se convierte en el nuevo espacio muestral en reemplazo de **M**.  
 
-Usando algebra podemos reexprezar esta probabilidad como:
+Así la definción de **probabiliad condicional** es la siguiente $$P(B|A)=\frac{P(A\cap{B})}{P(A)}$$
+
+Y usando algebra podemos reexprezar esta probabilidad como:
 $$P(A\cap B)=P(A){P(B|A)}$$
+
+**En palabras,** "la probabilidad de que, tanto **A** como **B** ocurran, es igual a la probabilidad de **A**, multiplicada por la probabilidad de que ocurra **B** dado que ha ocurrido **A**." 
 
 La figura siguiente, muestra la intersección de ambos conjuntos, a partir de un **diagrama de Venn**
 
 ![](/img/mutuamenteexc.jpg)
 
-En palabras, la probabilidad de que tanto **A** como **B** ocurran, es igual a la probabilidad de **A**, multiplicada por la probabilidad de que ocurra **B** dado que ha ocurrido **A**. 
+
 
 La figura siguiente muestra dos conjuntos **mutuamente excluyentes**. Por definición  su intersección  $(A \cap B)=0$
 

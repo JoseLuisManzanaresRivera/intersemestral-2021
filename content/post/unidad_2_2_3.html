@@ -11,11 +11,11 @@ date: '2022-11-01T21:13:15-05:00'
 <h2>Distribuciones de probabilidad</h2>
 <div id="objetivos" class="section level4">
 <h4>Objetivos</h4>
-<p>Estudiar la importancia de las distribuciones de probabilidad en contexto de variables aleatorias y aplicar estos conocimientos a la estimación de probabilidades en el caso discreto y continuo.</p>
+<p>Estudiar la importancia de las distribuciones de probabilidad en contexto de variables aleatorias y aplicar estos conocimientos a la estimación de probabilidades en el caso discreto y contínuo.</p>
 <div id="metas-de-aprendizaje-particulares" class="section level5">
 <h5>Metas de aprendizaje particulares</h5>
 <ul>
-<li><p>Diferenciar entre variables aleatorias discretas y continuas.</p></li>
+<li><p>Diferenciar entre variables aleatorias discretas y contínuas.</p></li>
 <li><p>Estudiar las reglas de probabilidad para eventos independientes y definir las reglas de probabiliad condicional.</p></li>
 <li><p>Estudiar la distribución de probabiliad <strong>Binomial</strong>. Presentando la definición del coeficieonte binomial, así como el algoritmo de estimación para asignar probabilidades en el caso de una situación binamial.</p></li>
 <li><p>Realizar estimaciones de probabilidad para situaciones en el contexto binomial.</p></li>
@@ -32,7 +32,7 @@ date: '2022-11-01T21:13:15-05:00'
 <h5>Distinción entre variables aleatorias discretas y contínuas.</h5>
 <p>Iniciaremos esta sesión con el estudio de la Distribución de probabilidad para <strong>variables aleatorias discretas.</strong></p>
 <p>Es <strong>importante</strong> recordar de la sesión previa la defición de <strong>variable aleatoria</strong>, misma que se incluye a continuación para mayor referencia.</p>
-<p><strong>Variable aleatoria:</strong> subconjunto del epacio muestral <strong>M</strong> que se integra por los resultados de eventos cuyo resultado es <strong>incierto</strong>.</p>
+<p><strong>Variable aleatoria:</strong> subconjunto del espacio muestral <strong>M</strong> que se integra por los elementos de eventos cuyo resultado es <strong>incierto</strong>.</p>
 </div>
 <div id="variables-aleatorias-discretas." class="section level4">
 <h4>Variables aleatorias discretas.</h4>
@@ -48,12 +48,12 @@ Entonces nos referiremos a una <strong>variable discreta</strong> como aquella q
 <div id="variables-aleatorias-continuas." class="section level4">
 <h4>Variables aleatorias continuas.</h4>
 <p>Una variable aleatoria es continua si toma valores en un intervalo de la recta real; es decir, si su recorrido es <strong>infinito no numerable.</strong></p>
-<p>Esta clasificación se necesita, porque si tratamos de asociar a cada <strong>valor</strong> de la <strong>variable aleatoria</strong> una probabilidad de que ocurra, entonces:</p>
+<p>Esta clasificación entre variables aleatorias (discretas y contínuas) se necesita, porque si tratamos de asociar a cada <strong>valor</strong> de la <strong>variable aleatoria</strong> una probabilidad de que ocurra, entonces:</p>
 <ul>
-<li><p>Si la <strong>variable aleatoria es discreta</strong>, es posible asociar a cada uno de sus valores, la probabilidad de que se produzca este valor, de forma que esta probabilidad cumpla los teoremos 1-1 al 1-6 vistos en la clase anterior. En particular la probabilidad</p></li>
-<li><p>No siempre es nula. <span class="math display">\[P(A)\geq0\]</span></p></li>
-<li><p>Y por el teorema 1-5, cuando <strong>A</strong> se integra por todos los elementos del espacio muestral <strong>M</strong>, la suma de la probabilidad de todos los eventos individuales de <strong>A</strong> es 1. <span class="math display">\[A=M\Rightarrow P(A)=P(A_{1})+P(A_{2})+...+P(A_{n})=1\]</span></p></li>
-<li><p>Si la variable <strong>aleatoria es continua</strong>, no podemos asociar a cada valor que pueda tomar esta variable, la probabilidad de que éste ocurra. Ya que esta probabilidad incumple las condiciones <strong>1 y 4 anteriores</strong>.</p></li>
+<li><p>Si la <strong>variable aleatoria es discreta</strong>, es posible asociar a cada uno de sus valores, la probabilidad de que se produzca este valor, de forma que esta probabilidad cumpla los teoremos 1-1 al 1-6 vistos en la clase anterior. En particular la probabilidad</p>
+<p>1.- No siempre es nula. <span class="math display">\[P(A)\geq0\]</span></p>
+<p>2.- Y por el teorema 1-5, cuando <strong>A</strong> se integra por todos los elementos del espacio muestral <strong>M</strong>, la suma de la probabilidad de todos los eventos individuales de <strong>A</strong> es 1. <span class="math display">\[A=M\Rightarrow P(A)=P(A_{1})+P(A_{2})+...+P(A_{n})=1\]</span></p></li>
+<li><p>Si la variable <strong>aleatoria es continua</strong>, no podemos asociar a cada valor que pueda tomar esta variable, la probabilidad de que éste ocurra. Ya que esta probabilidad incumple las condiciones <strong>1 y 2 anteriores</strong>.</p></li>
 </ul>
 <p><strong>¿Por que?</strong></p>
 <p>Esto es debido a que, si en un intervalo de la recta real, tratamos de hallar la probabilidad de un número de este intervalo con un valor concreto <strong>a</strong>, observaremos que, esta probabilidad es el número de casos favorables, que es <strong>1 (el punto a),</strong> dividido entre el número de casos posibles <strong>(infinito)</strong> y por tanto, tendremos que
@@ -61,17 +61,18 @@ concluir que esta es <strong>cero</strong>por que:
 <span class="math display">\[\frac{1}{\infty}=0\]</span></p>
 <p><span class="math display">\[P(a)=0\]</span></p>
 <p>De lo que se deduciría que éste es un <strong>suceso imposible</strong>; Acorde con el teorema 1-3, visto en la clase anterior <span class="math display">\[P(\varnothing)=0\]</span>
-sin embargo, <strong>que la variable aleatoria tome el valor “a”, no es un suceso imposible. No es un <span class="math inline">\(\varnothing\)</span></strong></p>
+sin embargo, <strong>que la variable aleatoria tome el valor “a”, no es un suceso imposible. No es un conjunot vacio <span class="math inline">\(\varnothing\)</span></strong></p>
 </div>
-<div id="probabilidad-condicional." class="section level4">
-<h4>Probabilidad condicional.</h4>
-<p>Sean <strong>A y B</strong> dos eventos tales que <span class="math inline">\(P(A)&gt;0\)</span>. Denotado por <strong>P(B|A)</strong> la probabilidad de <strong>B</strong> dado que ocurrión <strong>A</strong>.</p>
-<p>Considerando que sabemos que ocurrión <strong>A</strong>, este se convierte en el nuevo espacio muestral en reemplazo de <strong>M</strong>. De lo que se sigue la definición de <strong>probabilidad condicional</strong>:<span class="math display">\[P(B|A)=\frac{P(A\cap{B})}{P(A)}\]</span></p>
-<p>Usando algebra podemos reexprezar esta probabilidad como:
+<div id="reglas-de-probabilidad-condicional." class="section level4">
+<h4>Reglas de Probabilidad condicional.</h4>
+<p>Sean <strong>A y B</strong> dos eventos tales que <span class="math inline">\(P(A)&gt;0\)</span>. Denotado por <strong>P(B|A)</strong> la probabilidad de <strong>B</strong> dado que ocurrió <strong>A</strong>.</p>
+<p>Considerando que sabemos que ocurrió <strong>A</strong>, este se convierte en el nuevo espacio muestral en reemplazo de <strong>M</strong>.</p>
+<p>Así la definción de <strong>probabiliad condicional</strong> es la siguiente <span class="math display">\[P(B|A)=\frac{P(A\cap{B})}{P(A)}\]</span></p>
+<p>Y usando algebra podemos reexprezar esta probabilidad como:
 <span class="math display">\[P(A\cap B)=P(A){P(B|A)}\]</span></p>
+<p><strong>En palabras,</strong> “la probabilidad de que, tanto <strong>A</strong> como <strong>B</strong> ocurran, es igual a la probabilidad de <strong>A</strong>, multiplicada por la probabilidad de que ocurra <strong>B</strong> dado que ha ocurrido <strong>A</strong>.”</p>
 <p>La figura siguiente, muestra la intersección de ambos conjuntos, a partir de un <strong>diagrama de Venn</strong></p>
 <p><img src="/img/mutuamenteexc.jpg" /></p>
-<p>En palabras, la probabilidad de que tanto <strong>A</strong> como <strong>B</strong> ocurran, es igual a la probabilidad de <strong>A</strong>, multiplicada por la probabilidad de que ocurra <strong>B</strong> dado que ha ocurrido <strong>A</strong>.</p>
 <p>La figura siguiente muestra dos conjuntos <strong>mutuamente excluyentes</strong>. Por definición su intersección <span class="math inline">\((A \cap B)=0\)</span></p>
 <p><img src="/img/excluyentes2.jpg" /></p>
 <p><strong>Ejemplo numérico</strong></p>
