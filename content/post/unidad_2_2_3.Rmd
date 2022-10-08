@@ -288,7 +288,7 @@ En este caso tenemos una situación binimial.
 Para calcular la **probabilidad** de que una variable
 aleatoria binomial tome un valor determinado es necsario: 
 
-Determinar el número de maneras de combinar  **k** éxitos de entre **n** observaciones. Este número de combinaciones posibles se expresa por el  denominado **coeficiente binomial** que cuya notación se presenta a continuación.
+Determinar el número de maneras de combinar  **k** éxitos de entre **n** observaciones. Este número de combinaciones posibles se expresa por el  denominado **coeficiente binomial**  cuya notación se presenta a continuación.
 
 
 ##### COEFICIENTE BINOMIAL
@@ -302,9 +302,9 @@ para  $k=0,1,2,...,n$
 
 **Note** que  estamos usando la notación factorial. 
 
-Recuerde que para estimar el **factorial** de cualquier número entero positivo **n**, es necesario estimar el producto de los elmentos secuencalente inferiores:
+Recuerde que para estimar el **factorial** de cualquier número entero positivo **n**, es necesario estimar el producto de los elmentos secuencialente inferiores:
 
-n! = n × (n − 1) × (n − 2) ×···× 3 × 2 × 1
+       n! = n × (n − 1) × (n − 2) ×···× 3 × 2 × 1
 
 
 **Por ejemoplo**
@@ -316,8 +316,10 @@ n! = n × (n − 1) × (n − 2) ×···× 3 × 2 × 1
 + 6!= 6x5x4x3x2x1=720
 
 O simplemente usando la función     `factorial en R` 
+
 + Por definción el caso particular de  0!=1.
 
+**IMPORTANTE note que** 1!=1
 
 
 
@@ -328,8 +330,6 @@ Si **X** tiene una **distribución binomial** con **n** observaciones y con una 
 
 
 $$P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}$$
-
-**IMPORTANTE:** Cuando la situación binomial particular requiere la determinación de un intervalo, es necesario aplicar la regla de la suma. 
 
 **Ejemplo** Si en una situación binomial (con dos resultados independientes) se sabe que la probabilidad de ocurrencia del evento denominado éxito es **p=0.25** ¿Cuál será la probabilidad binomial de  obtener **como máximo 2 éxitos entre 5 posibles elementos**.
 
@@ -348,11 +348,14 @@ $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 $$\binom{5}{2} = \frac{5!}{2!(5-2)!}$$
 $$\binom{5}{2} =\frac{5!}{2!(3)!}=\frac{120}{12}=10$$
 $$\binom{5}{1}=5$$
+$$\binom{5}{1} =\frac{5!}{1!(4)!}=\frac{120}{24}=5$$
+
+
 $$\binom{5}{0}=1$$
 
 **Note que por definición:**  
 
-$$\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)}!=\frac{120}{120}=1$$
+$$\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)!}=\frac{120}{120}=1$$
 
 ##### Uso de Software.
 
@@ -390,7 +393,7 @@ La probabilidad binomial de obtener "como máximo 2 éxitos" entre los 5 posible
 
 ###### Si usamos software.
 
-Utilizaremos la funciión  `dbinom`  cuyos parámetros son: **(n,k,p)**
+Utilizaremos la funciión  `dbinom`  cuyos parámetros son: **(k,n,p)**
 
 Recuerde que es importante observar la proposición que describe la probabilidad. Por ejemplo en el caso anterior se busca "como máximo 2 exitos" así que $k\leq2$  por lo tanto la probabilidad que buscamos es $p(X\leq{2})=P(X=2)+P(X=1)+P(X=0)$ 
 
@@ -399,7 +402,7 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 
 ```{r}
 
-##  dbinom(n,k,p) 
+##  dbinom(k,n,p) 
 
  dbinom(2,5,0.25) + dbinom(1,5,0.25) + dbinom(0,5,0.25) 
 

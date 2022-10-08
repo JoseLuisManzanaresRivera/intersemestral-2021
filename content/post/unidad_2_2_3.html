@@ -176,7 +176,7 @@ de observaciones.</p>
 <h5>¿Cómo estimamos las probabilidades en una distribuución binomial?</h5>
 <p>Para calcular la <strong>probabilidad</strong> de que una variable
 aleatoria binomial tome un valor determinado es necsario:</p>
-<p>Determinar el número de maneras de combinar <strong>k</strong> éxitos de entre <strong>n</strong> observaciones. Este número de combinaciones posibles se expresa por el denominado <strong>coeficiente binomial</strong> que cuya notación se presenta a continuación.</p>
+<p>Determinar el número de maneras de combinar <strong>k</strong> éxitos de entre <strong>n</strong> observaciones. Este número de combinaciones posibles se expresa por el denominado <strong>coeficiente binomial</strong> cuya notación se presenta a continuación.</p>
 </div>
 <div id="coeficiente-binomial" class="section level5">
 <h5>COEFICIENTE BINOMIAL</h5>
@@ -184,22 +184,24 @@ aleatoria binomial tome un valor determinado es necsario:</p>
 <p><span class="math display">\[\binom{n}{k} = \frac{n!}{k!(n-k)!}\]</span></p>
 <p>para <span class="math inline">\(k=0,1,2,...,n\)</span></p>
 <p><strong>Note</strong> que estamos usando la notación factorial.</p>
-<p>Recuerde que para estimar el <strong>factorial</strong> de cualquier número entero positivo <strong>n</strong>, es necesario estimar el producto de los elmentos secuencalente inferiores:</p>
-<p>n! = n × (n − 1) × (n − 2) ×···× 3 × 2 × 1</p>
+<p>Recuerde que para estimar el <strong>factorial</strong> de cualquier número entero positivo <strong>n</strong>, es necesario estimar el producto de los elmentos secuencialente inferiores:</p>
+<pre><code>   n! = n × (n − 1) × (n − 2) ×···× 3 × 2 × 1</code></pre>
 <p><strong>Por ejemoplo</strong></p>
 <ul>
 <li><p>4! = 4x3x2x1=24.</p></li>
 <li><p>3! =3x2x1=6</p></li>
 <li><p>6!= 6x5x4x3x2x1=720</p></li>
 </ul>
-<p>O simplemente usando la función <code>factorial en R</code>
-+ Por definción el caso particular de 0!=1.</p>
+<p>O simplemente usando la función <code>factorial en R</code></p>
+<ul>
+<li>Por definción el caso particular de 0!=1.</li>
+</ul>
+<p><strong>IMPORTANTE note que</strong> 1!=1</p>
 </div>
 <div id="probabilidad-binomial" class="section level5">
 <h5>PROBABILIDAD BINOMIAL</h5>
 <p>Si <strong>X</strong> tiene una <strong>distribución binomial</strong> con <strong>n</strong> observaciones y con una probabilidad <strong>p</strong> de éxito en cada observación k = 0, 1, 2, . . . , n. de <strong>x</strong>, Entonces.</p>
 <p><span class="math display">\[P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}\]</span></p>
-<p><strong>IMPORTANTE:</strong> Cuando la situación binomial particular requiere la determinación de un intervalo, es necesario aplicar la regla de la suma.</p>
 <p><strong>Ejemplo</strong> Si en una situación binomial (con dos resultados independientes) se sabe que la probabilidad de ocurrencia del evento denominado éxito es <strong>p=0.25</strong> ¿Cuál será la probabilidad binomial de obtener <strong>como máximo 2 éxitos entre 5 posibles elementos</strong>.</p>
 <p>Considerando la notación vista hasta el momento en este caso <span class="math inline">\(k\leq2\)</span> , n=5.</p>
 <p>En primera instancia podemos estimar el coeficiente binomial para el número de exitos hasta k=2. Acorde con la situación descrita en la pregunta en donde buscamos la probabilidad de ocurrencia <strong>“como máximo de dos exitos”</strong>.</p>
@@ -208,9 +210,10 @@ aleatoria binomial tome un valor determinado es necsario:</p>
 <p><span class="math display">\[\binom{5}{2} = \frac{5!}{2!(5-2)!}\]</span>
 <span class="math display">\[\binom{5}{2} =\frac{5!}{2!(3)!}=\frac{120}{12}=10\]</span>
 <span class="math display">\[\binom{5}{1}=5\]</span>
-<span class="math display">\[\binom{5}{0}=1\]</span></p>
+<span class="math display">\[\binom{5}{1} =\frac{5!}{1!(4)!}=\frac{120}{24}=5\]</span></p>
+<p><span class="math display">\[\binom{5}{0}=1\]</span></p>
 <p><strong>Note que por definición:</strong></p>
-<p><span class="math display">\[\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)}!=\frac{120}{120}=1\]</span></p>
+<p><span class="math display">\[\binom{5}{0} = \frac{n!}{k!(n-k)!}=\frac{120}{1(5)!}=\frac{120}{120}=1\]</span></p>
 </div>
 <div id="uso-de-software." class="section level5">
 <h5>Uso de Software.</h5>
@@ -235,10 +238,10 @@ Entonces,</p>
 <p>La probabilidad binomial de obtener “como máximo 2 éxitos” entre los 5 posibles elementos será <span class="math inline">\(89.64\%\)</span></p>
 <div id="si-usamos-software." class="section level6">
 <h6>Si usamos software.</h6>
-<p>Utilizaremos la funciión <code>dbinom</code> cuyos parámetros son: <strong>(n,k,p)</strong></p>
+<p>Utilizaremos la funciión <code>dbinom</code> cuyos parámetros son: <strong>(k,n,p)</strong></p>
 <p>Recuerde que es importante observar la proposición que describe la probabilidad. Por ejemplo en el caso anterior se busca “como máximo 2 exitos” así que <span class="math inline">\(k\leq2\)</span> por lo tanto la probabilidad que buscamos es <span class="math inline">\(p(X\leq{2})=P(X=2)+P(X=1)+P(X=0)\)</span></p>
 <p><strong>Note</strong> en este caso <strong>la suma de las probabilidades</strong> concretas de cada combinación.</p>
-<pre class="r"><code>##  dbinom(n,k,p) 
+<pre class="r"><code>##  dbinom(k,n,p) 
 
  dbinom(2,5,0.25) + dbinom(1,5,0.25) + dbinom(0,5,0.25) </code></pre>
 <pre><code>## [1] 0.8964844</code></pre>
