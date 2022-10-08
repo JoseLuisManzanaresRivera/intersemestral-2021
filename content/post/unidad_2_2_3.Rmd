@@ -186,12 +186,14 @@ Para aclara el sentido de independencia en los eventos consideremos el siguiente
 
 **Ejemplo**
 
-Una baraja de 52 cartas tiene 26 cartas rojas y 26 negras. 
+Una baraja de 52 cartas, tiene 26 cartas **rojas** y 26 **negras**. 
 
 Si escogemos una carta de una baraja bien mezclada, la probabilidad de obtener una carta roja
 es de 26/52 = 0,50 (resultados igualmente probables). 
-Una vez hemos visto que la
-primera carta es roja, sabemos que sólo quedan 25 cartas rojas en la baraja entre las 51 cartas restantes
+Una vez que hemos visto que la
+primera carta es **roja**, sabemos que sólo quedan 25 cartas rojas en la baraja entre las 51 cartas restantes.**25/21=49\%**
+
+Por lo tanto los colores de las sucesivas cartas de una baraja no son independientes.
 
 
 
@@ -279,6 +281,9 @@ Observas el sexo de los próximos 20 bebés nacidos en un hospital; **X** es el 
 
 
 En este caso tenemos una situación binimial.
+
+
+##### ¿Cómo estimamos las probabilidades en una distribuución binomial?
 
 Para calcular la **probabilidad** de que una variable
 aleatoria binomial tome un valor determinado es necsario: 
