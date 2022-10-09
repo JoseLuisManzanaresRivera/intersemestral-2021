@@ -258,7 +258,7 @@ Los sucesos **A y B** son **mutuamente excluyentes** si **no tienen resultados e
 Los sucesos Ay B son **independientes** si conocer que ocurre un suceso no cambia la probabilidad que asignaríamos al otro suceso.
 
 
-Dos teoremas de interes para asiganar probabilidades en estos casos son: 
+Dos teoremas de interés para asiganar probabilidades en estos casos son: 
 
 -     **Teorema 1-6**. (de la suma para dos eventos cualesquiera):
 
