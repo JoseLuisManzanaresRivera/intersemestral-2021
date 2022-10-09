@@ -216,12 +216,13 @@ En palabras, la probabilidad de que dos eventos cualesquiera A o B o ambos ocurr
 
 ¿Quién será el próximo presidente de México? 
 
-El Proceso electoral está en pleno curso en **Brasil**, tanto el candidato **Jair Bolsonaro** como **Lúla da Silva** han avanzado a la segunda ronda. Cármen Aristegui, una analista mexicana, cree que Lúla tiene un $70\%$ de probabilidades de obtener el mayor número de votos en la eleccióna a la presidencia mientras que que Bolsonaro un $50\%$ 
-Adicionalmente Aristegui cree que hay una probabilidad del $30\%$ de que ambos obtengan la misma cantidad de votos. Se sabe ademas que la candidata  Simone Tebet también esta en la contienda y  obtuvo el $4\%$ del total de los votos. 
+El Proceso electoral está en pleno curso en **Brasil**, tanto el candidato **Jair Bolsonaro** como **Lúla da Silva** han avanzado a la segunda ronda. Cármen Aristegui, una analista mexicana, cree que Lúla tiene un $68\%$ de probabilidades de obtener el mayor número de votos en la eleccióna a la presidencia mientras que que Bolsonaro un $49\%$ 
+Adicionalmente Aristegui cree que hay una probabilidad del $27\%$ de que ambos obtengan la misma cantidad de votos. Se sabe ademas que la candidata  Simone Tebet también esta en la contienda y  obtuvo el $4\%$ del total de los votos. 
 
 Como podemos observar, la asignación de estas probabilidades supera la unidad, por lo que no es muy útil para determinar qué candidato obtendrá la mayor cantidad de votos. Para poder asignar las probabilidades es necesario considerar el hecho de que estos eventos son **mutuamente excluyentes** y aplicar el **teorema 1-6**.
 
-$$P(A\cup B)=P(A)+P(B)-P(A\cap B)=.7+.5-3=0.9$$
+
+$$P(A\cup B)=P(A)+P(B)-P(A\cap B)=.68+.49-.27=0.9$$
 En palabras la probabilidad de que almenos uno de los dos gane es del $90\%$,  y aplicando el **teorema 1-4** que establece $P(A´)=1-P(A)$ . Esto es, la probabilidad de que ninguno de los dos gane esta dada por el complemento de $P(A\cup B)=1-0.9=10\%$
 
 La siguiente figura representa la situación.
