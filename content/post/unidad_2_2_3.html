@@ -74,8 +74,6 @@ sin embargo, <strong>que la variable aleatoria tome el valor “a”, no es un s
 <p>La figura siguiente, muestra la intersección de ambos conjuntos, a partir de un <strong>diagrama de Venn</strong></p>
 <p>Un diagrama de <strong>Venn</strong>, también denomiado diagrama de conjuntos o <strong>diagrama lógico</strong>, es una representación que ilustra, mediante figuras geométricas, usualmente círculos para denotan <strong>subconjuntos</strong> y rectángulos para el conjunto, la relación que hay entre ellos y facilita la interpretación de eventos.</p>
 <p><img src="/img/mutuamenteexc.jpg" /></p>
-<p>La figura siguiente muestra dos conjuntos <strong>mutuamente excluyentes</strong>. Por definición su intersección <span class="math inline">\((A \cap B)=0\)</span></p>
-<p><img src="/img/excluyentes2.jpg" /></p>
 <p><strong>Ejemplo numérico</strong></p>
 <p>Encuentre la probabilidad de que en el lanzamiento sencillo de un dado, resulte un número menor que 4.</p>
 <p>Si <strong>(a)</strong> no se da otra información y <strong>(b)</strong> el dado cayó en número impar.</p>
@@ -117,6 +115,40 @@ es de 26/52 = 0,50 (resultados igualmente probables).
 Una vez que hemos visto que la
 primera carta es <strong>roja</strong>, sabemos que sólo quedan 25 cartas rojas en la baraja entre las 51 cartas restantes.<strong>25/21=49%</strong></p>
 <p>Por lo tanto los colores de las sucesivas cartas de una baraja no son independientes.</p>
+</div>
+<div id="eventos-mutuamente-excluyentes" class="section level4">
+<h4>Eventos Mutuamente excluyentes</h4>
+<p>Por definición dos eventos A y B son <strong>mutuamente excluyentes</strong> si <strong>no</strong> tiene elementos en <strong>común</strong>, es decir, su intersección <span class="math inline">\((A \cap B)=0\)</span></p>
+<p>La figura siguiente muestra dos conjuntos <strong>mutuamente excluyentes</strong>.</p>
+<p><img src="/img/excluyentes2.jpg" /></p>
+<p>Del teorema 1-5, se sigue que la probabilidad para dos eventos mutuamente exclueyentes ej. aquellos para los que <span class="math inline">\(P(A\cap B)=0\)</span></p>
+<p><span class="math display">\[P(A)=P(A_{1})+P(A_{2})+...+P(A_{n}))\]</span> Y al considerar el caso particular
+<span class="math inline">\(P(A\cap B)\neq 0\)</span> es decir para dos eventos cualesquiera, la probabilidad estará dada por el teorema 1-6:</p>
+<p><span class="math display">\[P(A\cup B)=P(A)+P(B)-P(A\cap B)\]</span> que es una proposición más general al teorema 1-5</p>
+<p>En palabras, la probabilidad de que dos eventos cualesquiera A o B o ambos ocurran, será igual a la suma de sus probabilidades menos la probabillidad de sus elementos comunes.</p>
+<div id="ejemplo" class="section level5">
+<h5>Ejemplo</h5>
+<p>¿Quién será el próximo presidente de México?</p>
+<p>El Proceso electoral está en pleno curso en <strong>Brasil</strong>, tanto el candidato <strong>Jair Bolsonaro</strong> como <strong>Lúla da Silva</strong> han avanzado a la segunda ronda. Cármen Aristegui, una analista mexicana, cree que Lúla tiene un <span class="math inline">\(70\%\)</span> de probabilidades de obtener el mayor número de votos en la eleccióna a la presidencia mientras que que Bolsonaro un <span class="math inline">\(50\%\)</span>
+Adicionalmente Aristegui cree que hay una probabilidad del <span class="math inline">\(30\%\)</span> de que ambos obtengan la misma cantidad de votos. Se sabe ademas que la candidata Simone Tebet también esta en la contienda y obtuvo el <span class="math inline">\(4\%\)</span> del total de los votos.</p>
+<p>Como podemos observar, la asignación de estas probabilidades supera la unidad, por lo que no es muy útil para determinar qué candidato obtendrá la mayor cantidad de votos. Para poder asignar las probabilidades es necesario considerar el hecho de que estos eventos son <strong>mutuamente excluyentes</strong> y aplicar el <strong>teorema 1-6</strong>.</p>
+<p><span class="math display">\[P(A\cup B)=P(A)+P(B)-P(A\cap B)=.7+.5-3=0.9\]</span>
+En palabras la probabilidad de que almenos uno de los dos gane es del <span class="math inline">\(90\%\)</span>, y aplicando el <strong>teorema 1-4</strong> que establece <span class="math inline">\(P(A´)=1-P(A)\)</span> . Esto es, la probabilidad de que ninguno de los dos gane esta dada por el complemento de <span class="math inline">\(P(A\cup B)=1-0.9=10\%\)</span></p>
+<p>La siguiente figura representa la situación.</p>
+<p><img src="/img/lula.jpg" /></p>
+</div>
+<div id="ejercicio" class="section level5">
+<h5>Ejercicio</h5>
+<p><strong>Ingresos y educación.</strong> Selecciona al azar un hogar en México. Sea <strong>A</strong>
+el suceso de que los ingresos totales de los miembros del hogar sean superiores a
+9500 al mes y B el suceso de que el cabeza de familia del hogar tenga estudios de postgrado De acuerdo con el Eurostat, P(A) = 0,15, P(B) = 0,25 y P(A y B) = 0,09.
+(a) Dibuja un diagrama de Venn que muestre la relación entre los sucesos
+A y B. ¿Cuál es la probabilidad de que los ingresos totales del hogar sean superiores a 75.000 € o que su cabeza de familia tenga estudios universitarios, es decir,
+P(A o B)?
+(b) En tu diagrama, sombrea el suceso correspondiente a que el cabeza de
+familia tenga estudios universitarios pero que los ingresos totales del hogar no
+sean superiores a 75.000 €. ¿Cuál es la probabilidad de este suceso?</p>
+</div>
 </div>
 <div id="distribuciones-de-probabilidad-discretas." class="section level3">
 <h3>Distribuciones de probabilidad discretas.</h3>

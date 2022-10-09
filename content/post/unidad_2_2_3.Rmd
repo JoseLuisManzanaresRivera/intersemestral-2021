@@ -119,12 +119,6 @@ Un diagrama de **Venn**, también denomiado diagrama de conjuntos o **diagrama l
 
 ![](/img/mutuamenteexc.jpg)
 
-
-
-La figura siguiente muestra dos conjuntos **mutuamente excluyentes**. Por definición  su intersección  $(A \cap B)=0$
-
-![](/img/excluyentes2.jpg)
-
 **Ejemplo numérico**
 
 Encuentre la probabilidad de que en el lanzamiento sencillo de un dado, resulte un número menor que 4.
@@ -194,6 +188,59 @@ Una vez que hemos visto que la
 primera carta es **roja**, sabemos que sólo quedan 25 cartas rojas en la baraja entre las 51 cartas restantes.**25/21=49\%**
 
 Por lo tanto los colores de las sucesivas cartas de una baraja no son independientes.
+
+
+
+#### Eventos Mutuamente excluyentes
+
+Por definición  dos eventos A y B son **mutuamente excluyentes** si **no** tiene elementos en **común**, es decir, su intersección  $(A \cap B)=0$
+
+La figura siguiente muestra dos conjuntos **mutuamente excluyentes**. 
+
+![](/img/excluyentes2.jpg)
+
+
+
+Del teorema 1-5, se sigue que la probabilidad para dos eventos mutuamente exclueyentes ej. aquellos para los que $P(A\cap B)=0$ 
+
+$$P(A)=P(A_{1})+P(A_{2})+...+P(A_{n}))$$ Y al considerar el caso particular 
+$P(A\cap B)\neq 0$ es decir para dos eventos cualesquiera, la probabilidad estará dada por el teorema 1-6:
+
+
+$$P(A\cup B)=P(A)+P(B)-P(A\cap B)$$ que es una proposición más general al teorema 1-5 
+
+En palabras, la probabilidad de que dos eventos cualesquiera A o B o ambos ocurran, será igual a la suma de sus probabilidades menos la probabillidad de sus elementos comunes.
+
+
+##### Ejemplo
+
+¿Quién será el próximo presidente de México? 
+
+El Proceso electoral está en pleno curso en **Brasil**, tanto el candidato **Jair Bolsonaro** como **Lúla da Silva** han avanzado a la segunda ronda. Cármen Aristegui, una analista mexicana, cree que Lúla tiene un $70\%$ de probabilidades de obtener el mayor número de votos en la eleccióna a la presidencia mientras que que Bolsonaro un $50\%$ 
+Adicionalmente Aristegui cree que hay una probabilidad del $30\%$ de que ambos obtengan la misma cantidad de votos. Se sabe ademas que la candidata  Simone Tebet también esta en la contienda y  obtuvo el $4\%$ del total de los votos. 
+
+Como podemos observar, la asignación de estas probabilidades supera la unidad, por lo que no es muy útil para determinar qué candidato obtendrá la mayor cantidad de votos. Para poder asignar las probabilidades es necesario considerar el hecho de que estos eventos son **mutuamente excluyentes** y aplicar el **teorema 1-6**.
+
+$$P(A\cup B)=P(A)+P(B)-P(A\cap B)=.7+.5-3=0.9$$
+En palabras la probabilidad de que almenos uno de los dos gane es del $90\%$,  y aplicando el **teorema 1-4** que establece $P(A´)=1-P(A)$ . Esto es, la probabilidad de que ninguno de los dos gane esta dada por el complemento de $P(A\cup B)=1-0.9=10\%$
+
+La siguiente figura representa la situación.
+
+![](/img/lula.jpg)
+
+
+##### Ejercicio
+
+**Ingresos y educación.** Selecciona al azar un hogar en México. Sea **A**
+el suceso de que los ingresos totales de los miembros del hogar sean superiores a
+9500 al mes  y B el suceso de que el cabeza de familia del hogar tenga estudios de postgrado De acuerdo con el Eurostat, P(A) = 0,15, P(B) = 0,25 y P(A y B) = 0,09.
+(a) Dibuja un diagrama de Venn que muestre la relación entre los sucesos
+A y B. ¿Cuál es la probabilidad de que los ingresos totales del hogar sean superiores a 75.000 € o que su cabeza de familia tenga estudios universitarios, es decir,
+P(A o B)?
+(b) En tu diagrama, sombrea el suceso correspondiente a que el cabeza de
+familia tenga estudios universitarios pero que los ingresos totales del hogar no
+sean superiores a 75.000 €. ¿Cuál es la probabilidad de este suceso?
+
 
 
 
