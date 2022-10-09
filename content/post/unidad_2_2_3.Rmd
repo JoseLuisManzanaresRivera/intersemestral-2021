@@ -260,13 +260,15 @@ Los sucesos Ay B son **independientes** si conocer que ocurre un suceso no cambi
 
 Dos teoremas de interes para asiganar probabilidades en estos casos son: 
 
-**Teorema 1-6**. (de la suma para dos eventos cualesquiera):
+-     **Teorema 1-6**. (de la suma para dos eventos cualesquiera):
 
 $$P(A\cup B)=P(A)+P(B)-P(A\cap B)$$
 
-Regla del producto (eventos independientes)
+-    Regla del producto (eventos independientes)
 
 $$P(A\cap B)=P(A)P(B)$$
+
+
 -----------------------------------------------
 
 ### Distribuciones de probabilidad discretas.
