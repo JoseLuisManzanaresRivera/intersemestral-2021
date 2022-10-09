@@ -191,7 +191,7 @@ Por lo tanto los colores de las sucesivas cartas de una baraja no son independie
 
 
 
-#### Eventos Mutuamente excluyentes
+#### Eventos mutuamente excluyentes
 
 Por definición  dos eventos A y B son **mutuamente excluyentes** si **no** tiene elementos en **común**, es decir, su intersección  $(A \cap B)=0$
 
