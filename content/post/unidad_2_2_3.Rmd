@@ -248,8 +248,23 @@ familia tenga estudios universitarios pero que los ingresos totales del hogar no
 sean superiores a 9,500. ¿Cuál es la probabilidad de este suceso?
 
 
+#### SINTESIS
+
+Los sucesos **A y B** son **mutuamente excluyentes** si **no tienen resultados en común**. 
+
+Los sucesos Ay B son **independientes** si conocer que ocurre un suceso no cambia la probabilidad que asignaríamos al otro suceso.
 
 
+Dos teoremas de interes para asiganar probabilidades en estos casos son: 
+
+**Teorema 1-6**. (de la suma para dos eventos cualesquiera):
+
+$$P(A\cup B)=P(A)+P(B)-P(A\cap B)$$
+
+Regla del producto (eventos independientes)
+
+$$P(A\cap B)=P(A)P(B)$$
+-----------------------------------------------
 
 ### Distribuciones de probabilidad discretas.
 
