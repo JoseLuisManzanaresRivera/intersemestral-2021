@@ -233,13 +233,19 @@ La siguiente figura representa la situación.
 
 **Ingresos y educación.** Selecciona al azar un hogar en México. Sea **A**
 el suceso de que los ingresos totales de los miembros del hogar sean superiores a
-9500 al mes  y B el suceso de que el cabeza de familia del hogar tenga estudios de postgrado De acuerdo con el Eurostat, P(A) = 0,15, P(B) = 0,25 y P(A y B) = 0,09.
+9500 al mes  y **B** el suceso de que el cabeza de familia del hogar tenga estudios de postgrado.
+
+De acuerdo con el Instituto Nacional de Geografía e Informática **INEGI**, P(A) = 0.15, P(B) = 0.25 y $P(A \cap B)$ = 0.09.
+
 (a) Dibuja un diagrama de Venn que muestre la relación entre los sucesos
-A y B. ¿Cuál es la probabilidad de que los ingresos totales del hogar sean superiores a 75.000 € o que su cabeza de familia tenga estudios universitarios, es decir,
-P(A o B)?
+A y B. 
+
+¿Cuál es la probabilidad de que los ingresos totales del hogar sean superiores a 9,500 o que su cabeza de familia tenga estudios universitarios, es decir,
+$P(A \cup B)$?  (Aplica el teorema 1-6).
+
 (b) En tu diagrama, sombrea el suceso correspondiente a que el cabeza de
 familia tenga estudios universitarios pero que los ingresos totales del hogar no
-sean superiores a 75.000 €. ¿Cuál es la probabilidad de este suceso?
+sean superiores a 9,500. ¿Cuál es la probabilidad de este suceso?
 
 
 
