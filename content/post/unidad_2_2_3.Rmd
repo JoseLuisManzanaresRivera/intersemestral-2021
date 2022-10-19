@@ -115,7 +115,7 @@ $$P(A\cap B)=P(A){P(B|A)}$$
 
 La figura siguiente, muestra la intersección de ambos conjuntos, a partir de un **diagrama de Venn**
 
-Un diagrama de **Venn**, también denomiado diagrama de conjuntos o **diagrama lógico**,  es una representación que ilustra, mediante figuras geométricas, usualmente círculos para denotan **subconjuntos** y rectángulos para el conjunto, la relación que hay entre ellos y facilita la interpretación de eventos. 
+Un diagrama de **Venn**, también denomiado diagrama de conjuntos o **diagrama lógico**,  es una representación que ilustra, mediante figuras geométricas, la relación que hay entre conjuntos y facilita la interpretación de eventos. Con frecunecia usamos círculos para denotar **subconjuntos** y rectángulos para el conjunto. 
 
 ![](/img/mutuamenteexc.jpg)
 
