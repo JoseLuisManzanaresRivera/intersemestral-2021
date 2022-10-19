@@ -27,7 +27,7 @@ Estudiar la importancia de las distribuciones de probabilidad en contexto de var
 
 + Estudiar las reglas de probabilidad para eventos independientes y definir las reglas de probabiliad condicional.
 
-+ Estudiar la distribución de probabiliad **Binomial**.  Presentando la definición del coeficiente binomial, así como el algoritmo de estimación para asignar probabilidades en el caso de una situación binamial.
++ Estudiar la distribución de probabiliad **Binomial**.  Presentando la definición del coeficiente binomial, así como el algoritmo de estimación para asignar probabilidades en el caso de una situación binomial.
 
 + Realizar estimaciones de probabilidad para situaciones en el contexto binomial.
 
