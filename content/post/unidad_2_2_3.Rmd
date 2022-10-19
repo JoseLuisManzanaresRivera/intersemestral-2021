@@ -77,7 +77,7 @@ Una variable aleatoria es continua si toma valores en un intervalo de la recta r
 
 Esta clasificación entre variables aleatorias (discretas y contínuas) se necesita, porque si tratamos de asociar a cada **valor** de la **variable aleatoria** una probabilidad de que ocurra, entonces:
 
-+ Si la **variable aleatoria es discreta**,  es posible asociar a cada uno de sus valores, la probabilidad de que se produzca este valor, de forma que esta probabilidad cumpla  los teoremos 1-1 al 1-6 vistos en la clase anterior. En particular la probabilidad   
++ Si la **variable aleatoria es discreta**,  es posible asociar a cada uno de sus valores, la probabilidad de que se produzca este valor, de forma que esta probabilidad cumpla  los teoremas: 1-1 al 1-6 vistos en la clase anterior. En particular la probabilidad   
 
 
      1.- No siempre es nula. $$P(A)\geq0$$ 
@@ -90,7 +90,7 @@ Esta clasificación entre variables aleatorias (discretas y contínuas) se neces
 **¿Por que?** 
 
 Esto es debido a que, si en un intervalo de la recta real, tratamos de hallar la probabilidad de un número de este intervalo con un valor concreto **a**, observaremos que,  esta probabilidad es el número de casos favorables, que es **1 (el punto a),** dividido entre el número de casos posibles **(infinito)** y por tanto, tendremos que
-concluir que esta es **cero**por que: 
+concluir que esta es **cero** por que: 
 $$\frac{1}{\infty}=0$$  
 
 $$P(a)=0$$  
