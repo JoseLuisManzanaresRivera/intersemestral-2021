@@ -651,7 +651,7 @@ La **media** de un conjunto de datos con **sesgo positivo** se ubica **a la dere
 
 ##### Ejercicio 1 
 
-Determine si la varaiable talla (medida en centimetros) de la base de datos correspondiente a características de recién nacidos, exhíbe una distribución simátrica (normal) de los datos.
+Determine si la varaiable talla (medida en centimetros) de la base de datos correspondiente a características de recién nacidos, exhíbe una distribución simétrica (normal) de los datos.
 
 
 [documentación para consulta de referencia sobre la función qqplot](https://www.rdocumentation.org/packages/EnvStats/versions/2.3.1/topics/qqPlot)
