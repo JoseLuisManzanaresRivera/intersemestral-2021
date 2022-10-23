@@ -219,7 +219,7 @@ En palabras, la probabilidad de que dos eventos cualesquiera A o B o ambos ocurr
 El Proceso electoral está en pleno curso en **Brasil**, tanto el candidato **Jair Bolsonaro** como **Lúla da Silva** han avanzado a la segunda ronda. Cármen Aristegui, una analista mexicana, cree que Lúla tiene un $68\%$ de probabilidades de obtener el mayor número de votos en la eleccióna a la presidencia mientras que que Bolsonaro un $49\%$ 
 Adicionalmente Aristegui cree que hay una probabilidad del $27\%$ de que ambos obtengan la misma cantidad de votos. Se sabe ademas que la candidata  Simone Tebet también esta en la contienda y  obtuvo el $4\%$ del total de los votos. 
 
-Como podemos observar, la asignación de estas probabilidades supera la unidad, por lo que no es muy útil para determinar qué candidato obtendrá la mayor cantidad de votos. Para poder asignar las probabilidades es necesario considerar el hecho de que estos eventos son **mutuamente excluyentes** y aplicar el **teorema 1-6**.
+Como podemos observar, la asignación de estas probabilidades supera la unidad, por lo que no es muy útil para determinar qué candidato obtendrá la mayor cantidad de votos. Para poder asignar las probabilidades es necesario  aplicar el **teorema 1-6** para controlar por el hecho de que $P(A\cap B)\neq0$
 
 
 $$P(A\cup B)=P(A)+P(B)-P(A\cap B)=.68+.49-.27=0.9$$
