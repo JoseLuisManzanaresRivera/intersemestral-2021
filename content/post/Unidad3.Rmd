@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Distribución normal, distribuciones de muestreo y prueba de hipótesis.
 
-###Obejtivos.
+### Obejtivos.
 
 
 #### Aproximación normal a distribuciones binomiales.
