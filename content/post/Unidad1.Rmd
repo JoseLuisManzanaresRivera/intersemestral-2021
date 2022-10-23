@@ -648,6 +648,8 @@ La **media** de un conjunto de datos con **sesgo positivo** se ubica **a la dere
 
 ![](/img/escenarios.jpg)
 
+/img/normal_.jpg
+
 
 ##### Ejercicio 1 
 
