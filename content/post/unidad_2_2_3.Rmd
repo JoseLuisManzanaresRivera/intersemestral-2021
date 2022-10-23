@@ -185,7 +185,7 @@ Una baraja de 52 cartas, tiene 26 cartas **rojas** y 26 **negras**.
 Si escogemos una carta de una baraja bien mezclada, la probabilidad de obtener una carta roja
 es de 26/52 = 0,50 (resultados igualmente probables). 
 Una vez que hemos visto que la
-primera carta es **roja**, sabemos que sólo quedan 25 cartas rojas en la baraja entre las 51 cartas restantes.**25/21=49\%**
+primera carta es **roja**, sabemos que sólo quedan 25 cartas rojas en la baraja entre las 51 cartas restantes.**25/51=49\%**
 
 Por lo tanto los colores de las sucesivas cartas de una baraja no son independientes.
 
@@ -214,7 +214,7 @@ En palabras, la probabilidad de que dos eventos cualesquiera A o B o ambos ocurr
 
 ##### Ejemplo
 
-¿Quién será el próximo presidente de México? 
+¿Quién será el próximo presidente de Brasil? 
 
 El Proceso electoral está en pleno curso en **Brasil**, tanto el candidato **Jair Bolsonaro** como **Lúla da Silva** han avanzado a la segunda ronda. Cármen Aristegui, una analista mexicana, cree que Lúla tiene un $68\%$ de probabilidades de obtener el mayor número de votos en la eleccióna a la presidencia mientras que que Bolsonaro un $49\%$ 
 Adicionalmente Aristegui cree que hay una probabilidad del $27\%$ de que ambos obtengan la misma cantidad de votos. Se sabe ademas que la candidata  Simone Tebet también esta en la contienda y  obtuvo el $4\%$ del total de los votos. 
