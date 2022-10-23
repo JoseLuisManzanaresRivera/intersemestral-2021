@@ -1,24 +1,24 @@
 ---
 title: "Unidad 3"
 author: "José Luis Manzanares Rivera"
-date: 2022-10-25T22:08:14-05:00
+date: 2022-10-26T22:08:14-05:00
 categories: ["Distribución normal"]
 tags: ["Inferencia"]
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 
 # Inferencia
 
-## Distribución normal, distribuciones de muestreo y prueba de hipótesis.
+### Distribución normal, distribuciones de muestreo y prueba de hipótesis.
 
-### Obejtivos.
+> ##### Obejtivos.
 
 
-#### Aproximación normal a distribuciones binomiales.
+#### Apróximación normal a distribuciones binomiales.
 
 
 Comenzaremos esta sesión con la determinación de los parámetros **media** y **desviación estándar** para una distribución binomial.
@@ -33,16 +33,20 @@ $$\sigma=\sqrt{np(1-p)}$$
 **Ejemplo:** 
 Sea una situación binomial con n=10 y p=0.1. 
 
-a) Determine las probabilides paca cada uno de los posibles valores de **X** (exitos).
+El histograma siguiente muestra las probabilides (de acuerdo a la distribución binomial) para cada uno de los posibles valores de **X** (éxitos).
 
-b) Presente los resultados mediante un histograma que mida en el eje de las ordenadas al origen las probailidades estimadas y en el eje de las abscisas el recuento de éxitos (1..n=10).
+El histograma midw en el eje de las ordenadas al orígen las probabilidades estimadas y en el eje de las abscisas el recuento de éxitos (1..n=10).
 
-c) Determine los parámetros $\mu$ y $\sigma$. 
+
+Utilizando el algoritmo visto para la estimación del  valor de la  media $\mu$ y la desviación estándar  $\sigma$ para esta distribución bimomial. 
+
+Tenemos que $\mu=np=10(.10)=1$, $\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487$
 
 ```{r, message=FALSE, echo=FALSE}
 library(tidyverse)
 
 proba<-data.frame(p=c(
+dbinom(0,10,.1),
 dbinom(1,10,.1),
 dbinom(2,10,.1),
 dbinom(3,10,.1),
@@ -53,18 +57,23 @@ dbinom(7,10,.1),
 dbinom(8,10,.1),
 dbinom(9,10,.1),
 dbinom(10,10,.1)), 
-X=c(1,2,3,4,5,6,7,8,9,10))
+X=c(0,1,2,3,4,5,6,7,8,9,10))
 
 proba<-mutate(proba, p=round( p, 4))
 
 
 ggplot(proba,aes(X, p))+
-  geom_bar(stat="identity",, fill="steelblue")+
-  labs(x="Recuento de éxitos", y="Probabilidad binomial")+
-  geom_text(aes(label=p), vjust=-.5, color="coral", size=3.5)+
-  theme_minimal()
- scale_x_discrete(limits=c(1,2,3,4,5,6,7,8,9,10 ))
-            
+  geom_bar(stat="identity", fill="steelblue")+
+  labs(x="Recuento de éxitos (X)", y="Probabilidad binomial (P)")+
+  geom_text(aes(label=p), vjust=-.1, color="coral", size=3.5)+
+  theme_minimal()+
+ scale_x_discrete(limits=c(0,1,2,3,4,5,6,7,8,9,10 ))+
+  geom_vline(xintercept = 1, linetype="dashed", color="red", size=.6)+
+  annotate("text", x=2.5, y=.45, size=4,color="red",label="Media=1, StdDev=0.9487")+ theme(legend.title=element_blank())+
+  expand_limits(y = .5)+
+  expand_limits(x = 0)
+
+  
 ```
 
 
