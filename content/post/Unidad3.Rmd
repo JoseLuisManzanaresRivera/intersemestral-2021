@@ -15,4 +15,56 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Distribución normal, distribuciones de muestreo y prueba de hipótesis.
 
-###Obejtivos
+###Obejtivos.
+
+
+#### Aproximación normal a distribuciones binomiales.
+
+
+Comenzaremos esta sesión con la determinación de los parámetros **media** y **desviación estándar** para una distribución binomial.
+
+
+
+Si un recuento **X** tiene una distribución binomial con un número de observaciones **n** y una probabilidad de éxito **p**, la media y la desviación
+estándar de **X** son:
+
+$$\mu=np$$
+$$\sigma=\sqrt{np(1-p)}$$
+**Ejemplo:** 
+Sea una situación binomial con n=10 y p=0.1. 
+
+a) Determine las probabilides paca cada uno de los posibles valores de **X** (exitos).
+
+b) Presente los resultados mediante un histograma que mida en el eje de las ordenadas al origen las probailidades estimadas y en el eje de las abscisas el recuento de éxitos (1..n=10).
+
+c) Determine los parámetros $\mu$ y $\sigma$. 
+
+```{r, message=FALSE, echo=FALSE}
+library(tidyverse)
+
+proba<-data.frame(p=c(
+dbinom(1,10,.1),
+dbinom(2,10,.1),
+dbinom(3,10,.1),
+dbinom(4,10,.1),
+dbinom(5,10,.1),
+dbinom(6,10,.1),
+dbinom(7,10,.1),
+dbinom(8,10,.1),
+dbinom(9,10,.1),
+dbinom(10,10,.1)), 
+X=c(1,2,3,4,5,6,7,8,9,10))
+
+proba<-mutate(proba, p=round( p, 4))
+
+
+ggplot(proba,aes(X, p))+
+  geom_bar(stat="identity",, fill="steelblue")+
+  labs(x="Recuento de éxitos", y="Probabilidad binomial")+
+  geom_text(aes(label=p), vjust=-.5, color="coral", size=3.5)+
+  theme_minimal()
+ scale_x_discrete(limits=c(1,2,3,4,5,6,7,8,9,10 ))
+            
+```
+
+
