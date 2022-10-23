@@ -646,7 +646,7 @@ Por ejemplo:
 
 La **media** de un conjunto de datos con **sesgo positivo** se ubica **a la derecha** de la mediana. En el escenario de una distribución con **sesgo negativo**, la media se ubica a la **izquierda** de la **mediana**.
 
-![}(/img/escenarios.jpg)
+![](/img/escenarios.jpg)
 
 
 ##### Ejercicio 1 
