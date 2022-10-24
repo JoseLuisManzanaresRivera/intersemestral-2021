@@ -31,19 +31,21 @@ estándar de **X** son:
 $$\mu=np$$
 $$\sigma=\sqrt{np(1-p)}$$
 **Ejemplo:** 
-Sea una situación binomial con n=10 y p=0.1. 
+Sea una situación binomial con un espacio muestral con un total de  10 elementos, (n=10) y una probabilidad de ocurrencia del $10\%$ (p=0.1).
 
-El histograma siguiente muestra las probabilides (de acuerdo a la distribución binomial) para cada uno de los posibles valores de **X** (éxitos).
+Entonces, utilizando el algoritmo anterior para la estimación del  valor de la  media $\mu$ y la desviación estándar  $\sigma$ para esta distribución bimomial, tenemos que $\mu=np=10(.10)=1$, $\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487$
 
-El histograma midw en el eje de las ordenadas al orígen las probabilidades estimadas y en el eje de las abscisas el recuento de éxitos (1..n=10).
+El histograma siguiente muestra las probabilidades (de acuerdo a la distribución binomial) para cada uno de los posibles valores de **X** (éxitos).
 
-
-Utilizando el algoritmo visto para la estimación del  valor de la  media $\mu$ y la desviación estándar  $\sigma$ para esta distribución bimomial. 
-
-Tenemos que $\mu=np=10(.10)=1$, $\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487$
+Como es posible apreciar el **histograma** mide en el eje de las **ordenadas al orígen** (vertical), las probabilidades estimadas y en el **eje de las abscisas** (horizintal), el recuento de éxitos (1..n=10). Note ademas que la linea punteada corresponde con el valor de la media de la dsitribución binomial $\mu=1$
 
 ```{r, message=FALSE, echo=FALSE}
 library(tidyverse)
+
+probabilities = data.frame(p=c(dbinom( c(0:10), size = 10, prob =.1)), X=c(0:10))
+probabilities<-mutate(probabilities, p=round( p, 4))
+
+# Alternativa manual. 
 
 proba<-data.frame(p=c(
 dbinom(0,10,.1),
@@ -62,14 +64,14 @@ X=c(0,1,2,3,4,5,6,7,8,9,10))
 proba<-mutate(proba, p=round( p, 4))
 
 
-ggplot(proba,aes(X, p))+
+ggplot(probabilities,aes(X, p))+
   geom_bar(stat="identity", fill="steelblue")+
   labs(x="Recuento de éxitos (X)", y="Probabilidad binomial (P)")+
   geom_text(aes(label=p), vjust=-.1, color="coral", size=3.5)+
   theme_minimal()+
  scale_x_discrete(limits=c(0,1,2,3,4,5,6,7,8,9,10 ))+
   geom_vline(xintercept = 1, linetype="dashed", color="red", size=.6)+
-  annotate("text", x=2.5, y=.45, size=4,color="red",label="Media=1, StdDev=0.9487")+ theme(legend.title=element_blank())+
+  annotate("text", x=3.2, y=.45, size=4,color="red",label="Media=1, StdDev=0.9487")+ theme(legend.title=element_blank())+
   expand_limits(y = .5)+
   expand_limits(x = 0)
 
@@ -77,3 +79,105 @@ ggplot(proba,aes(X, p))+
 ```
 
 
+Estimar de forma manual las probabilidades de la distribución de una situación binomial, puede resultar no práctico cuando se trata de muestras de mayor tamaño, por ejemplo considere la siguiente situación binomial:
+
+#### Ejemplo 1:  Estimación de la  aproximación binomial.
+
+¿Está cambiando la actitud de los jóvenes respecto a la participación en los procesos electorales? Las encuestas ponen de manifiesto que a los jóvenes cada vez les gusta menos salir a votar. Una encuesta reciente planteada a nivel nacional, en Colombia, preguntó a una muestra de 2,500 adultos jóvenes si estaban de acuerdo o no con **“Me gusta la democracia, pero ir a votar a menudo es frustrante, por que hay manipulación del voto”.**
+
+La población sobre la que la encuesta quiere sacar conclusiones es la de todos los residentes en Colombia de entre 18 y 30 años. Supón que el 60% de todos los adultos de Colombia estuviese de acuerdo con la afirmación anterior. 
+
+##### ¿Cuál es la probabilidad de que al menos 1,520 individuos de la muestra esté de acuerdo con la afirmación?
+
+
+Debido a que la población de adultos jóvenes de Colombia es superior a los 30 millones, podemos tomar las respuestas de 2.500 adultos escogidos al azar como independientes.
+
+En consecuencia, el número de individuos de nuestra muestra que está de acuerdo con que **"ir a votar, a menudo es frustrante"**,  es una variable aleatoria **X** que
+tiene una distribución binomial con **n = 2,500** y **p = 0.6**.
+
+Para hallar la probabilidad de que **al menos 1,520** individuos de la muestra opinen que **ir a votar a menudo es frustante**, debemos **sumar las probabilidades binomiales de todos los resultados desde X = 1.520 hasta X = 2.500**. Este cálculo no es práctico si lo hacemos a mano.
+
+![](/img/aprox_normal.jpg)
+
+Veamos cómo resolver este problema:
+
+> 1.- Cálculo mediante la aproximación a la distribución normal. 
+
+Primero estandarizamos los datos utilizando el procedimiento calculando el **Z-score**. 
+Lo que implica estimar el estadístico  $\mu$ y la desviación estándar que en este caso son: 
+
+$$\mu=np=2500(.6)=1500$$ $$\sigma=\sqrt(2500(.6)(1-.6))=24.49$$
+Con estos datos la dsistribución normal queda caracterizada por: 
+$~N(\mu,\sigma)$
+$~N(1500,24.49)$
+Y el valor estandarizado **Z** será.
+
+ $$z=\frac{1520-1500}{24.49}=.8166, \approx.82$$ 
+Con este valor estandarizado **z** podemos ahora determinar la probabilidad correspondiente mediante la **tabla** de las probabilidades de la distribución normal.
+
+$P(Z\geq.82)=.7939$  la probabilidad correpondiente al  Z-score para .82 es .7939 ver **tabla A**. Entonces la **aproximaxición normal** a la probabilidad que buscamos para valores mayores o iguales a 1520,  es $P(X\gneq1520)=1-.7939=.2061$ 
+
+**IMPORTANTE:** Note el requerimiento en este problema se refire "al menos 1520", es decir buscamos el área bajo la curva de la distribución normal a la derecha de este punto 1520. 
+
+Los datos de las probabilidades disponibles por la **tabla de la distribución normal** contienen los valores **a la izquierda del valor estandarizado Z**. Por lo que es fundamenteal realizar la operación correspondiente: en este caso $1-P(Z\geq.82)$.
+
+Cuando la situación indica **"como máximo"** tenemos un escenario, $P(X\leq)$ En ese caso, es apropiado, considerar el área bajo la curva **a la izquierda** del umbral de referencia. 
+
+
+##### Solución utilizando software.  
+
+Aplicamos en este caso la función  `pbinom` con los siguientes argumentos **pbinom(k,n,p )**.
+
+Esta función nos permite estimar la probabilidad acumulada hasta el punto k, (lado izquierdo de la distribución). 
+
+Esto no es impedimento para resolver nuestro problema que plantea un escenario de **al menos k** $P(X\geq1520)$, (es decir buscamos los valores a la derecha de este umbral).  
+
+Por lo que solo debemos estimar **1-pbinom(1520,2500,.6)**
+
+La estimación de la probabilidad es **.2014**  note que hay una diferencia de  menos del $1\%$, (**0.0046614**) por lo que el resultado que proporciona el método de aproximación a la normal, es una  **"APROXIMACIÓN"** bastante certera.
+
+
+En conclusión la respuesta a la pregunta 
+
+###### ¿Cuál es la probabilidad de que al menos 1,520 individuos de la muestra esté de acuerdo con la afirmación?
+
+Es **20.14%**
+
+
+**Importante:** Utilizaremos esta aproximación normal a la distribución binomial solo cuando  $\mu\geq10, n(1-p)\geq10$ Ya que cunado **X** es grande, es aproximadamente $N(\mu, \sigma)$ o $N(np,\sqrt np(1-p))$
+
+
+
+#### Tablas de contingencia en el contexto de la probabilidad condicional.
+
+**Una tabla de contingencia es una representación ordenada de eventos entre dos  mas variables.** 
+
+Considere el siguiente recuento de graduados de una universidad Venezolana, en un año reciente, clasificados según el tipo de graduación y el sexo del graduado.
+
+
+![](/img/contingencia.jpg)
+
+(a) Si escoges un graduado al azar, ¿cuál es la probabilidad de que el graduado sea una mujer?
+
+Para resolver esta pregunta, unicamente es necesario visualizar los datos que cumplen con la proposición en la tabla y establecer la proporción:
+
+$$856/1626=52.6\%$$
+(b) Si la persona escogida se graduó en ingeniería, ¿cuál es la probabilidad de que sea una mujer?
+
+
+Nuevamente la información de la tabla nos permite determinar esa información con precisión, estimando el cociente:  $$30/74=40.5\%$$
+
+Note que esta proposición es consistente con la estimación de la **probabilidad condicional** P(B|A), para el suceso B="ser mujer" y el suceso A="se graduo de ingeniería" 
+
+$$P(B|A)=\frac{P(A \cap B)}{P(A)}$$
+Esto implica que mediante la tabla de contingencia podemos estimar la **probabilidad condicional P(B|A)** y de manera indirecta la probabilidad de dos sucesos independientes A y B. 
+
+$$P(A \cap B)=P(B|A)P(A)$$
+Note que si dos sucesos cualesquiera **A , B** son **independientes** la información de ocurrencia o no de uno de ellos, no aporta información a la probabilidad de ocurrencia del otro, es decir, son independientes si $P(B|A)=P(B)$
+
+Para estimar la **probabilidad** $P(A \cap B)$ mediante la **tabla de contingencia**, unicamente consideramos los valores correspondientes en el renglón  (mujer) y columna (ingeniería), esto es:   
+
+![](/img/contingencia2.jpg)
+$$P(A \cap B) =30/1626=1.8\%$$
+
+Probabilidad que corresponde al enfoque de **probabillidad condicional** $$P(A \cap B)=P(B|A)P(A)=(0.405)(0.045)=1.8\%$$ Donde **P(A)**=74/1626=0.045 
