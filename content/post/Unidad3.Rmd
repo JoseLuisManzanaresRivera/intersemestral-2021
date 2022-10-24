@@ -157,13 +157,12 @@ Considere el siguiente recuento de graduados de una universidad Venezolana, en u
 
 ![](/img/contingencia.jpg)
 
-
-a) Si escoges un graduado al azar, ¿cuál es la probabilidad de que el graduado sea una mujer?
+1.- Si escoges un graduado al azar, ¿cuál es la probabilidad de que el graduado sea una mujer?
 
 Para resolver esta pregunta, unicamente es necesario visualizar los datos que cumplen con la proposición en la tabla y establecer la proporción:
 
 $$856/1626=52.6\%$$
-(b) Si la persona escogida se graduó en ingeniería, ¿cuál es la probabilidad de que sea una mujer?
+2.- Si la persona escogida se graduó en ingeniería, ¿cuál es la probabilidad de que sea una mujer?
 
 
 Nuevamente la información de la tabla nos permite determinar esa información con precisión, estimando el cociente:  $$30/74=40.5\%$$
