@@ -80,12 +80,12 @@ Con este valor estandarizado <strong>z</strong> podemos ahora determinar la prob
 <h4>Tablas de contingencia y probabilidad condicional.</h4>
 <p><strong>Una tabla de contingencia es una representación numérica ordenada de eventos entre dos o más variables.</strong></p>
 <p>Considere el siguiente recuento de graduados de una universidad venezolana, en un año reciente, clasificados según el tipo de graduación y el sexo del graduado.</p>
-<p><img src="/img/contingencia.jpg" /></p>
+<p><img src="/img/contingenciax.jpg" /></p>
 <p>1.- Si escoges un graduado al azar, ¿cuál es la probabilidad de que el graduado sea una mujer?</p>
 <p>Para resolver esta pregunta, unicamente es necesario visualizar los datos que cumplen con la proposición en la tabla y establecer la proporción:</p>
-<p><span class="math display">\[856/1626=52.6\%\]</span>
-2.- Si la persona escogida se graduó de maestría, ¿cuál es la probabilidad de que sea una mujer?</p>
-<p>Nuevamente la información de la tabla nos permite determinar esa información con precisión, estimando el cociente: <span class="math display">\[30/74=40.5\%\]</span></p>
+<p><span class="math display">\[P(B)=856/1626=52.6\%\]</span>
+2.- Si la persona escogida se graduó de maestría, ¿cuál es la probabilidad de que sea una mujer? Esto es: <strong>¿P(B|A)?</strong></p>
+<p>Nuevamente la información de la tabla nos permite determinar esa información con precisión, estimando el cociente: <span class="math display">\[P(B|A)=30/74=40.5\%\]</span></p>
 <p>Note que esta proposición es consistente con la estimación de la <strong>probabilidad condicional</strong> P(B|A), para el suceso B=“ser mujer” y el suceso A=“se graduo de maestría”</p>
 <p><span class="math display">\[P(B|A)=\frac{P(A \cap B)}{P(A)}\]</span></p>
 <p>Siempre que <span class="math inline">\(P(A)\neq0\)</span> en caso contratrio el cociente: <span class="math inline">\(\frac{P(A \cap B)}{P(A)}\)</span> no estaría definido.</p>
@@ -93,15 +93,15 @@ Con este valor estandarizado <strong>z</strong> podemos ahora determinar la prob
 <p><span class="math display">\[P(A \cap B)=P(B|A)P(A)\]</span>
 Note que si dos sucesos cualesquiera <strong>A , B</strong> son <strong>independientes</strong> la información de ocurrencia o no de uno de ellos, no aporta información a la probabilidad de ocurrencia del otro, es decir, son independientes si <span class="math inline">\(P(B|A)=P(B)\)</span></p>
 <p>Para estimar la <strong>probabilidad</strong> <span class="math inline">\(P(A \cap B)\)</span> mediante la <strong>tabla de contingencia</strong>, únicamente consideramos los valores correspondientes en el renglón (mujer) y columna (maestría), esto es:</p>
-<p><img src="/img/contingencia2.jpg" />
+<p><img src="/img/contingencia2x.jpg" />
 <span class="math display">\[P(A \cap B) =30/1626=1.8\%\]</span></p>
-<p>Probabilidad que corresponde al enfoque de <strong>probabillidad condicional</strong> <span class="math display">\[P(A \cap B)=P(B|A)P(A)=(0.405)(0.045)=1.8\%\]</span> Donde <strong>P(A)</strong>=74/1626=0.045</p>
+<p>Probabilidad que corresponde al enfoque de <strong>probabillidad condicional</strong> <span class="math display">\[P(A \cap B)=P(B|A)P(A)=(0.405)(0.045)=1.8\%\]</span> Donde <strong>P(A)</strong>=74/1626=0.045 Donde P(A) es la probabilidad de “graduarse de mestria”</p>
 </div>
 </div>
 <div id="síntesis" class="section level3">
 <h3>Síntesis:</h3>
-<p>Las <strong>tablas de contingencia</strong> resultan de gran utilidad cunado enfrentamos un probelma de estimación de probabilidad condicional, porque nos permiten estimar probabilidades condicionales de manera directa aprovechando la información a partir de una simple inspección visual.</p>
-<p>De forma alternativa la <strong>regla de probabiliad condicional</strong> se puede aplicar para el cálculo de <strong>P(B|A)</strong>, siempre y cuando <span class="math inline">\(P(A)\neq0\)</span></p>
+<p>Las <strong>tablas de contingencia</strong> resultan de gran utilidad cuando enfrentamos un problema de estimación de probabilidad condicional, porque nos permiten estimar probabilidades condicionales de manera directa aprovechando la información a partir de una simple inspección visual.</p>
+<p><strong>IMPORTANTE:</strong> De forma alternativa la <strong>regla de probabiliad condicional</strong> se puede aplicar para el cálculo de <strong>P(B|A)</strong>, siempre y cuando <span class="math inline">\(P(A)\neq0\)</span></p>
 <p>Recuerde que dos suecesos se consideran <strong>INDEPENDIENTES</strong> si, <strong>P(B|A)=P(B)</strong></p>
 </div>
 <div id="ejercicio" class="section level3">
@@ -113,5 +113,39 @@ siguientes:</p>
 <p>2.- ¿Cuál es la probabilidad de que la persona escogida tenga una diplomatura, condicionada a que es un hombre</p>
 <p>3.-Utiliza la regla de la multiplicación para hallar la probabilidad de que la persona escogida tenga una diplomatura y sea un hombre <span class="math inline">\(P(B\cap A)\)</span>.</p>
 <p>Comprueba tu resultado hallando directamente esta probabilidad en la tabla de contingencia.</p>
+</div>
+<div id="inferencia-1" class="section level3">
+<h3>Inferencia:</h3>
+<p>Considere el siguiente espacio muestral para un evento aleatorio:</p>
+<p>28 40 28 33 20 31 29 27 17 21</p>
+<p>¿Qué valor toma el estadístico <span class="math inline">\(\bar{X}\)</span>?</p>
+<p>Haciendo el cálculo, vemos que <span class="math inline">\(\bar{X}=27.4\)</span></p>
+<p>El objetivo es <strong>inferir</strong>, el parámetro <span class="math inline">\(\mu\)</span> (valor de la media problacional) a partir del valor de la media muestral <span class="math inline">\(\bar{X}\)</span>.</p>
+<p>Si consideramos otra muestra aleatoria con n=10, tendremos una valor para <span class="math inline">\(\bar{X}\)</span> distinto.</p>
+<p>¿Qué sucede si consideramas una gran cantidad de muestras con tamaño 10 y estimamos su media?</p>
+<p><strong>La respuesta es que la distribución muestral del estadístico {X}, estará centrado en el valor de la media poblacional.</strong> Lo anterior ocurre dibido a la ley de los grandes números.</p>
+<p>Esta ley es una regularidad empírica que garantiza que si tomamos observaciones al azar de cualquier población de media finita <span class="math inline">\(\mu\)</span>. A medida que el número de observaciones obtenidas aumenta, la media <span class="math inline">\(\bar{X}\)</span> de los valores observados se acerca más y más a <span class="math inline">\(\mu\)</span>, <strong>la media poblacional.</strong></p>
+<p>La siguiente gráfica representa este comportamiento con los datos de la muestra de tamaño n=10, previamente indicados.</p>
+<p><img src="/img/ley.jpg" /></p>
+<p>Este comprtamiento esta explicado por:</p>
+</div>
+<div id="ley-de-los-grandes-números" class="section level3">
+<h3>Ley de los grandes números</h3>
+<p>La siguiente gráfica indica el comportamiento de la distribución muestral de <span class="math inline">\(\bar{X}\)</span> para 1000 muestras de tamaño 10 , (n=10).</p>
+<p><img src="/img/dmuestral.jpg" /></p>
+<p>Una importante propiedad es que esta distribución tiene como media el parámetro poblacional <span class="math inline">\(\mu\)</span>.</p>
+<p>La media del estadístico <span class="math inline">\(\bar{x}\)</span> siempre es igual a la media <span class="math inline">\(\mu\)</span> de la población.</p>
+<p>La distribución de <span class="math inline">\(\bar{X}\)</span> se halla centrada en <span class="math inline">\(\mu\)</span>. En un muestreo repetido, <span class="math inline">\(\bar{X}\)</span> tomará algunas veces valores mayores que el verdadero valor del parámetro µ y otras veces, valores menores.</p>
+<p>No existe una tendencia sistemática a <strong>subestimar</strong> o a <strong>sobrestimar</strong> el valor del parámetro.</p>
+<p>Esta es la noción <strong>de falta de sesgo</strong>, en el sentido de que <strong>no existe ningún “favoritismo”</strong>.</p>
+<p>Debido a que la media de <span class="math inline">\(\bar{X}\)</span> es igual a <span class="math inline">\(\mu\)</span>, decimos que <span class="math inline">\(\bar{X}\)</span> es un <strong>estimador insesgado</strong> del parámetro <span class="math inline">\(\mu\)</span></p>
+</div>
+<div id="definción-de-estimador-insesgado-para-la-media" class="section level3">
+<h3>Definción de estimador insesgado para la media:</h3>
+<p><strong>La propiedad del estadístico {X}, cuya distribución muestral esta centrada en el valor del parámetro <span class="math inline">\(\mu\)</span></strong></p>
+<p>En otras palabras, si tomamos muchas muestras de tamaño n, entonces, su <strong>media</strong> reflejará con precisión el valor poblacional y por lo tanto <strong>es un estimador insesgado</strong>.</p>
+<p>2.- . La distribución muestral <strong>tiene menos dispersión</strong> que las muestras individuales. De hecho si la dispersión de la población es <span class="math inline">\(\sigma\)</span>, la desviación estándar de la distribución muestral del estadistico <span class="math inline">\(\bar{X}\)</span> será:</p>
+<p><span class="math display">\[\frac{\sigma}{\sqrt(n)}\]</span></p>
+<p><img src="/img/stddev_muestral.jpg" /></p>
 </div>
 </div>

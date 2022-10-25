@@ -504,7 +504,24 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 ![](/img/mediaymediana2.jpg)
 ![](/img/mediaymediana.jpg)
 
+
+
+
+
 ![](/img/ejerciciodensidad.jpg)
+
+
+
+
+
+[pib](C:\Users\josel\Desktop\on\docencia\Semestre-2022-2\MDR\Evaluacion)
+
+
+
+
+```{r}
+pib<-read.csv("pib.csv")
+```
 
 
 
