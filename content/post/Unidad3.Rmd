@@ -148,11 +148,11 @@ Es **20.14%**
 
 
 
-#### Tablas de contingencia en el contexto de la probabilidad condicional.
+#### Tablas de contingencia y probabilidad condicional.
 
-**Una tabla de contingencia es una representación ordenada de eventos entre dos  mas variables.** 
+**Una tabla de contingencia es una representación ordenada de eventos entre dos o más variables.** 
 
-Considere el siguiente recuento de graduados de una universidad Venezolana, en un año reciente, clasificados según el tipo de graduación y el sexo del graduado.
+Considere el siguiente recuento de graduados de una universidad venezolana, en un año reciente, clasificados según el tipo de graduación y el sexo del graduado.
 
 
 ![](/img/contingencia.jpg)
@@ -162,22 +162,54 @@ Considere el siguiente recuento de graduados de una universidad Venezolana, en u
 Para resolver esta pregunta, unicamente es necesario visualizar los datos que cumplen con la proposición en la tabla y establecer la proporción:
 
 $$856/1626=52.6\%$$
-2.- Si la persona escogida se graduó en ingeniería, ¿cuál es la probabilidad de que sea una mujer?
+2.- Si la persona escogida se graduó de maestría, ¿cuál es la probabilidad de que sea una mujer?
 
 
 Nuevamente la información de la tabla nos permite determinar esa información con precisión, estimando el cociente:  $$30/74=40.5\%$$
 
-Note que esta proposición es consistente con la estimación de la **probabilidad condicional** P(B|A), para el suceso B="ser mujer" y el suceso A="se graduo de ingeniería" 
+Note que esta proposición es consistente con la estimación de la **probabilidad condicional** P(B|A), para el suceso B="ser mujer" y el suceso A="se graduo de maestría" 
 
 $$P(B|A)=\frac{P(A \cap B)}{P(A)}$$
+
+Siempre que $P(A)\neq0$ en caso contratrio el cociente: $\frac{P(A \cap B)}{P(A)}$ no estaría definido.
+
 Esto implica que mediante la tabla de contingencia podemos estimar la **probabilidad condicional P(B|A)** y de manera indirecta la probabilidad de dos sucesos independientes A y B. 
 
 $$P(A \cap B)=P(B|A)P(A)$$
 Note que si dos sucesos cualesquiera **A , B** son **independientes** la información de ocurrencia o no de uno de ellos, no aporta información a la probabilidad de ocurrencia del otro, es decir, son independientes si $P(B|A)=P(B)$
 
-Para estimar la **probabilidad** $P(A \cap B)$ mediante la **tabla de contingencia**, unicamente consideramos los valores correspondientes en el renglón  (mujer) y columna (ingeniería), esto es:   
+Para estimar la **probabilidad** $P(A \cap B)$ mediante la **tabla de contingencia**, únicamente consideramos los valores correspondientes en el renglón  (mujer) y columna (maestría), esto es:   
 
 ![](/img/contingencia2.jpg)
 $$P(A \cap B) =30/1626=1.8\%$$
 
 Probabilidad que corresponde al enfoque de **probabillidad condicional** $$P(A \cap B)=P(B|A)P(A)=(0.405)(0.045)=1.8\%$$ Donde **P(A)**=74/1626=0.045 
+
+
+### Síntesis:
+
+Las **tablas de contingencia** resultan de gran utilidad cunado enfrentamos un probelma de estimación de probabilidad condicional, porque nos permiten estimar probabilidades condicionales de manera directa aprovechando la información a partir de una simple inspección visual. 
+
+De forma alternativa la **regla de probabiliad condicional** se puede aplicar para el cálculo de **P(B|A)**, siempre y cuando $P(A)\neq0$
+
+Recuerde que dos suecesos se consideran **INDEPENDIENTES** si, **P(B|A)=P(B)** 
+
+
+### Ejercicio
+
+Graduados universitarios. La tabla siguiente proporciona datos sobre los graduados de una universidad venezolana. Utilízalos para responder a las preguntas
+siguientes:
+
+
+![](/img/contingencia3.jpg)
+
+
+1.-Si escoges un graduado al azar, ¿cuál es la probabilidad de que sea un hombre?
+
+
+2.- ¿Cuál es la probabilidad de que la persona escogida tenga una diplomatura, condicionada a que es un hombre
+
+
+3.-Utiliza la regla de la multiplicación para hallar la probabilidad de que la persona escogida tenga una diplomatura y sea un hombre $P(B\cap A)$. 
+
+Comprueba tu resultado hallando directamente esta probabilidad en la tabla de contingencia.
