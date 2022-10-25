@@ -317,23 +317,11 @@ Entonces,</p>
 <p><a href="https://drive.google.com/file/d/1p0a4O85-cIezx5CllBGSkYAA4jCBW4O-/view?usp=sharing">indicadores_desarrollo</a></p>
 <p>Código para leer el archivo en R.</p>
 <pre class="r"><code>library(tidyverse)
-library(gapminder)
 
-datos&lt;-gapminder%&gt;%filter(country==&quot;Cuba&quot;)
-write.csv(datos,&quot;indicadores_desarrollo_cuba.csv&quot;)
-
+indicadores&lt;-read.csv(&quot;indicadores_desarrollo_cuba.csv&quot;)
 
 getwd()</code></pre>
 <pre><code>## [1] &quot;C:/Users/josel/Desktop/on/web/MDR-intersemestral-2021/content/post&quot;</code></pre>
 <pre class="r"><code>pib&lt;-read.csv(&quot;pib.csv&quot;)
-
-poverty&lt;-readRDS(&quot;pobreza_país.rds&quot;)
-summary(poverty)</code></pre>
-<pre><code>##      país            tasa_pobreza  
-##  Length:51          Min.   : 0.10  
-##  Class :character   1st Qu.: 0.65  
-##  Mode  :character   Median : 4.10  
-##                     Mean   :15.42  
-##                     3rd Qu.:22.80  
-##                     Max.   :82.50</code></pre>
+poverty&lt;-readRDS(&quot;pobreza_país.rds&quot;)</code></pre>
 </div>

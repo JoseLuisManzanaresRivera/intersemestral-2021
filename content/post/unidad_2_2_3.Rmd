@@ -523,7 +523,7 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 
 Código para leer el archivo en R.
 
-```{r}
+```{r, include=FALSE}
 
 library(tidyverse)
 
