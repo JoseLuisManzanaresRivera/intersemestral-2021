@@ -511,14 +511,14 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 ![](/img/ejerciciodensidad.jpg)
 
 
-
+## Bases de datos para exámen
 
 
 [pib](https://drive.google.com/file/d/1bBUoyINheCfTfRCTIDpP7POHwKb34Ect/view?usp=sharing)
 
 
 
-
+Código para leer el archivo en R.
 ```{r}
 pib<-read.csv("pib.csv")
 ```
