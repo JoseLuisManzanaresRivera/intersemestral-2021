@@ -25,19 +25,21 @@ Comenzaremos esta sesión con la determinación de los parámetros **media** y *
 
 
 
-Si un recuento **X** tiene una distribución binomial con un número de observaciones **n** y una probabilidad de éxito **p**, la media y la desviación
-estándar de **X** son:
+Si un recuento **X** tiene una distribución binomial con un número de observaciones **n** y una probabilidad de éxito **p**, **la media** y la **desviación 
+estándar** de **X** son:
 
 $$\mu=np$$
 $$\sigma=\sqrt{np(1-p)}$$
 **Ejemplo:** 
 Sea una situación binomial con un espacio muestral con un total de  10 elementos, (n=10) y una probabilidad de ocurrencia del $10\%$ (p=0.1).
 
-Entonces, utilizando el algoritmo anterior para la estimación del  valor de la  media $\mu$ y la desviación estándar  $\sigma$ para esta distribución bimomial, tenemos que $\mu=np=10(.10)=1$, $\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487$
+Entonces, utilizando el algoritmo anterior para la estimación del  valor de la  media $\mu$ y la desviación estándar  $\sigma$ para esta distribución binomial, tenemos que $$\mu=np=10(.10)=1$$, $$\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487$$
 
 El histograma siguiente muestra las probabilidades (de acuerdo a la distribución binomial) para cada uno de los posibles valores de **X** (éxitos).
 
-Como es posible apreciar el **histograma** mide en el eje de las **ordenadas al orígen** (vertical), las probabilidades estimadas y en el **eje de las abscisas** (horizintal), el recuento de éxitos (1..n=10). Note ademas que la linea punteada corresponde con el valor de la media de la dsitribución binomial $\mu=1$
+Como es posible apreciar el **histograma** mide en el eje de las **ordenadas al orígen** (vertical), las **probabilidades** estimadas y en el **eje de las abscisas** (horizontal), el recuento de **éxitos**, desde 1 hasta 10, (1...n=10). 
+
+La línea punteada corresponde con el valor de la media de la dsitribución binomial $\mu=1$
 
 ```{r, message=FALSE, echo=FALSE}
 library(tidyverse)
@@ -79,9 +81,9 @@ ggplot(probabilities,aes(X, p))+
 ```
 
 
-Estimar de forma manual las probabilidades de la distribución de una situación binomial, puede resultar no práctico cuando se trata de muestras de mayor tamaño, por ejemplo considere la siguiente situación binomial:
+Cuando se trata de muestras de mayor tamaño, estimar de forma manual la distribución de probabilidades para una situación binomial, puede resultar poco práctico, por ejemplo considere la siguiente situación binomial:
 
-#### Ejemplo 1:  Estimación de la  aproximación binomial.
+#### Ejemplo 1:  Estimación de la  aproximación normal a la distribución binomial.
 
 ¿Está cambiando la actitud de los jóvenes respecto a la participación en los procesos electorales? Las encuestas ponen de manifiesto que a los jóvenes cada vez les gusta menos salir a votar. Una encuesta reciente planteada a nivel nacional, en Colombia, preguntó a una muestra de 2,500 adultos jóvenes si estaban de acuerdo o no con **“Me gusta la democracia, pero ir a votar a menudo es frustrante, por que hay manipulación del voto”.**
 
@@ -101,7 +103,7 @@ Para hallar la probabilidad de que **al menos 1,520** individuos de la muestra o
 
 Veamos cómo resolver este problema:
 
-> 1.- Cálculo mediante la aproximación a la distribución normal. 
+> 1.- Cálculo mediante la aproximación normal a la distribución binomial. 
 
 Primero estandarizamos los datos utilizando el procedimiento calculando el **Z-score**. 
 Lo que implica estimar el estadístico  $\mu$ y la desviación estándar que en este caso son: 
@@ -121,7 +123,7 @@ $P(Z\geq.82)=.7939$  la probabilidad correpondiente al  Z-score para .82 es .793
 
 Los datos de las probabilidades disponibles por la **tabla de la distribución normal** contienen los valores **a la izquierda del valor estandarizado Z**. Por lo que es fundamenteal realizar la operación correspondiente: en este caso $1-P(Z\geq.82)$.
 
-Cuando la situación indica **"como máximo"** tenemos un escenario, $P(X\leq)$ En ese caso, es apropiado, considerar el área bajo la curva **a la izquierda** del umbral de referencia. 
+Cuando la situación indica **"como máximo"** tenemos un escenario, $P(X \leq k)$ En ese caso, es apropiado, considerar el área bajo la curva **a la izquierda** del umbral de referencia. 
 
 
 ##### Solución utilizando software.  
@@ -134,7 +136,7 @@ Esto no es impedimento para resolver nuestro problema que plantea un escenario d
 
 Por lo que solo debemos estimar **1-pbinom(1520,2500,.6)**
 
-La estimación de la probabilidad es **.2014**  note que hay una diferencia de  menos del $1\%$, (**0.0046614**) por lo que el resultado que proporciona el método de aproximación a la normal, es una  **"APROXIMACIÓN"** bastante certera.
+La estimación de la probabilidad es **.2014**  note que hay una diferencia de  menos del $1\%$, (**0.0046614**) por lo que el resultado que proporciona el método de aproximación normal, es una  **"APROXIMACIÓN"** bastante certera.
 
 
 En conclusión la respuesta a la pregunta 
@@ -144,13 +146,13 @@ En conclusión la respuesta a la pregunta
 Es **20.14%**
 
 
-**Importante:** Utilizaremos esta aproximación normal a la distribución binomial solo cuando  $\mu\geq10, n(1-p)\geq10$ Ya que cunado **X** es grande, es aproximadamente $N(\mu, \sigma)$ o $N(np,\sqrt np(1-p))$
+**Importante:** Utilizaremos esta aproximación normal a la distribución binomial sólo cuando  $\mu\geq10, n(1-p)\geq10$ Ya que cuando **X** es grande, es aproximadamente normal, es decir$N(\mu, \sigma)$ o en términos de la estimación de la distribución binomial:  $N(np,\sqrt np(1-p))$
 
 
 
 #### Tablas de contingencia y probabilidad condicional.
 
-**Una tabla de contingencia es una representación ordenada de eventos entre dos o más variables.** 
+**Una tabla de contingencia es una representación numérica ordenada de eventos entre dos o más variables.** 
 
 Considere el siguiente recuento de graduados de una universidad venezolana, en un año reciente, clasificados según el tipo de graduación y el sexo del graduado.
 

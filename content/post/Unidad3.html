@@ -19,20 +19,21 @@ tags: ["Inferencia"]
 <div id="apróximación-normal-a-distribuciones-binomiales." class="section level4">
 <h4>Apróximación normal a distribuciones binomiales.</h4>
 <p>Comenzaremos esta sesión con la determinación de los parámetros <strong>media</strong> y <strong>desviación estándar</strong> para una distribución binomial.</p>
-<p>Si un recuento <strong>X</strong> tiene una distribución binomial con un número de observaciones <strong>n</strong> y una probabilidad de éxito <strong>p</strong>, la media y la desviación
-estándar de <strong>X</strong> son:</p>
+<p>Si un recuento <strong>X</strong> tiene una distribución binomial con un número de observaciones <strong>n</strong> y una probabilidad de éxito <strong>p</strong>, <strong>la media</strong> y la <strong>desviación
+estándar</strong> de <strong>X</strong> son:</p>
 <p><span class="math display">\[\mu=np\]</span>
 <span class="math display">\[\sigma=\sqrt{np(1-p)}\]</span>
 <strong>Ejemplo:</strong>
 Sea una situación binomial con un espacio muestral con un total de 10 elementos, (n=10) y una probabilidad de ocurrencia del <span class="math inline">\(10\%\)</span> (p=0.1).</p>
-<p>Entonces, utilizando el algoritmo anterior para la estimación del valor de la media <span class="math inline">\(\mu\)</span> y la desviación estándar <span class="math inline">\(\sigma\)</span> para esta distribución bimomial, tenemos que <span class="math inline">\(\mu=np=10(.10)=1\)</span>, <span class="math inline">\(\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487\)</span></p>
+<p>Entonces, utilizando el algoritmo anterior para la estimación del valor de la media <span class="math inline">\(\mu\)</span> y la desviación estándar <span class="math inline">\(\sigma\)</span> para esta distribución binomial, tenemos que <span class="math display">\[\mu=np=10(.10)=1\]</span>, <span class="math display">\[\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487\]</span></p>
 <p>El histograma siguiente muestra las probabilidades (de acuerdo a la distribución binomial) para cada uno de los posibles valores de <strong>X</strong> (éxitos).</p>
-<p>Como es posible apreciar el <strong>histograma</strong> mide en el eje de las <strong>ordenadas al orígen</strong> (vertical), las probabilidades estimadas y en el <strong>eje de las abscisas</strong> (horizintal), el recuento de éxitos (1..n=10). Note ademas que la linea punteada corresponde con el valor de la media de la dsitribución binomial <span class="math inline">\(\mu=1\)</span></p>
+<p>Como es posible apreciar el <strong>histograma</strong> mide en el eje de las <strong>ordenadas al orígen</strong> (vertical), las <strong>probabilidades</strong> estimadas y en el <strong>eje de las abscisas</strong> (horizontal), el recuento de <strong>éxitos</strong>, desde 1 hasta 10, (1…n=10).</p>
+<p>La línea punteada corresponde con el valor de la media de la dsitribución binomial <span class="math inline">\(\mu=1\)</span></p>
 <p><img src="/post/Unidad3_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>Estimar de forma manual las probabilidades de la distribución de una situación binomial, puede resultar no práctico cuando se trata de muestras de mayor tamaño, por ejemplo considere la siguiente situación binomial:</p>
+<p>Cuando se trata de muestras de mayor tamaño, estimar de forma manual la distribución de probabilidades para una situación binomial, puede resultar poco práctico, por ejemplo considere la siguiente situación binomial:</p>
 </div>
-<div id="ejemplo-1-estimación-de-la-aproximación-binomial." class="section level4">
-<h4>Ejemplo 1: Estimación de la aproximación binomial.</h4>
+<div id="ejemplo-1-estimación-de-la-aproximación-normal-a-la-distribución-binomial." class="section level4">
+<h4>Ejemplo 1: Estimación de la aproximación normal a la distribución binomial.</h4>
 <p>¿Está cambiando la actitud de los jóvenes respecto a la participación en los procesos electorales? Las encuestas ponen de manifiesto que a los jóvenes cada vez les gusta menos salir a votar. Una encuesta reciente planteada a nivel nacional, en Colombia, preguntó a una muestra de 2,500 adultos jóvenes si estaban de acuerdo o no con <strong>“Me gusta la democracia, pero ir a votar a menudo es frustrante, por que hay manipulación del voto”.</strong></p>
 <p>La población sobre la que la encuesta quiere sacar conclusiones es la de todos los residentes en Colombia de entre 18 y 30 años. Supón que el 60% de todos los adultos de Colombia estuviese de acuerdo con la afirmación anterior.</p>
 <div id="cuál-es-la-probabilidad-de-que-al-menos-1520-individuos-de-la-muestra-esté-de-acuerdo-con-la-afirmación" class="section level5">
@@ -44,7 +45,7 @@ tiene una distribución binomial con <strong>n = 2,500</strong> y <strong>p = 0.
 <p><img src="/img/aprox_normal.jpg" /></p>
 <p>Veamos cómo resolver este problema:</p>
 <blockquote>
-<p>1.- Cálculo mediante la aproximación a la distribución normal.</p>
+<p>1.- Cálculo mediante la aproximación normal a la distribución binomial.</p>
 </blockquote>
 <p>Primero estandarizamos los datos utilizando el procedimiento calculando el <strong>Z-score</strong>.
 Lo que implica estimar el estadístico <span class="math inline">\(\mu\)</span> y la desviación estándar que en este caso son:</p>
@@ -58,7 +59,7 @@ Con este valor estandarizado <strong>z</strong> podemos ahora determinar la prob
 <p><span class="math inline">\(P(Z\geq.82)=.7939\)</span> la probabilidad correpondiente al Z-score para .82 es .7939 ver <strong>tabla A</strong>. Entonces la <strong>aproximaxición normal</strong> a la probabilidad que buscamos para valores mayores o iguales a 1520, es <span class="math inline">\(P(X\gneq1520)=1-.7939=.2061\)</span></p>
 <p><strong>IMPORTANTE:</strong> Note el requerimiento en este problema se refire “al menos 1520”, es decir buscamos el área bajo la curva de la distribución normal a la derecha de este punto 1520.</p>
 <p>Los datos de las probabilidades disponibles por la <strong>tabla de la distribución normal</strong> contienen los valores <strong>a la izquierda del valor estandarizado Z</strong>. Por lo que es fundamenteal realizar la operación correspondiente: en este caso <span class="math inline">\(1-P(Z\geq.82)\)</span>.</p>
-<p>Cuando la situación indica <strong>“como máximo”</strong> tenemos un escenario, <span class="math inline">\(P(X\leq)\)</span> En ese caso, es apropiado, considerar el área bajo la curva <strong>a la izquierda</strong> del umbral de referencia.</p>
+<p>Cuando la situación indica <strong>“como máximo”</strong> tenemos un escenario, <span class="math inline">\(P(X \leq k)\)</span> En ese caso, es apropiado, considerar el área bajo la curva <strong>a la izquierda</strong> del umbral de referencia.</p>
 </div>
 <div id="solución-utilizando-software." class="section level5">
 <h5>Solución utilizando software.</h5>
@@ -66,18 +67,18 @@ Con este valor estandarizado <strong>z</strong> podemos ahora determinar la prob
 <p>Esta función nos permite estimar la probabilidad acumulada hasta el punto k, (lado izquierdo de la distribución).</p>
 <p>Esto no es impedimento para resolver nuestro problema que plantea un escenario de <strong>al menos k</strong> <span class="math inline">\(P(X\geq1520)\)</span>, (es decir buscamos los valores a la derecha de este umbral).</p>
 <p>Por lo que solo debemos estimar <strong>1-pbinom(1520,2500,.6)</strong></p>
-<p>La estimación de la probabilidad es <strong>.2014</strong> note que hay una diferencia de menos del <span class="math inline">\(1\%\)</span>, (<strong>0.0046614</strong>) por lo que el resultado que proporciona el método de aproximación a la normal, es una <strong>“APROXIMACIÓN”</strong> bastante certera.</p>
+<p>La estimación de la probabilidad es <strong>.2014</strong> note que hay una diferencia de menos del <span class="math inline">\(1\%\)</span>, (<strong>0.0046614</strong>) por lo que el resultado que proporciona el método de aproximación normal, es una <strong>“APROXIMACIÓN”</strong> bastante certera.</p>
 <p>En conclusión la respuesta a la pregunta</p>
 <div id="cuál-es-la-probabilidad-de-que-al-menos-1520-individuos-de-la-muestra-esté-de-acuerdo-con-la-afirmación-1" class="section level6">
 <h6>¿Cuál es la probabilidad de que al menos 1,520 individuos de la muestra esté de acuerdo con la afirmación?</h6>
 <p>Es <strong>20.14%</strong></p>
-<p><strong>Importante:</strong> Utilizaremos esta aproximación normal a la distribución binomial solo cuando <span class="math inline">\(\mu\geq10, n(1-p)\geq10\)</span> Ya que cunado <strong>X</strong> es grande, es aproximadamente <span class="math inline">\(N(\mu, \sigma)\)</span> o <span class="math inline">\(N(np,\sqrt np(1-p))\)</span></p>
+<p><strong>Importante:</strong> Utilizaremos esta aproximación normal a la distribución binomial sólo cuando <span class="math inline">\(\mu\geq10, n(1-p)\geq10\)</span> Ya que cuando <strong>X</strong> es grande, es aproximadamente normal, es decir<span class="math inline">\(N(\mu, \sigma)\)</span> o en términos de la estimación de la distribución binomial: <span class="math inline">\(N(np,\sqrt np(1-p))\)</span></p>
 </div>
 </div>
 </div>
 <div id="tablas-de-contingencia-y-probabilidad-condicional." class="section level4">
 <h4>Tablas de contingencia y probabilidad condicional.</h4>
-<p><strong>Una tabla de contingencia es una representación ordenada de eventos entre dos o más variables.</strong></p>
+<p><strong>Una tabla de contingencia es una representación numérica ordenada de eventos entre dos o más variables.</strong></p>
 <p>Considere el siguiente recuento de graduados de una universidad venezolana, en un año reciente, clasificados según el tipo de graduación y el sexo del graduado.</p>
 <p><img src="/img/contingencia.jpg" /></p>
 <p>1.- Si escoges un graduado al azar, ¿cuál es la probabilidad de que el graduado sea una mujer?</p>
