@@ -524,10 +524,6 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 Código para leer el archivo en R.
 
 
-```{r, echo=FALSE}
-getwd()
-```
-
 
 ```{r, message=FALSE, warning=FALSE}
 
@@ -539,6 +535,7 @@ indicadores<-read.csv("indicadores_desarrollo_cuba.csv")
 pib<-read.csv("pib.csv")
 
 poverty<-readRDS("pobreza_país.rds")
+
 
 ```
 
