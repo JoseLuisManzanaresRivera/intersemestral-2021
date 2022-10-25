@@ -516,7 +516,7 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 
 [pib](https://drive.google.com/file/d/1bBUoyINheCfTfRCTIDpP7POHwKb34Ect/view?usp=sharing)
 
-[pobreza](https://drive.google.com/file/d/1bBUoyINheCfTfRCTIDpP7POHwKb34Ect/view?usp=sharing)
+[pobreza](https://drive.google.com/file/d/1DZhUL3QLrSeDFOK2U_TB6m_TrvqGxgFV/view?usp=sharing)
 
 
 [indicadores_desarrollo](https://drive.google.com/file/d/1p0a4O85-cIezx5CllBGSkYAA4jCBW4O-/view?usp=sharing)
@@ -530,8 +530,12 @@ library(tidyverse)
 indicadores<-read.csv("indicadores_desarrollo_cuba.csv")
 
 getwd()
+
 pib<-read.csv("pib.csv")
+
 poverty<-readRDS("pobreza_país.rds")
+
+
 
 
 ```
