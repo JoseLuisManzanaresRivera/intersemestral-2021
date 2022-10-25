@@ -525,7 +525,6 @@ Código para leer el archivo en R.
 
 
 ```{r, echo=FALSE}
-
 getwd()
 ```
 
