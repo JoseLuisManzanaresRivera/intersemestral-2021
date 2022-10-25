@@ -523,11 +523,17 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 
 Código para leer el archivo en R.
 
+
+```{r, echo=FALSE}
+
+getwd()
+```
+
+
 ```{r, message=FALSE, warning=FALSE}
 
 library(tidyverse)
 
-getwd()
 
 indicadores<-read.csv("indicadores_desarrollo_cuba.csv")
 
