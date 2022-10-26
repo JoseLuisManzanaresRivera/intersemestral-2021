@@ -278,7 +278,9 @@ En otras palabras, si tomamos muchas muestras de tamaño **n**, entonces, su **m
 
 
 
-2.- . La distribución muestral **tiene  menos dispersión** que las muestras individuales.  De hecho si la dispersión de la población es $\sigma$, la desviación estándar de la distribución muestral del estadistico $\bar{X}$ será: 
+2.- . La distribución muestral **tiene  menos dispersión** que las muestras individuales. 
+
+De hecho si la dispersión de la población es $\sigma$, la **desviación estándar** de la distribución muestral del estadístico $\bar{X}$ será: 
 
 $$\frac{\sigma}{\sqrt(n)}$$
 
@@ -304,15 +306,35 @@ La siguiente figura muestra la operación del **teorema de límite central** sob
 
 **Importante:** El tamaño **n** que debe tener la muestra para que \bar{X} sea aproximadamente normal depende de la distribución de la muestra particular, por lo que, es un rasgo sujeto a validación empírica.
 
+
+### El teorema de límie central nos permite realizar calculos de probabilidad incluso cuando la distribución de la población no es normal.
+
+
 #### Ejercicio 2
 
-El tiempo X que un autobús en la ruta central de transporte publico de Rio de janeiro tarda en llegar a su destino,  esta determinado por una distribución exponencial. El tiempo medio es $\mu$ = 1 hora y la desviación estándar es $\sigma$ = 1 hora. 
+El tiempo X que un autobús en la ruta central de transporte público de Rio de Janeiro tarda en llegar a su destino,  esta determinado por una distribución exponencial. El tiempo medio es $\mu$ = 1 hora y la desviación estándar es $\sigma$ = 1 hora. 
 
-La dirección de transporte público de la ciudad  hace una insepcción para medir la eficiencia de la ruta central tomando una muestra de  70 trayectos. 
+La dirección de transporte público de la ciudad  hace una inspección para medir la eficiencia de la ruta central tomando una muestra de  70 trayectos. 
 
+Considere que con base en el **teorema del límite central**  la media muestral $\mu$ del tiempo (en horas) necesario para recorrer la ruta en una muestra de 70 unidades tiene aproximadamente una distribución normal.
 
 1.- Determine el valor de la media muestral y la desviación estándar.
 
-2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto  sea superior a 50 minutos?  Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para $P(X\geq.83)$ por que 50/60=.83.
+2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto sea superior a 50 minutos?  Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para $P(X\geq.83)$ por que 50/60=.83.
 
+*Note puede usar tablas o función `pnorm` (k,$\mu$, $\sigma$) en R, la cual permite estimar la probabilidad acumulada hasta el umbral k. indicado (área a la izquierda de la distribución normal).*
+
+
+
+```{r}
+
+5.9/sqrt(50)
+
+1-pnorm(.83,1,.12)
+(.83-1)/.12
+
+1-pnorm(21,18.6,5.9)
+1-0.0793
+
+```
 

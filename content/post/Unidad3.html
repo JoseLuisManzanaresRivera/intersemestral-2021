@@ -148,7 +148,8 @@ siguientes:</p>
 <h3>Definción de estimador insesgado para la media:</h3>
 <p><strong>La propiedad del estadístico {X}, cuya distribución muestral esta centrada en el valor del parámetro <span class="math inline">\(\mu\)</span></strong></p>
 <p>En otras palabras, si tomamos muchas muestras de tamaño <strong>n</strong>, entonces, su <strong>media</strong> reflejará con precisión el valor poblacional y por lo tanto <strong>es un estimador insesgado</strong>.</p>
-<p>2.- . La distribución muestral <strong>tiene menos dispersión</strong> que las muestras individuales. De hecho si la dispersión de la población es <span class="math inline">\(\sigma\)</span>, la desviación estándar de la distribución muestral del estadistico <span class="math inline">\(\bar{X}\)</span> será:</p>
+<p>2.- . La distribución muestral <strong>tiene menos dispersión</strong> que las muestras individuales.</p>
+<p>De hecho si la dispersión de la población es <span class="math inline">\(\sigma\)</span>, la <strong>desviación estándar</strong> de la distribución muestral del estadístico <span class="math inline">\(\bar{X}\)</span> será:</p>
 <p><span class="math display">\[\frac{\sigma}{\sqrt(n)}\]</span></p>
 <p><img src="/img/stddev_muestral.jpg" /></p>
 <p>En cuanto a <strong>la forma de la distribución</strong> es preciso indicar que si la distribución poblacional es <strong>normal</strong>, también lo es la <strong>distribución de la media muestral</strong>.</p>
@@ -162,12 +163,27 @@ La siguiente figura muestra la operación del <strong>teorema de límite central
 <p><img src="/img/limitec.jpg" /></p>
 <p><strong>Importante:</strong> El tamaño <strong>n</strong> que debe tener la muestra para que {X} sea aproximadamente normal depende de la distribución de la muestra particular, por lo que, es un rasgo sujeto a validación empírica.</p>
 </div>
+</div>
+<div id="el-teorema-de-límie-central-nos-permite-realizar-calculos-de-probabilidad-incluso-cuando-la-distribución-de-la-población-no-es-normal." class="section level3">
+<h3>El teorema de límie central nos permite realizar calculos de probabilidad incluso cuando la distribución de la población no es normal.</h3>
 <div id="ejercicio-2" class="section level4">
 <h4>Ejercicio 2</h4>
-<p>El tiempo X que un autobús en la ruta central de transporte publico de Rio de janeiro tarda en llegar a su destino, esta determinado por una distribución exponencial. El tiempo medio es <span class="math inline">\(\mu\)</span> = 1 hora y la desviación estándar es <span class="math inline">\(\sigma\)</span> = 1 hora.</p>
-<p>La dirección de transporte público de la ciudad hace una insepcción para medir la eficiencia de la ruta central tomando una muestra de 70 trayectos.</p>
+<p>El tiempo X que un autobús en la ruta central de transporte público de Rio de Janeiro tarda en llegar a su destino, esta determinado por una distribución exponencial. El tiempo medio es <span class="math inline">\(\mu\)</span> = 1 hora y la desviación estándar es <span class="math inline">\(\sigma\)</span> = 1 hora.</p>
+<p>La dirección de transporte público de la ciudad hace una inspección para medir la eficiencia de la ruta central tomando una muestra de 70 trayectos.</p>
+<p>Considere que con base en el <strong>teorema del límite central</strong> la media muestral <span class="math inline">\(\mu\)</span> del tiempo (en horas) necesario para recorrer la ruta en una muestra de 70 unidades tiene aproximadamente una distribución normal.</p>
 <p>1.- Determine el valor de la media muestral y la desviación estándar.</p>
 <p>2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto sea superior a 50 minutos? Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para <span class="math inline">\(P(X\geq.83)\)</span> por que 50/60=.83.</p>
+<p><em>Note puede usar tablas o función <code>pnorm</code> (k,<span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>) en R, la cual permite estimar la probabilidad acumulada hasta el umbral k. indicado (área a la izquierda de la distribución normal).</em></p>
+<pre class="r"><code>5.9/sqrt(50)</code></pre>
+<pre><code>## [1] 0.834386</code></pre>
+<pre class="r"><code>1-pnorm(.83,1,.12)</code></pre>
+<pre><code>## [1] 0.9217098</code></pre>
+<pre class="r"><code>(.83-1)/.12</code></pre>
+<pre><code>## [1] -1.416667</code></pre>
+<pre class="r"><code>1-pnorm(21,18.6,5.9)</code></pre>
+<pre><code>## [1] 0.3420849</code></pre>
+<pre class="r"><code>1-0.0793</code></pre>
+<pre><code>## [1] 0.9207</code></pre>
 </div>
 </div>
 </div>
