@@ -10,6 +10,13 @@ tags: ["Inferencia"]
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
+## Objetivos
+Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios propabilisticos. 
+Inicaremos en esta sesión la tematica sobre inferencia.
+
+### Metas de aprendizaje.
+
+El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el teorema de límite central para la determinación de probabilidades.
 
 # Inferencia
 
@@ -349,3 +356,12 @@ Las notas de los estudiantes en el exámen de ingreso a la Universidad Nacional 
 (b) ¿Cuáles son los valores de la media y la desviación estándar de la media muestral $\bar{X}$ de las notas de 50 estudiantes?
 
 (c) ¿Cuál es la probabilidad de que la nota media $\mu$ de estos estudiantes sea igual o mayor que 19?
+
+
+
+```{r}
+1-pnorm(18,17.3,5.8)
+1-pnorm(19,17.3,0.8202439)
+5.8/sqrt(50)
+```
+
