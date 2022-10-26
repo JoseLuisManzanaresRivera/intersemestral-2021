@@ -9,6 +9,15 @@ tags: ["Inferencia"]
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
+<div id="objetivos" class="section level2">
+<h2>Objetivos</h2>
+<p>Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios propabilisticos.
+Inicaremos en esta sesión la tematica sobre inferencia.</p>
+<div id="metas-de-aprendizaje." class="section level3">
+<h3>Metas de aprendizaje.</h3>
+<p>El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el teorema de límite central para la determinación de probabilidades.</p>
+</div>
+</div>
 <div id="inferencia" class="section level1">
 <h1>Inferencia</h1>
 <div id="distribución-normal-distribuciones-de-muestreo-y-prueba-de-hipótesis." class="section level3">
@@ -192,5 +201,11 @@ de invertir en bolsa.</p>
 <li><p>¿Cuáles son los valores de la media y la desviación estándar de la media muestral <span class="math inline">\(\bar{X}\)</span> de las notas de 50 estudiantes?</p></li>
 <li><p>¿Cuál es la probabilidad de que la nota media <span class="math inline">\(\mu\)</span> de estos estudiantes sea igual o mayor que 19?</p></li>
 </ol>
+<pre class="r"><code>1-pnorm(18,17.3,5.8)</code></pre>
+<pre><code>## [1] 0.4519684</code></pre>
+<pre class="r"><code>1-pnorm(19,17.3,0.8202439)</code></pre>
+<pre><code>## [1] 0.01910689</code></pre>
+<pre class="r"><code>5.8/sqrt(50)</code></pre>
+<pre><code>## [1] 0.8202439</code></pre>
 </div>
 </div>
