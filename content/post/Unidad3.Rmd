@@ -283,3 +283,36 @@ En otras palabras, si tomamos muchas muestras de tamaño **n**, entonces, su **m
 $$\frac{\sigma}{\sqrt(n)}$$
 
 ![](/img/stddev_muestral.jpg)
+
+
+En cuanto a **la forma de la distribución** es preciso indicar que si la distribución poblacional es **normal**, también lo es la **distribución de la media muestral**.
+
+**¿Qué ocurre cuando la distribución poblacional no es normal?** 
+
+A medida que aumenta el tamaño de la muestra, la distribución de $\bar{X}$ cambia de forma: se parece menos a la distribución de la población muestreada y cada vez más a una **distribución normal.**
+
+Este comportamiento se establece formalmente por el **TEOREMA DE LIMITE CENTRAL:** 
+
+
+##### Sea una muestra aleatoria simple de tamaño n de cualquier población de media $\mu$ y desviación estándar finita $\sigma$. Cuando **n** es grande, la distribución de la media muestral es aproximadamente normal:
+
+$$N(\mu, \frac{\sigma}{\sqrt(n)})$$
+La siguiente figura muestra la operación del **teorema de límite central** sobre la distribución muestral para 4 tamaños de muestra distintos.
+
+![](/img/limitec.jpg)
+
+
+**Importante:** El tamaño **n** que debe tener la muestra para que \bar{X} sea aproximadamente normal depende de la distribución de la muestra particular, por lo que, es un rasgo sujeto a validación empírica.
+
+#### Ejercicio 2
+
+El tiempo X que un autobús en la ruta central de transporte publico de Rio de janeiro tarda en llegar a su destino,  esta determinado por una distribución exponencial. El tiempo medio es $\mu$ = 1 hora y la desviación estándar es $\sigma$ = 1 hora. 
+
+La dirección de transporte público de la ciudad  hace una insepcción para medir la eficiencia de la ruta central tomando una muestra de  70 trayectos. 
+
+
+1.- Determine el valor de la media muestral y la desviación estándar.
+
+2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto  sea superior a 50 minutos?  Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para $P(X\geq.83)$ por que 50/60=.83.
+
+

@@ -123,7 +123,7 @@ siguientes:</p>
 <p>El objetivo es <strong>inferir</strong>, el parámetro <span class="math inline">\(\mu\)</span> (valor de la media problacional) a partir del valor de la media muestral <span class="math inline">\(\bar{X}\)</span>.</p>
 <p>Si consideramos otra muestra aleatoria con n=10, tendremos una valor para <span class="math inline">\(\bar{X}\)</span> distinto.</p>
 <p>¿Qué sucede si consideramas una gran cantidad de muestras con tamaño 10 y estimamos su media?</p>
-<p><strong>La respuesta es que la distribución muestral del estadístico {X}, estará centrado en el valor de la media poblacional.</strong> Lo anterior ocurre dibido a la ley de los grandes números.</p>
+<p><strong>La respuesta es que la distribución muestral del estadístico <span class="math inline">\(\bar{X}\)</span>, estará centrado en el valor de la media poblacional.</strong> Lo anterior ocurre debido a la <strong>ley de los grandes números</strong>.</p>
 <p>Esta ley es una regularidad empírica que garantiza que si tomamos observaciones al azar de cualquier población de media finita <span class="math inline">\(\mu\)</span>. A medida que el número de observaciones obtenidas aumenta, la media <span class="math inline">\(\bar{X}\)</span> de los valores observados se acerca más y más a <span class="math inline">\(\mu\)</span>, <strong>la media poblacional.</strong></p>
 <p>La siguiente gráfica representa este comportamiento con los datos de la muestra de tamaño n=10, previamente indicados.</p>
 <p><img src="/img/ley.jpg" /></p>
@@ -133,19 +133,34 @@ siguientes:</p>
 <h3>Ley de los grandes números</h3>
 <p>La siguiente gráfica indica el comportamiento de la distribución muestral de <span class="math inline">\(\bar{X}\)</span> para 1000 muestras de tamaño 10 , (n=10).</p>
 <p><img src="/img/dmuestral.jpg" /></p>
-<p>Una importante propiedad es que esta distribución tiene como media el parámetro poblacional <span class="math inline">\(\mu\)</span>.</p>
-<p>La media del estadístico <span class="math inline">\(\bar{x}\)</span> siempre es igual a la media <span class="math inline">\(\mu\)</span> de la población.</p>
-<p>La distribución de <span class="math inline">\(\bar{X}\)</span> se halla centrada en <span class="math inline">\(\mu\)</span>. En un muestreo repetido, <span class="math inline">\(\bar{X}\)</span> tomará algunas veces valores mayores que el verdadero valor del parámetro µ y otras veces, valores menores.</p>
+<div id="dos-propiedades-importantes-de-las-distribuciones-muestrales-derivadas-de-la-ley-de-los-grandes-números." class="section level4">
+<h4>Dos propiedades importantes de las distribuciones muestrales derivadas de la ley de los grandes números.</h4>
+<p>1.-La media del estadístico <span class="math inline">\(\bar{x}\)</span> para un número grande de muestras siempre es igual al parámetro <span class="math inline">\(\mu\)</span>.</p>
+<p>Como vemos esta distribución tiene como media el parámetro poblacional <span class="math inline">\(\mu\)</span>. Que en este caso es <strong>25</strong></p>
+<p>La distribución de <span class="math inline">\(\bar{X}\)</span> se halla centrada en <span class="math inline">\(\mu\)</span>.</p>
+<p>En un muestreo repetido, <span class="math inline">\(\bar{X}\)</span> tomará algunas veces valores mayores que el verdadero valor del parámetro <span class="math inline">\(\mu\)</span> y otras veces, valores menores.</p>
 <p>No existe una tendencia sistemática a <strong>subestimar</strong> o a <strong>sobrestimar</strong> el valor del parámetro.</p>
-<p>Esta es la noción <strong>de falta de sesgo</strong>, en el sentido de que <strong>no existe ningún “favoritismo”</strong>.</p>
+<p>Esta es la noción <strong>estadístico insesgado</strong>, en el sentido de que <strong>no existe ningún “favoritismo”</strong>. No hay sesgo respecto de su parámetro (media poblacional).</p>
 <p>Debido a que la media de <span class="math inline">\(\bar{X}\)</span> es igual a <span class="math inline">\(\mu\)</span>, decimos que <span class="math inline">\(\bar{X}\)</span> es un <strong>estimador insesgado</strong> del parámetro <span class="math inline">\(\mu\)</span></p>
+</div>
 </div>
 <div id="definción-de-estimador-insesgado-para-la-media" class="section level3">
 <h3>Definción de estimador insesgado para la media:</h3>
 <p><strong>La propiedad del estadístico {X}, cuya distribución muestral esta centrada en el valor del parámetro <span class="math inline">\(\mu\)</span></strong></p>
-<p>En otras palabras, si tomamos muchas muestras de tamaño n, entonces, su <strong>media</strong> reflejará con precisión el valor poblacional y por lo tanto <strong>es un estimador insesgado</strong>.</p>
+<p>En otras palabras, si tomamos muchas muestras de tamaño <strong>n</strong>, entonces, su <strong>media</strong> reflejará con precisión el valor poblacional y por lo tanto <strong>es un estimador insesgado</strong>.</p>
 <p>2.- . La distribución muestral <strong>tiene menos dispersión</strong> que las muestras individuales. De hecho si la dispersión de la población es <span class="math inline">\(\sigma\)</span>, la desviación estándar de la distribución muestral del estadistico <span class="math inline">\(\bar{X}\)</span> será:</p>
 <p><span class="math display">\[\frac{\sigma}{\sqrt(n)}\]</span></p>
 <p><img src="/img/stddev_muestral.jpg" /></p>
+<p>En cuanto a <strong>la forma de la distribución</strong> es preciso indicar que si la distribución poblacional es <strong>normal</strong>, también lo es la <strong>distribución de la media muestral</strong>.</p>
+<p><strong>¿Qué ocurre cuando la distribución poblacional no es normal?</strong></p>
+<p>A medida que aumenta el tamaño de la muestra, la distribución de {X} cambia de forma: se parece menos a la distribución de la población muestreada y cada vez más a una <strong>distribución normal.</strong></p>
+<p>Este comportamiento se establece formalmente por el <strong>TEOREMA DE LIMITE CENTRAL:</strong></p>
+<div id="sea-una-muestra-aleatoria-simple-de-tamaño-n-de-cualquier-población-de-media-mu-y-desviación-estándar-finita-sigma.-cuando-n-es-grande-la-distribución-de-la-media-muestral-es-aproximadamente-normal" class="section level5">
+<h5>Sea una muestra aleatoria simple de tamaño n de cualquier población de media <span class="math inline">\(\mu\)</span> y desviación estándar finita <span class="math inline">\(\sigma\)</span>. Cuando <strong>n</strong> es grande, la distribución de la media muestral es aproximadamente normal:</h5>
+<p><span class="math display">\[N(\mu, \frac{\sigma}{\sqrt(n)})\]</span></p>
+</div>
+<div id="ejercicio-1" class="section level4">
+<h4>Ejercicio</h4>
+</div>
 </div>
 </div>
