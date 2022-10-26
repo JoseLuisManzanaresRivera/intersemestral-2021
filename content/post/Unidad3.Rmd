@@ -236,7 +236,7 @@ Si consideramos otra muestra aleatoria con n=10, tendremos una valor para $\bar{
 
 ¿Qué sucede si consideramas una gran cantidad de muestras  con tamaño 10 y estimamos su media? 
 
-**La respuesta es que la distribución muestral del estadístico \bar{X}, estará centrado en el valor de la media poblacional.** Lo anterior ocurre dibido a la ley de los grandes números. 
+**La respuesta es que la distribución muestral del estadístico $\bar{X}$, estará centrado en el valor de la media poblacional.** Lo anterior ocurre debido a la **ley de los grandes números**. 
 
 Esta ley es una regularidad empírica que garantiza que si tomamos observaciones al azar de cualquier población de media finita $\mu$. A medida que el número de observaciones obtenidas aumenta, la media $\bar{X}$ de los valores observados se acerca más y más a $\mu$, **la media poblacional.**
 
@@ -253,15 +253,20 @@ La siguiente gráfica indica el comportamiento de la distribución muestral de $
 
 ![](/img/dmuestral.jpg)
 
-Una importante propiedad es que esta distribución tiene como media el parámetro poblacional $\mu$.
+#### Dos propiedades importantes de las distribuciones muestrales derivadas de la ley de los grandes números. 
 
-La media del estadístico $\bar{x}$ siempre es igual a la media $\mu$ de la población. 
+1.-La media del estadístico $\bar{x}$ para un número grande de muestras siempre es igual al parámetro $\mu$.
 
-La distribución de $\bar{X}$ se halla centrada en $\mu$. En un muestreo repetido, $\bar{X}$ tomará algunas veces valores mayores que el verdadero valor del parámetro µ y otras veces, valores menores. 
+Como vemos esta distribución tiene como media el parámetro poblacional $\mu$. Que en este caso es **25**
+
+
+La distribución de $\bar{X}$ se halla centrada en $\mu$. 
+
+En un muestreo repetido, $\bar{X}$ tomará algunas veces valores mayores que el verdadero valor del parámetro $\mu$ y otras veces, valores menores. 
 
 No existe una tendencia sistemática a **subestimar** o a **sobrestimar** el valor del parámetro. 
 
-Esta es la noción  **de falta de sesgo**, en el sentido de que **no existe ningún “favoritismo”**. 
+Esta es la noción  **estadístico insesgado**, en el sentido de que **no existe ningún “favoritismo”**. No hay sesgo respecto de su parámetro (media poblacional). 
 
 Debido a que la media de $\bar{X}$ es igual a $\mu$, decimos que $\bar{X}$ es un **estimador insesgado** del parámetro $\mu$
 
@@ -269,7 +274,7 @@ Debido a que la media de $\bar{X}$ es igual a $\mu$, decimos que $\bar{X}$ es un
 
 **La propiedad del estadístico \bar{X}, cuya distribución  muestral esta centrada en el valor del parámetro $\mu$**
 
-En otras palabras, si tomamos muchas muestras de tamaño n, entonces, su **media** reflejará con precisión el valor poblacional y por lo tanto **es un estimador insesgado**.
+En otras palabras, si tomamos muchas muestras de tamaño **n**, entonces, su **media** reflejará con precisión el valor poblacional y por lo tanto **es un estimador insesgado**.
 
 
 
