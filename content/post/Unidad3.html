@@ -1,7 +1,7 @@
 ---
 title: "Unidad 3"
 author: "José Luis Manzanares Rivera"
-date: 2022-10-26T22:08:14-05:00
+date: 2022-10-25T22:08:14-05:00
 categories: ["Distribución normal"]
 tags: ["Inferencia"]
 ---
@@ -153,14 +153,21 @@ siguientes:</p>
 <p><img src="/img/stddev_muestral.jpg" /></p>
 <p>En cuanto a <strong>la forma de la distribución</strong> es preciso indicar que si la distribución poblacional es <strong>normal</strong>, también lo es la <strong>distribución de la media muestral</strong>.</p>
 <p><strong>¿Qué ocurre cuando la distribución poblacional no es normal?</strong></p>
-<p>A medida que aumenta el tamaño de la muestra, la distribución de {X} cambia de forma: se parece menos a la distribución de la población muestreada y cada vez más a una <strong>distribución normal.</strong></p>
+<p>A medida que aumenta el tamaño de la muestra, la distribución de <span class="math inline">\(\bar{X}\)</span> cambia de forma: se parece menos a la distribución de la población muestreada y cada vez más a una <strong>distribución normal.</strong></p>
 <p>Este comportamiento se establece formalmente por el <strong>TEOREMA DE LIMITE CENTRAL:</strong></p>
 <div id="sea-una-muestra-aleatoria-simple-de-tamaño-n-de-cualquier-población-de-media-mu-y-desviación-estándar-finita-sigma.-cuando-n-es-grande-la-distribución-de-la-media-muestral-es-aproximadamente-normal" class="section level5">
 <h5>Sea una muestra aleatoria simple de tamaño n de cualquier población de media <span class="math inline">\(\mu\)</span> y desviación estándar finita <span class="math inline">\(\sigma\)</span>. Cuando <strong>n</strong> es grande, la distribución de la media muestral es aproximadamente normal:</h5>
-<p><span class="math display">\[N(\mu, \frac{\sigma}{\sqrt(n)})\]</span></p>
+<p><span class="math display">\[N(\mu, \frac{\sigma}{\sqrt(n)})\]</span>
+La siguiente figura muestra la operación del <strong>teorema de límite central</strong> sobre la distribución muestral para 4 tamaños de muestra distintos.</p>
+<p><img src="/img/limitec.jpg" /></p>
+<p><strong>Importante:</strong> El tamaño <strong>n</strong> que debe tener la muestra para que {X} sea aproximadamente normal depende de la distribución de la muestra particular, por lo que, es un rasgo sujeto a validación empírica.</p>
 </div>
-<div id="ejercicio-1" class="section level4">
-<h4>Ejercicio</h4>
+<div id="ejercicio-2" class="section level4">
+<h4>Ejercicio 2</h4>
+<p>El tiempo X que un autobús en la ruta central de transporte publico de Rio de janeiro tarda en llegar a su destino, esta determinado por una distribución exponencial. El tiempo medio es <span class="math inline">\(\mu\)</span> = 1 hora y la desviación estándar es <span class="math inline">\(\sigma\)</span> = 1 hora.</p>
+<p>La dirección de transporte público de la ciudad hace una insepcción para medir la eficiencia de la ruta central tomando una muestra de 70 trayectos.</p>
+<p>1.- Determine el valor de la media muestral y la desviación estándar.</p>
+<p>2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto sea superior a 50 minutos? Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para <span class="math inline">\(P(X\geq.83)\)</span> por que 50/60=.83.</p>
 </div>
 </div>
 </div>
