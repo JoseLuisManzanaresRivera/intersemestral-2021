@@ -521,7 +521,7 @@ Recuerde que es importante observar la proposición que describe la probabilidad
 
 [indicadores_desarrollo](https://drive.google.com/file/d/1p0a4O85-cIezx5CllBGSkYAA4jCBW4O-/view?usp=sharing)
 
-Código para leer el archivo en R.
+Código para leer los archivos en R.
 
 
 
@@ -535,6 +535,7 @@ indicadores<-read.csv("indicadores_desarrollo_cuba.csv")
 pib<-read.csv("pib.csv")
 
 poverty<-readRDS("pobreza_país.rds")
+
 
 
 ```
