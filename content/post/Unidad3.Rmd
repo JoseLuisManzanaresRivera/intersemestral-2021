@@ -197,7 +197,7 @@ Las **tablas de contingencia** resultan de gran utilidad cuando enfrentamos un p
 Recuerde que dos suecesos se consideran **INDEPENDIENTES** si, **P(B|A)=P(B)** 
 
 
-### Ejercicio
+### Ejercicio 1
 
 Graduados universitarios. La tabla siguiente proporciona datos sobre los graduados de una universidad venezolana. Utilízalos para responder a las preguntas
 siguientes:
@@ -209,7 +209,7 @@ siguientes:
 1.-Si escoges un graduado al azar, ¿cuál es la probabilidad de que sea un hombre?
 
 
-2.- ¿Cuál es la probabilidad de que la persona escogida tenga una diplomatura, condicionada a que es un hombre
+2.- ¿Cuál es la probabilidad de que la persona escogida tenga una diplomatura, condicionada a que es un hombre?
 
 
 3.-Utiliza la regla de la multiplicación para hallar la probabilidad de que la persona escogida tenga una diplomatura y sea un hombre $P(B\cap A)$. 
@@ -322,9 +322,19 @@ Considere que con base en el **teorema del límite central**  la media muestral 
 
 2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto sea superior a 50 minutos?  Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para $P(X\geq.83)$ por que 50/60=.83.
 
-*Note puede usar tablas o función `pnorm` (k,$\mu$, $\sigma$) en R, la cual permite estimar la probabilidad acumulada hasta el umbral k. indicado (área a la izquierda de la distribución normal).*
+*Note puede usar tablas o función `pnorm` (k,$\mu$, $\sigma$) en R, la cual permite estimar la probabilidad acumulada hasta el umbral k indicado (área a la izquierda de la distribución normal).*
 
 
 
+#### Ejercicio 3
 
+
+Rendimiento de acciones. La distribución de los rendimientos anuales de las acciones es aproximadamente simétrica, aunque las observaciones extremas son más frecuentes que en una distribución normal. Como esta falta de normalidad no es muy fuerte, la media de los rendimientos, incluso durante un número pequeño de años, es aproximadamente normal. 
+
+A largo plazo, los rendimientos anuales varían con una media próxima al $9\%$ y una desviación típica próxima al $28\%$. Jaime piensa retirarse dentro de 45 años y está considerando la posibilidad
+de invertir en bolsa. 
+
+1.- ¿Cuál es la probabilidad (suponiendo que los rendimientos anuales de las acciones mantienen la misma variación) de que la media de los rendimientos anuales de las acciones en los próximos 45 años supere el 15%?
+
+2.- ¿Cuál es la probabilidad de que esta media de rendimientos sea menor del 5%?
 
