@@ -174,16 +174,6 @@ La siguiente figura muestra la operación del <strong>teorema de límite central
 <p>1.- Determine el valor de la media muestral y la desviación estándar.</p>
 <p>2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto sea superior a 50 minutos? Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para <span class="math inline">\(P(X\geq.83)\)</span> por que 50/60=.83.</p>
 <p><em>Note puede usar tablas o función <code>pnorm</code> (k,<span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>) en R, la cual permite estimar la probabilidad acumulada hasta el umbral k. indicado (área a la izquierda de la distribución normal).</em></p>
-<pre class="r"><code>5.9/sqrt(50)</code></pre>
-<pre><code>## [1] 0.834386</code></pre>
-<pre class="r"><code>1-pnorm(.83,1,.12)</code></pre>
-<pre><code>## [1] 0.9217098</code></pre>
-<pre class="r"><code>(.83-1)/.12</code></pre>
-<pre><code>## [1] -1.416667</code></pre>
-<pre class="r"><code>1-pnorm(21,18.6,5.9)</code></pre>
-<pre><code>## [1] 0.3420849</code></pre>
-<pre class="r"><code>1-0.0793</code></pre>
-<pre><code>## [1] 0.9207</code></pre>
 </div>
 </div>
 </div>
