@@ -11,8 +11,8 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 ## Objetivos
-Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios propabilisticos. 
-Inicaremos en esta sesión la tematica sobre inferencia.
+Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios propabilísticos. 
+Iniciaremos en esta sesión la temática sobre inferencia.
 
 ### Metas de aprendizaje.
 
