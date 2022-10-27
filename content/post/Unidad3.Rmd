@@ -20,6 +20,14 @@ El alumno será capaz de aplicar los conocimientos sobre distribución normal, c
 
 # Inferencia
 
+En inferencia, estamos interesados en obtener conclusiones sobre los **parámetros poblacionales**  a partir del comportamiento de los **estadisticos muestrales** 
+
+Lo que es especial en la inferencia es que las conclusiones van acompañadas de **una afirmación**, en el lenguaje de la **probabilidad**, sobre su fiabilidad o **nivel de confinza**.
+
+Las probabilidades que necesitamos proceden de **las distribuciones muestrales** de los **estadísticos.**
+
+
+
 ### Distribución normal, distribuciones de muestreo y prueba de hipótesis.
 
 > ##### Obejtivos.
@@ -359,9 +367,14 @@ Las notas de los estudiantes en el exámen de ingreso a la Universidad Nacional 
 
 
 
+
+### Representación gráfica de la variación muestral
+
+
+
+Frecuentemente estamos interesados en determinar el comportamiento de una temporal de un variable, concretamente 
+
 ```{r}
-1-pnorm(18,17.3,5.8)
-1-pnorm(19,17.3,0.8202439)
-5.8/sqrt(50)
+
 ```
 
