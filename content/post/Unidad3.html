@@ -1,7 +1,7 @@
 ---
 title: "Unidad 3"
 author: "José Luis Manzanares Rivera"
-date: 2022-10-27T22:08:14-05:00
+date: 2022-11-12T22:08:14-05:00
 categories: ["Distribución normal"]
 tags: ["Inferencia"]
 ---
@@ -12,15 +12,18 @@ tags: ["Inferencia"]
 <div id="objetivos" class="section level2">
 <h2>Objetivos</h2>
 <p>Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios probabilísticos.</p>
-<p>Iniciaremos en esta sesión la temática sobre inferencia.</p>
+<p>Iniciaremos en esta sesión el contenido correspondiente a estadística inferencial.</p>
 <div id="metas-de-aprendizaje." class="section level3">
 <h3>Metas de aprendizaje.</h3>
 <ul>
 <li><p>El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el teorema de límite central para la determinación de probabilidades.</p></li>
 <li><p>Será capaz de implementar el cálculo de probabilidades aplicando la aproximación normal a la distribución binomial.</p></li>
+<li><p>Conocerá la estructura de una <strong>tabla de contingencia</strong> y aplicará este conocimiento para la estimación de probabilidades condicionales.</p></li>
+<li><p>Estudiará la ley de los grandes números y sus implicaciones en el contexto de la estimación de probabilidades.</p></li>
 <li><p>Comprenderá las nociones básicas sobre inferencia estadística en particular, la estimación de intervalos de confianza.</p></li>
 <li><p>Al finalizar este tema el alumno podrá identificar las pruebas de significanción para valorar la evidencia de la afirmación sobre una poblaciión.</p></li>
 </ul>
+<p><strong>Texto recomendado para la sesión de hoy:</strong> <a href="https://drive.google.com/file/d/1ezHlHeEPXBDIf2glXMsyZ0KzGsR8pM27/view?usp=sharing">Estadística aplicada básica</a> Capitulos: 4, 5 y 6.</p>
 </div>
 </div>
 <div id="inferencia" class="section level1">
@@ -140,8 +143,8 @@ siguientes:</p>
 <p>¿Qué valor toma el estadístico <span class="math inline">\(\bar{X}\)</span>?</p>
 <p>Haciendo el cálculo, vemos que <span class="math inline">\(\bar{X}=27.4\)</span></p>
 <p>El objetivo es <strong>inferir</strong>, el parámetro <span class="math inline">\(\mu\)</span> (valor de la media problacional) a partir del valor de la media muestral <span class="math inline">\(\bar{X}\)</span>.</p>
-<p>Si consideramos otra muestra aleatoria con n=10, tendremos una valor para <span class="math inline">\(\bar{X}\)</span> <strong>distinto</strong>.</p>
-<p>¿Qué sucede si consideramps una gran cantidad de muestras con tamaño 10 y estimamos su media?</p>
+<p>Si consideramos <strong>otra muestra aleatoria</strong> con n=10, tendremos una valor para <span class="math inline">\(\bar{X}\)</span> <strong>distinto</strong>.</p>
+<p>¿Qué sucede si consideramos una gran cantidad de muestras con tamaño 10 y estimamos su media?</p>
 <p><strong>La respuesta es que la distribución muestral del estadístico <span class="math inline">\(\bar{X}\)</span>, estará centrado en el valor de la media poblacional.</strong> Lo anterior ocurre debido a la <strong>ley de los grandes números</strong>.</p>
 <p>Esta ley es una regularidad empírica que garantiza que si tomamos observaciones al azar de cualquier población de media finita <span class="math inline">\(\mu\)</span>. A medida que el número de observaciones obtenidas aumenta, la media <span class="math inline">\(\bar{X}\)</span> de los valores observados se acerca más y más a <span class="math inline">\(\mu\)</span>, <strong>la media poblacional.</strong></p>
 <p>La siguiente gráfica representa este comportamiento con los datos de la muestra de tamaño n=10, previamente indicados.</p>

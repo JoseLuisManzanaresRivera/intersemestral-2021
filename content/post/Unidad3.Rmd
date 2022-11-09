@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios probabilísticos. 
 
-Iniciaremos en esta sesión la temática sobre inferencia.
+Iniciaremos en esta sesión el contenido correspondiente a estadística inferencial.
 
 ### Metas de aprendizaje.
 
