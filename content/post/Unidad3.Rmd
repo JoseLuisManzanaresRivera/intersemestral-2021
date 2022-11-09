@@ -536,14 +536,14 @@ Si la media poblacional $\mu$ es conocida  y consideramos el caso de la distribu
 
 Recuerde que z nos dice la distancia de la media muestral, respecto de la poblacional en términos de desviaciones estándar.
 
-¿Qué tan lejos esta $\{x}$ de $\mu$ en desviaciones estándar?
+¿Qué tan lejos esta $\bar{x}$ de $\mu$ en desviaciones estándar?
 
 Debido a que $\bar{X}$ tiene una distribución normal, **z** tiene una distribución normal estandarizada **N(0,1)**
 
 
 El nivel de confianza esta representado en la curva normal por la parte **central** entre el intervalo que esta delimitado por los valores z a la derecha de la media y a la izquierda. 
 
-Por ejemplo, para estimmar un intervalo de confianza del $80\%$, la parte central de la distribución deben contener $80\%$ de los datos lo que implica que cada cola de la distribución debe contener $10\%$ estos es $\frac{1-C}{2}=\frac{1-.80}{2}=10$ 
+Por ejemplo, para estimar un intervalo de confianza del $80\%$, la parte central de la distribución deben contener $80\%$ de los datos lo que implica que cada cola de la distribución debe contener $10\%$ estos es $\frac{1-C}{2}=\frac{1-.80}{2}=10$ 
 
 Por lo tanto debemos seleccionar en la tabla de la distribución normal, (Tabla A) el valor **z** que este asociado con el 90% de los datos, ya que como recordará la tabla permite tener las probabilidades a la izquierda del valor estandarizado Z.
 
@@ -564,7 +564,7 @@ Las siguiente gráficamuestra la relación entre el valor crítico **Z** y nivel
 + **Valor crítico $z^{*}$:** Es el valor que captura la probabilidad central **C** por debajo de la curva normal estandarizada entre -Z y Z.
 
 
-Entonces el intervalo de confianza para la población de media desconocida  es: $\bar{x}+-z^{*}\frac{\sigma}{\sqrt{n}}$
+Entonces el intervalo de confianza para la población de media desconocida  es: $\bar{x}\pm z^{*}\frac{\sigma}{\sqrt{n}}$
 
 Los intrevalos de confianza más comnes son: 
 
