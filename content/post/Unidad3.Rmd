@@ -579,7 +579,7 @@ Los intrevalos de confianza más comunes son:
 Nota si la distribución subyacente **no es normal**, los valores z son aproximadamente correctos cuando  **n** es grande.
 
 
-Ejemplo  Intervalos de confianza.
+### Ejemplo  Intervalos de confianza.
 
 
 Encuesta a directores académicos en universidades públicas nacionales. 
