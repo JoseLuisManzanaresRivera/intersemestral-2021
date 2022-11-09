@@ -24,9 +24,9 @@ Iniciaremos en esta sesión el contenido correspondiente a estadística inferenc
 
 + Conocerá la estructura de una **tabla de contingencia** y aplicará este conocimiento para la estimación de probabilidades condicionales. 
 
-+ Estudiará la ley de los grandes números y sus implicaciones en el contexto de la estimación de probabilidades.
++ Estudiará la **ley de los grandes números** y sus implicaciones en el contexto de la estimación de probabilidades.
 
-+ Comprenderá las nociones básicas sobre inferencia estadística en particular, la estimación de intervalos de confianza.
++ Comprenderá las nociones básicas sobre **inferencia estadística** en particular, la estimación de intervalos de confianza.
 
 + Al finalizar este tema el alumno podrá identificar las pruebas de significanción para valorar la evidencia de la afirmación sobre una poblaciión. 
 
@@ -61,7 +61,8 @@ $$\mu=np$$
 $$\sigma=\sqrt{np(1-p)}$$
 
 
-**Ejemplo:** 
+#### Ejemplo:
+
 Sea una situación binomial con un espacio muestral con un total de  10 elementos, (n=10) y una probabilidad de ocurrencia del $10\%$ (p=0.1).
 
 Entonces, utilizando el algoritmo anterior para la estimación del  valor de la  media $\mu$ y la desviación estándar  $\sigma$ para esta distribución binomial, tenemos que $$\mu=np=10(.10)=1$$, $$\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487$$
@@ -300,6 +301,8 @@ Como vemos esta distribución tiene como media el parámetro poblacional $\mu$. 
 La distribución de $\bar{X}$ se halla centrada en $\mu$. 
 
 En un muestreo repetido, $\bar{X}$ tomará algunas veces valores mayores que el verdadero valor del parámetro $\mu$ y otras veces, valores menores. 
+
+### Estadístico insesgado.
 
 No existe una tendencia sistemática a **subestimar** o a **sobrestimar** el valor del parámetro. 
 

@@ -16,11 +16,11 @@ tags: ["Inferencia"]
 <div id="metas-de-aprendizaje." class="section level3">
 <h3>Metas de aprendizaje.</h3>
 <ul>
-<li><p>El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el teorema de límite central para la determinación de probabilidades.</p></li>
+<li><p>El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el <strong>teorema de límite central</strong> para la determinación de probabilidades.</p></li>
 <li><p>Será capaz de implementar el cálculo de probabilidades aplicando la aproximación normal a la distribución binomial.</p></li>
 <li><p>Conocerá la estructura de una <strong>tabla de contingencia</strong> y aplicará este conocimiento para la estimación de probabilidades condicionales.</p></li>
-<li><p>Estudiará la ley de los grandes números y sus implicaciones en el contexto de la estimación de probabilidades.</p></li>
-<li><p>Comprenderá las nociones básicas sobre inferencia estadística en particular, la estimación de intervalos de confianza.</p></li>
+<li><p>Estudiará la <strong>ley de los grandes números</strong> y sus implicaciones en el contexto de la estimación de probabilidades.</p></li>
+<li><p>Comprenderá las nociones básicas sobre <strong>inferencia estadística</strong> en particular, la estimación de intervalos de confianza.</p></li>
 <li><p>Al finalizar este tema el alumno podrá identificar las pruebas de significanción para valorar la evidencia de la afirmación sobre una poblaciión.</p></li>
 </ul>
 <p><strong>Texto recomendado para la sesión de hoy:</strong> <a href="https://drive.google.com/file/d/1ezHlHeEPXBDIf2glXMsyZ0KzGsR8pM27/view?usp=sharing">Estadística aplicada básica</a> Capitulos: 4, 5 y 6.</p>
@@ -40,8 +40,10 @@ tags: ["Inferencia"]
 estándar</strong> de <strong>X</strong> son:</p>
 <p><span class="math display">\[\mu=np\]</span>
 <span class="math display">\[\sigma=\sqrt{np(1-p)}\]</span></p>
-<p><strong>Ejemplo:</strong>
-Sea una situación binomial con un espacio muestral con un total de 10 elementos, (n=10) y una probabilidad de ocurrencia del <span class="math inline">\(10\%\)</span> (p=0.1).</p>
+</div>
+<div id="ejemplo" class="section level4">
+<h4>Ejemplo:</h4>
+<p>Sea una situación binomial con un espacio muestral con un total de 10 elementos, (n=10) y una probabilidad de ocurrencia del <span class="math inline">\(10\%\)</span> (p=0.1).</p>
 <p>Entonces, utilizando el algoritmo anterior para la estimación del valor de la media <span class="math inline">\(\mu\)</span> y la desviación estándar <span class="math inline">\(\sigma\)</span> para esta distribución binomial, tenemos que <span class="math display">\[\mu=np=10(.10)=1\]</span>, <span class="math display">\[\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487\]</span></p>
 <p>El histograma siguiente muestra las probabilidades (de acuerdo a la <strong>distribución binomial</strong>) para cada uno de los posibles valores de <strong>X</strong> (éxitos).</p>
 <p>El <strong>histograma</strong> mide en el eje de las <strong>ordenadas al orígen</strong> (vertical), las <strong>probabilidades</strong> estimadas y en el <strong>eje de las abscisas</strong> (horizontal), el recuento de <strong>éxitos</strong>, desde 1 hasta 10, (1…n=10).</p>
@@ -158,10 +160,13 @@ siguientes:</p>
 <p>Como vemos esta distribución tiene como media el parámetro poblacional <span class="math inline">\(\mu\)</span>. Que en este caso es <strong>25</strong></p>
 <p>La distribución de <span class="math inline">\(\bar{X}\)</span> se halla centrada en <span class="math inline">\(\mu\)</span>.</p>
 <p>En un muestreo repetido, <span class="math inline">\(\bar{X}\)</span> tomará algunas veces valores mayores que el verdadero valor del parámetro <span class="math inline">\(\mu\)</span> y otras veces, valores menores.</p>
+</div>
+</div>
+<div id="estadístico-insesgado." class="section level3">
+<h3>Estadístico insesgado.</h3>
 <p>No existe una tendencia sistemática a <strong>subestimar</strong> o a <strong>sobrestimar</strong> el valor del parámetro.</p>
 <p>Esta es la noción <strong>estadístico insesgado</strong>, en el sentido de que <strong>no existe ningún “favoritismo”</strong>. No hay sesgo respecto de su parámetro (media poblacional).</p>
 <p>Debido a que la media de <span class="math inline">\(\bar{X}\)</span> es igual a <span class="math inline">\(\mu\)</span>, decimos que <span class="math inline">\(\bar{X}\)</span> es un <strong>estimador insesgado</strong> del parámetro <span class="math inline">\(\mu\)</span></p>
-</div>
 </div>
 <div id="definción-de-estimador-insesgado-para-la-media" class="section level3">
 <h3>Definción de estimador insesgado para la media:</h3>
