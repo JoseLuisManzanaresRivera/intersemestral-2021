@@ -11,55 +11,61 @@ tags: ["Inferencia"]
 
 <div id="objetivos" class="section level2">
 <h2>Objetivos</h2>
-<p>Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios propabilísticos.
-Iniciaremos en esta sesión la temática sobre inferencia.</p>
+<p>Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios probabilísticos.</p>
+<p>Iniciaremos en esta sesión la temática sobre inferencia.</p>
 <div id="metas-de-aprendizaje." class="section level3">
 <h3>Metas de aprendizaje.</h3>
-<p>El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el teorema de límite central para la determinación de probabilidades.</p>
+<ul>
+<li><p>El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el teorema de límite central para la determinación de probabilidades.</p></li>
+<li><p>Será capaz de implementar el cálculo de probabilidades aplicando la aproximación normal a la distribución binomial.</p></li>
+<li><p>Comprenderá las nociones básicas sobre inferencia estadística en particular, la estimación de intervalos de confianza.</p></li>
+<li><p>Al finalizar este tema el alumno podrá identificar las pruebas de significanción para valorar la evidencia de la afirmación sobre una poblaciión.</p></li>
+</ul>
 </div>
 </div>
 <div id="inferencia" class="section level1">
 <h1>Inferencia</h1>
-<p>En inferencia, estamos interesados en obtener conclusiones sobre los <strong>parámetros poblacionales</strong> a partir del comportamiento de los <strong>estadisticos muestrales</strong></p>
-<p>Lo que es especial en la inferencia es que las conclusiones van acompañadas de <strong>una afirmación</strong>, en el lenguaje de la <strong>probabilidad</strong>, sobre su fiabilidad o <strong>nivel de confinza</strong>.</p>
-<p>Las probabilidades que necesitamos proceden de <strong>las distribuciones muestrales</strong> de los <strong>estadísticos.</strong></p>
+<p>Hacer inferencia estadística implica obtener <strong>conclusiones</strong> sobre los <strong>parámetros poblacionales</strong> a partir del comportamiento de los <strong>estadísticos muestrales</strong>.</p>
+<p>Lo que es especial en la <strong>inferencia</strong> es que las conclusiones van acompañadas de <strong>una afirmación</strong>, en el lenguaje de la <strong>probabilidad</strong>, sobre su fiabilidad o <strong>nivel de confinza</strong>.</p>
+<p>Las probabilidades que determinaremos proceden de <strong>las distribuciones muestrales</strong> de los <strong>estadísticos.</strong></p>
 <div id="distribución-normal-distribuciones-de-muestreo-y-prueba-de-hipótesis." class="section level3">
 <h3>Distribución normal, distribuciones de muestreo y prueba de hipótesis.</h3>
-<blockquote>
-<h5 id="obejtivos.">Obejtivos.</h5>
-</blockquote>
 <div id="apróximación-normal-a-distribuciones-binomiales." class="section level4">
 <h4>Apróximación normal a distribuciones binomiales.</h4>
 <p>Comenzaremos esta sesión con la determinación de los parámetros <strong>media</strong> y <strong>desviación estándar</strong> para una distribución binomial.</p>
 <p>Si un recuento <strong>X</strong> tiene una distribución binomial con un número de observaciones <strong>n</strong> y una probabilidad de éxito <strong>p</strong>, <strong>la media</strong> y la <strong>desviación
 estándar</strong> de <strong>X</strong> son:</p>
 <p><span class="math display">\[\mu=np\]</span>
-<span class="math display">\[\sigma=\sqrt{np(1-p)}\]</span>
-<strong>Ejemplo:</strong>
+<span class="math display">\[\sigma=\sqrt{np(1-p)}\]</span></p>
+<p><strong>Ejemplo:</strong>
 Sea una situación binomial con un espacio muestral con un total de 10 elementos, (n=10) y una probabilidad de ocurrencia del <span class="math inline">\(10\%\)</span> (p=0.1).</p>
 <p>Entonces, utilizando el algoritmo anterior para la estimación del valor de la media <span class="math inline">\(\mu\)</span> y la desviación estándar <span class="math inline">\(\sigma\)</span> para esta distribución binomial, tenemos que <span class="math display">\[\mu=np=10(.10)=1\]</span>, <span class="math display">\[\sigma=\sqrt{np(1-p)}=\sqrt{10(.10)(.90)}=0.9487\]</span></p>
-<p>El histograma siguiente muestra las probabilidades (de acuerdo a la distribución binomial) para cada uno de los posibles valores de <strong>X</strong> (éxitos).</p>
-<p>Como es posible apreciar el <strong>histograma</strong> mide en el eje de las <strong>ordenadas al orígen</strong> (vertical), las <strong>probabilidades</strong> estimadas y en el <strong>eje de las abscisas</strong> (horizontal), el recuento de <strong>éxitos</strong>, desde 1 hasta 10, (1…n=10).</p>
+<p>El histograma siguiente muestra las probabilidades (de acuerdo a la <strong>distribución binomial</strong>) para cada uno de los posibles valores de <strong>X</strong> (éxitos).</p>
+<p>El <strong>histograma</strong> mide en el eje de las <strong>ordenadas al orígen</strong> (vertical), las <strong>probabilidades</strong> estimadas y en el <strong>eje de las abscisas</strong> (horizontal), el recuento de <strong>éxitos</strong>, desde 1 hasta 10, (1…n=10).</p>
 <p>La línea punteada corresponde con el valor de la media de la dsitribución binomial <span class="math inline">\(\mu=1\)</span></p>
 <p><img src="/post/Unidad3_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>Cuando se trata de muestras de mayor tamaño, estimar de forma manual la distribución de probabilidades para una situación binomial, puede resultar poco práctico, por ejemplo considere la siguiente situación binomial:</p>
 </div>
 <div id="ejemplo-1-estimación-de-la-aproximación-normal-a-la-distribución-binomial." class="section level4">
 <h4>Ejemplo 1: Estimación de la aproximación normal a la distribución binomial.</h4>
-<p>¿Está cambiando la actitud de los jóvenes respecto a la participación en los procesos electorales? Las encuestas ponen de manifiesto que a los jóvenes cada vez les gusta menos salir a votar. Una encuesta reciente planteada a nivel nacional, en Colombia, preguntó a una muestra de 2,500 adultos jóvenes si estaban de acuerdo o no con <strong>“Me gusta la democracia, pero ir a votar a menudo es frustrante, por que hay manipulación del voto”.</strong></p>
-<p>La población sobre la que la encuesta quiere sacar conclusiones es la de todos los residentes en Colombia de entre 18 y 30 años. Supón que el 60% de todos los adultos de Colombia estuviese de acuerdo con la afirmación anterior.</p>
+<p>¿Está cambiando la actitud de los jóvenes respecto a la participación en los procesos electorales? Las encuestas ponen de manifiesto que a los jóvenes, cada vez les gusta menos salir a votar.</p>
+<p>Una encuesta realizada en 2022 a nivel nacional, en Colombia, preguntó a una muestra de 2,500 adultos jóvenes si estaban de acuerdo o no con <strong>“Me gusta la democracia, pero ir a votar a menudo es frustrante, por que hay manipulación del voto”.</strong></p>
+<p>La población sobre la que la encuesta quiere sacar conclusiones es la de todos los residentes en Colombia de entre 18 y 30 años.</p>
+<p>Supón que el <strong>60%</strong> de todos los adultos de Colombia estuviese de acuerdo con la afirmación anterior.</p>
 <div id="cuál-es-la-probabilidad-de-que-al-menos-1520-individuos-de-la-muestra-esté-de-acuerdo-con-la-afirmación" class="section level5">
 <h5>¿Cuál es la probabilidad de que al menos 1,520 individuos de la muestra esté de acuerdo con la afirmación?</h5>
 <p>Debido a que la población de adultos jóvenes de Colombia es superior a los 30 millones, podemos tomar las respuestas de 2.500 adultos escogidos al azar como independientes.</p>
 <p>En consecuencia, el número de individuos de nuestra muestra que está de acuerdo con que <strong>“ir a votar, a menudo es frustrante”</strong>, es una variable aleatoria <strong>X</strong> que
 tiene una distribución binomial con <strong>n = 2,500</strong> y <strong>p = 0.6</strong>.</p>
-<p>Para hallar la probabilidad de que <strong>al menos 1,520</strong> individuos de la muestra opinen que <strong>ir a votar a menudo es frustante</strong>, debemos <strong>sumar las probabilidades binomiales de todos los resultados desde X = 1.520 hasta X = 2.500</strong>. Este cálculo no es práctico si lo hacemos a mano.</p>
+<p>Para hallar la probabilidad de que <strong>al menos 1,520</strong> individuos de la muestra opinen que <strong>ir a votar a menudo es frustante</strong>, debemos <strong>sumar las probabilidades binomiales de todos los resultados desde X = 1.520 hasta X = 2.500</strong>! Este cálculo no es práctico si lo hacemos a mano.</p>
+<div id="implica-estimar-pxkbinomnkpk1-pn-k-desde-k1520-hasta-2500" class="section level6">
+<h6>Implica estimar <span class="math display">\[P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}\]</span> desde k=1520 hasta 2500!</h6>
 <p><img src="/img/aprox_normal.jpg" /></p>
-<p>Veamos cómo resolver este problema:</p>
+<p>Veámos cómo resolver este problema:</p>
 <blockquote>
 <p>1.- Cálculo mediante la aproximación normal a la distribución binomial.</p>
 </blockquote>
-<p>Primero estandarizamos los datos utilizando el procedimiento calculando el <strong>Z-score</strong>.
+<p>Primero estndarizamos los datos utilizando el procedimiento calculando el <strong>Z-score</strong>.
 Lo que implica estimar el estadístico <span class="math inline">\(\mu\)</span> y la desviación estándar que en este caso son:</p>
 <p><span class="math display">\[\mu=np=2500(.6)=1500\]</span> <span class="math display">\[\sigma=\sqrt(2500(.6)(1-.6))=24.49\]</span>
 Con estos datos la dsistribución normal queda caracterizada por:
@@ -72,6 +78,7 @@ Con este valor estandarizado <strong>z</strong> podemos ahora determinar la prob
 <p><strong>IMPORTANTE:</strong> Note el requerimiento en este problema se refire “al menos 1520”, es decir buscamos el área bajo la curva de la distribución normal a la derecha de este punto 1520.</p>
 <p>Los datos de las probabilidades disponibles por la <strong>tabla de la distribución normal</strong> contienen los valores <strong>a la izquierda del valor estandarizado Z</strong>. Por lo que es fundamenteal realizar la operación correspondiente: en este caso <span class="math inline">\(1-P(Z\geq.82)\)</span>.</p>
 <p>Cuando la situación indica <strong>“como máximo”</strong> tenemos un escenario, <span class="math inline">\(P(X \leq k)\)</span> En ese caso, es apropiado, considerar el área bajo la curva <strong>a la izquierda</strong> del umbral de referencia.</p>
+</div>
 </div>
 <div id="solución-utilizando-software." class="section level5">
 <h5>Solución utilizando software.</h5>
@@ -88,17 +95,17 @@ Con este valor estandarizado <strong>z</strong> podemos ahora determinar la prob
 </div>
 </div>
 </div>
-<div id="tablas-de-contingencia-y-probabilidad-condicional." class="section level4">
-<h4>Tablas de contingencia y probabilidad condicional.</h4>
+<div id="ii-tablas-de-contingencia-y-probabilidad-condicional." class="section level4">
+<h4>II Tablas de contingencia y probabilidad condicional.</h4>
 <p><strong>Una tabla de contingencia es una representación numérica ordenada de eventos entre dos o más variables.</strong></p>
 <p>Considere el siguiente recuento de graduados de una universidad venezolana, en un año reciente, clasificados según el tipo de graduación y el sexo del graduado.</p>
 <p><img src="/img/contingenciax.jpg" /></p>
 <p>1.- Si escoges un graduado al azar, ¿cuál es la probabilidad de que el graduado sea una mujer?</p>
 <p>Para resolver esta pregunta, unicamente es necesario visualizar los datos que cumplen con la proposición en la tabla y establecer la proporción:</p>
-<p><span class="math display">\[P(B)=856/1626=52.6\%\]</span>
-2.- Si la persona escogida se graduó de maestría, ¿cuál es la probabilidad de que sea una mujer? Esto es: <strong>¿P(B|A)?</strong></p>
+<p><span class="math display">\[P(B)=856/1626=52.6\%\]</span></p>
+<p>2.- Si la persona escogida se graduó de maestría, ¿cuál es la probabilidad de que sea una mujer? Esto es: <strong>¿P(B|A)?</strong></p>
 <p>Nuevamente la información de la tabla nos permite determinar esa información con precisión, estimando el cociente: <span class="math display">\[P(B|A)=30/74=40.5\%\]</span></p>
-<p>Note que esta proposición es consistente con la estimación de la <strong>probabilidad condicional</strong> P(B|A), para el suceso B=“ser mujer” y el suceso A=“se graduo de maestría”</p>
+<p>Note que esta proposición es consistente con la estimación de la <strong>probabilidad condicional</strong> P(B|A), para el suceso B=“ser mujer” y el suceso A=“se graduó de maestría”</p>
 <p><span class="math display">\[P(B|A)=\frac{P(A \cap B)}{P(A)}\]</span></p>
 <p>Siempre que <span class="math inline">\(P(A)\neq0\)</span> en caso contratrio el cociente: <span class="math inline">\(\frac{P(A \cap B)}{P(A)}\)</span> no estaría definido.</p>
 <p>Esto implica que mediante la tabla de contingencia podemos estimar la <strong>probabilidad condicional P(B|A)</strong> y de manera indirecta la probabilidad de dos sucesos independientes A y B.</p>
@@ -126,23 +133,20 @@ siguientes:</p>
 <p>3.-Utiliza la regla de la multiplicación para hallar la probabilidad de que la persona escogida tenga una diplomatura y sea un hombre <span class="math inline">\(P(B\cap A)\)</span>.</p>
 <p>Comprueba tu resultado hallando directamente esta probabilidad en la tabla de contingencia.</p>
 </div>
-<div id="inferencia-1" class="section level3">
-<h3>Inferencia:</h3>
+<div id="ley-de-los-grandes-números." class="section level3">
+<h3>Ley de los grandes números.</h3>
 <p>Considere el siguiente espacio muestral para un evento aleatorio:</p>
 <p>28 40 28 33 20 31 29 27 17 21</p>
 <p>¿Qué valor toma el estadístico <span class="math inline">\(\bar{X}\)</span>?</p>
 <p>Haciendo el cálculo, vemos que <span class="math inline">\(\bar{X}=27.4\)</span></p>
 <p>El objetivo es <strong>inferir</strong>, el parámetro <span class="math inline">\(\mu\)</span> (valor de la media problacional) a partir del valor de la media muestral <span class="math inline">\(\bar{X}\)</span>.</p>
-<p>Si consideramos otra muestra aleatoria con n=10, tendremos una valor para <span class="math inline">\(\bar{X}\)</span> distinto.</p>
-<p>¿Qué sucede si consideramas una gran cantidad de muestras con tamaño 10 y estimamos su media?</p>
+<p>Si consideramos otra muestra aleatoria con n=10, tendremos una valor para <span class="math inline">\(\bar{X}\)</span> <strong>distinto</strong>.</p>
+<p>¿Qué sucede si consideramps una gran cantidad de muestras con tamaño 10 y estimamos su media?</p>
 <p><strong>La respuesta es que la distribución muestral del estadístico <span class="math inline">\(\bar{X}\)</span>, estará centrado en el valor de la media poblacional.</strong> Lo anterior ocurre debido a la <strong>ley de los grandes números</strong>.</p>
 <p>Esta ley es una regularidad empírica que garantiza que si tomamos observaciones al azar de cualquier población de media finita <span class="math inline">\(\mu\)</span>. A medida que el número de observaciones obtenidas aumenta, la media <span class="math inline">\(\bar{X}\)</span> de los valores observados se acerca más y más a <span class="math inline">\(\mu\)</span>, <strong>la media poblacional.</strong></p>
 <p>La siguiente gráfica representa este comportamiento con los datos de la muestra de tamaño n=10, previamente indicados.</p>
 <p><img src="/img/ley.jpg" /></p>
-<p>Este comprtamiento esta explicado por:</p>
-</div>
-<div id="ley-de-los-grandes-números" class="section level3">
-<h3>Ley de los grandes números</h3>
+<p>Este comportamiento esta explicado por la <strong>Ley de los grandes números</strong></p>
 <p>La siguiente gráfica indica el comportamiento de la distribución muestral de <span class="math inline">\(\bar{X}\)</span> para 1000 muestras de tamaño 10 , (n=10).</p>
 <p><img src="/img/dmuestral.jpg" /></p>
 <div id="dos-propiedades-importantes-de-las-distribuciones-muestrales-derivadas-de-la-ley-de-los-grandes-números." class="section level4">
@@ -158,7 +162,7 @@ siguientes:</p>
 </div>
 <div id="definción-de-estimador-insesgado-para-la-media" class="section level3">
 <h3>Definción de estimador insesgado para la media:</h3>
-<p><strong>La propiedad del estadístico {X}, cuya distribución muestral esta centrada en el valor del parámetro <span class="math inline">\(\mu\)</span></strong></p>
+<p><strong>La propiedad del estadístico <span class="math inline">\(\bar{X}\)</span>, cuya distribución muestral está centrada en el valor del parámetro <span class="math inline">\(\mu\)</span></strong></p>
 <p>En otras palabras, si tomamos muchas muestras de tamaño <strong>n</strong>, entonces, su <strong>media</strong> reflejará con precisión el valor poblacional y por lo tanto <strong>es un estimador insesgado</strong>.</p>
 <p>2.- . La distribución muestral <strong>tiene menos dispersión</strong> que las muestras individuales.</p>
 <p>De hecho si la dispersión de la población es <span class="math inline">\(\sigma\)</span>, la <strong>desviación estándar</strong> de la distribución muestral del estadístico <span class="math inline">\(\bar{X}\)</span> será:</p>
@@ -166,26 +170,33 @@ siguientes:</p>
 <p><img src="/img/stddev_muestral.jpg" /></p>
 <p>En cuanto a <strong>la forma de la distribución</strong> es preciso indicar que si la distribución poblacional es <strong>normal</strong>, también lo es la <strong>distribución de la media muestral</strong>.</p>
 <p><strong>¿Qué ocurre cuando la distribución poblacional no es normal?</strong></p>
-<p>A medida que aumenta el tamaño de la muestra, la distribución de <span class="math inline">\(\bar{X}\)</span> cambia de forma: se parece menos a la distribución de la población muestreada y cada vez más a una <strong>distribución normal.</strong></p>
+<p>A medida que aumenta el tamaño de la muestra, la distribución de <span class="math inline">\(\bar{X}\)</span> cambia de forma: <strong>se parece</strong> menos a la distribución de la población muestreada y <strong>cada vez más a una distribución normal.</strong></p>
 <p>Este comportamiento se establece formalmente por el <strong>TEOREMA DE LIMITE CENTRAL:</strong></p>
-<div id="sea-una-muestra-aleatoria-simple-de-tamaño-n-de-cualquier-población-de-media-mu-y-desviación-estándar-finita-sigma.-cuando-n-es-grande-la-distribución-de-la-media-muestral-es-aproximadamente-normal" class="section level5">
-<h5>Sea una muestra aleatoria simple de tamaño n de cualquier población de media <span class="math inline">\(\mu\)</span> y desviación estándar finita <span class="math inline">\(\sigma\)</span>. Cuando <strong>n</strong> es grande, la distribución de la media muestral es aproximadamente normal:</h5>
+</div>
+<div id="teorema-del-límite-central." class="section level2">
+<h2>Teorema del límite central.</h2>
+<div id="sea-una-muestra-aleatoria-simple-mas-de-tamaño-n-de-cualquier-población-de-media-mu-y-desviación-estándar-finita-sigma." class="section level5">
+<h5>Sea una muestra aleatoria simple (MAS) de tamaño n de cualquier población de media <span class="math inline">\(\mu\)</span> y desviación estándar finita <span class="math inline">\(\sigma\)</span>.</h5>
+</div>
+<div id="cuando-n-es-grande-la-distribución-de-la-media-muestral-es-aproximadamente-normal" class="section level5">
+<h5>Cuando <strong>n</strong> es grande, la distribución de la media muestral es aproximadamente normal:</h5>
 <p><span class="math display">\[N(\mu, \frac{\sigma}{\sqrt(n)})\]</span>
 La siguiente figura muestra la operación del <strong>teorema de límite central</strong> sobre la distribución muestral para 4 tamaños de muestra distintos.</p>
 <p><img src="/img/limitec.jpg" /></p>
 <p><strong>Importante:</strong> El tamaño <strong>n</strong> que debe tener la muestra para que {X} sea aproximadamente normal depende de la distribución de la muestra particular, por lo que, es un rasgo sujeto a validación empírica.</p>
 </div>
+<div id="importante" class="section level5">
+<h5>Importante:</h5>
+<p><strong>El teorema de límie central nos permite realizar cálculos de probabilidad incluso cuando la distribución de la población no es normal.</strong></p>
 </div>
-<div id="el-teorema-de-límie-central-nos-permite-realizar-calculos-de-probabilidad-incluso-cuando-la-distribución-de-la-población-no-es-normal." class="section level3">
-<h3>El teorema de límie central nos permite realizar calculos de probabilidad incluso cuando la distribución de la población no es normal.</h3>
 <div id="ejercicio-2" class="section level4">
 <h4>Ejercicio 2</h4>
 <p>El tiempo X que un autobús en la ruta central de transporte público de Rio de Janeiro tarda en llegar a su destino, esta determinado por una distribución exponencial. El tiempo medio es <span class="math inline">\(\mu\)</span> = 1 hora y la desviación estándar es <span class="math inline">\(\sigma\)</span> = 1 hora.</p>
 <p>La dirección de transporte público de la ciudad hace una inspección para medir la eficiencia de la ruta central tomando una muestra de 70 trayectos.</p>
-<p>Considere que con base en el <strong>teorema del límite central</strong> la media muestral <span class="math inline">\(\mu\)</span> del tiempo (en horas) necesario para recorrer la ruta en una muestra de 70 unidades tiene aproximadamente una distribución normal.</p>
+<p>Considere que, con base en el <strong>teorema del límite central</strong>, la media muestral <span class="math inline">\(\bar{x}\)</span> del tiempo (en horas) necesario para recorrer la ruta en una muestra de 70 trayectos tiene aproximadamente una <strong>distribución normal</strong>.</p>
 <p>1.- Determine el valor de la media muestral y la desviación estándar.</p>
 <p>2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto sea superior a 50 minutos? Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para <span class="math inline">\(P(X\geq.83)\)</span> por que 50/60=.83.</p>
-<p><em>Note puede usar tablas o función <code>pnorm</code> (k,<span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>) en R, la cual permite estimar la probabilidad acumulada hasta el umbral k indicado (área a la izquierda de la distribución normal).</em></p>
+<p><em>Note puede usar tablas o la función <code>pnorm</code> (k,<span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>) en R, la cual permite estimar la probabilidad acumulada hasta el umbral k indicado (área a la izquierda de la distribución normal).</em></p>
 </div>
 <div id="ejercicio-3" class="section level4">
 <h4>Ejercicio 3</h4>
@@ -194,7 +205,6 @@ La siguiente figura muestra la operación del <strong>teorema de límite central
 de invertir en bolsa.</p>
 <p>1.- ¿Cuál es la probabilidad (suponiendo que los rendimientos anuales de las acciones mantienen la misma variación) de que la media de los rendimientos anuales de las acciones en los próximos 45 años supere el 13%?</p>
 <p>2.- ¿Cuál es la probabilidad de que esta media de rendimientos sea menor del 4%?</p>
-</div>
 </div>
 <div id="ejercicio-4" class="section level3">
 <h3>Ejercicio 4</h3>
@@ -205,8 +215,166 @@ de invertir en bolsa.</p>
 <li><p>¿Cuál es la probabilidad de que la nota media <span class="math inline">\(\mu\)</span> de estos estudiantes sea igual o mayor que 19?</p></li>
 </ol>
 </div>
-<div id="representación-gráfica-de-la-variación-muestral" class="section level3">
-<h3>Representación gráfica de la variación muestral</h3>
-<p>Frecuentemente estamos interesados en determinar el comportamiento de una temporal de un variable, concretamente</p>
+</div>
+<div id="iii-estimación-de-intervalos-de-confianza" class="section level2">
+<h2>III Estimación de intervalos de confianza:</h2>
+<p>Dada la naturaleza aleatoria del proceso de muestreo, cuando planteamos conclusiones sobre un parámetro (poblacional) a partir de los estadísticos (muestrales), existe un margen de error denominado <strong>error de estiación</strong></p>
+<p>Si bien, podemos establecer un rango probabilísitico que garantiza inferir un parámetro poblacional a partir del dato muestral, a este rango lo denominamos <strong>intervalo de confianza</strong> y está exprezado en términos porcentuales.</p>
+<p>Si consideramos la <strong>distribución normal</strong>, sabemos por la regla 68-65-99.7 que <span class="math inline">\(\bar{x}+-\sigma=68\)</span>, <span class="math inline">\(\bar{x}+-\sigma=95\)</span>,<span class="math inline">\(\bar{x}+-\sigma=99.7\)</span> Estos rangos representan intervalos de confianza que garantizan que si consideramos un gran número de muestras, la media poblacional <span class="math inline">\(\mu\)</span> se ubicará entre esos limites, en el <span class="math inline">\(68\%\)</span>,<span class="math inline">\(95\%\)</span>,<span class="math inline">\(99.7\%\)</span> de las muestras.</p>
+<p><strong>Ejemplo</strong></p>
+<p>Se tienen resultados de una prueba sobre habilidades matemáticas que registra un puntaje en el intervalo [0,500], con un resultado promedio de <span class="math inline">\(\{x}=272\)</span> aplicados a una muestra particular de <strong>840</strong> <strong>hombres</strong> jóvenes entre 21-25. La población de hombres jóvenes es de 9.5 millones y la desviación estándar de la población es <span class="math display">\[\sigma=60\]</span></p>
+<p>¿Cómo variaría la media muestral <span class="math inline">\(\bar{x}\)</span> si tomáramos muchas muestras de 840 hombres jóvenes de esta misma población?</p>
+<p>La ley de los grandes números nos garantiza que la media poblacional <span class="math inline">\(\mu\)</span> debe estar cerca de <span class="math inline">\(\bar{x}=272\)</span></p>
+<ul>
+<li><p>Recordemos que el <strong>teorema de limte central</strong> nos permite afirmar que una media <span class="math inline">\(\bar{x}\)</span> calculada a partir de 840 individuos tiene una distribución que se parece mucho a una <strong>distribución normal</strong>.</p></li>
+<li><p>La media de esta <strong>distribución normal</strong> es la misma que la media desconocida de la población <span class="math inline">\(\mu\)</span></p></li>
+<li><p>La desviación estándar de <span class="math inline">\(\sigma\)</span> en una muestra aleatoria simple de 840 hombres es <span class="math inline">\(\frac{\sigma}{\sqrt(840)}\)</span>, donde <span class="math inline">\(\sigma\)</span> es la desviación estándar de las puntuaciones para la población.</p></li>
+</ul>
+<p>Entonces la desviación estándar de la distribución muestral es: <span class="math inline">\(\frac{\sigma}{\sqrt(840)}=\frac{60}{\sqrt(840)}=2.1\)</span></p>
+<p>Entonces la caracterización de la distribución muestral es <strong>N(270,2.1)</strong></p>
+<p>Si seleccionáramos muchas muestras repetidas de tamaño 840 y hallásemos la puntuación media de cada una de ellas, podríamos obtener la media <span class="math inline">\(\mu\)</span> = 272 de la primera muestra, <span class="math inline">\(\mu\)</span> = 268 de la segunda muestra, <span class="math inline">\(\mu\)</span> = 273 de la tercera muestra, etc.</p>
+<p>Si representáramos de forma gráfica la distribución de estas medias,
+<strong>obtendríamos la distribución normal con media igual a la media desconocida de la población y desviación esándar igual a 2.1</strong>.</p>
+<p>La <strong>inferencia</strong> sobre la <span class="math inline">\(\mu\)</span> desconocida utiliza esta distribución de <span class="math inline">\(\bar{x}\)</span>.</p>
+<p>La figura siguiente presenta esta distribución.</p>
+<p>Los distintos valores de <span class="math inline">\(\bar{x}\)</span> se indican a lo largo del eje de las abscisas y <strong>la curva normal</strong> indica la probabilidad de estos valores.</p>
+<p>*Distribución muestral de medias de tamaño 840 para personas del sexo masculino entre 21 y 25 años. con base en resultados del exámen de aptitud matemática. Nota (MAS: Muestra aleatoria simple).</p>
+<p><img src="/img/inferenciaconf.jpg" /></p>
+</div>
+<div id="intervalos-de-confianza" class="section level2">
+<h2>Intervalos de confianza</h2>
+<p>La siguiente figura muestra la información anterior aplicando la regla 68-95-99.7</p>
+<p><img src="/img/confint.jpg" /></p>
+<p>Note que el área bajo la curva muestra la proporción total de datos.</p>
+<p>Mientras que el intervalo <span class="math inline">\(\mu+4.2\)</span> <span class="math inline">\(2\sigma=2*2.1=4.2\)</span> indica el área dentro de la cual se localiza el 95% de los datos.</p>
+<p><strong>En términos de probabilidades podemos afirmar que hay un 95% de probabilidades de que la media poblacional se encuentre dentro de este intervalo.</strong> En otras palabras, si examinamos la distribución de un gran número de muestras aleatorias simples (MAS) de igual tamaño, tenemos un <span class="math inline">\(95\%\)</span> de <strong>confianza</strong> de que la media poblacional se encuentre en este intervalo <span class="math inline">\(\mu+/-4.1\)</span>.</p>
+<p>Con un <span class="math inline">\(95\%\)</span> de <strong>confianza</strong>, la media desconocida de la prueba de habilidades matemática se encuentra en el intervalo <strong>[267.8, 267,8]</strong></p>
+<p>Cuando indicamos que la media poblacional se ubica en el intervalo <span class="math inline">\(\mu+2\sigma\)</span>, esto implica que tenemos un margen de error del <span class="math inline">\(5\%\)</span> distribuido en cada una de las dos colas de la distribución acorde a: <span class="math inline">\(\alpha=\frac{1-c}{2}\)</span> .</p>
+<p>Donde <strong>C</strong> es el nivel de confianza.</p>
+<p>El intervalo de números contenidos entre <span class="math inline">\(\bar{x}+/-4.2\)</span> se llama <strong>intervalo de confianza</strong> para <span class="math inline">\(\mu\)</span>. Denotado como <strong>C</strong> y exprezado en forma decimal.</p>
+<p>Así, el intervalo de confianza del <span class="math inline">\(95\%\)</span> será referido como <strong>C= 0.95</strong></p>
+<p>La estructura del inervalo de confianza quedará definida por <span class="math inline">\(\bar{x}\ +/- se\)</span></p>
+<p>Donde: <strong>se</strong>= Error de estimación.</p>
+<p>El <strong>error de estimación</strong> indica la precisión que creemos que tiene nuestra suposición y se basa en la variabilidad o grado de dispersión (<span class="math inline">\(\sigma\)</span>) de la estimación.</p>
+<p>Y es un intervalo de confianza del <span class="math inline">\(95\%\)</span> por que contendrá el parámetro <span class="math inline">\(\mu\)</span> <strong>desconocido</strong> en un <span class="math inline">\(95\%\)</span> de las muestras.</p>
+<p>La siguiente figura muestra 25 muestras del mismo tamaño, extraidas de la misma población y sus respectivos intervalos de confianza del <span class="math inline">\(95\%\)</span>.</p>
+<p><img src="/img/intervalosmuestra.jpg" /></p>
+<p>Al considerar un gran número de muestreos, el <span class="math inline">\(95\%\)</span> de las muestras dará intervalos que contiene el parámetro poblacional <span class="math inline">\(\mu\)</span>.</p>
+<div id="ejercicio-5" class="section level4">
+<h4>Ejercicio 5</h4>
+<p>Una encuesta del dairio El imparcial sobre temas de interés
+para la mujer entrevistó a 1.025 mujeres seleccionadas aleatoriamente en la zona metropolitana de la Ciudad de México (ZMCDMX). El 49% de estas mujeres encuestadas manifestó no tener suficiente tiempo para ellas.</p>
+<ol style="list-style-type: lower-alpha">
+<li>La encuesta daba en sus conclusiones un error de estimación de ±4.1 por ciento con una confianza del 95%.</li>
+</ol>
+<p>Calcula un intervalo de confianza del <span class="math inline">\(95\%\)</span> para el porcentaje de las mujeres adultas que creen que no tienen suficiente tiempo para ellas.</p>
+</div>
+<div id="ejercicio-6" class="section level4">
+<h4>Ejercicio 6</h4>
+<p>Se aplica una prueba de conocimientos a una muestra aleatoria simple de 2000 personas de la población de la ciudad de Monterrey. Y se obtiene una media de 560, <span class="math inline">\(\bar{x}=560\)</span> y una desviación estándar <span class="math inline">\(\sigma=120\)</span>.</p>
+<p>1.-La distribución de <span class="math inline">\(\bar{x}\)</span> es aproximadamente normal. Su media es <span class="math inline">\(\mu\)</span> = 560.</p>
+<p>¿Cuál es el valor de la desviación estándar?</p>
+<p>2.-Dibuja la curva normal que describa cómo varía <span class="math inline">\(\bar{x}\)</span> en muchas muestras de esta población. Señala su media <span class="math inline">\(\mu = 560\)</span> y los valores situados a una, dos y tres desviaciones estándar a cada lado de la media.</p>
+<p>3.-Según la regla del 68-95-99,7, aproximadamente el <span class="math inline">\(95\%\)</span> de todos los valores de <span class="math inline">\(\bar{x}\)</span> se sitúan entre _______ de la media de esta curva.</p>
+<p>Llama <strong>m</strong> al error de estimación. Señala la zona entre la media menos <strong>m</strong> y la media más <strong>m</strong> en el eje de las abscisas de tu gráfico.</p>
+</div>
+</div>
+<div id="síntesis." class="section level2">
+<h2>Síntesis.</h2>
+<p>Un intervalo de confianza de nivel <strong>C</strong> para la estimación de un parámetro tiene dos partes:</p>
+<ul>
+<li><p>Un intervalo calculado a partir de dos datos: <strong>estimación +- error de estimación</strong></p></li>
+<li><p>Un nivel de <strong>confianza C</strong> que indica la probabiliad de que en un muestreo repetido, el intervalo contenga el verdadero valor del parámetro.</p></li>
+</ul>
+<div id="iv-intervalos-de-confianza-para-la-media-mu" class="section level3">
+<h3>IV Intervalos de confianza para la media <span class="math inline">\(\mu\)</span></h3>
+<p>El razonamiento anterior se puede aplicar a cualquier nivel de confianza <strong>C</strong></p>
+<p>Si la media poblacional <span class="math inline">\(\mu\)</span> es conocida y consideramos el caso de la distribución de la media muestral <span class="math inline">\(\{x}\)</span> podemos aplicar el procedimiento para estandarizar y obtener el estadístico <strong>z</strong> <span class="math inline">\(z=\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt(n)}}\)</span></p>
+<p>Recuerde que z nos dice la distancia de la media muestral, respecto de la poblacional en términos de desviaciones estándar.</p>
+<p>¿Qué tan lejos esta <span class="math inline">\(\{x}\)</span> de <span class="math inline">\(\mu\)</span> en desviaciones estándar?</p>
+<p>Debido a que <span class="math inline">\(\bar{X}\)</span> tiene una distribución normal, <strong>z</strong> tiene una distribución normal estandarizada <strong>N(0,1)</strong></p>
+<p>El nivel de confianza esta representado en la curva normal por la parte <strong>central</strong> entre el intervalo que esta delimitado por los valores z a la derecha de la media y a la izquierda.</p>
+<p>Por ejemplo, para estimmar un intervalo de confianza del <span class="math inline">\(80\%\)</span>, la parte central de la distribución deben contener <span class="math inline">\(80\%\)</span> de los datos lo que implica que cada cola de la distribución debe contener <span class="math inline">\(10\%\)</span> estos es <span class="math inline">\(\frac{1-C}{2}=\frac{1-.80}{2}=10\)</span></p>
+<p>Por lo tanto debemos seleccionar en la tabla de la distribución normal, (Tabla A) el valor <strong>z</strong> que este asociado con el 90% de los datos, ya que como recordará la tabla permite tener las probabilidades a la izquierda del valor estandarizado Z.</p>
+<p>Acorde con las tablas de la <strong>distribución normal</strong>, el valor <strong>Z=1.28</strong>, está asociado con una probabilidad del <span class="math inline">\(90\%\)</span>.</p>
+<p>Entonces el intervalo con nivel de confianza del <span class="math inline">\(80\%\)</span>, estará ubicado entre [z=-1.28, z=1.28].</p>
+<p><img src="/img/ochenta.jpg" /></p>
+<p>Las siguiente gráficamuestra la relación entre el valor crítico <strong>Z</strong> y nivel de confianza <strong>C</strong></p>
+<p><img src="/img/doscolas.jpg" /></p>
+<div id="valore-crítico." class="section level5">
+<h5>Valore crítico.</h5>
+<ul>
+<li><strong>Valor crítico <span class="math inline">\(z^{*}\)</span>:</strong> Es el valor que captura la probabilidad central <strong>C</strong> por debajo de la curva normal estandarizada entre -Z y Z.</li>
+</ul>
+<p>Entonces el intervalo de confianza para la población de media desconocida es: <span class="math inline">\(\bar{x}+-z^{*}\frac{\sigma}{\sqrt{n}}\)</span></p>
+<p>Los intrevalos de confianza más comnes son:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Nivel de confianza</th>
+<th align="center">Área de la cola</th>
+<th align="center"><span class="math inline">\(z^{*}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">90<span class="math inline">\(\%\)</span></td>
+<td align="center">0.05</td>
+<td align="center">1.645</td>
+</tr>
+<tr class="even">
+<td align="left">95<span class="math inline">\(\%\)</span></td>
+<td align="center">0.025</td>
+<td align="center">1. 960</td>
+</tr>
+<tr class="odd">
+<td align="left">99<span class="math inline">\(\%\)</span></td>
+<td align="center">0.005</td>
+<td align="center">2.576</td>
+</tr>
+</tbody>
+</table>
+<p>Nota si la distribución subyacente <strong>no es normal</strong>, los valores z son aproximadamente correctos cuando <strong>n</strong> es grande.</p>
+<p>Ejemplo Intervalos de confianza.</p>
+<p>Encuesta a directores académicos en universidades públicas nacionales.</p>
+<p>Un estudio sobre la carrera profesional de los directores académicos envió cuestionarios a una muestra aleatoria simple de 160 universidades publicas pertenecientes a la Asociación nacional de Universidades e instituciones de educación superior (ANUIES).</p>
+<p>Hubo 114 respuestas. La media de tiempo que estos 114 directores habían pasado en su universidad actual era de 11.78 años.</p>
+<p>Calcula un intervalo de confianza del 99% para el número medio de años que los directores académicos han estado en su Universidad actual. (Supón que se sabe que la desviación estándar del
+tiempo de permanencia de los directores en la universidad es de 3.2 años.)</p>
+</div>
+</div>
+<div id="solución" class="section level3">
+<h3>Solución</h3>
+<p><span class="math display">\[\bar{x}+-Z_{99}^{*}\frac{\sigma}{\sqrt(n}=11.78+2.576(0.2997075)\]</span></p>
+<p>El intervalo requerido es: 11.0079 a 12.5520</p>
+<p><em>Pendiente incluir plot con distribucion normal N(11.78,0.2997075), n=114</em></p>
+<pre class="r"><code>xbar&lt;-11.78
+sigma&lt;-3.2
+n&lt;-114
+z&lt;-2.576
+
+sigmamuestra&lt;-sigma/sqrt(n)
+
+ci99d&lt;-xbar+z*(sigma/sqrt(n))
+ci99i&lt;-xbar-z*(sigma/sqrt(n))</code></pre>
+<div id="ejercicio-7" class="section level5">
+<h5>Ejercicio 7</h5>
+<p>A continuación se presentan los resultados de la prueba IQ de 31 estudiantes de primero de bachillerato:</p>
+<p>114 100 104 89 102 91 114 114 103 105
+108 130 120 132 111 128 118 119 86 72
+111 103 74 112 107 103 98 96 112 112 93</p>
+<p>1.- Los 31 estudiantes son una muestra aleatoria simple de todas las estudiantes de primero de bachillerato de la ciudad de Puebla. Supón que la desviación estándar de la distribución de los IQ de esta población es conocida, <span class="math inline">\(\sigma= 15\)</span>. Calcula un intervalo de confianza del 99% para la media del IQ de esta población.</p>
+</div>
+</div>
+<div id="énfasis" class="section level3">
+<h3>Énfasis</h3>
+<p><span class="math display">\[Error-de-estimación  = z^{*}\frac{\sigma}{\sqrt{n}}\]</span></p>
+<p>Distinga las varibales que hacen que el error de estimación sea menor:</p>
+<ul>
+<li><p>Una muestra mas grande</p></li>
+<li><p>Una menor dispersión <span class="math inline">\(\sigma\)</span></p></li>
+<li><p>Un nivel de confianza menor, ya que implica valor crítico menor.</p></li>
+</ul>
+</div>
 </div>
 </div>
