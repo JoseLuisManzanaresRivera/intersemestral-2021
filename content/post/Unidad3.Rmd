@@ -472,7 +472,7 @@ El intervalo de números contenidos entre $\bar{x} \pm4.2$ se llama **intervalo 
 Así, el intervalo de confianza del $95\%$ será referido como **C= 0.95**
 
 
-La estructura del inervalo de confianza quedará definida por $\bar{x}\ +/- se$ 
+La estructura del inervalo de confianza quedará definida por $\bar{x}\ \pm se$ 
 
 Donde: **se**= Error de estimación.
 
@@ -481,7 +481,7 @@ El **error de estimación** indica la precisión que creemos que tiene nuestra s
 Y es un intervalo de confianza del $95\%$ por que contendrá el parámetro $\mu$  **desconocido** en un $95\%$ de las muestras. 
 
 
-La siguiente figura muestra 25 muestras del mismo tamaño, extraidas de la misma población y sus respectivos intervalos de confianza del $95\%$. 
+La siguiente figura muestra 25 muestras del mismo tamaño, extraídas de la misma población y sus respectivos intervalos de confianza del $95\%$. 
 
 
 ![](/img/intervalosmuestra.jpg)
@@ -491,12 +491,12 @@ Al considerar un gran número de muestreos, el $95\%$ de las muestras dará inte
 
 #### Ejercicio 5
 
-Una encuesta del dairio El imparcial sobre temas de interés
-para la mujer entrevistó a 1.025 mujeres seleccionadas aleatoriamente en la zona metropolitana de la Ciudad de México (ZMCDMX). El 49% de estas mujeres encuestadas manifestó no tener suficiente tiempo para ellas.
+Una encuesta del dairio **El imparcial** sobre temas de interés
+para la mujer entrevistó a 1,025 mujeres seleccionadas aleatoriamente en la zona metropolitana de la Ciudad de México (ZMCDMX). El 49% de estas mujeres encuestadas manifestó no tener suficiente tiempo para ellas.
 
-a) La encuesta daba en sus conclusiones un error de estimación de ±4.1 por ciento con una confianza del 95%. 
+La encuesta daba en sus conclusiones un error de estimación de $\pm4.1$ por ciento con una confianza del $95\%$. 
 
-Calcula un intervalo de confianza del $95\%$ para el porcentaje de las mujeres adultas que creen que no tienen suficiente tiempo para ellas.
+a) Calcula un intervalo de confianza del $95\%$ para el porcentaje de las mujeres adultas que creen que no tienen suficiente tiempo para ellas.
 
 
 #### Ejercicio 6 
