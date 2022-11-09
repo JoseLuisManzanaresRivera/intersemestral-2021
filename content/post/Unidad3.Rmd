@@ -365,7 +365,7 @@ La dirección de transporte público de la ciudad  hace una inspección para med
 
 Considere que, con base en el **teorema del límite central**, la media muestral $\bar{x}$ del tiempo (en horas) necesario para recorrer la ruta en una muestra de 70 trayectos tiene aproximadamente una **distribución normal**.
 
-1.- Determine el valor de la media muestral y la desviación estándar.
+1.- Determine el valor de la desviación estándar muestral.
 
 2.- ¿Cuál es la probabilidad de que la media del tiempo del trayecto sea superior a 50 minutos?  Recuerde que 1 hora = 60 minutos, entonces nos interesa la probabilidad para $P(X\geq.83)$ por que 50/60=.83.
 
