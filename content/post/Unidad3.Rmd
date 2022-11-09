@@ -378,7 +378,7 @@ Considere que, con base en el **teorema del límite central**, la media muestral
 
 Rendimiento de acciones. La distribución de los rendimientos anuales de las acciones es aproximadamente simétrica, aunque las observaciones extremas son más frecuentes que en una distribución normal. Como esta falta de normalidad no es muy fuerte, la media de los rendimientos, incluso durante un número pequeño de años, es aproximadamente normal. 
 
-A largo plazo, los rendimientos anuales varían con una media próxima al $6\%$ y una desviación típica próxima al $23\%$. Jaime piensa retirarse dentro de 45 años y está considerando la posibilidad
+A largo plazo, los rendimientos anuales varían con una media próxima al $6\%$ y una desviación estándar próxima al $23\%$. Jaime piensa retirarse dentro de 45 años y está considerando la posibilidad
 de invertir en bolsa. 
 
 1.- ¿Cuál es la probabilidad (suponiendo que los rendimientos anuales de las acciones mantienen la misma variación) de que la media de los rendimientos anuales de las acciones en los próximos 45 años supere el 13%?
