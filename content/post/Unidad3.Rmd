@@ -566,7 +566,7 @@ Las siguiente gráficamuestra la relación entre el valor crítico **Z** y nivel
 
 Entonces el intervalo de confianza para la población de media desconocida  es: $\bar{x}\pm z^{*}\frac{\sigma}{\sqrt{n}}$
 
-Los intrevalos de confianza más comnes son: 
+Los intrevalos de confianza más comunes son: 
 
 
 | Nivel de confianza | Área de la cola | $z^{*}$
