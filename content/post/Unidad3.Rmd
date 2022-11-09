@@ -297,12 +297,11 @@ La siguiente gráfica indica el comportamiento de la distribución muestral de $
 
 Como vemos esta distribución tiene como media el parámetro poblacional $\mu$. Que en este caso es **25**
 
+### Estadístico insesgado.
 
 La distribución de $\bar{X}$ se halla centrada en $\mu$. 
 
 En un muestreo repetido, $\bar{X}$ tomará algunas veces valores mayores que el verdadero valor del parámetro $\mu$ y otras veces, valores menores. 
-
-### Estadístico insesgado.
 
 No existe una tendencia sistemática a **subestimar** o a **sobrestimar** el valor del parámetro. 
 
@@ -329,6 +328,8 @@ $$\frac{\sigma}{\sqrt(n)}$$
 
 En cuanto a **la forma de la distribución** es preciso indicar que si la distribución poblacional es **normal**, también lo es la **distribución de la media muestral**.
 
+## Teorema del límite central.
+
 **¿Qué ocurre cuando la distribución poblacional no es normal?** 
 
 
@@ -337,7 +338,6 @@ A medida que aumenta el tamaño de la muestra, la distribución de $\bar{X}$ cam
 
 Este comportamiento se establece formalmente por el **TEOREMA DE LIMITE CENTRAL:** 
 
-## Teorema del límite central.
 
 ##### Sea una muestra aleatoria simple (MAS) de tamaño n de cualquier población de media $\mu$ y desviación estándar finita $\sigma$.
 
