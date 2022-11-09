@@ -594,7 +594,7 @@ tiempo de permanencia de los directores en la universidad  es de 3.2 años.)
 ### Solución
 
 
-$$\bar{x}+-Z_{99}^{*}\frac{\sigma}{\sqrt(n}=11.78+2.576(0.2997075)$$
+$$\bar{x}\pm Z_{99}^{*}\frac{\sigma}{\sqrt(n}=11.78 \pm 2.576(0.2997075)$$
 
 El intervalo requerido es: 11.0079 a 12.5520
 
