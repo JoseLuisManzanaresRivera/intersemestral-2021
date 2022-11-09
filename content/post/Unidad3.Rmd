@@ -569,7 +569,7 @@ Entonces el intervalo de confianza para la población de media desconocida  es: 
 Los intrevalos de confianza más comunes son: 
 
 
-| Nivel de confianza | Área de la cola | $z^{*}$
+| Nivel de confianza | Área de la cola | $z^{*}$ |
 :---   |    :----:   | :----:|
 90$\%$ |0.05  | 1.645
 95$\%$ |0.025 | 1. 960
