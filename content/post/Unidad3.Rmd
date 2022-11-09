@@ -18,7 +18,7 @@ Iniciaremos en esta sesión el contenido correspondiente a estadística inferenc
 
 ### Metas de aprendizaje.
 
-+ El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el teorema de límite central para la determinación de probabilidades.
++ El alumno será capaz de aplicar los conocimientos sobre distribución normal, considerando el **teorema de límite central** para la determinación de probabilidades.
 
 + Será capaz de implementar el cálculo de probabilidades aplicando la aproximación normal a la distribución binomial. 
 
