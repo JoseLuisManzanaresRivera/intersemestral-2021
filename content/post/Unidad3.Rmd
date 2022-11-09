@@ -601,6 +601,7 @@ El intervalo requerido es: 11.0079 a 12.5520
 *Pendiente incluir plot con distribucion normal N(11.78,0.2997075), n=114*
 
 
+
 ```{r, echo=FALSE}
 
 #define population mean and standard deviation
@@ -628,6 +629,7 @@ axis(side = 1, at = axis_bounds, pos = 0)
 
 11.78+3.2
 ```
+![](/img/dsvooo.jpg)
 
 
 ```{r}
