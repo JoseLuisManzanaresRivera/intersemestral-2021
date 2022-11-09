@@ -410,7 +410,7 @@ Si consideramos la **distribución normal**, sabemos por la regla 68-65-99.7 que
 
 **Ejemplo** 
 
-Se tienen resultados de una prueba sobre habilidades matemáticas que registra un puntaje en el intervalo [0,500], con un resultado promedio de $\{x}=272$ aplicados a una muestra particular de **840**  **hombres** jóvenes entre 21-25. La población de hombres jóvenes es de 9.5 millones y la desviación estándar de la población es $$\sigma=60$$
+Se tienen resultados de una prueba sobre habilidades matemáticas que registra un puntaje en el intervalo [0,500], con un resultado promedio de $\bar{x}=272$ aplicados a una muestra particular de **840**  **hombres** jóvenes entre 21-25. La población de hombres jóvenes es de 9.5 millones y la desviación estándar de la población es $$\sigma=60$$
 
 ¿Cómo variaría la media muestral $\bar{x}$ si  tomáramos muchas muestras de 840 hombres jóvenes de esta misma población? 
 
