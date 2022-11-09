@@ -467,7 +467,7 @@ Cuando indicamos que la media poblacional se ubica en el intervalo $\mu+2\sigma$
 Donde **C** es el nivel de confianza.
 
 
-El intervalo de números contenidos entre $\bar{x}+/-4.2$ se llama **intervalo de confianza** para $\mu$.  Denotado como  **C** y exprezado en forma decimal. 
+El intervalo de números contenidos entre $\bar{x} \pm4.2$ se llama **intervalo de confianza** para $\mu$.  Denotado como  **C** y exprezado en forma decimal. 
 
 Así, el intervalo de confianza del $95\%$ será referido como **C= 0.95**
 
