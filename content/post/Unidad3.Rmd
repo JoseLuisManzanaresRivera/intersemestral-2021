@@ -521,7 +521,7 @@ Llama **m** al error de estimación. Señala la zona entre la media menos **m** 
 
 Un intervalo de confianza de nivel **C** para la estimación de un parámetro tiene dos partes: 
 
-+ Un intervalo calculado a partir de dos datos: **estimación** $/pm$ **error de estimación**
++ Un intervalo calculado a partir de dos datos: **estimación** $\pm$ **error de estimación**
 
 
 + Un nivel de **confianza C** que indica la probabiliad de que en un muestreo repetido, el intervalo contenga el verdadero valor del parámetro.
