@@ -1,7 +1,7 @@
 ---
 title: "Unidad 3"
 author: "José Luis Manzanares Rivera"
-date: 2022-11-13T22:08:14-05:00
+date: 2022-11-14T22:08:14-05:00
 categories: ["Distribución normal"]
 tags: ["Inferencia"]
 ---
@@ -722,6 +722,7 @@ de un intervalo de confianza?
 
 
 ```{r, include=FALSE}
+
 # Solución:
 
 # a)
@@ -986,7 +987,7 @@ En este caso la probabilidad que buscamos es:
 ```{r}
 1-pnorm(.3,0,0.316)
 
-pnorm(.3,0,0.316)
+
 
 ```
 
@@ -1292,7 +1293,7 @@ Para contrastar la hipótesis $H0 : µ = µ0$ a partir de una **muestra aleatori
 
 $$Z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt(n)}}$$
 
-![](/img/.jpg)
+![](/img/ztest.jpg)
 
 
 Para las pruebas de significacia de una cola y dos colas, los valores de contraste son los siguientes.
