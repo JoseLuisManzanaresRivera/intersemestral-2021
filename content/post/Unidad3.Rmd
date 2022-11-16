@@ -1,7 +1,7 @@
 ---
 title: "Unidad 3"
 author: "José Luis Manzanares Rivera"
-date: 2022-11-07T22:08:14-05:00
+date: 2022-11-14T22:08:14-05:00
 categories: ["Distribución normal"]
 tags: ["Inferencia"]
 ---
@@ -26,7 +26,7 @@ Iniciaremos en esta sesión el contenido correspondiente a estadística inferenc
 
 + Estudiará la **ley de los grandes números** y sus implicaciones en el contexto de la estimación de probabilidades.
 
-+ Comprenderá las nociones básicas sobre **inferencia estadística** en particular, la estimación de intervalos de confianza.
++ Comprenderá las nociones básicas sobre **inferencia estadística** en particular, la **estimación de intervalos de confianza**.
 
 + Al finalizar este tema el alumno podrá identificar las pruebas de significanción para valorar la evidencia de la afirmación sobre una poblaciión. 
 
@@ -481,7 +481,7 @@ El **error de estimación** indica la precisión que creemos que tiene nuestra s
 Y es un intervalo de confianza del $95\%$ por que contendrá el parámetro $\mu$  **desconocido** en un $95\%$ de las muestras. 
 
 
-La siguiente figura muestra 25 muestras del mismo tamaño, extraídas de la misma población y sus respectivos intervalos de confianza del $95\%$. 
+La siguiente figura presenta 25 muestras del mismo tamaño, extraídas de la misma población y sus respectivos intervalos de confianza del $95\%$. 
 
 
 ![](/img/intervalosmuestra.jpg)
@@ -491,10 +491,9 @@ Al considerar un gran número de muestreos, el $95\%$ de las muestras dará inte
 
 #### Ejercicio 5
 
-Una encuesta del dairio **El imparcial** sobre temas de interés
+Una encuesta del diario **El imparcial** sobre temas de interés
 para la mujer entrevistó a 1,025 mujeres seleccionadas aleatoriamente en la zona metropolitana de la Ciudad de México (ZMCDMX). El 49% de estas mujeres encuestadas manifestó no tener suficiente tiempo para ellas.
-
-La encuesta daba en sus conclusiones un error de estimación de $\pm4.1$ por ciento con una confianza del $95\%$. 
+La encuesta daba en sus conclusiones un **error de estimación** de $\pm4.1$ por ciento con una confianza del $95\%$. 
 
 a) Calcula un intervalo de confianza del $95\%$ para el porcentaje de las mujeres adultas que creen que no tienen suficiente tiempo para ellas.
 
@@ -502,8 +501,7 @@ a) Calcula un intervalo de confianza del $95\%$ para el porcentaje de las mujere
 #### Ejercicio 6 
 
 
-Se aplica una prueba  de conocimientos a una muestra aleatoria simple de 2000  personas de la población de la ciudad de Monterrey. Y se obtiene una media de 560, $\bar{x}=560$ y una desviación estándar $\sigma=120$.  
-
+Se aplica una prueba  de conocimientos a una muestra aleatoria simple de 2000  personas de la población de la ciudad de Monterrey. Y se obtiene una media de 560  y una desviación estándar $\sigma=120$.  La media $\bar{x}$ de los 1.000 resultados variará si repites el muestreo.
 
 1.-La distribución de $\bar{x}$ es aproximadamente normal. Su media es $\mu$ = 560.
 
@@ -534,16 +532,16 @@ El razonamiento anterior se puede aplicar a cualquier nivel de confianza **C**
 Si la media poblacional $\mu$ es conocida  y consideramos el caso de la distribución de la media muestral $\bar{x}$ podemos aplicar el procedimiento para estandarizar y obtener el estadístico **z** $z=\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt(n)}}$
 
 
-Recuerde que z nos dice la distancia de la media muestral, respecto de la poblacional en términos de desviaciones estándar.
+Recuerde que **z** nos dice la distancia de la media muestral, respecto de la poblacional en términos de desviaciones estándar.
 
-¿Qué tan lejos esta $\bar{x}$ de $\mu$ en desviaciones estándar?
+¿Qué tan lejos está $\bar{x}$ de $\mu$ en desviaciones estándar?
 
-Debido a que $\bar{X}$ tiene una distribución normal, **z** tiene una distribución normal estandarizada **N(0,1)**
+Debido a que $\bar{x}$ tiene una distribución normal, **z** tiene una distribución normal estandarizada **N(0,1)**
 
 
-El nivel de confianza esta representado en la curva normal por la parte **central** entre el intervalo que esta delimitado por los valores z a la derecha de la media y a la izquierda. 
+El nivel de confianza esta representado en la curva normal por la parte **central** entre el intervalo que esta delimitado por los valores **z** a la derecha de la media y a la izquierda. 
 
-Por ejemplo, para estimar un intervalo de confianza del $80\%$, la parte central de la distribución deben contener $80\%$ de los datos lo que implica que cada cola de la distribución debe contener $10\%$ estos es $\frac{1-C}{2}=\frac{1-.80}{2}=10$ 
+Por ejemplo, para estimar un intervalo de confianza del $80\%$, la parte central de la distribución deben contener $80\%$ de los datos, lo que implica que cada cola de la distribución debe contener $10\%$ esto es $\frac{1-C}{2}=\frac{1-.80}{2}=10$ 
 
 Por lo tanto debemos seleccionar en la tabla de la distribución normal, (Tabla A) el valor **z** que este asociado con el 90% de los datos, ya que como recordará la tabla permite tener las probabilidades a la izquierda del valor estandarizado Z.
 
@@ -559,7 +557,7 @@ Las siguiente gráficamuestra la relación entre el valor crítico **Z** y nivel
 
 ![](/img/doscolas.jpg)
 
-##### Valore crítico.
+##### Valores críticos.
 
 + **Valor crítico $z^{*}$:** Es el valor que captura la probabilidad central **C** por debajo de la curva normal estandarizada entre -Z y Z.
 
@@ -576,7 +574,7 @@ Los intrevalos de confianza más comunes son:
 99$\%$ |0.005 | 2.576
 
 
-Nota si la distribución subyacente **no es normal**, los valores z son aproximadamente correctos cuando  **n** es grande.
+**Nota**, si la distribución subyacente **no es normal**, los valores críticos  **z** son aproximadamente correctos cuando  **n** es grande.
 
 
 ### Ejemplo  Intervalos de confianza.
@@ -586,27 +584,29 @@ Encuesta a directores académicos en universidades públicas nacionales.
 
 Un estudio sobre la carrera profesional de los directores académicos envió cuestionarios a una muestra aleatoria simple de 160 universidades publicas pertenecientes a la Asociación nacional de Universidades e instituciones de educación superior (ANUIES).
 
-Hubo 114 respuestas. La media de tiempo que estos 114 directores habían pasado en su universidad actual era de 11.78 años. 
+Hubo 114 respuestas. La **media** de tiempo que estos 114 directores habían pasado en su universidad actual era de 11.78 años. 
 
-Calcula un intervalo de confianza del 99% para el número medio de años que los directores académicos han estado en su Universidad  actual. (Supón que se sabe que la desviación estándar del
+Calcula un **intervalo de confianza** del 99% para el número medio de años que los directores académicos han estado en su Universidad  actual. (Supón que se sabe que la **desviación estándar** del
 tiempo de permanencia de los directores en la universidad  es de 3.2 años.)
+
+
+![](/img/dsvooo.jpg)
 
 ### Solución
 
 
-$$\bar{x}\pm Z_{99}^{*}\frac{\sigma}{\sqrt(n}=11.78 \pm 2.576(0.2997075)$$
+$$\bar{x}\pm Z_{99}^{*}\frac{\sigma}{\sqrt(n)}=11.78 \pm 2.576(0.2997075)$$
 
 El intervalo requerido es: 11.0079 a 12.5520
-
-*Pendiente incluir plot con distribucion normal N(11.78,0.2997075), n=114*
-
 
 
 ```{r, echo=FALSE}
 
+11.78 + 2.576*(0.2997075)
+
 #define population mean and standard deviation
 population_mean <- 11.78
-population_sd <- 3.2
+population_sd <- 0.2997075
 
 #define upper and lower bound
 lower_bound <- population_mean - population_sd
@@ -627,9 +627,11 @@ axis_bounds <- seq(-sd_axis_bounds * population_sd + population_mean,
                     by = population_sd)
 axis(side = 1, at = axis_bounds, pos = 0)
 
-11.78+3.2
+
+
+
 ```
-![](/img/dsvooo.jpg)
+
 
 
 ```{r}
@@ -655,7 +657,32 @@ A continuación se presentan los resultados de la prueba IQ de 31 estudiantes de
 111 103 74 112 107 103 98 96 112 112 93
 
 
-1.- Los 31 estudiantes son una muestra aleatoria simple de todas las estudiantes de primero de bachillerato de la ciudad de  Puebla. Supón que la desviación estándar de la distribución de los IQ de esta población es conocida, $\sigma= 15$. Calcula un intervalo de confianza del 99% para la media del IQ de esta población.
+1.- Los 31 estudiantes son una muestra aleatoria simple de todas las estudiantes de primero de bachillerato de la ciudad de  Puebla. 
+
+Supón que la **desviación estándar** de la distribución de los IQ de esta población es conocida, $\sigma= 15$. Calcula un intervalo de confianza del 99% para la media del IQ de esta población.
+
+
+
+```{r, include=FALSE}
+
+estudiantes<-data.frame(califas=c(114, 100, 104, 89, 102, 91, 114, 114, 103, 105,
+108, 130, 120, 132, 111, 128,118, 119, 86, 72,
+111, 103, 74, 112, 107, 103, 98, 96, 112, 112, 93))
+
+summary(estudiantes )
+
+
+media <-105.8
+n <-31
+sigma<-15
+sigmamuestral<-sigma/sqrt(n)
+zcritico<-2.576
+
+intervalo_ub<-media+zcritico*sigmamuestral
+intervalo_lb<-media-zcritico*sigmamuestral
+
+```
+
 
 
 
@@ -666,8 +693,607 @@ $$Error-de-estimación  = z^{*}\frac{\sigma}{\sqrt{n}}$$
 
 Distinga  las varibales que hacen que el error de estimación sea menor:
 
-+ Una muestra mas grande
++ Una muestra más grande
 
 + Una menor dispersión $\sigma$
 
-+ Un nivel de confianza menor, ya que implica valor crítico menor.
++ Un nivel de confianza menor, ya que implica un valor crítico menor.
+
+
+
+#### Ejercicio 8.
+
+
+
+La prueba de aritmética de la encuesta de habilidades matemáticas del consejo nacional de evaluación 
+educativa(CONAEVE) se hizo para una muestra de 1,073 mujeres entre 19 y 24 años. La media de sus resultados fue 278.
+
+Supón que la desviación estándar de todos los resultados individuales es $\sigma$ = 80.
+
+(a) Calcula un intervalo de confianza del 95% para la media de los resultados $\mu$ de la población 
+de todas las mujeres jóvenes.
+
+(b) Calcula intervalos de confianza del 90% y del 99% para $\mu$.
+
+(c) ¿Cuáles son los errores de estimación con una confianza del 90%, del 95%
+y del 99%? ¿Cómo afecta el aumento del nivel de confianza al error de estimación
+de un intervalo de confianza?
+
+
+```{r, include=FALSE}
+# Solución:
+
+# a)
+
+n<-1073 
+mu<-278
+sigma<-80
+z_95<-1.960
+
+
+int95_ub<-mu+z_95*sigma
+int95_lb<-mu-z_95*sigma
+
+# b) 
+
+z_95<-1.960
+z_90<-1.645
+z_99<-2.576
+
+sigma_muestra<-sigma/sqrt(n)
+
+int95_ub<-mu+z_95*sigma_muestra
+int95_lb<-mu+z_95*sigma_muestra
+
+int90_ub<-mu+z_90*sigma_muestra
+int90_lb<-mu+z_90*sigma_muestra
+
+# c)
+
+
+SE_90<-mu+z_90*sigma_muestra
+SE_95<-mu+z_95*sigma_muestra
+SE_99<-mu+z_99*sigma_muestra
+
+## Entre más grande es el nivel de confianza, C, mayor es el error de estimación (SE). Lo que se observa gráficamente  porque el intervalo es más amplio (menos preciso).
+```
+
+
+
+
+
+### Énfasis en Definición. 
+
+**Error de estimación** = $$m=z{*}\frac{\sigma}{\sqrt(n)}$$
+
+A partir de la definición anterior podemos estimar **el tamaño de muestra necesario** para un **error de estimación deseado**.
+La notación siguiente nos permite lograr este cálculo: $$n=(\frac{z^{*}\sigma}{m})^2$$
+
+Note que resolvemos la ecuación para la incógnita **n** (únicamente usamos algebra para despejar la variable)
+tamaño de muestra **n** y seleccionamos un **error de estimación (m)** especifico.
+
+**Importante**: El tamaño de la población, siempre que sea grande, no influye sobre el tamaño 
+de muestra que necesitamos.
+
+
+Esta fórmula no se puede utilizar a la ligera. En la práctica, la obtención de
+observaciones cuesta tiempo y dinero. Puede ocurrir que el tamaño de la muestra
+ideal sea inviable por razones económicas.
+
+
+Note por la definición del SE, que el tamaño de muestra determina el error de estimación, 
+concretamente **hay una relación inversa entre el tamaño de muestra y el error de estimación**
+
+
+En la práctica, cuando se necesita determinar un tamaño de muestra particular, 
+es común que se solicite un determinado **nivel de precisión**, este nivel corresponde 
+con el **Error de estimación, ** por ejemplo, si se solicita una precisión de $\pm 0.005$, esto se traduce a un **error de estimación m** 
+de la misma magnitud (0.005).
+
+
+### Ejemplo.
+
+La gerencia de una empresa exige a un laboratorio que dé resultados
+con una precisión de $\pm 0.005$ y con una confianza del $95\%$. 
+
+¿De cuántas observaciones tienen que constar la muestra, si se sabe que $\sigma=0.0068$?
+
+
+#### Solución:
+
+$$n=(\frac{z^{*}\sigma}{m})^2=(\frac{1.96*0.0068}{0.005})^2=7.1$$
+
+**Importante. ** Para evitar subestimar el nivel de precisión requerido, debemos redondear al entero superior inmediato.
+Por lo que en este caso el tamaño de muestra necesario será, 8.
+
+
+
+#### Advertencias importantes sobre el uso de los intervalos de confianza para hacer inferencia estadística..
+
++ Los datos deben proceder de una **muestra aleatoria simple** de la población. 
+El algoritmo  **no** es correcto para sistemas de muestreo más complejos que
+los aleatorios simples, como los **muestreos estratificados o muestreos en etapas múltiples**.
+
+
+
++ Antes de calcular un **intervalo de confianza**, tienes que averiguar si hay observaciones atípicas. 
+
+Siempre que sea posible tienes que corregir sus valores o justificar su eliminación.
+
+Debido a que las observaciones atípicas tienen una gran influencia sobre
+el valor de $\bar{x}$, éstas pueden tener un gran efecto sobre los intervalos de
+confianza. 
+
++ Si el tamaño de la **muestra es pequeño** y la **población no es normal**, el verdadero nivel de 
+confianza del intervalo será distinto del valor C utilizado
+para calcular el intervalo. 
+
+Examina cuidadosamente tus datos. Fíjate en la asimetría y en otros indicadores de **falta de normalidad. ** 
+
+El intervalo se basa, sólo, en la distribución de $\bar{x}$, que incluso para muestras pequeñas es
+más normal que las observaciones individuales. 
+
+Cuando $n\geq 15$, el nivel
+de confianza del intervalo no se ve muy afectado por la falta de normalidad de la población, 
+a no ser que ésta sea muy asimétrica, o que **existan observaciones atípicas extremas. **
+
++ Tenemos que conocer la desviación estándar $\sigma$ de la población. Esta exigencia
+poco realista hace que el intervalo $\bar{x} \pm z^{*} \frac{ \sigma}{sqrt(n)}$ sea de poca utilidad en la
+práctica estadística. 
+
+Sin embargo, si la muestra es grande, la
+desviación estándar muestral **s** estará próxima a la $\sigma$ desconocida. En estos
+casos $\bar{x} \pm z^{*} \frac{s}{\sqrt(n)}$ es un intervalo aproximado para $\mu$
+
+
++ La decisión de cuándo un procedimiento puede ser utilizado en
+la práctica requiere, a menudo, un cuidadoso análisis exploratorio de los datos. 
+
+
+**Por ejemplo, no existe ninguna población que sea exacta mente normal.**
+
+Estas condiciones, en la práctica, nunca se
+cumplen totalmente. 
+
++ Los problemas prácticos que se presentan durante la realización de
+las **encuestas** pueden influir de forma muy importante en la **credibilidad de sus
+resultados**.
+ 
+Al respecto, el error de estimación solo tiene en cuenta el **error del muestreo aleatorio**, Dificultades prácticas, 
+tales como la **no-respuesta** o la falta de 
+**cobertura de una encuesta**, pueden ser mayores que el **error del muestreo aleatorio**. 
+
+#### Síntesis.
+
+Los intervalos de confianza son uno de los dos procedimientos de inferencia estadística más ampliamente utilizados. Es necesario usarlos cuando el objetivo es estimar un parámetro poblacional.
+
+Los cálculos de probabilidad en la inferencia
+estadística describen con qué frecuencia el método da una respuesta correcta.
+
+**Nota sobre la interpretación** Cuando estimamos un intervalo de confianza por ejemplo del $95\%$ podemos decir que estos números se calcularon mediante un método
+que da respuestas correctas en un $95\%$ de todas las muestras posibles. **No podemos decir que la probabilidad de que la media poblacional**  $\mu$  **se encuentre entre tal y cual valor,  es del** $95\%$.
+
+
+#### Ejercicio 9
+
+Considera los datos del ejemplo A. Mismo que se reproduce a continuación para mayor referencia: 
+
+Con una confianza del $99\%$, ¿Cuál debería ser el **tamaño de muestra?** Si se solicita un nivel de precisión de $\pm 1 $ año.
+
+
+Recuerde  que:
+
+**Error de estimación** = $$m=z{*}\frac{\sigma}{\sqrt(n)}$$
+y  el tamaño de muestra se estima mediante el algoritmo:  
+
+ $$n=(\frac{z^{*}\sigma}{m})^2$$
+ 
+ 
+*Un estudio sobre la carrera profesional de los directores académicos envió cuestionarios a una muestra aleatoria simple de 160 universidades publicas pertenecientes a la Asociación nacional de Universidades e instituciones de educación superior (ANUIES).*
+
+*Hubo 114 respuestas. La media de tiempo que estos 114 directores habían pasado en su universidad actual era de 11.78 años.*
+
+*Calcula un intervalo de confianza del 99% para el número medio de años que los directores académicos han estado en su Universidad actual. (Supón que se sabe que la desviación estándar del tiempo de permanencia de los directores en la universidad es de 3.2 años.)*
+
+```{r, include=FALSE}
+## Solución
+
+z_99<-2.576
+sigma<-3.2
+
+n<-((z_99*sigma)/1)^2
+
+## Respuesta: El tamaño de muestra debe ser de 68 profesores.
+```
+
+
+## Pruebas de significacion.
+
+El segundo procedimiento de inferencia más ampliamente
+utilizado, llamado pruebas de significación, tiene el objetivo de  **valorar la evidencia proporcionada por los datos a favor de alguna** hipótesis sobre la población**.
+
+
+El planteamiento en el que se basan las pruebas de significancia parte de afirmar algo y preguntar si los datos dan evidencia en contra de lo que afirmamos.
+
+Estas pruebas consideran un proceso de muestreo, que plantea:
+
+¿Qué pasaría si repitiéramos el muestreo muchas veces? 
+
+No se basan en un suceso único, pero en la distribución del muestreo.
+
+En una prueba de significación primero planteamos las hipótesis. 
+
+La **hipótesis nula** $H_{0}$ es una afirmación en contra de la cual intentaremos encontrar evidencia. 
+
+La **hipótesis alternativa** $H_{a}$ es una afirmación sobre la población a favor de la cual intentamos encontrar evidencia.
+
+## Definiciones: 
+
+##### Hipótesis Nula  H_{0}.
+
+La afirmación que se contrasta en una prueba estadística se llama **hipótesis nula**.
+
+Para hacer este contraste y valorar la evidencia estadística en contra de $H_0$ recurrimos al cálculo de las probabilidades. 
+
+Buscamos determinar la probabilidad de encontrar  **al menos el valor especificado**, suponiendo que $H_0$ es cierta.
+
+
+
+### Por ejemplo:
+
+Sea la siguiente distribución para una muestra aleatoria simple.
+
+![](/img/signi.jpg)
+
+En este caso, nos preguntamos ¿Cuál es la probabilidad de encontrar una media muestral $\bar{x}=.3$ suponiendo de que $\mu=0$, $\sigma =1$ y dado que sabemos, por el algoritmo para determinar la desviación estándar muestral que $s=\frac{\sigma}{\sqrt(n)}==\frac{1}{\sqrt(10)}0.316$
+
+
+La prueba de significancia en este caso se planteará de la siguiente manera: 
+
++ Hipótesis nula $H_{0}$  $\mu=0$
+
++ Hipótesis alternativa  $H_{a}$ $\mu >0$
+
+Esta **hipótesis alternativa es de una cola**, ya que sólo estamos interesados en desviaciones de la hipótesis nula en una dirección. 
+
+
+Las hipótesis siempre se refieren a alguna población, no a resultados particulares. 
+
+Por este motivo, plantea siempre $\H_{0}$ y $H_{a}$ en términos de los parámetros poblacionales. Debido a que $H_{a}$ expresa el efecto del cual esperamos encontrar
+evidencia a favor, a menudo es más fácil empezar planteando $H_{a}$.
+
+
+##### hipotesis alternativa de dos colas.
+
+En determinados casos nos interesa determinar si hay o no diferencia estadisticamente significativa entre dos parámetros, sin especificar necesariamente  la dirección de la diferencia.  
+
+En estos cosos la **prueba de hipótesis es de dos colas** y se plantea de la siguiente manera: 
+
+
+$$H_{0}: \mu=0$$   No hay diferencia 
+
+$$H_{a}: \mu\neq0$$ Si hay diferencia.
+
+
+
+En palabras, Si sabemos que la verdadera media pobacional es $\mu=0$ en esta prueba de significancia nos preguntamos: ¿Cuál es la probabilidad de encontrar una media muestral $\mu$ de al menos .3? 
+
+
+En este caso la probabilidad que buscamos es: 
+
+
+```{r}
+1-pnorm(.3,0,0.316)
+
+pnorm(.3,0,0.316)
+
+```
+
+
+¿Podemos rezhazar la hipótesis nula? 
+
+Esto depende de el nivel de significancia de nuestra prueba. 
+
+
+### Valor P de la prueba de significación.
+
+Es la **probabilidad**, calculada suponiendo que $H_{0}$ es cierta, de que el resultado tome un valor al menos tan extremo como el observado.  
+
+Cuanto menor sea el **valor P**, más fuerte es la evidencia que proporcionan los datos en contra de $H_{0}$
+
+
+**Valores P** pequeños proporcionan evidencia en contra de $H_{0}$
+Es decir, permiten rechazar **esta hipótesis** en favor de la alternativa. 
+
+La interpretación es que es poco probable que el resultado obtenido ocurra sólo por azar.
+
+
+En la práctica utilizaremos **valores de probabilidad** aceptados generalmente como **umbrales de decisión**, estos corresponden a los valores de las colas de la distribución para intervalos de confianza específicos como el $90\%$, $95\%$ o el $99\%$.
+
+A estas probabilidades de referencia las denominamos **valores p** porque miden la probabilidad de encontrar valores **de al menos** el dato de interés cuando el valor de la media poblacional es cierto.
+
+
+Así por ejemplo, para un intervalo de confianza del $95\%$, el **valor P** o *(p-value)* corresponderá con la suma de las probabilidades que se integran por el área bajo la curva de la distribución muestral en cada uno de sus extremos (positivo -derecho- y negativo -izquierdo-), que para el caso particular es: $0.025 + 0.025$ 
+
+Cualquier valor que se localize en este umbral, permitirá rechazar la hipótesis nula $H_0$ 
+
+A esta área se le denomina área de rezhazo.
+
+## Nivel de significación.
+
+
+Para valorar la evidencia en contra de la hipótesis nula  $H_{0}$
+comparamos el **valor P** (p-value), con el umbral de decisión que consideramos relevante, (ej. niveles de confianza del $90\%$, $95\%$,$99\%$).
+ 
+Al fijar valores de contraste predeterminados estamos indicando el nivel que deseamos sobre **la evidencia en contra de la hipótesis nula.** 
+
+Estos umbrales decisivos se denominan **niveles de significación** y se denotan por la letra alfa $\alpha$ y se exprezan por el complemento del nivel de confianza,  entonces para un nivel de confianza del $95\%$ el nivel de significación correspondiente es $\alpha=.05$
+
+
+Por ejemplo,  Si escogemos $\alpha = 0.05$, exigimos que los datos proporcionen una evidencia en contra de $H_0$ tan fuerte que el valor de $bar{x}$ no ocurra por azar más del $5\%$ de las veces.
+
+
+#### Si el valor P es más pequeño o igual que $\alpha$, decimos que los datos son estadísticamente significativos a un nivel $\alpha$.
+
+
+Cuando indicamos que **es significativo**, esto quiere decir que **es muy poco probable que ocurra por azar.**  No debemos confundir significativo con "importante".
+
+La notación utilizada en la práctica para indicar que los resultados son significativos por ejemplo para un alpha de $1\%$ es (P<0.01).
+
+Por ejemplo, un resultado con valor  P = 0.02 es significativo a un nivel  $\alpha = 0.05$, pero no lo es a un nivel de significación $\alpha = 0.01$.
+
+En el ejemplo vemos que tenemos una probabilidad de $17\%$, Si consideramos un intervalo de confianza del $95\%$, concluimos que **NO tenemos evidencia estadística significativa para rechazar** $H_{0}$ 
+
+Ya que  $0.17 >.05$
+
+
+Como vemos, si la probabilidad estimada para el dato de interés es elevada, relativa al *p-value* de contraste no podemos rechachar $H_{0}$
+
+![](/img/signi2.jpg)
+
+En este caso concluimos que no hay evidencia estadísticamente significativa de una diferencia entre la media poblacional $\mu=0$ y la media muestral $\bar{x} = 0.3$
+
+Cuando tenemos evidencia estadística para rechazar $H_{0}$ sabemos que la ocurrencia del dato de interés **no es atribuible al azar** 
+
+Por el contrario cuando la probabilidad de que ocurra el dato de interés es superior al **valor p**, sabemos que la ocurrencia de ese dato se atribuye a la naturaleza aleatoria de la muestra.
+
+
+Ahora bien, consideremos el caso en el que nos interesa determinar la probabilidad de encontrar una media muestral $\bar{x}$ de al menos $1.02$. 
+
+
+Nos preguntamos, ¿es posible que esta media muestral se deba puramente al azar?
+
+Planteando la misma prueba de significancia  con:
+
++ Hipótesis Nula  $H_{0}$ $\mu=0$
+
++ Hipótesis alternativa $H{a}$  $\mu>0$
+
+
+```{r}
+
+1-pnorm(1.02,0,0.316)
+
+```
+
+La respuesta, basada en la evidencia estadística de esta prueba con un nivel de significancia $\alpha$ del $5\%$ es **NO**
+
+¿Podemos rechazar la hipótesis nula? La respuesta es **SÍ**
+
+Note que la probabilidad estimada del dato de interés es inferior que el *p-value*   $0.0006236259<0.025$
+
+
+**Note** que,  Si escogemos un nivel de significancia ($\alpha$ = 0.01), exigimos una evidencia aún más fuerte en contra de $H_{0}$, una evidencia tan fuerte que el valor de $\bar{x}$ sólo ocurre por
+azar en un $1%$ de las ocasiones (en 1 de cada 100 muestras) si $H_0$ es cierta.
+
+
+### Conceptualización de la prueba de hipotésis.
+
+
+
+Las pruebas de significación se diseñan para valorar la fuerza de
+**la evidencia en contra de la hipótesis nula**.  
+
+Rechazar la hipótesis nula implica tener evidencia significativa a favor de la hipótesis alternativa.  Cuando rechazamos la hipótesis nula, sabemos que los valores obervados no se deben puramente al azar. 
+
+**La afirmación en relación con la población sobre la cual queremos hallar evidencia a favor, es la hipótesis alternativa, designada como** $H_{a}$
+
+Por ejemplo, si contrastamos la hipótesis nula de que la media poblacional es cero la notación usada es la siguiente:
+
+$$H_{0}: \mu=0$$
+$$H_{a}: \mu> 0$$
+
+
+Una prueba de significación utiliza los datos en forma de estadístico de contraste. Éste se basa, normalmente, en un estadístico que estima el parámetro que aparece en las hipótesis. En nuestros ejemplos, el parámetro es $\mu$ y el estadístico de
+contraste es la media muestral $\bar{x}$.
+
+
+Una prueba de significación valora la evidencia en contra de la hipótesis nula en términos de probabilidad, misma que se expreza mediante el valor P. 
+
+Si el estadístico de contraste se sitúa lejos del valor propuesto en la hipótesis nula y en la dirección expresada por la hipótesis alternativa, esto constituye una buena evidencia en contra de $H_{0}$ y a favor de $H_{a}$. 
+
+El valor P describe la fuerza de la evidencia, ya que es la probabilidad de obtener un resultado al menos tan extremo como el resultado observado. “Extremo” significa “lejos del valor que esperaríamos si $H_{0}$ fuera cierta”. 
+
+La dirección o direcciones que se tienen en cuenta en “lejos del valor que esperaríamos” están determinadas por la hipótesis alternativa $H_{a}$
+
+
+#### Ejercicio 10
+
+
+La prueba sobre actitud de los estudiantes GRE, es una prueba psicológica que mide la actitud hacia la escuela y los hábitos de estudio de los alumnos. 
+
+Los resultados van de 0 a 400. El resultado medio
+de los estudiantes universitarios del ITAM es aproximadamente 230 y la desviación típica aproximadamente 60. Una profesora intuye que los estudiantes de más edad tienen una mejor actitud hacia la escuela y aplica la prueba de actitud a 
+a 25 estudiantes que tienen como mínimo 30 años. 
+
+Supón que los resultados de
+la población de estudiantes mayores de 30 años se distribuye normalmente condesviación estándar $\sigma$= 60. La profesora quiere contrastar las hipótesis
+
+
+$$H_{0}=230$$
+$$H_{a}>230$$
+
+
+(a) Si la hipótesis nula es cierta, ¿cuál es la distribución de la media de los resultados de $ \bar{x}$ una muestra de 50 estudiantes mayores de 30 años? Dibuja la curva de densidad de esta distribución. (Sugerencia: primero dibuja una curva
+normal, luego, a partir de la información recibida, señala en el eje de las abscisas la localización de $\mu$ y de $\sigma$ en la curva normal.
+
+(b) Supón que los datos de la muestra dan $\bar{x}= 237.2$. Señala este punto en el eje de las abscisas de tu gráfico. En realidad, el resultado fue $\bar{x}= 251.4$. Señala
+este punto en tu dibujo y utilizandolo, explica con un lenguaje sencillo por qué
+uno de los resultados constituye una buena evidencia a favor de que la media de
+los resultados de todos los estudiantes mayores de 30 años es mayor que 230 y
+por qué el otro resultado no lo es.
+
+Estime para sustentar su explicación el **valor p** para cada escenario:
+
+$\bar{x}= 237.2$, $\bar{x}= 251.4$ , sabiendo que la media $\mu$ es 230 y la desviación estándar $\sigma$= 60.
+
+
+(c) Sombrea el área por debajo de la curva que corresponde al **valor P** del resultado muestral  = 237.2
+
+
+```{r, include=FALSE}
+
+# Solucion 
+# a) 
+
+sigma<-60
+n<-50
+s<-sigma/sqrt(n)
+
+118.6*2
+125.7*2
+
+# b
+1-pnorm(251.4,230,8.485281)
+# [1] 0.005834248
+
+1-pnorm(237.2,230,8.485281)
+# [1] 0.1980719
+
+# La probabilidad de ocurrencia debida al azar de una media de 251.4, es ínfima, por lo que es posible rechazar la hipótesis nula de que la media sea 230.  Por el contrario la prob de ocurrencia de media 237.2 es de practicamente el 20%, este dato no indica evidencia estadisticamente significativa de que la media difiera de 230. En este caso no se rechaza H0 (Hipótesis nula).
+
+```
+
+
+#### Ejercicio 11
+
+**Gastos dedicados a la vivienda.** 
+La Oficina del Instituto Nacional de estadistica, geografía e Informática, (INEGI), en México, informa
+que los hogares de este país dedicaron una media del $31\%$ de todos sus gastos
+a la vivienda. Una asociación de constructores de la ciudad de Monterrey  cree
+que esta media es menor en su zona y entrevistan a una muestra de 40 hogares del área metropolitana de Monterrey  para saber qué porcentaje de sus gastos
+se dedica a la vivienda. Sea $\mu$ la media de los porcentajes del gasto dedicado a la
+vivienda en los hogares de Monterrey. Queremos contrastar las hipótesis $$H_{0}:\mu=31\%$$
+
+$$H_{a}:\mu<31\%$$
+
+La desviación típica poblacional es $\sigma = 9.6\%$
+
+(a) ¿Cuál es la distribución de la media de los porcentajes $\bar{x}$ del gasto que las
+muestras dedican a la vivienda si la hipótesis nula es cierta? 
+
+Dibuja la curva de densidad de la distribución muestral. (primero dibuja una curva normal, luego señala en el eje de las abscisas lo que sabes sobre las posiciones de $\mu$ y $\sigma$
+en una curva normal.)
+
+
+(b) Supón que el estudio halla que $\bar{x} = 30.2\%$ para los 40 hogares de la muestra. 
+
+Señala este punto en el eje de las abscisas de tu dibujo. Luego, supón que el resultado del estudio es  $\bar{x} = 27.6\%$ Señala este punto en tu dibujo. 
+Refiriéndote a él, explica con un lenguaje sencillo por qué uno de los resultados constituye una
+buena evidencia a favor de que la media del gasto en la vivienda en los hogares
+de Monterrey es menor que el $\31\%$, y por qué el otro resultado no lo es.
+
+(c) Sombrea el área por debajo de la curva que da el valor P para el resultado $\bar{x} = 30.2\%$. (Nota en que estamos buscando evidencia a favor de que el gasto es
+menor que el que supone la hipótesis nula.)
+
+(d) Indique si es esta una prueba de hipótesis de una o dos colas.
+
+```{r, include=FALSE}
+
+sigma<-.096
+n<-40
+s<- sigma/sqrt(n)
+mu<-.31
+
+xbar<-.276
+xbar_2<-.302  
+
+p_value<-pnorm(xbar,mu,s)
+p_value_2<-pnorm(xbar_2,mu,s)
+
+
+# Conclusión hay una probabilidad de 1.2% de que  la media sea 27.6% y Una probabilidad de 29% que  la media sea 30.2.
+
+
+# La evidencia en favor de Ha, es estadisticamente significativa  considerando una confinaza del 95%. Esta evidenica implica que es poco probable encontrar una media tan extrema con esta  por azar.
+
+# Por el contrario no podemos rechazar la hipótesis nula para x bar =30.2, es decir este valor puede deberse muy probablemente al azar y no se encuentra evidencia estadisticamente significativa de que mu sea menor a 30. 
+
+
+```
+
+
+
+
+### Participación en clase.
+
+
+
+Todas las situaciones que se plantean a continuación se pueden resolver mediante una prueba de significación para una media poblacional $\mu$. 
+
+En cada caso, plantea las hipótesis nula $H_{0}$ y alternativa $H_{a}$
+
+1. Se supone que la tasa de pobreza de una población en un país de Centroamérica es de  $35\%$. 
+
+Si la tasa de pobreza es distinta de este valor, ej. mayor o menor, El banco mundial no otorgará fondos para la atención de poblaciones vulnerables bajo el programa de combate global a la pobreza en regiones vulnerables. 
+
+El país en cuestión realiza un estudio para medir la tasa de pobreza para determinar si la tasa media de pobreza difiere del objetivo del programa del Banco Mundial.
+
+
+
+
+2.- Los datos de la Oficina del INEGI en México muestran que la media de los ingresos de los hogares en el área de influencia de un centro comercial en la zona de Santa Fé en Ciudad de México es de $75,000$ pesos por mes, (aproximadamente $\$3,000$ dólares américanos por mes.) 
+
+Una empresa de investigación de mercados entrevista
+a los clientes del centro comercial. Los investigadores sospechan que la media de los ingresos de estos clientes es mayor que la de la población general.
+
+3. La nota media de matemáticas  de un gran grupo de estudiantes en la Universidad Autónoma Metropolitana es 7. 
+
+El catedrático cree que la escuela de procedencia de los alumnos es determinante para explicar este rendimiento relativamente bajo  y sospecha que los alumnos provenientes de las escuelas privadas  tienen una nota media menor que la general
+del grupo. 
+
+Los estudiantes de esas escuelas privadas pueden considerarse una muestra de la población de todos los del curso, así que el catedrático compara la media de esos estudiantes con la media general del grupo.
+
+
+4.- El año pasado el departamento de atención sicologica del Instituto Tecnológico y de Estudios superiores de Monterrey,  dedicó una media de 6.2 horas para atender  situaciones de estrés de los alumnos inscritos en las carreras de ciencias sociales. Los datos de este año, ¿muestran una distinta media del tiempo
+dedicado para atender situaciones de estrés?
+
+
+
+#### Ejercicio 12.
+
+
+La oficina de ayuda financiera del IPN Instituto Politécnico Nacional pregunta a una muestra de estudiantes sobre sus empleos y ganancias. El
+informe dice que “con relación a las ganancias de los estudiantes durante el curso académico, se halló una diferencia significativa (P = 0,023) entre sexos; como
+media, los hombres ganaron más que las mujeres. 
+
+No se halló ninguna diferencia (P = 0.651) entre las ganancias de los estudiantes mestizos  y los estudiantes
+auto indentificados como pertenecientes a una étniao pueblo originario (indígenas)”. Considernado el concepto de prueba de hipótesis  y nivel de  significación, explica, con tus palabras, estas dos conclusiones con relación a la influencia del sexo y de la raza sobre la media de las ganancias.
+
+
+
+## Prueba Z para una media poblacional.
+
+
+Para contrastar la hipótesis $H0 : µ = µ0$ a partir de una **muestra aleatoria simple** de tamaño n de una población con media desconocida y desviación estándar $\sigma$ conocida, calcula el **estadístico de contraste z**
+
+
+
+$$Z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt(n)}}$$
+
+![](/img/.jpg)
+
+
+Para las pruebas de significacia de una cola y dos colas, los valores de contraste son los siguientes.
+
+**Note que estos valores P son aproximadamente correctos para valores de n grandes, y son  exactos si la distribución poblacional es normal.**
