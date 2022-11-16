@@ -10,6 +10,7 @@ tags: ["Inferencia"]
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
+
 ## Objetivos
 
 Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios probabilísticos. 
