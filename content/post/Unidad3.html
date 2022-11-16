@@ -730,7 +730,26 @@ valores de z menores que el nivel de significación deseado, los que se tienen e
 <p>La prueba permite conluir que Una puntuación media tan pequeña como 272 ocurriría por azar, aproximadamente, en 7 de cada 100 muestras si la media poblacional fuera 275.</p>
 <p>Esta prueba no es significativa a un nivel <span class="math inline">\(\α = 0.05\)</span>.</p>
 <p>Por lo que no tenemos evidencia estadística suficiente como para rechazar <span class="math inline">\(H_0\)</span>.</p>
-<p>Estos resultados no constituyen una <strong>buena</strong> evidencia a favor de que la media de todos los hombres jóvenes es menor que 275</p>
+<p>Estos resultados no constituyen una <strong>buena</strong> evidencia a favor de que la media de todos los hombres jóvenes es menor que 275.</p>
+<p><img src="/img/eztest.jpg" />
+<img src="/img/e2ztest.jpg" /></p>
+<p><img src="/img/pre.jpg" /></p>
+</div>
+<div id="ejercicio-13" class="section level4">
+<h4>Ejercicio 13</h4>
+<p>Coeficientes de inteligencia. He aquí los resultados de la prueba IQ de 31 estudiantes de primero de bachillerato.</p>
+<p>114 100 104 89 102 91 114 114 103 105
+108 130 120 132 111 128 118 119 86 72
+111 103 74 112 107 103 98 96 112 112 93</p>
+<p>Los datos corresponden con los resultados de la rpueba para personas del sexo femenino en la ciudad de Mexicali.</p>
+<p>Supón que la desviación estándar del IQ
+de esta población es conocida y sea <span class="math inline">\(\sigma = 15\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Calcula un intervalo de confianza del 95% para la media de los IQ <span class="math inline">\(\mu\)</span> de la población.</p></li>
+<li><p>¿Existe evidencia significativa a un nivel del <span class="math inline">\(5\%\)</span> de que la media de los IQ
+de la población es diferente de 100? Plantea las hipótesis y utiliza tu intervalo de
+confianza para responder a la pregunta.</p></li>
+</ol>
 <pre class="r"><code>n&lt;-840
 sigma&lt;-60
 s&lt;-sigma/sqrt(n)
@@ -740,5 +759,8 @@ xbar&lt;-272
 pnorm(xbar,mu,s)</code></pre>
 <pre><code>## [1] 0.07364957</code></pre>
 </div>
+</div>
+<div id="pruebas-para-un-nivel-de-significación-predeterminado." class="section level2">
+<h2>Pruebas para un nivel de significación predeterminado.</h2>
 </div>
 </div>

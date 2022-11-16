@@ -1345,11 +1345,33 @@ Esta prueba no es significativa a un nivel $\α = 0.05$.
 
 Por lo que no tenemos evidencia estadística suficiente como para rechazar $H_0$.
 
-Estos resultados no constituyen una **buena** evidencia a favor de que la media de todos los hombres jóvenes es menor que 275 
+Estos resultados no constituyen una **buena** evidencia a favor de que la media de todos los hombres jóvenes es menor que 275.
+
+![](/img/eztest.jpg)
+![](/img/e2ztest.jpg)
+
+![](/img/pre.jpg)
 
 
+#### Ejercicio 13
 
 
+Coeficientes de inteligencia. He aquí los resultados de la prueba IQ de 31 estudiantes de primero de bachillerato.
+
+114 100 104 89 102 91 114 114 103 105
+108 130 120 132 111 128 118 119 86 72
+111 103 74 112 107 103 98 96 112 112 93
+
+Los datos corresponden con los resultados de la rpueba para personas del sexo femenino en la ciudad de Mexicali.
+
+Supón que la desviación estándar del IQ
+de esta población es conocida y sea $\sigma = 15$.
+
+(a) Calcula un intervalo de confianza del 95% para la media de los IQ $\mu$ de la población.
+
+(b) ¿Existe evidencia significativa a un nivel del $5\%$ de que la media de los IQ
+de la población es diferente de 100? Plantea las hipótesis y utiliza tu intervalo de
+confianza para responder a la pregunta. 
 ```{r}
 n<-840
 sigma<-60
@@ -1360,5 +1382,8 @@ xbar<-272
 pnorm(xbar,mu,s)
 
 ```
+
+
+## Pruebas para un nivel de significación predeterminado.
 
 
