@@ -931,7 +931,7 @@ La **hipótesis alternativa** $H_{a}$ es una afirmación sobre la población a f
 
 ## Definiciones: 
 
-##### Hipótesis Nula  H_{0}.
+##### Hipótesis Nula  $H_{0}$.
 
 La afirmación que se contrasta en una prueba estadística se llama **hipótesis nula**.
 
