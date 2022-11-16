@@ -1293,9 +1293,72 @@ Para contrastar la hipótesis $H0 : µ = µ0$ a partir de una **muestra aleatori
 
 $$Z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt(n)}}$$
 
+Para las pruebas de significación de una cola y dos colas, los valores de contraste son los siguientes:
+
 ![](/img/ztest.jpg)
 
 
-Para las pruebas de significacia de una cola y dos colas, los valores de contraste son los siguientes.
 
-**Note que estos valores P son aproximadamente correctos para valores de n grandes, y son  exactos si la distribución poblacional es normal.**
+**Note que estos valores P son aproximadamente correctos para valores de n grandes, y únicamente serán
+exactos si la distribución poblacional es normal.**
+
+
+
+
+#### Ejemplo
+
+En un debate sobre el nivel de formación de la mano de obra de Brazil, alguien dice, “como media, los jóvenes de hoy no son capaces ni de calcular el saldo de su cuenta corriente”. 
+
+La encuesta Nacional de habilidades en matemáticas, afirma que una persona que obtenga una puntuación de al menos 275 en la prueba de aritmética  está capacitada para determinar el saldo de una cuenta corriente. 
+
+La muestra aleatoria de 840 hombres jóvenes de la encuesta  tiene una puntuación media $\bar{x}$ = 272, algo menor que la puntuación necesaria para calcular el saldo de
+una cuenta corriente. 
+
+Estos resultados muestrales, ¿constituyen una buena evidencia a favor de que la media de todos los hombres jóvenes es menor que 275?
+Se sabe que la  desviación estándar es $\sigma= 60$
+
+**Solución**
+
+
+**Paso 1: Hipótesis.** Las hipótesis son:
+
+$$H_0: \mu=275$$
+$$H_a: \mu<275$$
+
+**Paso 2: Estadístico de contraste.** El estadístico z es
+
+$$z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt(n)}}=\frac{272-275}{\frac{60}{\sqrt(840)}}=-1.45$$
+**Paso 3: Valor P**
+
+Debido a que $H_a$ es de una cola, la cola de la izquierda, son los
+valores de z menores que el nivel de significación deseado, los que se tienen en cuenta en contra de $H_0$.
+
+Utilizando la tabla A, encontramos que
+
+$$P = P(Z \leq −1,45) = 0.0735$$
+
+**Conclusión:**
+
+La prueba permite conluir que Una puntuación media tan pequeña como 272 ocurriría por azar, aproximadamente, en 7 de cada 100 muestras si la media poblacional fuera 275.
+
+Esta prueba no es significativa a un nivel $\α = 0.05$.
+
+Por lo que no tenemos evidencia estadística suficiente como para rechazar $H_0$.
+
+Estos resultados no constituyen una **buena** evidencia a favor de que la media de todos los hombres jóvenes es menor que 275 
+
+
+
+
+```{r}
+n<-840
+sigma<-60
+s<-sigma/sqrt(n)
+mu<-275
+xbar<-272
+
+pnorm(xbar,mu,s)
+
+```
+
+

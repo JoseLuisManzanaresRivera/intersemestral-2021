@@ -703,8 +703,42 @@ auto indentificados como pertenecientes a una étniao pueblo originario (indíge
 <h2>Prueba Z para una media poblacional.</h2>
 <p>Para contrastar la hipótesis <span class="math inline">\(H0 : µ = µ0\)</span> a partir de una <strong>muestra aleatoria simple</strong> de tamaño n de una población con media desconocida y desviación estándar <span class="math inline">\(\sigma\)</span> conocida, calcula el <strong>estadístico de contraste z</strong></p>
 <p><span class="math display">\[Z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt(n)}}\]</span></p>
+<p>Para las pruebas de significación de una cola y dos colas, los valores de contraste son los siguientes:</p>
 <p><img src="/img/ztest.jpg" /></p>
-<p>Para las pruebas de significacia de una cola y dos colas, los valores de contraste son los siguientes.</p>
-<p><strong>Note que estos valores P son aproximadamente correctos para valores de n grandes, y son exactos si la distribución poblacional es normal.</strong></p>
+<p><strong>Note que estos valores P son aproximadamente correctos para valores de n grandes, y únicamente serán
+exactos si la distribución poblacional es normal.</strong></p>
+<div id="ejemplo-1" class="section level4">
+<h4>Ejemplo</h4>
+<p>En un debate sobre el nivel de formación de la mano de obra de Brazil, alguien dice, “como media, los jóvenes de hoy no son capaces ni de calcular el saldo de su cuenta corriente”.</p>
+<p>La encuesta Nacional de habilidades en matemáticas, afirma que una persona que obtenga una puntuación de al menos 275 en la prueba de aritmética está capacitada para determinar el saldo de una cuenta corriente.</p>
+<p>La muestra aleatoria de 840 hombres jóvenes de la encuesta tiene una puntuación media <span class="math inline">\(\bar{x}\)</span> = 272, algo menor que la puntuación necesaria para calcular el saldo de
+una cuenta corriente.</p>
+<p>Estos resultados muestrales, ¿constituyen una buena evidencia a favor de que la media de todos los hombres jóvenes es menor que 275?
+Se sabe que la desviación estándar es <span class="math inline">\(\sigma= 60\)</span></p>
+<p><strong>Solución</strong></p>
+<p><strong>Paso 1: Hipótesis.</strong> Las hipótesis son:</p>
+<p><span class="math display">\[H_0: \mu=275\]</span>
+<span class="math display">\[H_a: \mu&lt;275\]</span></p>
+<p><strong>Paso 2: Estadístico de contraste.</strong> El estadístico z es</p>
+<p><span class="math display">\[z=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt(n)}}=\frac{272-275}{\frac{60}{\sqrt(840)}}=-1.45\]</span>
+<strong>Paso 3: Valor P</strong></p>
+<p>Debido a que <span class="math inline">\(H_a\)</span> es de una cola, la cola de la izquierda, son los
+valores de z menores que el nivel de significación deseado, los que se tienen en cuenta en contra de <span class="math inline">\(H_0\)</span>.</p>
+<p>Utilizando la tabla A, encontramos que</p>
+<p><span class="math display">\[P = P(Z \leq −1,45) = 0.0735\]</span></p>
+<p><strong>Conclusión:</strong></p>
+<p>La prueba permite conluir que Una puntuación media tan pequeña como 272 ocurriría por azar, aproximadamente, en 7 de cada 100 muestras si la media poblacional fuera 275.</p>
+<p>Esta prueba no es significativa a un nivel <span class="math inline">\(\α = 0.05\)</span>.</p>
+<p>Por lo que no tenemos evidencia estadística suficiente como para rechazar <span class="math inline">\(H_0\)</span>.</p>
+<p>Estos resultados no constituyen una <strong>buena</strong> evidencia a favor de que la media de todos los hombres jóvenes es menor que 275</p>
+<pre class="r"><code>n&lt;-840
+sigma&lt;-60
+s&lt;-sigma/sqrt(n)
+mu&lt;-275
+xbar&lt;-272
+
+pnorm(xbar,mu,s)</code></pre>
+<pre><code>## [1] 0.07364957</code></pre>
+</div>
 </div>
 </div>
