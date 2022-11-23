@@ -1,12 +1,10 @@
 ---
-title: "Unidad 3_3.3"
-author: "José Luis Manzanares Rivera"
-date: 2022-11-14T22:08:14-05:00
-categories: ["Distribución normal"]
-tags: ["Inferencia"]
+title: "Unidad 3 SUB3"
+output: html_document
+date: '2022-11-23'
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="Unidad Tres_files/header-attrs/header-attrs.js"></script>
 
 
 <div id="objetivos." class="section level2">
@@ -159,7 +157,7 @@ tiempo de permanencia de los directores en la universidad es de 3.2 años.)</p>
 <p><span class="math display">\[\bar{x}\pm Z_{99}^{*}\frac{\sigma}{\sqrt(n)}=11.78 \pm 2.576(0.2997075)\]</span></p>
 <p>El intervalo requerido es: 11.0079 a 12.5520</p>
 <pre><code>## [1] 12.55205</code></pre>
-<p><img src="/post/Unidad3_3_3_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/Unidad%20Tres_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <pre class="r"><code>xbar&lt;-11.78
 sigma&lt;-3.2
 n&lt;-114
@@ -585,16 +583,16 @@ confianza para responder a la pregunta.</p></li>
 </ol>
 </div>
 <div id="viii-tipos-de-error-y-potencia" class="section level3">
-<h3>VIII Tipos de error y potencia∗</h3>
+<h3>VIII Tipos de error y potencia</h3>
 <p>Las pruebas de significación valoran la fuerza de la evidencia en contra de la hipótesis nula. La fuerza de la evidencia en contra de <span class="math inline">\(H_0\)</span> la medimos mediante el <strong>valor P</strong>, que es una probabilidad calculada bajo el supuesto de que <span class="math inline">\(H_0\)</span> sea cierta.</p>
 <p>Si nuestro resultado es significativo a un nivel <span class="math inline">\(\alpha\)</span>, rechazamos
 <span class="math inline">\(H_0\)</span> en favor de <span class="math inline">\(H_a\)</span>.</p>
 </div>
 <div id="errores-tipo-i-y-errores-tipo-ii" class="section level3">
 <h3>Errores tipo I y errores tipo II</h3>
-<p>Si rechazamos <span class="math inline">\(H_0\)</span> cuando en realidad <span class="math inline">\(H_0\)</span> es cierta, cometemos un <strong>error
-tipo I.</strong></p>
+<p>Si rechazamos <span class="math inline">\(H_0\)</span> cuando en realidad <span class="math inline">\(H_0\)</span> es cierta, cometemos un <strong>error tipo I.</strong></p>
 <p>Si <strong>NO</strong> rechazamos <span class="math inline">\(H_0\)</span> cuando en realidad <span class="math inline">\(H_a\)</span> es cierta, cometemos un <strong>error tipo II</strong></p>
+<p><img src="/img/typesII.jpg" /></p>
 <p>¿Qué probabilidades de ocurrencia tienen los errores tipo I y tipo II?</p>
 <p><strong>Sobre la probabilidad de ocurrencia del error tipo I</strong></p>
 <p>Note que la definición del nivel de significación <span class="math inline">\(\alpha\)</span> es la probabilidad de que la prueba rechace la hipótesis nula <span class="math inline">\(H_0\)</span> cuando en realidad <span class="math inline">\(H_0\)</span> es cierta.</p>
@@ -659,7 +657,7 @@ pnorm(ci_ub,muha,s) - pnorm(ci_lb,muha, s)</code></pre>
 <li><p>¿Qué procedimiento se sigue para rechazar <span class="math inline">\(H_0\)</span> en términos del estadístico de contraste <span class="math inline">\(z=\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt(n)}}\)</span></p></li>
 <li><p>¿Cuál es la probabilidad de un error tipo I?</p></li>
 <li><p>Calcula la probabilidad de un <strong>error tipo II</strong> cuando <span class="math inline">\(\mu = 270\)</span>. Quieres saber si esta prueba no rechazará <span class="math inline">\(H_0\)</span> cuando la verdadera media poblacional sea 270.</p></li>
-<li><p>Estime la potencia de la prueba.</p></li>
+<li><p>Estime la potencia de la prueba de significación estadística.</p></li>
 </ol>
 </div>
 </div>

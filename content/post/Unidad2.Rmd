@@ -2,8 +2,8 @@
 title: "Unidad 2"
 author: "José Luis Manzanares Rivera"
 date: 2022-10-05T22:08:14-05:00
-categories: ["Distribución normañ"]
-tags: ["Probabilidad"]
+categories: ["Inferencia"]
+tags: ["Reglas de probabilidad"]
 ---
 
 ```{r setup, include=FALSE}

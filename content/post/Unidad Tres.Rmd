@@ -1,15 +1,8 @@
 ---
-title: "Unidad 3_3.3"
-author: "José Luis Manzanares Rivera"
-date: '2022-10-05T22:08:14-05:00'
-categories: Distribución normal
-tags: Inferencia
+title: "Unidad 3 SUB3"
+output: html_document
+date: '2022-11-23'
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 
 ## Objetivos.
 
@@ -500,6 +493,8 @@ resultados**.
 Al respecto, el error de estimación solo tiene en cuenta el **error del muestreo aleatorio**, Dificultades prácticas, 
 tales como la **no-respuesta** o la falta de 
 **cobertura de una encuesta**, pueden ser mayores que el **error del muestreo aleatorio**. 
+
+
 
 #### Síntesis.
 
@@ -1137,7 +1132,7 @@ p_valuez<-pnorm(1.645)
 # ![](/img/solved.jpg)
 ```
 
-### VIII Tipos de error y potencia∗
+### VIII Tipos de error y potencia
 
 Las pruebas de significación valoran la fuerza de la evidencia en contra de la hipótesis nula. La fuerza de la evidencia en contra de $H_0$ la medimos mediante el **valor P**, que es una probabilidad calculada bajo el supuesto de que $H_0$ sea cierta.
 
@@ -1149,12 +1144,10 @@ $H_0$ en favor de $H_a$.
 ### Errores tipo I y errores tipo II
 
 
-Si rechazamos $H_0$ cuando en realidad $H_0$ es cierta, cometemos un **error
-tipo I.**
+Si rechazamos $H_0$ cuando en realidad $H_0$ es cierta, cometemos un **error tipo I.**
 
 
 Si **NO** rechazamos $H_0$ cuando en realidad $H_a$ es cierta, cometemos un **error tipo II**
-
 
 ![](/img/typesII.jpg)
 
@@ -1294,4 +1287,6 @@ Z=(xbar-mu)/s
 Prob<-pnorm(ci98ub,xbar, s) - (pnorm(ci98lb,xbar, s))
 
 ```
+
+
 
