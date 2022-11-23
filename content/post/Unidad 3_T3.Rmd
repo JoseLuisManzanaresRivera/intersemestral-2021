@@ -138,7 +138,7 @@ b) Explica qué quiere decir que se tiene un $95\%$ de confianza.
 #### Ejercicio 6 
 
 
-Se aplica una prueba  de conocimientos a una muestra aleatoria simple de 2000  personas de la población de la ciudad de Monterrey. Y se obtiene una media de 560  y una desviación estándar $\sigma=120$.  La media $\bar{x}$ de los 1.000 resultados variará si repites el muestreo.
+Se aplica una prueba  de conocimientos a una muestra aleatoria simple de 2000  personas de la población de la ciudad de Monterrey. Y se obtiene una media de 560  y una desviación estándar $\sigma=120$.  La media $\bar{x}$ de los 2,000 resultados variará si repites el muestreo.
 
 1.-La distribución de $\bar{x}$ es aproximadamente normal. Su media es $\mu$ = 560.
 
