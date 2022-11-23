@@ -169,7 +169,7 @@ El razonamiento anterior se puede aplicar a cualquier nivel de confianza **C**
 Si la media poblacional $\mu$ es conocida  y consideramos el caso de la distribución de la media muestral $\bar{x}$ podemos aplicar el procedimiento para estandarizar y obtener el estadístico **z** $z=\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt(n)}}$
 
 
-Recuerde que **z** nos dice la distancia de la media muestral, respecto de la poblacional en términos de desviaciones estándar.
+Recuerde que **z** nos dice la distancia de la media muestral, respecto de la poblacional en términos de desviaciones estándar, es decir,  el estadístico **Z** responde a la pregunta: 
 
 ¿Qué tan lejos está $\bar{x}$ de $\mu$ en desviaciones estándar?
 
