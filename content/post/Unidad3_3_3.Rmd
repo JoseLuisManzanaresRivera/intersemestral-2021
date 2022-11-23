@@ -1156,7 +1156,10 @@ tipo I.**
 Si **NO** rechazamos $H_0$ cuando en realidad $H_a$ es cierta, cometemos un **error tipo II**
 
 
-![](/img/types.jpg)
+![](/img/typesII.jpg)
+
+
+
 
 
 ¿Qué probabilidades de ocurrencia tienen los errores tipo I y tipo II?
