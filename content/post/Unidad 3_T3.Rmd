@@ -37,7 +37,7 @@ Dada la naturaleza aleatoria del proceso de muestreo, cuando planteamos conclusi
 Si bien, podemos establecer un rango probabilísitico que garantiza inferir un parámetro poblacional a partir del dato muestral, a este rango lo denominamos **intervalo de confianza** y está expresado en términos porcentuales.
 
 
-Si consideramos la **distribución normal**, sabemos por la regla 68-65-99.7 que $\bar{x}\pm \sigma=68$, $\bar{x}\pm\sigma=95$,$\bar{x}\pm\sigma=99.7$  Estos rangos representan intervalos de confianza que garantizan que si consideramos un gran número de muestras, la media poblacional $\mu$ se ubicará entre esos limites, en el $68\%$,$95\%$,$99.7\%$ de las muestras. 
+Si consideramos la **distribución normal**, sabemos por la regla 68-65-99.7 tenemos las siguientes proporciones de datos a partir del estadístico media: $\bar{x}\pm \sigma=68$, $\bar{x}\pm\sigma=95$,$\bar{x}\pm\sigma=99.7$  Estos rangos representan intervalos de confianza que garantizan que si consideramos un gran número de muestras, la media poblacional $\mu$ se ubicará entre esos limites, en el $68\%$,$95\%$,$99.7\%$ de las muestras. 
 
 
 **Ejemplo** 
