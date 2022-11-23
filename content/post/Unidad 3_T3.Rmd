@@ -132,6 +132,7 @@ La encuesta daba en sus conclusiones un **error de estimación** de $\pm4.1$ por
 
 a) Calcula un intervalo de confianza del $95\%$ para el porcentaje de las mujeres adultas que creen que no tienen suficiente tiempo para ellas.
 
+b) Explica qué quiere decir que se tiene un $95\%$ de confianza.
 
 #### Ejercicio 6 
 
