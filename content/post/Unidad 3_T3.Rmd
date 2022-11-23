@@ -88,7 +88,7 @@ Note que el área bajo la curva muestra la proporción total de datos.
 
 Mientras que el intervalo $$\mu+4.2$$   $2\sigma=2*2.1=4.2$ indica el área dentro de la cual se localiza el 95% de los datos.
 
-**En términos de probabilidades podemos afirmar que hay un 95% de probabilidades de que la media poblacional se encuentre dentro de este intervalo.**  En otras palabras, si examinamos la distribución de un gran número de muestras aleatorias simples (MAS) de igual tamaño,  tenemos un $95\%$ de **confianza** de que la media poblacional se encuentre en este intervalo $\mu \pm4.2$. 
+**En términos de probabilidades podemos afirmar que   si examinamos la distribución de un gran número de muestras aleatorias simples (MAS) de igual tamaño,  tenemos un $95\%$ de confianza** de que la media poblacional se encuentre en este intervalo $\mu \pm4.2$. 
 
 
 Con un $95\%$ de **confianza**, la media desconocida de la prueba de habilidades matemática se encuentra en el intervalo  **[267.8, 276.2]**
