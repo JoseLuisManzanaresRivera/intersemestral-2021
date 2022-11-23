@@ -12,6 +12,7 @@ Estudiar el diseño de las pruebas de hipótesis y su aplicación para la valida
 
 ## Metas de aprendizaje.
 
+
 + El alumno será capaz de estimar **intervalos de confianza** para diferentes niveles.
 
 + Comprenderá el concepto de **error de estimación** y las variables que lo determinan.
