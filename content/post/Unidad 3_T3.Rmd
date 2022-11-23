@@ -52,9 +52,9 @@ La ley de los grandes números nos garantiza que la media poblacional $\mu$ debe
 + Recordemos  que el **teorema de limte central** nos permite afirmar que una media $\bar{x}$ calculada a partir de 840 individuos tiene una distribución que se parece mucho a una **distribución normal**.
 
 
-+ La media de esta **distribución normal** es la misma que la media desconocida de la población $\mu$
++ La media de esta **distribución normal** es la misma que la media desconocida de la población $\mu$.
 
-+ La desviación estándar $\sigma$ en una muestra aleatoria simple de 840 hombres es $\frac{\sigma}{\sqrt(840)}$, donde $\sigma$ es la desviación estándar de las puntuaciones  para la población.
++ La desviación estándar **s** en una muestra aleatoria simple de 840 hombres es $\frac{\sigma}{\sqrt(840)}$, donde $\sigma$ es la desviación estándar de las puntuaciones  para la población.
 
 Entonces la desviación estándar de la distribución muestral es:  $\frac{\sigma}{\sqrt(840)}=\frac{60}{\sqrt(840)}=2.1$
 
