@@ -134,6 +134,7 @@ a) Calcula un intervalo de confianza del $95\%$ para el porcentaje de las mujere
 
 b) Explica qué quiere decir que se tiene un $95\%$ de confianza.
 
+
 #### Ejercicio 6 
 
 
