@@ -93,7 +93,9 @@ Mientras que el intervalo $\mu+4.2$   $2\sigma=2*2.1=4.2$ indica el área dentro
 Con un $95\%$ de **confianza**, la media desconocida de la prueba de habilidades matemática se encuentra en el intervalo  **[267.8, 276.2]**
 
 
-Cuando indicamos que la media poblacional se ubica en el intervalo $\mu+2\sigma$, esto implica que tenemos un margen de error del $5\%$ distribuido en cada una de las dos colas de la distribución acorde a:  $\frac{1-c}{2}$.   
+Cuando indicamos que la media poblacional se ubica en el intervalo $\mu+2\sigma$, esto implica que tenemos un margen de error del $5\%$ distribuido en cada una de las dos colas de la distribución acorde a:  $\frac{1-c}{2}$. 
+
+
 
 
 Donde **C** es el nivel de confianza.
