@@ -111,7 +111,7 @@ La estructura del inervalo de confianza quedará definida por $\bar{x}\ \pm se$
 
 Donde: **se**= Error de estimación.
 
-El **error de estimación** indica la precisión que creemos que tiene nuestra suposición y se basa en la variabilidad o grado de dispersión ($\sigma$) de la estimación.
+El **error de estimación** indica la **precisión** que creemos que tiene nuestra suposición y se basa en la variabilidad o grado de dispersión ($\sigma$) de la estimación.
 
 Y es un intervalo de confianza del $95\%$ por que contendrá el parámetro $\mu$  **desconocido** en un $95\%$ de las muestras. 
 
