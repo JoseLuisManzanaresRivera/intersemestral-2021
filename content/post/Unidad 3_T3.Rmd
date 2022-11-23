@@ -63,7 +63,7 @@ Entonces la caracterización de la distribución muestral es **N(270,2.1)**
 Si seleccionáramos muchas muestras repetidas de tamaño 840 y hallásemos la puntuación media de cada una de ellas, podríamos obtener la media $\mu$ = 272 de la primera muestra, $\mu$ = 268 de la segunda muestra, $\mu$ = 273 de la tercera muestra, etc. 
 
 Si representáramos de forma gráfica la distribución de estas medias,
-**obtendríamos la distribución normal con media igual a la media desconocida de la población y desviación esándar igual a 2.1**. 
+**obtendríamos la distribución normal con media igual a la media desconocida de la población y desviación estándar igual a 2.1**. 
 
 La **inferencia** sobre la $\mu$ desconocida utiliza esta distribución de $\bar{x}$. 
 
