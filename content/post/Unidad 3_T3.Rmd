@@ -154,12 +154,12 @@ Llama **m** al error de estimación. Señala la zona entre la media menos **m** 
 
 ## Síntesis.
 
-Un intervalo de confianza de nivel **C** para la estimación de un parámetro tiene dos partes: 
+El intervalo de confianza para la estimación de un parámetro tiene dos límites: (límite inferior y un límite superior) con un nivel de confianza  **C**  
 
-+ Un intervalo calculado a partir de dos datos: **estimación** $\pm$ **error de estimación**
++ El intervalo es calculado a partir de dos datos: **estimación** $\pm$ **error de estimación**
 
 
-+ Un nivel de **confianza C** que indica la probabiliad de que en un muestreo repetido, el intervalo contenga el verdadero valor del parámetro.
++ El nivel de **confianza C**  indica la probabiliad de que en un muestreo repetido, el intervalo contenga el verdadero valor del parámetro.
 
 ### IV  Intervalos de confianza para la media $\mu$
 
