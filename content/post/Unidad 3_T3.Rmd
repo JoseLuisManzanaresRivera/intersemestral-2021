@@ -1,7 +1,7 @@
 ---
 title: "Unidad 3 SUB3"
 output: html_document
-date: '2022-11-23'
+date: '2022-11-24'
 categories: ["Pruebas de hipótesis"]
 tags: ["Valor P, nivel de significación"]
 ---
