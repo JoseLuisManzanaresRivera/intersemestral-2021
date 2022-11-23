@@ -16,12 +16,12 @@ Estudiar el diseño de las pruebas de hipótesis y su aplicación para la valida
 
 + Comprenderá el concepto de **error de estimación** y las variables que lo determinan.
 
-+ Será capaz de estimar el **tamaño de muestra** necesaro dada un nivel de precisión asociado al error de estimación.
++ Será capaz de estimar el **tamaño de muestra** necesario dado un nivel de precisión asociado al error de estimación.
 
 
 + Planteará pruebas de hipótesis  para niveles específicos de significación estadística.
 
-+ Comprenderá el concepto del **valor P**  en el contexto de la validación de hipoótesis de signifiación.
++ Comprenderá el concepto del **valor P**  en el contexto de la validación de hipótesis de significación.
 
 
 + Será capáz de aplicar la **prueba Z** para contrastar hipótesis dada una media poblacional conocida. 
