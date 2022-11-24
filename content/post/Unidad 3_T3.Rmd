@@ -135,6 +135,29 @@ a) Calcula un intervalo de confianza del $95\%$ para el porcentaje de las mujere
 b) Explica qué quiere decir que se tiene un $95\%$ de confianza.
 
 
+
+```{r}
+
+# Paso 1. Definimos los datos del problema. 
+
+xbar <- 0.49
+se<-0.041
+
+
+##  Paso 2. Realizamos los calculos acorde con la definición de intervalo de confianza para un nivel del 95%
+
+# a) 
+
+ci95_uB<-xbar+2*se
+ci95_lB<-xbar-2*se
+
+## El intervalo de confianza del 95%   es  [57.2% a 40.8%]
+ 
+## Donde UB stands for Upper bound  y lB , lower bound o  límite superior e inferior respectivamente.
+
+# b)  Quiere decir que si consideramos un proceso de muestreo (con muestras del mismo tamaño) tenemos una confianza de que el parámetro desconocido: media poblacional, se localizará en este rango probabilístico en el 95% de las muestras. 
+```
+
 #### Ejercicio 6 
 
 
@@ -151,6 +174,35 @@ Se aplica una prueba  de conocimientos a una muestra aleatoria simple de 2000  p
 3.-Según la regla del 68-95-99,7, aproximadamente el $95\%$ de todos los valores de $\bar{x}$ se sitúan entre _______ de la media de esta curva. 
 
 Llama **m** al error de estimación. Señala la zona entre la media menos **m** y la media más **m** en el eje de las abscisas de tu gráfico.
+
+
+
+```{r}
+
+
+a) 
+
+sigma <-120/sqrt(2000) 
+# 
+xbar<-560
+
+
+se95<-2*sigma 
+se997<-3*sigma
+
+
+b)
+
+ic68<-xbar+sigm = 281.8974
+ic95<-xbar+se95 =283.7947
+ic997<-xbar+se997 = 285.6921
+
+c) EL SE para un inervalo del 95% es m = 3.794733
+
+d) La amplitud del intervalo al 95% de confinaza es 7.6.
+
+
+```
 
 ## Síntesis.
 
@@ -303,33 +355,39 @@ Supón que la **desviación estándar** de la distribución de los IQ de esta po
 
 ```{r, include=FALSE}
 
+# Paso 1. Definimos los datos y los almacenamos en un data frame.   
+
 estudiantes<-data.frame(califas=c(114, 100, 104, 89, 102, 91, 114, 114, 103, 105,
 108, 130, 120, 132, 111, 128,118, 119, 86, 72,
 111, 103, 74, 112, 107, 103, 98, 96, 112, 112, 93))
 
-summary(estudiantes )
+# Paso 2. estimamos la media.
 
+media<-mean(estudiantes$califas)
 
-media <-105.8
+# Paso 3. Definimos los parámetros dados por el problema.
+
 n <-31
+
 sigma<-15
+
 sigmamuestral<-sigma/sqrt(n)
+
 zcritico<-2.576
+
+# Paso 4 Hacemos el cálculo para una intervalo de confianza del 99%  acorde con la definición. 
 
 intervalo_ub<-media+zcritico*sigmamuestral
 intervalo_lb<-media-zcritico*sigmamuestral
 
 ```
 
-
-
-
 ### Énfasis
 
 
 $$Error-de-estimación  = z^{*}\frac{\sigma}{\sqrt{n}}$$
 
-Distinga  las varibales que hacen que el error de estimación sea menor:
+Distinga  las variables que hacen que el error de estimación sea menor:
 
 + Una muestra más grande
 
@@ -362,6 +420,8 @@ de un intervalo de confianza?
 
 # Solución:
 
+# Paso 1. Definimos los datos del problema.
+
 # a)
 
 n<-1073 
@@ -369,30 +429,37 @@ mu<-278
 sigma<-80
 z_95<-1.960
 
+# Paso 2. Aplicamos la definición de intervalo de conianza para construir el intervalo con un  nivel del 95%.
+
 
 int95_ub<-mu+z_95*sigma
 int95_lb<-mu-z_95*sigma
 
+# Paso 3. Se calculan  los intervalos a los niveles de confianza de 90% y 99%.
+
 # b) 
 
-z_95<-1.960
 z_90<-1.645
+z_95<-1.960
 z_99<-2.576
 
 sigma_muestra<-sigma/sqrt(n)
 
-int95_ub<-mu+z_95*sigma_muestra
-int95_lb<-mu+z_95*sigma_muestra
+int99_ub<-mu+z_99*sigma_muestra
+int99_lb<-mu-z_99*sigma_muestra
 
 int90_ub<-mu+z_90*sigma_muestra
-int90_lb<-mu+z_90*sigma_muestra
+int90_lb<-mu-z_90*sigma_muestra
+
+
+## Paso 4. se especifican los errores de estimación.
 
 # c)
 
 
-SE_90<-mu+z_90*sigma_muestra
-SE_95<-mu+z_95*sigma_muestra
-SE_99<-mu+z_99*sigma_muestra
+SE_90<-z_90*sigma_muestra
+SE_95<-z_95*sigma_muestra
+SE_99<-z_99*sigma_muestra
 
 ## Entre más grande es el nivel de confianza, C, mayor es el error de estimación (SE). Lo que se observa gráficamente  porque el intervalo es más amplio (menos preciso).
 ```
