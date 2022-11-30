@@ -1099,7 +1099,7 @@ En términos de **valores P**, el resultado de una prueba de significación de n
 
 ### Valores críticos en pruebas con nivel de significación predeterminado.
 
-El valor $z^'*'$ que tiene una probabilidad **p** a su derecha por debajo de
+El valor $z^*$ que tiene una probabilidad **p** a su derecha por debajo de
 la curva normal estandarizada se llama valor crítico superior de la
 distribución normal estandarizada.
 
