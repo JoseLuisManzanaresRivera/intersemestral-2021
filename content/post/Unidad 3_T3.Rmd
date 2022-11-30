@@ -877,16 +877,46 @@ $\bar{x}= 237.2$, $\bar{x}= 251.4$ , sabiendo que la media $\mu$ es 230 y la des
 
 
 ```{r, include=FALSE}
-
+library(tidyverse)
 # Solucion 
-# a) 
+
+# a)  Plot.
 
 sigma<-60
 n<-50
 s<-sigma/sqrt(n)
+mu<-230
 
 118.6*2
 125.7*2
+
+
+
+id <- seq(0, 399, by = 1)
+resultados <- dnorm(id, mean = mu, sd = sigma)
+
+GRE<-data.frame(id,resultados)
+
+ggplot(GRE, aes(id,resultados) )+
+geom_line()+
+theme_light()+
+  labs(x="Resultados GRE (pts)", y="Frecuencia")+
+  geom_vline(xintercept = mu, linetype="dashed", color="blue", size=.5)+
+   expand_limits(x = 500, y = 0)+
+annotate("text", x=260, y=.0025, size=4,color="red",label="Media=230, StdDev=8.48")
+
+## Alternativa  para  muestra de 50 obs. 
+
+ggplot(data.frame(x = rnorm(50, mu, sigma)), aes(x)) +
+  geom_density() +
+   expand_limits(x = c(0,500), y = 0)+
+theme_light()+
+  labs(x="Resultados GRE (pts)", y="Frecuencia")+
+  geom_vline(xintercept = mu, linetype="dashed", color="blue", size=.8)+
+annotate("text", x=260, y=.0025, size=4,color="red",label="Media=230, StdDev=8.48")+
+  geom_vline(xintercept = 237.2, linetype="dashed", color="coral", size=.5)+  
+  geom_vline(xintercept = 251.4, linetype="dotted", color="steelblue", size=.5)
+
 
 # b
 1-pnorm(251.4,230,8.485281)
@@ -904,7 +934,7 @@ s<-sigma/sqrt(n)
 
 **Gastos dedicados a la vivienda.** 
 
-La Oficina del Instituto Nacional de estadistica, geografía e Informática, (INEGI), en México, informa
+La Oficina del Instituto Nacional de estadística, geografía e Informática, (INEGI), en México, informa
 que los hogares de este país dedicaron una media del $31\%$ de todos sus gastos
 a la vivienda. Una asociación de constructores de la ciudad de Monterrey  cree
 que esta media es menor en su zona y entrevistan a una muestra de 40 hogares del área metropolitana de Monterrey  para saber qué porcentaje de sus gastos
