@@ -1,5 +1,5 @@
 ---
-title: "Unidad 3"
+title: "Unidad 3 T1"
 author: "José Luis Manzanares Rivera"
 date: '2022-11-16'
 categories: Distribución normal
