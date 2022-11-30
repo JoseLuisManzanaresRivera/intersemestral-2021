@@ -1,14 +1,9 @@
 ---
-title: "Unidad 3 T1"
-author: "José Luis Manzanares Rivera"
+title: "Unidad 3"
+output: html_document
 date: '2022-11-16'
-categories: Distribución normal
-tags: Inferencia
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-```
 
 
 ## Objetivos.
