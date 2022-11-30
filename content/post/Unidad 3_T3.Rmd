@@ -659,13 +659,13 @@ Sea la siguiente distribución para una muestra aleatoria simple.
 En este caso, nos preguntamos ¿Cuál es la probabilidad de encontrar una media muestral $\bar{x}=.3$ suponiendo de que $\mu=0$, $\sigma =1$ y dado que sabemos, por el algoritmo para determinar la desviación estándar muestral que $s=\frac{\sigma}{\sqrt(n)}=\frac{1}{\sqrt(10)}0.316$
 
 
-La prueba de significancia en este caso se planteará de la siguiente manera: 
+La prueba de significanción en este caso se planteará de la siguiente manera: 
 
 + Hipótesis nula $H_{0}$  $\mu=0$
 
 + Hipótesis alternativa  $H_{a}$ $\mu >0$
 
-Esta **hipótesis alternativa es de una cola**, ya que sólo estamos interesados en desviaciones de la hipótesis nula en una dirección, concretamente, en la ddirección de los valores mayores a la media.
+Esta **hipótesis alternativa es de una cola**, ya que sólo estamos interesados en desviaciones de la hipótesis nula en una dirección, concretamente, en la dirección de los valores mayores a la media.
 
 La dirección o direcciones que se tienen en cuenta en la prueba, son especificadas en la **hipótesis alternativa.**
 
@@ -678,7 +678,7 @@ Importante notar que $H_{a}$ expresa el efecto del cual esperamos encontrar evid
 A menudo es más fácil empezar planteando $H_{a}$.
 
 
-##### hipotesis alternativa de dos colas.
+##### Hipótesis alternativa de dos colas.
 
 En determinados casos nos interesa determinar si hay o no diferencia estadisticamente significativa entre dos parámetros, sin especificar necesariamente  la dirección de la diferencia.  
 
@@ -691,7 +691,7 @@ $$H_{a}: \mu\neq0$$ Si hay diferencia.
 
 
 
-En palabras, Si sabemos que la verdadera media pobacional es $\mu=0$ en esta prueba de significancia nos preguntamos: ¿Cuál es la probabilidad de encontrar una media muestral $\mu$ de al menos 0.3? 
+En palabras, Si sabemos que la verdadera media pobacional es $\mu=0$ en esta prueba de significanción nos preguntamos: ¿Cuál es la probabilidad de encontrar una media muestral $\mu$ de al menos 0.3? 
 
 
 En este caso la probabilidad que buscamos es: 
@@ -732,9 +732,9 @@ A estas probabilidades de referencia las denominamos **valores p** porque miden 
 
 Así por ejemplo, para un intervalo de confianza del $95\%$, el **valor P** o *(p-value)* corresponderá con la suma de las probabilidades que se integran por el área bajo la curva de la distribución muestral en cada uno de sus extremos (positivo -derecho- y negativo -izquierdo-), que para el caso particular es: $0.025 + 0.025$ 
 
-Cualquier valor que se localize dentro de este umbral, permitirá rechazar la hipótesis nula $H_0$ 
+Cualquier valor que se localice dentro de este umbral, permitirá rechazar la hipótesis nula $H_0$. 
 
-A esta área se le denomina área de rezhazo.
+A esta área se le denomina área de rechazo.
 
 ## Nivel de significación.
 
@@ -747,7 +747,7 @@ Al fijar valores de contraste predeterminados estamos indicando el nivel que des
 Estos umbrales decisivos se denominan **niveles de significación** y se denotan por la letra alfa $\alpha$ y se exprezan por el complemento del nivel de confianza,  entonces para un nivel de confianza del $95\%$ el nivel de significación correspondiente es $\alpha=.05$
 
 
-Por ejemplo,  Si escogemos $\alpha = 0.05$, exigimos que los datos proporcionen una evidencia en contra de $H_0$ tan fuerte que el valor de $bar{x}$ no ocurra por azar más del $5\%$ de las veces.
+Por ejemplo,  Si escogemos $\alpha = 0.05$, exigimos que los datos proporcionen una evidencia en contra de $H_0$ tan fuerte que el valor de $\bar{x}$ no ocurra por azar más del $5\%$ de las veces.
 
 
 #### Si el valor P es más pequeño o igual que $\alpha$, decimos que los datos son estadísticamente significativos a un nivel $\alpha$.
@@ -780,7 +780,7 @@ Ahora bien, consideremos el caso en el que nos interesa determinar la probabilid
 
 Nos preguntamos, ¿es posible que esta media muestral se deba puramente al azar?
 
-Planteando la misma prueba de significancia  con:
+Planteando la misma prueba de significanción  con:
 
 + Hipótesis Nula  $H_{0}$ $\mu=0$
 
@@ -793,14 +793,14 @@ Planteando la misma prueba de significancia  con:
 
 ```
 
-La respuesta, basada en la evidencia estadística de esta prueba con un nivel de significancia $\alpha$ del $5\%$ es **NO**
+La respuesta, basada en la evidencia estadística de esta prueba con un nivel de significanción $\alpha$ del $5\%$ es **NO**
 
 ¿Podemos rechazar la hipótesis nula? La respuesta es **SÍ**
 
 Note que la probabilidad estimada del dato de interés es inferior que el *p-value*   $0.0006236259<0.05$
 
 
-**Note** que,  Si escogemos un nivel de significancia ($\alpha$ = 0.01), exigimos una evidencia aún más fuerte en contra de $H_{0}$, una evidencia tan fuerte que el valor de $\bar{x}$ sólo ocurre por
+**Note** que,  Si escogemos un nivel de significanción ($\alpha$ = 0.01), exigimos una evidencia aún más fuerte en contra de $H_{0}$, una evidencia tan fuerte que el valor de $\bar{x}$ sólo ocurre por
 azar en un $1%$ de las ocasiones (en 1 de cada 100 muestras) si $H_0$ es cierta.
 
 
