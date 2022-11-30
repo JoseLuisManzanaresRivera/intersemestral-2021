@@ -1,0 +1,152 @@
+---
+title: "Unidad 3 T4 ANOVA"
+output: html_document
+date: '2022-12-07'
+categories: ["ANOVA"]
+tags: ["Distribución F"]
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Objetivos
+
+Estudiar los métodos que permiten hacer contraste de la variación entre multiples poblaciones. Métodos **ANOVA** (Análisis de la variación) de un factor (one-way ANOVA)
+
+#### Metas de aprendizaje.
+
++ Conocerá la **disrtibución F**  y su utilidad para la aplicación de pruebas de hipótesis que buscan determinar la existencia de diferencias entre multiples muestras. 
+
+
+##### Introducción. 
+
+Hasta ahora los procedimientos  vistos, como los basados en la **distribución t**  permiten comparar dos muestras. 
+
+
+Los métodos que  veremos en esta sección nos permiten contar con herramientas para comparar cualquier numero de muestras. (no solo dos). Aplicamos para este propósito la distribución F. 
+
+
+
+##### Prueba F del análisis de la varianza ANOVA.
+
+La prueba ANOVA contrasta si varias poblaciones tienen la misma media, comparando lo separadas que están entre sí las medias muestrales en relación con la variación existente dentro de la
+muestras.
+
+La prueba F permite contrastar las hipótesis. $$H_0: \mu_1=\mu_2= ...\mu_n$$
+$$H_a:\mu_1\neq \mu_2...\neq \mu_n$$
+La prueba permite validar si los parámetros son iguales o no lo son.  Es importante destacar que el rechazo de $H0:$, no permite en esta etapa determinar cuales son los parametros que difieren al interior del conjunto, solo estamos indicando que  difieren estadisticamente. 
+
+Por ejemplo, si estamos comparando tres muestras y el **estadístico F** tiene un **valor P 0.02**, podemos rechazar con un nivel de significación al $5\%$ que las tres medias  ($\mu_1, \mu_2,\mu_3$) sean iguales en favor de que no lo son. 
+
+Es decir $H_a$ permite por ejemplo, un escenario en el que  $\mu_1=\mu_2$ y $\mu_1$ difiere.     
+
+Por este motivo, la prueba que veremos con **distribución F**, se considera una etapa inicial en el análisis de varianza, por que permite validar la hipótesis de defirencia multiple entre muestras. 
+
+
+
+**En esta prueba lo que importa no es lo separadas que están las medias muestrales, sino lo separadas que están con relación a la variabilidad de las observaciones individuales.**
+
+
+La siguiente figura muestra esta idea mediante dos diagramas de caja (boxplots o de bigotes) para dos conjuntos de tres muestras cada uno. 
+
+Las **medias muestrales son iguales** en (a) y (b). El análisis de la varianza hallará una diferencia más significativa entre las medias en (b) debido a que hay menos variación entre individuos dentro de estas muestras.
+
+![](/img/ANOVA.jpg)
+
+
+### Estadístico de constraste.
+
+
+
+**F = Variación entre medias muestrales / Variación entre individuos de la misma muestra**
+
+Las **distribuciones F** son una familia de distribuciones que incorporarn dos parámetros adicionales.  
+
+Estos parámetros son los **grados de libertad** de las varianzas muestrales que aparecen en el numerador y en el denominador del estadístico F.
+ 
++ Las distribuciones F son asimétricas hacia la derecha.
+
++ El **estadístico F** sólo puede tomar valores positivos o cero. Es cero sólo cuando todas las medias muestrales son idénticas, se hace mayor a medida que las medias muestrales están más separadas entre sí.
+
+![](/img/fs.jpg)
+
++ Los valores **F** grandes constituyen una
+buena evidencia en contra de la hipótesis nula $H_0$ de que todas las medias poblacionales son iguales.
+
+El contraste para valorar el nivel de significación estadistica  particular se hace considerando niveles de significación deseados, tal como en los casos de las distribuciones z y t, previamente estudiadas.
+
+
+#### Grados de libertad de la prueba F.
+
+Los grados del libertad en **númerador, son  I-1**  Donde  **I** es el número de poblaciones. 
+
+En el **denominador quedan definidos por N-I**, Donde  **N** es la suma  de los tamaños de muestra **n** de las *I* poblaciones.
+
+Donde **N**: 
+
+$$N=n_1+n_2+n_3...+n_I$$
+
+
+#### Enfasis: Supuestos de ANOVA
+
+
++ Tenemos **I** muestras aleatorias simples independientes, una para
+cada una de las **I** poblaciones.
+
+
++ La población **i-ésima** tiene una distribución normal de media desconocida $\mu_i$. Las medias pueden ser distintas en las diversas poblaciones. El **estadístico F** del ANOVA contrasta la hipótesis nula de que todas las poblaciones tienen la misma media:
+
+$$H_0: \mu_1 =\mu_2 =\mu_3...\mu_n$$
+
+**H_a: No todas las $\mu_i$ son iguales**
+
++ Todas las poblaciones tienen la misma desviación estándar $\sigma$, cuyo valor es desconocido.
+
+¿Es muy grave que las desviaciones estandar sean distintas? El **ANOVA** no es demasiado sensible a la violación de este supuesto, especialmente cuando todas
+las muestras tienen **tamaños iguales** o similares, y **ninguna muestra es muy pequeña**.
+
+**Importante regularidad empírica** : Los resultados de la **prueba F del ANOVA** son aproximadamente correctos cuando la desviación estándar muestral más grande no es mayor que el
+**doble** de la desviación estándar muestral más pequeña.
+
+
+#### Ejemplo.
+
+Estado civil y salario. Los hombres casados tienden a ganar más dinero que
+los hombres solteros. Ésta es una de las conclusiones obtenidas en un estudio
+sobre la relación entre estado civil e ingresos, realizado a partir de los datos de
+los 8,235 hombres empleados como directivos o profesionales por una gran empresa en 2016. Supón (es arriesgado) que consideramos a estos hombres como
+una muestra aleatoria simple de la población de todos los hombres empleados
+como directivos o profesionales en grandes empresas. He aquí los resultados de
+la estadística descriptiva sobre los salarios de estos hombres.
+
+![](/img/viu2.jpg)
+
+(a) Describe brevemente la relación entre estado civil y salario.
+
+
+(b) Las desviaciones estándar muestrales, ¿nos permiten poder utilizar el estadístico F del ANOVA?
+
+
+(c) ¿Cuántos grados de libertad tiene el estadístico F del ANOVA?
+
+(d) Como media, los hombres solteros ganan menos que los hombres que están o han estado casados. Las diferencias altamente significativas entre los salarios medios, ¿demuestran que casarse provoca un aumento de los ingresos medios de los hombres? Justifica tu respuesta.
+
+```{r, include= FALSE}
+
+# (a) Mayores salarios para casados vs. solteros y mayores para viudos. 
+
+
+# (b) s_mayor/smenor= 8119/5731=1.416681, < 2, OK 
+8119/5731
+# (c) gl NUm =  I-1, 4-1=3, gl denominador= N-I= 8,235-4= 8231
+
+# (d) La edad es una variable que interviene como confusor. En un análisis más detallado es importante controlar por estos efectos.
+
+```
+
+
+
+#### Ejercicio. 19
+

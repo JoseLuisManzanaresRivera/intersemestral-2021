@@ -180,26 +180,30 @@ Llama **m** al error de estimación. Señala la zona entre la media menos **m** 
 ```{r}
 
 
-a) 
+#a) 
 
 sigma <-120/sqrt(2000) 
 # 
 xbar<-560
 
 
+
 se95<-2*sigma 
 se997<-3*sigma
 
 
-b)
+#b)
 
-ic68<-xbar+sigm = 281.8974
-ic95<-xbar+se95 =283.7947
-ic997<-xbar+se997 = 285.6921
+ic68<-xbar+sigma
+#281.8974
+ic95<-xbar+se95 
+# 283.7947
+ic997<-xbar+se997 
+# 285.6921
 
-c) EL SE para un inervalo del 95% es m = 3.794733
+#c) EL SE para un inervalo del 95% es m = 3.794733
 
-d) La amplitud del intervalo al 95% de confinaza es 7.6.
+#d) La amplitud del intervalo al 95% de confinaza es 7.6.
 
 
 ```
@@ -1066,7 +1070,6 @@ mu<-275
 xbar<-272
 
 pnorm(xbar,mu,s)
-
 ```
 
 
@@ -1363,5 +1366,139 @@ Prob<-pnorm(ci98ub,xbar, s) - (pnorm(ci98lb,xbar, s))
 
 ```
 
+
+
+#### Ejercicio 15
+
+
+**Tasas de interés e inversión en deuda gubernamental.**
+
+La compra de Bonos gubernamentaes conocidos como certificados de la  tesoreria (CETES) es una inversión segura, pero, ¿es una inversión rentable? 
+
+He aquí datos sobre el rendimiento (en porcentaje) de las letras del tesoro de 1996 a 2022:
+
+|Año	   |Rendimiento (%) |
+|:-----: | :-----:        |
+|	1996	|	6.45	|
+|	1997	|	4.37	|
+|	1998	|	4.17	|
+|	1999	|	7.2	  |
+|	2000	|	8	    |
+|	2001	|	5.89	|
+|	2002	|	5.06	|
+|	2003	|	5.43	|
+|	2004	|	7.46	|
+|	2005	|	10.56	|
+|	2006	|	12.18	|
+|	2007	|	14.71	|
+|	2008	|	10.84	|
+|	2009	|	8.98	|
+|	2010	|	9.89	|
+|	2011	|	7.65	|
+|	2012	|	6.1	  |
+|	2013	|	5.89	|
+|	2014	|	6.95	|
+|	2015	|	8.43	|
+|	2016	|	7.72	|
+|	2017	|	5.46	|
+|	2018	|	3.5	  |
+|	2019	|	3.04	|
+|	2020	|	4.37	|
+|	2021	|	5.6	  |
+|	2022	|	5.13	|
+
+(a) Dibuja un histograma con estos datos, utiliza barras que tengan una anchura de 2 puntos porcentuales. ¿Qué clase de desviación de la normalidad observas? Gracias al teorema del límite central, puedes sin embargo, tratar a $\bar{x}$ como
+aproximadamente normal.
+
+(b) Supón que podemos considerar estos 27 años como una muestra aleatoria de los rendimientos de los certificados de la tesorería. Calcula un intervalo de confianza del
+$90\%$ para la media de los rendimientos a lo largo de muchos años. 
+(Supón que
+conoces que la desviación estándar de todos los rendimientos es $\sigma = 2.75\%$.)
+
+
+(c) La tasa de inflación media durante estos años es del $5.5\%$. ¿Estás seguro
+de que el rendimiento medio de los certificados de la tesorería es superior al $5.5\%$? Plantea
+las hipótesis, calcula el estadístico de contraste y halla el valor P.
+
+
+d) Dibuja un diagrama temporal con estos datos.
+
+
+```{r, warning=FALSE, message=FALSE, include=FALSE}
+
+library(tidyverse)
+
+# Solución
+
+# Paso 1 load data .
+
+cetes<-read.csv("rendimiento.csv")%>%
+  mutate(re=rendimiento /100)
+
+glimpse(cetes)
+
+## paso 2.   Crear histograma para analizar forma de la distribución y detectar  posibles sesgo y asimetrías
+ggplot(cetes,aes(rendimiento))+
+geom_histogram(binwidth=2, colour="steelblue", fill="coral",alpha=0.4)+
+ggtitle("Rendimiento (%) en CETES 1996 -2022")+
+  theme_light()+
+  labs(x="Intereses (Rendimiento %)")
+
+# Observamos un sesgo postivo. Indicación que cuestiona el supuesto de normalidad.
+
+# Si aplicamos la prueba para deterctar normalidad de shapiro.Notamos que: 
+
+shapiro.test(cetes$re) # => p-value = 0.1096
+# No rexhazamos la hipótesis nula de normalidad a los  niveles de significación del 1, 5 y 10%, por lo que tenemos una serie que cumple este supuesto.
+
+# b 
+
+xbar<-mean(cetes$re)
+sigma<-0.0275
+n<-27
+sigma_muestral<-sigma/sqrt(n)
+
+z90<-1.645
+  
+ic90_ub<-xbar+z90*sigma_muestral
+ic90_lb<-xbar-z90*sigma_muestral
+
+
+## Intervalo de nivel 90% entre [6.20%-7.94%]
+
+
+# c)   Ho: mu =0.055, Ha: mu> 0.055
+
+zcritico<-(xbar-0.055)/sigma_muestral
+
+pval<-1-pnorm(zcritico)
+
+pval<-1-pnorm(xbar, 0.055,sigma_muestral)
+
+# Rechazamos H0, el rendimiento es mayor a la tasa de inflación de 5.5%. La probabilidad de hallar por azar este dato tan extermo, cuando H0 es cierta como 5.5% es ínfima 0.0014.   
+
+# Note la utilización de la función pnorm: Cuando usamos el valor z, obtenemos la prob acumulada hasta el z. ej. lado izquierdo de la distribución, por lo que tenemos que restar de 1 este valor para obtener el lado derecho.
+
+#d) 
+ggplot(cetes, aes(año, re))+
+geom_line(color = "#00AFBB", size = .5)+
+theme_light()  +
+labs(x="Año", y="Tasa %")
+
+
+# El diagrama temporal deja claro que los rendimientos de los sucesivos años están fuertemente correlacionados; por tanto, no es correcto tratar estos datos como una muestra aleatoria simple. Siempre tienes que comprobar que no existe este tipo de correlaciones con datos obtenidos a lo largo del tiempo.
+
+
+ggplot(cetes, aes(re)) +
+  geom_density()+
+  geom_vline(xintercept = 0.055, linetype="dashed", color="red", size=.6)+
+  geom_vline(xintercept = xbar, linetype="dashed", color="blue", size=.6)+
+  labs(x="Tasa de CETES. Rendimeito %")
+ggtitle("Distribución de los Datos.")
+
+
+
+curve(dnorm(x, 0.05, sigma_muestral), from=0.0304, to=.1471)
+```
 
 

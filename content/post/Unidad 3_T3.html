@@ -77,6 +77,24 @@ La encuesta daba en sus conclusiones un <strong>error de estimación</strong> de
 <li><p>Calcula un intervalo de confianza del <span class="math inline">\(95\%\)</span> para el porcentaje de las mujeres adultas que creen que no tienen suficiente tiempo para ellas.</p></li>
 <li><p>Explica qué quiere decir que se tiene un <span class="math inline">\(95\%\)</span> de confianza.</p></li>
 </ol>
+<pre class="r"><code># Paso 1. Definimos los datos del problema. 
+
+xbar &lt;- 0.49
+se&lt;-0.041
+
+
+##  Paso 2. Realizamos los calculos acorde con la definición de intervalo de confianza para un nivel del 95%
+
+# a) 
+
+ci95_uB&lt;-xbar+2*se
+ci95_lB&lt;-xbar-2*se
+
+## El intervalo de confianza del 95%   es  [57.2% a 40.8%]
+ 
+## Donde UB stands for Upper bound  y lB , lower bound o  límite superior e inferior respectivamente.
+
+# b)  Quiere decir que si consideramos un proceso de muestreo (con muestras del mismo tamaño) tenemos una confianza de que el parámetro desconocido: media poblacional, se localizará en este rango probabilístico en el 95% de las muestras. </code></pre>
 </div>
 <div id="ejercicio-6" class="section level4">
 <h4>Ejercicio 6</h4>
@@ -86,6 +104,30 @@ La encuesta daba en sus conclusiones un <strong>error de estimación</strong> de
 <p>2.-Dibuja la curva normal que describa cómo varía <span class="math inline">\(\bar{x}\)</span> en muchas muestras de esta población. Señala su media <span class="math inline">\(\mu = 560\)</span> y los valores situados a una, dos y tres desviaciones estándar a cada lado de la media.</p>
 <p>3.-Según la regla del 68-95-99,7, aproximadamente el <span class="math inline">\(95\%\)</span> de todos los valores de <span class="math inline">\(\bar{x}\)</span> se sitúan entre _______ de la media de esta curva.</p>
 <p>Llama <strong>m</strong> al error de estimación. Señala la zona entre la media menos <strong>m</strong> y la media más <strong>m</strong> en el eje de las abscisas de tu gráfico.</p>
+<pre class="r"><code>#a) 
+
+sigma &lt;-120/sqrt(2000) 
+# 
+xbar&lt;-560
+
+
+
+se95&lt;-2*sigma 
+se997&lt;-3*sigma
+
+
+#b)
+
+ic68&lt;-xbar+sigma
+#281.8974
+ic95&lt;-xbar+se95 
+# 283.7947
+ic997&lt;-xbar+se997 
+# 285.6921
+
+#c) EL SE para un inervalo del 95% es m = 3.794733
+
+#d) La amplitud del intervalo al 95% de confinaza es 7.6.</code></pre>
 </div>
 </div>
 <div id="síntesis." class="section level2">
@@ -160,7 +202,7 @@ tiempo de permanencia de los directores en la universidad es de 3.2 años.)</p>
 <p><span class="math display">\[\bar{x}\pm Z_{99}^{*}\frac{\sigma}{\sqrt(n)}=11.78 \pm 2.576(0.2997075)\]</span></p>
 <p>El intervalo requerido es: 11.0079 a 12.5520</p>
 <pre><code>## [1] 12.55205</code></pre>
-<p><img src="/post/Unidad%203_T3_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/Unidad%203_T3_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <pre class="r"><code>xbar&lt;-11.78
 sigma&lt;-3.2
 n&lt;-114
@@ -183,7 +225,7 @@ ci99i&lt;-xbar-z*(sigma/sqrt(n))</code></pre>
 <div id="énfasis" class="section level3">
 <h3>Énfasis</h3>
 <p><span class="math display">\[Error-de-estimación  = z^{*}\frac{\sigma}{\sqrt{n}}\]</span></p>
-<p>Distinga las varibales que hacen que el error de estimación sea menor:</p>
+<p>Distinga las variables que hacen que el error de estimación sea menor:</p>
 <ul>
 <li><p>Una muestra más grande</p></li>
 <li><p>Una menor dispersión <span class="math inline">\(\sigma\)</span></p></li>
@@ -661,6 +703,144 @@ pnorm(ci_ub,muha,s) - pnorm(ci_lb,muha, s)</code></pre>
 <li><p>¿Cuál es la probabilidad de un error tipo I?</p></li>
 <li><p>Calcula la probabilidad de un <strong>error tipo II</strong> cuando <span class="math inline">\(\mu = 270\)</span>. Quieres saber si esta prueba no rechazará <span class="math inline">\(H_0\)</span> cuando la verdadera media poblacional sea 270.</p></li>
 <li><p>Estime la potencia de la prueba de significación estadística.</p></li>
+</ol>
+</div>
+<div id="ejercicio-15" class="section level4">
+<h4>Ejercicio 15</h4>
+<p><strong>Tasas de interés e inversión en deuda gubernamental.</strong></p>
+<p>La compra de Bonos gubernamentaes conocidos como certificados de la tesoreria (CETES) es una inversión segura, pero, ¿es una inversión rentable?</p>
+<p>He aquí datos sobre el rendimiento (en porcentaje) de las letras del tesoro de 1996 a 2022:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Año</th>
+<th align="center">Rendimiento (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1996</td>
+<td align="center">6.45</td>
+</tr>
+<tr class="even">
+<td align="center">1997</td>
+<td align="center">4.37</td>
+</tr>
+<tr class="odd">
+<td align="center">1998</td>
+<td align="center">4.17</td>
+</tr>
+<tr class="even">
+<td align="center">1999</td>
+<td align="center">7.2</td>
+</tr>
+<tr class="odd">
+<td align="center">2000</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">2001</td>
+<td align="center">5.89</td>
+</tr>
+<tr class="odd">
+<td align="center">2002</td>
+<td align="center">5.06</td>
+</tr>
+<tr class="even">
+<td align="center">2003</td>
+<td align="center">5.43</td>
+</tr>
+<tr class="odd">
+<td align="center">2004</td>
+<td align="center">7.46</td>
+</tr>
+<tr class="even">
+<td align="center">2005</td>
+<td align="center">10.56</td>
+</tr>
+<tr class="odd">
+<td align="center">2006</td>
+<td align="center">12.18</td>
+</tr>
+<tr class="even">
+<td align="center">2007</td>
+<td align="center">14.71</td>
+</tr>
+<tr class="odd">
+<td align="center">2008</td>
+<td align="center">10.84</td>
+</tr>
+<tr class="even">
+<td align="center">2009</td>
+<td align="center">8.98</td>
+</tr>
+<tr class="odd">
+<td align="center">2010</td>
+<td align="center">9.89</td>
+</tr>
+<tr class="even">
+<td align="center">2011</td>
+<td align="center">7.65</td>
+</tr>
+<tr class="odd">
+<td align="center">2012</td>
+<td align="center">6.1</td>
+</tr>
+<tr class="even">
+<td align="center">2013</td>
+<td align="center">5.89</td>
+</tr>
+<tr class="odd">
+<td align="center">2014</td>
+<td align="center">6.95</td>
+</tr>
+<tr class="even">
+<td align="center">2015</td>
+<td align="center">8.43</td>
+</tr>
+<tr class="odd">
+<td align="center">2016</td>
+<td align="center">7.72</td>
+</tr>
+<tr class="even">
+<td align="center">2017</td>
+<td align="center">5.46</td>
+</tr>
+<tr class="odd">
+<td align="center">2018</td>
+<td align="center">3.5</td>
+</tr>
+<tr class="even">
+<td align="center">2019</td>
+<td align="center">3.04</td>
+</tr>
+<tr class="odd">
+<td align="center">2020</td>
+<td align="center">4.37</td>
+</tr>
+<tr class="even">
+<td align="center">2021</td>
+<td align="center">5.6</td>
+</tr>
+<tr class="odd">
+<td align="center">2022</td>
+<td align="center">5.13</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li><p>Dibuja un histograma con estos datos, utiliza barras que tengan una anchura de 2 puntos porcentuales. ¿Qué clase de desviación de la normalidad observas? Gracias al teorema del límite central, puedes sin embargo, tratar a <span class="math inline">\(\bar{x}\)</span> como
+aproximadamente normal.</p></li>
+<li><p>Supón que podemos considerar estos 27 años como una muestra aleatoria de los rendimientos de los certificados de la tesorería. Calcula un intervalo de confianza del
+<span class="math inline">\(90\%\)</span> para la media de los rendimientos a lo largo de muchos años.
+(Supón que
+conoces que la desviación estándar de todos los rendimientos es <span class="math inline">\(\sigma = 2.75\%\)</span>.)</p></li>
+<li><p>La tasa de inflación media durante estos años es del <span class="math inline">\(5.5\%\)</span>. ¿Estás seguro
+de que el rendimiento medio de los certificados de la tesorería es superior al <span class="math inline">\(5.5\%\)</span>? Plantea
+las hipótesis, calcula el estadístico de contraste y halla el valor P.</p></li>
+</ol>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Dibuja un diagrama temporal con estos datos.</li>
 </ol>
 </div>
 </div>

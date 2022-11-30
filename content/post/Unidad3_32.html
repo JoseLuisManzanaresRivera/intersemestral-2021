@@ -1,0 +1,558 @@
+---
+title: "Unidad 3 T3.2"
+output: html_document
+date: '2022-11-25'
+categories: ["Prueba de hipótesis para medias"]
+tags: ["Distribución t"]
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="objetivos." class="section level2">
+<h2>Objetivos.</h2>
+<p>Estudiar los métodos estadísticos para hacer inferencia sobre la media de una población y para comparar las medias de dos
+poblaciones.</p>
+<p>Estos métodos incluyen las <strong>pruebas basadas en la distribución t y los intervalos de confianza</strong> para valorar la diferencia estadística entre medidas en circunstancias donde tenemos muestras pequeñas. Concretamente nos interesa el estudio y aplicación de la <strong>distribución t</strong> para el contraste de hipótesis entre la media de dos poblaciones.</p>
+</div>
+<div id="metas-de-aprendizaje." class="section level2">
+<h2>Metas de aprendizaje.</h2>
+<ul>
+<li>El alumno será capaz de construir intervalos de confianza y aplicar las pruebas de significación para la media de una población y para la comparación de las medias de dos poblaciones.</li>
+</ul>
+<p>Uno de los problemas que encontramos en la práctica con la utilización del estadístico estandarizado <strong>z</strong> para realizar inferencia es que <strong>no conocemos el parámetro poblacional <span class="math inline">\(\sigma\)</span></strong> desviación estándar poblacional.</p>
+<p><strong>William Gosset</strong>, un destacado pionero en la construcción del campo que hoy conocemos como estadística, se ocupó de este tema y desarrolló una distribución para el estadístico <span class="math display">\[\frac{\bar{x}-\mu}{s}\]</span></p>
+<p>Ya que observó que no era suficiente substituir <span class="math inline">\(\sigma\)</span> por <strong>s</strong> y asumir normalidad de la distribución resultante, ya que los resultados no eran suficientemente precisos.</p>
+<p>Es gracias a <strong>William Gosset</strong>, quien desarrolló una <strong>distribución de números críticos</strong> que comúnmente denominados <strong>distribución t</strong><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> (adicional a la distribución <strong>Z</strong> ya vista) que este problema se puede atender. Este será el tema de nuestra sesión de hoy.</p>
+<p>Material bibliografico de consulta para la sesión de hoy disponible en <a href="https://drive.google.com/file/d/1ezHlHeEPXBDIf2glXMsyZ0KzGsR8pM27/view?usp=sharing">Libro de texto</a> Ver paginas 481-562.</p>
+</div>
+<div id="definiciones-y-conceptualización" class="section level2">
+<h2>Definiciones y conceptualización</h2>
+<p>Los intervalos de confianza y las pruebas de significación para la media <span class="math inline">\(\mu\)</span> de una población normal se basan en la media muestral <span class="math inline">\(\bar{x}\)</span>.</p>
+<p>La media de la distribución de <span class="math inline">\(\bar{x}\)</span> es <span class="math inline">\(\mu\)</span>. Es decir, <span class="math inline">\(\bar{x}\)</span> es un <strong>estimador insesgado</strong> de la <span class="math inline">\(\mu\)</span> desconocida.</p>
+<p>La dispersión de <span class="math inline">\(\bar{x}\)</span> depende del tamaño de la muestra y de la desviación estándar poblacional <span class="math inline">\(\sigma\)</span>.</p>
+<p><strong>Recordemos</strong> de la sesión previa que haciamos el supesto poco realista de que conociamos <span class="math inline">\(\sigma\)</span>. Pero en la práctica <span class="math inline">\(\sigma\)</span> es desconocida. Así que es necesario estimar este parámetro poblacional, lo cual es posible con base en los siguientes supuestos.</p>
+<div id="supuestos." class="section level4">
+<h4>Supuestos.</h4>
+<ul>
+<li><p>Nuestros datos proceden de una <strong>muestra aleatoria simple</strong> de tamaño <strong>n</strong> de una población.</p></li>
+<li><p>Tanto <span class="math inline">\(\mu\)</span> como <span class="math inline">\(\sigma\)</span> son parámetros desconocidos.</p></li>
+<li><p>Las observaciones proceden de una población que tiene una <strong>distribución normal</strong> con media <span class="math inline">\(\mu\)</span> y desviación estándar <span class="math inline">\(\sigma\)</span>.</p></li>
+</ul>
+<p>En la práctica, si la muestra no es muy pequeña, es suficiente con que la <strong>población sea simétrica</strong> y que no tenga dos modas (bi modal).</p>
+</div>
+<div id="definición" class="section level3">
+<h3>Definición:</h3>
+<div id="error-estándar-de-la-media-muestral." class="section level5">
+<h5>Error estándar de la media muestral.</h5>
+<p><span class="math display">\[\frac{s}{\sqrt(n)}\]</span>
+<strong>Importante</strong>, note que no conocemos <span class="math inline">\(\sigma\)</span>, por lo que utilizamos la desviación estándar muestral <strong>s</strong> para estimar el <strong>error estándar</strong> de la media muestral <span class="math inline">\(\bar{x}\)</span></p>
+</div>
+</div>
+<div id="distribución-t" class="section level3">
+<h3>Distribución t</h3>
+<p><span class="math display">\[t=\frac{\bar{x}-\mu}{\frac{s}{\sqrt(n)}}\]</span></p>
+<p>Con n-1 <strong>grados de libertad</strong></p>
+<p><strong>Note:</strong></p>
+<p><strong>La distribución muestral t</strong> no tiene una distribución normal.</p>
+<p>Existe una <strong>distribución t</strong> distinta para cada tamaño de muestra.</p>
+<p>Note el contraste con el estadístico <span class="math display">\[z=\frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt(n)}}\]</span></p>
+<p>Este tiene una <strong>distribución normal</strong> caracterizada con los parámetros media y desviación estándar <strong>N(0,1)</strong></p>
+<p>La interpretación del <strong>estadístico t</strong> es la misma que la correspondiente z. <strong>Es decir, nos dice la distancia de la media muestral respecto de la poblacional en términos de desviaciones estándar.</strong></p>
+<p>Concretamos una <strong>distribución t</strong> determinada, dando sus <strong>grados de libertad.</strong> que se obtienen a partir de la desviación estándar muestral <strong>s</strong> en el denominador de t.</p>
+<p>Usaremos la letra <strong>k</strong> para para definir el número de grados de libertad.</p>
+<p>La siguiente figura muestra el contraste entre la <strong>distribución t</strong> y la normal estandarizada <strong>(z)</strong> para diferentes <strong>k</strong></p>
+<p><img src="/img/t.jpg" /></p>
+<p>Note que <strong>las distribuciones t</strong> tienen más probabilidad en los extremos que la normal estandarizada.</p>
+<p>Notemos además los siguientes rasgos destacados.</p>
+<ul>
+<li><p>Simetría</p></li>
+<li><p>Unimodal</p></li>
+<li><p>Forma Gaussiana (campaña)</p></li>
+<li><p>Centradas en 0</p></li>
+<li><p>s en <strong>t dist</strong> &gt; s en <strong>z dist.</strong> lo que implica una mayor probabilidad en los extremos para las <strong>t dist</strong></p></li>
+<li><p>A medida que el <strong>tamaño de muestra es mayor</strong> y el número de <strong>grados de libertad</strong><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> es mayor, la <strong>t dist</strong> se parece más a la <strong>z dist N(0,1)</strong>.</p></li>
+</ul>
+<p><em>¿Bajo qué circunstancias podemos utilizar la distribución t para hacer inferencia estadística?</em></p>
+<div id="criterios-referentes-al-tamaño-de-muestra-para-la-utilización-de-los-procedimientos-t." class="section level4">
+<h4>Criterios referentes al tamaño de muestra para la utilización de los procedimientos t.</h4>
+<ul>
+<li><strong>Muestras grandes.</strong> Los procedimientos t se pueden utilizar incluso
+para distribuciones muy asimétricas cuando la <strong>muestra sea grande,</strong> aproximadamente cuando <strong><span class="math inline">\(n\geq 40\)</span></strong>.</li>
+</ul>
+<p>La principal razón para este punto es el <strong>teorema del límite central.</strong> El estadístico <strong>t</strong> utiliza la
+media muestral <span class="math inline">\(\bar{x}\)</span>, la cual es más normal a medida que aumenta el tamaño de la muestra, incluso cuando la población no tiene una distribución normal.</p>
+<ul>
+<li><strong>Tamaño de muestra menor que 15.</strong> Utiliza los procedimientos t
+si los datos son aproximadamente normales. Si los datos no
+son claramente normales o si existen observaciones atípicas,
+<strong>no utilices los procedimientos t.</strong></li>
+</ul>
+<p>La recomendación es que siempre que tengas muestras pequeñas, antes de utilizar los procedimientos <strong>t</strong>, dibuja un gráfico para detectar asimetrías o la presencia de observaciones atípicas.</p>
+<ul>
+<li><strong>Tamaño de la muestra mayor o igual a 15</strong>. Los procedimientos t se
+pueden utilizar <strong>a no ser que existan observaciones atípicas o que la distribución sea muy asimétrica.</strong></li>
+</ul>
+<p><em>Las observaciones atípicas sugieren que los datos no constituyen una muestra de una población normal.</em></p>
+<ul>
+<li>Excepto en el caso de muestras pequeñas, el supuesto de que
+los datos sean una <strong>muestra aleatoria simple</strong> de la población de
+interés es más importante que el supuesto de que la distribución
+de la población sea normal.</li>
+</ul>
+<p>El siguiente diagrama muestra el esquema conceptual para la utilización práctica de las pruebas basadas en la <strong>distribución t</strong> para contraste de hipótesis que buscan valorar la diferencia entre medias.</p>
+<p><img src="/img/esquema.jpg" /></p>
+</div>
+<div id="i-procedimientos-t-para-una-muestra." class="section level4">
+<h4>I Procedimientos t para una muestra.</h4>
+<p>1.- Obtén una muestra aleatoria simple de tamaño <strong>n</strong> de una población de media <span class="math inline">\(\mu\)</span> desconocida.</p>
+<p><strong>Intervalo de confianza de nivel C para <span class="math inline">\(\mu\)</span></strong></p>
+<p><span class="math display">\[\bar{x}\pm t* \frac{s}{\sqrt(n)}\]</span>
+donde <span class="math inline">\(t^{∗}\)</span> es el valor crítico superior (1−C)/2 de la distribución t(n − 1)</p>
+<p><strong>Valor de contraste para</strong> <span class="math inline">\(H_0: \mu=\mu_0\)</span></p>
+<p><span class="math display">\[t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt(n)}}\]</span></p>
+<p><img src="/img/contrastet.jpg" /></p>
+<div id="ejemplo-1" class="section level5">
+<h5>Ejemplo 1</h5>
+<p>Para investigar la calidad del agua, a fines de julio de 2021, el Departamento de Salud de la comisi[on fronteriza de Tijuana recolectó muestras de agua de 12 playas entre Rosarito y San Antonio del Mar en el Municipio de Tijuana.</p>
+<p>Esas muestras se analizaron para coliformes fecales, que son bacterias E. coli que se encuentran en las heces humanas y animales. Un nivel inseguro de coliformes fecales significa que hay una mayor probabilidad de que haya bacterias que causan enfermedades y un mayor riesgo de que un nadador se enferme si accidentalmente ingiere parte del agua. Un sitio web considera que <strong>no es seguro</strong> si una muestra de 100 mililitros de agua contiene más de <strong>88 bacterias coliformes.</strong></p>
+<p>Los niveles de coliformes fecales pueden cambiar a medida que cambian el clima y otras condiciones. Estas playas se habían considerado seguras a principios del verano de 2021, y la razón por la que se recopilaron datos fue para determinar si esto seguía siendo cierto.</p>
+<p>Por lo tanto, estamos buscando evidencia de que las condiciones pasadas a lo largo de este tramo de playas se hayan deteriorado.</p>
+<p>Hacemos la pregunta en términos del nivel medio de coliformes fecales <span class="math inline">\(\mu\)</span> para todas estas playas. La hipótesis nula es “el nivel es seguro” y la hipótesis alternativa es “el nivel no es seguro”:</p>
+<p><span class="math display">\[H_0: \mu=88\]</span></p>
+<p><span class="math display">\[H_a: \mu&gt;88\]</span></p>
+<pre class="r"><code># Solución
+
+library(tidyverse)
+
+## Cargamos la base de datos.
+
+t1&lt;-read.csv(&quot;ejemplot1.csv&quot;)
+glimpse(t1)</code></pre>
+<pre><code>## Rows: 12
+## Columns: 2
+## $ id        &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+## $ NCF.100ml &lt;int&gt; 248, 37, 146, 19, 66, 236, 164, 30, 13, 144, 242, 20</code></pre>
+<pre class="r"><code># Verificamos supuestos considerando criterios de tamaño de muestra y normalidad (especialmente simetría).
+
+# (a) Tamaño de muestra menor a 15.  n&lt;15. !!!!
+# (b) Simretría.   Muestra asimétrica !!1!!
+stem(t1$NCF.100ml)</code></pre>
+<pre><code>## 
+##   The decimal point is 2 digit(s) to the right of the |
+## 
+##   0 | 12234
+##   0 | 7
+##   1 | 4
+##   1 | 56
+##   2 | 44
+##   2 | 5</code></pre>
+<pre class="r"><code>#(c) Normalidad:  COn Shapiro.
+
+shapiro.test(t1$NCF.100ml) # =&gt; p-value = 0.03 !!!!  Al nivel de significancia del 0.05 rechazamos H0. Normalidad. Concluimos que estos datos no provienen de una distribución normal.</code></pre>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  t1$NCF.100ml
+## W = 0.85037, p-value = 0.0371</code></pre>
+<pre class="r"><code>## Realizaremos el procedimiento con fines didácticos únicamente, pero los resultados no serán vÁlidos.
+
+xbar&lt;-mean(t1$NCF.100ml)
+mu&lt;-88
+n&lt;-12
+s&lt;-sd(t1$NCF.100ml)
+error&lt;-s/sqrt(n)
+t&lt;-(xbar-mu)/error
+df&lt;-n-1
+
+## uSAMOS TABLAS para t= 0.94 con gl=11 en página 789- Esta es entre 0.20 y 0.15 
+
+## uSAMOS LA FUNCIÓN pt PARA ESTIMAR  EL VALOR P PARA EL VALOR CRíTICO T.
+
+pt(t, df, lower.tail = FALSE)</code></pre>
+<pre><code>## [1] 0.1812811</code></pre>
+<pre class="r"><code># lOWER TAIL FALSE IMPLICA QUE UPPER TAIL TRUE, O SEA P DEL EXTREMO DERECHO DE LA DIST.
+
+#### O MEJOR AUN, REALIZAMOS LA  ESTIMACIÓN DIRECTA. CON LA función t.test.
+
+t.test(t1$NCF.100ml, mu = 88,   paired = FALSE,
+       alternative = &quot;greater&quot;)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  t1$NCF.100ml
+## t = 0.94991, df = 11, p-value = 0.1813
+## alternative hypothesis: true mean is greater than 88
+## 95 percent confidence interval:
+##  65.06743      Inf
+## sample estimates:
+## mean of x 
+##    113.75</code></pre>
+<pre class="r"><code>## p-value = 0.1813  &gt;  p valor crítico alpha la 0.05. Por lo tanto concluimos que los niveles de bacterias coliformes en promedio no superan los 88 por 100 mililitros. No podemos rechazar HO. Concluimos que las playas son seguras, dados los niveles observados de bacterias coliformes por las muestras.</code></pre>
+<p><img src="/img/et1.jpg" /></p>
+</div>
+<div id="ejercicio-16" class="section level5">
+<h5>Ejercicio 16</h5>
+<p>El estadístico <strong>t</strong> de una muestra para contrastar <span class="math display">\[H_0: \mu=0\]</span> <span class="math display">\[H_a: \mu &gt; 0\]</span> para una muestra n= 16 es <span class="math inline">\(t=1.85\)</span></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>¿Cuántos grados de libertad tiene este estadístico?</p></li>
+<li><p>¿Cuáles son las probabilidades p de la cola de la derecha de estos dos valores?</p></li>
+<li><p>¿Entre qué dos valores se encuentra el valor P de la prueba?</p></li>
+<li><p>Utiliza software y determina la probabilidad exacta en el extremo derecho de la distribución para t = 1.85 ¿Es significativo el valor t = 1.85 a un nivel del <span class="math inline">\(5\%\)</span>? ¿Es significativo a un nivel del <span class="math inline">\(1\%\)</span>?</p></li>
+</ol>
+</div>
+</div>
+<div id="ii-procedimientos-t-para-diseños-por-pares." class="section level4">
+<h4>II Procedimientos t para diseños por pares.</h4>
+<p>Para comparar los elementos en un diseño por pares,
+aplica los procedimientos t de una muestra a las diferencias observadas.</p>
+<p>El parámetro <span class="math inline">\(\mu\)</span> en un procedimiento <strong>t</strong> de un diseño por pares es la media de las diferencias entre los elementos de cada par en toda la población.</p>
+</div>
+<div id="ejemplo-2" class="section level4">
+<h4>Ejemplo 2</h4>
+<p>Los siguientes datos indican el tiempo promedio en segundos que 21 sujetos tardan en resolver un problema de estadistica. El experimento se basa en la realización de los cálculos necesarios para resolver el problema usando: A) calculadora y B) el programa de software excel. El orden de la realización del problema es aleatorio.</p>
+<p>Las hipótesis que se desean probar son. Si el uso de excel mejora el desempeño de los participantes medido por el tiempo promedio de solución del probelma. En otras palabras se busca determinar si el tiempo promedio usando calculadora <strong>supera</strong> al tiempo logrando en el escenario B. Lo que implicaría que el uso de excel no tiene efecto.</p>
+<p>Formalmente, tenemos una prueba de un extremo para: <span class="math display">\[H_0: \mu=0\]</span> Lo queimplica que no hay efecto. <span class="math display">\[H_0: \mu&gt;0\]</span> Implicando que Si hay efecto.</p>
+<p><a href="https://drive.google.com/file/d/1R0dVimjsLY4xG6Eozm8vWfZ62kyUwPDU/view?usp=sharing">Datos</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">Diferencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">30.6</td>
+<td align="center">37.97</td>
+<td align="center">-7.37</td>
+</tr>
+<tr class="even">
+<td align="center">48.43</td>
+<td align="center">51.57</td>
+<td align="center">-3.14</td>
+</tr>
+<tr class="odd">
+<td align="center">60.77</td>
+<td align="center">56.67</td>
+<td align="center">4.1</td>
+</tr>
+<tr class="even">
+<td align="center">36.07</td>
+<td align="center">40.47</td>
+<td align="center">-4.4</td>
+</tr>
+<tr class="odd">
+<td align="center">68.47</td>
+<td align="center">49</td>
+<td align="center">19.47</td>
+</tr>
+<tr class="even">
+<td align="center">32.43</td>
+<td align="center">43.23</td>
+<td align="center">-10.8</td>
+</tr>
+<tr class="odd">
+<td align="center">43.7</td>
+<td align="center">44.57</td>
+<td align="center">-0.87</td>
+</tr>
+<tr class="even">
+<td align="center">37.1</td>
+<td align="center">28.4</td>
+<td align="center">8.7</td>
+</tr>
+<tr class="odd">
+<td align="center">31.17</td>
+<td align="center">28.23</td>
+<td align="center">2.94</td>
+</tr>
+<tr class="even">
+<td align="center">51.23</td>
+<td align="center">68.47</td>
+<td align="center">-17.24</td>
+</tr>
+<tr class="odd">
+<td align="center">65.4</td>
+<td align="center">51.1</td>
+<td align="center">14.3</td>
+</tr>
+<tr class="even">
+<td align="center">58.93</td>
+<td align="center">83.5</td>
+<td align="center">-24.57</td>
+</tr>
+<tr class="odd">
+<td align="center">54.47</td>
+<td align="center">38.3</td>
+<td align="center">16.17</td>
+</tr>
+<tr class="even">
+<td align="center">43.53</td>
+<td align="center">51.37</td>
+<td align="center">-7.84</td>
+</tr>
+<tr class="odd">
+<td align="center">37.93</td>
+<td align="center">29.33</td>
+<td align="center">8.6</td>
+</tr>
+<tr class="even">
+<td align="center">43.5</td>
+<td align="center">54.27</td>
+<td align="center">-10.77</td>
+</tr>
+<tr class="odd">
+<td align="center">87.7</td>
+<td align="center">62.73</td>
+<td align="center">24.97</td>
+</tr>
+<tr class="even">
+<td align="center">53.53</td>
+<td align="center">58</td>
+<td align="center">-4.47</td>
+</tr>
+<tr class="odd">
+<td align="center">64.3</td>
+<td align="center">52.4</td>
+<td align="center">11.9</td>
+</tr>
+<tr class="even">
+<td align="center">47.37</td>
+<td align="center">53.63</td>
+<td align="center">-6.26</td>
+</tr>
+<tr class="odd">
+<td align="center">53.67</td>
+<td align="center">47</td>
+<td align="center">6.67</td>
+</tr>
+<tr class="even">
+<td align="center">—–</td>
+<td align="center">—-</td>
+<td align="center">—-</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>## Paso 1 Cargamos los datos  
+
+Ejemplo1_t&lt;-read.csv(&quot;t.csv&quot;)
+
+# Paso 2. Revisar supuestos para aplicar la prueba. 
+
+# (a) Tenemos una MAS,  en pares con mediciones para los mismos individuos. 
+
+# (b) ¿Tenemos una muestra de tamaño adecuado, simétrica, normal? El tamaño es n&gt;15. 
+
+##  usando un diagrama de tallos (stem and leaf) podemos comprobar que hay simetría en la distribución de las diferencias. Este es un metodo para apreciar mediante tabulación la distribución de los datos. Es un método alternativo a los histrogramas, pero en este caso la diferencia principal es que podemos ver los datos individuales lo que no ocurre en los histogramas por que tenemos lo datos agrupados en rangos.   Esto es suficiente pero además podemos revisar la normalidad con la prueba Shapiro que (esta tiene como H0 Normalidad).
+
+shapiro.test(Ejemplo1_t$diff) # =&gt; p-value = 0.9905</code></pre>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  Ejemplo1_t$diff
+## W = 0.9872, p-value = 0.9905</code></pre>
+<pre class="r"><code>## No rechazamos H0, los datos provienen de una distribución normal. 
+
+
+
+stem(Ejemplo1_t$diff)</code></pre>
+<pre><code>## 
+##   The decimal point is 1 digit(s) to the right of the |
+## 
+##   -2 | 5
+##   -1 | 711
+##   -0 | 8764431
+##    0 | 34799
+##    1 | 2469
+##    2 | 5</code></pre>
+<pre class="r"><code>## Aplicación de la prueba, con base en las hipótesis previamente definidas.
+
+t.test(Ejemplo1_t$A, Ejemplo1_t$B,  paired = TRUE,
+       alternative = &quot;greater&quot;)</code></pre>
+<pre><code>## 
+##  Paired t-test
+## 
+## data:  Ejemplo1_t$A and Ejemplo1_t$B
+## t = 0.34938, df = 20, p-value = 0.3652
+## alternative hypothesis: true difference in means is greater than 0
+## 95 percent confidence interval:
+##  -3.765909       Inf
+## sample estimates:
+## mean of the differences 
+##               0.9566667</code></pre>
+<pre class="r"><code>## Note que tenemos la posibilidad de controlar si la prueba es de una o dos colar y en este caso si es para una media mayor o menor que la especificada  por la hipótesis nula.
+
+# Conclusión, no podemos rechazar H0, No hay evidencia estadísticamente significativa que indique que la diferencia entre medias sea mayor a cero.  La media de las diferencias es 0.9566667, con valor P 0.36&gt; valor critico al 0.05. Lo cual es una diferencia infima si lo contrastamos con  el tiempo medio que la solución del problema representa que es 50.01 segundos. 
+
+mean(Ejemplo1_t$A)</code></pre>
+<pre><code>## [1] 50.01429</code></pre>
+<div id="ejercicio-17." class="section level5">
+<h5>Ejercicio 17.</h5>
+<p>La Procuraduria Federal del consumidor (PROFECO) ha diseñado una serie de estándares para constrastar el peso expresado por los equiquetados en productos cárnicos ofrecidos en supermercados y el peso real.</p>
+<p>Como parte del procedimiento de validación de los estandares, realiza un experimento que consiste en la inspección en 12 muestras, en las que se obtienen los siguientes resultados.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Real</th>
+<th align="center">Etiquetado</th>
+<th align="center">Diferencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1.67</td>
+<td align="center">1.85</td>
+<td align="center">-0.18</td>
+</tr>
+<tr class="even">
+<td align="center">1.14</td>
+<td align="center">1.21</td>
+<td align="center">-0.07</td>
+</tr>
+<tr class="odd">
+<td align="center">1.48</td>
+<td align="center">1.56</td>
+<td align="center">-0.08</td>
+</tr>
+<tr class="even">
+<td align="center">1.84</td>
+<td align="center">1.98</td>
+<td align="center">-0.14</td>
+</tr>
+<tr class="odd">
+<td align="center">0.84</td>
+<td align="center">1.07</td>
+<td align="center">-0.23</td>
+</tr>
+<tr class="even">
+<td align="center">1.39</td>
+<td align="center">1.55</td>
+<td align="center">-0.16</td>
+</tr>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">1.02</td>
+<td align="center">-0.02</td>
+</tr>
+<tr class="even">
+<td align="center">1.19</td>
+<td align="center">1.44</td>
+<td align="center">-0.25</td>
+</tr>
+<tr class="odd">
+<td align="center">1.17</td>
+<td align="center">1.33</td>
+<td align="center">-0.16</td>
+</tr>
+<tr class="even">
+<td align="center">1.83</td>
+<td align="center">2.03</td>
+<td align="center">-0.2</td>
+</tr>
+<tr class="odd">
+<td align="center">1.59</td>
+<td align="center">1.73</td>
+<td align="center">-0.14</td>
+</tr>
+<tr class="even">
+<td align="center">1.05</td>
+<td align="center">1.16</td>
+<td align="center">-0.11</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li><p>Realice un diagrama de tallos basado en la variable <em>diferencias</em> (stem and leaf plot) para analizar la distribución y detectar posibles sesgos. Comente sobre la presencia de <strong>outliers</strong> que puedan advertir sobre la imposibilidad del uso de la prueba basada en el distribución t.</p></li>
+<li><p>Lleve a cabo una prueba t para derterminar si la media del equiquetado es mayor a la que se observa por las mediciones de inspección. Para los niveles de significación del <span class="math inline">\(5\%\)</span> y <span class="math inline">\(1\%\)</span></p></li>
+</ol>
+<p><a href="https://drive.google.com/file/d/1Fbxzn1eISWFa0VRbeM3qG_OgL9reipb1/view?usp=sharing">Descargue los datos aquí. click click</a></p>
+</div>
+</div>
+<div id="iii-prueba-entre-dos-o-más-poblaciones." class="section level4">
+<h4>III Prueba entre dos o más poblaciones.</h4>
+<p>¿Cuál es la diferencia entre un escenario que requiere una <strong>prueba por pares</strong> y uno dirigido a evaluar la diferencia entre dos muestras?</p>
+<p>Este es el punto que abordarémos a continuación.</p>
+<p>Si tenemos muestras independientes de dos o más poblaciones, tenemos un escenario propicio para la aplicación de la <strong>prueba t</strong> para dos o más muestras.</p>
+<p>A diferencia del caso de la prueba por pares, en la cual se tienen <strong>elementos de una misma población</strong> en el caso de dos muestras <strong>los indivduos a examinar provienen de dos poblaciones distintas</strong>.</p>
+<p>La estructura de la evaluación es que se tienen muestras separadas de cada población. La finalidad de estos contrastes es conocer si existe efecto o diferencia entre los dos grupos dada la aplicación de un control.</p>
+<p><strong>En este caso las observaciones NO, se grupan por pares y las muestras pueden ser de distinto tamaño.</strong></p>
+<p>Supuestos bajo los cuales se aplica el contraste para dos o mpas poblaciones.</p>
+<ul>
+<li><p>Tenemos <strong>dos muestras aleatorias simples</strong> de dos poblaciones distintas. Las muestras son <strong>independientes</strong>. Es decir, una muestra no tiene ninguna influencia sobre la otra.
+Medimos la misma variable en las dos muestra.</p></li>
+<li><p>Las dos poblaciones tienen <strong>distribuciones normales</strong>. Las medias y las desviaciones estándar de las dos poblaciones son <strong>desconocidas.</strong></p></li>
+</ul>
+<p>La siguiente tabla indica la notación utilizada en el planteamiento de la prueba.</p>
+<p><img src="/img/t2samples.jpg" />
+<img src="/img/n.jpg" /></p>
+<div id="definición-del-estadístico-de-contraste-para-dos-muestras." class="section level6">
+<h6>Definición del estadístico de contraste para dos muestras.</h6>
+<p><span class="math display">\[t=\frac{\bar{x_1}-\bar{x_2}}{SE}\]</span></p>
+<p>Donde:</p>
+<p><strong>Error de estimación (SE)</strong> = <span class="math display">\[\sqrt(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2})\]</span></p>
+<p>Su interpretación es igual a los valores estadarizados ya estudiados. Mide la distancia, de cero en términos de desviaciones estándar hacia el valor que toma la diferencia entre <span class="math inline">\(\bar{x_1}\)</span> y <span class="math inline">\(\bar{X_2}\)</span></p>
+<p>En la práctica la determinación de los grados de libertad para el cálculo de <strong>t</strong> se basa en el valor menor entre <span class="math inline">\(n_1 -1\)</span> y <span class="math inline">\(n_2 -1\)</span></p>
+<p>El estadístico t de contraste y intervalo de confianza, quedan definidos por:</p>
+<p><span class="math display">\[t=\frac{\bar{x_1}-\bar{x_2}}{\sqrt(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2})}\]</span></p>
+<p><span class="math display">\[(\bar{x_1}-\bar{x_2})\pm t^*\sqrt(\frac{s_1}{n_1}\frac{s_2}{n_2})\]</span></p>
+</div>
+<div id="ejemplo." class="section level5">
+<h5>Ejemplo.</h5>
+<p>La prueba Chapin (Chapin Social Insight Test) es una prueba psicológica diseñada con el objeto de determinar la precisión con la que un individuo capta la personalidad de los que le rodean. Los posibles resultados de la prueba van de 0 a 41.
+Durante el desarrollo de la prueba Chapin, ésta se aplicó a diferentes grupos de personas. He aquí los resultados obtenidos con un grupo de estudiantes universitarios de Arte de ambos sexos.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p><img src="/img/chapin.jpg" /></p>
+<p>¿Se puede afirmar que como media la capacidad de mujeres y de hombres
+para captar la personalidad de las personas que les rodean es distinta?</p>
+<p>¿Se puede afirmar que como media la capacidad de mujeres y de hombres
+para captar la personalidad de las personas que les rodean es distinta?</p>
+<p><strong>Paso 1: Hipótesis.</strong> Se plantea el problema en términos de una hipótesis alternativa de dos colas. Las hipótesis son:</p>
+<p><span class="math display">\[H_0: \mu_1=\mu_2\]</span>
+<span class="math display">\[H_a: \mu_1\neq \mu_2\]</span></p>
+<p><strong>Paso 2:</strong> Estadístico de contraste. El estadístico t de dos muestras es</p>
+<p><span class="math display">\[t=\frac{\bar{x_1}-\bar{x_2}}{\sqrt(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2})}\]</span></p>
+<p><span class="math display">\[t=\frac{25.34-24.94}{\sqrt(\frac{5.05^2}{133}+\frac{5.44^2}{162})}\]</span>
+<span class="math display">\[t=0.654\]</span>
+Note que en las tablas t no aparece el valor de los grados de libertad, en este caso gl = 132, (n-1), por lo que consideramos el valor más cercano que es 100.</p>
+<p>En la definición de los <strong>grados de libertad</strong> note que seleccionamos la <strong>n</strong> de menor tamaño acorde a la teoría descrita previemante.</p>
+<p>El <strong>Valor p</strong> es 0.25 dado que se trata de una prueba de <strong>dos colas</strong>, el valor p de crítico es P=.50=2P(t). Y este valor es mayor al valor P constraste al <strong>90%</strong> co alpha= 10%.</p>
+<p><strong>Conclusión:</strong> No podem,os rechazar <span class="math inline">\(H_0\)</span> y Por lo tanto no observamos diferencia estadisticamente significativa entre la media para hombres y la de mujeres.</p>
+<p><strong>IMPORTANTE:</strong> En este caso el tamaño de muestra grande hace que la falta de normalidad de las muestras pierda importancia. Note que estos resultados solo son validos para la población de estudio que se circunscribe a los estudiantes de un programa específico de una universidad. No se pueden generalizar para la pobalción de universitariso de un país!</p>
+</div>
+<div id="ejercicio-18." class="section level5">
+<h5>Ejercicio 18.</h5>
+<p>Coeficientes de inteligencia de chicos y chicas. A continuación damos los resultados de una prueba de inteligencia de 31 chicas de secundaria de una determinada zona rural.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>114 100 104 89 102 91 114 114 103 105
+108 130 120 132 111 128 118 119 86 72
+111 103 74 112 107 103 98 96 112 112 93</p>
+<p>Los coeficientes de inteligencia de 47 chicos de secundaria de la misma zona
+rural son</p>
+<p>111 107 100 107 115 111 97 112 104 106 113
+109 113 128 128 118 113 124 127 136 106 123
+124 126 116 127 119 97 102 110 120 103 115
+93 123 79 119 110 110 107 105 105 110 77
+90 114 106</p>
+<p><a href="https://drive.google.com/file/d/105OehCk5S6K21PtOQQSmwd6EAwkojSGu/view?usp=sharing">Click aquí para obtener los datos</a></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Halla la media de los coeficientes de las chicas y también la de los chicos. En general, en pruebas estándar, los resultados de los chicos son ligeramente
+superiores a los de las chicas. ¿Ocurre con nuestros datos?</p></li>
+<li><p>Dibuja diagramas de tallos o histogramas con los dos conjuntos de datos. Y aplica la prueba de normalidad e Shapiro para validar el supuesto de normalidad.</p></li>
+</ol>
+<p>Debido a que la distribución de los datos es razonablemente simétrica, sin la presencia de observaciones atípicas, se pueden utilizar los procedimientos t.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Trata estos datos como si fueran una muestra aleatoria simple de los estudiantes de secundaria del municipo de Tijuana. <strong>¿Existe evidencia con un nivel de significación estadística del 5% de que las medias de los coeficientes de inteligencia de chicas y chicos son distintas?</strong></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>La <strong>t</strong> <em>short for Student</em>, asociada a la publiación que el propio William realizó para difundir la distribución propuesta. Puede acceder al artículo original publicado en 1908 <a href="http://seismo.berkeley.edu/~kirchner/eps_120/Odds_n_ends/Students_original_paper.pdf">en este enlace</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>¿Por qué usamos n-1 grados de libertad para el cálculo de la varianza? La razón es que la suma de las desviaciones <span class="math inline">\(x_i -\bar{x}\)</span> es siempre cero, la última desviación se puede hallar cuando se conocen las otras n − 1.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>H. G. Gough, The Chapin Social Insight Test, Consulting Psychologists Press, Palo Alto, Calif., 1968.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Datos proporcionados por Darlene Gordon, School of Education, Purdue University. Estadistica aplicada básica. David. S. Moore.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

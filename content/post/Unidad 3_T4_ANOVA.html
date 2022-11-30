@@ -1,0 +1,101 @@
+---
+title: "Unidad 3 T4 ANOVA"
+output: html_document
+date: '2022-12-07'
+categories: ["ANOVA"]
+tags: ["Distribución F"]
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="objetivos" class="section level3">
+<h3>Objetivos</h3>
+<p>Estudiar los métodos que permiten hacer contraste de la variación entre multiples poblaciones. Métodos <strong>ANOVA</strong> (Análisis de la variación) de un factor (one-way ANOVA)</p>
+<div id="metas-de-aprendizaje." class="section level4">
+<h4>Metas de aprendizaje.</h4>
+<ul>
+<li>Conocerá la <strong>disrtibución F</strong> y su utilidad para la aplicación de pruebas de hipótesis que buscan determinar la existencia de diferencias entre multiples muestras.</li>
+</ul>
+<div id="introducción." class="section level5">
+<h5>Introducción.</h5>
+<p>Hasta ahora los procedimientos vistos, como los basados en la <strong>distribución t</strong> permiten comparar dos muestras.</p>
+<p>Los métodos que veremos en esta sección nos permiten contar con herramientas para comparar cualquier numero de muestras. (no solo dos). Aplicamos para este propósito la distribución F.</p>
+</div>
+<div id="prueba-f-del-análisis-de-la-varianza-anova." class="section level5">
+<h5>Prueba F del análisis de la varianza ANOVA.</h5>
+<p>La prueba ANOVA contrasta si varias poblaciones tienen la misma media, comparando lo separadas que están entre sí las medias muestrales en relación con la variación existente dentro de la
+muestras.</p>
+<p>La prueba F permite contrastar las hipótesis. <span class="math display">\[H_0: \mu_1=\mu_2= ...\mu_n\]</span>
+<span class="math display">\[H_a:\mu_1\neq \mu_2...\neq \mu_n\]</span>
+La prueba permite validar si los parámetros son iguales o no lo son. Es importante destacar que el rechazo de <span class="math inline">\(H0:\)</span>, no permite en esta etapa determinar cuales son los parametros que difieren al interior del conjunto, solo estamos indicando que difieren estadisticamente.</p>
+<p>Por ejemplo, si estamos comparando tres muestras y el <strong>estadístico F</strong> tiene un <strong>valor P 0.02</strong>, podemos rechazar con un nivel de significación al <span class="math inline">\(5\%\)</span> que las tres medias (<span class="math inline">\(\mu_1, \mu_2,\mu_3\)</span>) sean iguales en favor de que no lo son.</p>
+<p>Es decir <span class="math inline">\(H_a\)</span> permite por ejemplo, un escenario en el que <span class="math inline">\(\mu_1=\mu_2\)</span> y <span class="math inline">\(\mu_1\)</span> difiere.</p>
+<p>Por este motivo, la prueba que veremos con <strong>distribución F</strong>, se considera una etapa inicial en el análisis de varianza, por que permite validar la hipótesis de defirencia multiple entre muestras.</p>
+<p><strong>En esta prueba lo que importa no es lo separadas que están las medias muestrales, sino lo separadas que están con relación a la variabilidad de las observaciones individuales.</strong></p>
+<p>La siguiente figura muestra esta idea mediante dos diagramas de caja (boxplots o de bigotes) para dos conjuntos de tres muestras cada uno.</p>
+<p>Las <strong>medias muestrales son iguales</strong> en (a) y (b). El análisis de la varianza hallará una diferencia más significativa entre las medias en (b) debido a que hay menos variación entre individuos dentro de estas muestras.</p>
+<p><img src="/img/ANOVA.jpg" /></p>
+</div>
+</div>
+</div>
+<div id="estadístico-de-constraste." class="section level3">
+<h3>Estadístico de constraste.</h3>
+<p><strong>F = Variación entre medias muestrales / Variación entre individuos de la misma muestra</strong></p>
+<p>Las <strong>distribuciones F</strong> son una familia de distribuciones que incorporarn dos parámetros adicionales.</p>
+<p>Estos parámetros son los <strong>grados de libertad</strong> de las varianzas muestrales que aparecen en el numerador y en el denominador del estadístico F.</p>
+<ul>
+<li><p>Las distribuciones F son asimétricas hacia la derecha.</p></li>
+<li><p>El <strong>estadístico F</strong> sólo puede tomar valores positivos o cero. Es cero sólo cuando todas las medias muestrales son idénticas, se hace mayor a medida que las medias muestrales están más separadas entre sí.</p></li>
+</ul>
+<p><img src="/img/fs.jpg" /></p>
+<ul>
+<li>Los valores <strong>F</strong> grandes constituyen una
+buena evidencia en contra de la hipótesis nula <span class="math inline">\(H_0\)</span> de que todas las medias poblacionales son iguales.</li>
+</ul>
+<p>El contraste para valorar el nivel de significación estadistica particular se hace considerando niveles de significación deseados, tal como en los casos de las distribuciones z y t, previamente estudiadas.</p>
+<div id="grados-de-libertad-de-la-prueba-f." class="section level4">
+<h4>Grados de libertad de la prueba F.</h4>
+<p>Los grados del libertad en <strong>númerador, son I-1</strong> Donde <strong>I</strong> es el número de poblaciones.</p>
+<p>En el <strong>denominador quedan definidos por N-I</strong>, Donde <strong>N</strong> es la suma de los tamaños de muestra <strong>n</strong> de las <em>I</em> poblaciones.</p>
+<p>Donde <strong>N</strong>:</p>
+<p><span class="math display">\[N=n_1+n_2+n_3...+n_I\]</span></p>
+</div>
+<div id="enfasis-supuestos-de-anova" class="section level4">
+<h4>Enfasis: Supuestos de ANOVA</h4>
+<ul>
+<li><p>Tenemos <strong>I</strong> muestras aleatorias simples independientes, una para
+cada una de las <strong>I</strong> poblaciones.</p></li>
+<li><p>La población <strong>i-ésima</strong> tiene una distribución normal de media desconocida <span class="math inline">\(\mu_i\)</span>. Las medias pueden ser distintas en las diversas poblaciones. El <strong>estadístico F</strong> del ANOVA contrasta la hipótesis nula de que todas las poblaciones tienen la misma media:</p></li>
+</ul>
+<p><span class="math display">\[H_0: \mu_1 =\mu_2 =\mu_3...\mu_n\]</span></p>
+<p><strong>H_a: No todas las <span class="math inline">\(\mu_i\)</span> son iguales</strong></p>
+<ul>
+<li>Todas las poblaciones tienen la misma desviación estándar <span class="math inline">\(\sigma\)</span>, cuyo valor es desconocido.</li>
+</ul>
+<p>¿Es muy grave que las desviaciones estandar sean distintas? El <strong>ANOVA</strong> no es demasiado sensible a la violación de este supuesto, especialmente cuando todas
+las muestras tienen <strong>tamaños iguales</strong> o similares, y <strong>ninguna muestra es muy pequeña</strong>.</p>
+<p><strong>Importante regularidad empírica</strong> : Los resultados de la <strong>prueba F del ANOVA</strong> son aproximadamente correctos cuando la desviación estándar muestral más grande no es mayor que el
+<strong>doble</strong> de la desviación estándar muestral más pequeña.</p>
+</div>
+<div id="ejemplo." class="section level4">
+<h4>Ejemplo.</h4>
+<p>Estado civil y salario. Los hombres casados tienden a ganar más dinero que
+los hombres solteros. Ésta es una de las conclusiones obtenidas en un estudio
+sobre la relación entre estado civil e ingresos, realizado a partir de los datos de
+los 8,235 hombres empleados como directivos o profesionales por una gran empresa en 2016. Supón (es arriesgado) que consideramos a estos hombres como
+una muestra aleatoria simple de la población de todos los hombres empleados
+como directivos o profesionales en grandes empresas. He aquí los resultados de
+la estadística descriptiva sobre los salarios de estos hombres.</p>
+<p><img src="/img/viu2.jpg" /></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Describe brevemente la relación entre estado civil y salario.</p></li>
+<li><p>Las desviaciones estándar muestrales, ¿nos permiten poder utilizar el estadístico F del ANOVA?</p></li>
+<li><p>¿Cuántos grados de libertad tiene el estadístico F del ANOVA?</p></li>
+<li><p>Como media, los hombres solteros ganan menos que los hombres que están o han estado casados. Las diferencias altamente significativas entre los salarios medios, ¿demuestran que casarse provoca un aumento de los ingresos medios de los hombres? Justifica tu respuesta.</p></li>
+</ol>
+</div>
+<div id="ejercicio.-19" class="section level4">
+<h4>Ejercicio. 19</h4>
+</div>
+</div>
