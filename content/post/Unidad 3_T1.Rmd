@@ -5,7 +5,6 @@ date: '2022-11-16'
 ---
 
 
-
 ## Objetivos.
 
 Estudiar la aplicación de la distribución normal y distribuciones de muestreo a diferentes escenarios probabilísticos. 
