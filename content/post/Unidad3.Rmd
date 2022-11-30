@@ -1,9 +1,9 @@
 ---
 title: "Unidad 3"
 author: "José Luis Manzanares Rivera"
-date: 2022-11-16T22:08:14-05:00
-categories: ["Distribución normal"]
-tags: ["Inferencia"]
+date: '2022-11-16'
+categories: Distribución normal
+tags: Inferencia
 ---
 
 ```{r setup, include=FALSE}
