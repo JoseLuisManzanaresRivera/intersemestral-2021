@@ -771,9 +771,9 @@ Como vemos, si la probabilidad estimada para el dato de interés es elevada, rel
 
 ![](/img/signi2.jpg)
 
-En este caso concluimos que no hay evidencia estadísticamente significativa de una diferencia entre la media poblacional $\mu=0$ y la media muestral $\bar{x} = 0.3$
+En este caso concluimos que, si la media poblacional es cierta en $\mu=0$, no hay evidencia estadísticamente significativa  de que una media  muestral con el valor de $\bar{x} = 0.3$ sea distinta estadísticamente de la poblaconal.  En otras palabras, este valor ocurre debido a la naturaleza aleatoria de la muestra. ** En este caso NO rechazamos** $H_0$
 
-Cuando tenemos evidencia estadística para rechazar $H_{0}$ sabemos que la ocurrencia del dato de interés **no es atribuible al azar.** 
+**Por el contrario,** Cuando tenemos evidencia estadística para rechazar $H_{0}$ sabemos que la ocurrencia del dato de interés **no es atribuible al azar.** 
 
 Por el contrario cuando la probabilidad de que ocurra el dato de interés es superior al **valor p**, sabemos que la ocurrencia de ese dato se atribuye a la naturaleza aleatoria de la muestra.
 
