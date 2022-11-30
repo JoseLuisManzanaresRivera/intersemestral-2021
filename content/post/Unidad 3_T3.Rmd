@@ -1104,7 +1104,7 @@ La prueba permite conluir que Una puntuación media tan pequeña como 272 ocurri
 
 Esta prueba no es significativa a un nivel $\alpha = 0.05$.
 
-Por lo que no tenemos evidencia estadística suficiente como para rechazar $H_0$.
+Por lo que **No tenemos evidencia estadística suficiente** como para rechazar $H_0$.
 
 ```{r, include=FALSE}
 
@@ -1120,6 +1120,8 @@ pnorm(xbar,mu,s)
 
 
 ![](/img/eztest.jpg)
+
+
 Estos resultados no constituyen una **buena** evidencia a favor de que la media de todos los hombres jóvenes es menor que 275.
 
 
