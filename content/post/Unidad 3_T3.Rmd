@@ -778,7 +778,7 @@ En este caso concluimos que, si la media poblacional es cierta en $\mu=0$, no ha
 Por el contrario cuando la probabilidad de que ocurra el dato de interés es superior al **valor p**, sabemos que la ocurrencia de ese dato se atribuye a la naturaleza aleatoria de la muestra.
 
 
-Ahora bien, consideremos el caso en el que nos interesa determinar la probabilidad de encontrar una media muestral $\bar{x}$ de al menos $1.02$. 
+Ahora bien, consideremos el caso en el que nos interesa determinar la probabilidad de encontrar una media muestral al menos tan extrema como $\bar{x}$ = $1.02$. 
 
 
 Nos preguntamos, ¿es posible que esta media muestral se deba puramente al azar?
@@ -801,7 +801,9 @@ La respuesta, basada en la evidencia estadística de esta prueba con un nivel de
 
 ¿Podemos rechazar la hipótesis nula? La respuesta es **SÍ**
 
-En este caso es muy poco probable que el resultado onbservado se deba al azar. Podemos rechazar $H_0$ a un nivel de significación del $5\%$, incluso del $1%.$
+En este caso es muy poco probable (La probabilidad estimada es de solo $0.06236259\%$) que el resultado observado se deba al azar. 
+
+Podemos rechazar $H_0$ a un nivel de significación del $5\%$, e incluso del $1%.$
 
 
 Note que la probabilidad estimada del dato de interés es inferior que el *p-value*   $0.0006236259<0.05$
