@@ -1231,7 +1231,7 @@ iq95l<-mu-se
 pvalue<-2*pnorm(100, mu, s)
 
 
-# valor critico:  pvalue 0.06 <  0.05. El p val esta fuera del area de rechazo.   No puedo rechazar H0.
+# valor critico:  pvalue 0.06 >  0.05. El p val esta fuera del area de rechazo.   No puedo rechazar H0.
 ```
 
 
@@ -1402,6 +1402,9 @@ ci98lb<-mu-z_critico*s
 ## En este caso Z_crítico = -2.326 y estadístico z de contraste = -2.415229
 # podemos rechazar Ho. Y es posible afirmar que la media 270 es inferior estadisitcamente a 275.
 
+
+
+pnorm(xbar, mu, s)
 Z=(xbar-mu)/s
 
 
