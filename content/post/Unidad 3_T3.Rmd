@@ -667,28 +667,6 @@ La prueba de significanción en este caso se planteará de la siguiente manera:
 
 Esta **hipótesis alternativa es de una cola**, ya que sólo estamos interesados en desviaciones de la hipótesis nula en una dirección, concretamente, en la dirección de los valores mayores a la media.
 
-La dirección o direcciones que se tienen en cuenta en la prueba, son especificadas en la **hipótesis alternativa.**
-
-Las hipótesis siempre se refieren a alguna población, no a resultados particulares. 
-
-Por este motivo, plantea siempre $H_{0}$ y $H_{a}$ en términos de los parámetros poblacionales. 
-
-Importante notar que $H_{a}$ expresa el efecto del cual esperamos encontrar evidencia a favor. 
-
-A menudo es más fácil empezar planteando $H_{a}$.
-
-
-##### Hipótesis alternativa de dos colas.
-
-En determinados casos nos interesa determinar si hay o no diferencia estadisticamente significativa entre dos parámetros, sin especificar necesariamente  la dirección de la diferencia.  
-
-En estos cosos la **prueba de hipótesis es de dos colas** y se plantea de la siguiente manera: 
-
-
-$$H_{0}: \mu=0$$   No hay diferencia 
-
-$$H_{a}: \mu\neq0$$ Si hay diferencia.
-
 
 
 En palabras, Si sabemos que la verdadera media pobacional es $\mu=0$ en esta prueba de significanción nos preguntamos: ¿Cuál es la probabilidad de encontrar una media muestral $\mu$ de al menos 0.3? 
@@ -706,6 +684,31 @@ En este caso la probabilidad que buscamos es:
 ¿Podemos rezhazar la hipótesis nula? 
 
 Esto depende del nivel de significación de nuestra prueba. 
+
+
+
+La dirección o direcciones que se tienen en cuenta en la prueba, son especificadas en la **hipótesis alternativa.**
+
+Las hipótesis siempre se refieren a alguna población, no a resultados particulares. 
+
+Por este motivo, plantea siempre $H_{0}$ y $H_{a}$ en términos de los parámetros poblacionales. 
+
+Importante notar que $H_{a}$ expresa el efecto del cual esperamos encontrar evidencia a favor. 
+
+A menudo es más fácil empezar planteando $H_{a}$.
+
+
+##### Hipótesis alternativa de dos colas.
+
+En determinados casos nos interesa determinar si hay o no diferencia estadísticamente significativa entre dos parámetros, sin especificar necesariamente  la dirección de la diferencia.  
+
+En estos cosos la **prueba de hipótesis es de dos colas** y se plantea de la siguiente manera: 
+
+
+$$H_{0}: \mu=0$$   No hay diferencia 
+
+$$H_{a}: \mu\neq0$$ Si hay diferencia.
+
 
 
 ### VI Valor P de la prueba de significación.
@@ -890,7 +893,7 @@ s<-sigma/sqrt(n)
 1-pnorm(237.2,230,8.485281)
 # [1] 0.1980719
 
-# La probabilidad de ocurrencia debida al azar de una media de 251.4, es ínfima, por lo que es posible rechazar la hipótesis nula de que la media sea 230.  Por el contrario la prob de ocurrencia de media 237.2 es de practicamente el 20%, este dato no indica evidencia estadisticamente significativa de que la media difiera de 230. En este caso no se rechaza H0 (Hipótesis nula).
+# La probabilidad de ocurrencia debida al azar de una media de 251.4, es ínfima, por lo que es posible rechazar la hipótesis nula de que la media sea 230.  Por el contrario la prob de ocurrencia de media 237.2 es de practicamente el 20%, este dato no indica evidencia estadísticamente significativa de que la media difiera de 230. En este caso no se rechaza H0 (Hipótesis nula).
 
 ```
 
@@ -946,9 +949,9 @@ p_value_2<-pnorm(xbar_2,mu,s)
 # Conclusión hay una probabilidad de 1.2% de que  la media sea 27.6% y Una probabilidad de 29% que  la media sea 30.2.
 
 
-# La evidencia en favor de Ha, es estadisticamente significativa  considerando una confinaza del 95%. Esta evidenica implica que es poco probable encontrar una media tan extrema con esta  por azar.
+# La evidencia en favor de Ha, es estadísticamente significativa  considerando una confinaza del 95%. Esta evidenica implica que es poco probable encontrar una media tan extrema con esta  por azar.
 
-# Por el contrario no podemos rechazar la hipótesis nula para x bar =30.2, es decir este valor puede deberse muy probablemente al azar y no se encuentra evidencia estadisticamente significativa de que mu sea menor a 30. 
+# Por el contrario no podemos rechazar la hipótesis nula para x bar =30.2, es decir este valor puede deberse muy probablemente al azar y no se encuentra evidencia estadísticamente significativa de que mu sea menor a 30. 
 
 
 ```
