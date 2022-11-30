@@ -370,29 +370,29 @@ utilizado, llamado pruebas de significación, tiene el objetivo de <strong>valor
 <p>Sea la siguiente distribución para una muestra aleatoria simple.</p>
 <p><img src="/img/signi.jpg" /></p>
 <p>En este caso, nos preguntamos ¿Cuál es la probabilidad de encontrar una media muestral <span class="math inline">\(\bar{x}=.3\)</span> suponiendo de que <span class="math inline">\(\mu=0\)</span>, <span class="math inline">\(\sigma =1\)</span> y dado que sabemos, por el algoritmo para determinar la desviación estándar muestral que <span class="math inline">\(s=\frac{\sigma}{\sqrt(n)}=\frac{1}{\sqrt(10)}0.316\)</span></p>
-<p>La prueba de significancia en este caso se planteará de la siguiente manera:</p>
+<p>La prueba de significanción en este caso se planteará de la siguiente manera:</p>
 <ul>
 <li><p>Hipótesis nula <span class="math inline">\(H_{0}\)</span> <span class="math inline">\(\mu=0\)</span></p></li>
 <li><p>Hipótesis alternativa <span class="math inline">\(H_{a}\)</span> <span class="math inline">\(\mu &gt;0\)</span></p></li>
 </ul>
 <p>Esta <strong>hipótesis alternativa es de una cola</strong>, ya que sólo estamos interesados en desviaciones de la hipótesis nula en una dirección, concretamente, en la dirección de los valores mayores a la media.</p>
-<p>La dirección o direcciones que se tienen en cuenta en la prueba, son especificadas en la <strong>hipótesis alternativa.</strong></p>
-<p>Las hipótesis siempre se refieren a alguna población, no a resultados particulares.</p>
-<p>Por este motivo, plantea siempre <span class="math inline">\(H_{0}\)</span> y <span class="math inline">\(H_{a}\)</span> en términos de los parámetros poblacionales.</p>
-<p>Importante notar que <span class="math inline">\(H_{a}\)</span> expresa el efecto del cual esperamos encontrar evidencia a favor.</p>
-<p>A menudo es más fácil empezar planteando <span class="math inline">\(H_{a}\)</span>.</p>
-<div id="hipotesis-alternativa-de-dos-colas." class="section level5">
-<h5>hipotesis alternativa de dos colas.</h5>
-<p>En determinados casos nos interesa determinar si hay o no diferencia estadisticamente significativa entre dos parámetros, sin especificar necesariamente la dirección de la diferencia.</p>
-<p>En estos cosos la <strong>prueba de hipótesis es de dos colas</strong> y se plantea de la siguiente manera:</p>
-<p><span class="math display">\[H_{0}: \mu=0\]</span> No hay diferencia</p>
-<p><span class="math display">\[H_{a}: \mu\neq0\]</span> Si hay diferencia.</p>
-<p>En palabras, Si sabemos que la verdadera media pobacional es <span class="math inline">\(\mu=0\)</span> en esta prueba de significancia nos preguntamos: ¿Cuál es la probabilidad de encontrar una media muestral <span class="math inline">\(\mu\)</span> de al menos 0.3?</p>
+<p>En palabras, Si sabemos que la verdadera media pobacional es <span class="math inline">\(\mu=0\)</span> en esta prueba de significanción nos preguntamos: ¿Cuál es la probabilidad de encontrar una media muestral <span class="math inline">\(\mu\)</span> de al menos 0.3?</p>
 <p>En este caso la probabilidad que buscamos es:</p>
 <pre class="r"><code>1-pnorm(0.3,0,0.316)</code></pre>
 <pre><code>## [1] 0.171217</code></pre>
 <p>¿Podemos rezhazar la hipótesis nula?</p>
 <p>Esto depende del nivel de significación de nuestra prueba.</p>
+<p>La dirección o direcciones que se tienen en cuenta en la prueba, son especificadas en la <strong>hipótesis alternativa.</strong></p>
+<p>Las hipótesis siempre se refieren a alguna población, no a resultados particulares.</p>
+<p>Por este motivo, plantea siempre <span class="math inline">\(H_{0}\)</span> y <span class="math inline">\(H_{a}\)</span> en términos de los parámetros poblacionales.</p>
+<p>Importante notar que <span class="math inline">\(H_{a}\)</span> expresa el efecto del cual esperamos encontrar evidencia a favor.</p>
+<p>A menudo es más fácil empezar planteando <span class="math inline">\(H_{a}\)</span>.</p>
+<div id="hipótesis-alternativa-de-dos-colas." class="section level5">
+<h5>Hipótesis alternativa de dos colas.</h5>
+<p>En determinados casos nos interesa determinar si hay o no diferencia estadísticamente significativa entre dos parámetros, sin especificar necesariamente la dirección de la diferencia.</p>
+<p>En estos cosos la <strong>prueba de hipótesis es de dos colas</strong> y se plantea de la siguiente manera:</p>
+<p><span class="math display">\[H_{0}: \mu=0\]</span> No hay diferencia</p>
+<p><span class="math display">\[H_{a}: \mu\neq0\]</span> Si hay diferencia.</p>
 </div>
 </div>
 <div id="vi-valor-p-de-la-prueba-de-significación." class="section level3">
@@ -405,8 +405,8 @@ utilizado, llamado pruebas de significación, tiene el objetivo de <strong>valor
 <p>En la práctica utilizaremos <strong>valores de probabilidad</strong> aceptados generalmente como <strong>umbrales de decisión</strong>, estos corresponden a los valores de las colas de la distribución para intervalos de confianza específicos como el <span class="math inline">\(90\%\)</span>, <span class="math inline">\(95\%\)</span> o el <span class="math inline">\(99\%\)</span>.</p>
 <p>A estas probabilidades de referencia las denominamos <strong>valores p</strong> porque miden la probabilidad de encontrar valores <strong>de al menos</strong> el dato de interés cuando el valor de la media poblacional es cierto.</p>
 <p>Así por ejemplo, para un intervalo de confianza del <span class="math inline">\(95\%\)</span>, el <strong>valor P</strong> o <em>(p-value)</em> corresponderá con la suma de las probabilidades que se integran por el área bajo la curva de la distribución muestral en cada uno de sus extremos (positivo -derecho- y negativo -izquierdo-), que para el caso particular es: <span class="math inline">\(0.025 + 0.025\)</span></p>
-<p>Cualquier valor que se localize dentro de este umbral, permitirá rechazar la hipótesis nula <span class="math inline">\(H_0\)</span></p>
-<p>A esta área se le denomina área de rezhazo.</p>
+<p>Cualquier valor que se localice dentro de este umbral, permitirá rechazar la hipótesis nula <span class="math inline">\(H_0\)</span>.</p>
+<p>A esta área se le denomina área de rechazo.</p>
 </div>
 </div>
 <div id="nivel-de-significación." class="section level2">
@@ -415,7 +415,7 @@ utilizado, llamado pruebas de significación, tiene el objetivo de <strong>valor
 comparamos el <strong>valor P</strong> (p-value), con el umbral de decisión que consideramos relevante, (ej. niveles de confianza del <span class="math inline">\(90\%\)</span>, <span class="math inline">\(95\%\)</span>,<span class="math inline">\(99\%\)</span>).</p>
 <p>Al fijar valores de contraste predeterminados estamos indicando el nivel que deseamos sobre <strong>la evidencia en contra de la hipótesis nula.</strong></p>
 <p>Estos umbrales decisivos se denominan <strong>niveles de significación</strong> y se denotan por la letra alfa <span class="math inline">\(\alpha\)</span> y se exprezan por el complemento del nivel de confianza, entonces para un nivel de confianza del <span class="math inline">\(95\%\)</span> el nivel de significación correspondiente es <span class="math inline">\(\alpha=.05\)</span></p>
-<p>Por ejemplo, Si escogemos <span class="math inline">\(\alpha = 0.05\)</span>, exigimos que los datos proporcionen una evidencia en contra de <span class="math inline">\(H_0\)</span> tan fuerte que el valor de <span class="math inline">\(bar{x}\)</span> no ocurra por azar más del <span class="math inline">\(5\%\)</span> de las veces.</p>
+<p>Por ejemplo, Si escogemos <span class="math inline">\(\alpha = 0.05\)</span>, exigimos que los datos proporcionen una evidencia en contra de <span class="math inline">\(H_0\)</span> tan fuerte que el valor de <span class="math inline">\(\bar{x}\)</span> no ocurra por azar más del <span class="math inline">\(5\%\)</span> de las veces.</p>
 <div id="si-el-valor-p-es-más-pequeño-o-igual-que-alpha-decimos-que-los-datos-son-estadísticamente-significativos-a-un-nivel-alpha." class="section level4">
 <h4>Si el valor P es más pequeño o igual que <span class="math inline">\(\alpha\)</span>, decimos que los datos son estadísticamente significativos a un nivel <span class="math inline">\(\alpha\)</span>.</h4>
 <p>Cuando indicamos que <strong>es significativo</strong>, esto quiere decir que <strong>es muy poco probable que ocurra por azar.</strong> No debemos confundir significativo con “importante”.</p>
@@ -426,21 +426,22 @@ comparamos el <strong>valor P</strong> (p-value), con el umbral de decisión que
 <p>Como vemos, si la probabilidad estimada para el dato de interés es elevada, relativa al <em>p-value</em> de contraste no podemos rechachar <span class="math inline">\(H_{0}\)</span></p>
 <p><img src="/img/signi2.jpg" /></p>
 <p>En este caso concluimos que no hay evidencia estadísticamente significativa de una diferencia entre la media poblacional <span class="math inline">\(\mu=0\)</span> y la media muestral <span class="math inline">\(\bar{x} = 0.3\)</span></p>
-<p>Cuando tenemos evidencia estadística para rechazar <span class="math inline">\(H_{0}\)</span> sabemos que la ocurrencia del dato de interés <strong>no es atribuible al azar</strong></p>
+<p>Cuando tenemos evidencia estadística para rechazar <span class="math inline">\(H_{0}\)</span> sabemos que la ocurrencia del dato de interés <strong>no es atribuible al azar.</strong></p>
 <p>Por el contrario cuando la probabilidad de que ocurra el dato de interés es superior al <strong>valor p</strong>, sabemos que la ocurrencia de ese dato se atribuye a la naturaleza aleatoria de la muestra.</p>
 <p>Ahora bien, consideremos el caso en el que nos interesa determinar la probabilidad de encontrar una media muestral <span class="math inline">\(\bar{x}\)</span> de al menos <span class="math inline">\(1.02\)</span>.</p>
 <p>Nos preguntamos, ¿es posible que esta media muestral se deba puramente al azar?</p>
-<p>Planteando la misma prueba de significancia con:</p>
+<p>Planteando la misma prueba de significanción con:</p>
 <ul>
 <li><p>Hipótesis Nula <span class="math inline">\(H_{0}\)</span> <span class="math inline">\(\mu=0\)</span></p></li>
 <li><p>Hipótesis alternativa <span class="math inline">\(H{a}\)</span> <span class="math inline">\(\mu&gt;0\)</span></p></li>
 </ul>
 <pre class="r"><code>1-pnorm(1.02,0,0.316)</code></pre>
 <pre><code>## [1] 0.0006236259</code></pre>
-<p>La respuesta, basada en la evidencia estadística de esta prueba con un nivel de significancia <span class="math inline">\(\alpha\)</span> del <span class="math inline">\(5\%\)</span> es <strong>NO</strong></p>
+<p>La respuesta, basada en la evidencia estadística de esta prueba con un nivel de significanción <span class="math inline">\(\alpha\)</span> del <span class="math inline">\(5\%\)</span> es <strong>NO</strong></p>
 <p>¿Podemos rechazar la hipótesis nula? La respuesta es <strong>SÍ</strong></p>
+<p>En este caso es muy poco probable que el resultado onbservado se deba al azar. Podemos rechazar <span class="math inline">\(H_0\)</span> a un nivel de significación del <span class="math inline">\(5\%\)</span>, incluso del <span class="math inline">\(1%.\)</span></p>
 <p>Note que la probabilidad estimada del dato de interés es inferior que el <em>p-value</em> <span class="math inline">\(0.0006236259&lt;0.05\)</span></p>
-<p><strong>Note</strong> que, Si escogemos un nivel de significancia (<span class="math inline">\(\alpha\)</span> = 0.01), exigimos una evidencia aún más fuerte en contra de <span class="math inline">\(H_{0}\)</span>, una evidencia tan fuerte que el valor de <span class="math inline">\(\bar{x}\)</span> sólo ocurre por
+<p><strong>Note</strong> que, Si escogemos un nivel de significanción (<span class="math inline">\(\alpha\)</span> = 0.01), exigimos una evidencia aún más fuerte en contra de <span class="math inline">\(H_{0}\)</span>, una evidencia tan fuerte que el valor de <span class="math inline">\(\bar{x}\)</span> sólo ocurre por
 azar en un <span class="math inline">\(1%\)</span> de las ocasiones (en 1 de cada 100 muestras) si <span class="math inline">\(H_0\)</span> es cierta.</p>
 </div>
 <div id="conceptualización-de-la-prueba-de-hipotésis." class="section level3">
@@ -449,12 +450,12 @@ azar en un <span class="math inline">\(1%\)</span> de las ocasiones (en 1 de cad
 <strong>la evidencia en contra de la hipótesis nula</strong>.</p>
 <p>Rechazar la hipótesis nula implica tener evidencia significativa a favor de la hipótesis alternativa. Cuando rechazamos la hipótesis nula, sabemos que los valores obervados no se deben puramente al azar.</p>
 <p><strong>La afirmación en relación con la población sobre la cual queremos hallar evidencia a favor, es la hipótesis alternativa, designada como</strong> <span class="math inline">\(H_{a}\)</span></p>
-<p>Por ejemplo, si contrastamos la hipótesis nula de que la media poblacional es cero la notación usada es la siguiente:</p>
+<p>Por ejemplo, si contrastamos la hipótesis nula de que la media poblacional es cero, versus la hipótesis alternativa de que la media es mayor a cero, la notación usada es la siguiente:</p>
 <p><span class="math display">\[H_{0}: \mu=0\]</span>
 <span class="math display">\[H_{a}: \mu&gt; 0\]</span></p>
 <p>Una prueba de significación utiliza los datos en forma de estadístico de contraste. Éste se basa, normalmente, en un estadístico que estima el parámetro que aparece en las hipótesis. En nuestros ejemplos, el parámetro es <span class="math inline">\(\mu\)</span> y el estadístico de
 contraste es la media muestral <span class="math inline">\(\bar{x}\)</span>.</p>
-<p>Una prueba de significación valora la evidencia en contra de la hipótesis nula en términos de probabilidad, misma que se expreza mediante el valor P.</p>
+<p>Una prueba de significación valora la evidencia en contra de la hipótesis nula en términos de probabilidad, misma que se expresa mediante el valor P.</p>
 <p>Si el estadístico de contraste se sitúa lejos del valor propuesto en la hipótesis nula y en la dirección expresada por la hipótesis alternativa, esto constituye una buena evidencia en contra de <span class="math inline">\(H_{0}\)</span> y a favor de <span class="math inline">\(H_{a}\)</span>.</p>
 <p>El valor P describe la fuerza de la evidencia, ya que es la probabilidad de obtener un resultado al menos tan extremo como el resultado observado. “Extremo” significa “lejos del valor que esperaríamos si <span class="math inline">\(H_{0}\)</span> fuera cierta”.</p>
 <p>La dirección o direcciones que se tienen en cuenta en “lejos del valor que esperaríamos” están determinadas por la hipótesis alternativa <span class="math inline">\(H_{a}\)</span></p>
@@ -462,20 +463,19 @@ contraste es la media muestral <span class="math inline">\(\bar{x}\)</span>.</p>
 <h4>Ejercicio 10</h4>
 <p>La prueba sobre actitud de los estudiantes GRE, es una prueba psicológica que mide la actitud hacia la escuela y los hábitos de estudio de los alumnos.</p>
 <p>Los resultados van de 0 a 400. El resultado medio
-de los estudiantes universitarios del ITAM es aproximadamente 230 y la desviación típica aproximadamente 60. Una profesora intuye que los estudiantes de más edad tienen una mejor actitud hacia la escuela y aplica la prueba de actitud a
-a 25 estudiantes que tienen como mínimo 20 años.</p>
+de los estudiantes universitarios del ITAM es aproximadamente 230 y la desviación estándar aproximadamente 60. Una profesora intuye que los estudiantes de más edad tienen una mejor actitud hacia la escuela y aplica la prueba de actitud a 25 estudiantes que tienen como mínimo 20 años.</p>
 <p>Supón que los resultados de
 la población de estudiantes mayores de 20 años se distribuye normalmente con desviación estándar <span class="math inline">\(\sigma\)</span>= 60. La profesora quiere contrastar las hipótesis</p>
 <p><span class="math display">\[H_{0}=230\]</span>
 <span class="math display">\[H_{a}&gt;230\]</span></p>
 <ol style="list-style-type: lower-alpha">
-<li>Si la hipótesis nula es cierta, ¿cuál es la distribución de la media de los resultados de $ {x}$ en una muestra de 50 estudiantes mayores de 20 años?</li>
+<li>Si la hipótesis nula es cierta, ¿cuál es la distribución de la media de los resultados de <span class="math inline">\(\bar{x}\)</span> en una muestra de 50 estudiantes mayores de 20 años?</li>
 </ol>
 <p>Dibuja la curva de densidad de esta distribución. (Sugerencia: primero dibuja una curva
 normal, luego, a partir de la información recibida, señala en el eje de las abscisas la localización de <span class="math inline">\(\mu\)</span> y de <span class="math inline">\(\sigma\)</span> en la curva normal.</p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Supón que los datos de la muestra dan <span class="math inline">\(\bar{x}= 237.2\)</span>. Señala este punto en el eje de las abscisas de tu gráfico. En realidad, el resultado fue <span class="math inline">\(\bar{x}= 251.4\)</span>. Señala
-este punto en tu dibujo y utilizandolo, explica con un lenguaje sencillo por qué
+este punto en tu dibujo y utilizándolo, explica con un lenguaje sencillo por qué
 uno de los resultados constituye una buena evidencia a favor de que la media de
 los resultados de todos los estudiantes mayores de 20 años es mayor que 230 y por qué el otro resultado no lo es.</li>
 </ol>
@@ -495,7 +495,7 @@ que esta media es menor en su zona y entrevistan a una muestra de 40 hogares del
 se dedica a la vivienda. Sea <span class="math inline">\(\mu\)</span> la media de los porcentajes del gasto dedicado a la
 vivienda en los hogares de Monterrey. Queremos contrastar las hipótesis <span class="math display">\[H_{0}:\mu=31\%\]</span></p>
 <p><span class="math display">\[H_{a}:\mu&lt;31\%\]</span></p>
-<p>La desviación típica poblacional es <span class="math inline">\(\sigma = 9.6\%\)</span></p>
+<p>La desviación estándar poblacional es <span class="math inline">\(\sigma = 9.6\%\)</span></p>
 <ol style="list-style-type: lower-alpha">
 <li>¿Cuál es la distribución de la media de los porcentajes <span class="math inline">\(\bar{x}\)</span> del gasto que las
 muestras dedican a la vivienda si la hipótesis nula es cierta?</li>
