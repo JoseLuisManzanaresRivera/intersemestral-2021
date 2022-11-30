@@ -1008,7 +1008,7 @@ En cada caso, plantea las hipótesis nula $H_{0}$ y alternativa $H_{a}$
 
 1. Se supone que la tasa de pobreza de una población en un país de Centroamérica es de  $35\%$. 
 
-Si la tasa de pobreza es distinta de este valor, ej. mayor o menor, El banco mundial no otorgará fondos para la atención de poblaciones vulnerables bajo el programa de combate global a la pobreza en regiones vulnerables. 
+Si la tasa de pobreza es distinta de este valor, ej. mayor o menor, El banco mundial no otorgará fondos para la atención de poblaciones vulnerables bajo el programa de combate global a la pobreza en regiones prioritarias. 
 
 El país en cuestión realiza un estudio para medir la tasa de pobreza para determinar si la tasa media de pobreza difiere del objetivo del programa del Banco Mundial.
 
@@ -1028,7 +1028,7 @@ del grupo.
 Los estudiantes de esas escuelas privadas pueden considerarse una muestra de la población de todos los del curso, así que el catedrático compara la media de esos estudiantes con la media general del grupo.
 
 
-4.- El año pasado el departamento de atención sicologica del Instituto Tecnológico y de Estudios superiores de Monterrey,  dedicó una media de 6.2 horas para atender  situaciones de estrés de los alumnos inscritos en las carreras de ciencias sociales. Los datos de este año, ¿muestran una distinta media del tiempo
+4.- El año pasado el departamento de atención sicológica del Instituto Tecnológico y de Estudios superiores de Monterrey,  dedicó una media de 6.2 horas para atender  situaciones de estrés de los alumnos inscritos en las carreras de ciencias sociales. Los datos de este año, ¿muestran una distinta media del tiempo
 dedicado para atender situaciones de estrés?
 
 
