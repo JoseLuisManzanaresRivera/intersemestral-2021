@@ -1,7 +1,7 @@
 ---
 title: "Unidad 3 T3.2"
 output: html_document
-date: '2022-11-25'
+date: '2022-11-30'
 categories: ["Prueba de hipótesis para medias"]
 tags: ["Distribución t"]
 ---
