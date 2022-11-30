@@ -625,7 +625,7 @@ El segundo procedimiento de inferencia más ampliamente
 utilizado, llamado pruebas de significación, tiene el objetivo de  **valorar la evidencia proporcionada por los datos a favor de alguna hipótesis sobre la población**.
 
 
-El planteamiento en el que se basan las pruebas de significancia parte de afirmar algo y preguntar si los datos dan evidencia en contra de lo que afirmamos.
+El planteamiento en el que se basan las pruebas de significanción parte de afirmar algo y preguntar si los datos dan evidencia en contra de lo que afirmamos.
 
 Estas pruebas consideran un proceso de muestreo, que plantea:
 
