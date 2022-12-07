@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Estudiar los métodos estadísticos para hacer inferencia sobre la media de una población y para comparar las medias de dos
 poblaciones.
 
-Estos métodos incluyen las **pruebas basadas en la distribución t y los intervalos de confianza**  para valorar la diferencia estadística entre medidas  en circunstancias donde tenemos muestras pequeñas. Concretamente nos interesa el estudio y aplicación de la **distribución t** para el contraste de hipótesis entre la media de dos poblaciones. 
+Estos métodos incluyen las **pruebas basadas en la distribución t y los intervalos de confianza** para valorar la diferencia estadística entre medias  en circunstancias donde tenemos muestras pequeñas. Concretamente nos interesa el estudio y aplicación de la **distribución t** para el contraste de hipótesis entre la media de dos poblaciones. 
 
 ## Metas de aprendizaje.
 

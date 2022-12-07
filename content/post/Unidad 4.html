@@ -1,0 +1,179 @@
+---
+title: "Unidad 4"
+output: html_document
+date: '2022-12-14'
+---
+
+<script src="Unidad 4_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="regresión-lineal-simple." class="section level2">
+<h2>Regresión Lineal simple.</h2>
+<div id="objetivo-de-la-sesión" class="section level5">
+<h5>Objetivo de la sesión:</h5>
+<p>Presentar el modelo de Regresión lineal. Orígenes del concepto de regresión, características y estructura del modelo, expresión matemática.</p>
+<p><em>All models are wrong, but some are useful. Box (1979)</em></p>
+</div>
+<div id="metas-de-la-sesión-de-hoy" class="section level5">
+<h5>Metas de la sesión de hoy:</h5>
+<ul>
+<li><p>Aprender a Modelar relaciones estadísticas (estocásticas) no deterministas. Mediante el modelo de regresión lineal.</p></li>
+<li><p>Conocer la tecnica de minimos cuadrados ordinarios.</p></li>
+</ul>
+</div>
+<div id="orígenes-de-la-noción-de-regresión" class="section level3">
+<h3>Orígenes de la noción de regresión</h3>
+<p>La noción de Regresión lineal. <strong>¿Qué entendemos por regresión?</strong></p>
+<p>A pesar de las multiples contribuciones y desarrollos recientes sobre la aplicación de este concepto en el contexto del análisis estadístico el desarrollo de la técnica se debe al francés <strong>Legendre en 1805</strong> y su uso generalizado bajo la denominación del modelo de <strong>regresión lineal</strong> se atribuye al antropólogo británico <strong>Francis Galton</strong> (primo de <strong>Charles Darwin</strong>)</p>
+<p>De acuerdo con Stigler en su libro <a href="https://drive.google.com/file/d/1NgCTeIg4Tclt-TsKpHV_wmXvk4TY7dZ9/view?usp=sharing">Statistics on the table</a> <em>“The story is an exciting one involving, science, experiment, mathematics, simulation and one of the great thougth experiments of all times.”</em> (Stigler, 1999)</p>
+<p>De acuerdo con <strong>Galton</strong> en su obra <a href="https://drive.google.com/file/d/1Zd3ORNina7jKPXe176nhUNP3wRSElsMv/view?usp=sharing">Hereditary Genius 1869</a>. La mezcla de caracteriíticas genéticas a lo largo de la descendencia explica el grado de talento observado en los individuos.</p>
+<p>Su trabajo aborda entre otros elementos como el talento se manifiesta através de las generaciones. Ej. los Bachs, (Johann Sebastian Bach) los Bernoulli, (Daniel Bernoulli ), etc.</p>
+<p>Sus observaciones parecian indicar que el talento sistemáticamente tendia a disminuir a medida que se consieraba a los miembros de la familia más distantes, tanto hacia “arriba” en el árbol genealógico como hacia “abajo”. La observación se manifiesta incluso al referirnos a otras especies.</p>
+<p>Galton: <em>“if a man breeds from strong, well-shaped dogs, but of mixed pedigree, the puppies will be sometimes, but rarely, the equals of their parents. They will commonly be of a mongrel, nondescript type, because ancenstral peculiarities are apt to crop out in the offspring”.</em></p>
+<p><em>Definiciones</em>.</p>
+<p>Regresión es el estudio de la distribucion condicional de <span class="math inline">\(Y|x\)</span> de la variable de respuesta <strong>Y</strong> dado un vector <span class="math inline">\(pX1\)</span> de variables predictivas. En el modelo de regresión lineal <span class="math display">\[Y=\beta^T X+\epsilon\]</span></p>
+<p>Definición preliminar sobre el concepto de regresión.</p>
+<p><span class="math inline">\(Y\)</span> es condicionalmente dependiente de <span class="math inline">\(x\)</span> dada una combinación lineal <span class="math inline">\(\beta^Tx\)</span> de las variables predictivas.</p>
+<p>Básicamente estamos modelando una <strong>relación de dependencia</strong>. En este caso la variable dependiente es <strong>cuantitativa</strong>, no categórica, si bien los regresores o variables <strong>explicativas(independientes)</strong> pueden ser de tipo categórico o numérico, (considerando que se realiza la codificación apropiada).</p>
+<p><strong>Recomendación</strong> <a href="https://drive.google.com/file/d/1peEQsZpHYhGscI6PGUQJ5gCFrM59sT35/view?usp=sharing">Linear regression Analysis.Xin Yan, 2009</a></p>
+<p>El proceso de modelar la relación entre la variable dependiente y las explicativas incluye la determinación de la <strong>significancia estadística</strong> esto es, el grado de confianza sobre que tanto la forma funcional utilizada reproduce la verdadera forma funcional que subyace a los datos.</p>
+<p>El análisis de regresión es un proceso que permite <strong>predecir</strong> los valores de la variable de respuesta con base en los valores que toman las variables explicativas o indepedientes.</p>
+<p>Este proceso se realiza mediante la estimación de los <strong>parámetros</strong> de la función lineal seleccionada y a partir del criterio estadística de referencia. En el particular, OLE.</p>
+<p>Es una <strong>técnica de estimación paramétrica</strong>. En contraste regresiones de tipo no parametrico donde el objetivo no es estimar los parámetros de la función que describe la relación entre las variables del modelo.</p>
+</div>
+</div>
+<div id="característcas-y-utilidad-de-los-modelos-de-regresión." class="section level2">
+<h2>Característcas y utilidad de los modelos de regresión.</h2>
+<p>Uno de los rasgos de interés de la técnica de <strong>regresión</strong> desde la perspectiva de su aplicación es su capacidad para hacer <strong>predicción</strong> y su uso para hacer inferencia, por ejemplo cuando el objetivo es determinar qué variables se relacionan con la variable de respuesta de interés o qué relación existe entre la variable dependiente y cada una de las variables explicativas.</p>
+<p>Desde la determinación de indicadores en el contexto del análisis de política públíca en áreas como sociología, salud, economía o bien cuestiones como mortalidad por diabetes, migración y mercados laborales, el efecto de los gastos de camapaña sobre los resultados de votaciones, los efectos del presupuesto en educación sobre el desempeño educativo,etc,.</p>
+<p>Para responder las preguntas de investigación de interés la formulación de un modelo (expresión matématica de las relaciones entre las variables que nos interesan) es útil.</p>
+<p>El énfasis en los modelos presentados en nuestro curso es en <strong>datos no experimentales</strong>,(Un tipo de datos común en ciencias sociales). Datos que no se generan mediante experimentos contralados sobre individuos, este ultimo tipo común en otras disciplinas como Biología, ciencias de la salud con los ensayos clínicos por ejemplo.</p>
+</div>
+<div id="modelos-y-relación-funcional-entre-variables." class="section level2">
+<h2>Modelos y relación funcional entre variables.</h2>
+<p>Una forma de representar la relación entre dos variables es a través de un diagrama de dispersión. La siguiente gráfica presenta la realación entre dos variables años de educación y salario para una muestra de 526 individuos.</p>
+<p>knitr::opts_chunk$set(fig.width=12, fig.height=8)</p>
+<pre><code>## &#39;data.frame&#39;:    526 obs. of  24 variables:
+##  $ wage    : num  3.1 3.24 3 6 5.3 ...
+##  $ educ    : int  11 12 11 8 12 16 18 12 12 17 ...
+##  $ exper   : int  2 22 2 44 7 9 15 5 26 22 ...
+##  $ tenure  : int  0 2 0 28 2 8 7 3 4 21 ...
+##  $ nonwhite: int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ female  : int  1 1 0 0 0 0 0 1 1 0 ...
+##  $ married : int  0 1 0 1 1 1 0 0 0 1 ...
+##  $ numdep  : int  2 3 2 0 1 0 0 0 2 0 ...
+##  $ smsa    : int  1 1 0 1 0 1 1 1 1 1 ...
+##  $ northcen: int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ south   : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ west    : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ construc: int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ ndurman : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ trcommpu: int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ trade   : int  0 0 1 0 0 0 1 0 1 0 ...
+##  $ services: int  0 1 0 0 0 0 0 0 0 0 ...
+##  $ profserv: int  0 0 0 0 0 1 0 0 0 0 ...
+##  $ profocc : int  0 0 0 0 0 1 1 1 1 1 ...
+##  $ clerocc : int  0 0 0 1 0 0 0 0 0 0 ...
+##  $ servocc : int  0 1 0 0 0 0 0 0 0 0 ...
+##  $ lwage   : num  1.13 1.18 1.1 1.79 1.67 ...
+##  $ expersq : int  4 484 4 1936 49 81 225 25 676 484 ...
+##  $ tenursq : int  0 4 0 784 4 64 49 9 16 441 ...
+##  - attr(*, &quot;time.stamp&quot;)= chr &quot;25 Jun 2011 23:03&quot;</code></pre>
+<p><img src="/post/Unidad%204_files/figure-html/unnamed-chunk-1-1.png" width="768" /></p>
+<p>A continuación se muestran posibles variables explicativas respecto a la variable dependiente salario, utilizando un scatter plot y una linea de tendencia generada mediante un modelo de regresión lineal.</p>
+<p><img src="/post/Unidad%204_files/figure-html/unnamed-chunk-2-1.png" width="960" /></p>
+<p>Note que para cada variable se observa una de posible relación positiva de distinta magnitud.</p>
+<p>El siguiente ejemplo presenta la relación de tres posibles variables explicativas para una variable dependiente denominada ventas.</p>
+<p>La gráfica muestra la relación entre la variable dependiente ventas (expresada en miles) y los gastos en publicidad en tres diferentes medios (variables independientes, expresada en miles de USD). n=200.</p>
+<p><img src="/img/r1.jpg" /></p>
+<p>Cada linea azul representa un modelo que puede usarse para predecir la variable <strong>dependiente</strong> <strong>ventas</strong> usando el procedimiento de mínimos cuadrados (ordinary least squres <strong>OLS</strong>).</p>
+<p>En términos de notación la relación previa puede generalizarse como:</p>
+<p><span class="math display">\[Y=f(X)+\epsilon\]</span>
+Aquí <span class="math inline">\(\epsilon\)</span> representa un error aleatorio y <span class="math inline">\(f()\)</span> representa la forma funcional que caracteriza la relación entre la variable dependiente y las variables explicativas. Esta forma funcional se <strong>asume lineal</strong> en el modelo de regresión que estudiamos en este curso.</p>
+<p>Consideremos el siguiente ejemplo sobre el mercado laboral en el que se trata de analizar el efecto que determinantes como la educación, la experiencia o el nivel de entrenamiento tienen sobre la productividad.</p>
+<p>En términos teóricos se espera que estos determinantes tengan un impacto sobre la productividad y considerado la relación positiva entre la productividad y el salario, se prevé un impacto en este último.</p>
+<p><span class="math display">\[y=f(x_1, x_2, x_3)\]</span>
+<span class="math display">\[ salario=f(educ, exper, training)\]</span></p>
+<p>Donde:</p>
+<p>Salario: remuneración por hora.</p>
+<p>educ: Años de educación formal.</p>
+<p>exper: Años de experiencia en el trabajo.</p>
+<p>training: semanas dedicadas a entrenamiento.</p>
+<p>Note el tipo de variables utilizadas, en este caso son numéricas (<strong>cuantitativas</strong> continuas), si bien en este curso el énfasis está en el uso de variables cuantitativas, es posible tambien incluir variables categóricas (<em>factors</em> que registran información <strong>cualitativa</strong> como sexo, la pertenencia a una región, etc.)</p>
+<p><span class="math display">\[salario=\beta_0+\beta_1 educ +\beta_2 exper +\beta_3 training +\epsilon \]</span></p>
+<p><img src="/img/lm1.jpg" /></p>
+<p><strong>Note</strong> en este caso que la relación verdadera entre las variables aunque se asume lineal puede tener otra forma funcional. Este aspecto es importante por que la precisión de las estimaciones realizadas depende de la selección de la forma funcional adecuada.</p>
+<p><strong>Note</strong> La presencia de observaciones por arriba y algunas por abajo de la linea que expresa la relación funcional. Esto implica la presencia de errores respecto de medición entre la forma funcional y el valor real de los datos (estos errores son expresión de la naturaleza estocastica de las observaciones en la muestra).</p>
+<p>En términos formales la variación que observamos en la gráfica se puede expresar como:</p>
+<p><img src="/img/lm2.jpg" /></p>
+<p>La <strong>precisión</strong> en las predicciones obtenidas mediante un modelo, es decir la variación entre los valores estimados <span class="math inline">\(\hat{Y} =f(X)\)</span> y el valor real de la variable <span class="math inline">\(Y\)</span> se integra fundamentalmente por dos partes:</p>
+<p>La variación <strong>reductible</strong>, que se genera por la diferencia entre la forma funcional real y la forma funcional estimada por el modelo.</p>
+<p>Y la variación <strong>irreductible</strong> atribuida a la naturaleza estocástica de las variables estudiadas que se ven influenciadas por un número infinito de factores mismos que no se capturan por el modelo.</p>
+<p>Note la importancia de la herramienta gráfica como un paso preliminar a la construcción del modelo y en ayuda para conocer la relación posible entre las variables explicativas usadas como regresores y la variable dependiente que deseamos predecir o hacer inferencia.</p>
+<p>Como primer paso una herramienta gráfica fundamental del análisis de regresión es la representación de los datos mediante un <strong>scatter plot</strong> bidimensional.</p>
+<p>En algunos casos la relación entre la variable dependiente y las variables explicativas se basa en una teoría establecida con un grado elevado de concenso y precisión, no obstante en otros casos la relación entre variables se puede inferir a partir de su comportamiento, en cualquier caso las gráficas de dispersión son de suma importancia para explorar la relación entre las variables del modelo propuesto.</p>
+<p>Lectura <strong>Recomendada</strong> <a href="https://drive.google.com/file/d/1pFd7mqYVSZ2qgNNIdZGUw51O1Cp5Y81P/view?usp=sharing">Sanford Weisberg ,2010</a></p>
+</div>
+<div id="actividad-2" class="section level2">
+<h2>Actividad 2</h2>
+<p>Tiempo estimado: 25 min.</p>
+<p>1.- Determine la relación que se observa por las variables en los siguientes escenarios. Indique el valor de <strong>n</strong> (tamaño de la muestra), Identifique la variable dependiente y la variable independiente.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Tasas de mortalidad por suicidio y Google trends scores por entidad federativa.</p></li>
+<li><p>Tasa de mortalidad por cáncer de pulmón y proporción del gasto destinado a tabaco por hogar en México por entidad federativa.</p></li>
+<li><p>Relación salario medio y proporción mujeres/hombres en profesiones más comunes según disciplina del conocimiento.</p></li>
+<li><p>Tasa de morbilidad por diabetes tipo II e índice de masa corporal promedio por entidad federativa.</p></li>
+</ol>
+<p>2.- Utilice la bases de datos College y comente sobre la estructura de los datos.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Explore la distribución (mediante un boxplot) de la variable pago de colegiatura (<em>Outstate</em>) según la institución es privada o pública (variable Private).</li>
+</ol>
+<p>3.- Utilice la base de datos <strong>birthwt</strong> y comente sobre la estructura de los datos.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Explore la distribución de la variable peso (bwt) según la raza de la madre (variable race). Construya un histograma.</p></li>
+<li><p>Construya un histograma para representar la ditribución de la variable <strong>bwt</strong> según la madre fumó o no durante el embarazo (variable smoke).</p></li>
+</ol>
+</div>
+<div id="sobre-el-proceso-de-modelado" class="section level2">
+<h2>Sobre el proceso de modelado</h2>
+<p>El primer paso es seleccionar al forma funcional que vincula a la variable dependiente con las explicativas. En esta caso el modelo que estudiaremos primero es cuando <span class="math inline">\(f\)</span> es lineal y bajo la estimación paramétrica.</p>
+<p><span class="math display">\[f(X)=\beta_0 + \beta_1 X_1 + \beta_2 X_2 + ...+\beta_p X_p \]</span></p>
+<p>Este es un modelo lineal con <span class="math inline">\(p+1\)</span> parámetros a estimar, (uno por cada variable explicativa y el intercepto.)</p>
+<p>El objetivo es estimar los parámetros con base en la forma funcional tal que se aproxime lo mas posible a la forma funcional real. Para lo cual un <strong>método paramétrico clásico</strong> es el de <strong>minimos cuadrados</strong> (OLS).</p>
+<p><span class="math display">\[Y \approx \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ...+\beta_p X_p \]</span>
+Una desventaja potencial del este <strong>método paramétrico</strong> es que la pre-definición de la forma funcional limita la precisión en comparación a estimaciones con métodos no paramétricos.</p>
+<p>La siguiente representación gráfica corresponde al caso de la forma funcional lineal estimada con métodos paramétricos mediante MCO a), b) la forma funcional real y la estimación de un modelo no-parámetrico en c).</p>
+<p><img src="/img/lm3.jpg" /></p>
+<p>La desventaja en métodos no-parámetricos es que su misma precisión implica cierta rigidez para su replica en muestras distintas o con observaciones nuevas.</p>
+<p>El punto en la selección del modelo empleado para representar la forma funcional es el <strong>balance entre interpretabilidad y precisión</strong> (entendiendo la precisión respecto a la flexibilidad para reproducir diversas formas funcionales no solo formas lineales como es el caso del método de RL por MCO.).</p>
+<p>De hecho el modelo de regresión lineal es conveniente cuando buscamos <strong>hacer inferencias</strong> dada su relativa facilidad de interpretación.</p>
+<p>En síntesis es importante tener en mente que hay un <strong>trade off</strong> entre el nivel de precisión en los estimados que pueden generarse por el modelo (el grado de sesgo <em>Bias</em> ej. Qué tanto nuestra forma funcional se aproxima a la forma funcional real que subyace a los datos) y la varianza, entendida esta como la magnitud en la que <span class="math inline">\(\hat{Y}\)</span> cambia con la estimación de otras muestras o bases de datos.</p>
+<div id="preguntas-relevantes-en-las-que-el-análisis-de-regresión-lineal-puede-ser-útil." class="section level3">
+<h3>Preguntas relevantes en las que el análisis de regresión lineal puede ser útil.</h3>
+<p>Sea <span class="math display">\[y = \beta_0 + \beta_1 x +\epsilon\]</span> un modelo lineal.</p>
+<p>1.-Exsiste una relación entre las variables propuestas. Ej. salario y años de educación, peso del recien nacido y fumar durante el embarazo, ventas y gastos en publicidad para diferentes medios, flujos migratorios y características de los estados (USA), etc,.?</p>
+<p>En este sentido nuestra meta es <strong>proporcionar evidencia</strong> de la existencia de una relación entre variable dependiente y explicativas.</p>
+<p>2.- ¿Qué tan fuerte es la relación, entre las variables estudiadas. ¿Cuál es la magnitud de este grado de asociación en caso de existir?</p>
+<p>Nos permite esta asociación hacer predicciones con un alto grado de exactitud? O la predicción es solo ligeramente mejor que una hecha de manera aleatoria.</p>
+<p>3.- ¿De entre un conjunto de posibles variables explicativas ¿cuál variable contribuye con mayor peso para el comportamiento de la variable dependiente.</p>
+<p>Para responder esta pregunta necesitamos determinar de los efectos individuales para cada variable.</p>
+<p>4.¿Qué tan preciso es nuestro estimado del efecto individual que las variables explicativas tienen sobre la variable dependiente? Para un incremento de una unidad en las variables independientes ¿cuál es el efecto en al variale dependiente.</p>
+<p>Suponiendo.</p>
+<p><span class="math display">\[\Delta Y=\beta_1 \Delta x,  si \Delta \epsilon= 0\]</span>
+Donde <span class="math inline">\(\beta_1\)</span> es el parámetro que indica la <strong>pendiente</strong> en la relación entre y, x.</p>
+<p>Note que <span class="math inline">\(\Delta \epsilon=0\)</span> es un supuesto que refleja el hecho de que los otros factores, que de hecho no se miden, son constantes.</p>
+<p>5.- ¿Cuál es el nivel de precisión en la predicción de la variable dependiente?</p>
+<p>Para un nivel dado de las variables independientes ¿cuál es nuestra predicción de la variable dependiente?</p>
+<p>6.- ¿Es la relación entre las variables lineal? Tal vez una combinación en las variables independientes tiene un mayor efecto en la variable dependiente que el incremento por separado en cada una de las variables.</p>
+<p>Ej. La experiencia puede impactar las habilidades de un año a otro en forma creciente o tener un mayor imapcto considerando una combinación de educación y experiencia. Este aspecto implica la estimación de <em>interacciones entre las variables</em></p>
+<p>Leer Capítulo 3. <a href="https://drive.google.com/file/d/1zaKc1XWvELsUgZrS32QdpHoM4-w0y7Qx/view?usp=sharing">An Introduction to Statistical Learning</a> Comentar en Diqus</p>
+</div>
+<div id="términos-clave" class="section level3">
+<h3>Términos clave</h3>
+<p><strong>Least squares:</strong> Noción atribuida a Gauss. Criterio para la estimación del modelo de regresión lineal.</p>
+</div>
+<div id="referencias" class="section level3">
+<h3>Referencias</h3>
+<p>Box, G. E. P. (1979). Robustness in the strategy of scientific model building. In R. Launer &amp; G. Wilkinson (Eds.), Robustness in statistics (pp. 201–235). New York, NY: Academic Press.</p>
+</div>
+</div>

@@ -111,6 +111,16 @@ las muestras tienen **tamaños iguales** o similares, y **ninguna muestra es muy
 **doble** de la desviación estándar muestral más pequeña.
 
 
+El **estadistico F** esta definido por:
+
+![](/img/fuck.jpg)
+
+En la práctica realizamos estos calculos mediante software.
+
+
+
+
+
 #### Ejemplo.
 
 Estado civil y salario. Los hombres casados tienden a ganar más dinero que
@@ -147,7 +157,9 @@ la estadística descriptiva sobre los salarios de estos hombres.
 ```
 
 
-
 #### Ejercicio. 19
 
-10.15
+Realice el ejercicio 10.15 del libro de texto: Estadistica aplicada basica. pagina 683. 
+
+
+

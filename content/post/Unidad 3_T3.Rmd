@@ -968,6 +968,7 @@ menor que el que supone la hipótesis nula.)
 
 sigma<-.096
 n<-40
+
 s<- sigma/sqrt(n)
 mu<-.31
 
@@ -1389,6 +1390,7 @@ s<-sigma/sqrt(n)
 z_critico<-2.326
 
 ci98ub<-mu+z_critico*s
+
 ci98lb<-mu-z_critico*s
 
 
@@ -1414,6 +1416,7 @@ Z=(xbar-mu)/s
 
 Prob<-pnorm(ci98ub,xbar, s) - (pnorm(ci98lb,xbar, s))
 
+1-Prob
 ```
 
 
@@ -1488,6 +1491,7 @@ cetes<-read.csv("rendimiento.csv")%>%
 glimpse(cetes)
 
 ## paso 2.   Crear histograma para analizar forma de la distribución y detectar  posibles sesgo y asimetrías
+
 ggplot(cetes,aes(rendimiento))+
 geom_histogram(binwidth=2, colour="steelblue", fill="coral",alpha=0.4)+
 ggtitle("Rendimiento (%) en CETES 1996 -2022")+
@@ -1549,6 +1553,10 @@ ggtitle("Distribución de los Datos.")
 
 
 curve(dnorm(x, 0.05, sigma_muestral), from=0.0304, to=.1471)
+
+
+.46*.36
+# 0.16
 ```
 
 
