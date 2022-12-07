@@ -171,7 +171,7 @@ $$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt(n)}}$$
 ##### Ejemplo 1
 
 
-Para investigar la calidad del agua, a fines de julio de 2021, el Departamento de Salud de la comisi[on fronteriza de Tijuana recolectó muestras de agua de 12 playas entre Rosarito y  San Antonio del Mar en el Municipio de Tijuana.
+Para investigar la calidad del agua, a fines de julio de 2021, el Departamento de Salud de la comisión fronteriza de Tijuana recolectó muestras de agua de 12 playas entre Rosarito y  San Antonio del Mar en el Municipio de Tijuana.
 
 Esas muestras se analizaron para coliformes fecales, que son bacterias E. coli que se encuentran en las heces humanas y animales. Un nivel inseguro de coliformes fecales significa que hay una mayor probabilidad de que haya bacterias que causan enfermedades y un mayor riesgo de que un nadador se enferme si accidentalmente ingiere parte del agua. Un sitio web considera que **no es seguro** si una muestra de 100 mililitros de agua contiene más de **88 bacterias coliformes.**
 
