@@ -217,8 +217,6 @@ glimpse(t1)
 # Verificamos supuestos considerando criterios de tamaño de muestra y normalidad (especialmente simetría).
 
 # (a) Tamaño de muestra menor a 15.  n<15. !!!!
-# (b) Simretría.   Muestra asimétrica !!1!!
-stem(t1$NCF.100ml)
 
 #(c) Normalidad:  COn Shapiro.
 

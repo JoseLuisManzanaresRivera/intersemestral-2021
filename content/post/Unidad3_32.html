@@ -195,18 +195,8 @@ glimpse(t1)</code></pre>
 <pre class="r"><code># Verificamos supuestos considerando criterios de tamaño de muestra y normalidad (especialmente simetría).
 
 # (a) Tamaño de muestra menor a 15.  n&lt;15. !!!!
-# (b) Simretría.   Muestra asimétrica !!1!!
-stem(t1$NCF.100ml)</code></pre>
-<pre><code>## 
-##   The decimal point is 2 digit(s) to the right of the |
-## 
-##   0 | 12234
-##   0 | 7
-##   1 | 4
-##   1 | 56
-##   2 | 44
-##   2 | 5</code></pre>
-<pre class="r"><code>#(c) Normalidad:  COn Shapiro.
+
+#(c) Normalidad:  COn Shapiro.
 
 shapiro.test(t1$NCF.100ml) # =&gt; p-value = 0.03 !!!!  Al nivel de significancia del 0.05 rechazamos H0. Normalidad. Concluimos que estos datos no provienen de una distribución normal.</code></pre>
 <pre><code>## 
