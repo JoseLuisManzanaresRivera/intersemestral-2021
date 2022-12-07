@@ -27,7 +27,7 @@ library(wooldridge)
 ```
 
 
-## Regresión Lineal simple. 
+## Regresión Lineal simple.
 
 
 ##### Objetivo de la sesión:
