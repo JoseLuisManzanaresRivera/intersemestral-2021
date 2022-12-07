@@ -173,19 +173,20 @@ $$t=\frac{\bar{x}-\mu_0}{\frac{s}{\sqrt(n)}}$$
 [Descarga de Datos dar click aquí ](https://drive.google.com/file/d/1yRZIMFGmA5YLenNr2XDcfbsG8YwpeDcr/view?usp=sharing)
 
 
-id	NCF/100ml
-1	248
-2	37
-3	146
-4	19
-5	66
-6	236
-7	164
-8	30
-9	13
-10	144
-11	242
-12	20
+|id	|  NCF/100ml|
+|---|---|
+|1	|248|
+|2	|37|
+|3	|146|
+|4	|19|
+|5	|66|
+|6	|236|
+|7	|164|
+|8	|30|
+|9	|13|
+|10	|144|
+|11	|242|
+|12|	20|
 
 
 Para investigar la calidad del agua, a fines de julio de 2021, el Departamento de Salud de la comisión fronteriza de Tijuana recolectó muestras de agua de 12 playas entre Rosarito y  San Antonio del Mar en el Municipio de Tijuana.
