@@ -66,7 +66,7 @@ Las **medias muestrales son iguales** en (a) y (b). El análisis de la varianza 
 
 **F = Variación entre medias muestrales / Variación entre individuos de la misma muestra**
 
-Las **distribuciones F** son una familia de distribuciones que incorporarn dos parámetros adicionales.  
+Las **distribuciones F** son una familia de distribuciones que incorporan dos parámetros adicionales.  
 
 Estos parámetros son los **grados de libertad** de las varianzas muestrales que aparecen en el numerador y en el denominador del estadístico F.
  
@@ -163,7 +163,7 @@ la estadística descriptiva sobre los salarios de estos hombres.
 
 #### Ejercicio. 19
 
-Realice el ejercicio 10.15 del libro de texto: Estadistica aplicada basica. pagina 683. 
+Realice el ejercicio 10.15 del libro de texto: Estadística aplicada basica. página 683. 
 
 
 
