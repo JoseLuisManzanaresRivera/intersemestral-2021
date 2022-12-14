@@ -36,13 +36,13 @@ muestras.
 
 La prueba F permite contrastar las hipótesis. $$H_0: \mu_1=\mu_2= ...\mu_n$$
 $$H_a:\mu_1\neq \mu_2...\neq \mu_n$$
-La prueba permite validar si los parámetros son iguales o no lo son.  Es importante destacar que el rechazo de $H0:$, no permite en esta etapa determinar cuales son los parametros que difieren al interior del conjunto, solo estamos indicando que  difieren estadisticamente. 
+La prueba permite validar si los parámetros son iguales o no lo son.  Es importante destacar que el rechazo de $H0:$, no permite en esta etapa determinar cuales son los parametros que difieren al interior del conjunto, solo estamos indicando que  difieren estadísticamente. 
 
 Por ejemplo, si estamos comparando tres muestras y el **estadístico F** tiene un **valor P 0.02**, podemos rechazar con un nivel de significación al $5\%$ que las tres medias  ($\mu_1, \mu_2,\mu_3$) sean iguales en favor de que no lo son. 
 
-Es decir $H_a$ permite por ejemplo, un escenario en el que  $\mu_1=\mu_2$ y $\mu_1$ difiere.     
+Es decir $H_a$ permite por ejemplo, un escenario en el que  $\mu_1=\mu_2$ pero $\mu_1$ difiere.     
 
-Por este motivo, la prueba que veremos con **distribución F**, se considera una etapa inicial en el análisis de varianza, por que permite validar la hipótesis de defirencia multiple entre muestras. 
+Por este motivo, la prueba que veremos con **distribución F**, se considera una etapa inicial en el análisis de varianza, por que permite validar la hipótesis de deferencia multiple entre muestras. 
 
 
 
