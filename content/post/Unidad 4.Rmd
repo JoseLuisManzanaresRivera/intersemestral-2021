@@ -327,7 +327,7 @@ abline (lm.fit)
  
 #### Formalización del modelo
 
-```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(wooldridge)
 library(ISLR)
