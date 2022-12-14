@@ -123,8 +123,6 @@ En la práctica realizamos estos cálculos mediante software.
 
 
 
-
-
 #### Ejemplo.
 
 Estado civil y salario. Los hombres casados tienden a ganar más dinero que

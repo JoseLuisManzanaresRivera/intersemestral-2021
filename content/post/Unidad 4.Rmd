@@ -52,15 +52,15 @@ A pesar de las multiples contribuciones y desarrollos recientes sobre la aplicac
 
 De acuerdo con Stigler en su libro [Statistics on the table](https://drive.google.com/file/d/1NgCTeIg4Tclt-TsKpHV_wmXvk4TY7dZ9/view?usp=sharing) *"The story is an exciting one involving, science, experiment, mathematics, simulation and one of the great thougth experiments of all times."* (Stigler, 1999)
 
-De acuerdo con **Galton** en su obra [Hereditary Genius 1869](https://drive.google.com/file/d/1Zd3ORNina7jKPXe176nhUNP3wRSElsMv/view?usp=sharing). La mezcla de caracteriíticas genéticas a lo largo de la descendencia explica el grado de talento observado en los individuos.
+De acuerdo con **Galton** en su obra [Hereditary Genius 1869](https://drive.google.com/file/d/1Zd3ORNina7jKPXe176nhUNP3wRSElsMv/view?usp=sharing). La mezcla de características genéticas a lo largo de la descendencia explica el grado de talento observado en los individuos.
 
 Su trabajo aborda entre otros elementos como el talento se manifiesta através de las generaciones. Ej. los Bachs, (Johann Sebastian Bach) los Bernoulli, (Daniel Bernoulli ), etc.
 
-Sus observaciones parecian indicar que el talento sistemáticamente tendia a disminuir a medida que se consieraba a los miembros de la familia más distantes, tanto hacia "arriba"  en el árbol genealógico como hacia "abajo". La observación se manifiesta incluso al referirnos a otras especies. 
+Sus observaciones parecian indicar que el talento sistemáticamente tendía a disminuir a medida que se consideraba a los miembros de la familia más distantes, tanto hacia "arriba"  en el árbol genealógico como hacia "abajo". La observación se manifiesta incluso al referirnos a otras especies. 
 
 Galton: *"if a man breeds from strong,  well-shaped dogs, but of mixed pedigree, the puppies will be sometimes, but rarely, the equals of their parents. They will commonly be of a mongrel, nondescript type, because ancenstral peculiarities are apt to crop out in the offspring".*
 
-*Definiciones*.
+#### Definiciones.
 
 Regresión es el estudio de la distribucion condicional de $Y|x$ de la variable de respuesta **Y** dado un vector $pX1$ de variables predictivas. En el modelo de regresión lineal $$Y=\beta^T X+\epsilon$$ 
 
@@ -69,6 +69,15 @@ Definición preliminar sobre el concepto de regresión.
 $Y$ es condicionalmente dependiente de $x$ dada una combinación lineal $\beta^Tx$ de las variables predictivas.
 
 Básicamente estamos modelando una **relación de dependencia**. En este caso la variable dependiente es **cuantitativa**, no categórica, si bien los regresores o variables **explicativas(independientes)** pueden  ser de tipo categórico o numérico, (considerando que se realiza la codificación apropiada).
+
+
+El concepto matemático en el que se basa el modelo de regresión es una relación de dependencia entre una variable denominada dependiente denotada generalment por**Y**, y un conjunto de variables explicativas o independientes, denotadas por el vector X  que incluye las variabkes explicativas individuales $x_i$.
+
+
+En términos matemáticos la siguiente ecuación expresa la forma básica del modelo $$Y=a+bX+e$$
+
+Note que esta ecuación representa una recta.
+
 
 **Recomendación** [Linear regression Analysis.Xin Yan, 2009](https://drive.google.com/file/d/1peEQsZpHYhGscI6PGUQJ5gCFrM59sT35/view?usp=sharing)
 
@@ -95,7 +104,6 @@ El énfasis en los modelos presentados en nuestro curso es en **datos no experim
 
 Una forma de representar la relación entre dos variables es a través de un diagrama de dispersión. La siguiente gráfica presenta la realación entre dos variables años de educación y salario para una muestra de 526 individuos.
 
-knitr::opts_chunk$set(fig.width=12, fig.height=8)
 
 ```{r, echo=FALSE,fig.width=8, fig.height=6, warning=FALSE, message = FALSE}
 theme_set(theme_light())
@@ -115,7 +123,8 @@ ggplot(wage1,aes(educ,wage,colour = educ))+
 A continuación se muestran posibles variables explicativas respecto a la variable dependiente salario, utilizando un scatter plot y una linea de tendencia generada mediante un modelo de regresión lineal. 
 
 
-```{r, echo=FALSE, fig.width=10, fig.height=4,warning=FALSE, message = FALSE}
+```{r, echo=FALSE, fig.width=10, fig.height=4, warning=FALSE, message = FALSE}
+
 library(gridExtra)
 data(wage1)
 
@@ -151,7 +160,7 @@ Note que  para cada variable se observa una  de posible relación positiva de di
 
 El siguiente ejemplo  presenta la relación de tres posibles variables explicativas para una variable dependiente denominada ventas. 
 
-La gráfica  muestra la relación entre la variable dependiente ventas (expresada en miles) y los gastos en publicidad en tres diferentes medios  (variables independientes, expresada en miles de USD). n=200.
+La gráfica muestra la relación entre la variable dependiente ventas (expresada en miles) y los gastos en publicidad en tres diferentes medios  (variables independientes, expresada en miles de USD). n=200.
 
 ![](/img/r1.jpg)
 
@@ -163,7 +172,7 @@ Cada linea azul representa un modelo que puede usarse para predecir la variable 
 En términos  de notación la relación previa puede generalizarse como: 
 
 $$Y=f(X)+\epsilon$$
-Aquí $\epsilon$ representa un error aleatorio y $f()$ representa la forma funcional  que caracteriza la relación entre la variable dependiente y las variables explicativas.  Esta forma funcional se **asume lineal** en el modelo de regresión que estudiamos en este curso. 
+Aquí $\epsilon$ representa un error aleatorio y $f()$ representa la forma funcional  que caracteriza la relación entre la variable dependiente y las variables explicativas.  Esta forma funcional se **asume lineal** en el modelo de regresión que estudiamos en esta sesión. 
 
 Consideremos el siguiente ejemplo sobre el mercado laboral en el que se trata de analizar el efecto que determinantes como la educación, la experiencia o el nivel de entrenamiento tienen sobre la productividad.
 
@@ -191,7 +200,7 @@ $$salario=\beta_0+\beta_1 educ +\beta_2 exper +\beta_3 training +\epsilon $$
 
 **Note** en este caso que la relación verdadera entre las variables aunque se asume lineal puede tener otra forma funcional. Este aspecto es importante por que la precisión de las estimaciones realizadas depende de la selección de la forma funcional adecuada. 
 
-**Note** La presencia de observaciones por arriba y algunas por abajo de la linea que expresa la relación funcional. Esto implica la presencia de errores respecto de medición entre la forma funcional y el valor real de los datos (estos errores son expresión de la naturaleza estocastica de las observaciones en la muestra). 
+**Note** La presencia de observaciones por arriba y algunas por abajo de la linea que expresa la relación funcional. Esto implica la presencia de errores respecto de medición entre la forma funcional y el valor real de los datos (estos errores son expresión de la naturaleza estocástica de las observaciones en la muestra). 
 
 En términos formales la variación que observamos en la gráfica se puede expresar como: 
 
@@ -212,32 +221,6 @@ En algunos casos la relación entre la variable dependiente y las variables expl
 
 Lectura **Recomendada** [Sanford Weisberg ,2010](https://drive.google.com/file/d/1pFd7mqYVSZ2qgNNIdZGUw51O1Cp5Y81P/view?usp=sharing)
 
-
-## Actividad 2
-
-Tiempo estimado: 25 min.
-
-
-1.- Determine la relación que se observa por las variables en los siguientes escenarios. Indique el valor de **n** (tamaño de la muestra), Identifique la variable dependiente y la variable independiente.
-
-
-a) Tasas de mortalidad por suicidio  y Google trends scores por entidad federativa. 
-
-b) Tasa de mortalidad por cáncer de pulmón y proporción del gasto destinado a tabaco por hogar en México por entidad federativa.
-
-c) Relación salario medio  y proporción mujeres/hombres en profesiones más comunes según disciplina del conocimiento.
-
-d) Tasa de morbilidad por diabetes tipo II e índice de masa corporal promedio por entidad federativa. 
-
-2.- Utilice la bases de datos College y comente sobre la estructura de los datos.
-
-a) Explore la distribución (mediante un boxplot) de la variable  pago de colegiatura (*Outstate*)  según la institución es privada o pública (variable Private).
-
-3.- Utilice la base de datos **birthwt** y comente sobre la estructura de los datos. 
-
-a) Explore la  distribución de la variable peso (bwt) según la raza de la madre (variable race). Construya un histograma. 
-
-b) Construya  un histograma para representar la ditribución de la variable **bwt** según  la madre fumó o no durante el embarazo (variable smoke).
 
 ## Sobre el proceso de modelado
 
@@ -308,8 +291,451 @@ Ej. La experiencia puede impactar las habilidades de un año a otro en forma cre
 
 
 
-Leer  Capítulo 3. [An Introduction to Statistical Learning](https://drive.google.com/file/d/1zaKc1XWvELsUgZrS32QdpHoM4-w0y7Qx/view?usp=sharing) Comentar en Diqus
+Leer  Capítulo 3. [An Introduction to Statistical Learning](https://drive.google.com/file/d/1zaKc1XWvELsUgZrS32QdpHoM4-w0y7Qx/view?usp=sharing).
 
+
+#### Ejemplo
+
+Buscamos predecir el valor medio de las viviendas (Y) con base en 12 variables independientes o regresores (x). La base de datos cuenta con 560 observaciones correspondientes a información en una ciudad.
+
+```{r}
+install.packages("ISLR2")
+
+library(ISLR2)
+attach (Boston)
+
+#  Data for 506 census tracts in Boston.
+# medv (median house value)
+# lstat (percent of households with low socioeconomic status)
+
+# rm (average number of rooms per house),
+
+# age (average age of houses)
+
+
+m.fit <- lm(medv ∼ lstat , data = Boston)
+
+summary(lm.fit)
+
+plot (lstat , medv)
+abline (lm.fit)
+
+```
+
+ **Note el orden en la inclusión de los argumentos** primero tenemos la variable dependiente, seguida por las variables independientes.
+ 
+ 
+#### Formalización del modelo
+
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+library(tidyverse)
+library(wooldridge)
+library(ISLR)
+```
+
+
+
+En términos matemáticos  podemos describir la relación entre las variables del modelo con la expresión siguiente:
+
+\begin{align}
+Y \approx \beta_0 + \beta_1 X
+(\#eq:align)
+\end{align}
+
+Una vez que hemos estimado los parámetros del modelo podemos usarlos para hacer la predicción de $\hat y$ 
+
+
+\begin{align}
+\hat y= \hat \beta_0 + \hat \beta_1 x
+(\#eq:mod)
+\end{align}
+
+![](/img/lm4.jpg)
+
+
+Note que la diferencia entre la linea de regresión y cada observación (lineas grises) da cuenta del error de predicción.
+
+$$e_i=y_i - \hat y_i$$
+El modelo de regresión toma la suma al cuadrado de estos errores para determinar la  estimación de la linea de mejor ajuste.
+
+Suponemos una serie de axiomas que conforman el fundamento teórico de esta modelo a partir del **Teorema de Gasuss Markov**. 
+
+Suponemos un valor esperado para el término aleatorio (*random noise*) $E(\epsilon)=0$. Esto es, suponemos que la distribución de estos factores no observados, en promedio tienen media cero.
+
+
+#### Supuesto de Media condicional cero.
+
+Sean $x$ y $\epsilon$ variables  aleatorias. 
+
+Suponemos que el valor promedio de las características no observadas no depende del valor particular que tome $x$  $$E(\epsilon|x)=E(\epsilon)=0$$
+
+El valor esperado de las características no observadas, es independiente de $x$  y en términos promedio es cero. 
+
+Definición: 
+
+*Residual Sum of Squares* **RSS**.
+
+
+$$RSS=e_1^2 +e_2^2+...+e_n^2$$
+\begin{align}
+RSS= (y_1- \hat \beta_0 - \hat \beta_1 x_1)^2 + (y_2- \hat \beta_0 - \hat \beta_1 x_2)^2+...+(y_n- \hat \beta_0 - \hat \beta_1 x_n)^2
+(\#eq:RSS)
+\end{align}
+
+![](/img/rss1.jpg)
+El enfoque de Mínimos Cuadrados Ordinarios **MCO** (Ordinary Least Squares OLS por sus siglas en inglés), selecciona los parámetros $\hat \beta_0 , \hat \beta_1$ que minimizan la **RSS**. 
+
+#### Coeficientes acorde con el criterio MCO.
+
+
+\begin{align}
+\hat \beta_1 =\frac{ \sum_{i=1}^{n} (x_i-\bar{x})(y_i-\bar{y})}{\sum_{i=1}^{n} (x_i-\bar{x})^2},
+(\#eq:beta)
+\end{align}
+
+
+El parámetro $\hat \beta_1$ es el cociente  de la covarianza  de $(x,y)$ y la varianza de $x$.  Dividir por $\frac{1}{n}$ ambos factores no hace diferencia alguna.     
+
+$$\hat \beta_0 =\bar y- \hat \beta_1 \bar{x}$$
+Donde $$\bar{y}\equiv\frac{1}{n} \sum_{i=1}^{n} y_i$$ y  $$\bar{x} \equiv \frac{1}{n} \sum_{i=1}^{n} x_i$$
+
+Note por la definición  que si $x$ e $y$ tienen correlación positiva, $\Rightarrow \hat \beta_1>0$ y si $\sum_{i=1}^{n} (x_i-\bar{x})(y_i-\bar{y})<0 \Rightarrow \hat \beta_1<0$
+dado que $\sigma^2$ tiene un min val=0, ie. $\sigma^2$ nunca es negativo$
+
+Considere la siguiente representación del modelo lineal a partir del valor esperado y con los supuestos $E(\epsilon)=0$ e independencia entre la parte aleatoria del modelo  y las variables explicativas:  y  $cov(x,\epsilon)=E(x \epsilon)=0$
+
+\begin{align}
+E(y-\beta_0-\beta_1 x)=0
+(\#eq:ve)
+\end{align}
+
+
+
+\begin{align}
+E [x(y-\beta_0-\beta_1 x)]=0
+(\#eq:ve1)
+\end{align}
+
+
+Los parámetros muestrales correspondientes
+
+\begin{align}
+\frac{1}{n}\sum_{i=1}^{n} (y_i-\hat \beta_0- \hat \beta_1 x_i) =0
+(\#eq:ve3)
+\end{align}
+
+
+\begin{align}
+\frac{1}{n} \sum_{i=1}^{n} x_i(y_i-\hat \beta_0- \hat \beta_1 x_i)=0
+(\#eq:ve4)
+\end{align}
+
+Ecuaciones \@ref(eq:ve3) y \@ref(eq:ve4) son las condiciones de primer orden a resolver acorde con los principios de optimización.
+
+A partir de las propiedades de suma estas ecuaciones se pueden reescribir:
+
+\begin{align}
+\bar{y}=\hat \beta_0- \hat \beta_1 \bar{x} 
+(\#eq:ve5)
+\end{align}
+
+Reescribiendo $\hat \beta_0$  y  $\hat \beta_1$  en términos de $\bar{y}$ y $\bar{x}$ tenemos: 
+
+\begin{align}
+\hat \beta_0= \bar{y} - \hat \beta_1 \bar {x}=0
+(\#eq:ve6)
+\end{align}
+
+
+Sustituyendo \@ref(eq:ve6) en \@ref(eq:ve4) tenemos
+
+$$\sum_{i=1}^{n} x_i [ y_i-(\bar y- \beta_1 \bar{x})- \hat \beta_1 x_i]=0$$
+
+
+
+
+Reordenando tenemos: 
+
+$$\sum_{i=1}^{n}x_i(y_i-\bar{y})= \hat \beta_1  \sum_{i=1}^{n} x_i(x_i-\bar {x})$$ 
+
+
+Considerando propiedades de suma tenemos:
+
+$$\sum_{i=1}^{n} x_i(y_i- \bar{y})= \sum_{i=1}^{n} (x_i- \bar{x})(y_i- \bar{y}) , \sum_{i=1}^{n} x_i(x_i- \bar{x})=\sum_{i=1}^{n} (x_i- \bar{x})^2$$
+Si $\sum_{i=1}^{n} (x_i- \bar{x})^2>0$ lo cual se cumple cuando **NO** todos los valores de la muestra son iguales, entonces:
+
+
+\begin{align}
+\hat \beta_1=  \frac{\sum_{i=1}^{n} (x_i- \bar{x})(y_i- \bar{y}) }{\sum_{i=1}^{n} (x_i- \bar{x})^2}
+(\#eq:ve7)
+\end{align}
+
+
+
+
+Considerando el **supuesto de Media condicional cero** $E(\epsilon|x)=0$  y representando el valor esperado de \@ref(eq:mod) condicional en $x$ tenemos una función lineal de $x$: 
+
+\begin{align}
+E(y|x)= \beta_0+ \beta_1 X 
+(\#eq:expval)
+\end{align} 
+
+La siguiente gráfica muestra esta idea para la función lineal  $\beta_0+\beta_1 x$ con la distribución de los valores de $y$ centrados en  $E(y|x)$
+
+![](/img/lm6.jpg){width=400px}
+
+Lo que significa que **un incremento de una unidad en $x$ cambia el valor esperado de $y$ por el monto denotado $\hat \beta_1$**, para cualquier valor dado de $x$, $y$ que está centrado alrededor de $E(y|x)$. 
+
+En términos de la ecuación lineal el estimado de la pendiente es: 
+$$\hat \beta_1= \frac{\Delta \hat y}{\Delta  x}$$ 
+$$\Delta \hat y=\hat \beta_1 \Delta  x$$
+
+En la siguiente figura se presenta ésta idea con una muestra teórica de valores aleatorios para $x$ y $y$.  
+
+El panel a) muestra en linea roja la verdadera relación en entre $x$ y $y$, la linea azul es la linea de regresión obtenidad por MCO que se basa en los datos observados (scatter points). 
+
+En panel b) se incluyen las lineas de regresión para  10 modelos con muestras aleatorias en la población de $x$, vemos que cada modelo permite generar una línea distinta si bien,  en *promedio* estas siguen la trayectoria de la linea de regresión poblacional (roja).
+
+En el panel c) Observamos el efecto del criterio de minimos cuadrados  con la obtensión del *RSS* de menor valor para los parámetros $\hat  \beta_0$  y $\hat \beta_1$
+
+
+![](/img/lm5.jpg)
+
+**Ejemplo 1**
+
+Considerando el ejemplo  de la relación entre salario y años de educación $log(wage)=\beta_0 +\beta_1 educ+ \epsilon$  
+
+Con el logaritmo de salario (**wage** en dólares por hora) para medir el cambio porcentual ante el incremento de un año adicional de educación  con la variable **educ** que se registra en años.
+
+Recordamos que  $\epsilon$ integra un conjunto de variables que se asumen constantes como experiencia, habilidades, etc., Y estas tienen una distribución representada por el valor esperado normalizado en cero $E(\epsilon)=0$. (algunas personas tienen más habilidad natural que otras, más o menos experiencia, considerar el supuesto de la distribución con media cero es consistente con este hecho empírico).
+
+La gráfica siguiente muestra la linea de regresión (rojo) para las variables salarios y educación con las observaciones (azul) como un scatter plot. 
+
+
+```{r, , echo=FALSE}
+data(wage1)
+theme_set(theme_light())
+
+ggplot(wage1,aes(educ,lwage))+
+geom_point(shape=1,color="blue")+
+stat_smooth(method=lm, se=FALSE, colour="red", size=.2)+
+labs(title="Log Salario v.s Educación", x="Años de educación", y="Salario por hora (USD)")+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ 
+  scale_x_continuous(breaks = c(0, 6, 12,18))
+```
+
+
+Notamos una relación positiva y a medida que la persona tiene más años de educación en promedio percibe un mayor salario.
+
+Tenemos una  linea de regresión obtenida bajo el criterio de MCO y observamos una distancia entre la linea de regresión y las observaciones, sin embargo sabemos que la linea de regresión minimiza esa distancia.
+
+
+Considerando los parámetros estimados para este ejemplo sobre la relación salario y años de educación tenemos que $\hat \beta_0=0.583773$  y $\hat \beta_1=0.082744$
+
+Lo que implica que un año adicional de educación se relaciona con un incremento del 8.2% en el salario por hora percibido.
+
+
+**Nota** sobre el uso de logaritmos en la forma funcional del modelo de regresión lineal.
+
+![](/img/logs.jpg)
+
+```{r, echo=FALSE}
+data(wage1)
+
+log_wage_model <- lm(lwage ~ educ, data = wage1)
+summary(log_wage_model)
+```
+
+
+#### Ejemplo 2
+
+Consideremos ahora la base de datos: *Height and weight of school children* de Lewis, T., & Taylor, L.R. (1967) en el estudio introduction to Experimental Ecology, que contiene 236 observaciones para 5 variables en una muestra de niños en edades entre 11 A 17 años, para estudiar la relación  entre dos variables la altura y la edad. En términos teóricos se ha demostrado que entre la población munidal  se tiene una estrecha relación entre estas variables. 
+
+
+```{r,, echo=FALSE }
+
+
+heightweight<-readRDS("heightweight.rds")
+
+theme_set(theme_light())
+
+heightweight%>%
+  mutate(sex=ifelse(sex=="f","Mujer","Hombre"))%>%
+  ggplot(aes(x=ageYear, y=heightIn, colour=sex)) +
+geom_point(alpha=.5) +
+scale_colour_brewer(palette="Set1")+
+geom_smooth(method=lm, se=FALSE, fullrange=TRUE)+
+  labs(x="Edad en años", y="Estatura (pulgadas)"  )+
+  labs(colour="Sexo")
+```  
+
+```{r, echo=FALSE}
+
+heightweight<-readRDS("heightweight.rds")
+
+lm( heightIn~ ageYear, data = heightweight)%>%
+summary()
+
+M<-heightweight%>%
+  filter(sex=="f")
+
+lm( heightIn~ ageYear, data = M)%>%
+summary()
+
+H<-heightweight%>%
+  filter(sex=="m")
+
+lm( heightIn~ ageYear, data = H)%>%
+summary()
+```
+
+Notamos  un efecto positivo, que es de mayor magnitud para los niños. Con un incremento de $\hat \beta_1= 2.03$ pulgadas por un año adicional. Mientras el incremento para el sexo femenino es ligeramente inferior. $\hat \beta_1=1.2$
+
+Note además que el modelo se estima con las varaibles en niveles por lo que la interpretación se hace considerando las unidades de cada variable en este caso edad en años y estatura en pulgadas.
+
+#### Ejemplo 3
+
+Considermos ahora una situación en la que la variable dependiente es ventas (monto expresado en unidad monetaria ej. miles de dólares). Y las variables independientes corresponden a gastos en publicidad para tres medios:  t.v.,  newspapers,  radio. La muestra contiene 200 observaciones para las variables: Y=ventas,  x=gasto en publicidad dirigido a tv. y corresponden a 200 puntos de venta.
+
+El modelo de regresión siguiente muestra la relación entre la variable ventas y los gastos en publicidad para el medio t.v. (gasto expresado en miles de USD y y ventas en unidades). 
+
+
+
+```{r, echo=FALSE}
+
+ad<-read.csv("Advertising.csv")
+
+ p<- ggplot(ad,aes(x=TV, y=sales)) +
+geom_point(alpha=.5) +
+scale_colour_brewer(palette="Set1")+
+geom_smooth(method=lm, se=FALSE, fullrange=TRUE)+
+  labs(x="Gastos en TV (Miles USD)", y="Ventas (Miles unidades)"  )+
+  labs(colour="Sexo")
+p
+
+lm( sales~ TV, data = ad)%>%
+summary()
+
+```
+
+Los parámetros estimados del modelo indican que un incremento de una unidad adicional  (en este caso  un incremento de $\$ 1000$) en la variable gasto en publicidad en TV se asocia con un incremento de 47 unidades en la variable ventas $\hat \beta_1=0.047537$
+
+
+#### Ejemplo 4
+
+Consideremos ahora la relación entre el Sueldo que perciben los CEO's (Chief Executive Officer) y el indicador de desempeño financiero *return on equity* **roe** este es un indicador clásico que es utilizado como *proxy* para medir el desempeño de un CEO. La muestra contiene 209 observaciones y  12 variables con información financiera publicadas por un estudio de *Businessweek* de Mayo 6, 1991. 
+
+La variable dependiente es el Sueldo (expresado en miles USD). En términos teóricos se supone que existe una relación positiva entre el Sueldo que un CEO percibe e indicadores de desempeño de la compañia, en este sentido el    **roe** es una variable que recoge el desempeño financiero (variable que se encuentra expresada en porcentaje).
+
+Estimaremos ahora el modelo de regresión lineal $$y=\hat \beta_0 + \hat \beta_1 x+\epsilon$$  $$salario=\beta_0 + \hat \beta_1 roe+\epsilon$$  para conocer si la hipótesis sobre la relación entre las variables se cumple y en su caso la magnitud de los parámetros $\hat \beta_0, \hat \beta_1$
+
+```{r, echo=FALSE}
+
+library(wooldridge)
+data(ceosal1)
+str(ceosal1)
+
+summary(ceosal1$salary)
+summary(ceosal1$roe)
+
+lm( salary~ roe, data = ceosal1)%>%
+summary()
+
+```
+Como es costrumbre en primera instancia exploramos la estructura de los datos. Tenemos 209 observaciones, 12 variables.  
+
+En segundo lugar analizamos las estadísticas descriptivas. 
+Para la variable Sueldo tenemos  una media de $\$1,281,000$ usd anuales, un mínimo de $\$223,000$ y un máximo de $\$14,822,000$. El rendimiento del capital promedio es $17.18\%$, máximo de $56.30\%$ y mínimo de $.50\%$
+
+En tercer lugar note por el  parámetro $\hat \beta_1$ que hay una relación positiva ente Sueldo del CEO y el roe de la compañia, con $\hat \beta_0=963.19$ lo que implica que si el ROE es cero, la predicción del sueldo es $\$963,190$ y la pendiente   $\hat \beta_1=18.50$. Así $\Delta x=1\%\Rightarrow \Delta y=\$ 18,500$ En otras palabras ante **un incremento de 1% en el roe**, en promedio, el sueldo del CEO $i$ cambia  en  $\$ 18,500$  usd anuales.
+
+La siguiente gráfica muestra estas relaciones distinguiendo por dos escenarios de interés  (con variables categóricas)  
+
+```{r, echo=FALSE}
+
+library(wooldridge)
+data(ceosal1)
+theme_set(theme_light())
+summary(ceosal1$salary)
+csa2<-ceosal1%>%
+mutate(ventas=as.factor(ifelse(sales>7177,"High","Low")),
+consprod=as.factor(ifelse(consprod==1,"Consumo","No")))
+
+
+ggplot(csa2,aes(roe,salary,color=ventas))+
+  geom_point(shape=1,color="darkgreen")+
+  geom_smooth(method=lm, se=FALSE, fullrange=TRUE)+
+  labs(x="Rendimiento sobre capital (%)", y="Sueldo (Miles USD)" )
+
+ggplot(csa2,aes(roe,salary,color=consprod))+
+  geom_point(shape=1,color="darkgreen")+
+  geom_smooth(method=lm, se=FALSE, fullrange=TRUE)+
+  scale_colour_brewer(palette="Set1")+
+  labs(color="Empresa")+
+  labs(x="Rendimiento sobre capital (%)", y="Sueldo (Miles USD)" )
+  
+
+```
+
+## Actividad 3
+
+
+#### Ejercicio 1 
+
+Considere el siguiente escenario sobre procesos electorales. Sea una [muestra](https://drive.google.com/file/d/1lzbPJYbvk2C7uRk8JMB0RT3tvpoTl4X8/view?usp=sharing) de 173 resultados de votaciones distritales en un proceso entre dos partidos. La variable dependiente es el porcentaje de voto que recibió el candidato en la elección y la variable independiente es la proporción del gasto total de campaña correspondiente al candidato. Estudio de  M. Barone and G. Ujifusa, The Almanac of American Politics, 1992.
+
+
+a) Estime el modelo de regresión y determine $\hat \beta_0, \hat \beta_1$.
+
+b) ¿Cuál es el efecto en el porcentaje del voto ante un incremento de $1\%$ en los gastos de campaña del candidato. 
+
+c) Estime el porcentaje del voto recibido si la proporción en gasto de campaña es de $62\%$   $\Delta \hat voto= \hat \beta_1  \Delta gasto$
+
+
+```{r, eval=FALSE, echo=FALSE}
+theme_set(theme_light())
+
+
+vote1<-readRDS("vote1.rds")
+data(vote1)
+str(vote1)
+
+lm(voteA~shareA,data=vote1)%>%
+summary()
+
+351.687/(351.687+50.532)
+```
+
+```{r,echo=FALSE}
+vote1<-readRDS("vote1.rds")%>%
+ggplot(aes(shareA,voteA))+
+  geom_point(shape=1)+
+  geom_smooth(method=lm, se=FALSE, fullrange=TRUE)+
+  labs(x="Gastos en campaña (%)", y="Voto (%)")
+vote1
+```
+
+
+
+#### Actividad para participación en clase
+
+¿Cómo interpretamos una modelo de regresión cuya variable dependiente se expresa mediante una transformación logarítmica? 
+
+¿Qué interpretación tiene el coeficiente $\hat \beta_1$ en el modelo en logarítmos para las variables dependiente y explicativa. 
+
+
+#### Recomendación de bibliografía de estudio en casa para el tema.
+
+Leer sección *The Effects of Changing Units of Measurement on OLS Statistics*  y sección: *Incorporating Nonlinearities in Simple Regression* en Wooldridge (pags. 40-44)
+
+
+### Términos clave
+
++ Coeficiente de la pendiente $\hat \beta_1$
+
++ coeficiente de intercepto $\hat \beta_0$
+
+ 
 
 
 

@@ -18,7 +18,7 @@ date: '2022-12-14'
 <h5>Metas de la sesión de hoy:</h5>
 <ul>
 <li><p>Aprender a Modelar relaciones estadísticas (estocásticas) no deterministas. Mediante el modelo de regresión lineal.</p></li>
-<li><p>Conocer la tecnica de minimos cuadrados ordinarios.</p></li>
+<li><p>Conocer la técnica de mínimos cuadrados ordinarios.</p></li>
 </ul>
 </div>
 <div id="orígenes-de-la-noción-de-regresión" class="section level3">
@@ -26,9 +26,9 @@ date: '2022-12-14'
 <p>La noción de Regresión lineal. <strong>¿Qué entendemos por regresión?</strong></p>
 <p>A pesar de las multiples contribuciones y desarrollos recientes sobre la aplicación de este concepto en el contexto del análisis estadístico el desarrollo de la técnica se debe al francés <strong>Legendre en 1805</strong> y su uso generalizado bajo la denominación del modelo de <strong>regresión lineal</strong> se atribuye al antropólogo británico <strong>Francis Galton</strong> (primo de <strong>Charles Darwin</strong>)</p>
 <p>De acuerdo con Stigler en su libro <a href="https://drive.google.com/file/d/1NgCTeIg4Tclt-TsKpHV_wmXvk4TY7dZ9/view?usp=sharing">Statistics on the table</a> <em>“The story is an exciting one involving, science, experiment, mathematics, simulation and one of the great thougth experiments of all times.”</em> (Stigler, 1999)</p>
-<p>De acuerdo con <strong>Galton</strong> en su obra <a href="https://drive.google.com/file/d/1Zd3ORNina7jKPXe176nhUNP3wRSElsMv/view?usp=sharing">Hereditary Genius 1869</a>. La mezcla de caracteriíticas genéticas a lo largo de la descendencia explica el grado de talento observado en los individuos.</p>
+<p>De acuerdo con <strong>Galton</strong> en su obra <a href="https://drive.google.com/file/d/1Zd3ORNina7jKPXe176nhUNP3wRSElsMv/view?usp=sharing">Hereditary Genius 1869</a>. La mezcla de características genéticas a lo largo de la descendencia explica el grado de talento observado en los individuos.</p>
 <p>Su trabajo aborda entre otros elementos como el talento se manifiesta através de las generaciones. Ej. los Bachs, (Johann Sebastian Bach) los Bernoulli, (Daniel Bernoulli ), etc.</p>
-<p>Sus observaciones parecian indicar que el talento sistemáticamente tendia a disminuir a medida que se consieraba a los miembros de la familia más distantes, tanto hacia “arriba” en el árbol genealógico como hacia “abajo”. La observación se manifiesta incluso al referirnos a otras especies.</p>
+<p>Sus observaciones parecian indicar que el talento sistemáticamente tendía a disminuir a medida que se consideraba a los miembros de la familia más distantes, tanto hacia “arriba” en el árbol genealógico como hacia “abajo”. La observación se manifiesta incluso al referirnos a otras especies.</p>
 <p>Galton: <em>“if a man breeds from strong, well-shaped dogs, but of mixed pedigree, the puppies will be sometimes, but rarely, the equals of their parents. They will commonly be of a mongrel, nondescript type, because ancenstral peculiarities are apt to crop out in the offspring”.</em></p>
 <p><em>Definiciones</em>.</p>
 <p>Regresión es el estudio de la distribucion condicional de <span class="math inline">\(Y|x\)</span> de la variable de respuesta <strong>Y</strong> dado un vector <span class="math inline">\(pX1\)</span> de variables predictivas. En el modelo de regresión lineal <span class="math display">\[Y=\beta^T X+\epsilon\]</span></p>
@@ -52,7 +52,6 @@ date: '2022-12-14'
 <div id="modelos-y-relación-funcional-entre-variables." class="section level2">
 <h2>Modelos y relación funcional entre variables.</h2>
 <p>Una forma de representar la relación entre dos variables es a través de un diagrama de dispersión. La siguiente gráfica presenta la realación entre dos variables años de educación y salario para una muestra de 526 individuos.</p>
-<p>knitr::opts_chunk$set(fig.width=12, fig.height=8)</p>
 <pre><code>## &#39;data.frame&#39;:    526 obs. of  24 variables:
 ##  $ wage    : num  3.1 3.24 3 6 5.3 ...
 ##  $ educ    : int  11 12 11 8 12 16 18 12 12 17 ...
@@ -89,7 +88,7 @@ date: '2022-12-14'
 <p>Cada linea azul representa un modelo que puede usarse para predecir la variable <strong>dependiente</strong> <strong>ventas</strong> usando el procedimiento de mínimos cuadrados (ordinary least squres <strong>OLS</strong>).</p>
 <p>En términos de notación la relación previa puede generalizarse como:</p>
 <p><span class="math display">\[Y=f(X)+\epsilon\]</span>
-Aquí <span class="math inline">\(\epsilon\)</span> representa un error aleatorio y <span class="math inline">\(f()\)</span> representa la forma funcional que caracteriza la relación entre la variable dependiente y las variables explicativas. Esta forma funcional se <strong>asume lineal</strong> en el modelo de regresión que estudiamos en este curso.</p>
+Aquí <span class="math inline">\(\epsilon\)</span> representa un error aleatorio y <span class="math inline">\(f()\)</span> representa la forma funcional que caracteriza la relación entre la variable dependiente y las variables explicativas. Esta forma funcional se <strong>asume lineal</strong> en el modelo de regresión que estudiamos en esta sesión.</p>
 <p>Consideremos el siguiente ejemplo sobre el mercado laboral en el que se trata de analizar el efecto que determinantes como la educación, la experiencia o el nivel de entrenamiento tienen sobre la productividad.</p>
 <p>En términos teóricos se espera que estos determinantes tengan un impacto sobre la productividad y considerado la relación positiva entre la productividad y el salario, se prevé un impacto en este último.</p>
 <p><span class="math display">\[y=f(x_1, x_2, x_3)\]</span>
@@ -103,7 +102,7 @@ Aquí <span class="math inline">\(\epsilon\)</span> representa un error aleatori
 <p><span class="math display">\[salario=\beta_0+\beta_1 educ +\beta_2 exper +\beta_3 training +\epsilon \]</span></p>
 <p><img src="/img/lm1.jpg" /></p>
 <p><strong>Note</strong> en este caso que la relación verdadera entre las variables aunque se asume lineal puede tener otra forma funcional. Este aspecto es importante por que la precisión de las estimaciones realizadas depende de la selección de la forma funcional adecuada.</p>
-<p><strong>Note</strong> La presencia de observaciones por arriba y algunas por abajo de la linea que expresa la relación funcional. Esto implica la presencia de errores respecto de medición entre la forma funcional y el valor real de los datos (estos errores son expresión de la naturaleza estocastica de las observaciones en la muestra).</p>
+<p><strong>Note</strong> La presencia de observaciones por arriba y algunas por abajo de la linea que expresa la relación funcional. Esto implica la presencia de errores respecto de medición entre la forma funcional y el valor real de los datos (estos errores son expresión de la naturaleza estocástica de las observaciones en la muestra).</p>
 <p>En términos formales la variación que observamos en la gráfica se puede expresar como:</p>
 <p><img src="/img/lm2.jpg" /></p>
 <p>La <strong>precisión</strong> en las predicciones obtenidas mediante un modelo, es decir la variación entre los valores estimados <span class="math inline">\(\hat{Y} =f(X)\)</span> y el valor real de la variable <span class="math inline">\(Y\)</span> se integra fundamentalmente por dos partes:</p>
@@ -113,26 +112,6 @@ Aquí <span class="math inline">\(\epsilon\)</span> representa un error aleatori
 <p>Como primer paso una herramienta gráfica fundamental del análisis de regresión es la representación de los datos mediante un <strong>scatter plot</strong> bidimensional.</p>
 <p>En algunos casos la relación entre la variable dependiente y las variables explicativas se basa en una teoría establecida con un grado elevado de concenso y precisión, no obstante en otros casos la relación entre variables se puede inferir a partir de su comportamiento, en cualquier caso las gráficas de dispersión son de suma importancia para explorar la relación entre las variables del modelo propuesto.</p>
 <p>Lectura <strong>Recomendada</strong> <a href="https://drive.google.com/file/d/1pFd7mqYVSZ2qgNNIdZGUw51O1Cp5Y81P/view?usp=sharing">Sanford Weisberg ,2010</a></p>
-</div>
-<div id="actividad-2" class="section level2">
-<h2>Actividad 2</h2>
-<p>Tiempo estimado: 25 min.</p>
-<p>1.- Determine la relación que se observa por las variables en los siguientes escenarios. Indique el valor de <strong>n</strong> (tamaño de la muestra), Identifique la variable dependiente y la variable independiente.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Tasas de mortalidad por suicidio y Google trends scores por entidad federativa.</p></li>
-<li><p>Tasa de mortalidad por cáncer de pulmón y proporción del gasto destinado a tabaco por hogar en México por entidad federativa.</p></li>
-<li><p>Relación salario medio y proporción mujeres/hombres en profesiones más comunes según disciplina del conocimiento.</p></li>
-<li><p>Tasa de morbilidad por diabetes tipo II e índice de masa corporal promedio por entidad federativa.</p></li>
-</ol>
-<p>2.- Utilice la bases de datos College y comente sobre la estructura de los datos.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Explore la distribución (mediante un boxplot) de la variable pago de colegiatura (<em>Outstate</em>) según la institución es privada o pública (variable Private).</li>
-</ol>
-<p>3.- Utilice la base de datos <strong>birthwt</strong> y comente sobre la estructura de los datos.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Explore la distribución de la variable peso (bwt) según la raza de la madre (variable race). Construya un histograma.</p></li>
-<li><p>Construya un histograma para representar la ditribución de la variable <strong>bwt</strong> según la madre fumó o no durante el embarazo (variable smoke).</p></li>
-</ol>
 </div>
 <div id="sobre-el-proceso-de-modelado" class="section level2">
 <h2>Sobre el proceso de modelado</h2>

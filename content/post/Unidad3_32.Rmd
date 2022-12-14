@@ -212,6 +212,8 @@ library(tidyverse)
 ## Cargamos la base de datos.
 
 t1<-read.csv("ejemplot1.csv")
+
+
 glimpse(t1)
 
 # Verificamos supuestos considerando criterios de tamaño de muestra y normalidad (especialmente simetría).
@@ -220,21 +222,34 @@ glimpse(t1)
 
 #(c) Normalidad:  COn Shapiro.
 
-shapiro.test(t1$NCF.100ml) # => p-value = 0.03 !!!!  Al nivel de significancia del 0.05 rechazamos H0. Normalidad. Concluimos que estos datos no provienen de una distribución normal.
+shapiro.test(t1$NCF.100ml)
+
+
+# => p-value = 0.03 !!!!  Al nivel de significancia del 0.05 rechazamos H0. Normalidad. Concluimos que estos datos no provienen de una distribución normal.
 
 ## Realizaremos el procedimiento con fines didácticos únicamente, pero los resultados no serán vÁlidos.
 
 xbar<-mean(t1$NCF.100ml)
 mu<-88
 n<-12
+
 s<-sd(t1$NCF.100ml)
+
 error<-s/sqrt(n)
+
+
 t<-(xbar-mu)/error
+
+
 df<-n-1
 
 ## uSAMOS TABLAS para t= 0.94 con gl=11 en página 789- Esta es entre 0.20 y 0.15 
 
 ## uSAMOS LA FUNCIÓN pt PARA ESTIMAR  EL VALOR P PARA EL VALOR CRíTICO T.
+
+
+t=1.85
+df<-15
 
 pt(t, df, lower.tail = FALSE)
 
@@ -249,6 +264,33 @@ t.test(t1$NCF.100ml, mu = 88,   paired = FALSE,
 
 ```
 ![](/img/et1.jpg)
+
+
+
+```{r}
+
+## Paso 1 Cargamos los datos  
+
+Ejemplo1_t<-read.csv("t.csv")
+
+# Paso 2. Revisar supuestos para aplicar la prueba. 
+
+# (a) Tenemos una MAS,  en pares con mediciones para los mismos individuos. 
+
+# (b) ¿Tenemos una muestra de tamaño adecuado, simétrica, normal? El tamaño es n>15. 
+
+##  usando un diagrama de tallos (stem and leaf) podemos comprobar que hay simetría en la distribución de las diferencias. Este es un metodo para apreciar mediante tabulación la distribución de los datos. Es un método alternativo a los histrogramas, pero en este caso la diferencia principal es que podemos ver los datos individuales lo que no ocurre en los histogramas por que tenemos lo datos agrupados en rangos.   Esto es suficiente pero además podemos revisar la normalidad con la prueba Shapiro que (esta tiene como H0 Normalidad).
+
+shapiro.test(Ejemplo1_t$diff) # => p-value = 0.9905
+
+
+stem(Ejemplo1_t$diff)
+
+
+
+t.test(Ejemplo1_t$A, Ejemplo1_t$B,  paired = TRUE, alternative = "greater")
+
+```
 
 
 
@@ -405,6 +447,9 @@ Como parte del procedimiento de validación de los estandares, realiza un experi
 
 library(tidyverse)
 
+
+
+
 pairs<-read.csv("pairs.csv")%>%
   mutate(dif=etiquetado-inspección)
 
@@ -414,7 +459,7 @@ glimpse(pairs)
 
 stem(pairs$dif)
 
-# No se aprecian valores atipicos. no se tiene asímetria aparente. 
+# No se aprecian valores atípicos. no se tiene asímetria aparente. 
 
 # b)  
 
@@ -426,10 +471,15 @@ n<-12
 # Calculando el t critico para tablas.
 
 tcritico<-(xbar-0)/s_muestral 
+
+
 # t = 7.47
 
 t.test(pairs$etiquetado, pairs$inspección, paired = TRUE,
        alternative = "greater")
+
+
+
 # pval=.0000006208 para t= 7.47
 
 ## La prueba es estadísticamente significativa al 1%,  podemos concluir al nivel de significación del 1% que  existe una diferencia estadisticamente significativa (no debida al azar), entre el equitetado y el peso registrado en el paquete. La media de la muestra etiquetado  es mayor que la media de los registros de la inspección . 
