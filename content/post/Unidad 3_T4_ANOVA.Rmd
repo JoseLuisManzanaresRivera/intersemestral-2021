@@ -79,7 +79,7 @@ Estos parámetros son los **grados de libertad** de las varianzas muestrales que
 + Los valores **F** grandes constituyen una
 buena evidencia en contra de la hipótesis nula $H_0$ de que todas las medias poblacionales son iguales.
 
-El contraste para valorar el nivel de significación estadistica  particular se hace considerando niveles de significación deseados, tal como en los casos de las distribuciones z y t, previamente estudiadas.
+El contraste para valorar el nivel de significación estadística particular se hace considerando niveles de significación deseados, tal como en los casos de las distribuciones z y t, previamente estudiadas.
 
 
 #### Grados de libertad de la prueba F.
@@ -93,7 +93,7 @@ Donde **N**:
 $$N=n_1+n_2+n_3...+n_I$$
 
 
-#### Enfasis: Supuestos de ANOVA
+#### Énfasis: Supuestos de ANOVA
 
 
 + Tenemos **I** muestras aleatorias simples independientes, una para
@@ -106,7 +106,7 @@ $$H_0: \mu_1 =\mu_2 =\mu_3...\mu_n$$
 
 **H_a: No todas las $\mu_i$ son iguales**
 
-+ Todas las poblaciones tienen la misma desviación estándar $\sigma$, cuyo valor es desconocido.
++ Todas las poblaciones tienen **la misma desviación estándar** $\sigma$, cuyo valor es desconocido.
 
 ¿Es muy grave que las desviaciones estandar sean distintas? El **ANOVA** no es demasiado sensible a la violación de este supuesto, especialmente cuando todas
 las muestras tienen **tamaños iguales** o similares, y **ninguna muestra es muy pequeña**.
