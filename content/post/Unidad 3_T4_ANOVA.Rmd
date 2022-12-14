@@ -108,7 +108,7 @@ $$H_0: \mu_1 =\mu_2 =\mu_3...\mu_n$$
 
 + Todas las poblaciones tienen **la misma desviación estándar** $\sigma$, cuyo valor es desconocido.
 
-¿Es muy grave que las desviaciones estandar sean distintas? El **ANOVA** no es demasiado sensible a la violación de este supuesto, especialmente cuando todas
+¿Es muy grave que las desviaciones estándar sean distintas? El **ANOVA** no es demasiado sensible a la violación de este supuesto, especialmente cuando todas
 las muestras tienen **tamaños iguales** o similares, y **ninguna muestra es muy pequeña**.
 
 **Importante regularidad empírica** : Los resultados de la **prueba F del ANOVA** son aproximadamente correctos cuando la desviación estándar muestral más grande no es mayor que el
@@ -119,7 +119,7 @@ El **estadistico F** esta definido por:
 
 ![](/img/fuck.jpg)
 
-En la práctica realizamos estos calculos mediante software.
+En la práctica realizamos estos cálculos mediante software.
 
 
 
