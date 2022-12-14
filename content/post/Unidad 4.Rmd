@@ -41,7 +41,7 @@ Presentar el modelo de Regresión lineal. Orígenes del concepto de regresión, 
 
 + Aprender a Modelar relaciones estadísticas (estocásticas) no deterministas. Mediante el modelo de regresión lineal.
 
-+ Conocer la tecnica de minimos cuadrados ordinarios.
++ Conocer la técnica de mínimos cuadrados ordinarios.
 
 
 ### Orígenes de la noción de regresión
