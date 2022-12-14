@@ -49,12 +49,16 @@ Por este motivo, la prueba que veremos con **distribución F**, se considera una
 **En esta prueba lo que importa no es lo separadas que están las medias muestrales, sino lo separadas que están con relación a la variabilidad de las observaciones individuales.**
 
 
+
+
 La siguiente figura muestra esta idea mediante dos diagramas de caja (boxplots o de bigotes) para dos conjuntos de tres muestras cada uno. 
 
 Las **medias muestrales son iguales** en (a) y (b). El análisis de la varianza hallará una diferencia más significativa entre las medias en (b) debido a que hay menos variación entre individuos dentro de estas muestras.
 
 ![](/img/ANOVA.jpg)
 
+
+![](/img/separados.jpg)
 
 ### Estadístico de constraste.
 
