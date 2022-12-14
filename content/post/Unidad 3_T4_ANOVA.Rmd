@@ -1,7 +1,7 @@
 ---
 title: "Unidad 3 T4 ANOVA"
 output: html_document
-date: '2022-12-07'
+date: '2022-12-14'
 categories: ["ANOVA"]
 tags: ["Distribución F"]
 ---
